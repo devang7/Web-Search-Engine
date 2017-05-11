@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004881371"/>
+<meta name="hdl" content="Los Xolos, el equipo de fútbol de Tijuana con hinchas en ambos lados de la frontera" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20170128" />
+<meta name="utime" content="20170128160035" />
+<meta name="ptime" content="20170128160035" />
+<meta name="DISPLAYDATE" content="Jan. 28, 2017" />
+<meta name="dat" content="Jan. 28, 2017" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="los-xolos-el-equipo-de-futbol-de-tijuana-con-hinchas-en-ambos-lados-de-la-frontera" />
+<meta property="og:url" content="https://www.nytimes.com/es/2017/01/28/los-xolos-el-equipo-de-futbol-de-tijuana-con-hinchas-en-ambos-lados-de-la-frontera/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Los Xolos, el equipo de fútbol de Tijuana con hinchas en ambos lados de la frontera" />
+<meta property="og:description" content="Xolos es el primer equipo de la liga mexicana que emite toda su comunicación al público en dos lenguas —desde su sitio web hasta sus cuentas de redes sociales— y cuando juega la mitad de su estacionamiento se llena de carros que vienen desde California." />
+<meta property="og:image" content="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate02/28soccertailgate02-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2017-01-28" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2017/01/28/los-xolos-el-equipo-de-futbol-de-tijuana-con-hinchas-en-ambos-lados-de-la-frontera/" />
+<meta property="twitter:title" content="Los Xolos, el equipo de fútbol de Tijuana con hinchas en ambos lados de la frontera" />
+<meta property="twitter:description" content="Xolos es el primer equipo de la liga mexicana que emite toda su comunicación al público en dos lenguas —desde su sitio web hasta sus cuentas de redes sociales— y cuando juega la mitad de su estacionamiento se llena de carros que vienen desde California." />
+<meta name="author" content="Michael Snyder" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Michael Snyder" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="deportes" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="deportes" />
+<meta name="id" content="100000004881371"/>
+<meta name="wordCount" content="2071"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2017/01/28/los-xolos-el-equipo-de-futbol-de-tijuana-con-hinchas-en-ambos-lados-de-la-frontera/">
+<meta name="nyt-collection:uri" content="year=2017&amp;monthnum=01&amp;day=28&amp;name=los-xolos-el-equipo-de-futbol-de-tijuana-con-hinchas-en-ambos-lados-de-la-frontera">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=34218">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2017\/01\/28\/los-xolos-el-equipo-de-futbol-de-tijuana-con-hinchas-en-ambos-lados-de-la-frontera\/"},"headline":"Los Xolos, el equipo de f\u00fatbol de Tijuana con hinchas en ambos lados de la frontera","datePublished":"2017-01-28T16:00:35+00:00","dateModified":"2017-01-28T17:35:39+00:00","author":{"@type":"Person","name":"Paula Duran"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2017\/01\/28\/sports\/28soccertailgate02\/28soccertailgate02-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Xolos es el primer equipo de la liga mexicana que emite toda su comunicaci\u00f3n al p\u00fablico en dos lenguas \u2014desde su sitio web hasta sus cuentas de redes sociales\u2014 y cuando juega la mitad de su estacionamiento se llena de carros que vienen desde California."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2017/01/28/los-xolos-el-equipo-de-futbol-de-tijuana-con-hinchas-en-ambos-lados-de-la-frontera/" hreflang="es" />
+<link rel="alternate" href="https://www.nytimes.com/2017/01/27/sports/soccer/club-tijuana-xolos-mexico-liga-mx.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/deportes" />
+<title>Los Xolos, el equipo de fútbol de Tijuana con hinchas en ambos lados de la frontera &#8211; Español</title>
+<link rel="canonical" href="https://www.nytimes.com/2017/01/27/sports/soccer/club-tijuana-xolos-mexico-liga-mx.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2017/01/28/los-xolos-el-equipo-de-futbol-de-tijuana-con-hinchas-en-ambos-lados-de-la-frontera/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+		<script src="https://a1.nyt.com/assets/article/latest/js/article/common/layout.js"></script>
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-34218 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Los Xolos, el equipo de fútbol de Tijuana con hinchas en ambos lados de la frontera
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2017/01/28/los-xolos-el-equipo-de-futbol-de-tijuana-con-hinchas-en-ambos-lados-de-la-frontera/"
+					data-title="Noticias: Los Xolos, el equipo de fútbol de Tijuana con hinchas en ambos lados de la frontera"
+					data-author="POR MICHAEL SNYDER"
+					data-media=""
+					data-description="Xolos es el primer equipo de la liga mexicana que emite toda su comunicación al público en dos lenguas —desde su sitio web hasta sus cuentas de redes sociales— y cuando juega la mitad de su estacionamiento se llena de carros que vienen desde California."
+					data-publish-date="28 de enero de 2017"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2keGmlM">http://nyti.ms/2keGmlM</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+	
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main has-full-bleed-image-lede">
+	<header id="story-header" class="story-header">
+			<figure id="media-100000004896292" class="media cover photo layout-horizontal-full-bleed" data-bleed-style="full-bleed-cover" itemid="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate02/28soccertailgate02-articleLarge.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="presentation">
+				<span class="visually-hidden"></span>
+				<div class="image">
+					<img
+						src="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate02/28soccertailgate02-articleLarge.jpg"
+						alt="People lined up for tickets to a Club Tijuana game in the distinctive entrance to the team’s home, Estadio Caliente."
+						data-jumbosrc="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate02/28soccertailgate02-jumbo.jpg"
+						data-superjumbosrc="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate02/28soccertailgate02-superJumbo.jpg"
+						id="media-image-100000004896292"
+					>
+				</div>
+				<figcaption id="media-caption-100000004896292" class="caption" itemprop="caption description">
+					<span class="caption-text">People lined up for tickets to a Club Tijuana game in the distinctive entrance to the team’s home, Estadio Caliente.</span>
+
+					<span class="credit" itemprop="copyrightHolder">
+						<span class="visually-hidden">crédito</span>
+						Guillermo Arias for The New York Times
+					</span>
+				</figcaption>
+				<meta itemprop="height" content="400">
+				<meta itemprop="width" content="600">
+			</figure>
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/deportes/">Deportes</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Los Xolos, el equipo de fútbol de Tijuana con hinchas en ambos lados de la frontera</h1>
+				<p itemprop="headline" id="story-deck" class="deck">Xolos es el primer equipo de la liga mexicana que emite toda su comunicación al público en dos lenguas —desde su sitio web hasta sus cuentas de redes sociales— y cuando juega la mitad de su estacionamiento se llena de carros que vienen desde California.</p>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Michael Snyder</span>
+</span>
+
+					<time class="dateline" datetime="2017-01-28">28 de enero de 2017</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2017/01/28/los-xolos-el-equipo-de-futbol-de-tijuana-con-hinchas-en-ambos-lados-de-la-frontera/"
+							data-title="Noticias: Los Xolos, el equipo de fútbol de Tijuana con hinchas en ambos lados de la frontera"
+							data-author="POR MICHAEL SNYDER"
+							data-media=""
+							data-description="Xolos es el primer equipo de la liga mexicana que emite toda su comunicación al público en dos lenguas —desde su sitio web hasta sus cuentas de redes sociales— y cuando juega la mitad de su estacionamiento se llena de carros que vienen desde California."
+							data-publish-date="28 de enero de 2017"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+			<script>
+				if (window.magnum && window.magnum.responsiveImages && window.magnum.responsiveImages.setCoverImage) {
+					window.magnum.responsiveImages.setCoverImage('100000004896292','full-bleed-cover',400,600,0,0,0,0);
+				}
+			</script>
+
+			
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="https://www.nytimes.com/2017/01/27/sports/soccer/club-tijuana-xolos-mexico-liga-mx.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="476" data-total-count="476" id="story-continues-1" tabindex="-1">TIJUANA, México — El cielo había estado oscuro desde la mañana; el sol de Baja California era un rumor detrás de los bancos de nubes que se iban instalando sobre las caóticas colinas de Tijuana. Pero eso no impidió que afuera de los altos muros de concreto del Estadio Caliente del Club Tijuana se reunieran cientos de aficionados horas antes de que los Xoloitzcuintles, mejor conocidos como los Xolos, jugaran el primer partido de local en la temporada de invierno.</p>
+<p class="story-body-text story-content" data-para-count="337" data-total-count="813" id="story-continues-2" tabindex="-1">Para las 16:00, tres horas antes de que arrancara el partido, estaba en su apogeo el asado más grande que se celebra en México antes de un partido. Las tiendas de campaña estaban levantadas entre las camionetas y minivans que prácticamente llenaban el estacionamiento; los asadores enviaban columnas de humo al aire frío y húmedo.</p>
+<p class="story-body-text story-content" data-para-count="464" data-total-count="1277" id="story-continues-3" tabindex="-1">Un grupo de maestros locales comían botana de ceviche y bebían vino tinto mexicano. Mientras tanto, a unos metros de distancia, sobre una mesa para jugar beer pong, ondeaban tres banderas: la estadounidense, la mexicana y una negra de los Xolos. Por unos dólares por canción, músicos ambulantes tocaban música norteña: las tubas sonaban alegremente por encima del ruido que producían los altavoces instalados en la parte trasera de las camionetas pickup.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="314" data-total-count="1591" id="story-continues-4" tabindex="-1">De muchas maneras, fue exactamente lo que uno hubiera esperado de un asado previo a un partido aquí en Tijuana, la tradición estadounidense traducida a la lengua musical y culinaria de la ciudad fronteriza más ajetreada del mundo. Salvo por una cosa: al menos la mitad de los autos tenían placas de California.</p>
+<figure id="media-100000004896284" class="media photo media-100000004896284 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate01/28soccertailgate01-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-6">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate01/28soccertailgate01-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate01/28soccertailgate01-superJumbo.jpg" data-mediaviewer-caption="Rodrigo Rodriguez grilling outside the stadium for his brother Oscar, right, and others." data-mediaviewer-credit="Guillermo Arias for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate01/28soccertailgate01-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Rodrigo Rodriguez grilling outside the stadium for his brother Oscar, right, and others.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Guillermo Arias for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<h4 class="story-subheading story-content">Identidad regional</h4>
+
+<p class="story-body-text story-content" data-para-count="432" data-total-count="2023" id="story-continues-7" tabindex="-1">Uno de esos automóviles era de Patty Martínez. Ella se había despertado esa mañana a las 4:30 para hacer el viaje de 342 kilómetros desde su casa en Los Ángeles hasta Tijuana; quería ver a su equipo favorito junto con otros miembros del club de aficionados que tiene en California: Xolos Forever Forever Xolos, XFFX (El xoloitzcuintle es una raza de perros y su imagen es fundamental para la denominación de marca del club).</p>
+<p class="story-body-text story-content" data-para-count="442" data-total-count="2465" id="story-continues-8" tabindex="-1">El hijo de Martinez se interesó por primera vez en los partidos de los Xolos hace dos años y desde entonces los otros californianos del XFFX se han convertido en algunos de los amigos más cercanos de Patty. Se reúnen en los suburbios de Los Ángeles varias veces al año para celebrar baby showers y ver los partidos de visitante; se comunican todos los días por mensajes de texto y se ven siempre que pueden en los juegos de Tijuana.</p>
+<p class="story-body-text story-content" data-para-count="500" data-total-count="2965" id="story-continues-9" tabindex="-1">Era la celebración de su cumpleaños número 53 y Martínez se vistió especialmente para la ocasión: una sudadera de los Xolos sobre una camiseta negra con rojo, también de los Xolos, y acentuó el atuendo con un par de aretes personalizados de los Xolos. Antes de salir de la ciudad esa mañana, Martínez se detuvo para recoger a su hija de 28 años, Lorena, quien iba medio dormida en el asiento trasero y le había regalado un gorro tejido con los colores de los Xolos: rojo, blanco y negro.</p>
+<p class="story-body-text story-content" data-para-count="229" data-total-count="3194" id="story-continues-10" tabindex="-1">“Hasta me arreglé así las uñas, ¿viste?”, dijo Martínez, mientras doblaba los dedos de la mano derecha y con la izquierda guiaba el auto hacia el sur por la autopista I-5, más allá del filo helado y gris del Pacífico.</p>
+<p class="story-body-text story-content" data-para-count="222" data-total-count="3416" id="story-continues-11" tabindex="-1">A las 13:00, Martínez, conocida en el XFFX como “Big Mama”, ya estaba acomodada en una silla plegable de color rojo con un mezcal en una mano y en la otra, un taco con tiras delgadas de carne asada y guacamole casero.</p>
+<p class="story-body-text story-content" data-para-count="235" data-total-count="3651" id="story-continues-12" tabindex="-1">Sus amigos Víctor y Claudia Valadez habían llegado casi al mismo tiempo desde Chula Vista, el suburbio de San Diego que se encuentra al otro lado de la frontera y del cual Víctor dice en broma que a veces le llaman “Chulajuana”.</p>
+<figure id="media-100000004896295" class="media photo media-100000004896295 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate03/28soccertailgate03-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-14">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate03/28soccertailgate03-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate03/28soccertailgate03-superJumbo.jpg" data-mediaviewer-caption="Roving musicians played for a few dollars a song outside the stadium." data-mediaviewer-credit="Guillermo Arias for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate03/28soccertailgate03-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Roving musicians played for a few dollars a song outside the stadium.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Guillermo Arias for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="378" data-total-count="4029" id="story-continues-14" tabindex="-1">Apenas hace 10 años, el estacionamiento donde estaban instalados se veía diferente. Antes de 2007, cuando se fundó el Club Tijuana como un equipo de segunda división, el sitio donde se encuentra el Estadio Caliente era un hoyo lodoso rodeado de una vieja pista de carreras y su población eran hipopótamos y caimanes, parte del zoológico privado del millonario Jorge Hank.</p>
+<p class="story-body-text story-content" data-para-count="449" data-total-count="4478" id="story-continues-15" tabindex="-1">Cuando Hank fundó el equipo en 2007, de inmediato empezó la construcción del estadio profesional que ahora lleva el nombre de la empresa familiar, Grupo Caliente, el mismo del casino y el canódromo del terreno aledaño, y del de una gran cantidad de otros grandes desarrollos por toda la ciudad (el zoológico se mudó a un terreno cercano, donde aún se pueden ver los tigres y camellos de la familia Hank desde el estacionamiento del estadio).</p>
+<p class="story-body-text story-content" data-para-count="353" data-total-count="4831" id="story-continues-16" tabindex="-1">Ricardo y Rodrigo Rodríguez, unos gemelos nacidos en Tijuana que han pasado los últimos 17 años viviendo en San Diego, empezaron a ir a los juegos en 2009, cuando el estadio abrió con una capacidad reducida. “En ese entonces, tenías que llevar botas para lluvia y aun así acababas cubierto de lodo”, comentó Ricardo. “Era… interesante”.</p>
+<p class="story-body-text story-content" data-para-count="295" data-total-count="5126" id="story-continues-17" tabindex="-1">También fueron momentos difíciles para Tijuana. En 2008, la violencia entre los carteles rivales de la ciudad llegó a su punto más crítico, mientras la crisis económica al otro lado de la frontera diezmaba la industria turística que había sido el alma de la ciudad durante casi un siglo.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="351" data-total-count="5477" id="story-continues-18" tabindex="-1">“Mucha gente viene aquí solo con la intención de entrar a Estados Unidos”, indicó David Lomelí, un maestro local de secundaria, mientras servía hamburguesas de una parrilla en llamas. “Las personas no sienten que tengan raíces, no sienten que aquí sea su hogar. Pero los Xolos nos han dado una especie de sentido de unión o identidad”.</p>
+<figure id="media-100000004896294" class="media photo media-100000004896294 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate04/28soccertailgate04-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-20">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate04/28soccertailgate04-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate04/28soccertailgate04-superJumbo.jpg" data-mediaviewer-caption="Victor Valadéz and Patty Martinez tailgating outside Estadio Caliente before a game this month." data-mediaviewer-credit="Guillermo Arias for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate04/28soccertailgate04-master1050.jpg"/>
+		<meta itemprop="height" content="699" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Victor Valadéz and Patty Martinez tailgating outside Estadio Caliente before a game this month.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Guillermo Arias for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="356" data-total-count="5833" id="story-continues-20" tabindex="-1">Al menos desde la perspectiva de los Xolos, los límites de la ciudad no restringen esta identidad. Xolos es el primer equipo de la Liga MX de México que emite toda su comunicación al público en dos lenguas —desde su sitio web hasta sus cuentas de redes sociales— y desde el principio cortejó tanto al público como a los jugadores estadounidenses.</p>
+<p class="story-body-text story-content" data-para-count="237" data-total-count="6070" id="story-continues-21" tabindex="-1">Tales esfuerzos han sido exitosos. Según Alejandro Serrano, el gerente general del equipo, las ventas de boletos para el estadio con capacidad para 27.000 personas han asegurado un 90 por ciento de ocupación para la temporada invernal.</p>
+<p class="story-body-text story-content" data-para-count="610" data-total-count="6680" id="story-continues-22" tabindex="-1">Xolos no es el único equipo de la Liga MX que recluta jugadores del otro lado de la frontera, pero es un caso particular en la Liga MX, ya que tiene un puñado de titulares que nacieron en Estados Unidos y han jugado para su selección nacional: Paul Arriola, Joe Corona y Michael Orozco. De hecho, Arriola y Corona aún viven en San Diego y viajan casi diario a México para los juegos y los entrenamientos. Orozco, quien creció en Anaheim, California, se mudó con su esposa e hijos a una casa a orillas del mar en el suburbio de Tijuana llamado Playas, del cual mencionó que “era como llegar a casa”.</p>
+<p class="story-body-text story-content" data-para-count="628" data-total-count="7308" id="story-continues-23" tabindex="-1">Esta estampa tan estadounidense —el patrocinador más visible dentro del Estadio Caliente no son las cervezas Modelo o Corona, sino Bud Light— es más que un truco para que los estadounidenses vayan a la ciudad. Aunque los Xolos se fundaron durante uno de los puntos más bajos en la breve historia de 127 años de Tijuana, también fueron parte de un esfuerzo mayor para definir la ciudad bajo sus propios términos, junto con el desarrollo del ambiente gastronómico y de bebidas que surgió más o menos al mismo tiempo. La identidad que ha captado el equipo no es de aquí o de allá, sino más bien de aquí y de allá.</p>
+<p class="story-body-text story-content" data-para-count="419" data-total-count="7727" id="story-continues-24" tabindex="-1">“Nos vemos como un equipo regional e intentamos ser el espejo de la región”, menciona Roberto Cornejo, quien ha manejado los programas de reclutamiento y las canteras del equipo desde 2008. Cornejo nació en Ciudad de México pero creció en San Diego, y ahora cruza la frontera todos los días desde su casa en Chula Vista. “San Diego y Tijuana en realidad son una ciudad dividida por una frontera”, explicó.</p>
+<p class="story-body-text story-content" data-para-count="443" data-total-count="8170" id="story-continues-25" tabindex="-1">Muchos de los aficionados que viajan al sur para ver los juegos viven con un pie en cada lado de esa línea abstracta. A pesar de que viven y trabajan en San Diego, los hermanos Rodríguez recientemente mudaron a Tijuana el proyecto de cerveza artesanal que empezaron en un garaje de Chula Vista, porque dijeron que en esta ciudad mexicana el mercado de las cerveceras artesanales está floreciendo y, al menos por ahora, está menos saturado.</p>
+<figure id="media-100000004896297" class="media photo media-100000004896297 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate05/28soccertailgate05-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-27">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate05/28soccertailgate05-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate05/28soccertailgate05-superJumbo.jpg" data-mediaviewer-caption="Waving the team colors. “We see ourselves as a regional team and try to be a mirror of what the region is,” says Roberto Cornejo, who manages recruitment and youth programs for the team." data-mediaviewer-credit="Guillermo Arias for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate05/28soccertailgate05-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Waving the team colors. “We see ourselves as a regional team and try to be a mirror of what the region is,” says Roberto Cornejo, who manages recruitment and youth programs for the team.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Guillermo Arias for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="426" data-total-count="8596" id="story-continues-27" tabindex="-1">Martínez, quien nació en San Francisco y creció en Los Ángeles con su madre nicaragüense, ha venido a Tijuana de manera regular durante toda su vida: de vacaciones a la playa, de niña; de fiesta, en su adolescencia; al doctor y al médico, de adulta. Sus lazos con México se fueron desarrollando a lo largo de su vida en un barrio donde, explicó, “apenas conocía nicaragüenses, pero estaba rodeada de mexicanos”.</p>
+<p class="story-body-text story-content" data-para-count="289" data-total-count="8885" id="story-continues-28" tabindex="-1">Lorena, quien empezó a ir con su madre a los partidos el año pasado, ahora tiene toda una parte de su vida arraigada en la ciudad. “Aunque no jueguen, quiero venir cada vez más”, dijo. “Se me antojan los tacos de camarón y la birria. Y ahora aquí están mis amigos, ¿sabes?”.</p>
+<p class="story-body-text story-content" data-para-count="327" data-total-count="9212" id="story-continues-29" tabindex="-1">Apenas el año pasado, fue a Ciudad de México como miembro oficial del club de aficionados de la selección nacional de Estados Unidos y desafió a esa capital enloquecida por el fútbol vestida con un uniforme estadounidense. Pero indicó que su equipo favorito, su equipo local, es el que juega del otro lado de la frontera.</p>
+<h4 class="story-subheading story-content">Un lujo para muchos</h4>
+
+<p class="story-body-text story-content" data-para-count="344" data-total-count="9556" id="story-continues-31" tabindex="-1">Tijuana sigue sin ser perfecta. La violencia aún está viva, aunque tal vez ahora esté más concentrada y sea más discreta de lo que era hace una década. Las prostitutas siguen esperando enfrente de hoteles de mala muerte en la calle Coahuila, a unos pasos de la frontera y a un viaje de 15 minutos hacia el norte desde el Estadio Caliente.</p>
+<p class="story-body-text story-content" data-para-count="292" data-total-count="9848" id="story-continues-32" tabindex="-1">Sin embargo, aunque el desempleo en Tijuana sigue estando más abajo del promedio nacional, mucha gente sobrevive con ingresos limitados. Eso hace que los boletos para ver a los Xolos, los cuales se venden a 300 pesos (cerca de 15 dólares), sean un lujo inalcanzable para muchos tijuanenses.</p>
+<figure id="media-100000004896299" class="media photo media-100000004896299 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate08/28soccertailgate08-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-34">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate08/28soccertailgate08-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate08/28soccertailgate08-superJumbo.jpg" data-mediaviewer-caption="The most visible sponsor at Estadio Caliente is not Modelo or Corona, but Bud Light." data-mediaviewer-credit="Guillermo Arias for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/01/28/sports/28soccertailgate08/28soccertailgate08-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The most visible sponsor at Estadio Caliente is not Modelo or Corona, but Bud Light.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Guillermo Arias for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="441" data-total-count="10289" id="story-continues-34" tabindex="-1">José Martin Gonzáles Mendoza ha trabajado durante cuatro años como guardia de seguridad del estadio en los días que hay partidos: solo gana 200 pesos por un turno de 13 horas que dura más allá de la medianoche. Trae a su esposa y a sus hijos a la mayoría de los juegos en el estadio, donde le ayudan a ganar dinero extra vigilando el asado del XFFX mientras Martínez y los otros californianos entran al estadio para ver el encuentro.</p>
+<p class="story-body-text story-content" data-para-count="267" data-total-count="10556" id="story-continues-35" tabindex="-1">Recientemente, Gonzáles Mendoza utilizó ese ingreso adicional para comprarle anteojos a su hijo mayor. Tomás, su hijo menor, dijo que también espera entrar algún día al estadio para ver jugar al equipo local. Por ahora, su familia no puede permitirse ese gasto.</p>
+<p class="story-body-text story-content" data-para-count="399" data-total-count="10955" id="story-continues-36" tabindex="-1">Esa noche, después de la victoria de 6-2 sobre el visitante Puebla, los aficionados satisfechos vaciaron el Estadio Caliente y volvieron al estacionamiento. Mientras la mayoría de los autos empacaban para irse, Patty y Lorena Martínez se sirvieron otro trago. Habían reservado una habitación en un hotel cercano y empezarían el largo viaje de regreso a Los Ángeles para la mañana siguiente.</p>
+<p class="story-body-text story-content" data-para-count="334" data-total-count="11289" id="story-continues-37" tabindex="-1">Mientras retrasaban unos momentos la salida hacia Chula Vista para evitar el tráfico en el estacionamiento, Víctor y Claudia Valadez paseaban con su hijo de siete años, Gael, quien tiene su propio pase para toda la temporada. Él y Tomás gritaban felices por el juego en un español espolvoreado de palabras y frases en inglés.</p>
+<p class="story-body-text story-content" data-para-count="80" data-total-count="11369" id="story-continues-38" tabindex="-1">Patty Martinez soltó una carcajada fuerte y abundante, y señaló a los niños.</p>
+<p class="story-body-text story-content" data-para-count="87" data-total-count="11456" id="story-continues-39" tabindex="-1">“Esa es nuestra siguiente generación”, dijo. “Nuestros Xolos estadounidenses”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/california/" rel="tag">California</a>, <a href="https://www.nytimes.com/es/tag/futbol/" rel="tag">fútbol</a>, <a href="https://www.nytimes.com/es/tag/tijuana/" rel="tag">tijuana</a>, <a href="https://www.nytimes.com/es/tag/xolos/" rel="tag">Xolos</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2017/01/28/los-xolos-el-equipo-de-futbol-de-tijuana-con-hinchas-en-ambos-lados-de-la-frontera/"
+				data-title="Noticias: Los Xolos, el equipo de fútbol de Tijuana con hinchas en ambos lados de la frontera"
+				data-author="POR MICHAEL SNYDER"
+				data-media=""
+				data-description="Xolos es el primer equipo de la liga mexicana que emite toda su comunicación al público en dos lenguas —desde su sitio web hasta sus cuentas de redes sociales— y cuando juega la mitad de su estacionamiento se llena de carros que vienen desde California."
+				data-publish-date="28 de enero de 2017"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/11/16/una-cancion-de-amor-y-separacion-en-la-frontera-de-mexico-con-estados-unidos/">
+					<div class="story-body">
+						<h3 class="kicker">Fotografía</h3>
+
+						<h2 class="headline">
+							<span class="title">Una canción de amor y separación en la frontera de México con Estados Unidos</span>
+							<time class="dateline">16 de noviembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/12/01/universal/es/01fronteraES/01fronteraES-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/27/mas-orwell-y-menos-trump/">
+					<div class="story-body">
+						<h3 class="kicker">Libros</h3>
+
+						<h2 class="headline">
+							<span class="title">Más Orwell y menos Trump</span>
+							<time class="dateline">27 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/01/28/universal/es/27orwellES1/27orwellES1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/11/19/las-razones-del-exito-de-los-borregos-salvajes-de-monterrey/">
+					<div class="story-body">
+						<h3 class="kicker">Deportes</h3>
+
+						<h2 class="headline">
+							<span class="title">Las razones del éxito de los Borregos Salvajes de Monterrey</span>
+							<time class="dateline">19 de noviembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/11/16/sports/19mexicofootball2/19mexicofootball2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/26/los-mejores-cazatalentos-de-futbol-son-los-de-adidas-y-nike/">
+					<div class="story-body">
+						<h3 class="kicker">Deportes</h3>
+
+						<h2 class="headline">
+							<span class="title">Los mejores cazatalentos de fútbol son los de Adidas y Nike</span>
+							<time class="dateline">26 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/01/22/sports/22SOCCERDEALSweb1/22SOCCERDEALSweb1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+			
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":1213,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

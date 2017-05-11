@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004330027"/>
+<meta name="hdl" content="Tres generales y un cartel: violencia policial e impunidad en Honduras" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20160415" />
+<meta name="utime" content="20160415230855" />
+<meta name="ptime" content="20160415230855" />
+<meta name="DISPLAYDATE" content="Apr. 15, 2016" />
+<meta name="dat" content="Apr. 15, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="tres-generales-y-un-cartel-violencia-policial-e-impunidad-en-honduras" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/04/15/tres-generales-y-un-cartel-violencia-policial-e-impunidad-en-honduras/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Tres generales y un cartel: violencia policial e impunidad en Honduras" />
+<meta property="og:description" content="The New York Times tuvo acceso a un informe interno de la policía de Honduras que detalla cómo la cúpula policial ordenó los asesinatos de dos responsables de la lucha contra el narcotráfico en el país. " />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/04/15/universal/es/Hondurasilustracion1/Hondurasilustracion1-videoSixteenByNine768-v2.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-04-15" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/04/15/tres-generales-y-un-cartel-violencia-policial-e-impunidad-en-honduras/" />
+<meta property="twitter:title" content="Tres generales y un cartel: violencia policial e impunidad en Honduras" />
+<meta property="twitter:description" content="The New York Times tuvo acceso a un informe interno de la policía de Honduras que detalla cómo la cúpula policial ordenó los asesinatos de dos responsables de la lucha contra el narcotráfico en el país. " />
+<meta name="author" content="Alberto Arce" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Alberto Arce" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="honduras" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="honduras" />
+<meta name="id" content="100000004330027"/>
+<meta name="wordCount" content="5848"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/04/15/tres-generales-y-un-cartel-violencia-policial-e-impunidad-en-honduras/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=04&amp;day=15&amp;name=tres-generales-y-un-cartel-violencia-policial-e-impunidad-en-honduras">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=9762">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/04\/15\/tres-generales-y-un-cartel-violencia-policial-e-impunidad-en-honduras\/"},"headline":"Tres generales y un cartel: violencia policial e impunidad en Honduras","datePublished":"2016-04-15T23:08:55+00:00","dateModified":"2016-07-27T19:26:18+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/04\/15\/universal\/es\/Hondurasilustracion1\/Hondurasilustracion1-videoSixteenByNine768-v2.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"The New York Times tuvo acceso a un informe interno de la polic\u00eda de Honduras que detalla c\u00f3mo la c\u00fapula policial orden\u00f3 los asesinatos de dos responsables de la lucha contra el narcotr\u00e1fico en el pa\u00eds. "}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/04/15/tres-generales-y-un-cartel-violencia-policial-e-impunidad-en-honduras/" hreflang="es" />
+<meta name="dfp-ad-unit-path" content="americalatina/honduras" />
+<title>Tres generales y un cartel: violencia policial e impunidad en Honduras &#8211; Español</title>
+<link rel="canonical" href="https://www.nytimes.com/es/2016/04/15/tres-generales-y-un-cartel-violencia-policial-e-impunidad-en-honduras/" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/04/15/tres-generales-y-un-cartel-violencia-policial-e-impunidad-en-honduras/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-9762 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				Tres generales y un cartel: violencia policial e impunidad en Honduras
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/04/15/tres-generales-y-un-cartel-violencia-policial-e-impunidad-en-honduras/"
+					data-title="América Latina: Tres generales y un cartel: violencia policial e impunidad en Honduras"
+					data-author="POR ALBERTO ARCE"
+					data-media=""
+					data-description="The New York Times tuvo acceso a un informe interno de la policía de Honduras que detalla cómo la cúpula policial ordenó los asesinatos de dos responsables de la lucha contra el narcotráfico en el país. "
+					data-publish-date="15 de abril de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/honduras/">Honduras</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Tres generales y un cartel: violencia policial e impunidad en Honduras</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Alberto Arce</span>
+</span>
+
+					<time class="dateline" datetime="2016-04-15">15 de abril de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/04/15/tres-generales-y-un-cartel-violencia-policial-e-impunidad-en-honduras/"
+							data-title="América Latina: Tres generales y un cartel: violencia policial e impunidad en Honduras"
+							data-author="POR ALBERTO ARCE"
+							data-media=""
+							data-description="The New York Times tuvo acceso a un informe interno de la policía de Honduras que detalla cómo la cúpula policial ordenó los asesinatos de dos responsables de la lucha contra el narcotráfico en el país. "
+							data-publish-date="15 de abril de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004330797" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/15/universal/es/Hondurasilustracion1/Hondurasilustracion1-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/15/universal/es/Hondurasilustracion1/Hondurasilustracion1-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/15/universal/es/Hondurasilustracion1/Hondurasilustracion1-superJumbo.jpg" data-mediaviewer-caption="Los generales Salomón Escoto Salinas, José Francisco Murillo López y José Luis Muñoz Licona. Se reunieron para planear, ordenar y ejecutar el asesinato del General Julián Arístides González, según un informe interno de la policía. " data-mediaviewer-credit="German Andino"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/15/universal/es/Hondurasilustracion1/Hondurasilustracion1-master1050.jpg"/>
+		<meta itemprop="height" content="668" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Los generales Salomón Escoto Salinas, José Francisco Murillo López y José Luis Muñoz Licona. Se reunieron para planear, ordenar y ejecutar el asesinato del General Julián Arístides González, según un informe interno de la policía. </span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			German Andino
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="344" data-total-count="344" id="story-continues-2" tabindex="-1">En julio de 2009, el narcotraficante hondureño Winter Blanco, un tipo gordito, rudo, de pelo rapado, prófugo de la justicia y jefe del Cartel del Atlántico, quiso tumbarle un cargamento de droga a Emilio Fernández Rosa, conocido como “Don H”, que tenía 143 kilos de cocaína en una casa de la Mosquitia, en la costa Caribe de Honduras.</p>
+<p class="story-body-text story-content" data-para-count="331" data-total-count="675" id="story-continues-3" tabindex="-1">Blanco llamó al General de la policía José Murillo López, orondo y con cara de bonachón, y le propuso un negocio. Si sus agentes conseguían la droga, se la compraría. Después de pedirle autorización al director general de la policía, el General Salomón Escoto Salinas, Murillo López envió a 12 de sus hombres al lugar.</p>
+<p class="story-body-text story-content" data-para-count="44" data-total-count="719" id="story-continues-4" tabindex="-1">Cumplieron su misión. Pero algo se torció.</p>
+<p class="story-body-text story-content" data-para-count="211" data-total-count="930" id="story-continues-5" tabindex="-1">La información llegó a manos del zar antidrogas, el General Julián Arístides González, y unos días después encabezó un operativo que terminó con el arresto de los policías y el decomiso de la cocaína.</p>
+<p class="story-body-text story-content" data-para-count="288" data-total-count="1218" id="story-continues-6" tabindex="-1">Cumplir con su deber sería la sentencia de muerte para ese general retirado que Estados Unidos, en un <a href="https://search.wikileaks.org/plusd/cables/03TEGUCIGALPA1258_a.html">cable </a>enviado desde su Embajada en Tegucigalpa al Departamento de Estado, había calificado de “algo así como la última esperanza” de la lucha contra el narcotráfico en el país.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="346" data-total-count="1564" id="story-continues-7" tabindex="-1">Los hechos que describe este reportaje han sido extraídos de dos informes de la Inspectoría General de la Policía de Honduras redactados en 2009 y 2011 a los que ha tenido acceso The New York Times y que incluyen testimonios de testigos, descripciones de videos y registros de llamadas telefónicas. <a href="http://www.nytimes.com/es/2016/04/15/un-informe-revela-nombres-y-hechos-relacionados-con-asesinatos-cometidos-por-la-policia-en-honduras/">Aquí pueden verse parte de los documentos.</a> </p>
+<p class="story-body-text story-content" data-para-count="629" data-total-count="2193" id="story-continues-8" tabindex="-1">Al General Arístides González lo mandaron a matar dos directores generales de la policía de Honduras que dirigieron la institución entre 2010 y 2013, los generales José Luis Muñoz Licona y José Ricardo Ramírez del Cid, que según la investigación de la propia policía, trabajaban para el Cartel del Atlántico junto con más de dos docenas de oficiales de diversos rangos. Recibieron la orden, organizaron el asesinato, lo ejecutaron y lo encubrieron. E hicieron lo mismo con el político de la Democracia Cristiana Alfredo Landaverde, que también había sido titular de la Dirección de Lucha contra el Narcotráfico.</p>
+<p class="story-body-text story-content" data-para-count="231" data-total-count="2424" id="story-continues-9" tabindex="-1">El predecesor de Muñoz Licona y Ramírez del Cid, el Director General de la Policía Salomón Escoto Salinas, supo de sus actividades al punto de prestarles su despacho para coordinar el asesinato del General Arístides González.</p>
+<p class="story-body-text story-content" data-para-count="495" data-total-count="2919" id="story-continues-10" tabindex="-1">Y sus dos sucesores al frente de la policía, los generales Juan Carlos Bonilla y Ramón Sabillón, que había dirigido la inspectoría general de la policía que hizo los informes que explicaban la cadena de responsabilidades en los asesinatos, recibieron y enviaron copias y órdenes de la Secretaría de Seguridad, dirigida entonces por el ministro Pompeyo Bonilla, de los documentos que implicaban a sus compañeros en los asesinatos y los señalaban como miembros del Cartel del Atlántico.</p>
+<p class="story-body-text story-content" data-para-count="293" data-total-count="3212" id="story-continues-11" tabindex="-1">Pero nadie envió una copia al ministerio público para judicializar los casos ni adoptó medidas. Varios de los oficiales implicados siguen en posiciones de mando en la policía o han sido destinados a embajadas. Otros fueron ascendidos por el gobierno del Presidente Juan Orlando Hernández.</p>
+<p class="story-body-text story-content" data-para-count="34" data-total-count="3246" id="story-continues-12" tabindex="-1">Los implicados lo han negado todo.</p>
+<p class="story-body-text story-content" data-para-count="359" data-total-count="3605" id="story-continues-13" tabindex="-1">Además, todo esto sucedió mientras el gobierno de los Estados Unidos contribuía con una media de 15 millones de dólares al año provenientes de los contribuyentes estadounidenses a la institución policial, financiaba un proceso de depuración que terminó en fracaso y colaboraba –sin mucho éxito– con la investigación de los asesinatos desde 2015.</p>
+<p class="story-body-text story-content" data-para-count="30" data-total-count="3635" id="story-continues-14" tabindex="-1"><strong>La maldición de la geografía</strong></p>
+<p class="story-body-text story-content" data-para-count="392" data-total-count="4027" id="story-continues-15" tabindex="-1">En 2009, Honduras se había convertido en el principal punto de paso para el tráfico de drogas desde Venezuela y Colombia hasta los Estados Unidos. Las lanchas y avionetas necesitaban detenerse en la costa Caribe hondureña, un lugar con poca vigilancia y casi deshabitado, para trasladar la droga por tierra hasta la frontera con Guatemala, desde donde sigue camino en dirección a México.</p>
+<p class="story-body-text story-content" data-para-count="387" data-total-count="4414" id="story-continues-16" tabindex="-1">Otro cable de 2007 del Departamento de Estado de los Estados Unidos obtenido por The New York Times alertaba de que Honduras se estaba convirtiendo en un “narcoestado” debido a la falta de oficiales, de medios, los múltiples puntos ciegos en las fronteras, la colaboración de los bancos en el lavado de activos y la facilidad con que los políticos aceptan financiación del narco.</p>
+<p class="story-body-text story-content" data-para-count="421" data-total-count="4835" id="story-continues-17" tabindex="-1">El golpe de Estado militar de junio de 2009 que derrocó al Presidente Manuel Zelaya no hizo más que empeorar las cosas. Según un informe de la <a href="https://www.unodc.org/documents/data-and-analysis/Studies/TOC_Central_America_and_the_Caribbean_english.pdf">Oficina de Naciones Unidas para la Prevención del Delito</a>, &#8220;tras el golpe de Estado en Honduras, los encargados de aplicar la ley cayeron en el desorden, se desviaron recursos para mantener el orden, y se suspendió la asistencia antidroga de los Estados Unidos&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="179" data-total-count="5014" id="story-continues-18" tabindex="-1">De acuerdo con datos del Comando Sur de los Estados Unidos hechos públicos en 2012, por Honduras pasaba entonces el 79 por ciento de la cocaína que llegaba a los Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="184" data-total-count="5198" id="story-continues-19" tabindex="-1">La situación estaba tan fuera de control que el ministro de Seguridad en 2009, Óscar Álvarez, llegó a decir que los policías actuaban como controladores aéreos del narcotráfico.</p>
+<figure id="media-100000004330616" class="media photo media-100000004330616 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/16/universal/es/16honduras1-copy/16honduras1-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-21">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/16/universal/es/16honduras1-copy/16honduras1-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/16/universal/es/16honduras1-copy/16honduras1-superJumbo.jpg" data-mediaviewer-caption="A military policeman stands guard after the old police headquarters building was raided by the Honduran Army and prosecution agents in Tegucigalpa, Honduras, late Monday, April 4, 2016. The agents were looking for evidence in the assassination of anti-drug prosecutor Julian Aristides Gonzalez in 2009." data-mediaviewer-credit="Fernando Antonio/Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/16/universal/es/16honduras1-copy/16honduras1-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A military policeman stands guard after the old police headquarters building was raided by the Honduran Army and prosecution agents in Tegucigalpa, Honduras, late Monday, April 4, 2016. The agents were looking for evidence in the assassination of anti-drug prosecutor Julian Aristides Gonzalez in 2009.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Fernando Antonio/Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="22" data-total-count="5220" id="story-continues-21" tabindex="-1"><strong>Los narcos no perdonan</strong></p>
+<p class="story-body-text story-content" data-para-count="405" data-total-count="5625" id="story-continues-22" tabindex="-1">Pocos meses después del decomiso de la cocaína que dirigió el General Arístides González en la Mosquitia, el 29 de noviembre de 2009, el director general de la policía, Salomón Escoto Salinas, entregó las llaves de su despacho en el cuartel general de Casamata, en Tegucigalpa, para que se celebrase una reunión que fue grabada y fotografiada por una unidad de inteligencia de la propia policía.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="375" data-total-count="6000" id="story-continues-23" tabindex="-1">La reunión la dirigieron el director de servicios especiales de la policía, General José Luis Muñoz Licona, que sería el sucesor de Escoto Salinas al frente de la policía meses después (marzo de 2010) y el General Ramírez del Cid, entonces director de inteligencia de policía y que sería a su vez el sucesor de Muñoz Licona en la dirección general (mayo de 2012).</p>
+<p class="story-body-text story-content" data-para-count="502" data-total-count="6502" id="story-continues-24" tabindex="-1">En el encuentro participaron 25 oficiales de todas las escalas de mando. El punto único era planear el asesinato del General Arístides por orden de Blanco, el capo que había ordenado el tumbado de la droga. Organizaron el seguimiento del general mientras dejaba a su hija en la escuela, proporcionaron los vehículos para el operativo, eligieron a los policías que estarían en cada punto de la ruta, a los que estarían en el lugar designado para la ejecución y a los que asesinarían al general.</p>
+<p class="story-body-text story-content" data-para-count="212" data-total-count="6714" id="story-continues-25" tabindex="-1">Entre ellos había policías dados de baja por pertenecer a bandas del crimen organizado con antecedentes por secuestro, asalto a furgones blindados y extorsión a los que se uniformaba de nuevo para esa misión.</p>
+<figure id="media-100000004330800" class="media photo media-100000004330800 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/15/universal/es/Hondurasilustracion2/Hondurasilustracion2-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-27">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/15/universal/es/Hondurasilustracion2/Hondurasilustracion2-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/15/universal/es/Hondurasilustracion2/Hondurasilustracion2-superJumbo.jpg" data-mediaviewer-caption="El General Ricardo Ramírez del Cid." data-mediaviewer-credit="German Andino"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/15/universal/es/Hondurasilustracion2/Hondurasilustracion2-master315.jpg"/>
+		<meta itemprop="height" content="408" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">El General Ricardo Ramírez del Cid.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			German Andino
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="36" data-total-count="6750" id="story-continues-27" tabindex="-1">Estaban preocupados por el silencio.</p>
+<p class="story-body-text story-content" data-para-count="317" data-total-count="7067" id="story-continues-28" tabindex="-1">“No quiero que alguno de ustedes mismos vaya a hablar papadas porque ya saben lo que les espera, aquí ya nos conocemos todos”, dijo el General Ramírez del Cid. “No hay que perdonar a Arístides, ese si nos agarra nos dobla a todos”, dijo el número dos de la inteligencia policial, Obdulio Sabillón Flores.</p>
+<p class="story-body-text story-content" data-para-count="16" data-total-count="7083" id="story-continues-29" tabindex="-1">Fueron rápidos.</p>
+<p class="story-body-text story-content" data-para-count="301" data-total-count="7384" id="story-continues-30" tabindex="-1">El 7 de diciembre se reunieron en el mismo lugar. El General Muñoz Licona sacó de una bolsa negra los dólares que le habían traído en un maletín desde la aldea de Planes en el departamento de Colón, donde Winter Blanco tenía su base de operaciones y los colocó sobre el escritorio por partes.</p>
+<p class="story-body-text story-content" data-para-count="447" data-total-count="7831" id="story-continues-31" tabindex="-1">La mujer que trajo el dinero, Nancy Yessenia Cano, había sido detenida desembarcando droga de una avioneta en una operación en la que participó la DEA, según el informe de inteligencia de la policía, seguía desempeñando sus funciones. El dinero estaba organizado en bultos. Cada uno sabía lo que le tocaba. Guardaron la parte para los “gatilleros”, 20.000 dólares para tres sicarios, y encargaron a otro policía que se los entregara.</p>
+<p class="story-body-text story-content" data-para-count="203" data-total-count="8034" id="story-continues-32" tabindex="-1">Tras el reparto, los generales Muñoz Licona, Ramírez del Cid y Murillo López llamaron a Blanco y le dijeron: “Esté pendiente de la noticia mañana, mañana haremos todo, esté pendiente, señor”.</p>
+<p class="story-body-text story-content" data-para-count="22" data-total-count="8056" id="story-continues-33" tabindex="-1">Cumplieron su palabra.</p>
+<p class="story-body-text story-content" data-para-count="627" data-total-count="8683" id="story-continues-34" tabindex="-1">Al día siguiente, el 8 de diciembre a las seis de la mañana en el puente de Guanacaste, a pocos minutos del cuartel general de la policía en Tegucigalpa, un subcomisario que había participado en las reuniones anteriores, Javier Leiva Gamoneda, colocó a cuatro agentes de tránsito en un puesto de control. Les dio instrucciones muy específicas. Llegaría una camioneta —de un delincuente, dijo en referencia al General Arístides González– seguida por otras tres y por una motocicleta de la policía con agentes encapuchados. “Ustedes no se metan a problemas, denle luz verde y cualquier cosa no han visto nada”.</p>
+<p class="story-body-text story-content" data-para-count="559" data-total-count="9242" id="story-continues-35" tabindex="-1">Los encapuchados se presentaron en el lugar y les dijeron que &#8220;no fueran a reaccionar porque esperaban a alguien pa darle pa abajo y que eran órdenes del director general”, como recoge el informe. A pesar de las capuchas, los cuatro agentes de tránsito sabían con quién estaban lidiando.<br />Lo que vieron poco después fue cómo desde una moto de la policía acribillaban al general. Y de las tres camionetas de alta cilindrada y sin placas se bajaron hasta 15 oficiales de policía, algunos uniformados y a los que pudieron identificar perfectamente.</p>
+<p class="story-body-text story-content" data-para-count="505" data-total-count="9747" id="story-continues-36" tabindex="-1">Eran los que habían estado en las reuniones previas mencionadas en los informes. No solo miraron: entre otras cosas cambiaron los casquillos de bala utilizados para el asesinato para que no fueran rastreables. Allí estaban el Comisionado Kenneth Obdulio Sabillón Flores, el Subcomisionado Marco Tulio Cruz Aguilar, el Subcomisionado José Edgardo Ayala López, el Subcomisionado Mario René Chamorro Gotay y los comisarios Edilberto Brizuela Reyes, Eymer Moncada Martínez y Leonel Osmin Merlo Canales.</p>
+<p class="story-body-text story-content" data-para-count="229" data-total-count="9976" id="story-continues-37" tabindex="-1">Ante la escena, los testigos optaron por irse. Todos los oficiales de la policía implicados en la organización del crimen regresaron al cuartel general tras comprobar que habían cumplido la misión que se les había encargado.</p>
+<p class="story-body-text story-content" data-para-count="357" data-total-count="10333" id="story-continues-38" tabindex="-1">Pero con lo que no contaban los sicarios era con que los cuatro agentes de tránsito ofrecieron la misma versión de los hechos a los agentes de la Inspectoría General de la Policía que los interrogaron como parte de un protocolo habitual. “Yo no voy a tener problemas por lo que hagan otros compañeros que se dedican a delinquir”, dijo uno de ellos.</p>
+<p class="story-body-text story-content" data-para-count="228" data-total-count="10561" id="story-continues-39" tabindex="-1">La policía de Honduras, cuando quiere, es efectiva. El 29 de diciembre de 2009, tres semanas después del crimen ya había escrito su informe y se lo había entregado al director general, Salomón Escoto Salinas. No pasó nada.</p>
+<p class="story-body-text story-content" data-para-count="127" data-total-count="10688" id="story-continues-40" tabindex="-1">El mismo informe fue recibido dos años más tarde, el 27 de diciembre de 2011, por el Director General Ramírez del Cid. Nada.</p>
+<p class="story-body-text story-content" data-para-count="602" data-total-count="11290" id="story-continues-41" tabindex="-1">Y nuevamente, a finales de 2013, como si se tratara de una tradición, Ramón Sabillón Pineda, ascendido días antes a director general de la policía, se encontró con el informe y lo reenvió a la inspectoría general con una instrucción clara: &#8220;Debe continuar con los expedientes investigativos importantes con un servicio de guardia de 24 horas compuesto por un oficial y un policía de la escala básica para evitar que sean extraviados&#8221;. Y con una línea de encubrimiento junto a su firma: &#8220;No registrar este documento en el libro de control y recepción de documentos&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="583" data-total-count="11873" id="story-continues-42" tabindex="-1">Sabillón Pineda, en su orden por escrito, añade información interesante. Junto al expediente de investigación del asesinato del General Arístides González, dice que adjunta varios más: el de Alfredo Landaverde; los de los asesinatos de los &#8220;estudiantes universitarios&#8221;, el hijo de la rectora de la Universidad Nacional, Julieta Castellanos, asesinado junto a un amigo por un grupo de policías; el del periodista Alfredo Villatoro; el del Juez José Paguagua Mejía, y el del Fiscal Raúl Enríquez Reyes. The New York Times no ha tenido acceso a esos expedientes.</p>
+<p class="story-body-text story-content" data-para-count="34" data-total-count="11907" id="story-continues-43" tabindex="-1"><strong>El asesinato de Alfredo Landaverde</strong></p>
+<p class="story-body-text story-content" data-para-count="414" data-total-count="12321" id="story-continues-44" tabindex="-1">Pero The New York Times sí ha tenido acceso al informe realizado por la Inspectoría General de la Policía sobre el asesinato, en 2011, del político de la Democracia Cristiana Alfredo Landaverde, que había ocupado el mismo cargo que el General Arístides González y era uno de sus colaboradores. La misma cúpula policial vuelve a estar implicada en dar la orden, planificar, ejecutar y encubrir su asesinato.</p>
+<p class="story-body-text story-content" data-para-count="521" data-total-count="12842" id="story-continues-45" tabindex="-1">Landaverde acudió a la <a href="https://www.youtube.com/watch?v=H5UHCBmJbpc">televisión</a> en noviembre de 2011. Estaba enfadado por lo que veía a su alrededor y decidió hablar, harto de la corrupción dentro de las fuerzas de seguridad. Había dirigido la lucha contra el narcotráfico y conocía bien su contexto. Explicaba que el país había caído en manos del crimen organizado desde que fue utilizado en la década de los setenta como base de operaciones para las guerras irregulares de La Contra, una guerrilla que luchaba contra el gobierno sandinista en Nicaragua.</p>
+<p class="story-body-text story-content" data-para-count="617" data-total-count="13459" id="story-continues-46" tabindex="-1">A cambio de acceso logístico, sucesivos gobiernos hondureños habían dado facilidades a los narcos para que pudieran llevar la droga de Colombia hasta los Estados Unidos. Esa decisión acabaría sumiendo a Honduras en una espiral de violencia sin fin. Entre 2009 y 2014 fue el país con más asesinatos per cápita del mundo. Llegó a tener 91 homicidios por cada 100.000 habitantes. Zonas como San Pedro Sula o la Ceiba tenían 150 homicidios por cada 100.000 habitantes. La Organización Mundial de la Salud ha catalogado cualquier cifra que supere los 8 por cada 100.000 habitantes como &#8220;epidémica&#8221;.</p>
+<figure id="media-100000004330802" class="media photo media-100000004330802 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/15/universal/es/Hondurasilustracion3/Hondurasilustracion3-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-48">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/15/universal/es/Hondurasilustracion3/Hondurasilustracion3-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/15/universal/es/Hondurasilustracion3/Hondurasilustracion3-superJumbo.jpg" data-mediaviewer-caption="Winter Blanco, jefe del cartel del Atlántico." data-mediaviewer-credit="German Andino."  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/15/universal/es/Hondurasilustracion3/Hondurasilustracion3-master315.jpg"/>
+		<meta itemprop="height" content="408" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Winter Blanco, jefe del cartel del Atlántico.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			German Andino.
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="600" data-total-count="14059" id="story-continues-48" tabindex="-1">Landaverde también explicó que el crimen organizado buscaba a los policías que están en los lugares clave de la ruta que comienza en la costa Atlántica, en el mar Caribe, y sigue por tierra hasta Guatemala. Esos policías eran sujetos de infiltración y los mismos narcotraficantes a los que se había detenido reconocían que tenían un grupo de oficiales que colaboraba con ellos y controlaban toda la ruta terrestre a lo largo del país. Honduras no es un país productor ni consumidor de cocaína. Es solo el lugar por el que transita y en esa tarea, la policía jugaba un papel fundamental.</p>
+<p class="story-body-text story-content" data-para-count="806" data-total-count="14865" id="story-continues-49" tabindex="-1">Pero cometió un error mortal: dio nombres. &#8220;El General Muñoz Licona tiene a su gente adentro, oficiales que están dispuestos a jugársela con él&#8221;. Y agregó que &#8220;el General Ramírez del Cid sabe bien quiénes son los jefes del crimen organizado en Honduras, en cada departamento, en cada municipio, en cada ciudad grande. Sabe quiénes son los policías que están en bandas, operando con el crimen organizado o que tienen su propia banda. Son crimen transnacional organizado, las pandillas y las bandas de la policía que colaboran con el narcotráfico. Reciben dinero de ellos. Todos nosotros sabemos quiénes son. El crimen organizado es un aparato con todas las de ley, incluyendo inteligencia con policías y militares reclutados. La infiltración en Honduras es terrible&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="228" data-total-count="15093" id="story-continues-50" tabindex="-1">A primeras horas de la mañana del 7 de diciembre de 2011 fue asesinado por un sicario cuando estaba detenido en un semáforo a la entrada de Tegucigalpa. Su mujer, Hilda Caldera, herida de bala en la espalda, logró sobrevivir.</p>
+<p class="story-body-text story-content" data-para-count="313" data-total-count="15406" id="story-continues-51" tabindex="-1">El sicario, un civil que iba de pasajero en una moto de la policía conducida por un agente de servicio y cumplía órdenes de los mismos oficiales que habían asesinado al General Arístides González. El General Ramírez del Cid ya había ascendido de director de Inteligencia a director general de la Policía.</p>
+<p class="story-body-text story-content" data-para-count="119" data-total-count="15525" id="story-continues-52" tabindex="-1">El informe de la inspectoría, fechado apenas seis meses después del asesinato, en mayo de 2012, explica lo siguiente:</p>
+<p class="story-body-text story-content" data-para-count="341" data-total-count="15866" id="story-continues-53" tabindex="-1">El mismo día del asesinato de Landaverde, dos agentes de la inspección general de la policía se desplazaron a la jefatura metropolitana de la policía para abrir una investigación. Una de esas agentes era Cano, la misma que había llevado el dinero del narcotraficante Blanco para pagar por el asesinato del General Arístides González.</p>
+<p class="story-body-text story-content" data-para-count="41" data-total-count="15907" id="story-continues-54" tabindex="-1">La investigación, nunca salió a la luz.</p>
+<p class="story-body-text story-content" data-para-count="655" data-total-count="16562" id="story-continues-55" tabindex="-1">Lo que descubrió la inspección general en 2012 fue que el jefe de análisis de la policía, José Hernández Lanza, les dijo que en el asesinato de Alfredo Landaverde había oficiales de la policía involucrados, que cualquier diligencia dependía solo del director general de la policía, Ramírez del Cid, y que no debía informarse a la fiscalía. Por orden del general “no se puede hacer nada”. También les indicó, confiado en su impunidad, quiénes eran los policías que habían participado en el crimen y que el punto de encuentro para matar a Landaverde y encontrarse después era la posta policial de la colonia San Miguel en Tegucigalpa.</p>
+<p class="story-body-text story-content" data-para-count="375" data-total-count="16937" id="story-continues-56" tabindex="-1">Los agentes de la inspección general pusieron por escrito toda esta información y dijeron, al final de su informe, para justificarse a sí mismos: “Ellos solos con sus actuaciones delictivas se involucran y lo único que hacen es perjudicarlo a uno porque en el futuro puede haber una investigación y nos van a involucrar a nosotros por no hacer bien nuestro trabajo”.</p>
+<p class="story-body-text story-content" data-para-count="500" data-total-count="17437" id="story-continues-57" tabindex="-1">Pero no tiraron la toalla. Sabiendo los nombres, ordenaron realizar vaciados de llamadas de los teléfonos de los oficiales y descubrieron que esa misma mañana, uno de los tres sicarios se comunicó con el celular y el teléfono fijo del General Ramírez del Cid y con el resto de oficiales implicados, incluidos el jefe de la policía motorizada, al menos ocho agentes más que estaban en el lugar de los hechos y también con las agentes investigadoras, coludidas desde el principio con el cartel.</p>
+<figure id="media-100000004330612" class="media photo media-100000004330612 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/16/universal/es/16honduras2-copy/16honduras2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-59">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/16/universal/es/16honduras2-copy/16honduras2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/16/universal/es/16honduras2-copy/16honduras2-superJumbo.jpg" data-mediaviewer-caption="Venezuelan national Hilda Caldera (C), widow of former Honduran drug czar and presidential candidate for the Christian Democracy Alfredo Landaverde, shot dead by assassins on the eve, is comforted by a relative during Landaverde's funeral in Tegucigalpa on December 8, 2011. Caldera, who was shot in the back in the attack, asked for protection to US Ambassador to Honduras, Lisa Kubinski. AFP PHOTO/Orlando SIERRA. (Photo credit should read ORLANDO SIERRA/AFP/Getty Images) Venezuelan national Hilda Caldera (C), widow of former Honduran drug czar and presidential candidate for the Christian Democracy Alfredo Landaverde, shot dead by assassins on the eve, is comforted by a relative during Landaverde's funeral in Tegucigalpa on December 8, 2011. Caldera, who was shot in the back in the attack, asked for protection to US Ambassador to Honduras, Lisa Kubinski. AFP PHOTO/Orlando SIERRA. (Photo credit should read ORLANDO SIERRA/AFP/Getty Images)" data-mediaviewer-credit="Orlando Sierra/Agence France-Presse — Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/16/universal/es/16honduras2-copy/16honduras2-master675.jpg"/>
+		<meta itemprop="height" content="464" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Venezuelan national Hilda Caldera (C), widow of former Honduran drug czar and presidential candidate for the Christian Democracy Alfredo Landaverde, shot dead by assassins on the eve, is comforted by a relative during Landaverde's funeral in Tegucigalpa on December 8, 2011. Caldera, who was shot in the back in the attack, asked for protection to US Ambassador to Honduras, Lisa Kubinski. AFP PHOTO/Orlando SIERRA. (Photo credit should read ORLANDO SIERRA/AFP/Getty Images) Venezuelan national Hilda Caldera (C), widow of former Honduran drug czar and presidential candidate for the Christian Democracy Alfredo Landaverde, shot dead by assassins on the eve, is comforted by a relative during Landaverde's funeral in Tegucigalpa on December 8, 2011. Caldera, who was shot in the back in the attack, asked for protection to US Ambassador to Honduras, Lisa Kubinski. AFP PHOTO/Orlando SIERRA. (Photo credit should read ORLANDO SIERRA/AFP/Getty Images)</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Orlando Sierra/Agence France-Presse — Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="737" data-total-count="18174" id="story-continues-59" tabindex="-1">Descubrieron también que la orden de ejecutar el asesinato salió del General Ramírez del Cid y que el operativo era similar al del asesinato del General Arístides González. Que hasta su propio jefe, el Inspector General de la Policía Augusto Somoza Alvarenga, ordenó que se detuviera la investigación. Y que el informe terminó en el propio despacho del General Ramírez del Cid con la aprobación y conocimiento de una serie de oficiales de alto rango que ya habían estado implicados en el asesinato del General Arístides: Obdulio Sabillón Flores, Alcides Santos Vides, José Flores Maradiaga, René Chamorro Gotay, Nicolás Murillo Matute o Julián Hernández Reyes, que llegó a ser portavoz de la Secretaría de Seguridad.</p>
+<p class="story-body-text story-content" data-para-count="257" data-total-count="18431" id="story-continues-60" tabindex="-1">Por el asesinato de Landaverde se detuvo, juzgó y condenó al único civil implicado, Marvin Noel Andino Mascareño. Pero no al policía que conducía la moto ni a quienes limpiaron la ruta de escape ni a quienes dieron seguimiento ni a quien dio la orden.</p>
+<p class="story-body-text story-content" data-para-count="484" data-total-count="18915" id="story-continues-61" tabindex="-1">Cuando Ramírez del Cid fue destituido de su cargo por el Presidente Porfirio Lobo a finales de 2012, la inspectoría envió el informe sobre el asesinato de Landaverde al nuevo director, el General Juan Carlos Bonilla. El documento, recibido por el general el 25 de mayo de 2012, recomendaba depurar a todos los oficiales implicados. Lo más interesante: iba copiado al ministro de Seguridad, Pompeyo Bonilla, y afirmaba que el envío era por orden del ministro, que también sabía.</p>
+<p class="story-body-text story-content" data-para-count="25" data-total-count="18940" id="story-continues-62" tabindex="-1"><strong>Una institución peculiar</strong></p>
+<p class="story-body-text story-content" data-para-count="744" data-total-count="19684" id="story-continues-63" tabindex="-1">La inspectoría general es, según Arabeska Sánchez, consultora en temas de seguridad y especialista en la policía de Honduras, una institución peculiar. En ella suelen acabar oficiales de alto rango y experiencia. &#8220;Parece un departamento de asuntos internos&#8221;, explica. &#8220;Inspecciona el actuar, procedimiento y la funcionalidad de toda la policía. Es paralela a la dirección general y tiene mucho poder. Su director tiene el mismo rango que el director general y puede haber gente muy buena. Pero su problema histórico ha sido que a pesar de que han tenido mucha información, se la callan porque están obligados a seguir la estructura jerárquica. El que saque información de ahí esta fuera de la institución&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="323" data-total-count="20007" id="story-continues-64" tabindex="-1">Ese es el caso de María Luisa Borjas, quien fue jefa de asuntos internos de la policía y lleva años denunciando las prácticas de sicariato en la policía. &#8220;Fui separada de manera deshonrosa de la institución sin derechos; he sufrido atentados, amenazas por poner a cuatro altos oficiales ante la justicia&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="407" data-total-count="20414" id="story-continues-65" tabindex="-1">Roberto Castro Duarte, que trabajó para Borjas, fue el policía que autorizó que las grabaciones de las reuniones en las que se planificó el asesinato del General Arístides González llegaran a la inspectoría general y apareció muerto en noviembre de 2014. La versión oficial dijo que se suicidó. Borjas considera que las pruebas señalan que fue asesinado. &#8220;Era un oficial recto&#8221;, dice.</p>
+<p class="story-body-text story-content" data-para-count="834" data-total-count="21248" id="story-continues-66" tabindex="-1">Borjas afirma en relación con la dirección de la policía que &#8220;esos altos oficiales conforman una mafia y tienen que dar explicaciones, no solo los oficiales, sino los ministros de seguridad que eran sus superiores. Hay colusión. Su responsabilidad no es negligencia ni omisión sino complicidad&#8221;.<br />En este contexto de silencio y <em>omertà</em>, quien pagó por algo, aunque no se sabe con claridad por qué, fue Ramírez del Cid. En febrero de 2013, su hijo Óscar, un adolescente de 17 años, fue acribillado junto a sus guardaespaldas por una decena de hombres encapuchados que irrumpió en el lugar en el que almorzaban. El día del funeral, la viceministra de seguridad, Coralia Rivera, dijo: &#8220;Es evidente que hay una revancha del crimen organizado contra la policía. Estos tipos demuestran que se las cobran&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="369" data-total-count="21617" id="story-continues-67" tabindex="-1">Al día siguiente, el General Ramírez del Cid <a href="https://www.youtube.com/watch?v=sQMocd_rocU">acusó al General Juan Carlos Bonilla</a>, su sucesor en la dirección general de la policía, de estar tras el asesinato. Lo que dijo en televisión fue que &#8220;no ha sido un asalto, se trata de una pantalla. Se ha dado una orden al interior de la institución, fue inducida desde la autoridad, de la institucionalidad”.</p>
+<p class="story-body-text story-content" data-para-count="118" data-total-count="21735" id="story-continues-68" tabindex="-1">Y añadió: “Lo esperé desde la criminalidad, pero nunca esperé que desde adentro se me hiciera este daño&#8221;.</p>
+<figure id="media-100000004330607" class="media photo media-100000004330607 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/16/universal/es/16honduras5-copy/16honduras5-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-70">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/16/universal/es/16honduras5-copy/16honduras5-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/16/universal/es/16honduras5-copy/16honduras5-superJumbo.jpg" data-mediaviewer-caption="Policemen look for clues in the station wagon where retired general Julian Aristides Gonzalez was shot dead in Tegucigalpa on December 8, 2009." data-mediaviewer-credit="Orlando Sierra/Agence France-Presse — Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/16/universal/es/16honduras5-copy/16honduras5-master675.jpg"/>
+		<meta itemprop="height" content="448" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Policemen look for clues in the station wagon where retired general Julian Aristides Gonzalez was shot dead in Tegucigalpa on December 8, 2009.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Orlando Sierra/Agence France-Presse — Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="478" data-total-count="22213" id="story-continues-70" tabindex="-1">En los años 2011, 2012 y 2013, el gobierno de los Estados Unidos daba a la policía de Honduras alrededor de 15 millones de dólares al año. En 2013, tras muchos cuestionamientos sobre la implicación de la policía de Honduras en ejecuciones extrajudiciales de pandilleros o personas secuestradas, parte de la ayuda fue suspendida por el congreso estadounidense en aplicación de la conocida &#8220;Ley Leahy&#8221;. En 2014 los fondos fueron liberados y entregados de nuevo.</p>
+<p class="story-body-text story-content" data-para-count="484" data-total-count="22697" id="story-continues-71" tabindex="-1">El nombramiento del General Bonilla como director general había puesto sobre la mesa que otro informe del departamento de asuntos internos de la policía le acusaba de estar vinculado directamente con tres homicidios y relacionado con al menos 11 desapariciones. Se le juzgó por un solo caso y fue absuelto. El resto de los casos no se investigaron. Borjas, quien fuera jefa de asuntos internos de la policía, fue despedida de la policía por realizar los informes que lo acusaban.</p>
+<p class="story-body-text story-content" data-para-count="688" data-total-count="23385" id="story-continues-72" tabindex="-1">Quien entonces ejercía como secretario de Estado adjunto, William Brownsfield, declaró en mayo de 2013 que &#8220;si el gobierno de los Estados Unidos no trabajaba con la policía, tendría que trabajar con el ejército, que casi todo el mundo ve peor en cuanto a que casi todo el mundo acepta que son peores que la policía para ejercer labores de seguridad ciudadana, o la comunidad se tomará la justicia por su propia mano. En otras palabras, eso sería la ley de la jungla: donde no hay policía y cada ciudadano se arma y está preparado. Esas son las tres opciones y aunque la policía pueda tener ahora algunos defectos, es la menos mala de las tres opciones disponibles&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="34" data-total-count="23419" id="story-continues-73" tabindex="-1"><strong>El problema de la reforma policial</strong></p>
+<p class="story-body-text story-content" data-para-count="400" data-total-count="23819" id="story-continues-74" tabindex="-1">El gobierno de los Estados Unidos decidió diseñar un sistema por el cual solo trabajaría con ciertas unidades de la policía de Honduras, investigadas y verificadas por la embajada, pero no con el director general ni con los hombres en su cadena de mando. Necesitaba mostrar que tomaba medidas en un contexto de crecientes acusaciones de abusos a los derechos humanos por parte de la institución.</p>
+<p class="story-body-text story-content" data-para-count="238" data-total-count="24057" id="story-continues-75" tabindex="-1">Pero la interlocución se mantuvo. La policía de Honduras tiene unidad de mando y acción, y era imposible dividirla, separar a los agentes de sus mandos, a lo sumo tratar fugas de información era a lo máximo a lo que podía aspirarse.</p>
+<p class="story-body-text story-content" data-para-count="401" data-total-count="24458" id="story-continues-76" tabindex="-1">Porque por aquel entonces, ya todos sabían que era muy difícil que la institución se reformara.<br />En noviembre de 2011, después de que se hiciera público que el hijo de la rectora de la Universidad Nacional, Julieta Castellanos, y uno de sus amigos fueron asesinados por un grupo de agentes de policía, estos, tras ser detenidos, obtuvieron un permiso de sus superiores con el que pudieron escapar.</p>
+<p class="story-body-text story-content" data-para-count="208" data-total-count="24666" id="story-continues-77" tabindex="-1">El Presidente Lobo lanzó un proceso de depuración policial. Estados Unidos lo apoyó hasta que, en marzo de 2013, y ante la ausencia de resultados, abandonó su colaboración con la limpieza de la policía.</p>
+<p class="story-body-text story-content" data-para-count="807" data-total-count="25473" id="story-continues-78" tabindex="-1">Tal era el descontrol policial en la época que en una comparecencia en el congreso a mediados de 2013, el ministro de seguridad, Arturo Corrales, había demostrado que no sabían a ciencia cierta cuántos agentes o patrullas tenía la policía. O que tras la aplicación de cientos de pruebas de confianza, polígrafos, de antecedentes penales o patrimoniales en las que cientos de agentes habían sido reprobados, la Secretaría de Seguridad solo había despedido a siete que, por defectos de forma —porque su separación del cuerpo se había hecho sin seguir la ley—, habían logrado detener su despido. Después de eso, se terminó cualquier intento de transparencia y no es posible saber qué ha sucedido, cuántos oficiales han sido depurados, pasados a retiro o reincorporados tras ser separados.</p>
+<p class="story-body-text story-content" data-para-count="325" data-total-count="25798" id="story-continues-79" tabindex="-1">Eduardo Villanueva, quien dirigió la dirección de evaluación de la carrera policial, decía en las entrevistas de aquellos años que uno de los riesgos del proceso de separación de policías era que los miembros depurados crearan bandas criminales como sucedió en México con los Zetas, un cartel creado por exmilitares.</p>
+<p class="story-body-text story-content" data-para-count="461" data-total-count="26259" id="story-continues-80" tabindex="-1">En vista del fracaso, se emitió un nuevo decreto para que el General Bonilla pudiera depurar de manera expedita la institución. Según Sánchez, la consultora de seguridad, el decreto &#8220;generó más problemas que soluciones: 277 de los depurados, cuyo número no se sabe con exactitud, presentaron una demanda ante la Corte Suprema, y muchos de ellos ganaron. Desde entonces han sido retornados a la policía y se les han dado nuevas asignaciones&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="21" data-total-count="26280" id="story-continues-81" tabindex="-1"><strong>El papel de la MACCIH</strong></p>
+<p class="story-body-text story-content" data-para-count="356" data-total-count="26636" id="story-continues-82" tabindex="-1">A Adam Blackwell, un diplomático canadiense que formó parte de la comisión para la reforma de seguridad en Honduras durante el momento en que se emitieron los informes, le nace la desconfianza. Esta semana dijo en una entrevista que le “cuesta creer que un ministro de seguridad no sea informado de una investigación de estas características&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="478" data-total-count="27114" id="story-continues-83" tabindex="-1">En relación con los asesinatos del General Arístides González y Alfredo Landaverde, el Departamento de Estado de los Estados Unidos dijo a The New York Times, a través de su portavoz Joseph Crook, que ofreció ayuda en su día para investigarlos y que en 2015 se le habían facilitado asesores al Fiscal General Óscar Chinchilla. Pero no se sabe nada sobre el resultado del trabajo de esos asesores. Ni sobre la posibilidad de que conocieran los informes de los asesinatos.</p>
+<p class="story-body-text story-content" data-para-count="161" data-total-count="27275" id="story-continues-84" tabindex="-1">Crook agregó que &#8220;se continuará apoyando a la policía de Honduras en su esfuerzo por eliminar la corrupción y la impunidad en todos los niveles&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="559" data-total-count="27834" id="story-continues-85" tabindex="-1">Esta semana se ha instalado en Honduras la Misión de Apoyo Contra la Corrupción y la Impunidad en Honduras (MACCIH), creada por la Organización de Estados Americanos con el permiso del gobierno de Honduras para responder a cientos de miles de ciudadanos que durante meses pidieron en las calles que la comunidad internacional interviniera el sistema de justicia del país. Esperaban una comisión como la de la vecina Guatemala, que ha logrado enviar a prisión al expresidente Otto Pérez Molina y a quien fungiera como su vicepresidenta, Roxana Baldetti.</p>
+<p class="story-body-text story-content" data-para-count="215" data-total-count="28049" id="story-continues-86" tabindex="-1">El actual presidente de Honduras, Juan Orlando Hernández, no ha querido que la MACCIH tenga las mismas atribuciones que su par de Guatemala, y la OEA aceptó trabajar en el país sin capacidad investigativa propia.</p>
+<p class="story-body-text story-content" data-para-count="543" data-total-count="28592" id="story-continues-87" tabindex="-1">Pero en una entrevista con The New York Times, el director de la MACCIH ha dicho que serán ellos quienes elijan los casos a investigar. La corrupción policial puede caer dentro del ámbito de competencia de la MACCIH, pero la misión aún necesita crear los grupos de fiscales y de jueces que comiencen a trabajar. Juan Jiménez Mayor es el exministro de justicia de Perú que la dirige y ha dicho que &#8220;no debería dudarse que nos implicaremos en los casos que estén vinculados con redes de corrupción que perjudican al país&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="528" data-total-count="29120" id="story-continues-88" tabindex="-1">El primer caso que se les ha atribuido es el asesinato en marzo de <a href="http://www.nytimes.com/es/2016/03/03/berta-caceres-lider-indigena-y-ambientalista-asesinada-en-honduras/">Berta Cáceres</a>, una líder indígena que se oponía a un proyecto hidroeléctrico. La Corte Interamericana de Derechos Humanos había decretado medidas cautelares para su protección las 24 horas del día, pero ningún policía la protegía cuando la mataron y nadie ha asumido ninguna responsabilidad por eso. Su caso es solo el último de una larga lista de asesinatos no resueltos de sindicalistas, activistas de los derechos humanos, abogados y periodistas.</p>
+<p class="story-body-text story-content" data-para-count="393" data-total-count="29513" id="story-continues-89" tabindex="-1">Mario Rolando Díaz, presidente de la Asociación Jueces para la Democracia, una organización que se ha mostrado muy crítica con el gobierno, confía en que el apoyo internacional sea útil. &#8220;Tengo la esperanza de que con la MACCIH todo pueda salir a la luz con mayor facilidad, que termine lo escondido, que haya transparencia y responsabilidad en cuanto a las investigaciones&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="527" data-total-count="30040" id="story-continues-90" tabindex="-1">Cuando un diario local, El Heraldo, hizo pública una versión de los informes sobre los asesinatos del General Arístides González y Alfredo Landaverde, en la que decidieron omitir, entre otras cosas, los nombres de los acusados por los crímenes, el Presidente Hernández dijo: &#8220;Todo agente u oficial que supuestamente sea responsable de haber participado en estos hechos y que aparezca en el informe debe ser suspendido de inmediato ante la justicia y debe entregársele al ministerio público los expedientes&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="369" data-total-count="30409" id="story-continues-91" tabindex="-1">También creó una nueva comisión para la depuración policial. El Ministro de Seguridad Julián Pacheco dijo que la carga de &#8220;la responsabilidad va a estar en el Presidente Juan Orlando Hernández y en mí&#8221; y que calcula que &#8220;van a salir 2000 o 2500 personas de la policía en doce meses&#8221;. La policía cuenta con alrededor de 11.000 efectivos.</p>
+<p class="story-body-text story-content" data-para-count="126" data-total-count="30535" id="story-continues-92" tabindex="-1">El Fiscal General Chinchilla abrió una investigación y ordenó que se allanaran sedes policiales para requisar información.</p>
+<p class="story-body-text story-content" data-para-count="31" data-total-count="30566" id="story-continues-93" tabindex="-1"><strong>Implicados, mas no perjudicados</strong></p>
+<p class="story-body-text story-content" data-para-count="603" data-total-count="31169" id="story-continues-94" tabindex="-1">En medio de la multitud de silencios y fracasos que envolvieron a la policía de Honduras todos estos años, la mayoría de los oficiales implicados ascendieron. José Rigoberto Hernández Lanza y Marco Tulio Cruz Aguilar, participantes en el asesinato de Alfredo Landaverde y su encubrimiento, según el informe de la inspectoría, fueron promovidos en 2015 por el Presidente Hernández; el Comisionado Murillo Matute, que dirigía a los sicarios según el informe, y no superó las pruebas de confianza de la policía durante el proceso de depuración, ascendió igualmente a director de departamento.</p>
+<p class="story-body-text story-content" data-para-count="504" data-total-count="31673" id="story-continues-95" tabindex="-1">El Subcomisionado Ayala López fue ascendido por el presidente en 2015. Julián Hernandez Reyes fue portavoz de la policía y jefe policial de San Pedro Sula, la ciudad más penetrada por el narco y más violenta del país. Leiva Gamoneda siguió ascendiendo: este febrero era jefe de policía de un departamento al sur del país. El General Bonilla fue enviado como agregado militar a la Embajada de Honduras en Colombia y el General Ramón Sabillón a la representación de Honduras en Naciones Unidas.</p>
+<p class="story-body-text story-content" data-para-count="725" data-total-count="32398" id="story-continues-96" tabindex="-1">Ramírez del Cid sigue siendo miembro de la policía. Sin mando de operaciones, pero miembro. Ha dado entrevistas a medios locales donde niega todo. Alega que los informes de la inspectoría general son falsos. El General Escoto Salinas también niega cualquier vinculación con los hechos. El General Muñoz Licona ha declarado que &#8220;es ilógico pensar todo eso. El fundamento de un policía es preservar la vida. Si sucedió algo fue de forma clandestina. Ningún director tiene ese tipo de políticas&#8221;. Cuatro de los cinco ministros de seguridad que han estado en el cargo desde 2009 han negado saber algo de los informes que implican a la cúpula policial y otro, Pompeyo Bonilla, ha preferido no pronunciarse.</p>
+<p class="story-body-text story-content" data-para-count="219" data-total-count="32617" id="story-continues-97" tabindex="-1">El escepticismo suele imponerse en Honduras, el país de la impunidad, el lugar donde el anterior fiscal general, Luis Rubí, reconoció que el 91 por ciento de los casos criminales nunca llegaban a tener una sentencia.</p>
+<p class="story-body-text story-content" data-para-count="593" data-total-count="33210" id="story-continues-98" tabindex="-1">Para el Senador Patrick Leahy, un demócrata del estado de Vermont que lleva años monitoreando a las fuerzas de seguridad que reciben ayuda de los Estados Unidos, &#8220;es muy difícil creer que se haya ignorado los patrones de depravación y corrupción de la policía y el ejército de Honduras. Es como una fraternidad y está claro que los encubren. Es inconcebible que quienes están en las posiciones más altas de la jerarquía no supieran lo que pasaba. Creo que nuestras autoridades han sido ingenuas por el modo en que han apoyado el comportamiento del gobierno de Honduras&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="93" data-total-count="33303" id="story-continues-99" tabindex="-1">Añadió: &#8220;Las cosas no van a seguir igual. No vamos a seguir tirando el dinero&#8221;.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Elisabeth Malkin colaboró con este reportaje desde Ciudad de México y Azam Ahmed desde Washington. </p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/alfredo-landaverde/" rel="tag">Alfredo Landaverde</a>, <a href="https://www.nytimes.com/es/tag/general-ricardo-ramirez-del-cid/" rel="tag">General Ricardo Ramírez del Cid</a>, <a href="https://www.nytimes.com/es/tag/honduras/" rel="tag">Honduras</a>, <a href="https://www.nytimes.com/es/tag/juan-orlando-hernandez/" rel="tag">Juan Orlando Hernández</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/04/15/tres-generales-y-un-cartel-violencia-policial-e-impunidad-en-honduras/"
+				data-title="América Latina: Tres generales y un cartel: violencia policial e impunidad en Honduras"
+				data-author="POR ALBERTO ARCE"
+				data-media=""
+				data-description="The New York Times tuvo acceso a un informe interno de la policía de Honduras que detalla cómo la cúpula policial ordenó los asesinatos de dos responsables de la lucha contra el narcotráfico en el país. "
+				data-publish-date="15 de abril de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/03/berta-caceres-lider-indigena-y-ambientalista-asesinada-en-honduras/">
+					<div class="story-body">
+						<h3 class="kicker">Honduras</h3>
+
+						<h2 class="headline">
+							<span class="title">Berta Cáceres, líder indígena y ambientalista, asesinada en Honduras</span>
+							<time class="dateline">3 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/03/universal/es/03berthaES/03berthaES-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/20/oscar-martinez-habla-sobre-la-soledad-locura-y-huida-que-azotan-a-centroamerica-en-a-history-of-violence/">
+					<div class="story-body">
+						<h3 class="kicker">Libros</h3>
+
+						<h2 class="headline">
+							<span class="title">Óscar Martínez habla sobre la soledad, locura y huida que azotan a Centroamérica en &#8216;A History of Violence&#8217;</span>
+							<time class="dateline">20 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/16/universal/es/oscarmartinezES/oscarmartinezES-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/02/16/la-lucha-contra-la-corrupcion-en-honduras-es-una-farsa/">
+					<div class="story-body">
+						<h3 class="kicker">Comentario</h3>
+
+						<h2 class="headline">
+							<span class="title">La lucha contra la corrupción en Honduras es una farsa</span>
+							<time class="dateline">16 de febrero de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/02/16/opinion/16main/16main-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/15/un-informe-revela-nombres-y-hechos-relacionados-con-asesinatos-cometidos-por-la-policia-en-honduras/">
+					<div class="story-body">
+						<h3 class="kicker">Honduras</h3>
+
+						<h2 class="headline">
+							<span class="title">Un informe revela nombres y hechos relacionados con asesinatos cometidos por la policía en Honduras</span>
+							<time class="dateline">15 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/15/universal/es/Honduraspolice4/Honduraspolice4-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":752,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

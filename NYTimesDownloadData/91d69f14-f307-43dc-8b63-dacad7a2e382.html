@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004468552"/>
+<meta name="hdl" content="Los artistas mexicanos encuentran inspiración (y éxito) en sus raíces" />
+<meta name="col" content="Cultura" id="column-name" />
+<meta name="pdate" content="20160825" />
+<meta name="utime" content="20160825143034" />
+<meta name="ptime" content="20160825143034" />
+<meta name="DISPLAYDATE" content="Aug. 25, 2016" />
+<meta name="dat" content="Aug. 25, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="los-artistas-mexicanos-encuentran-inspiracion-y-exito-en-sus-raices" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/08/25/los-artistas-mexicanos-encuentran-inspiracion-y-exito-en-sus-raices/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Los artistas mexicanos encuentran inspiración (y éxito) en sus raíces" />
+<meta property="og:description" content="En un país con una rica herencia cultural, muchos artistas emergentes y pioneros ya no se sienten obligados a buscar ideas en el extranjero: la gastronomía, la cultura, el diseño y el arte mexicano crecen y se puede hablar de exponentes de talla mundial. " />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/08/03/world/xxmexartists1/xxmexartists1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-08-25" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/08/25/los-artistas-mexicanos-encuentran-inspiracion-y-exito-en-sus-raices/" />
+<meta property="twitter:title" content="Los artistas mexicanos encuentran inspiración (y éxito) en sus raíces" />
+<meta property="twitter:description" content="En un país con una rica herencia cultural, muchos artistas emergentes y pioneros ya no se sienten obligados a buscar ideas en el extranjero: la gastronomía, la cultura, el diseño y el arte mexicano crecen y se puede hablar de exponentes de talla mundial. " />
+<meta name="author" content="Paulina Villegas" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por Paulina Villegas" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="cultura" />
+<meta name="cd12" content="mexico" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="cultura" />
+<meta name="ser" content="mexico" />
+<meta name="id" content="100000004468552"/>
+<meta name="wordCount" content="1381"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/08/25/los-artistas-mexicanos-encuentran-inspiracion-y-exito-en-sus-raices/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=08&amp;day=25&amp;name=los-artistas-mexicanos-encuentran-inspiracion-y-exito-en-sus-raices">
+<meta name="PT" content="article">
+<meta name="article:section" content="Cultura">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/6?exclude=23179">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/08\/25\/los-artistas-mexicanos-encuentran-inspiracion-y-exito-en-sus-raices\/"},"headline":"Los artistas mexicanos encuentran inspiraci\u00f3n (y \u00e9xito) en sus ra\u00edces","datePublished":"2016-08-25T14:30:34+00:00","dateModified":"2016-08-25T14:14:48+00:00","author":{"@type":"Person","name":"dulce.ramos"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/08\/03\/world\/xxmexartists1\/xxmexartists1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"En un pa\u00eds con una rica herencia cultural, muchos artistas emergentes y pioneros ya no se sienten obligados a buscar ideas en el extranjero: la gastronom\u00eda, la cultura, el dise\u00f1o y el arte mexicano crecen y se puede hablar de exponentes de talla mundial. "}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/08/25/los-artistas-mexicanos-encuentran-inspiracion-y-exito-en-sus-raices/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/08/24/world/americas/mexico-culture-art-fashion.html?_r=0" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="cultura/mexico" />
+<title>Los artistas mexicanos encuentran inspiración (y éxito) en sus raíces &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/08/24/world/americas/mexico-culture-art-fashion.html?_r=0" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/08/25/los-artistas-mexicanos-encuentran-inspiracion-y-exito-en-sus-raices/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-23179 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+					<span class="pipe">|</span>
+				Los artistas mexicanos encuentran inspiración (y éxito) en sus raíces
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/08/25/los-artistas-mexicanos-encuentran-inspiracion-y-exito-en-sus-raices/"
+					data-title="Cultura: Los artistas mexicanos encuentran inspiración (y éxito) en sus raíces"
+					data-author="POR PAULINA VILLEGAS"
+					data-media=""
+					data-description="En un país con una rica herencia cultural, muchos artistas emergentes y pioneros ya no se sienten obligados a buscar ideas en el extranjero: la gastronomía, la cultura, el diseño y el arte mexicano crecen y se puede hablar de exponentes de talla mundial. "
+					data-publish-date="25 de agosto de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2bJxD77">http://nyti.ms/2bJxD77</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/mexico/">México</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Los artistas mexicanos encuentran inspiración (y éxito) en sus raíces</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Paulina Villegas</span>
+</span>
+
+					<time class="dateline" datetime="2016-08-25">25 de agosto de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/08/25/los-artistas-mexicanos-encuentran-inspiracion-y-exito-en-sus-raices/"
+							data-title="Cultura: Los artistas mexicanos encuentran inspiración (y éxito) en sus raíces"
+							data-author="POR PAULINA VILLEGAS"
+							data-media=""
+							data-description="En un país con una rica herencia cultural, muchos artistas emergentes y pioneros ya no se sienten obligados a buscar ideas en el extranjero: la gastronomía, la cultura, el diseño y el arte mexicano crecen y se puede hablar de exponentes de talla mundial. "
+							data-publish-date="25 de agosto de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004565063" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/03/world/xxmexartists1/xxmexartists1-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/03/world/xxmexartists1/xxmexartists1-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/03/world/xxmexartists1/xxmexartists1-superJumbo.jpg" data-mediaviewer-caption="Natalia Lafourcade, cantante y compositora, conectó con sus orígenes en su último disco. " data-mediaviewer-credit="Adriana Zehbrauskas para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/03/world/xxmexartists1/xxmexartists1-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Natalia Lafourcade, cantante y compositora, conectó con sus orígenes en su último disco. </span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Adriana Zehbrauskas para The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/08/24/world/americas/mexico-culture-art-fashion.html?_r=0&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="266" data-total-count="266" id="story-continues-2" tabindex="-1">CIUDAD DE MÉXICO — El año pasado, cuando la cantante pop <a href="http://www.lafourcade.com.mx/" target="_blank">Natalia Lafourcade</a> apareció en el escenario del Auditorio Nacional, se encontraba en la cumbre de una carrera que comenzó hace más de 10 años, cuando se presentaba con atuendos inspirados en el <em>grunge</em>.</p>
+<p class="story-body-text story-content" data-para-count="309" data-total-count="575" id="story-continues-3" tabindex="-1">Sin embargo, para este concierto, Lafourcade se deshizo de los jeans rasgados; vistió, en cambio, pantalones diseñados en México y una corona de rosas rojas en homenaje a Frida Kahlo. A mitad del concierto la acompañó en el escenario una banda de son jarocho, un estilo de música originario de Veracruz.</p>
+<p class="story-body-text story-content" data-para-count="135" data-total-count="710" id="story-continues-4" tabindex="-1">“Era hora de conectar con mis orígenes”, dijo Lafourcade, de 32 años. “Quería infundir en mi música un carácter mexicano”.</p>
+<p class="story-body-text story-content" data-para-count="148" data-total-count="858" id="story-continues-5" tabindex="-1">En un país con una rica herencia cultural, muchos artistas emergentes y pioneros ya no se sienten obligados a buscar inspiración en el extranjero.</p>
+<p class="story-body-text story-content" data-para-count="290" data-total-count="1148" id="story-continues-6" tabindex="-1">“A los extranjeros les encanta nuestra gente, nuestras playas, nuestras pirámides, nuestra comida”, afirma Israel Gómez, miembro de <a href="http://centavrvs.com/" target="_blank">Centavrvs</a>, una agrupación de electropop nominada a un Grammy. “Ya era hora de que comenzáramos a valorarnos como lo hace la gente en el exterior”.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="202" data-total-count="1350" id="story-continues-7" tabindex="-1">Aunque a principios del siglo XX los artistas mexicanos experimentaron una época de gran reconocimiento, el reciente giro entre los artistas jóvenes refleja que está ocurriendo un cambio más amplio.</p>
+<figure id="media-100000004565072" class="media photo media-100000004565072 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/03/world/xxmexartists2/xxmexartists2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-9">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/03/world/xxmexartists2/xxmexartists2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/03/world/xxmexartists2/xxmexartists2-superJumbo.jpg" data-mediaviewer-caption="A mural by the Mexican artist Edgar Flores, known as Saner, on the Hotel Reforma Avenue in Mexico City. He said, “In an globalized world where you belong to everywhere and nowhere, I hold on to my roots to know who I am, what I want to say and where am I heading.”" data-mediaviewer-credit="Adriana Zehbrauskas for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/03/world/xxmexartists2/xxmexartists2-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A mural by the Mexican artist Edgar Flores, known as Saner, on the Hotel Reforma Avenue in Mexico City. He said, “In an globalized world where you belong to everywhere and nowhere, I hold on to my roots to know who I am, what I want to say and where am I heading.”</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Adriana Zehbrauskas for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="276" data-total-count="1626" id="story-continues-9" tabindex="-1">Aun con los problemas de corrupción y cuando todo mundo habla de un muro fronterizo, la gastronomía, la cultura, el diseño y el arte mexicano crecen. Los mexicanos ahora pueden hablar de sus cineastas de talla mundial, exhibiciones de arte internacionales o chefs exitosos.</p>
+<p class="story-body-text story-content" data-para-count="290" data-total-count="1916" id="story-continues-10" tabindex="-1">“La influencia de la cultura mexicana en el arte y la moda es muy fuerte y hay una nueva generación de jóvenes, ya sea en el país o fuera de él, que está luchando para hacer llegar ese mensaje”, comenta la directora de moda de los almacenes de lujo Saks Fifth Avenue, Roopal Patel. </p>
+<p class="story-body-text story-content" data-para-count="263" data-total-count="2179" id="story-continues-11" tabindex="-1">El artista Edgar Flores, conocido como <a href="http://saner.com.mx/" target="_blank">Saner</a>, se inspiró en la compleja historia colonial de México para un enorme <a href="https://images.google.com.mx/imgres?imgurl=http%3A%2F%2F2.bp.blogspot.com%2F-YrZcNKoQAcI%2FUWB7wki0CfI%2FAAAAAAAAm9g%2FE_7MxEPNEMc%2Fs1600%2Fstreetartnews_saner_france_fleury_les_aubrais-7.jpg&amp;imgrefurl=https%3A%2F%2Fstreetartnews.net%2F2013%2F04%2Fsaner-new-mural-in-fleury-les-aubrais.html&amp;docid=1iOrq2riLWQ7DM&amp;tbnid=g2WENAYqA6AD2M%3A&amp;w=1600&amp;h=1200&amp;hl=en-us&amp;source=sh%2Fx%2Fim" target="_blank">mural</a> que terminó en 2013 en Fleury-les-Aubrais, Francia, en el que muestra el mortal abrazo entre un guerrero azteca y un conquistador español.</p>
+<p class="story-body-text story-content" data-para-count="240" data-total-count="2419" id="story-continues-12" tabindex="-1">Flores describió la obra como un “grito desesperado” para conservar y redefinir la identidad mexicana, un concepto frágil que “de lo contrario podría perderse fácilmente” si más mexicanos dejan de valorar su cultura e historia.</p>
+<p class="story-body-text story-content" data-para-count="226" data-total-count="2645" id="story-continues-13" tabindex="-1">“En un mundo globalizado donde se es de todos lados y de ninguno, yo me aferro a mis raíces para saber quién soy, qué quiero decir y hacia dónde me dirijo”, dijo en una entrevista en su estudio de la Ciudad de México.</p>
+<p class="story-body-text story-content" data-para-count="200" data-total-count="2845" id="story-continues-14" tabindex="-1">El integrante de Centavrvs, Israel Gómez, dijo que su agrupación —cuyo nombre se inspira en el sobrenombre del caudillo Pancho Villa, el Centauro del Norte— busca desenterrar esa misma herencia.</p>
+<figure id="media-100000004565070" class="media photo media-100000004565070 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/03/world/xxmexartists3/xxmexartists3-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-16">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/03/world/xxmexartists3/xxmexartists3-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/03/world/xxmexartists3/xxmexartists3-superJumbo.jpg" data-mediaviewer-caption="Mr. Flores at home in Mexico City. In the background is the work “El Equilibrio De Una Nación” (The Balance Of A Nation)." data-mediaviewer-credit="Adriana Zehbrauskas for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/03/world/xxmexartists3/xxmexartists3-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Mr. Flores at home in Mexico City. In the background is the work “El Equilibrio De Una Nación” (The Balance Of A Nation).</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Adriana Zehbrauskas for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="240" data-total-count="3085" id="story-continues-16" tabindex="-1">La banda combina la cumbia y la música ranchera tradicional y entreteje las voces de un coro de mujeres indígenas de Michoacán en canciones pop mexicanas. Además, incluye fragmentos de poemas o novelas antiguas en algunas de sus letras.</p>
+<p class="story-body-text story-content" data-para-count="264" data-total-count="3349" id="story-continues-17" tabindex="-1">“Nuestra música es resultado de un México ‘nuevo’ inspirado completamente en el México antiguo”, explica Gómez. “Tiene que ver con lo que somos hoy y el orgullo de serlo, llevando nuestras raíces y hablándole al mundo sobre toda esa mexicanidad”.</p>
+<p class="story-body-text story-content" data-para-count="126" data-total-count="3475" id="story-continues-18" tabindex="-1">El resurgimiento del interés en el patrimonio cultural de México es particularmente evidente en el ámbito de la moda local.</p>
+<p class="story-body-text story-content" data-para-count="243" data-total-count="3718" id="story-continues-19" tabindex="-1">Los diseñadores y consumidores locales han perdido el miedo a ser demasiado étnicos y ahora abren las puertas a los textiles y artesanías indígenas que por mucho tiempo solo interesaron a los turistas estadounidenses en busca de <em>souvenirs</em>.</p>
+<p class="story-body-text story-content" data-para-count="371" data-total-count="4089" id="story-continues-20" tabindex="-1">“La euforia de poder comprar una pieza de diseño de Philippe Starck en Target pronto dio la sensación de que no quedaba nada sagrado, de que se había perdido la originalidad”, comentó la historiadora de arte de Nueva York Maggie Galton, fundadora de Onora Casa, una marca mexicana de diseño de lujo en la Ciudad de México que trabaja con textiles tradicionales.</p>
+<figure id="media-100000004565071" class="media photo media-100000004565071 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/03/world/xxmexartists4/xxmexartists4-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-22">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/03/world/xxmexartists4/xxmexartists4-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/03/world/xxmexartists4/xxmexartists4-superJumbo.jpg" data-mediaviewer-caption="Mr. Flores sketching for his coming exhibit at the Museo de Las Americas in Denver." data-mediaviewer-credit="Adriana Zehbrauskas for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/03/world/xxmexartists4/xxmexartists4-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Mr. Flores sketching for his coming exhibit at the Museo de Las Americas in Denver.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Adriana Zehbrauskas for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="209" data-total-count="4298" id="story-continues-22" tabindex="-1">“Ahora la gente quiere sus cubrecamas con inscripciones mayas, quiere que su producto sea bonito, pero que además tenga una identidad, una historia y que se haya invertido tiempo en él”, añadió Galton.</p>
+<p class="story-body-text story-content" data-para-count="256" data-total-count="4554" id="story-continues-23" tabindex="-1">Incluso cuando la escena de la moda aún no ha alcanzado su máximo potencial, la conciencia y la ola de inspiración parece estar en pleno auge. A medida que los creadores sacian la sed de autenticidad, avivan sus sentimientos de orgullo y empoderamiento.</p>
+<p class="story-body-text story-content" data-para-count="346" data-total-count="4900" id="story-continues-24" tabindex="-1">“Estamos ofreciendo algo que el mundo está buscando y eso es conciencia del lugar de donde proviene el producto, cómo y quién lo elaboró”, explica el diseñador de moda Francisco Cancino, cuya marca <a href="http://www.yakampot.com/" target="_blank">Yakampot</a> mezcla ideas sofisticadas y minimalistas con diseños tradicionales y artesanales para recrear atuendos indígenas como el rebozo.</p>
+<p class="story-body-text story-content" data-para-count="134" data-total-count="5034" id="story-continues-25" tabindex="-1">Los diseños de Yakampot se pueden encontrar en el sitio web de productos de lujo <a href="http://www.luisaviaroma.com/" target="_blank">Luisa Via Roma</a> y en ciudades como Florencia, Italia.</p>
+<p class="story-body-text story-content" data-para-count="207" data-total-count="5241" id="story-continues-26" tabindex="-1">Los centros neurálgicos de la moda de pasarela también dirigen su mirada hacia México en busca de inspiración, añadiendo toques modernos y antiguos de la cultura mexicana a los diseños de alta costura.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="243" data-total-count="5484" id="story-continues-27" tabindex="-1">En la colección de primavera de 2015 del diseñador francés <a href="https://www.jeanpaulgaultier.com/en-us/" target="_blank">Jean Paul Gaultier</a>, por ejemplo, se le pidió a las altísimas modelos que cubrieran sus rostros con máscaras que emulaban las que usan los luchadores profesionales de lucha libre.</p>
+<figure id="media-100000004565069" class="media photo media-100000004565069 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/03/world/xxmexartists5/xxmexartists5-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-29">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/03/world/xxmexartists5/xxmexartists5-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/03/world/xxmexartists5/xxmexartists5-superJumbo.jpg" data-mediaviewer-caption="Francisco Cancino, Mexican fashion designer and owner of the brand Yakampot, said, “We are offering something the world is looking for, which is awareness of the place your product comes from, how and who made it.”" data-mediaviewer-credit="Adriana Zehbrauskas for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/03/world/xxmexartists5/xxmexartists5-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Francisco Cancino, Mexican fashion designer and owner of the brand Yakampot, said, “We are offering something the world is looking for, which is awareness of the place your product comes from, how and who made it.”</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Adriana Zehbrauskas for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="211" data-total-count="5695" id="story-continues-29" tabindex="-1">También este año, la marca japonesa Comme des Garçons exhibió botas tribaleras, unas botas increíblemente picudas que se crearon en el norte de México, alabadas en la cultura musical del tribal guarachero.</p>
+<p class="story-body-text story-content" data-para-count="228" data-total-count="5923" id="story-continues-30" tabindex="-1">Sin embargo, a medida que más compañías y diseñadores encuentran oportunidades de mercado al explotar tradiciones y técnicas mexicanas, surge la pregunta de cuándo la inspiración cae en la apropiación cultural y en robo.</p>
+<p class="story-body-text story-content" data-para-count="285" data-total-count="6208" id="story-continues-31" tabindex="-1">El otoño pasado, la diseñadora francesa <a href="https://www.theguardian.com/global-development-professionals-network/2015/jun/17/mexican-mixe-blouse-isabel-marant" target="_blank">Isabel Marant</a> fue acusada de plagio debido a que una blusa de su colección se asemejaba mucho a la vestimenta bordada que elaboran las mujeres indígenas mexicanas de Santa María Tlahuitoltepec. La oficina de Marant rechazó las acusaciones. </p>
+<p class="story-body-text story-content" data-para-count="212" data-total-count="6420" id="story-continues-32" tabindex="-1">De igual modo, en abril se creó una <a href="https://www.change.org/p/williams-sonoma-pottery-barn-please-stop-selling-fake-otomi-embroidery-items-made-in-china" target="_blank">petición</a> para evitar que la mueblería estadounidense Pottery Barn vendiera fundas de almohada fabricadas en China, cuya etiqueta las describía como “bordados otomíes”. </p>
+<p class="story-body-text story-content" data-para-count="357" data-total-count="6777" id="story-continues-33" tabindex="-1">Explotar la herencia mexicana ha permitido a algunos diseñadores dar una nueva dirección a sus carreras. Cancino, el diseñador de Yakampot, creció como muchos otros aquí con la idea de que el éxito profesional solo podría alcanzarse en el extranjero. Así que hizo sus maletas y dejó su hogar en el estado sureño de Chiapas para dirigirse a París.</p>
+<p class="story-body-text story-content" data-para-count="178" data-total-count="6955" id="story-continues-34" tabindex="-1">Al sentirse fuera de lugar, se preguntó cómo podía crear una línea de prendas contemporáneas y sofisticadas que fueran aceptadas por los amantes de la moda de todo el mundo.</p>
+<p class="story-body-text story-content" data-para-count="232" data-total-count="7187" id="story-continues-35" tabindex="-1">“La respuesta más sencilla es que si encuentras la identidad de tu proyecto en tu propia cultura, con sus tradiciones y técnicas, el resultado es algo realmente auténtico y valioso y la gente lo agradecerá”, comenta Cancino.</p>
+<p class="story-body-text story-content" data-para-count="201" data-total-count="7388" id="story-continues-36" tabindex="-1">Sin embargo, para otros, aceptar y redefinir la identidad mexicana significa apartarse de los clichés y estereotipos asociados con su país y sacar provecho de otros aspectos de su cultura y sociedad.</p>
+<p class="story-body-text story-content" data-para-count="318" data-total-count="7706" id="story-continues-37" tabindex="-1">Cuando el cineasta Alonso Ruizpalacios ubicó su largometraje de 2014, <a href="http://www.nytimes.com/2015/05/20/movies/review-gueros-amid-the-mexican-student-protests-of-1999.html" target="_blank"><em>Güeros</em></a>, en la Ciudad de México de 1999, decidió hacer énfasis en el conflicto de clases que se cocía a fuego lento y en las furibundas contradicciones políticas de la capital, evitando los temas más comunes del narcotráfico y la violencia.</p>
+<p class="story-body-text story-content" data-para-count="209" data-total-count="7915" id="story-continues-38" tabindex="-1">“Había la idea de que para ser verdaderamente mexicano, tenías que ser o hacer folclore”, comentó Ruizpalacios. “Ahora la conversación está cambiando, las ideas se están haciendo más complejas”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/arte-mexicano/" rel="tag">arte mexicano</a>, <a href="https://www.nytimes.com/es/tag/cultura-mexicana/" rel="tag">cultura mexicana</a>, <a href="https://www.nytimes.com/es/tag/diseno-mexicano/" rel="tag">diseño mexicano</a>, <a href="https://www.nytimes.com/es/tag/gastronomia-mexicana/" rel="tag">gastronomía mexicana</a>, <a href="https://www.nytimes.com/es/tag/natalia-lafourcade/" rel="tag">Natalia Lafourcade</a>, <a href="https://www.nytimes.com/es/tag/saner/" rel="tag">Saner</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/08/25/los-artistas-mexicanos-encuentran-inspiracion-y-exito-en-sus-raices/"
+				data-title="Cultura: Los artistas mexicanos encuentran inspiración (y éxito) en sus raíces"
+				data-author="POR PAULINA VILLEGAS"
+				data-media=""
+				data-description="En un país con una rica herencia cultural, muchos artistas emergentes y pioneros ya no se sienten obligados a buscar ideas en el extranjero: la gastronomía, la cultura, el diseño y el arte mexicano crecen y se puede hablar de exponentes de talla mundial. "
+				data-publish-date="25 de agosto de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/07/28/en-mexico-la-narcoficcion-se-debate-entre-el-entretenimiento-y-la-apologia/">
+					<div class="story-body">
+						<h3 class="kicker">Comentario</h3>
+
+						<h2 class="headline">
+							<span class="title">En México, la narcoficción se debate entre el entretenimiento y la apología</span>
+							<time class="dateline">28 de julio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/07/24/opinion/sunday/24Grillo-web1/24Grillo-web1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/07/12/dos-artistas-juegan-a-construir-el-muro-de-trump-y-mandan-la-factura-a-mexico/">
+					<div class="story-body">
+						<h3 class="kicker">Elecciones EE. UU.</h3>
+
+						<h2 class="headline">
+							<span class="title">Dos artistas juegan a construir el muro de Trump, y mandan la factura a México</span>
+							<time class="dateline">12 de julio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/07/09/arts/09TRUMPWALL/09TRUMPWALL-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/07/22/entrevista-a-donald-trump-ahora-mismo-mexico-representa-una-perdida-masiva-para-nosotros/">
+					<div class="story-body">
+						<h3 class="kicker">Elecciones EE. UU.</h3>
+
+						<h2 class="headline">
+							<span class="title">Entrevista a Donald Trump: &#8220;Ahora mismo, México representa una pérdida masiva para nosotros&#8221;</span>
+							<time class="dateline">22 de julio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/07/22/world/22TRANSCRIPT-web1/22TRANSCRIPT-web1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/22/los-mejores-bares-en-ciudad-de-mexico/">
+					<div class="story-body">
+						<h3 class="kicker">Viajes</h3>
+
+						<h2 class="headline">
+							<span class="title">Lo contemporáneo y lo clásico se mezclan en los mejores bares de Ciudad de México</span>
+							<time class="dateline">22 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/20/t-magazine/20tmag-mexicocity01/20tmag-mexicocity01-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":810,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

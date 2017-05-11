@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004288189"/>
+<meta name="hdl" content="Equipos rivales de científicos estadounidenses se unen para combatir al zika" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20160407" />
+<meta name="utime" content="20160407081437" />
+<meta name="ptime" content="20160407081437" />
+<meta name="DISPLAYDATE" content="Apr. 7, 2016" />
+<meta name="dat" content="Apr. 7, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="equipos-rivales-de-cientificos-estadounidenses-se-unen-para-combatir-al-zika" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/04/07/equipos-rivales-de-cientificos-estadounidenses-se-unen-para-combatir-al-zika/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Equipos rivales de científicos estadounidenses se unen para combatir al zika" />
+<meta property="og:description" content="Una nueva forma de lucha genética podría usarse para enfrentar la creciente gama de enfermedades transmitidas por los insectos junto con la habilidad para analizar los detalles de su ADN." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/03/29/us/30mosquito1/30mosquito1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-04-07" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/04/07/equipos-rivales-de-cientificos-estadounidenses-se-unen-para-combatir-al-zika/" />
+<meta property="twitter:title" content="Equipos rivales de científicos estadounidenses se unen para combatir al zika" />
+<meta property="twitter:description" content="Una nueva forma de lucha genética podría usarse para enfrentar la creciente gama de enfermedades transmitidas por los insectos junto con la habilidad para analizar los detalles de su ADN." />
+<meta name="author" content="Amy Harmon" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Amy Harmon" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="ciencia" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="ciencia" />
+<meta name="id" content="100000004288189"/>
+<meta name="wordCount" content="1641"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/04/07/equipos-rivales-de-cientificos-estadounidenses-se-unen-para-combatir-al-zika/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=04&amp;day=07&amp;name=equipos-rivales-de-cientificos-estadounidenses-se-unen-para-combatir-al-zika">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=9001">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/04\/07\/equipos-rivales-de-cientificos-estadounidenses-se-unen-para-combatir-al-zika\/"},"headline":"Equipos rivales de cient\u00edficos estadounidenses se unen para combatir al zika","datePublished":"2016-04-07T08:14:37+00:00","dateModified":"2016-04-07T08:14:37+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/03\/29\/us\/30mosquito1\/30mosquito1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Una nueva forma de lucha gen\u00e9tica podr\u00eda usarse para enfrentar la creciente gama de enfermedades transmitidas por los insectos junto con la habilidad para analizar los detalles de su ADN."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/04/07/equipos-rivales-de-cientificos-estadounidenses-se-unen-para-combatir-al-zika/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/03/31/us/mapping-a-genetic-strategy-to-fight-the-zika-virus.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/ciencia" />
+<title>Equipos rivales de científicos estadounidenses se unen para combatir al zika &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/03/31/us/mapping-a-genetic-strategy-to-fight-the-zika-virus.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/04/07/equipos-rivales-de-cientificos-estadounidenses-se-unen-para-combatir-al-zika/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-9001 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Equipos rivales de científicos estadounidenses se unen para combatir al zika
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/04/07/equipos-rivales-de-cientificos-estadounidenses-se-unen-para-combatir-al-zika/"
+					data-title="Noticias: Equipos rivales de científicos estadounidenses se unen para combatir al zika"
+					data-author="POR AMY HARMON"
+					data-media=""
+					data-description="Una nueva forma de lucha genética podría usarse para enfrentar la creciente gama de enfermedades transmitidas por los insectos junto con la habilidad para analizar los detalles de su ADN."
+					data-publish-date="7 de abril de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/ciencia/">Ciencia</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Equipos rivales de científicos estadounidenses se unen para combatir al zika</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Amy Harmon</span>
+</span>
+
+					<time class="dateline" datetime="2016-04-07">7 de abril de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/04/07/equipos-rivales-de-cientificos-estadounidenses-se-unen-para-combatir-al-zika/"
+							data-title="Noticias: Equipos rivales de científicos estadounidenses se unen para combatir al zika"
+							data-author="POR AMY HARMON"
+							data-media=""
+							data-description="Una nueva forma de lucha genética podría usarse para enfrentar la creciente gama de enfermedades transmitidas por los insectos junto con la habilidad para analizar los detalles de su ADN."
+							data-publish-date="7 de abril de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004296830" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/03/29/us/30mosquito1/30mosquito1-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/03/29/us/30mosquito1/30mosquito1-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/03/29/us/30mosquito1/30mosquito1-superJumbo.jpg" data-mediaviewer-caption="Un mosquito hembra de la familia 'Aedes aegypti' se alimenta de la sangre de Ben Mathews, un becario posdoctoral de la Universidad Rockefeller. Docenas de sus crías, todas del mismo macho, fueron la fuente del ADN que se necesitaba para crear un nuevo mapa genómico con modernas técnicas de secuenciación y ensamblaje. " data-mediaviewer-credit="Hilary Swift para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/03/29/us/30mosquito1/30mosquito1-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Un mosquito hembra de la familia 'Aedes aegypti' se alimenta de la sangre de Ben Mathews, un becario posdoctoral de la Universidad Rockefeller. Docenas de sus crías, todas del mismo macho, fueron la fuente del ADN que se necesitaba para crear un nuevo mapa genómico con modernas técnicas de secuenciación y ensamblaje. </span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Hilary Swift para The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/03/31/us/mapping-a-genetic-strategy-to-fight-the-zika-virus.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="299" data-total-count="299" id="story-continues-2" tabindex="-1">Como el virus del Zika se esparce por <a href="http://www.nytimes.com/2016/01/29/health/zika-virus-spreading-explosively-in-americas-who-says.html" target="_blank">América Latina y el Caribe casi sin control</a> y es transmitido por el mosquito <em>Aedes aegypti</em> algunos investigadores de Estados Unidos buscan construir un mapa ultramoderno de ADN que les puede ayudar a combatir la enfermedad con el código genético del insecto.</p>
+<p class="story-body-text story-content" data-para-count="232" data-total-count="531" id="story-continues-3" tabindex="-1">Esta búsqueda reunió a científicos de diferentes disciplinas que rara vez colaboran entre sí, estos especialistas suelen competir por financiamiento y tienen ideas distintas sobre cómo manipular genéticamente al <em>Aedes aegypti</em>.</p>
+<p class="story-body-text story-content" data-para-count="433" data-total-count="964" id="story-continues-4" tabindex="-1">El proyecto despegó luego de una serie de publicaciones en <a href="https://twitter.com/pollyp1/status/692748667690848261" target="_blank">Twitter</a> donde Leslie B. Voshall, una investigadora de la Universidad Rockefeller, reflejaba su frustración. En enero, esta científica comenzó a pedir consejos sobre cómo construir un mapa detallado del ADN del mosquito, justo cuando <a href="http://www.nytimes.com/2016/02/01/health/microcephaly-spotlighted-by-zika-virus-has-long-afflicted-and-mystified.html" target="_blank">Brasil</a> informaba sobre un aumento de recién nacidos con cabezas inusualmente pequeñas, aparentemente relacionado con el virus de Zika.</p>
+<p class="story-body-text story-content" data-para-count="262" data-total-count="1226" id="story-continues-5" tabindex="-1">“Me preocupaba que la gente estuviera a la defensiva o paranoica”, comentó en los días en que dirigió las primeras videoconferencias entre los expertos. “Creo que durante mucho tiempo, todos pensamos que el mapa era responsabilidad de otras personas”.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="344" data-total-count="1570" id="story-continues-6" tabindex="-1">Este intento por representar gráficamente el genoma del <em>Aedes aegypti</em> ha recibido poca atención, tal vez porque no conseguirá directamente la cura del virus, así como el mapa del genoma humano no ha curado el cáncer. Sin embargo, puede entrañar posibilidades biológicas cuyas consecuencias ecológicas se consideran un riesgo muy grande.</p>
+<p class="story-body-text story-content" data-para-count="455" data-total-count="2025" id="story-continues-7" tabindex="-1">Pero la historia de cómo surgió el Grupo de Trabajo sobre el Genoma Aedes nos permite ver cómo avanza la ciencia, impelida por sus propios intereses, nuevas tecnologías y las urgentes necesidades sociales. La labor de estos expertos refleja las esperanzas en una nueva forma de lucha genética que podría usarse a medida que crece la gama de enfermedades transmitidas por los insectos junto con nuestra habilidad para analizar los detalles de su ADN.</p>
+<p class="story-body-text story-content" data-para-count="292" data-total-count="2317" id="story-continues-8" tabindex="-1">Y la necesidad de controlar al mosquito <em>Aedes aegypti</em>, que también es portador de la fiebre amarilla y otros virus, no parece que terminará con este brote. A pesar de la elaboración de una vacuna que ha salvado millones de vidas, la fiebre amarilla sigue matando a 30.000 personas al año.</p>
+<p class="story-body-text story-content" data-para-count="360" data-total-count="2677" id="story-continues-9" tabindex="-1">“Si vamos a controlar a la criatura, tenemos que conocerla de cabo a rabo”, afirmó Jeffrey Powell, un investigador de la Universidad de Yale, quien fue uno de los primeros en unirse al equipo de Vosshall. “Tener toda la secuencia genómica de la bestia nos dará una comprensión fundamental de su biología, lo cual no se puede obtener de otro modo”.</p>
+<p class="story-body-text story-content" data-para-count="24" data-total-count="2701" id="story-continues-10" tabindex="-1"><strong>Una herramienta poderosa</strong> </p>
+<p class="story-body-text story-content" data-para-count="345" data-total-count="3046" id="story-continues-11" tabindex="-1">La cartografía genética que capturó la imaginación del público en el año 2000 cuando se publicó un borrador de la secuencia del ADN humano, se ha convertido en una herramienta fundamental de la biología molecular contemporánea que se usa para estudiar cómo evolucionan los seres vivos, cómo se desarrollan, se enferman y se comportan. </p>
+<p class="story-body-text story-content" data-para-count="259" data-total-count="3305" id="story-continues-12" tabindex="-1">Desde 2007 existe una especie de mapa genómico del <em>Aedes aegypti</em>, pero los científicos dicen que es sorprendentemente imperfecto: está fragmentado en 36.206 pedazos, algunos aparecen mal ensamblados, faltan cientos de genes y otros se duplicaron por error.</p>
+<figure id="media-100000004296870" class="media photo media-100000004296870 embedded layout-large-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/03/29/us/30mosquitos2/30mosquitos2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-14">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/03/29/us/30mosquitos2/30mosquitos2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/03/29/us/30mosquitos2/30mosquitos2-superJumbo.jpg" data-mediaviewer-caption="The participants in the Aedes Genome Working Group held a nine-way videoconference call in January, led by Leslie B. Vosshall, top center." data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/03/29/us/30mosquitos2/30mosquitos2-master675.jpg"/>
+		<meta itemprop="height" content="381" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The participants in the Aedes Genome Working Group held a nine-way videoconference call in January, led by Leslie B. Vosshall, top center.</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="500" data-total-count="3805" id="story-continues-14" tabindex="-1">Durante mucho tiempo, el costo y la dificultad hacían imposible que se pudiera llenar cada detalle de una secuencia genómica, excepto la nuestra y la de las criaturas favoritas de los laboratorios como los ratones y las moscas de la fruta. A pesar de que las nuevas tecnologías han hecho que sea más fácil y económico crear mejores mapas, esta labor se considera como una hazaña técnica más que científica, y esa es una de las razones por las que el mapa de este mosquito estuvo abandonado.</p>
+<p class="story-body-text story-content" data-para-count="437" data-total-count="4242" id="story-continues-15" tabindex="-1">“No hay mucha gloria en esto”, asevera Powell. Sin embargo, el zika ha ayudado a emocionar a la pequeña comunidad de investigadores que ya pasaban la mayor parte de su tiempo pensando en ese insecto. La relación entre el virus, que suele ser dócil, y el <a href="http://directorsblog.nih.gov/2016/03/15/zika-and-birth-defects-the-evidence-mounts/" target="_blank">daño cerebral en bebés</a> cuyas madres se infectaron en el embarazo ha sembrado temores en todo el mundo e hizo que los funcionarios declararan una <a href="http://www.nytimes.com/2016/02/02/health/zika-virus-world-health-organization.html" target="_blank">emergencia de salud pública.</a> </p>
+<p class="story-body-text story-content" data-para-count="523" data-total-count="4765" id="story-continues-16" tabindex="-1">En Estados Unidos, un mosquito <em>Aedes aegypti</em> puede convertirse en portador del virus si el insecto pica a un viajero que haya sido infectado con zika en el extranjero. Aunque es probable que el uso de mosquiteros y aire acondicionado reduzca los brotes en Estados Unidos mientras la población de mosquitos crece durante el <a href="https://www2.ucar.edu/atmosnews/news/19850/potential-zika-virus-risk-estimated-50-us-cities" target="_blank">verano en el sur</a>, detener la propagación del virus significa controlar un mosquito que se ha hecho resistente a insecticidas y solo necesita diminutas cantidades de agua estancada para reproducirse.</p>
+<p class="story-body-text story-content" data-para-count="320" data-total-count="5085" id="story-continues-17" tabindex="-1">Algunos experimentos como la liberación masiva de mosquitos genéticamente alterados, realizados por una compañía de biotecnología e investigadores financiados por la Fundación Bill y Melinda Gates, han tenido un éxito moderado. Pero los científicos dicen que lo más seguro es que se necesiten otras estrategias. </p>
+<p class="story-body-text story-content" data-para-count="289" data-total-count="5374" id="story-continues-18" tabindex="-1">Puesto que el gobierno de Obama pidió <a href="http://www.nytimes.com/2016/02/09/us/politics/obama-congress-funding-combat-zika-virus.html" target="_blank">1,8 mil millones de dólares</a> para combatir el zika, a Vosshall le parece que el presupuesto para un nuevo mapa —que costaría unos miles de dólares, con suficiente apoyo y trabajo voluntario de parte de otros investigadores— podría conseguirse.</p>
+<figure id="media-100000004298931" class="media photo media-100000004298931 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/03/30/us/31mosquito/31mosquito-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-20">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/03/30/us/31mosquito/31mosquito-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/03/30/us/31mosquito/31mosquito-superJumbo.jpg" data-mediaviewer-caption="A visualization of the recently sequenced Aedes aegypti genome. Each of the 3,752 colored lines is a fragment of its three chromosomes that could not be fit together without the additional information that the Aedes Genome Working Group hopes to produce. A 2007 genome map for Aedes aegypti is fragmented into about 10 times as many pieces." data-mediaviewer-credit="Mark Kunitomi"  itemprop="url" itemid="https://static01.nyt.com/images/2016/03/30/us/31mosquito/31mosquito-master675.jpg"/>
+		<meta itemprop="height" content="644" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A visualization of the recently sequenced Aedes aegypti genome. Each of the 3,752 colored lines is a fragment of its three chromosomes that could not be fit together without the additional information that the Aedes Genome Working Group hopes to produce. A 2007 genome map for Aedes aegypti is fragmented into about 10 times as many pieces.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Mark Kunitomi
+		</span>
+	</figcaption>
+</figure>
+
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="251" data-total-count="5625" id="story-continues-20" tabindex="-1">En su primera videoconferencia a fines de enero, nueve equipos de científicos encontraron una causa común en medio de su descontento al intentar encontrar qué genes controlan las características del mosquito en un mapa que muchas veces los pierde.</p>
+<p class="story-body-text story-content" data-para-count="200" data-total-count="5825" id="story-continues-21" tabindex="-1">“No puedo decirte a cuántas reuniones he asistido en las que la gente usa groserías” para describir el mapa, observó Anthony A. James, investigador de mosquitos en la Universidad de California. </p>
+<p class="story-body-text story-content" data-para-count="282" data-total-count="6107" id="story-continues-22" tabindex="-1">Entre las opiniones sobre cuál es el mejor enfoque y quién va a pagar qué, surgió un consenso. El ADN del nuevo mapa sería tomado de los vástagos de un apareamiento muy particular de mosquitos <em>Aedes aegypti</em>, de la misma línea con la que hace una década se hizo el otro mapa.</p>
+<p class="story-body-text story-content" data-para-count="446" data-total-count="6553" id="story-continues-23" tabindex="-1">Unos días después, científicos de Virginia Tech mandaron al laboratorio de Vosshall la descendencia en forma de huevos secos que eclosionaron y fueron criados por un becario posdoctoral llamado Ben Mathews. Puesto que las hembras no ponen huevos hasta que comen, Mathews dio un paso crucial. Dentro de una cámara húmeda, detrás de una esclusa de presión y una puerta gruesa, le ofreció su brazo a la hembra elegida para que se alimentara.</p>
+<p class="story-body-text story-content" data-para-count="120" data-total-count="6673" id="story-continues-24" tabindex="-1">“Es un poco sorprendente”, dijo, “si piensas en la cantidad de dinero, tiempo y ciencia que va a salir de esto”.</p>
+<p class="story-body-text story-content" data-para-count="19" data-total-count="6692" id="story-continues-25" tabindex="-1"><strong>Reuniones cruciales</strong></p>
+<p class="story-body-text story-content" data-para-count="284" data-total-count="6976" id="story-continues-26" tabindex="-1">Mark Kunitomi, un becario posdoctoral de la Universidad de California, y su consejero, el virólogo Raúl Andino, creen que la clave para entender por qué algunas poblaciones de los <em>Aedes</em> son resistentes a virus como el zika está en pedacitos de código viral incrustados en su ADN. </p>
+<p class="story-body-text story-content" data-para-count="206" data-total-count="7182" id="story-continues-27" tabindex="-1">Con esta información los científicos podrían predecir en qué lugar del mundo es más probable que haya brotes y vacunar a una población de mosquitos al soltar insectos con el ADN viral que se necesita.</p>
+<p class="story-body-text story-content" data-para-count="416" data-total-count="7598" id="story-continues-28" tabindex="-1">Siguiendo con esta idea, Andino y Kunitomi crearon una nueva versión del mapa del <em>Aedes</em> en colaboración con Pacific Biosciences, una compañía pionera de la tecnología de secuenciación. Esta versión arrojó cientos de genes que no estaban en el mapa de 2007. Aunque es mejor, aún no está a la altura de lo que buscan los científicos porque proviene de una línea de células del <em>Aedes</em> con muchas mutaciones.</p>
+<p class="story-body-text story-content" data-para-count="354" data-total-count="7952" id="story-continues-29" tabindex="-1">Kunitomi le dijo a Vosshall que le convendría contactar a Powell, el investigador de Yale, quien también buscaba los genes que controlan la habilidad de los mosquitos para transmitir virus. Pero un mapa completo necesitaría que se pagaran más secuenciaciones con la tecnología de Pacific Biosciences y otros procedimientos que él no podía costear. </p>
+<p class="story-body-text story-content" data-para-count="470" data-total-count="8422" id="story-continues-30" tabindex="-1">James, el experto de la Universidad de California también los apoyó. Está interesado en el mapa porque en su trabajo con una tecnología llamada impulso genético, en la que una característica insertada en algunos individuos de la especie —por ejemplo, un sistema inmunológico alterado o esterilidad— se disemina por toda la población con un truco que asegura que se transmitirá a todos los descendientes, con eso se evita el proceso aleatorio de la herencia. </p>
+<p class="story-body-text story-content" data-para-count="389" data-total-count="8811" id="story-continues-31" tabindex="-1">Si bien esa tecnología podría usarse para detener el virus de Zika, el impulso genético es controversial por los miedos de que un gen alterado pueda “escapar” hacia otra especie. James sostiene que esos temores podrían solucionarse si el gen fuera propio del <em>Aedes</em>, o al menos de los mosquitos. Para lograrlo necesita un mapa en el que pueda comparar los genes del <em>Aedes</em> con otros.</p>
+<p class="story-body-text story-content" data-para-count="313" data-total-count="9124" id="story-continues-32" tabindex="-1">La agencia estadounidense National Institutes of Health (NIH) colaboró con una donación de emergencia de 15.000 dólares y Eric S. Lander, director del Broad Institute de MIT y Harvard, contactó a Vosshall para donar recursos al proyecto. “Fue como recibir una llamada del papa”, recordó la investigadora.</p>
+<p class="story-body-text story-content" data-para-count="309" data-total-count="9433" id="story-continues-33" tabindex="-1">Aunque todavía le faltan unos 250.000 dólares para terminar el mapa, para finales de febrero el grupo ya tenía un plan que incluía tres tipos de secuencias de ADN y suficiente financiamiento para comenzar. Así que Mathews extrajo el ADN de las pupas gestadas por la hembra que se alimentó con su sangre. </p>
+<p class="story-body-text story-content" data-para-count="37" data-total-count="9470" id="story-continues-34" tabindex="-1">Ahora se está haciendo la secuencia.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/adn/" rel="tag">ADN</a>, <a href="https://www.nytimes.com/es/tag/aedes-aegypti/" rel="tag">Aedes aegypti</a>, <a href="https://www.nytimes.com/es/tag/brasil/" rel="tag">Brasil</a>, <a href="https://www.nytimes.com/es/tag/estados-unidos/" rel="tag">Estados Unidos</a>, <a href="https://www.nytimes.com/es/tag/zika/" rel="tag">Zika</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/04/07/equipos-rivales-de-cientificos-estadounidenses-se-unen-para-combatir-al-zika/"
+				data-title="Noticias: Equipos rivales de científicos estadounidenses se unen para combatir al zika"
+				data-author="POR AMY HARMON"
+				data-media=""
+				data-description="Una nueva forma de lucha genética podría usarse para enfrentar la creciente gama de enfermedades transmitidas por los insectos junto con la habilidad para analizar los detalles de su ADN."
+				data-publish-date="7 de abril de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/01/mas-alla-del-zika-la-microcefalia-ha-sido-un-mal-dificil-de-tratar/">
+					<div class="story-body">
+						<h3 class="kicker">Virus de Zika</h3>
+
+						<h2 class="headline">
+							<span class="title">Más allá del zika, la microcefalia ha sido un mal difícil de tratar</span>
+							<time class="dateline">1 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/02/01/us/01microcephaly/01microcephaly-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/02/20/la-vacuna-contra-el-zika-se-llevara-anos-advierten-especialistas/">
+					<div class="story-body">
+						<h3 class="kicker">Virus de Zika</h3>
+
+						<h2 class="headline">
+							<span class="title">La vacuna contra el zika tardará años, advierten especialistas</span>
+							<time class="dateline">20 de febrero de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/01/30/business/30vaccine/30vaccine-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/02/10/como-un-misterio-medico-llevo-a-los-expertos-al-zika/">
+					<div class="story-body">
+						<h3 class="kicker">Región</h3>
+
+						<h2 class="headline">
+							<span class="title">Cómo un misterio médico llevó a los expertos al Zika</span>
+							<time class="dateline">10 de febrero de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/02/06/science/07zika1/07zika1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/02/07/brasil-reconsidera-sus-leyes-sobre-el-aborto-ante-el-repunte-del-zika/">
+					<div class="story-body">
+						<h3 class="kicker">Brasil</h3>
+
+						<h2 class="headline">
+							<span class="title">En Brasil, el Zika genera un feroz debate sobre el aborto</span>
+							<time class="dateline">7 de febrero de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/02/03/world/03zikaabortion-web1/03zikaabortion-web1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/02/06/el-virus-del-zika-se-esparce-de-manera-explosiva-en-toda-america-advierte-la-oms/">
+					<div class="story-body">
+						<h3 class="kicker">Salud</h3>
+
+						<h2 class="headline">
+							<span class="title">El virus del Zika se &#8216;esparce de manera explosiva&#8217; en toda América, advierte la OMS</span>
+							<time class="dateline">6 de febrero de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/01/29/world/29ZIKA-web2-copyES/29ZIKA-web2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":1012,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

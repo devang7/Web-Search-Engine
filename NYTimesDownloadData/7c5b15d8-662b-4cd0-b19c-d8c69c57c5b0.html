@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004307464"/>
+<meta name="hdl" content="Un viaje por la ruta de la marihuana en Colorado" />
+<meta name="col" content="Cultura" id="column-name" />
+<meta name="pdate" content="20160426" />
+<meta name="utime" content="20160426121703" />
+<meta name="ptime" content="20160426121703" />
+<meta name="DISPLAYDATE" content="Apr. 26, 2016" />
+<meta name="dat" content="Apr. 26, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="un-viaje-por-la-ruta-de-la-marihuana-en-colorado" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/04/26/un-viaje-por-la-ruta-de-la-marihuana-en-colorado/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Un viaje por la ruta de la marihuana en Colorado" />
+<meta property="og:description" content="Gran parte de la industria nacida alrededor de la marihuana en Colorado tiene que ver con el turismo, con quienes llegan al estado buscando lo que sus lugares de origen no pueden hacer. " />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP1/17COLORADOJP1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-04-26" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/04/26/un-viaje-por-la-ruta-de-la-marihuana-en-colorado/" />
+<meta property="twitter:title" content="Un viaje por la ruta de la marihuana en Colorado" />
+<meta property="twitter:description" content="Gran parte de la industria nacida alrededor de la marihuana en Colorado tiene que ver con el turismo, con quienes llegan al estado buscando lo que sus lugares de origen no pueden hacer. " />
+<meta name="author" content="Alan Feuer" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por Alan Feuer" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="cultura" />
+<meta name="cd12" content="estados-unidos" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="cultura" />
+<meta name="ser" content="estados-unidos" />
+<meta name="id" content="100000004307464"/>
+<meta name="wordCount" content="2866"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/04/26/un-viaje-por-la-ruta-de-la-marihuana-en-colorado/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=04&amp;day=26&amp;name=un-viaje-por-la-ruta-de-la-marihuana-en-colorado">
+<meta name="PT" content="article">
+<meta name="article:section" content="Cultura">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/6?exclude=10482">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/04\/26\/un-viaje-por-la-ruta-de-la-marihuana-en-colorado\/"},"headline":"Un viaje por la ruta de la marihuana en Colorado","datePublished":"2016-04-26T12:17:03+00:00","dateModified":"2016-11-17T13:46:12+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/04\/17\/travel\/17COLORADOJP1\/17COLORADOJP1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Gran parte de la industria nacida alrededor de la marihuana en Colorado tiene que ver con el turismo, con quienes llegan al estado buscando lo que sus lugares de origen no pueden hacer. "}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/04/26/un-viaje-por-la-ruta-de-la-marihuana-en-colorado/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/04/17/travel/colorado-weed-marijuana-tour.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="cultura/estadosunidos" />
+<title>Un viaje por la ruta de la marihuana en Colorado &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/04/17/travel/colorado-weed-marijuana-tour.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/04/26/un-viaje-por-la-ruta-de-la-marihuana-en-colorado/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-10482 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+					<span class="pipe">|</span>
+				Un viaje por la ruta de la marihuana en Colorado
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/04/26/un-viaje-por-la-ruta-de-la-marihuana-en-colorado/"
+					data-title="Cultura: Un viaje por la ruta de la marihuana en Colorado"
+					data-author="POR ALAN FEUER"
+					data-media=""
+					data-description="Gran parte de la industria nacida alrededor de la marihuana en Colorado tiene que ver con el turismo, con quienes llegan al estado buscando lo que sus lugares de origen no pueden hacer. "
+					data-publish-date="26 de abril de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/1TbHdu6">http://nyti.ms/1TbHdu6</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/estados-unidos/">Estados Unidos</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Un viaje por la ruta de la marihuana en Colorado</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Alan Feuer</span>
+</span>
+
+					<time class="dateline" datetime="2016-04-26">26 de abril de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/04/26/un-viaje-por-la-ruta-de-la-marihuana-en-colorado/"
+							data-title="Cultura: Un viaje por la ruta de la marihuana en Colorado"
+							data-author="POR ALAN FEUER"
+							data-media=""
+							data-description="Gran parte de la industria nacida alrededor de la marihuana en Colorado tiene que ver con el turismo, con quienes llegan al estado buscando lo que sus lugares de origen no pueden hacer. "
+							data-publish-date="26 de abril de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004317009" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP1/17COLORADOJP1-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP1/17COLORADOJP1-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP1/17COLORADOJP1-superJumbo.jpg" data-mediaviewer-caption="Jose Montiel, de 29 años, que vive en Miami, le da una calada a un porro de marihuana que le ha entregado My 420 Tours. " data-mediaviewer-credit="Ryan David Brown para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP1/17COLORADOJP1-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Jose Montiel, de 29 años, que vive en Miami, le da una calada a un porro de marihuana que le ha entregado My 420 Tours. </span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Ryan David Brown para The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/04/17/travel/colorado-weed-marijuana-tour.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="251" data-total-count="251" id="story-continues-2" tabindex="-1">Estábamos en algún lugar al norte de Denver, no lejos de una plantación de marihuana, cuando mi vecino en el autobús turístico dio un gran jalón a su pipa y dijo: “¿Sabes qué es lo que me gusta de este país? Todo el mundo fuma marihuana”.</p>
+<p class="story-body-text story-content" data-para-count="200" data-total-count="451" id="story-continues-3" tabindex="-1">Era un tipo corpulento y con barba quse había dejado su rancho de ganado en Kansas, y aunque no parecía el asistente típico a un tour gastronómico, tuve la sensación de que estaba en lo correcto.</p>
+<p class="story-body-text story-content" data-para-count="450" data-total-count="901" id="story-continues-4" tabindex="-1">Después de todo, aquella tarde en el autobús nos acompañaba una variedad whitmanesca de estadounidenses aficionados al cannabis. Y aquí estaban, fumando porros bajo luces moradas parpadeantes: una pareja gay de Rhode Island, expertos en tecnología de Atlanta y de varias razas, un nutrido grupo de blancos que acababan de aterrizar de Houston para una despedida de soltero y una madre de 60 años de Boston con una casa de playa en los Hamptons.</p>
+<p class="story-body-text story-content" data-para-count="29" data-total-count="930" id="story-continues-5" tabindex="-1">Todo el mundo fuma marihuana.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="422" data-total-count="1352" id="story-continues-6" tabindex="-1">Por motivos estrictamente profesionales, yo mismo me encontraba en aquel momento algo menos que enteramente sobrio y no debía haberme sorprendido que el tour de ese día —de una plantación a una tienda y de ahí a una comida para el bajón después de fumar— hubiese atraído a esa pluralidad de amantes de la marihuana. Aunque pensándolo bien, el auge del turismo del cannabis en Colorado no es ninguna sorpresa.</p>
+<p class="story-body-text story-content" data-para-count="446" data-total-count="1798" id="story-continues-7" tabindex="-1">Es como visitar el Valle de Napa, pero con marihuana en lugar de vino. La “fiebre verde” del estado, como todo mundo la llama, es un negocio multimillonario de laboratorios de cultivos hidropónicos y dispensarios artesanales, pero la infraestructura turística que ha surgido para que los visitantes se surtan del producto y paseen por los alrededores opera con base en un principio bastante sencillo: todo es mejor cuando estás muy fumado.</p>
+<figure id="media-100000004315033" class="media photo media-100000004315033 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/17/travel/17COLORODO/17COLORODO-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-9">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/17/travel/17COLORODO/17COLORODO-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/17/travel/17COLORODO/17COLORODO-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Tim Robinson"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/17/travel/17COLORODO/17COLORODO-master675.jpg"/>
+		<meta itemprop="height" content="675" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tim Robinson
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="304" data-total-count="2102" id="story-continues-9" tabindex="-1">Al comenzar mi exploración del comercio de la marihuana de Colorado, se me ocurrió que en la experiencia misma estaba implícito un cierto grado de letargo. Así que fui en busca de algo más que un tour de dos horas, pero sin llegar a una experiencia de inmersión absoluta como el Ganja Yoga Retreat.</p>
+<p class="story-body-text story-content" data-para-count="394" data-total-count="2496" id="story-continues-10" tabindex="-1">Las opciones me resultaron vertiginosas: en dos años desde que el estado aprobó la venta de marihuana para consumo recreativo, una economía compleja creció como el humo. Los consumidores pueden ir a esquiar a las montañas a bordo de transportes que admiten marihuana, si ese es su deporte favorito, o bien pueden reservar que un servicio especial como THC Limo los recoja en el aeropuerto.</p>
+<p class="story-body-text story-content" data-para-count="483" data-total-count="2979" id="story-continues-11" tabindex="-1">Ya bajo los efectos de la marihuana, pueden tomar clases de pintura, dar paseos por las montañas, e incluso disfrutar una cena con marihuana de cuatro platos con chefs exclusivos. Así mismo, los visitantes pueden hacer uso de aplicaciones como Leafly y Weedmaps para ponerse en contacto con vendedores cercanos o reservar su &#8220;bud-and-breakfast&#8221; (que obviamente incluye la venta de marihuana, además del hospedaje y el desayuno) a través de sitios web como TravelTHC.</p>
+<p class="story-body-text story-content" data-para-count="416" data-total-count="3395" id="story-continues-12" tabindex="-1">Al final, opté por un tour de degustación de tres días en Denver por el precio de 1,295 dólares, que no incluye ticket de avión, de una de las compañías para turistas del cannabis más conocidas de Colorado, My 420 Tours. Un especialista en cannabis me ayudó a planear mi fin de semana e insistió con toda delicadeza en que tomara el tour gastronómico y el masaje privado con aceite medicinal de marihuana.</p>
+<p class="story-body-text story-content" data-para-count="624" data-total-count="4019" id="story-continues-13" tabindex="-1">Después de reservar el viaje, pasé algunas horas echando un vistazo a la Guía de Marihuana de Colorado en línea (cursos para aprender a fumar en pipa de agua, alquiler de inhaladores, etc.) y leyendo los reglamentos pertinentes (¿Se puede fumar en lugares públicos? No. ¿A bordo de un vehículo con permiso comercial? Pásenme el encendedor). Pero entonces, en un lapso de dos semanas, no tuve noticias de My 420. Justo cuando comenzaba a preguntarme si no me habían tomado el pelo, me llegó un correo electrónico con mi itinerario. “Felices viajes, Alan”, decía el mensaje, y tras leer aquello, me convencí.</p>
+<figure id="media-100000004317018" class="media photo media-100000004317018 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP6/17COLORADOJP6-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-15">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP6/17COLORADOJP6-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP6/17COLORADOJP6-superJumbo.jpg" data-mediaviewer-caption="DonGiovanni Strickland, 26, and Alexis Clyburn, 27, both of New Jersey, at Green Solutions." data-mediaviewer-credit="Ryan David Brown for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP6/17COLORADOJP6-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">DonGiovanni Strickland, 26, and Alexis Clyburn, 27, both of New Jersey, at Green Solutions.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Ryan David Brown for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="630" data-total-count="4649" id="story-continues-15" tabindex="-1">He de decir, para empezar, que no fumo tanto. Mientras que el bourbon no me dura mucho en la alacena, fumo porros, cuando mucho, unas cuantas veces al año. Es por eso que agradecí el primer evento del fin de semana: un curso de inmersión con un sommelier del cannabis. Para entonces ya me había registrado en mi hotel, el Crowne Plaza Denver, en el centro de la ciudad, donde un empleado de la recepción, haciendo un guiño, me había entregado un inhalador grande de metal, que era, por así decirlo, mi unidad para consumo en la habitación. Una vez en mi cuarto, le di un jalón de prueba. Apenas eran las 9 de la mañana.</p>
+<p class="story-body-text story-content" data-para-count="681" data-total-count="5330" id="story-continues-16" tabindex="-1">Ya en el estado de ánimo adecuado, bajé para reunirme con un hombre llamado Mike Metoyer, que, según me habían dicho, sería mi guía espiritual del cannabis durante el fin de semana. Encontré a Mike en el lobby, esperándome con su camiseta de My 420 con el logo corporativo que muestra un par de hojas de marihuana que brotan detrás de las montañas. Se presentó y me entregó una bolsa de bienvenida. Esta, observé, contenía un pequeño inhalador para exteriores, un ejemplar reciente de la Dope Magazine y —dado que es un cultivo importante en Denver— una botella de aceite de lavanda para ayudarme a aterrizar en caso de los efectos del cannabis me sentaran mal.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="567" data-total-count="5897" id="story-continues-17" tabindex="-1">Como casi todos los que conocí en el comercio local de marihuana, Mike, de 22 años, educado en una iglesia pentecostal, se había acercado a la marihuana hacía poco. Me contó, de camino a una discoteca, que apenas unos años antes trabajaba como guía en una mina de plata en las montañas cuando J.J. Walker, fundador de My 420, fue a uno de sus recorridos. Aparentemente, Walker se impresionó y le ofreció trabajo. “Al principio no podía creer que existiera un trabajo de ‘guía turístico de la marihuana’”, me dijo. “Pero como puedes ver, sí”.</p>
+<p class="story-body-text story-content" data-para-count="478" data-total-count="6375" id="story-continues-18" tabindex="-1">En el local nos esperaba nuestro sommelier, Michael Pyatt, director de capacitación de Native Roots; “el Gucci de los dispensarios”, me dijo Mike al oído mientras nos sentábamos a la mesa. Pyatt es un hombre alto y delgado de 27 años, que anteriormente era vendedor de Best Buy. Su conocimiento del producto, acumulado a lo largo de años de investigación, era exhaustivo y, en pocos minutos, nuestra mesa estaba repleta de pequeñas bolsas de plástico con marihuana.</p>
+<p class="story-body-text story-content" data-para-count="339" data-total-count="6714" id="story-continues-19" tabindex="-1">“¿Fumas?”, me preguntó Pyatt. Le dije que no mucho. Y así fue como, usando un lenguaje casi enológico, comenzó a describir las cualidades de las marcas propias de Native Roots: Harlequin, por ejemplo (“es una mezcla de tres sativas”) y Sour Kush (“es amizclada, dulce, cerebral, con una estructura muy densa en el brote”).</p>
+<figure id="media-100000004317032" class="media photo media-100000004317032 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP11/17COLORADOJP11-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-21">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP11/17COLORADOJP11-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP11/17COLORADOJP11-superJumbo.jpg" data-mediaviewer-caption="Ashley Tauch, 31, of Denver, enjoys an ice cream cone on the My 420 Tours bus on the way back to the hotel." data-mediaviewer-credit="Ryan David Brown for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP11/17COLORADOJP11-master315.jpg"/>
+		<meta itemprop="height" content="473" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Ashley Tauch, 31, of Denver, enjoys an ice cream cone on the My 420 Tours bus on the way back to the hotel.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Ryan David Brown for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="648" data-total-count="7362" id="story-continues-21" tabindex="-1">Mientras Pyatt buscaba en su bolsa de delicias otra cepa qué mostrarme, me di la vuelta para ver a Mike y le pregunté qué tipo de viajeros hacían estos tours. “Hay de todo”, me dijo, “hombres, mujeres, jóvenes, viejos, pero el 60 por ciento de los turistas vienen de Texas” (“Es una sociedad donde se reprime el consumo”, dijo Pyatt). Después Mike añadió: “La mayoría de nuestros clientes se sorprenden la primera vez que fuman en el autobús turístico. Todos dicen: ‘¿estás seguro de que es legal?’ Cuando les digo que sí, dicen algo como, ‘¡No, puede ser, este es el momento que he esperado toda mi vida!’”</p>
+<p class="story-body-text story-content" data-para-count="485" data-total-count="7847" id="story-continues-22" tabindex="-1">El año pasado, decenas de miles de personas vinieron a Denver para la High Times Cannabis Cup, un evento de comercio de marihuana con competiciones (el mejor producto comestible o la mejor flor de sativa), y se esperaba una concurrencia igualmente numerosa en la reunión de este año, que tuvo lugar en Broomfield, Colorado, el 19 de abril. “En esos días, si caminas por el estado puedes oler el cannabis en las calles”, dijo Pyatt. “Mira, digamos que es la temporada alta”.</p>
+<p class="story-body-text story-content" data-para-count="663" data-total-count="8510" id="story-continues-23" tabindex="-1">Para entonces, había encontrado un paquete de su marca favorita, Jellybean, y me había dicho, mojándose los labios con anticipación, “esta te lleva a un nivel maravilloso, es lo mejor que puedes fumar durante el día”. My 420 no tenía permiso para vender marihuana y no podía dar muestras a la clientela, pero eso se solucionó con facilidad. Mike me preguntó si había tenido oportunidad de usar el pequeño inhalador que venía con mi bolsa de bienvenida. Le dije que no, así que Pyatt colocó una cola de Jellybean, de aspecto escarchado por el alto contenido de resina, y me brindó su ayuda: “Podría, si quieres, hacerte una demostración”.</p>
+<p class="story-body-text story-content" data-para-count="567" data-total-count="9077" id="story-continues-24" tabindex="-1">Uno de los beneficios de mi viaje todo incluido al mundo del cannabis de My 420 era que contábamos con transporte y chofer. Un día antes, cuando llegué al Aeropuerto Internacional de Denver, una enorme camioneta negra de la marca Chevrolet me estaba esperando en la puerta. Al subirme, descubrí los asientos de piel, un aroma a hierba quemada y, detrás del volante, un hombre que se llamaba Tariq Williams. Tariq sería mi acompañante el fin de semana: Me llevaría a diversos eventos, entre los que se encontraba el siguiente: una clase de cocina de cannabis.</p>
+<figure id="media-100000004317029" class="media photo media-100000004317029 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP9/17COLORADOJP9-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-26">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP9/17COLORADOJP9-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP9/17COLORADOJP9-superJumbo.jpg" data-mediaviewer-caption="A student uses marijuana to cook." data-mediaviewer-credit="Ryan David Brown for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP9/17COLORADOJP9-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A student uses marijuana to cook.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Ryan David Brown for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="415" data-total-count="9492" id="story-continues-26" tabindex="-1">La Stir Cooking School en la zona de Highlands ofrece desde hace poco clases de cocina con aceite de marihuana para turistas como negocio complementario. Aquella mañana, nuestra clase estuvo dirigida por un egresado de la escuela de gastronomía Johnson &amp; Wales, Travis French, que nos enseñó cómo preparar tacos de pollo y guacamole con marihuana, así como ensalada de jícama marinada en la misma hierba.</p>
+<p class="story-body-text story-content" data-para-count="352" data-total-count="9844" id="story-continues-27" tabindex="-1">Me vi en una estación de trabajo con otras dos parejas: Jason Lewis, un chef de 43 años, y Holly Gulbranson, de 36, una estilista, que habían venido desde Atlanta para celebrar su cumpleaños, y Scottie y Lauren Long, una pareja compuesta por un joven músico y una vendedora de seguros, quienes habían venido a pasar su luna de miel desde Orlando.</p>
+<p class="story-body-text story-content" data-para-count="587" data-total-count="10431" id="story-continues-28" tabindex="-1">El invierno pasado, un estudio encargado por la Oficina de Turismo de Colorado descubrió que casi la mitad de la gente entrevistada dijo que las leyes permisivas del estado en lo que respecta a la marihuana habían influido en su decisión de venir de visita. Si bien los funcionarios estatales habían argumentado que la encuesta era engañosa, ya que nunca se les había preguntado si la influencia había sido negativa o positiva, la clase de cocina era un ejemplo de que la marihuana se había sumado a los atractivos turísticos de Colorado, como el esquí y las microcervecerías.</p>
+<figure id="media-100000004317014" class="media photo media-100000004317014 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP4/17COLORADOJP4-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-30">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP4/17COLORADOJP4-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP4/17COLORADOJP4-superJumbo.jpg" data-mediaviewer-caption="On a My 420 Tours excursion, Briana Ballinger, a My 420 guide (left), 40, of Denver, with Akeem Harris, 23, and Makeisha Bickley, 21, both of Terre Haute, Ind." data-mediaviewer-credit="Ryan David Brown for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP4/17COLORADOJP4-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">On a My 420 Tours excursion, Briana Ballinger, a My 420 guide (left), 40, of Denver, with Akeem Harris, 23, and Makeisha Bickley, 21, both of Terre Haute, Ind.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Ryan David Brown for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="654" data-total-count="11085" id="story-continues-30" tabindex="-1">Cuando llegamos al laboratorio, mis compañeros de tour bajaron a tropezones del autobús y por un momento se quedaron de pie en el estacionamiento, contemplando una estructura que ocupaba más de 3700 metros cuadrados como si estuvieran ante el Vaticano. Ahí, nos encontramos con Meg Sanders, la directora ejecutiva de Mindful, la compañía que administra el laboratorio. Sanders, que conoce a su audiencia, nos dijo que el lugar albergaba 8000 plantas individuales de 50 cepas distintas. Aquello suscitó un silencio de asombro entre el público marihuanero, que ella interrumpió, con un gesto con la mano, “Muy bien, regresemos a Disneylandia”.</p>
+<p class="story-body-text story-content" data-para-count="460" data-total-count="11545" id="story-continues-31" tabindex="-1">Los aspectos técnicos del laboratorio resultaron bastante interesantes: congeladores criogénicos, hornos a bajas temperaturas, cientos de lámparas fluorescentes, cosas que uno se encontraría en una planta farmacéutica o en las fotos de una escena del crimen. Sanders nos informó que cada vástago en el edificio había sido etiquetado desde el primer brote con un chip RFID para que el estado pudiera supervisar su camino desde el cultivo hasta la venta.</p>
+<p class="story-body-text story-content" data-para-count="668" data-total-count="12213" id="story-continues-32" tabindex="-1">De ahí fuimos a un dispensario de Mindful. La transformación de turistas a consumidores fue inmediata. En los estantes que se encontraban ante nuestras cabezas, embelesadas, se encontraba toda la línea de productos de Mindful: parches intradérmicos, caramelos masticables, caramelos con tocino, cápsulas 100 por ciento veganas, barras de caramelo Incredible Affogato, bebidas CannaPunch, una variante de cerveza de raíz elaborada con la cepa Bubba Kush, café Wake and Shake, bálsamo para labios Lip Buzz, cremas para aliviar dolores Apothecanna, todos elaborados con marihuana, y, por supuesto, una enorme variedad de hachís, extractos y productos para fumar.</p>
+<figure id="media-100000004317025" class="media photo media-100000004317025 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP8/17COLORADOJP8-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-34">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP8/17COLORADOJP8-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP8/17COLORADOJP8-superJumbo.jpg" data-mediaviewer-caption="The chef Travis French, 34, from Denver, instructs students of My 420 Tours’ cannabis cooking class on the proper technique of poaching an egg." data-mediaviewer-credit="Ryan David Brown for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP8/17COLORADOJP8-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The chef Travis French, 34, from Denver, instructs students of My 420 Tours’ cannabis cooking class on the proper technique of poaching an egg.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Ryan David Brown for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="357" data-total-count="12570" id="story-continues-34" tabindex="-1">La mañana siguiente, después de visitar el gimnasio del hotel, almorcé con Danny Schaefer, director ejecutivo de Pioneer Industries, sociedad matriz de My 420. Schaefer, deseoso de que viviera la “experiencia completa”, me invitó a “consumir” antes de tomar nuestros alimentos; él se aseguraría de que no se me olvidara nada para el reportaje.</p>
+<p class="story-body-text story-content" data-para-count="804" data-total-count="13374" id="story-continues-35" tabindex="-1">Schafer continúo hablando de que el “turismo tabú” era solo una parte de la economía local de la marihuana, que, añadió, también incluía a las compañías empacadoras, etiquetadoras y proveedoras de lámparas, sin olvidar a los bufetes de abogados, los consultores y —teniendo en cuenta que la industria solo usa efectivo— las empresas de seguridad fuertemente armadas. Fue entonces cuando me contó que la mayor meta de Pioneer Industries era unir todos esos negocios en un grupo de presión influyente, y después convertir a Colorado en el primer destino vacacional para consumo de marihuana del país. “Ya tenemos el esquí, el senderismo, las microcervecerías”, dijo, “y ya somos la Mile High City”, la ciudad que se encuentra a una milla exacta por encima del nivel del mar.</p>
+<p class="story-body-text story-content" data-para-count="390" data-total-count="13764" id="story-continues-36" tabindex="-1">Pero para coronarse será necesario competir contra estados como Washington, que legalizó la marihuana recreativa en 2012, y Oregon, que hizo lo mismo pero con restricciones más estrictas en 2014. También se requerirá la cooperación de los funcionarios estatales de turismo, que, hasta ahora, no han aceptado la idea de que Colorado se convierta en la Tierra Prometida de la marihuana.</p>
+<p class="story-body-text story-content" data-para-count="500" data-total-count="14264" id="story-continues-37" tabindex="-1">“Para la mayoría de nuestros visitantes, la marihuana es un asunto sin importancia”, dice Cathy Ritter, la directora de la Oficina de Turismo de Colorado. “Es un segmento muy pequeño de nuestra población turística”. Cuando hablé con ella por teléfono, Ritter reconoció que no se destinaban fondos estatales para el fomento al turismo de la marihuana porque la mayoría de los fondos, por definición, se gastarían fuera de Colorado y, explicó: “Sabemos que es un delito federal”.</p>
+<figure id="media-100000004317013" class="media photo media-100000004317013 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP3/17COLORADOJP3-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-39">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP3/17COLORADOJP3-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP3/17COLORADOJP3-superJumbo.jpg" data-mediaviewer-caption="Pot tourist Michael Sturdevant, 28, of Kalamazoo, Mich." data-mediaviewer-credit="Ryan David Brown for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/17/travel/17COLORADOJP3/17COLORADOJP3-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Pot tourist Michael Sturdevant, 28, of Kalamazoo, Mich.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Ryan David Brown for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="657" data-total-count="14921" id="story-continues-39" tabindex="-1">Recientemente, la Cámara de Comercio de Cannabis de Colorado ejerció presión para que se aprobara un proyecto de ley en el estado que les permitiría a los productores y vendedores abrir salones de degustación, tal como se hace con el vino y la cerveza; no obstante, el trabajo real de convertir a Denver en el Valle de Napa de la marihuana estaba en términos reales en manos de la gente que ya está haciéndolo en la práctica como Schaefer o Pepe Breton, cuyo invernadero visitamos después del almuerzo. La historia de Breton resultaba, para entonces, familiar: era un excorredor de bolsa que había ido a probar suerte como productor de marihuana.</p>
+<p class="story-body-text story-content" data-para-count="330" data-total-count="15251" id="story-continues-40" tabindex="-1">Pero me pareció que tenía una interpretación distinta —y ligeramente más siniestra— del futuro de la industria. “Ya vienen los ‘grandes’”, dijo Breton mientras recorríamos su laboratorio. “Y cuando eso ocurra, ya no seré competencia. Solo espero poder vender en el momento adecuado y obtener un buen precio”.</p>
+<p class="story-body-text story-content" data-para-count="423" data-total-count="15674" id="story-continues-41" tabindex="-1">Esa noche, después de mi masaje (no, no te pone bajo los efectos de la marihuana), di una larga caminata por la ciudad. Al atardecer, cuando los últimos rayos de sol bañaban las montañas, Denver estaba cambiando. Podías verlo —en las grúas de construcción, los viejos edificios de ladrillo que cedían su paso a condominios, y en los rostros de los turistas de la 16th Street, la calle peatonal llena de comercios.</p>
+<p class="story-body-text story-content" data-para-count="283" data-total-count="15957" id="story-continues-42" tabindex="-1">¿Qué ocurriría, me pregunté, cuando llegaran Philip Morris y Pfizer —los &#8220;grandes&#8221;—, como sugirió Breton, y el comercio poco convencional y en ciernes de la marihuana creciera de repente y se volviera corporativo? Ya era codicioso, pero ¿qué pasaría entonces?</p>
+<p class="story-body-text story-content" data-para-count="100" data-total-count="16057" id="story-continues-43" tabindex="-1">Para aquel momento, ya había cruzado el Río South Platte en dirección hacia Highlands nuevamente.</p>
+<p class="story-body-text story-content" data-para-count="323" data-total-count="16380" id="story-continues-44" tabindex="-1">En el vecindario me encontré un restaurante de hamburguesas y entré para cenar. Dentro, la temperatura era cálida y en la televisión había un partido de básquetbol universitario; me senté cerca de un grupo de comensales en el bar. Al pedir una cerveza, me di cuenta de que me alegraba mucho de haber visitado Denver.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/colorado/" rel="tag">colorado</a>, <a href="https://www.nytimes.com/es/tag/economia/" rel="tag">economía</a>, <a href="https://www.nytimes.com/es/tag/estados-unidos/" rel="tag">Estados Unidos</a>, <a href="https://www.nytimes.com/es/tag/marihuana/" rel="tag">marihuana</a>, <a href="https://www.nytimes.com/es/tag/turismo/" rel="tag">turismo</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/04/26/un-viaje-por-la-ruta-de-la-marihuana-en-colorado/"
+				data-title="Cultura: Un viaje por la ruta de la marihuana en Colorado"
+				data-author="POR ALAN FEUER"
+				data-media=""
+				data-description="Gran parte de la industria nacida alrededor de la marihuana en Colorado tiene que ver con el turismo, con quienes llegan al estado buscando lo que sus lugares de origen no pueden hacer. "
+				data-publish-date="26 de abril de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/19/la-marihuana-un-gran-negocio-en-california/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">La marihuana, un gran negocio en California</span>
+							<time class="dateline">19 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/09/us/00marijuana-web01/00marijuana-web01-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/02/de-que-sirve-legalizar-la-marihuana-si-no-puedes-pagarla-con-tarjeta/">
+					<div class="story-body">
+						<h3 class="kicker">Economía</h3>
+
+						<h2 class="headline">
+							<span class="title">¿De qué sirve legalizar la marihuana si no puedes pagarla con tarjeta?</span>
+							<time class="dateline">2 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/02/17/business/17db-potbiz1/17potbiz1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2015/03/19/alcohol-o-marihuana-la-respuesta-de-un-pediatra/">
+					<div class="story-body">
+						<h3 class="kicker">The Upshot</h3>
+
+						<h2 class="headline">
+							<span class="title">¿Alcohol o marihuana? La respuesta de un pediatra</span>
+							<time class="dateline">19 de marzo de 2015</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2015/03/16/upshot/17UP-Pot-copy-ES/17UP-Pot-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":1018,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004042256"/>
+<meta name="hdl" content="Nuevos hallazgos de petróleo intensifican la disputa territorial entre Guyana y Venezuela" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20151118" />
+<meta name="utime" content="20151118182250" />
+<meta name="ptime" content="20151118182250" />
+<meta name="DISPLAYDATE" content="Nov. 18, 2015" />
+<meta name="dat" content="Nov. 18, 2015" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="nuevos-hallazgos-de-petroleo-intensifican-la-disputa-territorial-entre-guyana-y-venezuela" />
+<meta property="og:url" content="https://www.nytimes.com/es/2015/11/18/nuevos-hallazgos-de-petroleo-intensifican-la-disputa-territorial-entre-guyana-y-venezuela/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Nuevos hallazgos de petróleo intensifican la disputa territorial entre Guyana y Venezuela" />
+<meta property="og:description" content="La región es el centro de una agria disputa entre vecinos que se remonta a más de cien años. Venezuela afirma ser el propietario legítimo de todo lo que está al oeste del Esequibo, lo que equivale a reclamar dos terceras partes del territorio de Guyana, incluido Bartica." />
+<meta property="og:image" content="https://static01.nyt.com/images/2015/11/18/world/19guyana-web-copy/19guyana-web-videoSixteenByNine768-v2.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2015-11-18" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2015/11/18/nuevos-hallazgos-de-petroleo-intensifican-la-disputa-territorial-entre-guyana-y-venezuela/" />
+<meta property="twitter:title" content="Nuevos hallazgos de petróleo intensifican la disputa territorial entre Guyana y Venezuela" />
+<meta property="twitter:description" content="La región es el centro de una agria disputa entre vecinos que se remonta a más de cien años. Venezuela afirma ser el propietario legítimo de todo lo que está al oeste del Esequibo, lo que equivale a reclamar dos terceras partes del territorio de Guyana, incluido Bartica." />
+<meta name="author" content="WLLIAM NEUMANN" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por WLLIAM NEUMANN" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="venezuela" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="venezuela" />
+<meta name="id" content="100000004042256"/>
+<meta name="wordCount" content="1491"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2015/11/18/nuevos-hallazgos-de-petroleo-intensifican-la-disputa-territorial-entre-guyana-y-venezuela/">
+<meta name="nyt-collection:uri" content="year=2015&amp;monthnum=11&amp;day=18&amp;name=nuevos-hallazgos-de-petroleo-intensifican-la-disputa-territorial-entre-guyana-y-venezuela">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=913">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2015\/11\/18\/nuevos-hallazgos-de-petroleo-intensifican-la-disputa-territorial-entre-guyana-y-venezuela\/"},"headline":"Nuevos hallazgos de petr\u00f3leo intensifican la disputa territorial entre Guyana y Venezuela","datePublished":"2015-11-18T18:22:50+00:00","dateModified":"2016-07-28T17:21:54+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2015\/11\/18\/world\/19guyana-web-copy\/19guyana-web-videoSixteenByNine768-v2.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"La regi\u00f3n es el centro de una agria disputa entre vecinos que se remonta a m\u00e1s de cien a\u00f1os. Venezuela afirma ser el propietario leg\u00edtimo de todo lo que est\u00e1 al oeste del Esequibo, lo que equivale a reclamar dos terceras partes del territorio de Guyana, incluido Bartica."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2015/11/18/nuevos-hallazgos-de-petroleo-intensifican-la-disputa-territorial-entre-guyana-y-venezuela/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2015/11/19/world/americas/in-guyana-a-land-dispute-with-venezuela-escalates-over-oil.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="americalatina/venezuela" />
+<title>Nuevos hallazgos de petróleo intensifican la disputa territorial entre Guyana y Venezuela &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2015/11/19/world/americas/in-guyana-a-land-dispute-with-venezuela-escalates-over-oil.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2015/11/18/nuevos-hallazgos-de-petroleo-intensifican-la-disputa-territorial-entre-guyana-y-venezuela/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-913 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				Nuevos hallazgos de petróleo intensifican la disputa territorial entre Guyana y Venezuela
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2015/11/18/nuevos-hallazgos-de-petroleo-intensifican-la-disputa-territorial-entre-guyana-y-venezuela/"
+					data-title="América Latina: Nuevos hallazgos de petróleo intensifican la disputa territorial entre Guyana y Venezuela"
+					data-author="POR WLLIAM NEUMANN"
+					data-media=""
+					data-description="La región es el centro de una agria disputa entre vecinos que se remonta a más de cien años. Venezuela afirma ser el propietario legítimo de todo lo que está al oeste del Esequibo, lo que equivale a reclamar dos terceras partes del territorio de Guyana, incluido Bartica."
+					data-publish-date="18 de noviembre de 2015"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/venezuela/">Venezuela</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Nuevos hallazgos de petróleo intensifican la disputa territorial entre Guyana y Venezuela</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">WLLIAM NEUMANN</span>
+</span>
+
+					<time class="dateline" datetime="2015-11-18">18 de noviembre de 2015</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2015/11/18/nuevos-hallazgos-de-petroleo-intensifican-la-disputa-territorial-entre-guyana-y-venezuela/"
+							data-title="América Latina: Nuevos hallazgos de petróleo intensifican la disputa territorial entre Guyana y Venezuela"
+							data-author="POR WLLIAM NEUMANN"
+							data-media=""
+							data-description="La región es el centro de una agria disputa entre vecinos que se remonta a más de cien años. Venezuela afirma ser el propietario legítimo de todo lo que está al oeste del Esequibo, lo que equivale a reclamar dos terceras partes del territorio de Guyana, incluido Bartica."
+							data-publish-date="18 de noviembre de 2015"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004050457" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/11/18/world/19guyana-web-copy/19guyana-web-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/11/18/world/19guyana-web-copy/19guyana-web-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/11/18/world/19guyana-web-copy/19guyana-web-superJumbo.jpg" data-mediaviewer-caption="Un desfile militar en Georgetown, la capital de Guyana. En una riña que se remonta más de cien años, Venezuela afirma ser el propietario de todo lo que está al oeste del río Esequibo, lo que equivale a reclamar dos terceras partes del territorio de Guyana." data-mediaviewer-credit="Meridith Kohut para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/11/18/world/19guyana-web-copy/19guyana-web-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Un desfile militar en Georgetown, la capital de Guyana. En una riña que se remonta más de cien años, Venezuela afirma ser el propietario de todo lo que está al oeste del río Esequibo, lo que equivale a reclamar dos terceras partes del territorio de Guyana.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Meridith Kohut para The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2015/11/19/world/americas/in-guyana-a-land-dispute-with-venezuela-escalates-over-oil.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="213" data-total-count="213" id="story-continues-2" tabindex="-1">BARTICA, Guyana — En una cervecería con techo de lámina en la rivera del río Esequibo, Rawle Huggins se relaja sentado en un banco y analiza el conflicto que se intensifca entre su pequeño país y Venezuela.</p>
+<p class="story-body-text story-content" data-para-count="215" data-total-count="428" id="story-continues-3" tabindex="-1">“Esto es Guyana”, afirma Huggins, minero del oro, refiriéndose a todo lo que lo rodea. “Yo no vivo en Venezuela; vivo en Guyana. Ellos viven allá”, agrega, con un gesto hacia la jungla que rodea el pueblo.</p>
+<p class="story-body-text story-content" data-para-count="271" data-total-count="699" id="story-continues-4" tabindex="-1">Bartica, a dos horas y media en auto y en bote desde la capital, Georgetown, es el comienzo de lo que los guyaneses llaman “el interior”, una región escasamente poblada de selva y sabana con aldeas indígenas, campos mineros y depósitos de oro, diamantes o bauxita.</p>
+<p class="story-body-text story-content" data-para-count="276" data-total-count="975" id="story-continues-5" tabindex="-1">La región es el centro de una agria disputa entre vecinos que se remonta a más de cien años. Venezuela afirma ser el propietario legítimo de todo lo que está al oeste del Esequibo, lo que equivale a reclamar dos terceras partes del territorio de Guyana, incluido Bartica.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="355" data-total-count="1330" id="story-continues-6" tabindex="-1">El conflicto escaló en los últimos meses, en especial en mayo, cuando Exxon Mobil, por encargo del gobierno de Guyana, anunció que había descubierto una gran reserva petrolera en aguas cerca al territorio en disputa. La respuesta económica y diplomática de Venezuela ha sido tan fuerte que ha generado temor sobre posibles enfrentamientos militares.</p>
+<p class="story-body-text story-content" data-para-count="177" data-total-count="1507" id="story-continues-7" tabindex="-1">“Venezuela está reclamando el petróleo que encontramos”, afirma Towannh John, una camarera de Palm Court, un pequeño restaurante en cuyo techo ondea la bandera de Guyana.</p>
+<p class="story-body-text story-content" data-para-count="255" data-total-count="1762" id="story-continues-8" tabindex="-1">Para enfatizar su indignación, John  canta una canción folklórica que se hizo conocida durante otro enfrentamiento con Venezuela por el mismo territorio: “No voy a ceder las montañas, no voy a ceder el mar, no voy a ceder el río que me pertenece.”</p>
+<p class="story-body-text story-content" data-para-count="337" data-total-count="2099" id="story-continues-9" tabindex="-1">La disputa empezó en el siglo XIX, cuando Guyana era colonia inglesa y Gran Bretaña estaba tratando de expandir su presencia en América del Sur. Venezuela objetó y solicitó la ayuda de Washington que utilizó la doctrina Monroe para presionar a los británicos con la intención de resolver la controversia en un panel de arbitraje.</p>
+<figure id="media-100000004050460" class="media photo media-100000004050460 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/11/18/world/19guyana-web2-copy/19guyana-web2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-11">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/11/18/world/19guyana-web2-copy/19guyana-web2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/11/18/world/19guyana-web2-copy/19guyana-web2-superJumbo.jpg" data-mediaviewer-caption="“Venezuela tiene 40 veces nuestra población; tiene cuatro veces el tamaño territorial de Guyana”, indicó el Presidente David Granger, en el centro." data-mediaviewer-credit="Meridith Kohut para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/11/18/world/19guyana-web2-copy/19guyana-web2-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">“Venezuela tiene 40 veces nuestra población; tiene cuatro veces el tamaño territorial de Guyana”, indicó el Presidente David Granger, en el centro.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Meridith Kohut para The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="278" data-total-count="2377" id="story-continues-11" tabindex="-1">El panel se reunió en París en 1899 con cuatro jueces, dos británicos y dos estadounidenses, y un diplomático ruso que emitiría su voto en caso de empate. El ex presidente de Estados Unidos Benjamin Harrison fue el jefe del equipo que defendió los argumentos de Venezuela.</p>
+<p class="story-body-text story-content" data-para-count="138" data-total-count="2515" id="story-continues-12" tabindex="-1">Cuando el panel anunció su decisión, ésta se leyó como muy favorable para Gran Bretaña, que obtuvo casi toda la tierra que reclamaba.</p>
+<p class="story-body-text story-content" data-para-count="280" data-total-count="2795" id="story-continues-13" tabindex="-1">Eso pareció ponerle fin a la controversia hasta 1949, cuando se hizo pública una carta de un abogado estadounidense que participó en el caso. Afirmaba que los jueces británicos se habían coludido con el diplomático ruso para imponer un resultado positivo para Gran Bretaña.</p>
+<p class="story-body-text story-content" data-para-count="237" data-total-count="3032" id="story-continues-14" tabindex="-1">Con esta información, los funcionarios venezolanos declararon nula la decisión de 1899 e insistieron en que se les devolviera el territorio, exigencia que se mantuvo aun después de que Guyana se independizara de Gran Bretaña en 1966.</p>
+<p class="story-body-text story-content" data-para-count="141" data-total-count="3173" id="story-continues-15" tabindex="-1">Ahora la disputa ha entrado en una de sus fases más tensas, con la profunda crisis económica y política de Venezuela como telón de fondo.</p>
+<figure id="media-100000004050463" class="media photo media-100000004050463 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/11/18/world/19guyana-web3-copy/19guyana-web3-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-17">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/11/18/world/19guyana-web3-copy/19guyana-web3-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/11/18/world/19guyana-web3-copy/19guyana-web3-superJumbo.jpg" data-mediaviewer-caption="Bartica, a dos horas y media en auto y bote desde la capital de Guyana, Georgetown, es el comienzo de lo que los guyaneses llaman “el interior”, una región escasamente poblada de selva y sabana con aldeas indígenas, campos mineros y depósitos de oro, diamantes, bauxita y otros minerales." data-mediaviewer-credit="Meridith Kohut para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/11/18/world/19guyana-web3-copy/19guyana-web3-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Bartica, a dos horas y media en auto y bote desde la capital de Guyana, Georgetown, es el comienzo de lo que los guyaneses llaman “el interior”, una región escasamente poblada de selva y sabana con aldeas indígenas, campos mineros y depósitos de oro, diamantes, bauxita y otros minerales.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Meridith Kohut para The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="272" data-total-count="3445" id="story-continues-17" tabindex="-1">Desde hace mucho tiempo, el presidente venezolano, Nicolás Maduro, ha acusado a Estados Unidos de conspirar en su contra. Este año, ordenó el cierre de los principales cruces fronterizos con Colombia y acusó a Bogotá de respaldar conspiradores que planean asesinarlo.</p>
+<p class="story-body-text story-content" data-para-count="93" data-total-count="3538" id="story-continues-18" tabindex="-1">Ahora ha puesto su mirada sobre Guyana, el único país de habla inglesa en América del Sur.</p>
+<p class="story-body-text story-content" data-para-count="270" data-total-count="3808" id="story-continues-19" tabindex="-1">Después del anuncio de Exxon Mobil, Maduro aprobó un decreto para establecer zonas de defensa marina que invaden las aguas territoriales guyanesas y las de otros vecinos caribeños y sudamericanos. Aunque posteriormente revocó ese decreto, la intención estaba clara.</p>
+<p class="story-body-text story-content" data-para-count="185" data-total-count="3993" id="story-continues-20" tabindex="-1">Al mismo tiempo, Venezuela suspendió el envío de petróleo subsidiado a Guyana a cambio de arroz, parte de un programa venezolano para ayudar a varios países pequeños de la región.</p>
+<p class="story-body-text story-content" data-para-count="117" data-total-count="4110" id="story-continues-21" tabindex="-1">Maduro también retiró al embajador de Venezuela de Georgetown y, posteriormente, Guyana retiró al suyo de Caracas.</p>
+<p class="story-body-text story-content" data-para-count="365" data-total-count="4475" id="story-continues-22" tabindex="-1">Y hay más. Venezuela objetó la ayuda que le prestó Brasil a Guyana para unos proyectos hidroeléctricos en la zona en disputa. Le envió una carta a Exxon Mobil para objetar la perforación petrolera. Y le envió una carta similar a una compañía canadiense, Guyana Goldfields, Inc., con amenazas de impedir su operación en una mina de oro al oeste de Bartica.</p>
+<p class="story-body-text story-content" data-para-count="233" data-total-count="4708" id="story-continues-23" tabindex="-1">Los funcionarios de ambos países también se han visto envueltos en una feroz guerra de declaraciones. Maduro acusó el presidente de Guyana, David Granger, de representar los intereses de Exxon Mobil por encima de los de su pueblo.</p>
+<p class="story-body-text story-content" data-para-count="183" data-total-count="4891" id="story-continues-24" tabindex="-1">Granger advirtió hace unos meses que Venezuela estaba concentrando tropas y equipo militar en la frontera, a lo que Caracas respondió que se trataba de simples ejercicios militares.</p>
+<p class="story-body-text story-content" data-para-count="147" data-total-count="5038" id="story-continues-25" tabindex="-1">Maduro y Granger se reunieron en septiembre en Nueva York, pero esa reunión dio muy pocos frutos, salvo el retorno de sus respectivos embajadores.</p>
+<p class="story-body-text story-content" data-para-count="148" data-total-count="5186" id="story-continues-26" tabindex="-1">Maduro ha tratado de presentar a Venezuela como la víctima en la disputa, con el argumento de que fue engañada por el poderoso imperio Británico.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="183" data-total-count="5369" id="story-continues-27" tabindex="-1">Esta respuesta es una variante del libreto acostumbrado de Maduro, en el que Venezuela interpreta el papel de David en una épica batalla contra Estados Unidos, su versión de Goliat.</p>
+<p class="story-body-text story-content" data-para-count="241" data-total-count="5610" id="story-continues-28" tabindex="-1">Aquí en Bartica muchos ven el enredo de Venezuela con la diminuta Guyana, uno de los países más pobres de la región y con una población de apenas poco más de 735.000 habitantes, bajo una luz similar. Pero esta vez, Venezuela es Goliat.</p>
+<p class="story-body-text story-content" data-para-count="319" data-total-count="5929" id="story-continues-29" tabindex="-1">“Venezuela tiene 40 veces nuestra población; tiene cuatro veces el tamaño territorial de Guyana”, indicó Granger en una entrevista Agregó que su ejército solo cuenta con dos helicópteros, dos aviones de transporte y no tiene armada, mientras que Venezuela tiene aviones de combate, tanques y buques de guerra.</p>
+<p class="story-body-text story-content" data-para-count="254" data-total-count="6183" id="story-continues-30" tabindex="-1">“No hay forma de considerar una confrontación militar”, aseguró Granger. “El principal efecto de su pretensión territorial es la influencia que puede tener sobre posibles inversionistas extranjeros. El riesgo es que no quieran invertir aquí.”</p>
+<p class="story-body-text story-content" data-para-count="152" data-total-count="6335" id="story-continues-31" tabindex="-1">Funcionarios venezolanos no respondieron a solicitudes para entrevistar al Presidente Maduro o a Delcy Rodríguez, la ministra de relaciones exteriores.</p>
+<p class="story-body-text story-content" data-para-count="136" data-total-count="6471" id="story-continues-32" tabindex="-1">En julio, Maduro concedió una entrevista a Telesur, en la que objetó la idea de que “ahora Venezuela es la potencia imperialista”.</p>
+<p class="story-body-text story-content" data-para-count="233" data-total-count="6704" id="story-continues-33" tabindex="-1">“Somos el país que fue despojado” afirmó. “Esa tierra de la Guayana Esequiba no nos las regaló ni el imperio británico ni el español, se la ganaron nuestros abuelos combatiendo en el campo de batalla, es tierra sagrada.”</p>
+<p class="story-body-text story-content" data-para-count="322" data-total-count="7026" id="story-continues-34" tabindex="-1">Los mapas venezolanos muestran el territorio en disputa como parte del territorio venezolano. A veces cubierto con barras de colores y la etiqueta “zona en reclamación”. Se conoce generalmente como el Esequibo, pero debido a la forma alargada del área, los venezolanos también la llaman “la trompa de elefante”.</p>
+<figure id="media-100000004050461" class="media photo media-100000004050461 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/11/18/world/19guyana-web5-copy/19guyana-web5-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-36">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/11/18/world/19guyana-web5-copy/19guyana-web5-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/11/18/world/19guyana-web5-copy/19guyana-web5-superJumbo.jpg" data-mediaviewer-caption="Compra y venta de oro en Bartica, Guyana." data-mediaviewer-credit="Meridith Kohut para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/11/18/world/19guyana-web5-copy/19guyana-web5-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Compra y venta de oro en Bartica, Guyana.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Meridith Kohut para The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="154" data-total-count="7180" id="story-continues-36" tabindex="-1">Pero aunque los venezolanos aprenden desde sus primeros años en la escuela que ese territorio es legítimamente de ellos, pocos han puesto un pie en él.</p>
+<p class="story-body-text story-content" data-para-count="152" data-total-count="7332" id="story-continues-37" tabindex="-1">“Toda esa gente que habla tanto del Esequibo en realidad nunca ha estado ahí”, asegura Charles Brewer-Carías, explorador y naturalista venezolano.</p>
+<p class="story-body-text story-content" data-para-count="241" data-total-count="7573" id="story-continues-38" tabindex="-1">Brewer-Carías era ministro de la juventud en 1981 cuando encabezó un grupo de cincuenta jóvenes venezolanos en una excursión secreta a través de la frontera y hacia la jungla guyanesa, en la que plantaron banderas venezolanas a su paso.</p>
+<p class="story-body-text story-content" data-para-count="397" data-total-count="7970" id="story-continues-39" tabindex="-1">También sobrevoló Guyana en un pequeño avión para cartografiar instalaciones estratégicas. Pistas de aterrizaje, por ejemplo. Por ese entonces, esperaba convencer a su gobierno de invadir el territorio (pero, por el contrario, fue destituido). En un principio, pensaba que la zona era una selva vacía, pero llegó a descubrir que estaba ocupada por gente, pueblos, granjas y minas guyanesas.</p>
+<p class="story-body-text story-content" data-para-count="89" data-total-count="8059" id="story-continues-40" tabindex="-1">Ahora piensa que Venezuela debería aceptar el statu quo y mantener relaciones amistosas.</p>
+<p class="story-body-text story-content" data-para-count="216" data-total-count="8275" id="story-continues-41" tabindex="-1">“Es imposible quitarle a un país la tierra que ha desarrollado”, afirma Brewer-Carías. “Somos tan dados al pensamiento mágico que creemos que la vamos a recibir para tener pozos petroleros y minas de oro.”</p>
+<p class="story-body-text story-content" data-para-count="192" data-total-count="8467" id="story-continues-42" tabindex="-1">En un muelle a lo largo del Essequibo, en el pueblo de Parika, Mike Prince, un eterano del ejército guyanés de 61 años se sienta a ver a los pasajeros que abordan los botes rumbo a Bartica.</p>
+<p class="story-body-text story-content" data-para-count="160" data-total-count="8627" id="story-continues-43" tabindex="-1">“Yo me volvería a alistar en el ejército solo para mandar a esos hijos&#8230; de regreso a donde vinieron”, afirma y asegura que todo es por el petróleo.</p>
+<p class="story-body-text story-content" data-para-count="35" data-total-count="8662" id="story-continues-44" tabindex="-1">“La codicia es terrible”, dice. </p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2015/11/18/nuevos-hallazgos-de-petroleo-intensifican-la-disputa-territorial-entre-guyana-y-venezuela/"
+				data-title="América Latina: Nuevos hallazgos de petróleo intensifican la disputa territorial entre Guyana y Venezuela"
+				data-author="POR WLLIAM NEUMANN"
+				data-media=""
+				data-description="La región es el centro de una agria disputa entre vecinos que se remonta a más de cien años. Venezuela afirma ser el propietario legítimo de todo lo que está al oeste del Esequibo, lo que equivale a reclamar dos terceras partes del territorio de Guyana, incluido Bartica."
+				data-publish-date="18 de noviembre de 2015"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":1140,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004156371"/>
+<meta name="hdl" content="El alto precio que deben pagar las mujeres indias para poder trabajar" />
+<meta name="col" content="Cultura" id="column-name" />
+<meta name="pdate" content="20160325" />
+<meta name="utime" content="20160325113040" />
+<meta name="ptime" content="20160325113040" />
+<meta name="DISPLAYDATE" content="Mar. 25, 2016" />
+<meta name="dat" content="Mar. 25, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="el-alto-precio-que-deben-pagar-las-mujeres-indias-para-trabajar" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/03/25/el-alto-precio-que-deben-pagar-las-mujeres-indias-para-trabajar/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="El alto precio que deben pagar las mujeres indias para poder trabajar" />
+<meta property="og:description" content="Las mujeres indias se ven obligadas a luchar por incorporarse al mercado de trabajo, y en algunos casos, las costumbres de una comunidad las orillan a abandonar sus empleos." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/01/24/world/24workforce-web1/01xx16-workforce-ss-slide-5SFZ-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-03-25" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/03/25/el-alto-precio-que-deben-pagar-las-mujeres-indias-para-trabajar/" />
+<meta property="twitter:title" content="El alto precio que deben pagar las mujeres indias para poder trabajar" />
+<meta property="twitter:description" content="Las mujeres indias se ven obligadas a luchar por incorporarse al mercado de trabajo, y en algunos casos, las costumbres de una comunidad las orillan a abandonar sus empleos." />
+<meta name="author" content="Ellen Barry" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por Ellen Barry" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="cultura" />
+<meta name="cd12" content="asia" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="cultura" />
+<meta name="ser" content="asia" />
+<meta name="id" content="100000004156371"/>
+<meta name="wordCount" content="6268"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/03/25/el-alto-precio-que-deben-pagar-las-mujeres-indias-para-trabajar/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=03&amp;day=25&amp;name=el-alto-precio-que-deben-pagar-las-mujeres-indias-para-trabajar">
+<meta name="PT" content="article">
+<meta name="article:section" content="Cultura">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/6?exclude=5108">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/03\/25\/el-alto-precio-que-deben-pagar-las-mujeres-indias-para-trabajar\/"},"headline":"El alto precio que deben pagar las mujeres indias para poder trabajar","datePublished":"2016-03-25T11:30:40+00:00","dateModified":"2016-03-25T11:32:45+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/01\/24\/world\/24workforce-web1\/01xx16-workforce-ss-slide-5SFZ-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Las mujeres indias se ven obligadas a luchar por incorporarse al mercado de trabajo, y en algunos casos, las costumbres de una comunidad las orillan a abandonar sus empleos."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/03/25/el-alto-precio-que-deben-pagar-las-mujeres-indias-para-trabajar/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/01/31/world/asia/indian-women-labor-work-force.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="cultura/asia" />
+<title>El alto precio que deben pagar las mujeres indias para poder trabajar &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/01/31/world/asia/indian-women-labor-work-force.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/03/25/el-alto-precio-que-deben-pagar-las-mujeres-indias-para-trabajar/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-5108 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+					<span class="pipe">|</span>
+				El alto precio que deben pagar las mujeres indias para poder trabajar
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/03/25/el-alto-precio-que-deben-pagar-las-mujeres-indias-para-trabajar/"
+					data-title="Cultura: El alto precio que deben pagar las mujeres indias para poder trabajar"
+					data-author="POR ELLEN BARRY"
+					data-media=""
+					data-description="Las mujeres indias se ven obligadas a luchar por incorporarse al mercado de trabajo, y en algunos casos, las costumbres de una comunidad las orillan a abandonar sus empleos."
+					data-publish-date="25 de marzo de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/asia/">Asia</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">El alto precio que deben pagar las mujeres indias para poder trabajar</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Ellen Barry</span>
+</span>
+
+					<time class="dateline" datetime="2016-03-25">25 de marzo de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/03/25/el-alto-precio-que-deben-pagar-las-mujeres-indias-para-trabajar/"
+							data-title="Cultura: El alto precio que deben pagar las mujeres indias para poder trabajar"
+							data-author="POR ELLEN BARRY"
+							data-media=""
+							data-description="Las mujeres indias se ven obligadas a luchar por incorporarse al mercado de trabajo, y en algunos casos, las costumbres de una comunidad las orillan a abandonar sus empleos."
+							data-publish-date="25 de marzo de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004156356" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web1/01xx16-workforce-ss-slide-5SFZ-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web1/01xx16-workforce-ss-slide-5SFZ-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web1/01xx16-workforce-ss-slide-5SFZ-superJumbo.jpg" data-mediaviewer-caption="Geeta lideró a un grupo de mujeres de su aldea, en el norte de la India, que desafió al patriarcado y trató de salir a trabajar fuera de la casa. 
+" data-mediaviewer-credit="Andrea Bruce para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web1/01xx16-workforce-ss-slide-5SFZ-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Geeta lideró a un grupo de mujeres de su aldea, en el norte de la India, que desafió al patriarcado y trató de salir a trabajar fuera de la casa. 
+</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrea Bruce para The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/01/31/world/asia/indian-women-labor-work-force.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="194" data-total-count="194" id="story-continues-2" tabindex="-1">Una tarde húmeda del verano pasado, de esas de sudor y ruido, dos mujeres se abrían paso por la sede de los juzgados de Meerut, al norte de la India. Se dirigían al despacho de un magistrado.</p>
+<p class="story-body-text story-content" data-para-count="212" data-total-count="406" id="story-continues-3" tabindex="-1">Pasaron por delante de quienes sellan documentos y dan fe de las declaraciones juradas, del bullicio de los mecanógrafos, de los abogados entogados y de las pilas de archivos amontonados y amarrados con cuerdas.</p>
+<p class="story-body-text story-content" data-para-count="221" data-total-count="627" id="story-continues-4" tabindex="-1">No sería aventurado decir que esas dos mujeres no pertenecían al lugar. Caminaban con ese vaivén de pueblerina –mitad pato, mitad bailarina de ballet– que ha pasado su vida llevando bultos de leña sobre la cabeza.</p>
+<p class="story-body-text story-content" data-para-count="179" data-total-count="806" id="story-continues-5" tabindex="-1">Cuando entraron al cuarto de la limpieza que usa como oficina uno de los abogados que podría defenderlas estaban tan inseguras que su primera intención fue sentarse en el suelo.</p>
+<p class="story-body-text story-content" data-para-count="40" data-total-count="846" id="story-continues-6" tabindex="-1">Buscaban ayuda porque querían trabajar.</p>
+<p class="story-body-text story-content" data-para-count="304" data-total-count="1150" id="story-continues-7" tabindex="-1">Vivían a 15 kilómetros de allí, en un poblado donde la mendicidad ha sido la fuente principal de ingresos durante generaciones. Varias semanas antes, los ancianos de su casta habían decidido que las mujeres del pueblo que trabajaban en las fábricas de carne procesada tendrían que dejar de hacerlo.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="264" data-total-count="1414" id="story-continues-8" tabindex="-1">Según ellos, las mujeres estarían mejor protegidas contra el acoso sexual de los fuereños al permanecer en casa. Pero tras el motivo aparente, se encontraba otro, quizá más importante: las ganancias de las mujeres habían comenzado a debilitar el viejo orden.</p>
+<p class="story-body-text story-content" data-para-count="195" data-total-count="1609" id="story-continues-9" tabindex="-1">Que siete mujeres acostumbradas a un salario diario de 200 rupias, unos 3 dólares, se negaran a dejar de trabajar se convirtió en sorpresa. No esperaban que las mujeres acudieran a la policía.</p>
+<p class="story-body-text story-content" data-para-count="225" data-total-count="1834" id="story-continues-10" tabindex="-1">Geeta, la más joven, nació enojada. De niña, si sus hermanos le quitaban algo de la comida que le correspondía, podía reaccionar tirando la de todos al suelo. “Una mujer dura, con carácter”, la describe una vecina.</p>
+<p class="story-body-text story-content" data-para-count="118" data-total-count="1952" id="story-continues-11" tabindex="-1">“Que sus esposas se sienten y les cocinen”, susurró Geeta a su amiga Premwati. “Nuestros maridos nos apoyan”.</p>
+<p class="story-body-text story-content" data-para-count="331" data-total-count="2283" id="story-continues-12" tabindex="-1">Premwati era más cautelosa. Según la tradición de su casta (la nat), quien desafíe un castigo de la comunidad puede defenderse llevando una plancha de hierro caliente en las manos y dando cinco pasos en dirección al templo. Si sus manos se queman, será culpable y la pondrán dentro de un hoyo en el suelo hasta que confiese.</p>
+<p class="story-body-text story-content" data-para-count="376" data-total-count="2659" id="story-continues-13" tabindex="-1">Ella y Geeta se adentraban en un territorio proceloso, Premwati lo sabía bien. Al caer la noche en el poblado de Peepli Khera, se agachaba sobre su estufa de barro, volteando chapatis sobre el carbón, y analizando a sus enemigos. Demasiado pobre como para tener una casa con puerta, se acostaba bajo el techo de paja escuchando los pasos de personas a quienes no podía ver.</p>
+<p class="story-body-text story-content" data-para-count="137" data-total-count="2796" id="story-continues-14" tabindex="-1">El verano pasado, cuando decidieron luchar por seguir trabajando, Geeta y Premwati se convirtieron en piezas de un engranaje mucho mayor.</p>
+<figure id="media-100000004156342" class="media photo media-100000004156342 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web7/24workforce-web7-master675-v3.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-16">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web7/24workforce-web7-master675-v3.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web7/24workforce-web7-superJumbo-v3.jpg" data-mediaviewer-caption="Sharda, another of the village women who were ostracized for continuing to work." data-mediaviewer-credit="Andrea Bruce for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web7/24workforce-web7-master675-v3.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Sharda, another of the village women who were ostracized for continuing to work.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrea Bruce for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="179" data-total-count="2975" id="story-continues-16" tabindex="-1">En la India, la participación femenina en el mercado de trabajo ronda el 27 por ciento, una cifra inferior a la de cualquier otro país del G20, con excepción de Arabia Saudita.</p>
+<p class="story-body-text story-content" data-para-count="340" data-total-count="3315" id="story-continues-17" tabindex="-1">De 2005 a 2012, la tasa de participación de las mujeres en el mercado de trabajo disminuyó del 37 al 27 por ciento. Y esa caída se debe en gran medida a que las mujeres rurales abandonan sus puestos de trabajo. De los 189 países que estudió la Organización Internacional del Trabajo, la India es el número 17 de atrás para adelante.</p>
+<p class="story-body-text story-content" data-para-count="425" data-total-count="3740" id="story-continues-18" tabindex="-1">Y esas son pésimas noticias para un país que se esfuerza por competir en el mercado global. Los economistas han planteado dos teorías para explicar esta caída. La primera es que el crecimiento de la economía se sostiene en sectores de baja participación femenina, como la construcción. La segunda es cultural: a menos de que necesiten salir de la pobreza extrema, las familias quieren mantener a las mujeres en casa.</p>
+<p class="story-body-text story-content" data-para-count="390" data-total-count="4130" id="story-continues-19" tabindex="-1">Las familias nat estaban cruzando ese umbral y comenzaban a cambiar. Premwati y Geeta ya no se sentían tan amenazadas por el yugo de los prestamistas locales y el sabor de su recién adquirida independencia les dio valentía. La fuerza incontenible de la necesidad económica se enfrentó al inamovible control social. Así fue como descubrieron el precio, altísimo, de seguir trabajando.</p>
+<figure id="media-100000004156328" class="media photo media-100000004156328 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web3/24workforce-web3-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-21">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web3/24workforce-web3-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web3/24workforce-web3-superJumbo-v2.jpg" data-mediaviewer-caption="Water buffalo are slaughtered and processed in Al-Faheem Meatex plant in Meerut. Some women from the village of Peepli Khera found work at such plants." data-mediaviewer-credit="Andrea Bruce for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web3/24workforce-web3-master675-v2.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Water buffalo are slaughtered and processed in Al-Faheem Meatex plant in Meerut. Some women from the village of Peepli Khera found work at such plants.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrea Bruce for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="38" data-total-count="4168" id="story-continues-21" tabindex="-1"><strong>La mujer con más carácter del pueblo</strong></p>
+<p class="story-body-text story-content" data-para-count="143" data-total-count="4311" id="story-continues-22" tabindex="-1">A las 10 de una mañana de mayo, Geeta y Premwati guardaron un poco de pan frito y se pusieron en marcha hacia una fábrica de carne procesada.</p>
+<p class="story-body-text story-content" data-para-count="391" data-total-count="4702" id="story-continues-23" tabindex="-1">Para ahorrarse las 5 rupias o 7 centavos de dólar que cuesta el mototaxi, les llevó una hora recorrer el camino de tierra que atraviesa los barrios musulmanes que se levantan entre su pequeña comunidad de nats y la fábrica. Se tapaban la cara con los <em>dupattas</em>, siguiendo la tradición medieval de la <em>purdah</em>, o velo. Ni siquiera así conseguían que los hombres se asomaran a las puertas.</p>
+<p class="story-body-text story-content" data-para-count="69" data-total-count="4771" id="story-continues-24" tabindex="-1">“¿Cómo te llamas?”, gritó uno de ellos, rompiendo el silencio.</p>
+<p class="story-body-text story-content" data-para-count="24" data-total-count="4795" id="story-continues-25" tabindex="-1">“Geeta”, respondió.</p>
+<p class="story-body-text story-content" data-para-count="313" data-total-count="5108" id="story-continues-26" tabindex="-1">Las dos se conocieron poco después de casarse, cuando las sacaron de sus pueblos y ambas se encontraron entre extraños en la misma aldea, Peepli Khera. Geeta, que apenas había llegado a la pubertad, cayó en las garras de una suegra que creía que si tomaba té tendrían que gastar más dinero en alimentarla.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="336" data-total-count="5444" id="story-continues-27" tabindex="-1">Así que Geeta, huesuda y parlanchina, se escapaba para ver a Premwati, que le preparaba jarras de té dulce. No tenía buena relación con otras mujeres, quizá porque las llamaba búfalos gordos, pero a Premwati le daba igual. Geeta se lo agradecía visitándola e incluso interviniendo cada vez que el esposo de Premwati la golpeaba.</p>
+<p class="story-body-text story-content" data-para-count="245" data-total-count="5689" id="story-continues-28" tabindex="-1">Así, Geeta se labró una reputación. Comenzaron a tomarla por la mujer más mandona del pueblo. Nadie le pegaba. “Su esposo es un gallina. Si ella le dice que se pare, ¡él se para!”, dice riéndose el jefe del pueblo donde Geeta creció.</p>
+<p class="story-body-text story-content" data-para-count="412" data-total-count="6101" id="story-continues-29" tabindex="-1">Al acercarse a la fábrica esa mañana, las mujeres trataron de protegerse del olor pestilente, a carne podrida, que sale de los contenedores de grasa y contamina el aire hasta provocar arcadas. El auge del mercado de búfalo congelado en Arabia Saudita, Egipto y China ha convertido a la India en el mayor exportador mundial de carne. Hace cinco años que las fábricas a las afueras de Meerut crecen sin pausa.</p>
+<p class="story-body-text story-content" data-para-count="382" data-total-count="6483" id="story-continues-30" tabindex="-1">Esta es la razón por la que, cinco años antes, Geeta y sus amigas habían comenzado a trabajar y percibir algo de dinero para complementar los ingresos irregulares de sus maridos, músicos que se dedican a tocar en bodas. En la fábrica deshacían piedra hasta convertirla en grava. Otras limpiaban los recipientes para la carne, otras ensamblaban cajas. Otras cargaban ladrillos.</p>
+<p class="story-body-text story-content" data-para-count="379" data-total-count="6862" id="story-continues-31" tabindex="-1">A Geeta y Premwati el trabajo no solo les parecía aburrido. También les daba miedo. Las mujeres de su comunidad viven bajo ciertas reglas: si se acerca un hombre viejo, ellas no pueden sentarse en ninguna superficie más alta que el suelo. De la prohibición de tener contacto físico con hombres que no sean de su comunidad, solo se libran médicos y vendedores de brazaletes.</p>
+<p class="story-body-text story-content" data-para-count="191" data-total-count="7053" id="story-continues-32" tabindex="-1">Al principio, el miedo de que un extraño tomara su mano en el trabajo les provocaba un nudo en el estómago; incluso el valor de Geeta se evaporaba ante la posibilidad de que eso sucediera.</p>
+<p class="story-body-text story-content" data-para-count="246" data-total-count="7299" id="story-continues-33" tabindex="-1">A medida que pasaban las semanas, el miedo disminuía. En los edificios en construcción veían a trabajadores de Nepal y Bangladesh, a compradores chinos y a los hijos de los dueños de las fábricas, nada discretos al volante de sus BMW y Audi.</p>
+<figure id="media-100000004156333" class="media photo media-100000004156333 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web4/01xx16-workforce-ss-slide-TYW2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-35">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web4/01xx16-workforce-ss-slide-TYW2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web4/01xx16-workforce-ss-slide-TYW2-superJumbo.jpg" data-mediaviewer-caption="A woman working at the construction site of a new meat-processing plant, breaking up bricks from demolished construction. For generations in Peepli Khera, begging had been the main source of income for the Nat community." data-mediaviewer-credit="Andrea Bruce for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web4/01xx16-workforce-ss-slide-TYW2-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A woman working at the construction site of a new meat-processing plant, breaking up bricks from demolished construction. For generations in Peepli Khera, begging had been the main source of income for the Nat community.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrea Bruce for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="293" data-total-count="7592" id="story-continues-35" tabindex="-1">Por las noches, al regresar a casa, sacaban los billetes doblados y llenos de sudor que se habían guardado en la blusa. Un día, una de las mujeres, Pooja, anunció perpleja que su esposo y su suegra habían dejado de pegarle. “Cuando ganas dinero les sirves de algo”, dijo con sorpresa.</p>
+<p class="story-body-text story-content" data-para-count="199" data-total-count="7791" id="story-continues-36" tabindex="-1">Y a Geeta, le quedó claro que los hombres de la fábrica no se le acercaban con intenciones sexuales. “Cuando comienzas a trabajar, tu corazón se abre”, dijo. “Entonces ya no tienes miedo”.</p>
+<p class="story-body-text story-content" data-para-count="328" data-total-count="8119" id="story-continues-37" tabindex="-1">En ese momento las mujeres comenzaron a mejorar su aspecto. Geeta se dio cuenta de que otros trabajadores se alejaban de ella y comenzó a lavarse dos veces al día con jabón. Compró tiras de algodón de 2 metros, mientras más brillantes mejor, y se las llevó a un sastre para que con ellas le cosieran pantalones abombados.</p>
+<p class="story-body-text story-content" data-para-count="268" data-total-count="8387" id="story-continues-38" tabindex="-1">Premwati, casada con un hombre que pasaba la mayor parte del tiempo borracho en una hamaca, sintió por primera vez en años que pisaba terreno firme. Con sus ganancias consiguió casar a tres de sus hijos. Solo le faltaba un hijo por acomodar. Entonces podría morir.</p>
+<p class="story-body-text story-content" data-para-count="393" data-total-count="8780" id="story-continues-39" tabindex="-1">Los planes de Geeta eran más alocados, menos probables. Aunque nunca le habían enseñado las letras ni los números, oprimía constantemente las teclas de su celular. Utilizaba el método de aprendizaje más efectivo: el de ensayo-error. En la cooperativa financiera que las mujeres del pueblo habían formado, juntando sus recursos y dando préstamos, demostró ser una excelente cobradora.</p>
+<p class="story-body-text story-content" data-para-count="170" data-total-count="8950" id="story-continues-40" tabindex="-1">Comenzó a pagar una póliza de seguro de vida con un rendimiento tan alto que a veces soñaba despierta, con algo de melancolía, con la muerte a destiempo de su esposo.</p>
+<p class="story-body-text story-content" data-para-count="115" data-total-count="9065" id="story-continues-41" tabindex="-1">Pedía adelantos de sueldo, por los que no debía pagar intereses, en lugar de recurrir a los prestamistas locales.</p>
+<p class="story-body-text story-content" data-para-count="192" data-total-count="9257" id="story-continues-42" tabindex="-1">Y la primavera pasada, llamó la atención de todos al construirse una casa, con ladrillos rojizos y recién horneados que colindaba con la casa de Roshan, el hombre más poderoso del poblado.</p>
+<figure id="media-100000004156324" class="media photo media-100000004156324 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web5/01xx16-workforce-ss-slide-3HME-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-44">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web5/01xx16-workforce-ss-slide-3HME-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web5/01xx16-workforce-ss-slide-3HME-superJumbo.jpg" data-mediaviewer-caption="Geeta, after having been ostracized for refusing to stop work, walked past the homes of neighbors who are shunning her." data-mediaviewer-credit="Andrea Bruce for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web5/01xx16-workforce-ss-slide-3HME-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Geeta, after having been ostracized for refusing to stop work, walked past the homes of neighbors who are shunning her.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrea Bruce for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="22" data-total-count="9279" id="story-continues-44" tabindex="-1"><strong>Lejos de la modernidad</strong></p>
+<p class="story-body-text story-content" data-para-count="162" data-total-count="9441" id="story-continues-45" tabindex="-1">Cada vez que Roshan, el jefe nat de Peepli Khera, está listo para llevar a cabo un exorcismo, comienza con una pregunta: “¿Quieren ver el verdadero drama?”.</p>
+<p class="story-body-text story-content" data-para-count="27" data-total-count="9468" id="story-continues-46" tabindex="-1">Entonces se pone a temblar.</p>
+<p class="story-body-text story-content" data-para-count="402" data-total-count="9870" id="story-continues-47" tabindex="-1">Pone los ojos en blanco, arquea la lengua contra los dientes como lo haría la diosa Kali, que se comunica con él a través de una cuerda con cuentas de madera que se acerca a la oreja como si se tratara de un teléfono. Las familias nat que no confían en los hospitales (casi todas), vienen desde lejos a consultar a Roshan, quien asegura ser capaz de desalojar los demonios que tienen en el cuerpo.</p>
+<p class="story-body-text story-content" data-para-count="146" data-total-count="10016" id="story-continues-48" tabindex="-1">Al preguntarle cuántos de sus pacientes sobreviven, responde con una risa desagradable. “¿Cómo podría saberlo? Si sobreviven, sobreviven”.</p>
+<p class="story-body-text story-content" data-para-count="372" data-total-count="10388" id="story-continues-49" tabindex="-1">Roshan camina por el poblado sacando el pecho. Tiene los pómulos salidos de sus ancestros nómadas, que se ganaban la vida caminando sobre cuerdas flojas para diversión de la nobleza mughal. Sus labios abultados están llenos manchas; parecen trozos de hígado. Estos son sus dominios: a tan solo 65 kilómetros de Delhi en línea recta pero muy lejos del mundo moderno.</p>
+<p class="story-body-text story-content" data-para-count="416" data-total-count="10804" id="story-continues-50" tabindex="-1">Sus habitantes viven en una docena de casas alrededor de un templo cubierto con cal. Una placa señala que la familia de Roshan construyó el templo, aunque nadie necesita que se lo recuerden y, de todas formas, en el lugar solo hay dos adultos que saben leer. Nadie usa apellido ni conoce su edad. Al preguntarle a un hombre cuántos años cree tener, respondió: “Ya no tengo dientes, y estoy a punto de irme”.</p>
+<figure id="media-100000004156332" class="media photo media-100000004156332 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web6/24workforce-web6-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-52">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web6/24workforce-web6-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web6/24workforce-web6-superJumbo-v2.jpg" data-mediaviewer-caption="Roshan, an elder of the Nat caste in the village of Peepli Khera. He and other men on the village council decided that their female relatives should stop working." data-mediaviewer-credit="Andrea Bruce for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web6/24workforce-web6-master675-v2.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Roshan, an elder of the Nat caste in the village of Peepli Khera. He and other men on the village council decided that their female relatives should stop working.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrea Bruce for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="294" data-total-count="11098" id="story-continues-52" tabindex="-1">Hace poco, una mañana, una mujer llamada Usha, que tiene una pierna más corta que la otra por culpa de la polio, llevaba consigo un bebé de 4 meses que tenía vómito y diarrea. Las vértebras le sobresalían bajo la piel apergaminada de la espalda. Estaba demasiado débil como para llorar.</p>
+<p class="story-body-text story-content" data-para-count="399" data-total-count="11497" id="story-continues-53" tabindex="-1">Usha ya había perdido tres hijos. Los tres que habían sobrevivido después de los tres años estaban sentados en el suelo cerca de ella y comían pan de una bolsa de plástico. Uno estaba tan hambriento que tomó una papa cruda de la mano de Usha, medio podrida y sin pelar y la mordió. Cuando un vecino que pasaba por ahí le preguntó por qué estaban tan sucios, ella respondió con una mueca.</p>
+<p class="story-body-text story-content" data-para-count="127" data-total-count="11624" id="story-continues-54" tabindex="-1">“Somos pobres”, dijo. “Nacimos en medio de la mugre, vivimos en medio de la mugre, vamos a morir en medio de la mugre”.</p>
+<p class="story-body-text story-content" data-para-count="468" data-total-count="12092" id="story-continues-55" tabindex="-1">El momento de mayor orgullo para Roshan tuvo lugar hace varias décadas, cuando un policía que buscaba recibir un soborno cometió el error de entrar a la plaza y tomar al primo de Roshan por el cuello. Roshan, entonces joven, tomó el mango de un hacha y le pegó con fuerza al policía en la cara. Desde ese momento, le gusta decir, los policías no han encontrado un motivo para ir al poblado. Se demarcó una frontera: el lugar está fuera del alcance del Estado.</p>
+<p class="story-body-text story-content" data-para-count="350" data-total-count="12442" id="story-continues-56" tabindex="-1">Con la llegada de las fábricas, esa frontera comenzó a desaparecer. La capital, que no deja de expandirse, se tragaba al poblado de Roshan. Les prohibió a las mujeres de su familia que trabajaran pero veía contrariado cómo sus vecinas salían de casa por las mañanas. Sentía nostalgia por los tiempos en que los nats se mantenían mendigando.</p>
+<p class="story-body-text story-content" data-para-count="141" data-total-count="12583" id="story-continues-57" tabindex="-1">“La vida era mucho mejor hace 20 años”, dijo. “Era una sociedad bonita. Ahora las mujeres están saliendo y conociendo a extraños”.</p>
+<p class="story-body-text story-content" data-para-count="402" data-total-count="12985" id="story-continues-58" tabindex="-1">La primavera pasada, después de que Geeta construyera su nueva casa, el hijo de Roshan, Dharmender, comenzó a observarla con interés. Se fijó en su ropa nueva y en cómo llegaba a casa “con la ropa claramente arrugada”. Buscaba en el rostro de sus amigas trazas de maquillaje. Compartió sus sospechas de que trabajaban en un lugar con aire acondicionado. Su trabajo, dijo, olía a inmoralidad.</p>
+<p class="story-body-text story-content" data-para-count="195" data-total-count="13180" id="story-continues-59" tabindex="-1">“Tienen todo: ropa para vestir, suficiente para comer”, dijo. “¿Por qué necesitarían trabajar? Todavía tienen esposos. Esto no es ofensivo solo para ellos. Lo es para todo el pueblo”.</p>
+<p class="story-body-text story-content" data-para-count="16" data-total-count="13196" id="story-continues-60" tabindex="-1"><strong>Dinero y respeto</strong></p>
+<p class="story-body-text story-content" data-para-count="428" data-total-count="13624" id="story-continues-61" tabindex="-1">Es difícil saber dónde comenzó el rumor. Tiene que ver con la vecina de Geeta, Pinki, de voz aguda y aflautada como la de una niña. Estaba casada y tenía un hijo; trabajaba en un lugar en construcción, rompiendo piedras con un martillo. Algunos dijeron que habían visto a Pinki viajando en la motocicleta de un extraño; otros, que un hombre que trabajaba con ella se había presentado en casa de la familia de Pinki.</p>
+<p class="story-body-text story-content" data-para-count="327" data-total-count="13951" id="story-continues-62" tabindex="-1">En mayo, Roshan desapareció dentro del templo para consultarle el asunto a la autoridad en la que más confiaba: la diosa Kali. Después de una larga conversación a través del collar mágico, regresó diciendo que la diosa le había dado noticias inquietantes. Las mujeres del poblado, dijo Roshan, estaban prostituyéndose.</p>
+<p class="story-body-text story-content" data-para-count="61" data-total-count="14012" id="story-continues-63" tabindex="-1">“Si Kali nos dice que esta persona está mal, está mal”.</p>
+<p class="story-body-text story-content" data-para-count="284" data-total-count="14296" id="story-continues-64" tabindex="-1">Roshan envolvió su cabeza en el sucio turbante que lo distingue como jefe y, durante más de una hora los hombres del poblado discutieron qué hacer. El problema, según Roshan, iba más allá de Pinki: se trataba de lo que sucedía cuando sus mujeres desaparecían en las fábricas.</p>
+<p class="story-body-text story-content" data-para-count="460" data-total-count="14756" id="story-continues-65" tabindex="-1">Su hermano menor estaba totalmente de acuerdo: el empleo femenino, dijo, “se ha extendido como fuego incontrolable” y estaba afectando la reputación del poblado. Uno más de los ancianos, su primo, señaló que su propia esposa trabajaba en una fábrica, con lo que añadía 5000 rupias al mes a las 1800 que él ganaba en el grupo musical para bodas, pero que había una gran diferencia entre estas entradas: “Mi dinero se gana de manera respetable”.</p>
+<p class="story-body-text story-content" data-para-count="70" data-total-count="14826" id="story-continues-66" tabindex="-1">Estaba decidido: las mujeres del poblado deberían dejar sus trabajos.</p>
+<figure id="media-100000004156335" class="media photo media-100000004156335 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web8/01xx16-workforce-ss-slide-2THL-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-68">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web8/01xx16-workforce-ss-slide-2THL-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web8/01xx16-workforce-ss-slide-2THL-superJumbo.jpg" data-mediaviewer-caption="Geeta working in the garden of a meat-processing plant, which is used to help feed the factory workers." data-mediaviewer-credit="Andrea Bruce for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web8/01xx16-workforce-ss-slide-2THL-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Geeta working in the garden of a meat-processing plant, which is used to help feed the factory workers.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrea Bruce for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="418" data-total-count="15244" id="story-continues-68" tabindex="-1">Entonces Geeta reunió un consejo de guerra en su casa. Entre las siete mujeres que se sentaron en el suelo estaban Premwati, Pinki y otra vecina, Rekha. Geeta propuso ignorar la prohibición de Roshan. Si sus vecinas estaban dispuestas a dejar sus empleos era por miedo. El miedo desaparecería, quizá en un mes, quizá en dos. Mientras tanto les dijo a sus amigas que contaban con todo el apoyo del gobierno indio.</p>
+<p class="story-body-text story-content" data-para-count="214" data-total-count="15458" id="story-continues-69" tabindex="-1">El gobierno en el que Geeta pensaba era un político musulmán llamado Jahiruddin Mewati, que había ocupado el cargo de jefe del poblado de Peepli Khera hasta hacía unos años y se postularía de nuevo en otoño.</p>
+<p class="story-body-text story-content" data-para-count="375" data-total-count="15833" id="story-continues-70" tabindex="-1">El abdomen peludo y abultado de Mewati se asoma por entre los botones de su camisa. Padece síndrome de Tourette. Emite gruñidos y tiene tics. En medio de una conversación, dejó caer su mano sobre la mesa con fuerza y exclamó: “¡Estoy del lado de la verdad! ¡No me preocupan los votos! ¡Soy un verdadero servidor de la gente! ¡Lo que ha ocurrido una injusticia!”.</p>
+<p class="story-body-text story-content" data-para-count="522" data-total-count="16355" id="story-continues-71" tabindex="-1">Mewati había estudiado política, en especial, las tácticas del gobierno británico en la India y se convenció de que hay mucho qué ganar (votos, específicamente) al tomar partido en los conflictos locales. Contando a todos los adultos, hombres y mujeres, hay cerca de 150 votos en la comunidad nat, un número nada despreciable en un distrito donde las elecciones se ganan por un margen de 20 o 30 votos. Cuando Geeta apareció en su sala de espera, unas sillas de plástico bajo un árbol, vio una gran oportunidad.</p>
+<p class="story-body-text story-content" data-para-count="115" data-total-count="16470" id="story-continues-72" tabindex="-1">“Nadie puede impedirles ir a trabajar”, dijo con firmeza. “Aquí no hay talibanes. Esto es una democracia”.</p>
+<p class="story-body-text story-content" data-para-count="155" data-total-count="16625" id="story-continues-73" tabindex="-1">Con ese apoyo, las mujeres decidieron que saldrían a trabajar. Cuando lo hicieron, sus vecinos se plantaron frente a ellas diciéndoles que se detuvieran.</p>
+<figure id="media-100000004156339" class="media photo media-100000004156339 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web9/01xx16-workforce-ss-slide-SBGJ-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-75">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web9/01xx16-workforce-ss-slide-SBGJ-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web9/01xx16-workforce-ss-slide-SBGJ-superJumbo.jpg" data-mediaviewer-caption="Premwati, another woman ostracized, carrying water from a government hand pump. For a while, the village blocked her access to the communal well." data-mediaviewer-credit="Andrea Bruce for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web9/01xx16-workforce-ss-slide-SBGJ-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Premwati, another woman ostracized, carrying water from a government hand pump. For a while, the village blocked her access to the communal well.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrea Bruce for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="37" data-total-count="16662" id="story-continues-75" tabindex="-1"><strong>‘Estas personas pueden golpearme’</strong></p>
+<p class="story-body-text story-content" data-para-count="218" data-total-count="16880" id="story-continues-76" tabindex="-1">“El 18 de mayo de 2015 a las 9 a. m. salí al trabajo”, se lee en la declaración presentada en la estación de policía de Kharkhauda, escrita por Mewati, su abogado, y que Pinki firmó con la huella de su pulgar.</p>
+<p class="story-body-text story-content" data-para-count="178" data-total-count="17058" id="story-continues-77" tabindex="-1">“Comenzaron a decir que nos habían pedido que no fuéramos a la fábrica porque allí pasan cosas malas. Amenazaron con matarme. Solicito que se actúe de acuerdo a la ley”.</p>
+<p class="story-body-text story-content" data-para-count="71" data-total-count="17129" id="story-continues-78" tabindex="-1">Y añadió: “Estas personas pueden golpearme en cualquier momento”.</p>
+<p class="story-body-text story-content" data-para-count="137" data-total-count="17266" id="story-continues-79" tabindex="-1">Cuando se supo que las mujeres habían acudido a la policía, enviaron al hijo de Roshan, Dharmender, a decirles cuál sería su castigo.</p>
+<p class="story-body-text story-content" data-para-count="127" data-total-count="17393" id="story-continues-80" tabindex="-1">Desde ese momento, las siete mujeres serían parias: se les negarían simbólicamente la pipa y el agua de la bomba compartida.</p>
+<figure id="media-100000004159404" class="media photo media-100000004159404 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web10/workforce-slide-5-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-82">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web10/workforce-slide-5-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web10/workforce-slide-5-superJumbo.jpg" data-mediaviewer-caption="Geeta and Premwati at the courthouse in Meerut, where they took their legal battle to continue working." data-mediaviewer-credit="Andrea Bruce for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web10/workforce-slide-5-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Geeta and Premwati at the courthouse in Meerut, where they took their legal battle to continue working.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrea Bruce for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="217" data-total-count="17610" id="story-continues-82" tabindex="-1">Geeta, Premwati y sus amigas intentaron comprender el castigo. De niñas habían escuchado sobre el rito del ostracismo (que usaban para asustarlas y así hacerlas obedecer) pero nunca lo habían visto en la realidad.</p>
+<p class="story-body-text story-content" data-para-count="130" data-total-count="17740" id="story-continues-83" tabindex="-1">Al principio trataron de adaptarse y evitaban confrontar a sus vecinos. Solo usaban los caminos o las bombas de agua del gobierno.</p>
+<p class="story-body-text story-content" data-para-count="299" data-total-count="18039" id="story-continues-84" tabindex="-1">Pasaron unos cuantos días antes de que la mano del castigo las tocara. La sobrina adolescente de Geeta saludó a su vecina de al lado y vio cómo se esfumaba sin decir palabra, como un fantasma. Rehka llamó a sus familiares, uno tras otro. Cuando les decía lo que le había ocurrido, le colgaban.</p>
+<p class="story-body-text story-content" data-para-count="206" data-total-count="18245" id="story-continues-85" tabindex="-1">Se celebró una boda en la casa de un vecino de Geeta. Llegó un camión lleno de personas que venían a desearles lo mejor y regalarles arroz y <em>dhal</em>. Las ahora parias escuchaban la música desde sus casas.</p>
+<p class="story-body-text story-content" data-para-count="312" data-total-count="18557" id="story-continues-86" tabindex="-1">Algunos de los invitados venían del poblado natal de Geeta. Y entre ellos su madre, Anguri. Geeta recordaba cómo le masajeaba los pies con ternura antes de que la enviaran lejos para casarla. Creía recordar que eso había sucedido en torno a los 10 años. La había visto en contadas ocasiones desde entonces.</p>
+<p class="story-body-text story-content" data-para-count="140" data-total-count="18697" id="story-continues-87" tabindex="-1">Geeta le ofreció a su madre un vaso de agua. No lo aceptó. Geeta le ofreció té. No lo aceptó. La invitó a pasar a su casa. No aceptó.</p>
+<p class="story-body-text story-content" data-para-count="271" data-total-count="18968" id="story-continues-88" tabindex="-1">La madre de Geeta comenzó a llorar ahí mismo, en medio del camino. Luego le dio la espalda y regresó a la casa del vecino. “Me dio miedo que me declararan paria si me lo tomaba”, diría más tarde. “En nuestra comunidad, los ancianos son la autoridad suprema”.</p>
+<p class="story-body-text story-content" data-para-count="149" data-total-count="19117" id="story-continues-89" tabindex="-1">A Geeta le gustaba pensar que ya estaba curtida, pero esto la tomó por sorpresa. “Ella siempre me había amado hasta antes de esta pelea”, dijo.</p>
+<p class="story-body-text story-content" data-para-count="109" data-total-count="19226" id="story-continues-90" tabindex="-1">Geeta se dio la vuelta, entró a su casa, cerró la puerta y se puso a llorar. No quería que nadie la viera.</p>
+<figure id="media-100000004156346" class="media photo media-100000004156346 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web11/01xx16-workforce-ss-slide-S0VZ-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-92">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web11/01xx16-workforce-ss-slide-S0VZ-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web11/01xx16-workforce-ss-slide-S0VZ-superJumbo.jpg" data-mediaviewer-caption="Puja tending to goats in her home village, hours from Peepli Khera. She married Premwati’s son last year, but her family took her home from her husband after Premwati was ostracized.&lt;br /&gt;&lt;br /&gt;" data-mediaviewer-credit="Andrea Bruce for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web11/01xx16-workforce-ss-slide-S0VZ-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Puja tending to goats in her home village, hours from Peepli Khera. She married Premwati’s son last year, but her family took her home from her husband after Premwati was ostracized.&lt;br /&gt;&lt;br /&gt;</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrea Bruce for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="17" data-total-count="19243" id="story-continues-92" tabindex="-1"><strong>Vivir como parias</strong></p>
+<p class="story-body-text story-content" data-para-count="458" data-total-count="19701" id="story-continues-93" tabindex="-1">Dharmender no podía creer que las siete mujeres insistieran en ir a trabajar. El resto de las mujeres del pueblo pasaban los días recogiendo leña y, para mediados de julio, las pilas ya eran torres desordenadas que amenazaban con caerse. Por las mañanas, cuando Geeta y sus amigas salían hacia las fábricas, los hombres formaban una fila en el camino y se burlaban de ellas. “¿Van a salir en una película pornográfica?”, les gritó uno de ellos.</p>
+<p class="story-body-text story-content" data-para-count="512" data-total-count="20213" id="story-continues-94" tabindex="-1">Todo era muy extraño, dijo Dharmender. Les habían ofrecido un trato a las mujeres: las admitirían de nuevo en la comunidad si confesaban sus “actos inmorales” y pagaban una multa. Ellas se habían negado. El ostracismo era un castigo tan severo que los disidentes por lo general se rendían en un máximo de 24 horas y pagaban cualquier multa que los ancianos exigieran. Geeta y sus amigas ya habían vivido como parias durante tres meses. “¿Quién querría sufrir tanto?”, se preguntaba en voz alta.</p>
+<p class="story-body-text story-content" data-para-count="294" data-total-count="20507" id="story-continues-95" tabindex="-1">Las mujeres también se encontraban ante un terreno desconocido. Cada dos semanas se acercaban al juzgado en Meerut. Allí renovaban una orden de alejamiento que les había recomendado interponer el policía. Multarían por 50.000 rupias a cualquiera que recurriera a la violencia contra ellas.</p>
+<p class="story-body-text story-content" data-para-count="384" data-total-count="20891" id="story-continues-96" tabindex="-1">Su abogado, Mohammed Yusuf Siddiqui, nunca había tenido unas clientas tan nerviosas. Estaba acostumbrado a encontrarse ante conflictos entre el Estado y la justicia de las castas. A uno de sus clientes que había apelado a un juicio para obtener un divorcio, el consejo de su pueblo le había impuesto como castigo escupir en el suelo y luego lamer el escupitajo mezclado con tierra.</p>
+<p class="story-body-text story-content" data-para-count="312" data-total-count="21203" id="story-continues-97" tabindex="-1">De todas formas, había algo raro en estas mujeres, que firmaban todos los documentos con una huella digital. Siddiqui las veía con curiosidad. “No saben nada sobre procedimientos legales”, dijo. “Nunca me preguntan nada. Solo dicen una sola cosa: ‘No estamos mal. No estamos mal. No estamos mal’”.</p>
+<figure id="media-100000004159299" class="media photo media-100000004159299 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web12/workforce-slide-4-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-99">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web12/workforce-slide-4-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web12/workforce-slide-4-superJumbo.jpg" data-mediaviewer-caption="Puja cooking breakfast in Peepli Khera, weeks before she returned to her home village. After her mother-in-law was ostracized, Puja’s marriage began to sour." data-mediaviewer-credit="Andrea Bruce for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web12/workforce-slide-4-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Puja cooking breakfast in Peepli Khera, weeks before she returned to her home village. After her mother-in-law was ostracized, Puja’s marriage began to sour.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrea Bruce for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="392" data-total-count="21595" id="story-continues-99" tabindex="-1">Resultó que Premwati no había considerado bien todo lo que podía perder. A comienzos de año, había logrado arreglar un matrimonio para el segundo de sus hijos, un adolescente llamado Bhima. Había conseguido una novia para él sin endeudarse de más al inscribirle en una boda masiva patrocinada por el gobierno para aliviar la carga financiera del matrimonio sobre las familias pobres.</p>
+<p class="story-body-text story-content" data-para-count="248" data-total-count="21843" id="story-continues-100" tabindex="-1">Dadas las circunstancias, Bhima se había preparado para el desencanto, pero resultó que no, que la chica que Premwati había encontrado era bella: ojos grandes y luminosos, cejas arqueadas como las de una estrella de cine. Bhima estaba enamorado.</p>
+<p class="story-body-text story-content" data-para-count="406" data-total-count="22249" id="story-continues-101" tabindex="-1">A finales de julio, dos meses después de que Premwati quedara excluida, su pequeña victoria se había echado a perder. A la chica, Puja, paria por culpa de su matrimonio, no le dieron permiso para ir a la boda de su hermano y se enfadó; se tiraba al suelo y hablaba consigo misma. Le dedicaba a Bhima una mirada de odio si se atrevía a rodearla con el brazo. Bhima comenzó a golpearla por las noches.</p>
+<p class="story-body-text story-content" data-para-count="327" data-total-count="22576" id="story-continues-102" tabindex="-1">Una noche, el padre de Puja apareció en el patio de la familia, con una botella de whisky Besto y una pistola de juguete en su cinturón. Anunció que se llevaría a su hija de vuelta a su pueblo natal. Levantó el pie y de una patada, abrió un agujero en la pared de adobe que marcaba el límite de la propiedad de Premwati.</p>
+<p class="story-body-text story-content" data-para-count="153" data-total-count="22729" id="story-continues-103" tabindex="-1">“Todos estos problemas los causó una mujer. No quiero decir su nombre en este momento”, dijo, pero clavó sus ojos inyectados en sangre en Premwati.</p>
+<p class="story-body-text story-content" data-para-count="189" data-total-count="22918" id="story-continues-104" tabindex="-1">Así se fue la novia. Puja se arregló la mañana de su partida, se calzó las sandalias adornadas con diamantes de fantasía y tacón de aguja que había usado para su boda y desapareció.</p>
+<p class="story-body-text story-content" data-para-count="365" data-total-count="23283" id="story-continues-105" tabindex="-1">Premwati parecía desmoralizada. Las lluvias monzónicas habían convertido la pared de su choza en una masa sin forma y cuando cayó la noche entraron nubes de moscas. Ahora su hijo, deprimido por el abandono, la culpaba por haber acabado con su matrimonio. Premwati estaba exhausta. “He trabajado tanto&#8230; y de todas formas siempre hay problemas en casa”.</p>
+<p class="story-body-text story-content" data-para-count="220" data-total-count="23503" id="story-continues-106" tabindex="-1">Roshan había seguido el curso de los acontecimientos con gran satisfacción. Estas mujeres, dijo, estaban tratando de demostrar que podían existir fuera de la comunidad. Cuando supo que la chica se había ido, sonrió.</p>
+<p class="story-body-text story-content" data-para-count="58" data-total-count="23561" id="story-continues-107" tabindex="-1">“Poco a poco, irán entendiendo el poder que tenemos”.</p>
+<figure id="media-100000004157103" class="media photo media-100000004157103 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web13/01xx16-workforce-ss-slide-8VPP-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-109">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web13/01xx16-workforce-ss-slide-8VPP-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web13/01xx16-workforce-ss-slide-8VPP-superJumbo.jpg" data-mediaviewer-caption="Geeta and her son outside her home, which she built with money from her job. It attracted the attention and suspicion of the men who lived nearby." data-mediaviewer-credit="Andrea Bruce for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web13/01xx16-workforce-ss-slide-8VPP-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Geeta and her son outside her home, which she built with money from her job. It attracted the attention and suspicion of the men who lived nearby.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrea Bruce for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="26" data-total-count="23587" id="story-continues-109" tabindex="-1"><strong>De vuelta a la indigencia</strong></p>
+<p class="story-body-text story-content" data-para-count="303" data-total-count="23890" id="story-continues-110" tabindex="-1">En los hogares de las mujeres nat que habían accedido a renunciar a sus empleos, aumentaba la presión. Querían ser leales a los ancianos de su comunidad pero, a punto de comenzar septiembre, y ya sin las 200 rupias diarias con las que habían mantenido a sus familias, se estaban quedando sin dinero.</p>
+<p class="story-body-text story-content" data-para-count="352" data-total-count="24242" id="story-continues-111" tabindex="-1">La vecina de Geeta, una mujer imponente conocida como Gran Suman, recorría las propiedades una a una con el ojo de un general. Desaprobaba la rebelión de Geeta, pero refunfuñaba por haber tenido que renunciar a su ingreso. Una mañana, un prestamista armó un escándalo en la calle, vociferando: “¡Denme mi dinero o me llevaré su bicicleta!”.</p>
+<p class="story-body-text story-content" data-para-count="363" data-total-count="24605" id="story-continues-112" tabindex="-1">En uno de sus recorridos, Gran Suman había visto algo que le llamó la atención: una viuda con hijos ya mayores regresaba del pueblo más cercano cargando un bulto de harina sobre su cabeza. Gran Suman volvió a mirar. Sabía lo que era mendigar. Se trataba de una actividad —“estirar la mano frente a los extraños”– que los nats querían dejar atrás.</p>
+<p class="story-body-text story-content" data-para-count="314" data-total-count="24919" id="story-continues-113" tabindex="-1">La historia de la viuda era tal como se esperaba. Se le había terminado la harina dos días antes. La idea de endeudarse más la llenaba de miedo, así que no había querido recurrir a Roshan, que le habría prestado dinero pero también habría cobrado intereses. Había llorado y luego había salido a mendigar.</p>
+<p class="story-body-text story-content" data-para-count="348" data-total-count="25267" id="story-continues-114" tabindex="-1">Esa mañana, Gran Suman decidió que era hora de terminar con eso. Visitó a todas las mujeres que habían renunciado a las fábricas y lo hizo cuando Roshan no pudiera oírlas. Acordaron formar pequeños grupos, irse cuando los hombres durmieran, y presentar su caso ante la única persona que podría abrir el camino para que trabajaran de nuevo.</p>
+<p class="story-body-text story-content" data-para-count="96" data-total-count="25363" id="story-continues-115" tabindex="-1">Cuando Mewati, el político musulmán, vio al grupo de mujeres entrar a su patio, se despabiló.</p>
+<p class="story-body-text story-content" data-para-count="344" data-total-count="25707" id="story-continues-116" tabindex="-1">Faltaban dos meses para las elecciones locales y se sentía lleno de vida, como un oso que sale de su hibernación. Pocos días después, con la camisa limpia y bien planchada, a las 7:30 de una mañana de septiembre, su jeep decrépito avanzaba a tumbos, haciendo tronar la suspensión en cada bache con el que se topaba. Tenía un propósito.</p>
+<p class="story-body-text story-content" data-para-count="232" data-total-count="25939" id="story-continues-117" tabindex="-1">Estacionó el vehículo frente a la propiedad de Roshan, mientras un grupo de primos varones de Mewati salían del asiento trasero, tomando posiciones en el patio. Los dos hombres se sentaron en una hamaca y se halagaron mutuamente.</p>
+<p class="story-body-text story-content" data-para-count="54" data-total-count="25993" id="story-continues-118" tabindex="-1">“Mi corazón entero está con usted”, dijo Mewati.</p>
+<p class="story-body-text story-content" data-para-count="32" data-total-count="26025" id="story-continues-119" tabindex="-1">“Lo sé”, respondió Roshan.</p>
+<p class="story-body-text story-content" data-para-count="49" data-total-count="26074" id="story-continues-120" tabindex="-1">“Aunque muera, lo apoyaré”, afirmó Mewati.</p>
+<p class="story-body-text story-content" data-para-count="74" data-total-count="26148" id="story-continues-121" tabindex="-1">“Podría morir, pero no podría luchar contra usted”, afirmó Roshan.</p>
+<p class="story-body-text story-content" data-para-count="384" data-total-count="26532" id="story-continues-122" tabindex="-1">Mewati reunió a todos los habitantes de la comunidad y les explicó que la constitución de la India garantiza la igualdad ante la ley. No se puede prohibir a las mujeres que trabajen. Tenían que perdonar a Geeta y a sus amigas. Luego sacó 3000 billetes de rupias de su cartera, suficiente dinero como para cubrir la multa por la desobediencia de Geeta, y se los entregó a Roshan.</p>
+<p class="story-body-text story-content" data-para-count="39" data-total-count="26571" id="story-continues-123" tabindex="-1">“Encárgate de este lío”, le dijo.</p>
+<p class="story-body-text story-content" data-para-count="434" data-total-count="27005" id="story-continues-124" tabindex="-1">La maquinaria de la conciliación se echó a andar. El hermano de Roshan tiró azúcar en el suelo, fuera del templo, revirtiendo el rito del ostracismo. Geeta y sus amigas formaron una fila y sus vecinos las abrazaron con cautela, apenas rozándose con los brazos. Geeta reunió a las mujeres para celebrar y colgó un zapato de un poste fuera de su casa. En su cultura, ese gesto mostraba el desprecio que sentía por sus acusadores</p>
+<p class="story-body-text story-content" data-para-count="209" data-total-count="27214" id="story-continues-125" tabindex="-1">Pero el problema no había terminado. En la noche comenzó a palparse la tensión. Dharmender, furioso por la indulgencia de su padre, tomó a Roshan por los hombros y trató de sacarlo de la plaza del pueblo.</p>
+<p class="story-body-text story-content" data-para-count="38" data-total-count="27252" id="story-continues-126" tabindex="-1">“Tu cerebro no funciona”, le dijo.</p>
+<figure id="media-100000004157027" class="media photo media-100000004157027 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web14/01xx16-workforce-ss-slide-0GEV-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-128">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web14/01xx16-workforce-ss-slide-0GEV-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web14/01xx16-workforce-ss-slide-0GEV-superJumbo.jpg" data-mediaviewer-caption="Premwati’s son Bhima was angry at his mother for defying the village leaders. His wife, Puja, was taken from him because of the dispute." data-mediaviewer-credit="Andrea Bruce for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web14/01xx16-workforce-ss-slide-0GEV-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Premwati’s son Bhima was angry at his mother for defying the village leaders. His wife, Puja, was taken from him because of the dispute.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrea Bruce for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="21" data-total-count="27273" id="story-continues-128" tabindex="-1"><strong>‘Una marca negra’</strong></p>
+<p class="story-body-text story-content" data-para-count="126" data-total-count="27399" id="story-continues-129" tabindex="-1">Dos noches después, la policía en la estación de Kharkhauda recibió una llamada que alertaba de violencia en Peepli Khera.</p>
+<p class="story-body-text story-content" data-para-count="305" data-total-count="27704" id="story-continues-130" tabindex="-1">El policía de guardia, Ankit Chauhan, un hombre de 28 años con cara de bebé, corrió hacia el poblado. Al llegar, notó que había pocos hombres presentes y se encontró con un grupo de mujeres que, según dedujo, había estado peleándose. Recuerda haber visto “rasguños y moretones”. Nada grave.</p>
+<p class="story-body-text story-content" data-para-count="150" data-total-count="27854" id="story-continues-131" tabindex="-1">Al final, y porque vio que era necesario hacer algo, detuvo a un hombre de apariencia enojada y baja estatura, uno de los que Geeta había denunciado.</p>
+<p class="story-body-text story-content" data-para-count="249" data-total-count="28103" id="story-continues-132" tabindex="-1">Luego reunió al resto de habitantes del lugar y les recordó que era necesario aceptar la vida moderna. Chauhan recuerda el encuentro como civilizado y constructivo. Satisfecho por haber cumplido con sus obligaciones, subió a su patrulla y se fue.</p>
+<p class="story-body-text story-content" data-para-count="58" data-total-count="28161" id="story-continues-133" tabindex="-1">Por la noche, el lugar se sume en un océano de oscuridad.</p>
+<p class="story-body-text story-content" data-para-count="208" data-total-count="28369" id="story-continues-134" tabindex="-1">La luz eléctrica parpadea un rato cada noche. Más allá de algunas bombillas colgadas dentro de algunas casas, solo hay grillos, estrellas y cañaverales por los que corren, cual fantasmas, chacales grises.</p>
+<p class="story-body-text story-content" data-para-count="149" data-total-count="28518" id="story-continues-135" tabindex="-1">Cuando el sonido de la patrulla se había alejado lo suficiente, Dharmender, sus hermanos, sus primos y sus tíos salieron de entre los cañaverales.</p>
+<p class="story-body-text story-content" data-para-count="434" data-total-count="28952" id="story-continues-136" tabindex="-1">Premwati los vio cruzar la plaza del pueblo; eran seis hombres que se acercaban. Cuando comenzaron a volar ladrillos, ella y sus amigas se escondieron dentro de una casa, tratando de bloquear la puerta con sus cuerpos. Sentada en el piso y a la luz de una vela, Premwati podía ver las caras de sus vecinos, a quienes amaba y que sentía como su familia, a quienes había conocido desde la infancia, pegarse a las rejas de la ventana:</p>
+<p class="story-body-text story-content" data-para-count="83" data-total-count="29035" id="story-continues-137" tabindex="-1">“Nos marcaron”, dijo. “Vivirá con nosotros mientras sigamos juntos aquí”.</p>
+<p class="story-body-text story-content" data-para-count="135" data-total-count="29170" id="story-continues-138" tabindex="-1">La hija de Pinki, una niña de cuatro años, se había quedado fuera de la casa, del lado de los atacantes. Su madre comenzó a llorar.</p>
+<p class="story-body-text story-content" data-para-count="130" data-total-count="29300" id="story-continues-139" tabindex="-1">“Dijeron: ‘Ya saldrán en la mañana’”, recordó Pinki. “Dijeron: ‘Las esperaremos aquí sentados toda la noche’”.</p>
+<p class="story-body-text story-content" data-para-count="190" data-total-count="29490" id="story-continues-140" tabindex="-1">Karim Khan, un vecino musulmán, se apuró a regresar de su pequeña tienda cuando se enteró de lo que sucedía: era lo más emocionante que había pasado en el poblado nat en mucho tiempo.</p>
+<p class="story-body-text story-content" data-para-count="244" data-total-count="29734" id="story-continues-141" tabindex="-1">“Esas mujeres se mearon en los calzones de miedo y mojaron todo el piso”, dijo con una carcajada. “¡Se mearon! Todos esos hombres estaban afuera, golpeando sus puertas, maltratándolas. Sabían que si peleaban de nuevo, las matarían”.</p>
+<p class="story-body-text story-content" data-para-count="311" data-total-count="30045" id="story-continues-142" tabindex="-1">Dentro de la casa, las amigas de Geeta fueron testigos de cómo trató de llamar por teléfono durante toda la noche. Pero el gobierno no estaba disponible. Mewati se quedó en su casa, a un kilómetro y medio. Después diría que su teléfono se había quedado sin batería y no había podido recibir llamadas.</p>
+<figure id="media-100000004159440" class="media photo media-100000004159440 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web15/workforce-slide-6-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-144">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web15/workforce-slide-6-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/24/world/24workforce-web15/workforce-slide-6-superJumbo.jpg" data-mediaviewer-caption="Men working in a brick factory near the village. Wages earned by men, one said, “is the money that is earned with respect.”" data-mediaviewer-credit="Andrea Bruce for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/24/world/24workforce-web15/workforce-slide-6-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Men working in a brick factory near the village. Wages earned by men, one said, “is the money that is earned with respect.”</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrea Bruce for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="251" data-total-count="30296" id="story-continues-144" tabindex="-1">Chauhan no estaba convencido de visitar la zona más alejada de su distrito dos veces en una sola noche. No creyó a quienes le hablaban de un problema grave. Si tiene que ver con los nats, razonó, lo que suceda allí podría deberse a muchas causas.</p>
+<p class="story-body-text story-content" data-para-count="31" data-total-count="30327" id="story-continues-145" tabindex="-1">“Son unos borrachos”, dijo.</p>
+<p class="story-body-text story-content" data-para-count="157" data-total-count="30484" id="story-continues-146" tabindex="-1">“Son tan borrachos que si empujas a uno de ellos al drenaje, se va a caer. Esas mujeres exageran: ‘Este sujeto nos atacó, aquel sujeto nos atacó’”.</p>
+<p class="story-body-text story-content" data-para-count="323" data-total-count="30807" id="story-continues-147" tabindex="-1">Siddiqui, su abogado defensor, no vio la necesidad de informar sobre el incidente al magistrado que había emitido la orden de protección para las mujeres. A veces, dijo, es mejor dejar que una comunidad arregle sus diferencias en lugar de abrir una investigación. De todas formas, agregó, la policía está muy ocupada.</p>
+<p class="story-body-text story-content" data-para-count="122" data-total-count="30929" id="story-continues-148" tabindex="-1">“En este país hay 1,4 mil millones de personas”, dijo. “La policía no puede andar detrás de cada una de ellas”.</p>
+<p class="story-body-text story-content" data-para-count="181" data-total-count="31110" id="story-continues-149" tabindex="-1">Las mujeres estaban solas. Cuando tuvo claro que las amigas de Geeta estaban bien guarecidas, Dharmender reunió a algunos hombres y se abrió paso hacia el otro extremo del pueblo.</p>
+<p class="story-body-text story-content" data-para-count="337" data-total-count="31447" id="story-continues-150" tabindex="-1">Estaba enfadado. Lo asoció con ser parte de un grupo, según explicaría más tarde. Lo había sentido antes; dura un cuarto de hora. Pero durante ese tiempo, la ira puede hacer que personas normales sean capaces de levantar un camión. Geeta ya había llamado a la policía, y Dharmender no vio ningún motivo para evitar la violencia.</p>
+<p class="story-body-text story-content" data-para-count="389" data-total-count="31836" id="story-continues-151" tabindex="-1">El esposo de Geeta, Sanjay, estaba en camiseta en casa de un vecino, viendo la televisión mientras los niños dormían protegidos con mosquiteros de tela. Cuando alzó la vista, vio que varios cuerpos bloqueaban la puerta. Recuerda haber visto a su sobrina, tirada junto al desagüe, llorando. Entonces recibió un golpe fuerte en la parte trasera de la cabeza. Después no recuerda nada.</p>
+<p class="story-body-text story-content" data-para-count="129" data-total-count="31965" id="story-continues-152" tabindex="-1">Dharmender sentía lástima mientras golpeaba al marido de Geeta: Sanjay era un pobre niño, un niño decente. No era culpa suya.</p>
+<p class="story-body-text story-content" data-para-count="233" data-total-count="32198" id="story-continues-153" tabindex="-1">“Si fuera una mala persona, nos sentiríamos bien por que acabara lastimado. Pero es un buen tipo”, dijo Dharmender. De todos modos, la paliza era necesaria, dijo, suspirando. “Si no sale alguien herido, la gente no aprende”.</p>
+<p class="story-body-text story-content" data-para-count="321" data-total-count="32519" id="story-continues-154" tabindex="-1">El tumulto se dispersó un poco después; dejaron a Sanjay inconsciente en un charco de sangre, con un tajo profundo en el brazo, otro en un pómulo y un golpe en la frente. Sus vecinos recuerdan haberlo visto tirado, inconsciente, sobre una pila de leña. Cuando llegó la policía pidió que lo llevaran a un hospital.</p>
+<p class="story-body-text story-content" data-para-count="267" data-total-count="32786" id="story-continues-155" tabindex="-1">Sanjay pasó cinco días internado. Siempre había sido un hombre tranquilo y cuando regresó al pueblo lo era más aún. Se acostumbró a entrar y salir de casa protegido por la penumbra, con discreción, tratando de evitar cruzarse con los hombres que lo golpearon.</p>
+<p class="story-body-text story-content" data-para-count="77" data-total-count="32863" id="story-continues-156" tabindex="-1">“Cualquiera que te haya pegado en la noche puede hacerlo de nuevo”, dijo.</p>
+<p class="story-body-text story-content" data-para-count="267" data-total-count="33130" id="story-continues-157" tabindex="-1">Geeta también perdió el valor. Cuando la gente le preguntaba qué le había pasado a Sanjay, les decía que se había caído del techo. Negaba que hubiera estado atrapada en la casa con las otras mujeres. Ya no presumía de su campaña contra el consejo del pueblo.</p>
+<p class="story-body-text story-content" data-para-count="75" data-total-count="33205" id="story-continues-158" tabindex="-1">“Son poderosos”, dijo. “Son más fuertes. Nos pegan como a perros”.</p>
+<p class="story-body-text story-content" data-para-count="115" data-total-count="33320" id="story-continues-159" tabindex="-1">El día en que dieron de alta a Sanjay, Roshan descansaba con sus parientes varones en una hamaca frente al templo.</p>
+<p class="story-body-text story-content" data-para-count="305" data-total-count="33625" id="story-continues-160" tabindex="-1">Teniéndolo todo en cuenta, la noche le salió cara a Roshan. Para evitar que presentaran cargos contra él, tuvo que pagar 3000 rupias por la atención médica prestada a Sanjay y 4000 más para asegurarse de que no se abriera una investigación. Pero todos estuvieron de acuerdo con que valió la pena.</p>
+<p class="story-body-text story-content" data-para-count="323" data-total-count="33948" id="story-continues-161" tabindex="-1">Incluso el haber cedido (a que las mujeres del pueblo regresaran a las fábricas) ha favorecido a Roshan. Aunque las mujeres se apresuraron a hacerlo, casi todas están cerradas ahora: China cerró sus mercados a la carne india, y la moneda brasileña ha caído tanto que ahora su carne es más barata que el búfalo indio.</p>
+<p class="story-body-text story-content" data-para-count="37" data-total-count="33985" id="story-continues-162" tabindex="-1">Así que fue todo. Ya nadie contrata.</p>
+<p class="story-body-text story-content" data-para-count="124" data-total-count="34109" id="story-continues-163" tabindex="-1">Roshan no pudo evitar pavonearse un poco. “Mire, en nuestra comunidad, una mujer es una mujer y un hombre es un hombre”.</p>
+<p class="story-body-text story-content" data-para-count="249" data-total-count="34358" id="story-continues-164" tabindex="-1">“Así es aquí. Las mujeres tienen una condición más baja y los hombres tienen una condición más alta”. Si otras mujeres se proponen desafiar ese principio, añadió, “les diremos de una manera tranquila y educada que eso no está bien”.</p>
+<p class="story-body-text story-content" data-para-count="92" data-total-count="34450" id="story-continues-165" tabindex="-1">Y esa noche, mientras el sol caía sobre el cañaveral, Roshan y los demás reían y reían.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/03/25/el-alto-precio-que-deben-pagar-las-mujeres-indias-para-trabajar/"
+				data-title="Cultura: El alto precio que deben pagar las mujeres indias para poder trabajar"
+				data-author="POR ELLEN BARRY"
+				data-media=""
+				data-description="Las mujeres indias se ven obligadas a luchar por incorporarse al mercado de trabajo, y en algunos casos, las costumbres de una comunidad las orillan a abandonar sus empleos."
+				data-publish-date="25 de marzo de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":901,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

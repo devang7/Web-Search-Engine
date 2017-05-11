@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content=""/>
+<meta name="hdl" content="¿Qué significa hacer política y gobernar siendo mujer en una ciudad de América Latina?" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20161101" />
+<meta name="utime" content="20161101130029" />
+<meta name="ptime" content="20161101130029" />
+<meta name="DISPLAYDATE" content="Nov. 1, 2016" />
+<meta name="dat" content="Nov. 1, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="que-significa-hacer-politica-y-gobernar-siendo-mujer-en-una-ciudad-de-america-latina" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/11/01/que-significa-hacer-politica-y-gobernar-siendo-mujer-en-una-ciudad-de-america-latina/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="¿Qué significa hacer política y gobernar siendo mujer en una ciudad de América Latina?" />
+<meta property="og:description" content="Hasta 2014, el número de alcaldesas en la región apenas alcanzaba el 12,3 por ciento. En Bogotá, en una cumbre mundial de autoridades locales y regionales, conversamos con algunas de las mujeres que disputan y gestionan el poder cada día en sus ciudades." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/11/01/universal/es/1alcaldesasES/1alcaldesasES-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-11-01" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/11/01/que-significa-hacer-politica-y-gobernar-siendo-mujer-en-una-ciudad-de-america-latina/" />
+<meta property="twitter:title" content="¿Qué significa hacer política y gobernar siendo mujer en una ciudad de América Latina?" />
+<meta property="twitter:description" content="Hasta 2014, el número de alcaldesas en la región apenas alcanzaba el 12,3 por ciento. En Bogotá, en una cumbre mundial de autoridades locales y regionales, conversamos con algunas de las mujeres que disputan y gestionan el poder cada día en sus ciudades." />
+<meta name="author" content="Elda Cantú" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Elda Cantú" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="politica" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="politica" />
+<meta name="id" content=""/>
+<meta name="wordCount" content="1671"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/11/01/que-significa-hacer-politica-y-gobernar-siendo-mujer-en-una-ciudad-de-america-latina/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=11&amp;day=01&amp;name=que-significa-hacer-politica-y-gobernar-siendo-mujer-en-una-ciudad-de-america-latina">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=28988">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/11\/01\/que-significa-hacer-politica-y-gobernar-siendo-mujer-en-una-ciudad-de-america-latina\/"},"headline":"\u00bfQu\u00e9 significa hacer pol\u00edtica y gobernar siendo mujer en una ciudad de Am\u00e9rica Latina?","datePublished":"2016-11-01T13:00:29+00:00","dateModified":"2016-11-17T13:33:20+00:00","author":{"@type":"Person","name":"Elias Lopez"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/11\/01\/universal\/es\/1alcaldesasES\/1alcaldesasES-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Hasta 2014, el n\u00famero de alcaldesas en la regi\u00f3n apenas alcanzaba el 12,3 por ciento. En Bogot\u00e1, en una cumbre mundial de autoridades locales y regionales, conversamos con algunas de las mujeres que disputan y gestionan el poder cada d\u00eda en sus ciudades."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/11/01/que-significa-hacer-politica-y-gobernar-siendo-mujer-en-una-ciudad-de-america-latina/" hreflang="es" />
+<meta name="dfp-ad-unit-path" content="americalatina/politica" />
+<title>¿Qué significa hacer política y gobernar siendo mujer en una ciudad de América Latina? &#8211; Español</title>
+<link rel="canonical" href="https://www.nytimes.com/es/2016/11/01/que-significa-hacer-politica-y-gobernar-siendo-mujer-en-una-ciudad-de-america-latina/" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/11/01/que-significa-hacer-politica-y-gobernar-siendo-mujer-en-una-ciudad-de-america-latina/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-28988 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				¿Qué significa hacer política y gobernar siendo mujer en una ciudad de América Latina?
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/11/01/que-significa-hacer-politica-y-gobernar-siendo-mujer-en-una-ciudad-de-america-latina/"
+					data-title="América Latina: ¿Qué significa hacer política y gobernar siendo mujer en una ciudad de América Latina?"
+					data-author="POR ELDA CANTú"
+					data-media=""
+					data-description="Hasta 2014, el número de alcaldesas en la región apenas alcanzaba el 12,3 por ciento. En Bogotá, en una cumbre mundial de autoridades locales y regionales, conversamos con algunas de las mujeres que disputan y gestionan el poder cada día en sus ciudades."
+					data-publish-date="1 de noviembre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2faxJUT">http://nyti.ms/2faxJUT</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/politica/">Política</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">¿Qué significa hacer política y gobernar siendo mujer en una ciudad de América Latina?</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Elda Cantú</span>
+</span>
+
+					<time class="dateline" datetime="2016-11-01">1 de noviembre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/11/01/que-significa-hacer-politica-y-gobernar-siendo-mujer-en-una-ciudad-de-america-latina/"
+							data-title="América Latina: ¿Qué significa hacer política y gobernar siendo mujer en una ciudad de América Latina?"
+							data-author="POR ELDA CANTú"
+							data-media=""
+							data-description="Hasta 2014, el número de alcaldesas en la región apenas alcanzaba el 12,3 por ciento. En Bogotá, en una cumbre mundial de autoridades locales y regionales, conversamos con algunas de las mujeres que disputan y gestionan el poder cada día en sus ciudades."
+							data-publish-date="1 de noviembre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004741305" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/11/01/universal/es/1alcaldesasES/1alcaldesasES-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/11/01/universal/es/1alcaldesasES/1alcaldesasES-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/11/01/universal/es/1alcaldesasES/1alcaldesasES-superJumbo.jpg" data-mediaviewer-caption="Sally A. Lee, alcaldesa de Sorsogon, Filipinas; Manuela Carmena, alcaldesa de Madrid; Fatimetou Abdel Malick, alcaldesa de Tevragh Zeina, Mauritania, y Fatma Şahin, alcaldesa de Gaziantep, Turquía, en el Foro de Mujeres Electas Localmente, la única actividad centrada en el género que tuvo la cumbre mundial de alcaldes y concejales en Bogotá." data-mediaviewer-credit="Foto por IISD/ENB | Diego Noguera"  itemprop="url" itemid="https://static01.nyt.com/images/2016/11/01/universal/es/1alcaldesasES/1alcaldesasES-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Sally A. Lee, alcaldesa de Sorsogon, Filipinas; Manuela Carmena, alcaldesa de Madrid; Fatimetou Abdel Malick, alcaldesa de Tevragh Zeina, Mauritania, y Fatma Şahin, alcaldesa de Gaziantep, Turquía, en el Foro de Mujeres Electas Localmente, la única actividad centrada en el género que tuvo la cumbre mundial de alcaldes y concejales en Bogotá.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Foto por IISD/ENB | Diego Noguera
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="658" data-total-count="658" id="story-continues-2" tabindex="-1">BOGOTÁ — Una alcaldesa, incluso en el siglo XXI, es un ave extraña. A pesar de que ciudades tan importantes como Madrid, París, Roma, Santiago de Chile y La Habana —por dar algunos ejemplos— son hoy gestionadas por mujeres, lo cierto es que el plano local de la política sigue siendo un terreno masculino. Por cada ciudad o pueblo que vota a una alcaldesa, 19 otras elegirán a un alcalde. Esta tremenda desigualdad se acentúa si consideramos que la representación femenina en el ámbito municipal está por lo general confinada a comunidades muy pequeñas: en América Latina, el 80 por ciento de los municipios tiene 25.000 habitantes o menos.</p>
+<p class="story-body-text story-content" data-para-count="179" data-total-count="837" id="story-continues-3" tabindex="-1">Hasta 2014, <a href="http://oig.cepal.org/es/indicadores/poder-local-porcentaje-mujeres-alcaldesas-electas">según un informe</a> de la Comisión Económica para América Latina y el Caribe (CEPAL), el número de alcaldesas en América Latina alcanzaba apenas el 12,3 por ciento.</p>
+<p class="story-body-text story-content" data-para-count="402" data-total-count="1239" id="story-continues-4" tabindex="-1">Un viernes de octubre, durante la cumbre mundial de líderes locales y regionales en Colombia, Anne Hidalgo, la alcaldesa de París, tomó el micrófono y se preguntó por qué no había más mujeres electas en cargos públicos: son la mitad de la población, dijo, son menos susceptibles a la corrupción y, a fin de cuentas, le dan credibilidad a la democracia, tan maltrecha a los ojos del público.</p>
+<p class="story-body-text story-content" data-para-count="333" data-total-count="1572" id="story-continues-5" tabindex="-1">La vicealcaldesa de Panamá, Raisa Banfield, señaló que primero había que resolver el asunto de la dignidad y luego el de la participación política. Sylvie Goneau, concejala de Gatineau, Quebec, abandonó su discurso en francés para observar (en inglés) que la mayoría de los páneles del congreso seguían siendo masculinos.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="363" data-total-count="1935" id="story-continues-6" tabindex="-1">Se trataba del Foro de Mujeres Electas Localmente, la única actividad centrada en el género que tuvo el quinto congreso de Ciudades y Gobiernos Locales Unidos, una cumbre que reunió en Bogotá a alcaldes y concejales electos de 140 países de todo el mundo para debatir sobre asuntos como movilidad, transporte, salud, vivienda, turismo, inversión extranjera.</p>
+<p class="story-body-text story-content" data-para-count="391" data-total-count="2326" id="story-continues-7" tabindex="-1">Hacia el final de de los tres días de reuniones, el foro congregó a esa elusiva especie que son las alcaldesas. Fue la oportunidad para conversar con algunas de las mujeres que pelean y gestionan el poder cada día en sus ciudades en América Latina. ¿En qué se diferencian las ediles de sus contrapartes masculinas? ¿Qué impide superar el porcentaje de alcaldesas en la región?</p>
+<figure id="media-100000004741313" class="media photo media-100000004741313 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/11/01/universal/es/1alcaldesasES03/1alcaldesasES03-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-9">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/11/01/universal/es/1alcaldesasES03/1alcaldesasES03-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/11/01/universal/es/1alcaldesasES03/1alcaldesasES03-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Foto por IISD/ENB | Diego Noguera"  itemprop="url" itemid="https://static01.nyt.com/images/2016/11/01/universal/es/1alcaldesasES03/1alcaldesasES03-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Foto por IISD/ENB | Diego Noguera
+		</span>
+	</figcaption>
+</figure>
+
+<h4 class="story-subheading story-content">La fuerza política de lo doméstico</h4>
+
+<p class="story-body-text story-content" data-para-count="383" data-total-count="2709" id="story-continues-10" tabindex="-1">Incluir a más mujeres en la política local no solo es un asunto de representación estadística. “Es nuestro derecho”, dice Sandra Pepera, politóloga, diplomática de carrera y directora de Género, Mujeres y Democracia del National Democracy Institute en Washington. “Pero, aun más importante, cuando las mujeres se involucran, las instituciones políticas cambian&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="125" data-total-count="2834" id="story-continues-11" tabindex="-1">&#8220;Suelen ser más incluyentes&#8221;, agrega. &#8220;Si haces sitio para las mujeres, haces sitio para todo el mundo”.</p>
+<p class="story-body-text story-content" data-para-count="213" data-total-count="3047" id="story-continues-12" tabindex="-1">Resulta que las mujeres gobiernan distinto, o al menos eso piensan: cuando hay mujeres se gestiona con una perspectiva más completa para construir y apoyar a la comunidad, dijo Sylvie Goneau, concejala de Quebec.</p>
+<p class="story-body-text story-content" data-para-count="313" data-total-count="3360" id="story-continues-13" tabindex="-1">“Nosotras somos más transparentes que pactar y cerrar las cosas entre cuatro paredes&#8221;, me dijo por teléfono Soledad Chapetón, la alcaldesa de 35 años de El Alto, la urbe metropolitana más grande y poblada de Bolivia. &#8220;Por lo menos yo no lo permito y eso me está generando algunos problemas”.</p>
+<p class="story-body-text story-content" data-para-count="497" data-total-count="3857" id="story-continues-14" tabindex="-1">Más mujeres en la política también genera un beneficio económico generalizado: un reporte del McKinsey Global Institute sobre las estrategias para volver más competitivas las ciudades identifica la paridad de género como un eje clave para incrementar el producto interno bruto global en más de 12 billones de dólares. Para lograrlo, indicó John Means, socio de McKinsey y líder global para ciudades sustentables, una de las claves es aumentar la representación política de las mujeres.</p>
+<p class="story-body-text story-content" data-para-count="357" data-total-count="4214" id="story-continues-15" tabindex="-1">Claudia Cabrera, burgomaestre de Policarpo, Colombia, cree que las lideresas no solo son más dedicadas, responsables y ahorrativas (una ventaja al manejar finanzas públicas), sino que mantienen un contacto más cercano con las poblaciones vulnerables como niños y ancianos, asuntos que para sus colegas varones, opina, a veces resultan “pequeñeces”.</p>
+<p class="story-body-text story-content" data-para-count="570" data-total-count="4784" id="story-continues-16" tabindex="-1">Las mujeres, de hecho, tienen dos rutas de acceso al poder, señala Pepera: por un lado, el activismo y, por el otro, la política local. No se trata de que el ámbito local sea un “campo de entrenamiento” para quienes aspiran a un cargo de mayor importancia, sino más bien que el ámbito municipal es fértil para la participación femenina: “Las mujeres a menudo encuentran inspiración para involucrarse en política a causa de un asunto local. Porque hay un cruce donde atropellan niños, o alguien ha abierto un bar donde se congregan niñas por la noche”.</p>
+<p class="story-body-text story-content" data-para-count="305" data-total-count="5089" id="story-continues-17" tabindex="-1">Si algo puede decirse con certeza de las mujeres políticas en el ámbito municipal es que siguen siendo demasiado pocas: hasta hace un par de años, apenas seis países de los veinte que tiene América Latina superaban el 20 por ciento de alcaldesas (Belice, Surinam, Uruguay, Cuba, Jamaica y Nicaragua).</p>
+<p class="story-body-text story-content" data-para-count="405" data-total-count="5494" id="story-continues-18" tabindex="-1">Pero creer que una alcaldesa es más capaz y honrada solo por su género sería ingenuo. “Seamos honestas: las mujeres que entran en la política son políticas. Están ahí porque quieren involucrarse en las deliberaciones del poder, porque han ganado elecciones, tienen lealtades partidarias y manifiestos que apoyar”, indica Pepera, cuyo trabajo pasa por apoyar a lideresas en el ámbito municipal.</p>
+<p class="story-body-text story-content" data-para-count="251" data-total-count="5745" id="story-continues-19" tabindex="-1">Todas tienen un desafío en común: gobiernan a una ciudadanía escéptica e impaciente que no dudará en cuestionar y revocar su mandato si no cumplen con su tarea democrática mientras enfrentan la inercia de las reglas establecidas por los hombres.</p>
+<p class="story-body-text story-content" data-para-count="265" data-total-count="6010" id="story-continues-20" tabindex="-1">“Hasta no alcanzar un umbral, una masa crítica en el número de mujeres en política, ellas encontrarán muy difícil romper con la agenda francamente masculina. Así que se necesita más o menos un 30 por ciento antes de ver un cambio radical”, agrega Pepera.</p>
+<figure id="media-100000004741308" class="media photo media-100000004741308 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/11/01/universal/es/1alcaldesasES02/1alcaldesasES02-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-22">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/11/01/universal/es/1alcaldesasES02/1alcaldesasES02-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/11/01/universal/es/1alcaldesasES02/1alcaldesasES02-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Foto por IISD/ENB | Diego Noguera"  itemprop="url" itemid="https://static01.nyt.com/images/2016/11/01/universal/es/1alcaldesasES02/1alcaldesasES02-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Foto por IISD/ENB | Diego Noguera
+		</span>
+	</figcaption>
+</figure>
+
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<h4 class="story-subheading story-content">Disputar el poder en un mundo masculino</h4>
+
+<p class="story-body-text story-content" data-para-count="88" data-total-count="6098" id="story-continues-23" tabindex="-1">Elegir el servicio público no siempre resulta ni atractivo ni lógico para las mujeres.</p>
+<p class="story-body-text story-content" data-para-count="412" data-total-count="6510" id="story-continues-24" tabindex="-1">“Un día de estos dijeron que me habían visto en un hotel borracha, y que estaba en una habitación con hombres. ¡Vea todo lo que le sacan a una con tal de que una salga corriendo!”, cuenta María Rosa López Gutiérrez, alcaldesa de Santa Cruz de Guanacaste, Costa Rica, una maestra de primaria retirada que, aclara, no bebe alcohol y planea mantenerse firme en el cargo que ocupa desde mayo de este año.</p>
+<p class="story-body-text story-content" data-para-count="386" data-total-count="6896" id="story-continues-25" tabindex="-1">Mantener el trabajo —el puesto de autoridad— es la principal tarea de cualquier político, pero solo las mujeres deben enfrentar el escrutinio de su vida personal, de su “vida sentimental, de la vestimenta, desde los usos y costumbres tanto públicos como privados”, lamenta Fabiana Goyeneche, de 31 años, directora de desarrollo social y suplente del Intendente de Montevideo.</p>
+<p class="story-body-text story-content" data-para-count="164" data-total-count="7060" id="story-continues-26" tabindex="-1">“Cuando una mujer llega a un cargo de importancia, de decisión, lo primero que encuentra es la duda: ‘¿Podrá?’”, dice Chapetón, la alcaldesa de El Alto.</p>
+<p class="story-body-text story-content" data-para-count="412" data-total-count="7472" id="story-continues-27" tabindex="-1">No siempre es un asunto de talento o preparación sino de enfrentar un sistema en donde las reglas y las instituciones son de diseño masculino. Uno de los efectos de la desigualdad de género es que, además de tener salarios más bajos y menos oportunidades laborales, las mujeres suelen tener menos tiempo para participar en la política puesto que deben atender ocupaciones que a menudo ellas no han elegido.</p>
+<p class="story-body-text story-content" data-para-count="315" data-total-count="7787" id="story-continues-28" tabindex="-1">“Más que en el ámbito del debate, del discurso o la acción municipal, [lo más difícil] es coordinar los tiempos para que la familia se sienta integrada y sea parte de la acción que uno cumple”, dice Magali Quezada, de 42 años, tres veces alcaldesa de Nabón, Ecuador, y madre de una niña de cinco años.</p>
+<p class="story-body-text story-content" data-para-count="362" data-total-count="8149" id="story-continues-29" tabindex="-1">Acaso una barrera más básica habita dentro de las futuras lideresas:  “Somos nosotras las que tenemos que atrevernos, las que tenemos que dejar el miedo, tenemos que dejar de sentirnos inferiores. Nosotras no tenemos que pedir cupo”, dice por teléfono la ingeniera Virginia Vivas de 51 años, que es alcaldesa de Córdoba, Venezuela, desde hace 12 años.</p>
+<p class="story-body-text story-content" data-para-count="310" data-total-count="8459" id="story-continues-30" tabindex="-1"><a href="http://harvardpolitics.com/covers/women-in-the-world/why-women-dont-win/">Algunos estudios en Estados Unidos</a>, explica Pepera, demuestran que para que una mujer se anime a involucrarse en política, antes deben proponérselo siete veces personas diferentes y muy cercanas. La experta agrega que se trata de reunir confianza en sí mismas y también de contar con las redes necesarias.</p>
+<p class="story-body-text story-content" data-para-count="312" data-total-count="8771" id="story-continues-31" tabindex="-1">En un escenario en donde la ciudadanía pierde el interés por la política, contar con más candidatas empeñadas en demostrar que pueden hacer un buen trabajo —un trabajo al que durante tanto tiempo no han conseguido postular o acceder— podría renovar las instituciones y su relación con la ciudadanía.</p>
+<p class="story-body-text story-content" data-para-count="243" data-total-count="9014" id="story-continues-32" tabindex="-1">Además, perdura su impacto a largo plazo: esas alcaldesas se convierten en referencia y modelo y dejan de ser “la única” para convertirse simplemente en “la primera”, es decir, la mujer que abre la puerta para las que vienen detrás.</p>
+<p class="story-body-text story-content" data-para-count="539" data-total-count="9553" id="story-continues-33" tabindex="-1">Esto lo sabe Cabrera, la joven alcaldesa de Policarpo, una zona de desmovilizados en Colombia. Ella, que tenía experiencia haciendo trabajo social y en cárceles, dice que decidió postular a la alcaldía porque también fue víctima del conflicto armado y debió abandonar su ciudad, hasta que le pidieron que volviera: “Me apoyó la gente común, sin ningún líder político. Fue un reto que saqué adelante y logré derrotar a ese poder político. Para mí ha sido lo más importante en la vida. Lograrlo y ser mujer, mucho más”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/anne-hidalgo/" rel="tag">Anne Hidalgo</a>, <a href="https://www.nytimes.com/es/tag/claudia-cabrera/" rel="tag">Claudia Cabrera</a>, <a href="https://www.nytimes.com/es/tag/foro-de-mujeres-electas-localmente/" rel="tag">Foro de Mujeres Electas Localmente</a>, <a href="https://www.nytimes.com/es/tag/raisa-banfield/" rel="tag">Raisa Banfield</a>, <a href="https://www.nytimes.com/es/tag/sandra-pepera/" rel="tag">Sandra Pepera</a>, <a href="https://www.nytimes.com/es/tag/soledad-chapeton/" rel="tag">Soledad Chapetón</a>, <a href="https://www.nytimes.com/es/tag/sylvie-goneau/" rel="tag">Sylvie Goneau</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/11/01/que-significa-hacer-politica-y-gobernar-siendo-mujer-en-una-ciudad-de-america-latina/"
+				data-title="América Latina: ¿Qué significa hacer política y gobernar siendo mujer en una ciudad de América Latina?"
+				data-author="POR ELDA CANTú"
+				data-media=""
+				data-description="Hasta 2014, el número de alcaldesas en la región apenas alcanzaba el 12,3 por ciento. En Bogotá, en una cumbre mundial de autoridades locales y regionales, conversamos con algunas de las mujeres que disputan y gestionan el poder cada día en sus ciudades."
+				data-publish-date="1 de noviembre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/10/21/la-marcha-de-las-mujeres-en-argentina-formacion-de-una-tribu/">
+					<div class="story-body">
+						<h3 class="kicker">Ensayo</h3>
+
+						<h2 class="headline">
+							<span class="title">La marcha de las mujeres en Argentina: formación de una tribu</span>
+							<time class="dateline">21 de octubre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/10/22/universal/es/argentinaES/argentinaES-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/interactive/las-mujeres-de-atenco/">
+					<div class="story-body">
+						<h3 class="kicker">México</h3>
+
+						<h2 class="headline">
+							<span class="title">Las mujeres de Atenco</span>
+							<time class="dateline">22 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/09/22/world/americas/XXMEXICO-slide-HN84-copy/XXMEXICO-slide-HN84-thumbStandard-v3.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/10/31/seis-estudios-mexicanos-de-diseno-para-tener-en-el-radar/">
+					<div class="story-body">
+						<h3 class="kicker">Arte</h3>
+
+						<h2 class="headline">
+							<span class="title">Seis estudios mexicanos de diseño para tener en el radar</span>
+							<time class="dateline">31 de octubre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/10/25/t-magazine/design/mexico-slide-R6RP/mexico-slide-R6RP-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/10/31/esposa-primera-dama-y-ahora-candidata-a-la-vicepresidencia-acumulando-poder-en-nicaragua/">
+					<div class="story-body">
+						<h3 class="kicker">Nicaragua</h3>
+
+						<h2 class="headline">
+							<span class="title">Esposa, primera dama y ahora candidata a la vicepresidencia: acumulando poder en Nicaragua</span>
+							<time class="dateline">31 de octubre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/10/29/world/31nicaragua-web/31nicaragua-web-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":1124,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

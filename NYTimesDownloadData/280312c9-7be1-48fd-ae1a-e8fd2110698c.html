@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004618512"/>
+<meta name="hdl" content="New York Fashion Week: una historia oral contada por sus protagonistas" />
+<meta name="col" content="Cultura" id="column-name" />
+<meta name="pdate" content="20160910" />
+<meta name="utime" content="20160910130042" />
+<meta name="ptime" content="20160910130042" />
+<meta name="DISPLAYDATE" content="Sep. 10, 2016" />
+<meta name="dat" content="Sep. 10, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="carolina-herrera-michael-kors-moda-new-york-fashion-week" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/09/10/carolina-herrera-michael-kors-moda-new-york-fashion-week/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="New York Fashion Week: una historia oral contada por sus protagonistas" />
+<meta property="og:description" content="Algunos de los más famosos diseñadores, como Diane von Furstenberg, Alexander Wang y Ralph Lauren, recuerdan su debut y otros momentos cruciales de sus carreras en las pasarelas de Nueva York." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/09/08/fashion/08NYFW-WEB-DVF/08NYFW-WEB-DVF-videoSixteenByNine768-v2.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-09-10" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/09/10/carolina-herrera-michael-kors-moda-new-york-fashion-week/" />
+<meta property="twitter:title" content="New York Fashion Week: una historia oral contada por sus protagonistas" />
+<meta property="twitter:description" content="Algunos de los más famosos diseñadores, como Diane von Furstenberg, Alexander Wang y Ralph Lauren, recuerdan su debut y otros momentos cruciales de sus carreras en las pasarelas de Nueva York." />
+<meta name="author" content="Ruth La Ferla" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por Ruth La Ferla" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="cultura" />
+<meta name="cd12" content="moda" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="cultura" />
+<meta name="ser" content="moda" />
+<meta name="id" content="100000004618512"/>
+<meta name="wordCount" content="1655"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/09/10/carolina-herrera-michael-kors-moda-new-york-fashion-week/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=09&amp;day=10&amp;name=carolina-herrera-michael-kors-moda-new-york-fashion-week">
+<meta name="PT" content="article">
+<meta name="article:section" content="Cultura">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/6?exclude=24918">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/09\/10\/carolina-herrera-michael-kors-moda-new-york-fashion-week\/"},"headline":"New York Fashion Week: una historia oral contada por sus protagonistas","datePublished":"2016-09-10T13:00:42+00:00","dateModified":"2016-09-09T14:01:49+00:00","author":{"@type":"Person","name":"Paula Duran"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/08NYFW-WEB-DVF\/08NYFW-WEB-DVF-videoSixteenByNine768-v2.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Algunos de los m\u00e1s famosos dise\u00f1adores, como Diane von Furstenberg, Alexander Wang y Ralph Lauren, recuerdan su debut y otros momentos cruciales de sus carreras en las pasarelas de Nueva York."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/09/10/carolina-herrera-michael-kors-moda-new-york-fashion-week/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/09/08/fashion/new-york-fashion-week-history-first-shows.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="cultura/moda" />
+<title>New York Fashion Week: una historia oral contada por sus protagonistas &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/09/08/fashion/new-york-fashion-week-history-first-shows.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/09/10/carolina-herrera-michael-kors-moda-new-york-fashion-week/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-24918 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+					<span class="pipe">|</span>
+				New York Fashion Week: una historia oral contada por sus protagonistas
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/09/10/carolina-herrera-michael-kors-moda-new-york-fashion-week/"
+					data-title="Cultura: New York Fashion Week: una historia oral contada por sus protagonistas"
+					data-author="POR RUTH LA FERLA"
+					data-media=""
+					data-description="Algunos de los más famosos diseñadores, como Diane von Furstenberg, Alexander Wang y Ralph Lauren, recuerdan su debut y otros momentos cruciales de sus carreras en las pasarelas de Nueva York."
+					data-publish-date="10 de septiembre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2c91Dvp">http://nyti.ms/2c91Dvp</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/moda/">Moda</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">New York Fashion Week: una historia oral contada por sus protagonistas</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Ruth La Ferla</span>
+</span>
+
+					<time class="dateline" datetime="2016-09-10">10 de septiembre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/09/10/carolina-herrera-michael-kors-moda-new-york-fashion-week/"
+							data-title="Cultura: New York Fashion Week: una historia oral contada por sus protagonistas"
+							data-author="POR RUTH LA FERLA"
+							data-media=""
+							data-description="Algunos de los más famosos diseñadores, como Diane von Furstenberg, Alexander Wang y Ralph Lauren, recuerdan su debut y otros momentos cruciales de sus carreras en las pasarelas de Nueva York."
+							data-publish-date="10 de septiembre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004613654" class="media photo lede layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/08/fashion/08NYFW-WEB-DVF/08NYFW-WEB-DVF-blog427-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/08/fashion/08NYFW-WEB-DVF/08NYFW-WEB-DVF-blog427-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/08/fashion/08NYFW-WEB-DVF/08NYFW-WEB-DVF-superJumbo-v2.jpg" data-mediaviewer-caption="Diane von Furstenberg en su primer desfile de moda en 1974, en el Hotel Pierre de Nueva York" data-mediaviewer-credit="Ann Phillips, vía DVF Archives"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/08/fashion/08NYFW-WEB-DVF/08NYFW-WEB-DVF-blog427-v2.jpg"/>
+		<meta itemprop="height" content="536" />
+		<meta itemprop="width" content="427" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Diane von Furstenberg en su primer desfile de moda en 1974, en el Hotel Pierre de Nueva York</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Ann Phillips, vía DVF Archives
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/09/08/fashion/new-york-fashion-week-history-first-shows.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="500" data-total-count="500" id="story-continues-2" tabindex="-1">Ahora que la Semana de la Moda de Nueva York se acerca a su año número 75 (los primeros desfiles oficiales, encabezados por la Semana de la Prensa, se presentaron en 1943), con 151 desfiles repartidos a lo largo de nueve días, muchos diseñadores están cuestionando el futuro de esta reunión semestral. “Estamos cerca del fin de una era”, dijo la diseñadora Diane von Furstenberg en una entrevista reciente. “Pero no hay nada nostálgico al respecto. El futuro será más emocionante”.</p>
+<p class="story-body-text story-content" data-para-count="265" data-total-count="765" id="story-continues-3" tabindex="-1">El futuro podrá ser emocionante, pero para muchos en la industria el pasado debe saborearse y celebrarse. Aquí, una multitud de eminencias de la moda reflexionan sobre sus experiencias; las buenas, las malas, las extrañas y las que por siempre serán memorables.</p>
+<h4 class="story-subheading story-content">La dichosa ignorancia de la juventud</h4>
+
+<p class="story-body-text story-content" data-para-count="21" data-total-count="786" id="story-continues-5" tabindex="-1"><strong>DIANE VON FURSTENBERG</strong></p>
+<p class="story-body-text story-content" data-para-count="284" data-total-count="1070" id="story-continues-6" tabindex="-1">Pasé por mi primera semana de la moda sin siquiera darme cuenta. Debió ser 1973 y estábamos en el Pierre Hotel. Aún conservo una foto de ese entonces en la que estoy vestida con uno de mis vestidos cruzados, el de serpientes. Estaba con Jerry Hall y mis hijos. Eran muy pequeños.</p>
+<figure id="media-100000004629887" class="media photo media-100000004629887 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/08/fashion/08ORALFS2/08ORALFS2-master315-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-8">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/08/fashion/08ORALFS2/08ORALFS2-master315-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/08/fashion/08ORALFS2/08ORALFS2-superJumbo-v2.jpg" data-mediaviewer-caption="Carolina Herrera, at right, with a model in her fall 1981 show." data-mediaviewer-credit="John Bright"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/08/fashion/08ORALFS2/08ORALFS2-master315-v2.jpg"/>
+		<meta itemprop="height" content="420" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Carolina Herrera, at right, with a model in her fall 1981 show.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			John Bright
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="16" data-total-count="1086" id="story-continues-8" tabindex="-1"><strong>CAROLINA HERRERA</strong></p>
+<p class="story-body-text story-content" data-para-count="462" data-total-count="1548" id="story-continues-9" tabindex="-1">Mi primer desfile fue en 1981, en el Metropolitan Club en Manhattan. Había una banda en vivo que tocaba música de Cole Porter y todo Nueva York estaba ahí: Diana Vreeland y C. Z. Guest conversando con Nan Kempner, Jerry Zipkin, Consuelo y Rudi Crespi. Bianca Jagger y Steve Rubell estaban ahí. Al principio no dejaron que Steve entrara porque no llevaba corbata, así que fue a Bergdorf Goodman, que quedaba al otro lado de la calle, compró una y regresó.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="12" data-total-count="1560" id="story-continues-10" tabindex="-1"><strong>MICHAEL KORS</strong></p>
+<p class="story-body-text story-content" data-para-count="582" data-total-count="2142" id="story-continues-11" tabindex="-1">Mi primer desfile, en el otoño de 1984, fue en la Tower Gallery en la Calle 18 y la Sexta Avenida, donde ahora está Bed Bath &amp; Beyond. El día de la pasarela, entré a la galería, las obras de arte estaban ahí y los muros eran color azul rey. Ese azul me provocó literalmente un colapso nervioso. Le pregunté al propietario de la galería si podíamos quitar los cuadros, pintar de blanco la galería y volver a colgar los cuadros la mañana posterior al desfile. Él dijo que sí, pero nadie me dijo que el olor de la pintura básicamente podría asfixiar a la audiencia.</p>
+<figure id="media-100000004629890" class="media photo media-100000004629890 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/08/fashion/08ORALFS3/08ORALFS3-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-13">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/08/fashion/08ORALFS3/08ORALFS3-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/08/fashion/08ORALFS3/08ORALFS3-superJumbo.jpg" data-mediaviewer-caption="Michael Kors at the end of his spring 1985 show." data-mediaviewer-credit="Tony Palmieri"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/08/fashion/08ORALFS3/08ORALFS3-master315.jpg"/>
+		<meta itemprop="height" content="420" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Michael Kors at the end of his spring 1985 show.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tony Palmieri
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="11" data-total-count="2153" id="story-continues-13" tabindex="-1"><strong>DONNA KARAN</strong></p>
+<p class="story-body-text story-content" data-para-count="446" data-total-count="2599" id="story-continues-14" tabindex="-1">Era 1974 y yo acababa de enterarme que Anne Klein había muerto [Donna Karan y Louis Dell’Olio eran los diseñadores de Anne Klein]. Nadie había querido decirme lo enferma que estaba. Estaba furiosa, pero en aquellos días la gente no hablaba sobre el cáncer. Mi hija nació la misma semana. Estaba en el hospital y me llamaron: “¿Cuándo regresarás al trabajo?”. Yo respondí: “¿Te gustaría saber si tuve un niño o una niña?”.</p>
+<p class="story-body-text story-content" data-para-count="9" data-total-count="2608" id="story-continues-15" tabindex="-1"><strong>ZAC POSEN</strong></p>
+<p class="story-body-text story-content" data-para-count="295" data-total-count="2903" id="story-continues-16" tabindex="-1">En febrero de 2002, cuando presenté mi primera colección, hice el ensayo del desfile en la sala de mis padres. Había creado la colección con poco capital inicial que me prestaron mis amigos y mi familia y los ahorros del puesto de limonada que había comenzado de niño en la calle Spring.</p>
+<p class="story-body-text story-content" data-para-count="14" data-total-count="2917" id="story-continues-17" tabindex="-1"><strong>ALEXANDER WANG</strong></p>
+<p class="story-body-text story-content" data-para-count="401" data-total-count="3318" id="story-continues-18" tabindex="-1">Nuestro primer desfile, para el otoño de 2007, fue en una bodega en el barrio de Chelsea. Entre bastidores todo era caos. Recuerdo que nuestro director enloqueció porque todos los modelos y vestuaristas (que también eran mis mejores amigos) estaban comiendo pizza grasosa, y el director decía: “¿Dónde está Alex?”. Yo estaba ahí comiendo pizza también. Supongo que no tenía experiencia.</p>
+<p class="story-body-text story-content" data-para-count="16" data-total-count="3334" id="story-continues-19" tabindex="-1"><strong>JOSEPH ALTUZARRA</strong></p>
+<p class="story-body-text story-content" data-para-count="487" data-total-count="3821" id="story-continues-20" tabindex="-1">La primera vez que hice una presentación en la Semana de la Moda en Nueva York fue en el otoño de 2009. Teníamos 3000 dólares para toda la producción. Encontramos una pequeña galería de arte en Chelsea y llegamos a un acuerdo. Le pagaríamos al propietario un poco de dinero y también le daríamos un vestido a su asistente. Entre bastidores todo era pequeño, más como un almacén con baño. Teníamos cerca de 15 modelos y 19 atuendos. Mi mamá hizo galletas para las modelos.</p>
+<p class="story-body-text story-content" data-para-count="27" data-total-count="3848" id="story-continues-21" tabindex="-1"><strong>LAURA MULLEAVY (De Rodarte)</strong></p>
+<p class="story-body-text story-content" data-para-count="416" data-total-count="4264" id="story-continues-22" tabindex="-1">Tuvimos nuestro primer show de pasarela en el otoño de 2006, en el Ukrainian Institute en la calle 79 y la Quinta Avenida. Fue muy difícil hacer que la gente viniera y saliera de las locaciones donde la mayoría de los shows se estaban presentando. Pero como éramos de California, no sabíamos eso. En realidad no conocíamos la ciudad. Y no sabíamos cómo hacer un show. Sentíamos que estábamos en un abismo.</p>
+<p class="story-body-text story-content" data-para-count="11" data-total-count="4275" id="story-continues-23" tabindex="-1"><strong>DONNA KARAN</strong></p>
+<p class="story-body-text story-content" data-para-count="506" data-total-count="4781" id="story-continues-24" tabindex="-1">El momento decisivo llegó en 1985, cuando me fui de Anne Klein. En ese entonces les dije a mis jefes: “Quiero crear una empresa pequeña”. Las mujeres de aquellos años usaban camisas y pequeñas corbatas en la oficina. Yo me preguntaba: “¿Dónde está la sexualidad? ¿Dónde está la comodidad? ¿Dónde está la ropa que se puede usar de día y de noche? ¿Cómo se viaja con tu guardarropa en un bolso?”. Y así es como se me ocurrió el concepto de <em>Seven Easy Pieces </em>(siete piezas fáciles).</p>
+<figure id="media-100000004630022" class="media photo media-100000004630022 embedded layout-large-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/08/fashion/08ORALFS4/08ORALFS4-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-26">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/08/fashion/08ORALFS4/08ORALFS4-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/08/fashion/08ORALFS4/08ORALFS4-superJumbo-v2.jpg" data-mediaviewer-caption="Donna Karan, at right, with a model during a photo shoot in 1986." data-mediaviewer-credit="Sara Krulwich/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/08/fashion/08ORALFS4/08ORALFS4-master675-v2.jpg"/>
+		<meta itemprop="height" content="412" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Donna Karan, at right, with a model during a photo shoot in 1986.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Sara Krulwich/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="12" data-total-count="4793" id="story-continues-26" tabindex="-1"><strong>MICHAEL KORS</strong></p>
+<p class="story-body-text story-content" data-para-count="295" data-total-count="5088" id="story-continues-27" tabindex="-1">El estilista en ese primer show era un amigo mío que jamás había hecho una pasarela. No tenía idea que había algo llamado prueba de peinado y maquillaje. Le dio a cada modelo un <em>look</em> totalmente distinto. Nada era uniforme. Pero esas chicas —Iman, Dianne deWitt y Mounia— ayudaron mucho.</p>
+<p class="story-body-text story-content" data-para-count="16" data-total-count="5104" id="story-continues-28" tabindex="-1"><strong>JOSEPH ALTUZARRA</strong></p>
+<p class="story-body-text story-content" data-para-count="266" data-total-count="5370" id="story-continues-29" tabindex="-1">Solo teníamos seis pares de zapatos para las modelos, así que cuando la primera chica regresaba, le dábamos los zapatos a la siguiente. Si esa chica tenía una talla distinta, rellenábamos los zapatos con pañuelos. Nos pasamos toda la presentación de rodillas.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="12" data-total-count="5382" id="story-continues-30" tabindex="-1"><strong>MICHAEL KORS</strong></p>
+<p class="story-body-text story-content" data-para-count="379" data-total-count="5761" id="story-continues-31" tabindex="-1">Ese día, entre bastidores, todo fue una locura. Traje tres pares de zapatos bajos Maud Frizon de Barneys y tres pares de tacones altos Charles Jourdan de Bergdorf Goodman. Eso fue todo. Rotábamos esos seis pares de zapatos durante todo el show. Debíamos esperar hasta que una chica saliera de la pasarela, se quitara los zapatos y pudiéramos ponérselos a la siguiente chica.</p>
+<p class="story-body-text story-content" data-para-count="16" data-total-count="5777" id="story-continues-32" tabindex="-1"><strong>JOSEPH ALTUZARRA</strong></p>
+<p class="story-body-text story-content" data-para-count="286" data-total-count="6063" id="story-continues-33" tabindex="-1">No teníamos iluminación ni sonido ni calefacción. Básicamente, estaba con mi estilista y un amigo, un fotógrafo que llegó dos horas antes del show y me ayudó a conectar una luz para que siguiera a las modelos por toda la pasarela. Tocamos música con una radiocasetera portátil.</p>
+<p class="story-body-text story-content" data-para-count="12" data-total-count="6075" id="story-continues-34" tabindex="-1"><strong>MICHAEL KORS</strong></p>
+<p class="story-body-text story-content" data-para-count="281" data-total-count="6356" id="story-continues-35" tabindex="-1">En ese entonces no había videocámaras, así que te quedabas tras bastidores y no podías ver a la audiencia. Pero podía escuchar los aplausos después de cada salida. Después supe que Polly Mellen, una editora en Vogue, siempre era la que rompía el silencio con sus aplausos.</p>
+<p class="story-body-text story-content" data-para-count="14" data-total-count="6370" id="story-continues-36" tabindex="-1"><strong>ALEXANDER WANG</strong></p>
+<p class="story-body-text story-content" data-para-count="125" data-total-count="6495" id="story-continues-37" tabindex="-1">Después las personas enloquecían; aplaudían, vitoreaban e incluso arrojaban cosas al aire. Parecía un partido de fútbol.</p>
+<p class="story-body-text story-content" data-para-count="16" data-total-count="6511" id="story-continues-38" tabindex="-1"><strong>JOSEPH ALTUZARRA</strong></p>
+<p class="story-body-text story-content" data-para-count="95" data-total-count="6606" id="story-continues-39" tabindex="-1">Al final salí y vi que todos estaban de pie… nadie estaba sentado. Fue un momento muy dulce.</p>
+<p class="story-body-text story-content" data-para-count="12" data-total-count="6618" id="story-continues-40" tabindex="-1"><strong>MICHAEL KORS</strong></p>
+<p class="story-body-text story-content" data-para-count="314" data-total-count="6932" id="story-continues-41" tabindex="-1">En aquellos días, yo salía a la pasarela cuando acababa el show, acompañado de los modelos. La audiencia enloquecía y las chicas que me acompañaban me gritaban felicitaciones, sonreían y aplaudían. Ahora es difícil que la gente en realidad esté presente en el show. Están muy ocupados viendo sus iPhones.</p>
+<figure class="media slideshow promo embedded layout-large-vertical launch-media-viewer" id="slideshow-100000004631775" data-media-action="modal" aria-label="media" role="group"
+        itemprop="associatedMedia" itemscope
+        itemid="https://static01.nyt.com/images/2016/09/08/fashion/20160908NYFWORAL-slide-O6PM/20160908NYFWORAL-slide-O6PM-master315.jpg"
+        itemtype="https://schema.org/ImageObject"
+>
+	<script type="application/json">{"url":"https:\/\/www.nytimes.com\/slideshow\/2016\/09\/08\/fashion\/an-evolution-on-display.html","headline":"La evoluci\u00f3n de las pasarelas de Nueva York","summary":"Scenes from fashion shows in New York City through the decades.","content_kicker":null,"section_name":"Fashion & Style","subsection_name":"","publication_date":"September 8, 2016","id":100000004631775,"imageslideshow":{"intro":"","fashion_data":{"city":null,"designer":null,"season":null},"slides":[{"data_id":100000004631784,"slide_url":"20160908NYFWORAL-slide-X84X","image_type":"photo","caption":{"full":"1949: Vestidos formales en la clausura de un show de Fashions of The Times\r\n","short":null},"credit":"The New York Times\r\n","image_crops":{"videoSixteenByNine495":{"height":278,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-videoSixteenByNine495.jpg"},"master768":{"height":610,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-master768.jpg"},"thumbWide":{"height":126,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-thumbWide.jpg"},"largeHorizontalJumbo":{"height":682,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-largeHorizontalJumbo.jpg"},"articleLarge":{"height":476,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-articleLarge.jpg"},"hpLarge":{"height":287,"width":511,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-hpLarge.jpg"},"mediumThreeByTwo440":{"height":293,"width":440,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-mediumThreeByTwo440.jpg"},"largeHorizontal375":{"height":250,"width":375,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-largeHorizontal375.jpg"},"thumbLarge":{"height":150,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-thumbLarge.jpg"},"mediumFlexible177":{"height":140,"width":177,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-mediumFlexible177.jpg"},"videoSixteenByNine540":{"height":304,"width":540,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-videoSixteenByNine540.jpg"},"square320":{"height":320,"width":320,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-square320.jpg"},"square640":{"height":640,"width":640,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-square640.jpg"},"moth":{"height":151,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-moth.jpg"},"videoSmall":{"height":281,"width":500,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-videoSmall.jpg"},"thumbStandard":{"height":75,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-thumbStandard.jpg"},"videoSixteenByNine225":{"height":126,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-videoSixteenByNine225.jpg"},"articleInline":{"height":151,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-articleInline.jpg"},"smallSquare252":{"height":252,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-smallSquare252.jpg"},"watch308":{"height":348,"width":312,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-watch308.jpg"},"hpSmall":{"height":129,"width":163,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-hpSmall.jpg"},"videoFifteenBySeven2610":{"height":1218,"width":2610,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-videoFifteenBySeven2610.jpg"},"slide":{"height":476,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-slide.jpg"},"videoSixteenByNine96":{"height":54,"width":96,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-videoSixteenByNine96.jpg"},"master1050":{"height":833,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-master1050.jpg"},"watch268":{"height":303,"width":272,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-watch268.jpg"},"master495":{"height":393,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-master495.jpg"},"largeWidescreen573":{"height":322,"width":573,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-largeWidescreen573.jpg"},"sfSpan":{"height":263,"width":395,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-sfSpan.jpg"},"jumbo":{"height":813,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-jumbo.jpg"},"videoSixteenByNine150":{"height":84,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-videoSixteenByNine150.jpg"},"videoSixteenByNine390":{"height":219,"width":390,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-videoSixteenByNine390.jpg"},"mediumSquare149":{"height":149,"width":149,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-mediumSquare149.jpg"},"largeWidescreen1050":{"height":590,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-largeWidescreen1050.jpg"},"videoSixteenByNine310":{"height":174,"width":310,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-videoSixteenByNine310.jpg"},"videoSixteenByNine1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-videoSixteenByNine1050.jpg"},"master180":{"height":143,"width":180,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-master180.jpg"},"smallSquare168":{"height":168,"width":168,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-smallSquare168.jpg"},"mediumThreeByTwo225":{"height":150,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-mediumThreeByTwo225.jpg"},"verticalTwoByThree735":{"height":1102,"width":735,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-verticalTwoByThree735.jpg"},"facebookJumbo":{"height":549,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-facebookJumbo.jpg"},"filmstrip":{"height":190,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-filmstrip.jpg"},"miniMoth":{"height":70,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-miniMoth.jpg"},"master315":{"height":250,"width":315,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-master315.jpg"},"videoSixteenByNine480":{"height":270,"width":480,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-videoSixteenByNine480.jpg"},"master675":{"height":536,"width":675,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-master675.jpg"},"tmagArticle":{"height":470,"width":592,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-tmagArticle.jpg"},"videoSixteenByNine768":{"height":432,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-videoSixteenByNine768.jpg"},"videoThumb":{"height":50,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-videoThumb.jpg"},"videoSixteenByNine600":{"height":338,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-videoSixteenByNine600.jpg"},"tmagSF":{"height":287,"width":362,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-tmagSF.jpg"},"videoSixteenByNineJumbo1600":{"height":899,"width":1600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-videoSixteenByNineJumbo1600.jpg"},"popup":{"height":500,"width":630,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-popup.jpg"},"mediumThreeByTwo252":{"height":168,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-mediumThreeByTwo252.jpg"},"mediumThreeByTwo210":{"height":140,"width":210,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-mediumThreeByTwo210.jpg"},"windowsTile336H":{"height":336,"width":694,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-windowsTile336H.jpg"},"mediumThreeByTwo378":{"height":252,"width":378,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-mediumThreeByTwo378.jpg"},"videoFifteenBySeven1305":{"height":609,"width":1305,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-videoFifteenBySeven1305.jpg"},"superJumbo":{"height":1626,"width":2048,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-superJumbo.jpg"},"videoLarge":{"height":507,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-X84X\/20160908NYFWORAL-slide-X84X-videoLarge.jpg"}},"url":"\/slideshow\/2016\/09\/08\/fashion\/an-evolution-on-display\/s\/20160908NYFWORAL-slide-X84X.html","short_url":"http:\/\/nyti.ms\/2ckETa0","approved_for_syndication":true},{"data_id":100000004631783,"slide_url":"20160908NYFWORAL-slide-6A1I","image_type":"photo","caption":{"full":"1953: Los editores de moda se api\u00f1aban en peque\u00f1as salas de muestra en la S\u00e9ptima Avenida durante las aperturas para la prensa de moda. Aqu\u00ed, un atuendo de Samuel Winston en tafet\u00e1n lila.","short":null},"credit":"Bettmann Archive\r\n","image_crops":{"master768":{"height":1135,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-master768.jpg"},"videoSixteenByNine495":{"height":278,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-videoSixteenByNine495.jpg"},"thumbWide":{"height":126,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-thumbWide.jpg"},"largeHorizontalJumbo":{"height":682,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-largeHorizontalJumbo.jpg"},"articleLarge":{"height":887,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-articleLarge.jpg"},"hpLarge":{"height":287,"width":511,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-hpLarge.jpg"},"mediumThreeByTwo440":{"height":293,"width":440,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-mediumThreeByTwo440.jpg"},"largeHorizontal375":{"height":250,"width":375,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-largeHorizontal375.jpg"},"thumbLarge":{"height":150,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-thumbLarge.jpg"},"mediumFlexible177":{"height":262,"width":177,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-mediumFlexible177.jpg"},"videoSixteenByNine540":{"height":304,"width":540,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-videoSixteenByNine540.jpg"},"square320":{"height":320,"width":320,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-square320.jpg"},"square640":{"height":640,"width":640,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-square640.jpg"},"moth":{"height":151,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-moth.jpg"},"videoSmall":{"height":281,"width":500,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-videoSmall.jpg"},"thumbStandard":{"height":75,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-thumbStandard.jpg"},"videoSixteenByNine225":{"height":126,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-videoSixteenByNine225.jpg"},"smallSquare252":{"height":252,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-smallSquare252.jpg"},"articleInline":{"height":281,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-articleInline.jpg"},"watch308":{"height":348,"width":312,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-watch308.jpg"},"hpSmall":{"height":241,"width":163,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-hpSmall.jpg"},"slide":{"height":500,"width":339,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-slide.jpg"},"videoSixteenByNine96":{"height":54,"width":96,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-videoSixteenByNine96.jpg"},"master1050":{"height":1552,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-master1050.jpg"},"watch268":{"height":303,"width":272,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-watch268.jpg"},"master495":{"height":732,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-master495.jpg"},"largeWidescreen573":{"height":322,"width":573,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-largeWidescreen573.jpg"},"sfSpan":{"height":263,"width":395,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-sfSpan.jpg"},"jumbo":{"height":1024,"width":693,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-jumbo.jpg"},"videoSixteenByNine150":{"height":84,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-videoSixteenByNine150.jpg"},"videoSixteenByNine390":{"height":219,"width":390,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-videoSixteenByNine390.jpg"},"mediumSquare149":{"height":149,"width":149,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-mediumSquare149.jpg"},"largeWidescreen1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-largeWidescreen1050.jpg"},"videoSixteenByNine310":{"height":174,"width":310,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-videoSixteenByNine310.jpg"},"videoSixteenByNine1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-videoSixteenByNine1050.jpg"},"master180":{"height":266,"width":180,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-master180.jpg"},"smallSquare168":{"height":168,"width":168,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-smallSquare168.jpg"},"mediumThreeByTwo225":{"height":150,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-mediumThreeByTwo225.jpg"},"verticalTwoByThree735":{"height":1103,"width":735,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-verticalTwoByThree735.jpg"},"facebookJumbo":{"height":550,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-facebookJumbo.jpg"},"filmstrip":{"height":190,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-filmstrip.jpg"},"master315":{"height":466,"width":315,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-master315.jpg"},"miniMoth":{"height":70,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-miniMoth.jpg"},"videoSixteenByNine480":{"height":270,"width":480,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-videoSixteenByNine480.jpg"},"master675":{"height":998,"width":675,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-master675.jpg"},"tmagArticle":{"height":875,"width":592,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-tmagArticle.jpg"},"videoSixteenByNine768":{"height":432,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-videoSixteenByNine768.jpg"},"videoThumb":{"height":50,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-videoThumb.jpg"},"videoSixteenByNine600":{"height":338,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-videoSixteenByNine600.jpg"},"tmagSF":{"height":535,"width":362,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-tmagSF.jpg"},"videoSixteenByNineJumbo1600":{"height":900,"width":1600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-videoSixteenByNineJumbo1600.jpg"},"popup":{"height":500,"width":339,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-popup.jpg"},"mediumThreeByTwo252":{"height":168,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-mediumThreeByTwo252.jpg"},"mediumThreeByTwo210":{"height":140,"width":210,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-mediumThreeByTwo210.jpg"},"windowsTile336H":{"height":336,"width":694,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-windowsTile336H.jpg"},"mediumThreeByTwo378":{"height":252,"width":378,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-mediumThreeByTwo378.jpg"},"videoFifteenBySeven1305":{"height":609,"width":1305,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-videoFifteenBySeven1305.jpg"},"superJumbo":{"height":2048,"width":1386,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-superJumbo.jpg"},"videoLarge":{"height":507,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-6A1I\/20160908NYFWORAL-slide-6A1I-videoLarge.jpg"}},"url":"\/slideshow\/2016\/09\/08\/fashion\/an-evolution-on-display\/s\/20160908NYFWORAL-slide-6A1I.html","short_url":"http:\/\/nyti.ms\/2ckF6dm","approved_for_syndication":false},{"data_id":100000004631782,"slide_url":"20160908NYFWORAL-slide-O6PM","image_type":"photo","caption":{"full":"1964: La ropa para resort de Bill Blass inclu\u00eda este vestido recto rayado color blanco y azul marino de punto acolchado, con mangas de kimono y una cinta roja a la cintura.","short":null},"credit":"William N. Jacobellis\/NYP Holdings, Inc., v\u00eda Getty Images\r\n","image_crops":{"videoSixteenByNine495":{"height":278,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-videoSixteenByNine495.jpg"},"master768":{"height":967,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-master768.jpg"},"thumbWide":{"height":126,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-thumbWide.jpg"},"largeHorizontalJumbo":{"height":683,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-largeHorizontalJumbo.jpg"},"articleLarge":{"height":755,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-articleLarge.jpg"},"hpLarge":{"height":288,"width":511,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-hpLarge.jpg"},"mediumThreeByTwo440":{"height":293,"width":440,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-mediumThreeByTwo440.jpg"},"largeHorizontal375":{"height":250,"width":375,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-largeHorizontal375.jpg"},"thumbLarge":{"height":150,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-thumbLarge.jpg"},"mediumFlexible177":{"height":223,"width":177,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-mediumFlexible177.jpg"},"videoSixteenByNine540":{"height":304,"width":540,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-videoSixteenByNine540.jpg"},"square320":{"height":320,"width":320,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-square320.jpg"},"square640":{"height":640,"width":640,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-square640.jpg"},"moth":{"height":151,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-moth.jpg"},"videoSmall":{"height":281,"width":500,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-videoSmall.jpg"},"thumbStandard":{"height":75,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-thumbStandard.jpg"},"videoSixteenByNine225":{"height":126,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-videoSixteenByNine225.jpg"},"smallSquare252":{"height":252,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-smallSquare252.jpg"},"articleInline":{"height":239,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-articleInline.jpg"},"watch308":{"height":348,"width":312,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-watch308.jpg"},"hpSmall":{"height":205,"width":163,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-hpSmall.jpg"},"slide":{"height":500,"width":398,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-slide.jpg"},"videoSixteenByNine96":{"height":54,"width":96,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-videoSixteenByNine96.jpg"},"master1050":{"height":1322,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-master1050.jpg"},"watch268":{"height":303,"width":272,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-watch268.jpg"},"master495":{"height":623,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-master495.jpg"},"largeWidescreen573":{"height":323,"width":573,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-largeWidescreen573.jpg"},"sfSpan":{"height":263,"width":395,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-sfSpan.jpg"},"jumbo":{"height":1024,"width":814,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-jumbo.jpg"},"videoSixteenByNine150":{"height":84,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-videoSixteenByNine150.jpg"},"videoSixteenByNine390":{"height":219,"width":390,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-videoSixteenByNine390.jpg"},"mediumSquare149":{"height":149,"width":149,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-mediumSquare149.jpg"},"largeWidescreen1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-largeWidescreen1050.jpg"},"videoSixteenByNine310":{"height":174,"width":310,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-videoSixteenByNine310.jpg"},"videoSixteenByNine1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-videoSixteenByNine1050.jpg"},"master180":{"height":227,"width":180,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-master180.jpg"},"smallSquare168":{"height":168,"width":168,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-smallSquare168.jpg"},"mediumThreeByTwo225":{"height":150,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-mediumThreeByTwo225.jpg"},"verticalTwoByThree735":{"height":1103,"width":735,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-verticalTwoByThree735.jpg"},"facebookJumbo":{"height":550,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-facebookJumbo.jpg"},"filmstrip":{"height":190,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-filmstrip.jpg"},"miniMoth":{"height":70,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-miniMoth.jpg"},"master315":{"height":397,"width":315,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-master315.jpg"},"videoSixteenByNine480":{"height":270,"width":480,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-videoSixteenByNine480.jpg"},"master675":{"height":850,"width":675,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-master675.jpg"},"tmagArticle":{"height":745,"width":592,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-tmagArticle.jpg"},"videoSixteenByNine768":{"height":432,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-videoSixteenByNine768.jpg"},"videoThumb":{"height":50,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-videoThumb.jpg"},"videoSixteenByNine600":{"height":338,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-videoSixteenByNine600.jpg"},"tmagSF":{"height":456,"width":362,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-tmagSF.jpg"},"videoSixteenByNineJumbo1600":{"height":901,"width":1600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-videoSixteenByNineJumbo1600.jpg"},"popup":{"height":500,"width":398,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-popup.jpg"},"mediumThreeByTwo252":{"height":168,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-mediumThreeByTwo252.jpg"},"mediumThreeByTwo210":{"height":140,"width":210,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-mediumThreeByTwo210.jpg"},"windowsTile336H":{"height":336,"width":694,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-windowsTile336H.jpg"},"mediumThreeByTwo378":{"height":252,"width":378,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-mediumThreeByTwo378.jpg"},"videoFifteenBySeven1305":{"height":609,"width":1305,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-videoFifteenBySeven1305.jpg"},"superJumbo":{"height":2048,"width":1627,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-superJumbo.jpg"},"videoLarge":{"height":507,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-O6PM\/20160908NYFWORAL-slide-O6PM-videoLarge.jpg"}},"url":"\/slideshow\/2016\/09\/08\/fashion\/an-evolution-on-display\/s\/20160908NYFWORAL-slide-O6PM.html","short_url":"http:\/\/nyti.ms\/2ckH0KE","approved_for_syndication":true},{"data_id":100000004631781,"slide_url":"20160908NYFWORAL-slide-GK2N","image_type":"photo","caption":{"full":"1972: La apertura de los shows de moda de oto\u00f1o en la S\u00e9ptima Avenida inclu\u00eda la colecci\u00f3n estadounidense de Pierre Cardin.\r\n","short":null},"credit":"Bettmann Archive\r\n","image_crops":{"videoSixteenByNine495":{"height":278,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-videoSixteenByNine495.jpg"},"master768":{"height":1036,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-master768.jpg"},"thumbWide":{"height":126,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-thumbWide.jpg"},"largeHorizontalJumbo":{"height":682,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-largeHorizontalJumbo.jpg"},"articleLarge":{"height":809,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-articleLarge.jpg"},"hpLarge":{"height":287,"width":511,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-hpLarge.jpg"},"mediumThreeByTwo440":{"height":293,"width":440,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-mediumThreeByTwo440.jpg"},"largeHorizontal375":{"height":250,"width":375,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-largeHorizontal375.jpg"},"thumbLarge":{"height":150,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-thumbLarge.jpg"},"mediumFlexible177":{"height":246,"width":177,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-mediumFlexible177.jpg"},"videoSixteenByNine540":{"height":304,"width":540,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-videoSixteenByNine540.jpg"},"square320":{"height":320,"width":320,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-square320.jpg"},"square640":{"height":640,"width":640,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-square640.jpg"},"moth":{"height":151,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-moth.jpg"},"videoSmall":{"height":281,"width":500,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-videoSmall.jpg"},"thumbStandard":{"height":75,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-thumbStandard.jpg"},"videoSixteenByNine225":{"height":126,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-videoSixteenByNine225.jpg"},"articleInline":{"height":264,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-articleInline.jpg"},"smallSquare252":{"height":252,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-smallSquare252.jpg"},"watch308":{"height":348,"width":312,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-watch308.jpg"},"hpSmall":{"height":227,"width":163,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-hpSmall.jpg"},"slide":{"height":500,"width":371,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-slide.jpg"},"videoSixteenByNine96":{"height":54,"width":96,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-videoSixteenByNine96.jpg"},"master1050":{"height":1416,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-master1050.jpg"},"watch268":{"height":303,"width":272,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-watch268.jpg"},"master495":{"height":668,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-master495.jpg"},"largeWidescreen573":{"height":322,"width":573,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-largeWidescreen573.jpg"},"sfSpan":{"height":263,"width":395,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-sfSpan.jpg"},"jumbo":{"height":1024,"width":760,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-jumbo.jpg"},"videoSixteenByNine150":{"height":84,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-videoSixteenByNine150.jpg"},"videoSixteenByNine390":{"height":219,"width":390,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-videoSixteenByNine390.jpg"},"mediumSquare149":{"height":149,"width":149,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-mediumSquare149.jpg"},"largeWidescreen1050":{"height":590,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-largeWidescreen1050.jpg"},"videoSixteenByNine310":{"height":174,"width":310,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-videoSixteenByNine310.jpg"},"videoSixteenByNine1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-videoSixteenByNine1050.jpg"},"master180":{"height":243,"width":180,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-master180.jpg"},"smallSquare168":{"height":168,"width":168,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-smallSquare168.jpg"},"mediumThreeByTwo225":{"height":150,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-mediumThreeByTwo225.jpg"},"verticalTwoByThree735":{"height":1103,"width":735,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-verticalTwoByThree735.jpg"},"facebookJumbo":{"height":550,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-facebookJumbo.jpg"},"filmstrip":{"height":190,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-filmstrip.jpg"},"miniMoth":{"height":70,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-miniMoth.jpg"},"master315":{"height":425,"width":315,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-master315.jpg"},"videoSixteenByNine480":{"height":270,"width":480,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-videoSixteenByNine480.jpg"},"master675":{"height":911,"width":675,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-master675.jpg"},"tmagArticle":{"height":799,"width":592,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-tmagArticle.jpg"},"videoSixteenByNine768":{"height":432,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-videoSixteenByNine768.jpg"},"videoThumb":{"height":50,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-videoThumb.jpg"},"videoSixteenByNine600":{"height":338,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-videoSixteenByNine600.jpg"},"tmagSF":{"height":488,"width":362,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-tmagSF.jpg"},"videoSixteenByNineJumbo1600":{"height":899,"width":1600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-videoSixteenByNineJumbo1600.jpg"},"popup":{"height":500,"width":371,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-popup.jpg"},"mediumThreeByTwo252":{"height":168,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-mediumThreeByTwo252.jpg"},"mediumThreeByTwo210":{"height":140,"width":210,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-mediumThreeByTwo210.jpg"},"windowsTile336H":{"height":336,"width":694,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-windowsTile336H.jpg"},"mediumThreeByTwo378":{"height":252,"width":378,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-mediumThreeByTwo378.jpg"},"videoFifteenBySeven1305":{"height":609,"width":1305,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-videoFifteenBySeven1305.jpg"},"superJumbo":{"height":2048,"width":1519,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-superJumbo.jpg"},"videoLarge":{"height":507,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-GK2N\/20160908NYFWORAL-slide-GK2N-videoLarge.jpg"}},"url":"\/slideshow\/2016\/09\/08\/fashion\/an-evolution-on-display\/s\/20160908NYFWORAL-slide-GK2N.html","short_url":"http:\/\/nyti.ms\/2cthZdR","approved_for_syndication":false},{"data_id":100000004631780,"slide_url":"20160908NYFWORAL-slide-QVHO","image_type":"photo","caption":{"full":"1980: El dise\u00f1ador Ralph Lauren conversa con la modelo de pruebas Lynn Yeager, en su estudio de la S\u00e9ptima Avenida.","short":null},"credit":"Marilylnn K. Yee\/The New York Times\r\n","image_crops":{"master768":{"height":1167,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-master768.jpg"},"videoSixteenByNine495":{"height":278,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-videoSixteenByNine495.jpg"},"thumbWide":{"height":126,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-thumbWide.jpg"},"largeHorizontalJumbo":{"height":683,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-largeHorizontalJumbo.jpg"},"articleLarge":{"height":912,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-articleLarge.jpg"},"hpLarge":{"height":287,"width":511,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-hpLarge.jpg"},"mediumThreeByTwo440":{"height":293,"width":440,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-mediumThreeByTwo440.jpg"},"largeHorizontal375":{"height":250,"width":375,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-largeHorizontal375.jpg"},"thumbLarge":{"height":150,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-thumbLarge.jpg"},"mediumFlexible177":{"height":269,"width":177,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-mediumFlexible177.jpg"},"videoSixteenByNine540":{"height":304,"width":540,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-videoSixteenByNine540.jpg"},"square320":{"height":320,"width":320,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-square320.jpg"},"square640":{"height":640,"width":640,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-square640.jpg"},"moth":{"height":151,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-moth.jpg"},"videoSmall":{"height":281,"width":500,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-videoSmall.jpg"},"thumbStandard":{"height":75,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-thumbStandard.jpg"},"videoSixteenByNine225":{"height":126,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-videoSixteenByNine225.jpg"},"smallSquare252":{"height":252,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-smallSquare252.jpg"},"articleInline":{"height":289,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-articleInline.jpg"},"watch308":{"height":348,"width":312,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-watch308.jpg"},"hpSmall":{"height":248,"width":163,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-hpSmall.jpg"},"slide":{"height":500,"width":329,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-slide.jpg"},"videoSixteenByNine96":{"height":54,"width":96,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-videoSixteenByNine96.jpg"},"master1050":{"height":1596,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-master1050.jpg"},"watch268":{"height":303,"width":272,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-watch268.jpg"},"master495":{"height":752,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-master495.jpg"},"largeWidescreen573":{"height":322,"width":573,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-largeWidescreen573.jpg"},"sfSpan":{"height":263,"width":395,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-sfSpan.jpg"},"jumbo":{"height":1024,"width":674,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-jumbo.jpg"},"videoSixteenByNine150":{"height":84,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-videoSixteenByNine150.jpg"},"videoSixteenByNine390":{"height":219,"width":390,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-videoSixteenByNine390.jpg"},"mediumSquare149":{"height":149,"width":149,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-mediumSquare149.jpg"},"largeWidescreen1050":{"height":590,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-largeWidescreen1050.jpg"},"videoSixteenByNine310":{"height":174,"width":310,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-videoSixteenByNine310.jpg"},"videoSixteenByNine1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-videoSixteenByNine1050.jpg"},"master180":{"height":274,"width":180,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-master180.jpg"},"smallSquare168":{"height":168,"width":168,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-smallSquare168.jpg"},"mediumThreeByTwo225":{"height":150,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-mediumThreeByTwo225.jpg"},"verticalTwoByThree735":{"height":1103,"width":735,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-verticalTwoByThree735.jpg"},"facebookJumbo":{"height":549,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-facebookJumbo.jpg"},"filmstrip":{"height":190,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-filmstrip.jpg"},"master315":{"height":479,"width":315,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-master315.jpg"},"miniMoth":{"height":70,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-miniMoth.jpg"},"videoSixteenByNine480":{"height":270,"width":480,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-videoSixteenByNine480.jpg"},"master675":{"height":1026,"width":675,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-master675.jpg"},"tmagArticle":{"height":900,"width":592,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-tmagArticle.jpg"},"videoSixteenByNine768":{"height":432,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-videoSixteenByNine768.jpg"},"videoThumb":{"height":50,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-videoThumb.jpg"},"videoSixteenByNine600":{"height":338,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-videoSixteenByNine600.jpg"},"tmagSF":{"height":550,"width":362,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-tmagSF.jpg"},"videoSixteenByNineJumbo1600":{"height":900,"width":1600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-videoSixteenByNineJumbo1600.jpg"},"popup":{"height":500,"width":329,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-popup.jpg"},"mediumThreeByTwo252":{"height":168,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-mediumThreeByTwo252.jpg"},"mediumThreeByTwo210":{"height":140,"width":210,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-mediumThreeByTwo210.jpg"},"windowsTile336H":{"height":336,"width":694,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-windowsTile336H.jpg"},"mediumThreeByTwo378":{"height":252,"width":378,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-mediumThreeByTwo378.jpg"},"videoFifteenBySeven1305":{"height":609,"width":1305,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-videoFifteenBySeven1305.jpg"},"superJumbo":{"height":2048,"width":1348,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-superJumbo.jpg"},"videoLarge":{"height":507,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-QVHO\/20160908NYFWORAL-slide-QVHO-videoLarge.jpg"}},"url":"\/slideshow\/2016\/09\/08\/fashion\/an-evolution-on-display\/s\/20160908NYFWORAL-slide-QVHO.html","short_url":"http:\/\/nyti.ms\/2ckFHvg","approved_for_syndication":true},{"data_id":100000004631785,"slide_url":"20160908NYFWORAL-slide-8WEB","image_type":"photo","caption":{"full":"1992: Los delegados que viajaron a Nueva York para asistir a la Convenci\u00f3n Dem\u00f3crata en julio tambi\u00e9n asistieron a un show de moda en Sheep's Meadow en Central Park.","short":null},"credit":"Neil Schneider\/NYP Holdings, Inc. v\u00eda Getty Images\r\n","image_crops":{"videoSixteenByNine495":{"height":278,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-videoSixteenByNine495.jpg"},"master768":{"height":565,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-master768.jpg"},"thumbWide":{"height":126,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-thumbWide.jpg"},"largeHorizontalJumbo":{"height":683,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-largeHorizontalJumbo.jpg"},"articleLarge":{"height":441,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-articleLarge.jpg"},"hpLarge":{"height":288,"width":511,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-hpLarge.jpg"},"mediumThreeByTwo440":{"height":293,"width":440,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-mediumThreeByTwo440.jpg"},"largeHorizontal375":{"height":250,"width":375,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-largeHorizontal375.jpg"},"thumbLarge":{"height":150,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-thumbLarge.jpg"},"mediumFlexible177":{"height":130,"width":177,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-mediumFlexible177.jpg"},"videoSixteenByNine540":{"height":304,"width":540,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-videoSixteenByNine540.jpg"},"square320":{"height":320,"width":320,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-square320.jpg"},"square640":{"height":640,"width":640,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-square640.jpg"},"moth":{"height":151,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-moth.jpg"},"videoSmall":{"height":281,"width":500,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-videoSmall.jpg"},"thumbStandard":{"height":75,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-thumbStandard.jpg"},"videoSixteenByNine225":{"height":126,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-videoSixteenByNine225.jpg"},"articleInline":{"height":140,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-articleInline.jpg"},"smallSquare252":{"height":252,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-smallSquare252.jpg"},"watch308":{"height":348,"width":312,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-watch308.jpg"},"hpSmall":{"height":120,"width":163,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-hpSmall.jpg"},"videoFifteenBySeven2610":{"height":1218,"width":2610,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-videoFifteenBySeven2610.jpg"},"slide":{"height":441,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-slide.jpg"},"videoSixteenByNine96":{"height":54,"width":96,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-videoSixteenByNine96.jpg"},"master1050":{"height":772,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-master1050.jpg"},"watch268":{"height":304,"width":272,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-watch268.jpg"},"master495":{"height":364,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-master495.jpg"},"largeWidescreen573":{"height":323,"width":573,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-largeWidescreen573.jpg"},"sfSpan":{"height":264,"width":395,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-sfSpan.jpg"},"jumbo":{"height":753,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-jumbo.jpg"},"videoSixteenByNine150":{"height":84,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-videoSixteenByNine150.jpg"},"videoSixteenByNine390":{"height":219,"width":390,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-videoSixteenByNine390.jpg"},"mediumSquare149":{"height":149,"width":149,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-mediumSquare149.jpg"},"largeWidescreen1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-largeWidescreen1050.jpg"},"videoSixteenByNine310":{"height":174,"width":310,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-videoSixteenByNine310.jpg"},"videoSixteenByNine1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-videoSixteenByNine1050.jpg"},"master180":{"height":132,"width":180,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-master180.jpg"},"smallSquare168":{"height":168,"width":168,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-smallSquare168.jpg"},"mediumThreeByTwo225":{"height":150,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-mediumThreeByTwo225.jpg"},"verticalTwoByThree735":{"height":1104,"width":735,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-verticalTwoByThree735.jpg"},"facebookJumbo":{"height":550,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-facebookJumbo.jpg"},"filmstrip":{"height":190,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-filmstrip.jpg"},"miniMoth":{"height":70,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-miniMoth.jpg"},"master315":{"height":232,"width":315,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-master315.jpg"},"videoSixteenByNine480":{"height":270,"width":480,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-videoSixteenByNine480.jpg"},"master675":{"height":496,"width":675,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-master675.jpg"},"tmagArticle":{"height":435,"width":592,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-tmagArticle.jpg"},"videoSixteenByNine768":{"height":432,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-videoSixteenByNine768.jpg"},"videoThumb":{"height":50,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-videoThumb.jpg"},"videoSixteenByNine600":{"height":338,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-videoSixteenByNine600.jpg"},"tmagSF":{"height":266,"width":362,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-tmagSF.jpg"},"videoSixteenByNineJumbo1600":{"height":901,"width":1600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-videoSixteenByNineJumbo1600.jpg"},"popup":{"height":478,"width":650,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-popup.jpg"},"mediumThreeByTwo252":{"height":168,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-mediumThreeByTwo252.jpg"},"mediumThreeByTwo210":{"height":140,"width":210,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-mediumThreeByTwo210.jpg"},"windowsTile336H":{"height":336,"width":694,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-windowsTile336H.jpg"},"mediumThreeByTwo378":{"height":252,"width":378,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-mediumThreeByTwo378.jpg"},"videoFifteenBySeven1305":{"height":609,"width":1305,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-videoFifteenBySeven1305.jpg"},"superJumbo":{"height":1506,"width":2048,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-superJumbo.jpg"},"videoLarge":{"height":507,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-8WEB\/20160908NYFWORAL-slide-8WEB-videoLarge.jpg"}},"url":"\/slideshow\/2016\/09\/08\/fashion\/an-evolution-on-display\/s\/20160908NYFWORAL-slide-8WEB.html","short_url":"http:\/\/nyti.ms\/2ctiK6l","approved_for_syndication":true},{"data_id":100000004631778,"slide_url":"20160908NYFWORAL-slide-THQC","image_type":"photo","caption":{"full":"2009: Una modelo llega a la pasarela en el show de Jason Wu en Exit Art.","short":null},"credit":"Damon Winter\/The New York Times\r\n","image_crops":{"master768":{"height":512,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-master768.jpg"},"videoSixteenByNine495":{"height":278,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-videoSixteenByNine495.jpg"},"thumbWide":{"height":126,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-thumbWide.jpg"},"largeHorizontalJumbo":{"height":683,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-largeHorizontalJumbo.jpg"},"articleLarge":{"height":400,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-articleLarge.jpg"},"hpLarge":{"height":288,"width":511,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-hpLarge.jpg"},"mediumThreeByTwo440":{"height":293,"width":440,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-mediumThreeByTwo440.jpg"},"largeHorizontal375":{"height":250,"width":375,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-largeHorizontal375.jpg"},"thumbLarge":{"height":150,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-thumbLarge.jpg"},"mediumFlexible177":{"height":118,"width":177,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-mediumFlexible177.jpg"},"videoSixteenByNine540":{"height":304,"width":540,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-videoSixteenByNine540.jpg"},"square320":{"height":320,"width":320,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-square320.jpg"},"square640":{"height":640,"width":640,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-square640.jpg"},"moth":{"height":151,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-moth.jpg"},"videoSmall":{"height":281,"width":500,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-videoSmall.jpg"},"thumbStandard":{"height":75,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-thumbStandard.jpg"},"videoSixteenByNine225":{"height":126,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-videoSixteenByNine225.jpg"},"smallSquare252":{"height":252,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-smallSquare252.jpg"},"articleInline":{"height":127,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-articleInline.jpg"},"watch308":{"height":348,"width":312,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-watch308.jpg"},"hpSmall":{"height":109,"width":163,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-hpSmall.jpg"},"videoFifteenBySeven2610":{"height":1218,"width":2610,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-videoFifteenBySeven2610.jpg"},"slide":{"height":400,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-slide.jpg"},"videoSixteenByNine96":{"height":54,"width":96,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-videoSixteenByNine96.jpg"},"master1050":{"height":700,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-master1050.jpg"},"watch268":{"height":303,"width":272,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-watch268.jpg"},"master495":{"height":330,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-master495.jpg"},"largeWidescreen573":{"height":322,"width":573,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-largeWidescreen573.jpg"},"sfSpan":{"height":263,"width":395,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-sfSpan.jpg"},"jumbo":{"height":683,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-jumbo.jpg"},"videoSixteenByNine150":{"height":84,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-videoSixteenByNine150.jpg"},"videoSixteenByNine390":{"height":219,"width":390,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-videoSixteenByNine390.jpg"},"mediumSquare149":{"height":149,"width":149,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-mediumSquare149.jpg"},"largeWidescreen1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-largeWidescreen1050.jpg"},"videoSixteenByNine310":{"height":174,"width":310,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-videoSixteenByNine310.jpg"},"videoSixteenByNine1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-videoSixteenByNine1050.jpg"},"master180":{"height":120,"width":180,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-master180.jpg"},"smallSquare168":{"height":168,"width":168,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-smallSquare168.jpg"},"mediumThreeByTwo225":{"height":150,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-mediumThreeByTwo225.jpg"},"verticalTwoByThree735":{"height":1102,"width":735,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-verticalTwoByThree735.jpg"},"facebookJumbo":{"height":550,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-facebookJumbo.jpg"},"filmstrip":{"height":190,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-filmstrip.jpg"},"master315":{"height":210,"width":315,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-master315.jpg"},"miniMoth":{"height":70,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-miniMoth.jpg"},"videoSixteenByNine480":{"height":270,"width":480,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-videoSixteenByNine480.jpg"},"master675":{"height":450,"width":675,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-master675.jpg"},"tmagArticle":{"height":395,"width":592,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-tmagArticle.jpg"},"videoSixteenByNine768":{"height":432,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-videoSixteenByNine768.jpg"},"videoThumb":{"height":50,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-videoThumb.jpg"},"videoSixteenByNine600":{"height":338,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-videoSixteenByNine600.jpg"},"videoSixteenByNine3000":{"height":1688,"width":3000,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-videoSixteenByNine3000.jpg"},"tmagSF":{"height":241,"width":362,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-tmagSF.jpg"},"videoSixteenByNineJumbo1600":{"height":900,"width":1600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-videoSixteenByNineJumbo1600.jpg"},"popup":{"height":433,"width":650,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-popup.jpg"},"mediumThreeByTwo252":{"height":168,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-mediumThreeByTwo252.jpg"},"mediumThreeByTwo210":{"height":140,"width":210,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-mediumThreeByTwo210.jpg"},"windowsTile336H":{"height":336,"width":694,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-windowsTile336H.jpg"},"mediumThreeByTwo378":{"height":252,"width":378,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-mediumThreeByTwo378.jpg"},"videoFifteenBySeven1305":{"height":609,"width":1305,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-videoFifteenBySeven1305.jpg"},"superJumbo":{"height":1365,"width":2048,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-superJumbo.jpg"},"videoLarge":{"height":507,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-THQC\/20160908NYFWORAL-slide-THQC-videoLarge.jpg"}},"url":"\/slideshow\/2016\/09\/08\/fashion\/an-evolution-on-display\/s\/20160908NYFWORAL-slide-THQC.html","short_url":"http:\/\/nyti.ms\/2ckFl7Y","approved_for_syndication":true},{"data_id":100000004631777,"slide_url":"20160908NYFWORAL-slide-LUXT","image_type":"photo","caption":{"full":"2015: Entre bastidores en el show de primavera 2016 de Thom Browne\r\n","short":null},"credit":"Casey Kelbaugh para The New York Times\r\n","image_crops":{"master768":{"height":513,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-master768.jpg"},"videoSixteenByNine495":{"height":278,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-videoSixteenByNine495.jpg"},"thumbWide":{"height":126,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-thumbWide.jpg"},"largeHorizontalJumbo":{"height":683,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-largeHorizontalJumbo.jpg"},"articleLarge":{"height":400,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-articleLarge.jpg"},"hpLarge":{"height":288,"width":511,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-hpLarge.jpg"},"mediumThreeByTwo440":{"height":293,"width":440,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-mediumThreeByTwo440.jpg"},"largeHorizontal375":{"height":250,"width":375,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-largeHorizontal375.jpg"},"thumbLarge":{"height":150,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-thumbLarge.jpg"},"mediumFlexible177":{"height":118,"width":177,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-mediumFlexible177.jpg"},"videoSixteenByNine540":{"height":304,"width":540,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-videoSixteenByNine540.jpg"},"square320":{"height":320,"width":320,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-square320.jpg"},"square640":{"height":640,"width":640,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-square640.jpg"},"moth":{"height":151,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-moth.jpg"},"videoSmall":{"height":281,"width":500,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-videoSmall.jpg"},"thumbStandard":{"height":75,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-thumbStandard.jpg"},"videoSixteenByNine225":{"height":126,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-videoSixteenByNine225.jpg"},"smallSquare252":{"height":252,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-smallSquare252.jpg"},"articleInline":{"height":127,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-articleInline.jpg"},"watch308":{"height":348,"width":312,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-watch308.jpg"},"hpSmall":{"height":109,"width":163,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-hpSmall.jpg"},"videoFifteenBySeven2610":{"height":1218,"width":2610,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-videoFifteenBySeven2610.jpg"},"slide":{"height":400,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-slide.jpg"},"videoSixteenByNine96":{"height":54,"width":96,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-videoSixteenByNine96.jpg"},"master1050":{"height":701,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-master1050.jpg"},"watch268":{"height":304,"width":272,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-watch268.jpg"},"master495":{"height":330,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-master495.jpg"},"largeWidescreen573":{"height":322,"width":573,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-largeWidescreen573.jpg"},"sfSpan":{"height":263,"width":395,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-sfSpan.jpg"},"jumbo":{"height":683,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-jumbo.jpg"},"videoSixteenByNine150":{"height":84,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-videoSixteenByNine150.jpg"},"videoSixteenByNine390":{"height":219,"width":390,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-videoSixteenByNine390.jpg"},"mediumSquare149":{"height":149,"width":149,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-mediumSquare149.jpg"},"largeWidescreen1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-largeWidescreen1050.jpg"},"videoSixteenByNine310":{"height":174,"width":310,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-videoSixteenByNine310.jpg"},"videoSixteenByNine1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-videoSixteenByNine1050.jpg"},"master180":{"height":120,"width":180,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-master180.jpg"},"smallSquare168":{"height":168,"width":168,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-smallSquare168.jpg"},"mediumThreeByTwo225":{"height":150,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-mediumThreeByTwo225.jpg"},"verticalTwoByThree735":{"height":1103,"width":735,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-verticalTwoByThree735.jpg"},"facebookJumbo":{"height":550,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-facebookJumbo.jpg"},"filmstrip":{"height":190,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-filmstrip.jpg"},"master315":{"height":210,"width":315,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-master315.jpg"},"miniMoth":{"height":70,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-miniMoth.jpg"},"videoSixteenByNine480":{"height":270,"width":480,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-videoSixteenByNine480.jpg"},"master675":{"height":450,"width":675,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-master675.jpg"},"tmagArticle":{"height":395,"width":592,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-tmagArticle.jpg"},"videoSixteenByNine768":{"height":432,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-videoSixteenByNine768.jpg"},"videoThumb":{"height":50,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-videoThumb.jpg"},"videoSixteenByNine600":{"height":338,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-videoSixteenByNine600.jpg"},"videoSixteenByNine3000":{"height":1688,"width":3000,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-videoSixteenByNine3000.jpg"},"tmagSF":{"height":242,"width":362,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-tmagSF.jpg"},"videoSixteenByNineJumbo1600":{"height":900,"width":1600,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-videoSixteenByNineJumbo1600.jpg"},"popup":{"height":434,"width":650,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-popup.jpg"},"mediumThreeByTwo252":{"height":168,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-mediumThreeByTwo252.jpg"},"mediumThreeByTwo210":{"height":140,"width":210,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-mediumThreeByTwo210.jpg"},"windowsTile336H":{"height":336,"width":694,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-windowsTile336H.jpg"},"mediumThreeByTwo378":{"height":252,"width":378,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-mediumThreeByTwo378.jpg"},"videoFifteenBySeven1305":{"height":609,"width":1305,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-videoFifteenBySeven1305.jpg"},"superJumbo":{"height":1367,"width":2048,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-superJumbo.jpg"},"videoLarge":{"height":507,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/09\/08\/fashion\/20160908NYFWORAL-slide-LUXT\/20160908NYFWORAL-slide-LUXT-videoLarge.jpg"}},"url":"\/slideshow\/2016\/09\/08\/fashion\/an-evolution-on-display\/s\/20160908NYFWORAL-slide-LUXT.html","short_url":"http:\/\/nyti.ms\/2cthxMu","approved_for_syndication":true}]},"related_assets":[]}</script>
+	<a href="https://www.nytimes.com/slideshow/2016/09/08/fashion/an-evolution-on-display.html">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-43">Continue reading the main story</a>	<span class="visually-hidden">Galería de Fotos</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/08/fashion/20160908NYFWORAL-slide-O6PM/20160908NYFWORAL-slide-O6PM-master315.jpg" itemprop="url" itemid="https://static01.nyt.com/images/2016/09/08/fashion/20160908NYFWORAL-slide-O6PM/20160908NYFWORAL-slide-O6PM-master315.jpg"/>
+
+		<div class="media-action-overlay">
+			<i class="icon sprite-icon"></i>
+			<div class="media-meta">
+				<h5 class="kicker"><span class="kicker-label">Galería de Fotos</span><span class="pipe">|</span><span class="counter">8 fotos</span></h5>
+				<h4 class="headline">La evolución de las pasarelas de Nueva York</h4>
+			</div>
+		</div><!-- close media-action-overlay -->
+
+	</div><!-- close image -->
+
+	<figcaption class="caption" itemprop="description">
+		<h4 class="headline">La evolución de las pasarelas de Nueva York</h4>
+		<p class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>William N. Jacobellis/NYP Holdings, Inc., vía Getty Images
+
+		</p>
+	</figcaption>
+
+	<meta itemprop="identifier" content="https://static01.nyt.com/images/2016/09/08/fashion/20160908NYFWORAL-slide-O6PM/20160908NYFWORAL-slide-O6PM-master315.jpg" />
+	<meta itemprop="height" content="397" />
+	<meta itemprop="width" content="315" />
+
+	</a>
+</figure>
+
+<h4 class="story-subheading story-content">Amigos célebres</h4>
+
+<p class="story-body-text story-content" data-para-count="8" data-total-count="6940" id="story-continues-44" tabindex="-1"><strong>ANNA SUI</strong></p>
+<p class="story-body-text story-content" data-para-count="469" data-total-count="7409" id="story-continues-45" tabindex="-1">Era febrero de 1991. Era el momento de las supermodelos. Naomi y Linda, y todos mis amigos me ayudaron. El fotógrafo Steven [Meisel] y el estilista Paul [Cavaco] me impulsaron durante todo el proceso. En el show, André [Leon Talley] estuvo hablando todo el tiempo; hacía comentarios acerca de los atuendos y las chicas. Todo pasó muy rápido. Lo recuerdo como si fuera un sueño. Al final, recuerdo haber hecho contacto visual con Paul y los dos empezamos a llorar.</p>
+<p class="story-body-text story-content" data-para-count="17" data-total-count="7426" id="story-continues-46" tabindex="-1"><strong>THAKOON PANICHGUL</strong></p>
+<p class="story-body-text story-content" data-para-count="434" data-total-count="7860" id="story-continues-47" tabindex="-1">Para mi primera presentación, la colección de primavera 2005, llegamos a un estudio fotográfico en la Calle 18 en West Chelsea. El lugar era pequeño y el horario no era ideal. Me preocupaba que nadie llegara. Pero Julie Gilhart, quien era el director de moda en Barneys, había estado diciéndoles a todos: “Tienen que ver el trabajo de Thakoon”, y Sally Singer escribió unos párrafos en Vogue. Sí captamos mucha atención.</p>
+<p class="story-body-text story-content" data-para-count="16" data-total-count="7876" id="story-continues-48" tabindex="-1"><strong>CAROLINA HERRERA</strong></p>
+<p class="story-body-text story-content" data-para-count="216" data-total-count="8092" id="story-continues-49" tabindex="-1">Bill Blass me ayudó a encontrar modelos grandiosas: Iman, Alva Chinn, Dianne deWitt. El show fue muy glamuroso, pero en los ochenta todo se trataba de mujeres elegantes que no temían que las consideraran elegantes.</p>
+<p class="story-body-text story-content" data-para-count="8" data-total-count="8100" id="story-continues-50" tabindex="-1"><strong>JASON WU</strong></p>
+<p class="story-body-text story-content" data-para-count="486" data-total-count="8586" id="story-continues-51" tabindex="-1">En septiembre de 2008, presentamos nuestra colección de primavera. Estuvimos en el exterior de una galería llamada Exit Art. Fue la primera vez que Anna Wintour vino al show. El equipo de Michelle Obama me contactó. Eso fue antes de que se convirtiera en primera dama. Le hice tres piezas y las usó todas. Una era un vestido de algodón y lino bordado con pequeños puntos negros. Lo usó en el Día de Gracias durante una entrevista con Barbara Walters. Eso me pareció grandioso.</p>
+<p class="story-body-text story-content" data-para-count="12" data-total-count="8598" id="story-continues-52" tabindex="-1"><strong>RALPH LAUREN</strong></p>
+<p class="story-body-text story-content" data-para-count="441" data-total-count="9039" id="story-continues-53" tabindex="-1">Recuerdo que Bill Blass, Oscar de la Renta y John Weitz me invitaron a principios de los setenta a un show con ellos en el evento de moda de Eleanor Lambert para la prensa que no era de la ciudad. Yo estaba haciendo ropa de hombre y creo que comenzaba a hacer ropa de mujer. Era muy joven. Mi show fue un éxito. Después, Bill volteó a ver a Oscar y le dijo: “Si quieres que te noten, jamás invites perros ni niños”. Yo era el niño.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/moda/" rel="tag">moda</a>, <a href="https://www.nytimes.com/es/tag/semana-de-la-moda-de-nueva-york/" rel="tag">Semana de la Moda de Nueva York</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/09/10/carolina-herrera-michael-kors-moda-new-york-fashion-week/"
+				data-title="Cultura: New York Fashion Week: una historia oral contada por sus protagonistas"
+				data-author="POR RUTH LA FERLA"
+				data-media=""
+				data-description="Algunos de los más famosos diseñadores, como Diane von Furstenberg, Alexander Wang y Ralph Lauren, recuerdan su debut y otros momentos cruciales de sus carreras en las pasarelas de Nueva York."
+				data-publish-date="10 de septiembre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/06/26/muere-bill-cunningham-una-leyenda-de-la-fotografia-de-moda/">
+					<div class="story-body">
+						<h3 class="kicker">Fotografía</h3>
+
+						<h2 class="headline">
+							<span class="title">Muere Bill Cunningham, una leyenda de la fotografía de moda</span>
+							<time class="dateline">26 de junio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/06/26/nyregion/26CUNNINGHAM/26CUNNINGHAM-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/27/dos-disenadores-estan-cambiando-la-esencia-de-la-moda/">
+					<div class="story-body">
+						<h3 class="kicker">Moda</h3>
+
+						<h2 class="headline">
+							<span class="title">Dos diseñadores están cambiando la esencia de la moda</span>
+							<time class="dateline">27 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/11/t-magazine/gucci-vetements-slide-BW4U/gucci-vetements-slide-BW4U-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/08/sin-bolas-no-hay-torneo-asi-se-fabrican-las-pelotas-del-abierto-de-tenis-de-ee-uu/">
+					<div class="story-body">
+						<h3 class="kicker">Deportes</h3>
+
+						<h2 class="headline">
+							<span class="title">Sin pelotas no hay U. S. Open</span>
+							<time class="dateline">8 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/08/28/sports/00WILSON1/00WILSON1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/09/una-epidemia-de-soledad/">
+					<div class="story-body">
+						<h3 class="kicker">Salud</h3>
+
+						<h2 class="headline">
+							<span class="title">Una epidemia de soledad</span>
+							<time class="dateline">9 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/09/06/science/06Loneliness-Cover/06Loneliness-Cover-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":1217,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

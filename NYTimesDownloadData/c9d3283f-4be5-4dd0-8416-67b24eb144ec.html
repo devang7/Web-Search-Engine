@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004274572"/>
+<meta name="hdl" content="Boko Haram convierte a sus prisioneras en terroristas suicidas" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20160414" />
+<meta name="utime" content="20160414093001" />
+<meta name="ptime" content="20160414093001" />
+<meta name="DISPLAYDATE" content="Apr. 14, 2016" />
+<meta name="dat" content="Apr. 14, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="boko-haram-convierte-a-sus-prisioneras-en-terroristas-suicidas" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/04/14/boko-haram-convierte-a-sus-prisioneras-en-terroristas-suicidas/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Boko Haram convierte a sus prisioneras en terroristas suicidas" />
+<meta property="og:description" content="A dos años del secuestro de 300 niñas en Nigeria por Boko Haram, uno de los mayores misterios de esta agrupación ha sido la capacidad que tiene para convertir a sus víctimas en asesinas.
+" />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/03/19/world/boko-web/boko-web-videoSixteenByNine768-v2.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-04-14" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/04/14/boko-haram-convierte-a-sus-prisioneras-en-terroristas-suicidas/" />
+<meta property="twitter:title" content="Boko Haram convierte a sus prisioneras en terroristas suicidas" />
+<meta property="twitter:description" content="A dos años del secuestro de 300 niñas en Nigeria por Boko Haram, uno de los mayores misterios de esta agrupación ha sido la capacidad que tiene para convertir a sus víctimas en asesinas.
+" />
+<meta name="author" content="Dionne Searcey" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Dionne Searcey" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="africa" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="africa" />
+<meta name="id" content="100000004274572"/>
+<meta name="wordCount" content="1487"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/04/14/boko-haram-convierte-a-sus-prisioneras-en-terroristas-suicidas/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=04&amp;day=14&amp;name=boko-haram-convierte-a-sus-prisioneras-en-terroristas-suicidas">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=9543">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/04\/14\/boko-haram-convierte-a-sus-prisioneras-en-terroristas-suicidas\/"},"headline":"Boko Haram convierte a sus prisioneras en terroristas suicidas","datePublished":"2016-04-14T09:30:01+00:00","dateModified":"2016-04-14T09:34:01+00:00","author":{"@type":"Person","name":"Paula Duran"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/03\/19\/world\/boko-web\/boko-web-videoSixteenByNine768-v2.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"A dos a\u00f1os del secuestro de 300 ni\u00f1as en Nigeria por Boko Haram, uno de los mayores misterios de esta agrupaci\u00f3n ha sido la capacidad que tiene para convertir a sus v\u00edctimas en asesinas.\r\n"}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/04/14/boko-haram-convierte-a-sus-prisioneras-en-terroristas-suicidas/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/04/08/world/africa/boko-haram-suicide-bombers.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/africa" />
+<title>Boko Haram convierte a sus prisioneras en terroristas suicidas &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/04/08/world/africa/boko-haram-suicide-bombers.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/04/14/boko-haram-convierte-a-sus-prisioneras-en-terroristas-suicidas/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-9543 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Boko Haram convierte a sus prisioneras en terroristas suicidas
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/04/14/boko-haram-convierte-a-sus-prisioneras-en-terroristas-suicidas/"
+					data-title="Noticias: Boko Haram convierte a sus prisioneras en terroristas suicidas"
+					data-author="POR DIONNE SEARCEY"
+					data-media=""
+					data-description="A dos años del secuestro de 300 niñas en Nigeria por Boko Haram, uno de los mayores misterios de esta agrupación ha sido la capacidad que tiene para convertir a sus víctimas en asesinas.
+"
+					data-publish-date="14 de abril de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/africa/">África</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Boko Haram convierte a sus prisioneras en terroristas suicidas</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Dionne Searcey</span>
+</span>
+
+					<time class="dateline" datetime="2016-04-14">14 de abril de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/04/14/boko-haram-convierte-a-sus-prisioneras-en-terroristas-suicidas/"
+							data-title="Noticias: Boko Haram convierte a sus prisioneras en terroristas suicidas"
+							data-author="POR DIONNE SEARCEY"
+							data-media=""
+							data-description="A dos años del secuestro de 300 niñas en Nigeria por Boko Haram, uno de los mayores misterios de esta agrupación ha sido la capacidad que tiene para convertir a sus víctimas en asesinas.
+"
+							data-publish-date="14 de abril de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004279240" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/03/19/world/boko-web/boko-web-master1050-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/03/19/world/boko-web/boko-web-master1050-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/03/19/world/boko-web/boko-web-superJumbo-v2.jpg" data-mediaviewer-caption="Rahila Amos, una abuela nigeriana, dijo que había sido capturada por Boko Haram y obligada a tomar clases sobre bombardeos suicidas." data-mediaviewer-credit="Tyler Hicks/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/03/19/world/boko-web/boko-web-master1050-v2.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Rahila Amos, una abuela nigeriana, dijo que había sido capturada por Boko Haram y obligada a tomar clases sobre bombardeos suicidas.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tyler Hicks/The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/04/08/world/africa/boko-haram-suicide-bombers.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="133" data-total-count="133" id="story-continues-2" tabindex="-1">CAMPO DE REFUGIADOS MINAWAO, Camerún — Sostén la bomba en tu axila para que no se mueva, enseñaban a las mujeres y a las niñas.</p>
+<p class="story-body-text story-content" data-para-count="80" data-total-count="213" id="story-continues-3" tabindex="-1">Corten la cabeza de su enemigo por detrás, para que la resistencia sea mínima.</p>
+<p class="story-body-text story-content" data-para-count="231" data-total-count="444" id="story-continues-4" tabindex="-1">“Si cortan desde la parte de atrás del cuello, mueren más rápido”, dijo Rahila Amos, una abuela nigeriana, mientras describía la meticulosa instrucción que recibió de Boko Haram para convertirse en una terrorista suicida.</p>
+<p class="story-body-text story-content" data-para-count="304" data-total-count="748" id="story-continues-5" tabindex="-1">Entre los muchos horrores de la violencia que ejerce Boko Haram en África Occidental (ataques a mezquitas, iglesias y escuelas; matanzas de civiles; villas enteras hechas cenizas), uno de los mayores misterios ha sido la capacidad que tienen para convertir a las mujeres y niñas capturadas en asesinas.</p>
+<p class="story-body-text story-content" data-para-count="315" data-total-count="1063" id="story-continues-6" tabindex="-1">Boko Haram, uno de los grupos extremistas más sanguinarios, ha usado a cerca de 105 mujeres y niñas en ataques suicidas desde junio de 2014, cuando una mujer detonó una bomba en unas barracas militares en Nigeria, de acuerdo con The Long War Journal, un portal que hace seguimiento a las actividades terroristas.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="257" data-total-count="1320" id="story-continues-7" tabindex="-1">Desde entonces, mujeres y niñas con bombas, a menudo ocultas en canastas o debajo de su ropa, han matado a cientos de personas en ataques a mercados, escuelas, muelles y hasta en los campos para las personas desplazadas que buscan escapar de la violencia.</p>
+<p class="story-body-text story-content" data-para-count="325" data-total-count="1645" id="story-continues-8" tabindex="-1">“No es algo que puedas derrotar o erradicar inmediatamente”, opinó Issa Tchiroma Bakary, ministro de comunicaciones en Camerún, donde han identificado a 22 mujeres suicidas desde el inicio de este año. “No sabes quién es quién. Cuando ves a una niña caminando hacia ti, no sabes si está escondiendo una bomba”.</p>
+<p class="story-body-text story-content" data-para-count="168" data-total-count="1813" id="story-continues-9" tabindex="-1">Los soldados no pueden dispararle a cada mujer o niña que se vea sospechosa, añadió. “Saben cuál es nuestro talón de Aquiles”, sostuvo Bakary sobre Boko Haram.</p>
+<p class="story-body-text story-content" data-para-count="375" data-total-count="2188" id="story-continues-10" tabindex="-1">Boko Haram impactó por primera vez al mundo hace dos años, cuando irrumpió en una escuela nigeriana y secuestró a 300 niñas; muchas de ellas nunca fueron encontradas. Otros cientos de mujeres y niñas han sido raptadas, retenidas como prisioneras, violadas y a veces embarazadas intencionalmente, quizá con el objetivo de producir una nueva generación de combatientes.</p>
+<p class="story-body-text story-content" data-para-count="378" data-total-count="2566" id="story-continues-11" tabindex="-1">Amos, de 47 años, afirmó que los atacantes llegaron a su villa una mañana; disparaban sus armas mientras se bajaban de sus autos y recolectaban mujeres y niñas.<br />Amos, de fe cristiana, contó que poco tiempo después fue forzada a integrarse a las clases de Boko Haram sobre su versión del islam. Ese era el primer paso para aprender el arte de detonar bombas y suicidarse.</p>
+<p class="story-body-text story-content" data-para-count="241" data-total-count="2807" id="story-continues-12" tabindex="-1">Después de meses de entrenamiento, finalmente pudo escapar mientras sus captores hacían sus cultos vespertinos, relató Amos. Se quedó atrás y reunió a sus dos hijas más jóvenes y a su nieta para fugarse por la frontera con Camerún.</p>
+<p class="story-body-text story-content" data-para-count="166" data-total-count="2973" id="story-continues-13" tabindex="-1">“No quiero llevar una bomba”, afirmó ya en el campo de refugiados en Camerún, el cual se extiende sobre un vasto paisaje salpicado de tiendas y chozas de barro.</p>
+<p class="story-body-text story-content" data-para-count="470" data-total-count="3443" id="story-continues-14" tabindex="-1">Las autoridades en Camerún y Nigeria afirmaron que muchas de las experiencias detalladas por Amos coincidían con los relatos de otras mujeres y niñas que habían escapado de Boko Haram o que habían sido arrestadas antes de que lograran detonar la bomba. Las descripciones de Amos también son similares a los detalles que han contado otras mujeres y niñas liberadas, incluidos los rituales funerales que realizan antes de que las mujeres sean enviadas a su misión.</p>
+<p class="story-body-text story-content" data-para-count="258" data-total-count="3701" id="story-continues-15" tabindex="-1">Estos relatos contienen información sobre cómo Boko Haram, a pesar de estar bajo la presión de una campaña multinacional militar, ha podido difundir el terror en un extenso campo de batalla, que actualmente incluye a Nigeria, el Chad, Camerún y Níger.</p>
+<p class="story-body-text story-content" data-para-count="359" data-total-count="4060" id="story-continues-16" tabindex="-1">Con frecuencia, Boko Haram manda a mujeres guerrilleras a atacar mezquitas. El mes pasado, una mujer vestida de hombre detonó explosivos durante los rezos de la mañana en una villa al noreste de Nigeria. Otra mujer esperaba afuera de la mezquita y, cuando la gente huyó de la primera explosión, esta detonó también sus explosivos. Mataron a 24 personas.</p>
+<figure id="media-100000004279243" class="media photo media-100000004279243 embedded layout-large-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/03/19/world/boko-web2/boko-web2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-18">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/03/19/world/boko-web2/boko-web2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/03/19/world/boko-web2/boko-web2-superJumbo.jpg" data-mediaviewer-caption="Officials inspected a mosque in Nigeria on March 16 after two female suicide bombers killed at least 24 people." data-mediaviewer-credit="Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/03/19/world/boko-web2/boko-web2-master675.jpg"/>
+		<meta itemprop="height" content="380" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Officials inspected a mosque in Nigeria on March 16 after two female suicide bombers killed at least 24 people.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="224" data-total-count="4284" id="story-continues-18" tabindex="-1">Los bombazos realizados por mujeres se han extendido tanto que incluso los grupos humanitarios están replanteando la distribución de comida, agua y demás ayuda entre ellas. ¿Y si alguna mujer está escondiendo una bomba?</p>
+<p class="story-body-text story-content" data-para-count="460" data-total-count="4744" id="story-continues-19" tabindex="-1">En Camerún, las responsables por los bombazos recientes han sido adolescentes, lo que ha generado la pregunta entre oficiales y analistas sobre si ellas sabían lo que estaban haciendo. Sin embargo, descubrieron que en los recientes ataques en Nigeria, algunas mujeres llevaban el cabello recogido y la cara despejada, un estilo de peinado que solo se acostumbra en los ritos funerarios. Esto sería un indicio de que estas mujeres estaban listas para morir.</p>
+<p class="story-body-text story-content" data-para-count="376" data-total-count="5120" id="story-continues-20" tabindex="-1">No obstante, parece que existen algunas grietas en el sistema de entrenamiento suicida de Boko Haram. En febrero, una niña que tenía la misión de hacer explotar bomba en una villa en la parte más al norte de Camerún, arrojó sus explosivos y corrió con las autoridades. La información que les dio llevó a un importante ataque contra los guerrilleros de Boko Haram.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="258" data-total-count="5378" id="story-continues-21" tabindex="-1">Las mujeres suicidas son armas ideales en varios sentidos. En los puntos de seguridad dirigidos por hombres, las suelen registrar de manera muy superficial (si es que lo hacen). Los explosivos son fáciles de disimular debajo de vestidos o trajes religiosos.</p>
+<p class="story-body-text story-content" data-para-count="366" data-total-count="5744" id="story-continues-22" tabindex="-1">No es la primera vez que un grupo extremista utiliza a mujeres suicidas para explotar bombas. En el conflicto de Chechenia se les llamaba Viudas Negras. En Sri Lanka, pelearon con los Tigres tamiles. En su libro “Bombshell: Women and Terrorism”, Mia Bloom estima que desde 1985 a 2008, las mujeres cometieron un cuarto del total de ataques suicidas con bombas.</p>
+<p class="story-body-text story-content" data-para-count="214" data-total-count="5958" id="story-continues-23" tabindex="-1">Un soldado que ha combatido a Boko Haram afirmó que creía que los guerrilleros ponían drogas en la comida de las niñas. Otros que siguen la pista del grupo cuestionan si las bombas se detonan de manera remota.</p>
+<p class="story-body-text story-content" data-para-count="271" data-total-count="6229" id="story-continues-24" tabindex="-1">Amos, ahora entre los 58.000 residentes del campo de refugiados de Minawao, describió todo un sistema de hostigamiento a las posibles mujeres suicidas, que incluía privación de la comida y la promesa de vida eterna, tácticas que los cultos han usado durante décadas.</p>
+<p class="story-body-text story-content" data-para-count="324" data-total-count="6553" id="story-continues-25" tabindex="-1">Narró que cuando Boko Haram atacó su pueblo en 2014, dispararon y mataron a sus dos hermanos. Su esposo pudo escapar con cinco de sus hijos, pero ni Amos ni dos de sus hijas más jóvenes y una nieta lo lograron. Boko Haram las juntó con otras mujeres y niñas, y las colocó en una zanja larga para evitar que escaparan.</p>
+<p class="story-body-text story-content" data-para-count="201" data-total-count="6754" id="story-continues-26" tabindex="-1">Se quedaron allí durante días; recibían una comida diaria de pasta de maíz hecha de polvo. Finalmente, un soldado les hizo la pregunta crítica: ¿quieren seguir a Cristo o quieren ser musulmanas?</p>
+<p class="story-body-text story-content" data-para-count="127" data-total-count="6881" id="story-continues-27" tabindex="-1">Todas las mujeres aceptaron seguir el islam por miedo a que las mataran si decían lo contrario. Así inició su entrenamiento.</p>
+<p class="story-body-text story-content" data-para-count="323" data-total-count="7204" id="story-continues-28" tabindex="-1">Amos describió un sistema de enseñanza diario de seis niveles para las mujeres. Los primeros dos niveles eran enseñanzas sobre el Corán. El tercel nivel incluía las instrucciones para hacerse explosionar con bombas y realizar decapitaciones. “Cómo matar a una persona y cómo hacer estallar una casa”, explicó.</p>
+<p class="story-body-text story-content" data-para-count="202" data-total-count="7406" id="story-continues-29" tabindex="-1">Las instrucciones recibidas en los niveles más altos del entrenamiento (cuatro, cinco y seis) eran un secreto guardado celosamente entre los guerrilleros. Amos dijo que nunca supo lo que pasaba allí.</p>
+<p class="story-body-text story-content" data-para-count="301" data-total-count="7707" id="story-continues-30" tabindex="-1">Esta abuela nigeriana tuvo suerte, pues los militantes de Boko Haram decidieron no “casarse con ella” (un eufemismo para las violaciones que cometía el grupo), porque ya tenía marido e hijos. Pero según Amos, 14 mujeres y cuatro niñas en su grupo de entrenamiento no tuvieron la misma suerte.</p>
+<p class="story-body-text story-content" data-para-count="461" data-total-count="8168" id="story-continues-31" tabindex="-1">Durante los meses en cautiverio, la alimentaban una vez al día, así que perdió peso. Boko Haram incorporó la privación de comida en su entrenamiento, dijo Amos. Relató que hace varios meses, los guerrilleros las llevaron a una vieja fábrica para que vieran a otro grupo de mujeres bien alimentadas y con agua y comida suficientes. &#8220;Hagan lo que les decimos y podrán tener suficiente comida, como estas mujeres&#8221;, ofrecieron los guerrilleros.</p>
+<p class="story-body-text story-content" data-para-count="285" data-total-count="8453" id="story-continues-32" tabindex="-1">Las niñas, algunas de las cuales lloraban, le contaron a Amos que eran de Chibok, la villa nigeriana donde Boko Haram secuestró a las niñas de una escuela. El Departamento de Estado de Estados Unidos y los oficiales militares afirmaron que investigarían las declaraciones de Amos.</p>
+<p class="story-body-text story-content" data-para-count="121" data-total-count="8574" id="story-continues-33" tabindex="-1">“Estaban muy gordas” en comparación con ella y las otras mujeres cautivas “y tenían mucha agua”, aseguró Amos.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/bringbackourgirls/" rel="tag">#BringBackOurGirls</a>, <a href="https://www.nytimes.com/es/tag/ataques-terroristas/" rel="tag">ataques terroristas</a>, <a href="https://www.nytimes.com/es/tag/boko-haram/" rel="tag">Boko Haram</a>, <a href="https://www.nytimes.com/es/tag/nigeria/" rel="tag">Nigeria</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/04/14/boko-haram-convierte-a-sus-prisioneras-en-terroristas-suicidas/"
+				data-title="Noticias: Boko Haram convierte a sus prisioneras en terroristas suicidas"
+				data-author="POR DIONNE SEARCEY"
+				data-media=""
+				data-description="A dos años del secuestro de 300 niñas en Nigeria por Boko Haram, uno de los mayores misterios de esta agrupación ha sido la capacidad que tiene para convertir a sus víctimas en asesinas.
+"
+				data-publish-date="14 de abril de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":549,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

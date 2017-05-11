@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004823539"/>
+<meta name="hdl" content="Los habitantes de Alepo piden que no los olvidemos" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20161216" />
+<meta name="utime" content="20161216140906" />
+<meta name="ptime" content="20161216140906" />
+<meta name="DISPLAYDATE" content="Dec. 16, 2016" />
+<meta name="dat" content="Dec. 16, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="los-habitantes-de-alepo-piden-que-no-los-olvidemos" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/12/16/los-habitantes-de-alepo-piden-que-no-los-olvidemos/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Los habitantes de Alepo piden que no los olvidemos" />
+<meta property="og:description" content="Miramos la desesperación de los jóvenes de Alepo desde la comodidad de nuestro perfil de Facebook. Por eso las imágenes y las voces empiezan a difuminarse. Basta un tuit de Donald Trump o algún escándalo para que nos distraigamos." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/12/16/world/16Syria3/16Syria3-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-12-16" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/12/16/los-habitantes-de-alepo-piden-que-no-los-olvidemos/" />
+<meta property="twitter:title" content="Los habitantes de Alepo piden que no los olvidemos" />
+<meta property="twitter:description" content="Miramos la desesperación de los jóvenes de Alepo desde la comodidad de nuestro perfil de Facebook. Por eso las imágenes y las voces empiezan a difuminarse. Basta un tuit de Donald Trump o algún escándalo para que nos distraigamos." />
+<meta name="author" content="Michael Kimmelman" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Michael Kimmelman" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="medio-oriente" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="medio-oriente" />
+<meta name="id" content="100000004823539"/>
+<meta name="wordCount" content="1106"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/12/16/los-habitantes-de-alepo-piden-que-no-los-olvidemos/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=12&amp;day=16&amp;name=los-habitantes-de-alepo-piden-que-no-los-olvidemos">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=31435">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/12\/16\/los-habitantes-de-alepo-piden-que-no-los-olvidemos\/"},"headline":"Los habitantes de Alepo piden que no los olvidemos","datePublished":"2016-12-16T14:09:06+00:00","dateModified":"2016-12-16T14:09:06+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/12\/16\/world\/16Syria3\/16Syria3-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Miramos la desesperaci\u00f3n de los j\u00f3venes de Alepo desde la comodidad de nuestro perfil de Facebook. Por eso las im\u00e1genes y las voces empiezan a difuminarse. Basta un tuit de Donald Trump o alg\u00fan esc\u00e1ndalo para que nos distraigamos."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/12/16/los-habitantes-de-alepo-piden-que-no-los-olvidemos/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/interactive/2016/12/14/world/middleeast/kimmelman-images-of-aleppo.html?_r=0" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/mediooriente" />
+<title>Los habitantes de Alepo piden que no los olvidemos &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/interactive/2016/12/14/world/middleeast/kimmelman-images-of-aleppo.html?_r=0" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/12/16/los-habitantes-de-alepo-piden-que-no-los-olvidemos/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-31435 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Los habitantes de Alepo piden que no los olvidemos
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/12/16/los-habitantes-de-alepo-piden-que-no-los-olvidemos/"
+					data-title="Noticias: Los habitantes de Alepo piden que no los olvidemos"
+					data-author="POR MICHAEL KIMMELMAN"
+					data-media=""
+					data-description="Miramos la desesperación de los jóvenes de Alepo desde la comodidad de nuestro perfil de Facebook. Por eso las imágenes y las voces empiezan a difuminarse. Basta un tuit de Donald Trump o algún escándalo para que nos distraigamos."
+					data-publish-date="16 de diciembre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2gTbZkj">http://nyti.ms/2gTbZkj</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/medio-oriente/">Medio Oriente</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Los habitantes de Alepo piden que no los olvidemos</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Michael Kimmelman</span>
+</span>
+
+					<time class="dateline" datetime="2016-12-16">16 de diciembre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/12/16/los-habitantes-de-alepo-piden-que-no-los-olvidemos/"
+							data-title="Noticias: Los habitantes de Alepo piden que no los olvidemos"
+							data-author="POR MICHAEL KIMMELMAN"
+							data-media=""
+							data-description="Miramos la desesperación de los jóvenes de Alepo desde la comodidad de nuestro perfil de Facebook. Por eso las imágenes y las voces empiezan a difuminarse. Basta un tuit de Donald Trump o algún escándalo para que nos distraigamos."
+							data-publish-date="16 de diciembre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004824450" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/16/world/16Syria3/16Syria3-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/16/world/16Syria3/16Syria3-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/16/world/16Syria3/16Syria3-superJumbo.jpg" data-mediaviewer-caption="Un anciano mientras era evacuado de un vecindario rebelde de Alepo, Siria, el jueves." data-mediaviewer-credit="Karam Al-Masri/Agence France-Presse — Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/16/world/16Syria3/16Syria3-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Un anciano mientras era evacuado de un vecindario rebelde de Alepo, Siria, el jueves.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Karam Al-Masri/Agence France-Presse — Getty Images
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/interactive/2016/12/14/world/middleeast/kimmelman-images-of-aleppo.html?_r=0&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="276" data-total-count="276" id="story-continues-2" tabindex="-1">Tanto las bombas como las imágenes de Alepo siguen llegando mientras las municiones llueven indiscriminadamente sobre las familias atrapadas, los trabajadores humanitarios y los niños. Las fuerzas armadas de los gobiernos de Rusia y Siria no los dejaron abandonar la ciudad.</p>
+<p class="story-body-text story-content" data-para-count="460" data-total-count="736" id="story-continues-3" tabindex="-1">Pero las <a href="http://www.nytimes.com/interactive/2016/12/14/world/middleeast/aleppo-siege-audio-video.html" target="_blank">fotografías y videos</a> han permitido que se conozca su situación. Los <a href="http://www.nytimes.com/interactive/2016/10/10/world/middleeast/syria-war-aleppo-bombing-siege-battle-new-low.html" target="_blank">rostros de los sitiados</a> miran a la cámara, a nosotros, y a la muerte misma mientras piden ayuda, desconcertados por nuestra indiferencia ante su masacre, describiendo las atrocidades que suceden afuera de sus casas o simplemente al otro lado de la puerta. Vemos sus rostros en la pantalla como normalmente vemos la cara de un amigo o un familiar, de cerca, mirándonos a los ojos.</p>
+<figure id="media-100000004824472" class="media photo media-100000004824472 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/16/world/16aleppogrp_hp/16aleppogrp_hp-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-5">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/16/world/16aleppogrp_hp/16aleppogrp_hp-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/16/world/16aleppogrp_hp/16aleppogrp_hp-superJumbo.jpg" data-mediaviewer-caption="Aleppo voices." data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/16/world/16aleppogrp_hp/16aleppogrp_hp-master675.jpg"/>
+		<meta itemprop="height" content="675" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Aleppo voices.</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="304" data-total-count="1040" id="story-continues-5" tabindex="-1">Ellos están dando <a href="https://www.nytimes.com/2016/11/23/world/middleeast/aleppo-syria-bombs-warplanes.html" target="_blank">testimonio</a>, en tiempo real, para decir que se niegan a desaparecer sin dejar rastro. Y en esta era de internet, <a href="https://www.nytimes.com/2016/08/22/world/middleeast/syria-omran-photo-children.html" target="_blank">impiden que los olvidemos</a>. Esas imágenes difundidas a través de los medios de comunicación nos confirman que esas <a href="https://www.nytimes.com/2016/09/15/world/middleeast/syria-ceasefire.html" target="_blank">personas siguen vivas</a>, por lo menos, hasta ese momento.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="277" data-total-count="1317" id="story-continues-6" tabindex="-1">Nunca antes habíamos recibido semejante diluvio de imágenes provenientes del frente de batalla, nunca tuvimos una visión tan íntima,<a href="https://www.nytimes.com/2016/05/01/world/middleeast/syrian-city-torn-by-war-shows-jarring-resolve-to-try-to-live-normally.html" target="_blank"> minuto a minuto</a>, de lo que el <a href="http://www.ohchr.org/SP/Pages/Home.aspx" target="_blank">Alto Comisionado para los Derechos Humanos de las Naciones Unidas</a> calificó como posibles <a href="https://www.nytimes.com/2016/12/14/world/middleeast/aleppo-syria-evacuation-deal.html" target="_blank">crímenes de guerra</a>.</p>
+<p class="story-body-text story-content" data-para-count="471" data-total-count="1788" id="story-continues-7" tabindex="-1">&#8220;Por favor, sálvanos, gracias&#8221;, dice Bana al Abed, una niña siria de siete años, en un video publicado en <a href="https://twitter.com/alabedbana" target="_blank">Twitter</a>. La madre de Bana ha estado grabando los mensajes de su hija desde hace unos meses en Alepo oriental, donde el gobierno sirio y las fuerzas rusas bombardearon las inmediaciones de su hogar. Hace poco, Bana dijo que sabía que iba a morir. Me es difícil imaginar que exista alguien que vea el video, sin sentir un intenso horror y vergüenza.</p>
+<figure id="media-100000004693178" class="media photo media-100000004693178 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/10/06/opinion/06kristof1/06kristof1-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-9">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/10/06/opinion/06kristof1/06kristof1-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/10/06/opinion/06kristof1/06kristof1-superJumbo.jpg" data-mediaviewer-caption="Bana al-Abed, a 7-year-old Syrian girl in Aleppo, tweeted that she’s “reading to forget the war.”" data-mediaviewer-credit="Bana al-Abed/Twitter"  itemprop="url" itemid="https://static01.nyt.com/images/2016/10/06/opinion/06kristof1/06kristof1-master315.jpg"/>
+		<meta itemprop="height" content="420" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Bana al-Abed, a 7-year-old Syrian girl in Aleppo, tweeted that she’s “reading to forget the war.”</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Bana al-Abed/Twitter
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="162" data-total-count="1950" id="story-continues-9" tabindex="-1">Los mensajes de Bana han provocado que los medios de Occidente se pregunten si sus <a href="https://www.nytimes.com/2016/12/07/world/middleeast/aleppo-twitter-girl-syria.html?_r=0" target="_blank">tuits y videos son propaganda</a>, si Bana o su ubicación pueden ser verificadas.</p>
+<p class="story-body-text story-content" data-para-count="37" data-total-count="1987" id="story-continues-10" tabindex="-1">Mientras tanto, Alepo sigue ardiendo.</p>
+<p class="story-body-text story-content" data-para-count="266" data-total-count="2253" id="story-continues-11" tabindex="-1">&#8220;Cuando un acuerdo de libre comercio con Estados Unidos moviliza a cientos de miles de personas a las calles, pero esos horrendos bombardeos de Alepo no desencadenan ninguna protesta, entonces algo no está bien&#8221;, dijo la canciller alemana Angela Merkel.</p>
+<p class="story-body-text story-content" data-para-count="707" data-total-count="2960" id="story-continues-12" tabindex="-1">No, no está bien. Antes las fotos de guerra y sufrimiento conmovían a la opinión pública y generaban reacciones. Un ejemplo fue la fotografía de Kevin Carter, tomada en 1993, que mostró a una niña hambrienta cercada por un buitre en Sudán. Recordemos también la imagen del <a href="https://iconicphotos.wordpress.com/2010/03/10/u-s-marine-dragged-through-mogadishu/" target="_blank">soldado estadounidense muerto que fue arrastrado por Mogadiscio</a>, lo que aceleró la retirada de Estados Unidos de Somalia. O la fotografía de Nick Ut, captada en Vietnam del sur en 1972, que mostró a Phan Thi Kim Phuc, una niña de nueve años, que gritaba desnuda mientras el napalm la quemaba. Esas imágenes impulsaron ciclos de noticias durante semanas, meses y años, y ayudaron a inclinar la balanza de la política.</p>
+<figure id="media-100000001583994" class="media photo media-100000001583994 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2012/06/03/blogs/kim-rdv/kim-rdv-superJumbo.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-14">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2012/06/03/blogs/kim-rdv/kim-rdv-superJumbo.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2012/06/03/blogs/kim-rdv/kim-rdv-superJumbo.jpg" data-mediaviewer-caption="Phan Thi Kim Phuc, center, was burned by napalm in an attack on June 8, 1972. The other children in Nick Ut's iconic photograph are two younger brothers and two cousins." data-mediaviewer-credit="Nick Ut/Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2012/06/03/blogs/kim-rdv/kim-rdv-superJumbo.jpg"/>
+		<meta itemprop="height" content="1543" />
+		<meta itemprop="width" content="2048" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Phan Thi Kim Phuc, center, was burned by napalm in an attack on June 8, 1972. The other children in Nick Ut's iconic photograph are two younger brothers and two cousins.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Nick Ut/Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="148" data-total-count="3108" id="story-continues-14" tabindex="-1">Generalmente la respuesta política fue la retirada. En una situación como Alepo no puede hacerse algo tan lineal. Pero esa no es toda la historia.</p>
+<p class="story-body-text story-content" data-para-count="461" data-total-count="3569" id="story-continues-15" tabindex="-1">¿Importa que las víctimas en Siria sean musulmanas? Donald Trump, el presidente electo de Estados Unidos, ganó las elecciones con un discurso que incitaba la xenofobia contra los musulmanes. Se vendió al público estadounidense como un líder transaccional, mientras prometía acuerdos y no necesariamente decencia. También dijo que admiraba al presidente de Rusia, Vladimir Putin, y realizó una campaña que propugnaba el aislamiento de Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="612" data-total-count="4181" id="story-continues-16" tabindex="-1">En general, solemos enfocarnos en las noticias que nos gustan. Durante la guerra de Vietnam, los estadounidenses observaron las mismas transmisiones televisivas y hojearon las mismas fotografías de revistas. Había una guía común. La guerra estaba en las casas de todos. Hoy solo un pequeño porcentaje de los estadounidenses pelea nuestras batallas. Miramos la desesperación de los jóvenes de Alepo desde la comodidad de nuestro perfil de Facebook. Por eso las imágenes y las voces empiezan a difuminarse, basta un tuit de Donald Trump o algún escándalo sobre noticias falsas para que nos distraigamos.</p>
+<figure id="media-100000004599017" class="media photo media-100000004599017 embedded layout-large-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/18/multimedia/19omran-video/19omran-video-master675-v3.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-18">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/18/multimedia/19omran-video/19omran-video-master675-v3.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/18/multimedia/19omran-video/19omran-video-superJumbo-v3.jpg" data-mediaviewer-caption="Omran Daqneesh, de 5 años, fue rescatado de un edificio después de un bombardeo del gobierno o de Rusia, al norte de la ciudad de Alepo, en Siria." data-mediaviewer-credit="Aleppo Media Center
+"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/18/multimedia/19omran-video/19omran-video-master675-v3.jpg"/>
+		<meta itemprop="height" content="371" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Omran Daqneesh, de 5 años, fue rescatado de un edificio después de un bombardeo del gobierno o de Rusia, al norte de la ciudad de Alepo, en Siria.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Aleppo Media Center
+
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="468" data-total-count="4649" id="story-continues-18" tabindex="-1">Solo hemos condenado, de forma universal, dos fotografías: la de Omran Daqneesh, de cinco años, captado mientras estaba sentado en un ambulancia de Alepo limpiándose la sangre de su rostro y la de Alan Kurdi, el niño de dos años que murió en una playa de Turquía. También nos llamaron la atención las imágenes de drones de un barrio en Alepo que fue pulverizado por las fuerzas sirias y rusas. Pero esas imágenes cayeron al agujero de la amnesia colectiva.</p>
+<p class="story-body-text story-content" data-para-count="327" data-total-count="4976" id="story-continues-19" tabindex="-1">Eso pasa porque todas las imágenes son como pruebas de Rorschach. Miles de personas han sido asesinadas en Alepo, millones son desplazados por toda Siria. Las fuerzas sirias, iraníes y rusas han devastado a la mitad del país y han provocado una crisis de refugiados que amenaza con desequilibrar a Europa y a Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="374" data-total-count="5350" id="story-continues-20" tabindex="-1">¿Y Washington? No se han impuesto sanciones como las provocadas por la anexión de Crimea por parte de Rusia. No hay alarmas, incluso después de que las armas químicas mataron y mutilaron a cientos de personas, y tampoco se produjeron marchas en los centro comercial o grandes manifestaciones en el campus universitarios. Rusia y Siria bombardean a civiles con impunidad.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="177" data-total-count="5527" id="story-continues-21" tabindex="-1">Y todo lo que hacemos es velar, impotentes, mientras los sirios se niegan a irse en silencio, decididos a que los conozcamos, que sepamos de sus vidas y todo lo que han perdido.</p>
+<figure id="media-100000004821164" class="media photo media-100000004821164 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/14/sports/13insideraleppo/13insideraleppo-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-23">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/14/sports/13insideraleppo/13insideraleppo-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/14/sports/13insideraleppo/13insideraleppo-superJumbo.jpg" data-mediaviewer-caption="A member of Syria’s government forces in eastern Aleppo on Tuesday." data-mediaviewer-credit="George Ourfalian/Agence France-Presse — Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/14/sports/13insideraleppo/13insideraleppo-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A member of Syria’s government forces in eastern Aleppo on Tuesday.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			George Ourfalian/Agence France-Presse — Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="488" data-total-count="6015" id="story-continues-23" tabindex="-1">Una parte de la indiferencia del público podría estar marcada por la fatiga de la compasión y la desilusión con una guerra que ya lleva seis años. Las promesas de finalizar el conflicto se incumplieron, una y otra vez. Mucho aseguraron que veríamos levantamientos populares y los medios impulsaron movimientos de protesta, que se extinguieron muy rápido. Esos movimientos requieren una construcción lenta, paso a paso. No confían en videos de Facebook o imágenes de Instagram.</p>
+<p class="story-body-text story-content" data-para-count="223" data-total-count="6238" id="story-continues-24" tabindex="-1">La verdad sea dicha, ninguna persona sana quiere ver estas imágenes. Lo que está sucediendo en Alepo es casi insoportable. Pero ese es el punto. Bana nos mira directamente a los ojos y nos pide que la salvemos, por favor.</p>
+<p class="story-body-text story-content" data-para-count="94" data-total-count="6332" id="story-continues-25" tabindex="-1">Aunque no hemos hecho nada para ayudarla, pero lo menos que podemos hacer es ver sus mensajes.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/alepo/" rel="tag">Alepo</a>, <a href="https://www.nytimes.com/es/tag/bana-al-abed/" rel="tag">Bana al Abed</a>, <a href="https://www.nytimes.com/es/tag/donald-trump/" rel="tag">Donald Trump</a>, <a href="https://www.nytimes.com/es/tag/guerra-en-siria/" rel="tag">guerra en Siria</a>, <a href="https://www.nytimes.com/es/tag/rusia/" rel="tag">Rusia</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/12/16/los-habitantes-de-alepo-piden-que-no-los-olvidemos/"
+				data-title="Noticias: Los habitantes de Alepo piden que no los olvidemos"
+				data-author="POR MICHAEL KIMMELMAN"
+				data-media=""
+				data-description="Miramos la desesperación de los jóvenes de Alepo desde la comodidad de nuestro perfil de Facebook. Por eso las imágenes y las voces empiezan a difuminarse. Basta un tuit de Donald Trump o algún escándalo para que nos distraigamos."
+				data-publish-date="16 de diciembre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/10/09/por-que-algunas-guerras-como-la-de-siria-reciben-mas-atencion-que-otras-como-la-de-yemen/">
+					<div class="story-body">
+						<h3 class="kicker">Análisis</h3>
+
+						<h2 class="headline">
+							<span class="title">Por qué algunas guerras (como la de Siria) reciben más atención que otras (como la de Yemen)</span>
+							<time class="dateline">9 de octubre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/10/02/world/INT-WAR1/INT-WAR1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/12/15/los-destructores-de-alepo/">
+					<div class="story-body">
+						<h3 class="kicker">Editorial</h3>
+
+						<h2 class="headline">
+							<span class="title">Los destructores de Alepo</span>
+							<time class="dateline">15 de diciembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/12/15/opinion/15thu1/15thu2-1481757594540-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/12/15/clinton-y-trump-con-los-pantalones-abajo-seguramente-es-navidad-en-cataluna/">
+					<div class="story-body">
+						<h3 class="kicker">Postales del Mundo</h3>
+
+						<h2 class="headline">
+							<span class="title">¿Clinton y Trump con los pantalones abajo? Seguramente es Navidad en Cataluña</span>
+							<time class="dateline">15 de diciembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/11/28/world/what-in-the-world/wit_spain-figurines/wit_spain-figurines-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/12/15/navidad-sin-hallacas-sin-nino-jesus-y-sin-cambios-politicos-en-venezuela/">
+					<div class="story-body">
+						<h3 class="kicker">Venezuela</h3>
+
+						<h2 class="headline">
+							<span class="title">Navidad sin hallacas, sin Niño Jesús y sin cambios políticos en Venezuela</span>
+							<time class="dateline">15 de diciembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/12/16/universal/15juguetesES1/15juguetesES1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":1075,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

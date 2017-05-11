@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004366701"/>
+<meta name="hdl" content="Ante su posible destitución, Dilma Rousseff se queda sin aliados" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20160503" />
+<meta name="utime" content="20160503190538" />
+<meta name="ptime" content="20160503190538" />
+<meta name="DISPLAYDATE" content="May. 3, 2016" />
+<meta name="dat" content="May. 3, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="ante-su-posible-destitucion-dilma-rousseff-se-queda-sin-aliados" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/05/03/ante-su-posible-destitucion-dilma-rousseff-se-queda-sin-aliados/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Ante su posible destitución, Dilma Rousseff se queda sin aliados" />
+<meta property="og:description" content="Muchos analistas dicen que la caída en cámara lenta de la presidenta puede atribuirse a una personalidad despótica y a un estilo de liderazgo que ha ahuyentado a varios políticos, miembros de su partido y ministros del gabinete." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/05/02/world/02DILMA1/02DILMA1-videoSixteenByNine768-v2.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-05-03" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/05/03/ante-su-posible-destitucion-dilma-rousseff-se-queda-sin-aliados/" />
+<meta property="twitter:title" content="Ante su posible destitución, Dilma Rousseff se queda sin aliados" />
+<meta property="twitter:description" content="Muchos analistas dicen que la caída en cámara lenta de la presidenta puede atribuirse a una personalidad despótica y a un estilo de liderazgo que ha ahuyentado a varios políticos, miembros de su partido y ministros del gabinete." />
+<meta name="author" content="Andrew Jacobs" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Andrew Jacobs" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="brasil" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="brasil" />
+<meta name="id" content="100000004366701"/>
+<meta name="wordCount" content="2153"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/05/03/ante-su-posible-destitucion-dilma-rousseff-se-queda-sin-aliados/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=05&amp;day=03&amp;name=ante-su-posible-destitucion-dilma-rousseff-se-queda-sin-aliados">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=11174">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/05\/03\/ante-su-posible-destitucion-dilma-rousseff-se-queda-sin-aliados\/"},"headline":"Ante su posible destituci\u00f3n, Dilma Rousseff se queda sin aliados","datePublished":"2016-05-03T19:05:38+00:00","dateModified":"2016-07-27T18:59:44+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/05\/02\/world\/02DILMA1\/02DILMA1-videoSixteenByNine768-v2.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Muchos analistas dicen que la ca\u00edda en c\u00e1mara lenta de la presidenta puede atribuirse a una personalidad desp\u00f3tica y a un estilo de liderazgo que ha ahuyentado a varios pol\u00edticos, miembros de su partido y ministros del gabinete."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/05/03/ante-su-posible-destitucion-dilma-rousseff-se-queda-sin-aliados/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/05/02/world/americas/brazil-president-dilma-rousseff-impeachment-allies-alienated.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="americalatina/brasil" />
+<title>Ante su posible destitución, Dilma Rousseff se queda sin aliados &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/05/02/world/americas/brazil-president-dilma-rousseff-impeachment-allies-alienated.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/05/03/ante-su-posible-destitucion-dilma-rousseff-se-queda-sin-aliados/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-11174 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				Ante su posible destitución, Dilma Rousseff se queda sin aliados
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/05/03/ante-su-posible-destitucion-dilma-rousseff-se-queda-sin-aliados/"
+					data-title="América Latina: Ante su posible destitución, Dilma Rousseff se queda sin aliados"
+					data-author="POR ANDREW JACOBS"
+					data-media=""
+					data-description="Muchos analistas dicen que la caída en cámara lenta de la presidenta puede atribuirse a una personalidad despótica y a un estilo de liderazgo que ha ahuyentado a varios políticos, miembros de su partido y ministros del gabinete."
+					data-publish-date="3 de mayo de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/1T0fsdJ">http://nyti.ms/1T0fsdJ</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/brasil/">Brasil</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Ante su posible destitución, Dilma Rousseff se queda sin aliados</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Andrew Jacobs</span>
+</span>
+
+					<time class="dateline" datetime="2016-05-03">3 de mayo de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/05/03/ante-su-posible-destitucion-dilma-rousseff-se-queda-sin-aliados/"
+							data-title="América Latina: Ante su posible destitución, Dilma Rousseff se queda sin aliados"
+							data-author="POR ANDREW JACOBS"
+							data-media=""
+							data-description="Muchos analistas dicen que la caída en cámara lenta de la presidenta puede atribuirse a una personalidad despótica y a un estilo de liderazgo que ha ahuyentado a varios políticos, miembros de su partido y ministros del gabinete."
+							data-publish-date="3 de mayo de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004377975" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/02/world/02DILMA1/02DILMA1-master1050-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/02/world/02DILMA1/02DILMA1-master1050-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/02/world/02DILMA1/02DILMA1-superJumbo-v2.jpg" data-mediaviewer-caption="President Dilma Rousseff with Health Minister Agenor Álvares last week. Political analysts say her downfall has been linked to a go-it-alone work style that has driven away scores of political supporters." data-mediaviewer-credit="Fernando Bizerra Jr./European Pressphoto Agency"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/02/world/02DILMA1/02DILMA1-master1050-v2.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">President Dilma Rousseff with Health Minister Agenor Álvares last week. Political analysts say her downfall has been linked to a go-it-alone work style that has driven away scores of political supporters.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Fernando Bizerra Jr./European Pressphoto Agency
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/05/02/world/americas/brazil-president-dilma-rousseff-impeachment-allies-alienated.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="89" data-total-count="89" id="story-continues-2" tabindex="-1">BRASILIA — Eran idealistas y luchaban juntos contra los dictadores militares de Brasil.</p>
+<p class="story-body-text story-content" data-para-count="270" data-total-count="359" id="story-continues-3" tabindex="-1">Y así como floreció la democracia, lo mismo sucedió con sus carreras. Uno de ellos, Paulo Ziulkoski, se convirtió en líder de una asociación de ciudades brasileñas. La otra, Dilma Rousseff, se convirtió en la presidenta del país más grande de América Latina.</p>
+<p class="story-body-text story-content" data-para-count="360" data-total-count="719" id="story-continues-4" tabindex="-1">Pero su amistad se acabó pronto. Durante una reunión polémica con los alcaldes del país en 2012, Rousseff rechazó las peticiones para repartir una porción de los altos ingresos petroleros. Después de que la audiencia estallara en abucheos, según Ziulkoski, ella se le acercó, lo señaló con el índice y lo humilló con una retahíla de improperios.</p>
+<p class="story-body-text story-content" data-para-count="309" data-total-count="1028" id="story-continues-5" tabindex="-1">“Nunca imaginé que semejantes palabras podrían salir de la boca de una presidenta”, dijo Ziulkoski, y añadió que decenas de alcaldes han abandonado a Rousseff y a su partido. Para Ziulkoski, el regaño en público fue el tipo de ruptura que simbolizó “el comienzo del fin de su administración”.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="190" data-total-count="1218" id="story-continues-6" tabindex="-1">Ahora que Rousseff libra una batalla desesperada para evitar la destitución y salvar su presidencia, ha acusado a sus rivales en el congreso de planear un golpe de Estado para derrocarla.</p>
+<p class="story-body-text story-content" data-para-count="478" data-total-count="1696" id="story-continues-7" tabindex="-1">Más de dos tercios de representantes de la Cámara Baja de Brasil votaron el mes pasado para aprobar una medida de destitución con base en la acusación de que ella obtuvo préstamos ilegales de los bancos estatales para tapar huecos en el presupuesto (Rousseff no está acusada de malversar fondos para enriquecerse). Muchos expertos dicen que el siguiente paso, un juicio en el senado que podría comenzar en las próximas semanas, probablemente llevará a su destitución.</p>
+<p class="story-body-text story-content" data-para-count="104" data-total-count="1800" id="story-continues-8" tabindex="-1">“Lucharé con todas mis fuerzas para derrotar a los golpistas”, declaró Rousseff en una entrevista.</p>
+<p class="story-body-text story-content" data-para-count="348" data-total-count="2148" id="story-continues-9" tabindex="-1">Sin embargo, muchos analistas políticos dicen que la caída a cámara lenta de Rousseff también puede atribuirse a una personalidad despótica y un estilo de trabajo en solitario que ha ahuyentado a muchos aliados políticos, exmiembros de su equipo y ministros del gabinete, muchos de los cuales han soportado episodios de humillación pública.</p>
+<p class="story-body-text story-content" data-para-count="365" data-total-count="2513" id="story-continues-10" tabindex="-1">“Ha alejado a muchos políticos y ha malgastado la buena voluntad de mucha gente, en parte debido a sus pésimas habilidades políticas y a su arrogancia”, dijo Edson Sardinha, el editor de Congresso em Foco, una revista especializada en corrupción gubernamental. “Ahora, cuando lo necesita, muy pocas personas están dispuestas a correr en su defensa”.</p>
+<p class="story-body-text story-content" data-para-count="416" data-total-count="2929" id="story-continues-11" tabindex="-1">La turbulencia va mucho más allá del estilo de liderazgo de Rousseff. Brasil está pasando por su peor crisis económica en las últimas décadas, en la que millones de personas salen de la clase media para acabar en la pobreza. Y para enardecer la ira del pueblo, las élites políticas se han lucrado con miles de millones de dólares en un desfalco relacionado con la compañía petrolera estatal, Petrobras.</p>
+<p class="story-body-text story-content" data-para-count="377" data-total-count="3306" id="story-continues-12" tabindex="-1">Rousseff, que también se ha visto afectada políticamente por el escándalo, ha dicho que es víctima de un ataque político y de conjeturas sexistas sobre cómo debe gobernar una mujer. También dijo ser un chivo expiatorio conveniente para algo que está fuera de su control: la caída mundial en los precios de las materias primas que generó el desplome de la economía.</p>
+<figure id="media-100000004377976" class="media photo media-100000004377976 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/02/world/02DILMA2/02DILMA-1462121577078-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-14">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/02/world/02DILMA2/02DILMA-1462121577078-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/02/world/02DILMA2/02DILMA-1462121577078-superJumbo.jpg" data-mediaviewer-caption="Ms. Rousseff during an interview with foreign correspondents in Brasília in March. She has said she is the victim of a power grab by rivals and sexist assumptions of how a woman should lead." data-mediaviewer-credit="Tomas Munita for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/02/world/02DILMA2/02DILMA-1462121577078-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Ms. Rousseff during an interview with foreign correspondents in Brasília in March. She has said she is the victim of a power grab by rivals and sexist assumptions of how a woman should lead.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tomas Munita for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="378" data-total-count="3684" id="story-continues-14" tabindex="-1">Su promesa de llevar a millones de brasileños a las calles en su defensa ha tenido muy poco apoyo popular. Todos aquellos que alguna vez fueron sus aliados, entre ellos cinco exministros de su administración, el vicepresidente del país y seis jueces de la Corte Suprema nombrados por ella o por su predecesor, Luiz Inácio Lula da Silva, ahora hacen parte de la oposición.</p>
+<p class="story-body-text story-content" data-para-count="430" data-total-count="4114" id="story-continues-15" tabindex="-1">En más de cinco años en el poder, Rousseff casi siempre se ha negado a reunirse con miembros del congreso, ya sean opositores o aliados, lo que ha erosionado buena parte del apoyo que alguna vez tuvo en la cámara de diputados. Entre los agraviados se encuentra Eduardo Suplicy, un exsenador y una figura muy querida del Partido de los Trabajadores, que dijo que ella había rechazado varias solicitudes para reunirse con ella.</p>
+<p class="story-body-text story-content" data-para-count="131" data-total-count="4245" id="story-continues-16" tabindex="-1">“En política, o hablas o mueres”, dijo Alfredo Nascimento, un exministro de transporte que votó por su destitución en abril.</p>
+<p class="story-body-text story-content" data-para-count="75" data-total-count="4320" id="story-continues-17" tabindex="-1">“No puedo apoyar a una presidenta que es incapaz de gobernar”, agregó.</p>
+<p class="story-body-text story-content" data-para-count="369" data-total-count="4689" id="story-continues-18" tabindex="-1">En Brasilia casi todo el mundo puede contar historias sobre la intolerancia de Rousseff ante aquellos que están en desacuerdo con ella. Las anécdotas incluyen la ocasión en la que, enfurecida, destrozó una computadora; su negativa a reunirse con líderes indígenas o activistas de derechos homosexuales y los regaños a sus asistentes por las más mínimas faltas.</p>
+<p class="story-body-text story-content" data-para-count="203" data-total-count="4892" id="story-continues-19" tabindex="-1">Y Rousseff tampoco encuentra apoyos en los medios brasileños, que durante mucho tiempo la han visto como una mujer fría y altiva, un marcado contraste con la personalidad carismática de Lula da Silva.</p>
+<p class="story-body-text story-content" data-para-count="280" data-total-count="5172" id="story-continues-20" tabindex="-1">Algunos consideran que a Rousseff se le está juzgando con un doble rasero, el mismo que se le aplica injustamente a las mujeres poderosas en todo el mundo. ¿Se le consideraría obstinada y poco colaboradora si fuera un hombre? ¿O dirían que es un líder fuerte y decidido?</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="313" data-total-count="5485" id="story-continues-21" tabindex="-1">“La presidenta es blanco de todos los estereotipos y prejuicios de la sociedad altamente patriarcal y oligárquica de Brasil”, dijo Rosana Schwartz, una historiadora y socióloga en Mackenzie Presbyterian University de São Paulo. “He escuchado a la gente decir: ‘Nunca más votaremos por una mujer’”.</p>
+<p class="story-body-text story-content" data-para-count="352" data-total-count="5837" id="story-continues-22" tabindex="-1">Pero Antonia Melo, exmiembro del Partido de los Trabajadores, dijo que la actitud brusca de Rousseff había alienado a muchos de los fieles del partido. Melo describió una reunión, cuando Rousseff era ministra de energía, durante la cual los activistas querían manifestar su oposición a la construcción de una polémica represa en la Amazonia.</p>
+<p class="story-body-text story-content" data-para-count="223" data-total-count="6060" id="story-continues-23" tabindex="-1">Melo dijo que después de su primera frase Rousseff la interrumpió, dio un manotazo a la mesa y juró presionar para que se aprobara la construcción de la represa. Después, dio media vuelta y salió de la sala de juntas.</p>
+<p class="story-body-text story-content" data-para-count="158" data-total-count="6218" id="story-continues-24" tabindex="-1">“Nos quedamos ahí parados, mirándonos en silencio, perplejos”, dijo Melo. “Sentimos que nos había faltado al respeto y nos había hecho a un lado”.</p>
+<p class="story-body-text story-content" data-para-count="450" data-total-count="6668" id="story-continues-25" tabindex="-1">Fue un episodio hiriente dado el origen del Partido de los Trabajadores, y la jerarquía de Rousseff como defensora de aquellos que han sido privados de sus derechos. Los fundadores del partido fueron guerrilleros marxistas que llegaron al poder gracias a la coalición de sindicalistas, agricultores sin tierras, activistas indígenas e intelectuales de izquierda que ayudaron a preparar el terreno para el restablecimiento de la democracia en 1985.</p>
+<p class="story-body-text story-content" data-para-count="498" data-total-count="7166" id="story-continues-26" tabindex="-1">Sin embargo, hoy dicha coalición está hecha trizas. En las últimas semanas, 135 alcaldes que pertenecían al Partido de los Trabajadores han cambiado de partido; representan casi una quinta parte de los alcaldes de Brasil que fueron electos con el aval de esa agrupación. Entre ellos se encuentra João Paulo Ribeiro, de 31 años, alcalde de una pequeña ciudad, que dijo que se había cansado de los ataques de ciudadanos y amigos que cuestionaban su asociación con el partido de Rousseff.</p>
+<p class="story-body-text story-content" data-para-count="163" data-total-count="7329" id="story-continues-27" tabindex="-1">“Tengo que escuchar a la gente”, explicó Ribeiro, que cambió de partido el mes pasado con la esperanza de mejorar sus posibilidades de reelegirse en octubre.</p>
+<figure id="media-100000004377977" class="media photo media-100000004377977 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/02/world/02DILMA3/02DILMA-1462121606869-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-29">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/02/world/02DILMA3/02DILMA-1462121606869-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/02/world/02DILMA3/02DILMA-1462121606869-superJumbo.jpg" data-mediaviewer-caption="Former President Luiz Inácio Lula da Silva, who chose Ms. Rousseff to run on the Workers’ Party ticket." data-mediaviewer-credit="Andre Penner/Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/02/world/02DILMA3/02DILMA-1462121606869-master675.jpg"/>
+		<meta itemprop="height" content="452" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Former President Luiz Inácio Lula da Silva, who chose Ms. Rousseff to run on the Workers’ Party ticket.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andre Penner/Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="334" data-total-count="7663" id="story-continues-29" tabindex="-1">El aumento del desempleo y el enorme malestar por el mal desempeño de la economía de Brasil solo aumentó la tensión entre Rousseff y el congreso. Si el panorama económico fuera favorable —como lo fue en 2005 cuando Lula Da Silva se vio involucrado en un escándalo de compra de votos— tal vez Rousseff habría salido ilesa.</p>
+<p class="story-body-text story-content" data-para-count="276" data-total-count="7939" id="story-continues-30" tabindex="-1">Muchos economistas y legisladores brasileños sostienen que la crisis económica fue ocasionada principalmente por la misma Rousseff. Ella aumentó la presencia del gobierno en la economía y gastó grandes cantidades de dinero para favorecer industrias y empresas nacionales.</p>
+<p class="story-body-text story-content" data-para-count="328" data-total-count="8267" id="story-continues-31" tabindex="-1">“Brasil insistió en desarrollar una política industrial carente de lógica”, dijo Arminio Fraga, un exgobernador del Banco Central de Brasil. “Cuando el gobierno ofrece a las empresas todo tipo de ventajas, en forma de protección, subsidios y contratos, se crea un enorme espacio para que sucedan este tipo de cosas”.</p>
+<p class="story-body-text story-content" data-para-count="234" data-total-count="8501" id="story-continues-32" tabindex="-1">Los amigos y personas cercanas a la presidenta dicen que la cosmovisión y la personalidad de Rousseff se derivan, en parte, de los tres años que pasó en una prisión del ejército, un trauma que incluyó golpizas y electrochoques.</p>
+<p class="story-body-text story-content" data-para-count="277" data-total-count="8778" id="story-continues-33" tabindex="-1">Como presidenta, Rousseff se negó a buscar venganza y fue alabada por respaldar a la Comisión Nacional de la Verdad que expuso los abusos de la era pero no repartió castigos. En 2014, la presidenta lloró en televisión después de recibir el informe final de la comisión.</p>
+<p class="story-body-text story-content" data-para-count="442" data-total-count="9220" id="story-continues-34" tabindex="-1">Rousseff, economista y funcionaria de 68 años, nunca había ocupado un cargo de elección popular, y tampoco habría llegado a la presidencia sin el apoyo de Lula da Silva. Dado que la constitución le impedía ir en busca de un tercer periodo, Lula la escogió como la candidata presidencial del Partido de los Trabajadores. Lula da Silva ha dicho que quedó impresionado con su comprensión de datos complejos y su estilo de gerencia.</p>
+<p class="story-body-text story-content" data-para-count="274" data-total-count="9494" id="story-continues-35" tabindex="-1">Idelber Avelar, miembro del Partido de los Trabajadores en sus inicios, dijo que Da Silva también vio en Rousseff a una seguidora fiel que continuaría con sus políticas y mantendría la economía viento en popa hasta que él pudiera postularse a la presidencia otra vez.</p>
+<p class="story-body-text story-content" data-para-count="388" data-total-count="9882" id="story-continues-36" tabindex="-1">“Sin duda, pensó que Dilma era alguien a quien podría controlar fácilmente, una tecnócrata que haría funcionar la máquina, lo cual es bastante irónico teniendo en cuenta que ella ha resultado ser una muy mala administradora”, dijo Avelar, que ahora enseña en Tulane University en Nueva Orleans. “La raíz de todos sus problemas es una profunda aversión a la política”.</p>
+<p class="story-body-text story-content" data-para-count="240" data-total-count="10122" id="story-continues-37" tabindex="-1">Unos 86 ministros de su gabinete han ido y venido desde que ella asumió la presidencia, y solo tres han permanecido en sus cargos desde el primer periodo de Rousseff. Muchos se vieron forzados a renunciar tras acusaciones de corrupción.</p>
+<p class="story-body-text story-content" data-para-count="317" data-total-count="10439" id="story-continues-38" tabindex="-1">Casi dos tercios de los 594 miembros del congreso también se enfrentan a acusaciones graves de soborno, fraude electoral, secuestro y homicidio, entre ellos Eduardo Cunha, el vocero de la Cámara Baja que encabeza la iniciativa de destitución. Cunha ha sido acusado de acumular 40 millones de dólares en sobornos.</p>
+<p class="story-body-text story-content" data-para-count="252" data-total-count="10691" id="story-continues-39" tabindex="-1">En una entrevista, Rousseff le restó importancia a sugerencias de que su desdén por la micropolítica y la negociación requeridas para aprobar una ley hubiesen contribuido con sus problemas. Ella defendió su decisión de ignorar a los congresistas.</p>
+<p class="story-body-text story-content" data-para-count="91" data-total-count="10782" id="story-continues-40" tabindex="-1">“Había cierto tipo de negociaciones de chantaje en las que no me involucraría”, dijo.</p>
+<p class="story-body-text story-content" data-para-count="293" data-total-count="11075" id="story-continues-41" tabindex="-1">Durante un tiempo, los brasileños veían su determinación de acero como una cualidad. En su primer año como presidenta, la popularidad de Rousseff se mantuvo en un 77 por ciento, uno de los porcentajes más elevados de las épocas recientes. Estos días, esa cifra es de un solo dígito.</p>
+<p class="story-body-text story-content" data-para-count="258" data-total-count="11333" id="story-continues-42" tabindex="-1">Muchos brasileños siguen admirando la ética de Rousseff, pero después de dos años de inestabilidad económica, sus discursos televisados provocan una cacofonía en las calles, ya que miles de manifestantes golpean cacerolas y sartenes para ahogar su voz.</p>
+<p class="story-body-text story-content" data-para-count="215" data-total-count="11548" id="story-continues-43" tabindex="-1">Pocos reconocen los grandes logros de Rousseff, como una ley de libertad para la información histórica y medidas que le dan a la policía federal y a los fiscales nuevas herramientas para combatir la corrupción.</p>
+<p class="story-body-text story-content" data-para-count="286" data-total-count="11834" id="story-continues-44" tabindex="-1">En ciertos sentido, dicen los analistas, Rousseff ha sido víctima de esas leyes que sentaron las bases para las investigaciones que se abrieron sobre muchos miembros de la elite política y empresarial y han dejado al descubierto el preocupante nivel de deterioro político en Brasil.</p>
+<p class="story-body-text story-content" data-para-count="273" data-total-count="12107" id="story-continues-45" tabindex="-1">“Esta es un una de las paradojas más grandes de su caída, porque ella puso en marcha una maquinaria que atrapó a los políticos más importantes”, dijo Gregory Michener, un profesor en la Fundação Getúlio Vargas, un instituto de investigación en Río de Janeiro.</p>
+<p class="story-body-text story-content" data-para-count="251" data-total-count="12358" id="story-continues-46" tabindex="-1">“Dilma hizo mucho por el buen gobierno y yo creo que en última instancia quería un buen gobierno, pero al final no fue una buena política porque en el sistema rentista de partidos de Brasil, ella no estaba dispuesta a enriquecer a sus aliados”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Paula Moura colaboró con este reportaje desde São Paulo, Brasil, y Eduardo Porter desde New York.</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/brasil/" rel="tag">Brasil</a>, <a href="https://www.nytimes.com/es/tag/corrupcion/" rel="tag">corrupción</a>, <a href="https://www.nytimes.com/es/tag/dilma-rousseff/" rel="tag">Dilma Rousseff</a>, <a href="https://www.nytimes.com/es/tag/juicio-politico/" rel="tag">juicio político</a>, <a href="https://www.nytimes.com/es/tag/lula-da-silva/" rel="tag">Lula da Silva</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/05/03/ante-su-posible-destitucion-dilma-rousseff-se-queda-sin-aliados/"
+				data-title="América Latina: Ante su posible destitución, Dilma Rousseff se queda sin aliados"
+				data-author="POR ANDREW JACOBS"
+				data-media=""
+				data-description="Muchos analistas dicen que la caída en cámara lenta de la presidenta puede atribuirse a una personalidad despótica y a un estilo de liderazgo que ha ahuyentado a varios políticos, miembros de su partido y ministros del gabinete."
+				data-publish-date="3 de mayo de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/22/michel-temer-el-controversial-vicepresidente-de-brasil-se-prepara-para-asumir-el-poder/">
+					<div class="story-body">
+						<h3 class="kicker">Brasil</h3>
+
+						<h2 class="headline">
+							<span class="title">Michel Temer, el controversial vicepresidente de Brasil, se prepara para asumir el poder</span>
+							<time class="dateline">22 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/22/world/TEMER1/TEMER1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/12/el-juicio-de-dilma-rousseff-en-brasil-esta-un-paso-mas-cerca/">
+					<div class="story-body">
+						<h3 class="kicker">Brasil</h3>
+
+						<h2 class="headline">
+							<span class="title">El juicio político a Dilma Rousseff en Brasil está un paso más cerca</span>
+							<time class="dateline">12 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/12/world/12brazil/12brazil-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/22/el-destitucion-de-dilma-rousseff-no-es-un-golpe-de-estado-sino-una-cortina-de-humo/">
+					<div class="story-body">
+						<h3 class="kicker">Brasil</h3>
+
+						<h2 class="headline">
+							<span class="title">La destitución de Dilma Rousseff no es un golpe de Estado, es una cortina de humo</span>
+							<time class="dateline">22 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/20/opinion/20barrosWeb/20barrosWeb-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":738,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

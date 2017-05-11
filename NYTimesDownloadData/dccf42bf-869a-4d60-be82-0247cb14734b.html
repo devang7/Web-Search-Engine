@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004243544"/>
+<meta name="hdl" content="¿Hacia dónde va la música? El futuro del pop en diez canciones" />
+<meta name="col" content="Cultura" id="column-name" />
+<meta name="pdate" content="20160324" />
+<meta name="utime" content="20160324090025" />
+<meta name="ptime" content="20160324090025" />
+<meta name="DISPLAYDATE" content="Mar. 24, 2016" />
+<meta name="dat" content="Mar. 24, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="diez-canciones-para-saber-hacia-donde-va-la-musica" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/03/24/diez-canciones-para-saber-hacia-donde-va-la-musica/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="¿Hacia dónde va la música? El futuro del pop en diez canciones" />
+<meta property="og:description" content="Hemos reunido las pocas canciones que todos tenemos en común para mostrar los caminos creativos que exploran artistas como Sydney Bennett, Rihanna, Justin Bieber y célebres compositores del pop como Lionel Richie y David Bowie." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/02/09/arts/09HALFTIME/09HALFTIME-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-03-24" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/03/24/diez-canciones-para-saber-hacia-donde-va-la-musica/" />
+<meta property="twitter:title" content="¿Hacia dónde va la música? El futuro del pop en diez canciones" />
+<meta property="twitter:description" content="Hemos reunido las pocas canciones que todos tenemos en común para mostrar los caminos creativos que exploran artistas como Sydney Bennett, Rihanna, Justin Bieber y célebres compositores del pop como Lionel Richie y David Bowie." />
+<meta name="author" content="" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="cultura" />
+<meta name="cd12" content="musica" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="cultura" />
+<meta name="ser" content="musica" />
+<meta name="id" content="100000004243544"/>
+<meta name="wordCount" content="3844"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/03/24/diez-canciones-para-saber-hacia-donde-va-la-musica/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=03&amp;day=24&amp;name=diez-canciones-para-saber-hacia-donde-va-la-musica">
+<meta name="PT" content="article">
+<meta name="article:section" content="Cultura">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/6?exclude=7235">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/03\/24\/diez-canciones-para-saber-hacia-donde-va-la-musica\/"},"headline":"\u00bfHacia d\u00f3nde va la m\u00fasica? El futuro del pop en diez canciones","datePublished":"2016-03-24T09:00:25+00:00","dateModified":"2016-03-24T16:24:54+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/02\/09\/arts\/09HALFTIME\/09HALFTIME-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Hemos reunido las pocas canciones que todos tenemos en com\u00fan para mostrar los caminos creativos que exploran artistas como Sydney Bennett, Rihanna, Justin Bieber y c\u00e9lebres compositores del pop como Lionel Richie y David Bowie."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/03/24/diez-canciones-para-saber-hacia-donde-va-la-musica/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/interactive/2016/03/10/magazine/25-songs-that-tell-us-where-music-is-going.html#/justin-bieber-sorry" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="cultura/musica" />
+<title>¿Hacia dónde va la música? El futuro del pop en diez canciones &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/interactive/2016/03/10/magazine/25-songs-that-tell-us-where-music-is-going.html#/justin-bieber-sorry" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/03/24/diez-canciones-para-saber-hacia-donde-va-la-musica/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-7235 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+					<span class="pipe">|</span>
+				¿Hacia dónde va la música? El futuro del pop en diez canciones
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/03/24/diez-canciones-para-saber-hacia-donde-va-la-musica/"
+					data-title="Cultura: ¿Hacia dónde va la música? El futuro del pop en diez canciones"
+					data-author=""
+					data-media=""
+					data-description="Hemos reunido las pocas canciones que todos tenemos en común para mostrar los caminos creativos que exploran artistas como Sydney Bennett, Rihanna, Justin Bieber y célebres compositores del pop como Lionel Richie y David Bowie."
+					data-publish-date="24 de marzo de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/musica/">Música</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">¿Hacia dónde va la música? El futuro del pop en diez canciones</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					
+					<time class="dateline" datetime="2016-03-24">24 de marzo de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/03/24/diez-canciones-para-saber-hacia-donde-va-la-musica/"
+							data-title="Cultura: ¿Hacia dónde va la música? El futuro del pop en diez canciones"
+							data-author=""
+							data-media=""
+							data-description="Hemos reunido las pocas canciones que todos tenemos en común para mostrar los caminos creativos que exploran artistas como Sydney Bennett, Rihanna, Justin Bieber y célebres compositores del pop como Lionel Richie y David Bowie."
+							data-publish-date="24 de marzo de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004195772" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/02/09/arts/09HALFTIME/09HALFTIME-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/02/09/arts/09HALFTIME/09HALFTIME-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/02/09/arts/09HALFTIME/09HALFTIME-superJumbo.jpg" data-mediaviewer-caption="Coldplay, Beyoncé y Bruno Mars durante el show de medio tiempo en el Super Bowl" data-mediaviewer-credit="Doug Mills/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/02/09/arts/09HALFTIME/09HALFTIME-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Coldplay, Beyoncé y Bruno Mars durante el show de medio tiempo en el Super Bowl</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Doug Mills/The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/interactive/2016/03/10/magazine/25-songs-that-tell-us-where-music-is-going.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article#/justin-bieber-sorry">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="13" data-total-count="13" id="story-continues-2" tabindex="-1"><strong>Introducción</strong></p>
+<p class="story-body-text story-content" data-para-count="16" data-total-count="29" id="story-continues-3" tabindex="-1"><em>por Nitsuh Abebe</em></p>
+<p class="story-body-text story-content" data-para-count="350" data-total-count="379" id="story-continues-4" tabindex="-1">No es que haya decidido no escucharla por cuestión de principios. Es solo que Beyoncé lanzó “<a href="http://www.nytimes.com/2016/02/07/arts/music/beyonce-formation-super-bowl-video.html" target="_blank">Formation</a>” un sábado, después la presentó en el Super Bowl y, para cuando llegó el lunes, no había tenido tiempo de escucharla por razones poco interesantes: casualmente estuve dedicado a otras cosas, lo que probablemente es uno de mis derechos.</p>
+<p class="story-body-text story-content" data-para-count="544" data-total-count="923" id="story-continues-5" tabindex="-1">Para ese entonces, la canción había generado un debate tan intenso en el ciberespacio que resultaba difícil encender una computadora sin que las opiniones sobre “Formation&#8221; y sus variadas lecturas sociopolíticas salieran de la pantalla y te tomaran por el cuello. Por eso, el hecho de no haberla escuchado adquirió una suerte de dimensión política. Debía tomar una decisión. O consumía de forma sumisa este debate y me formaba una opinión al respecto o desarrollaba una defensa sobre por qué no la había escuchado todavía.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="299" data-total-count="1222" id="story-continues-6" tabindex="-1">El punto es que, durante un momento, la música me presionaba de manera activa para que le pusiera atención, y esa presión no estaba basada en el sonido, la presentación o la composición, sino en la avalancha de perspectivas, lecturas y disputas ideológicas que se habían asociado con el tema.</p>
+<p class="story-body-text story-content" data-para-count="522" data-total-count="1744" id="story-continues-7" tabindex="-1">Hemos encontrado una manera de reunir las pocas canciones que todos tenemos en común, enlazarlas con nuestras opiniones y hacer un ruido alegre. No es que se lo recrimine a Beyoncé o al mundo. Pero sí deja en claro lo que nos resulta mucho más difícil de discutir, por lo menos con otras personas: cómo nos hacen sentir las canciones. Lo que descubrimos en ellas y lo que antes no estaba en nuestra mente, los oscuros placeres que estamos dispuestos a arriesgar tratando de explicarlo todo a partir de esa oscuridad.</p>
+<p class="story-body-text story-content" data-para-count="63" data-total-count="1807" id="story-continues-8" tabindex="-1">La inmensa vida privada de la música. ¿Cómo hablamos de eso?</p>
+<p class="story-body-text story-content" data-para-count="115" data-total-count="1922" id="story-continues-9" tabindex="-1"><em>Nitsuh Abebe es editor de The New York Times Magazine y fue crítico de música en la revista New York y Pitchfork.</em></p>
+<figure id="media-100000004138058" class="media photo media-100000004138058 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/12/arts/12artsbeat-billboard/12artsbeat-billboard-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-11">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/12/arts/12artsbeat-billboard/12artsbeat-billboard-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/12/arts/12artsbeat-billboard/12artsbeat-billboard-superJumbo.jpg" data-mediaviewer-caption="Justin Bieber’s “Sorry” has replaced Adele’s “Hello” at the top of Billboard’s singles chart." data-mediaviewer-credit="Matt Sayles/Invision, via Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/12/arts/12artsbeat-billboard/12artsbeat-billboard-master675.jpg"/>
+		<meta itemprop="height" content="531" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Justin Bieber’s “Sorry” has replaced Adele’s “Hello” at the top of Billboard’s singles chart.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Matt Sayles/Invision, via Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="133" data-total-count="2055" id="story-continues-11" tabindex="-1"><strong>&#8220;Sorry&#8221;</strong><br />Justin Bieber<br /><em>Cómo esta estrella del pop recuperó nuestro cariño con un acto de desaparición.</em><br />por Mary H.K. Choi</p>
+<p class="story-body-text story-content" data-para-count="320" data-total-count="2375" id="story-continues-12" tabindex="-1">“<a href="https://www.youtube.com/watch?v=fRh_vgS2dFE" target="_blank">Sorry</a>”, el segundo sencillo de “Purpose”, el cuarto álbum de Justin Bieber, es una creación pegajosa: el equivalente melódico de los Doritos. Hay dos videos oficiales de la canción que han tenido más de mil millones de visitas y en ninguno aparece el cantante canadiense. Sencillamente no necesita hacerlo.</p>
+<p class="story-body-text story-content" data-para-count="389" data-total-count="2764" id="story-continues-13" tabindex="-1">Bieber tiene sabor y atractivo, lo cual es tan importante para hacer buen pop como el talento real. “Sorry” es una sabia suspensión de su ego a favor de una máquina generadora de éxitos. Se puede decir lo que sea sobre las decisiones en su vida pública; después de un año lleno de malas decisiones, Bieber hizo lo correcto con la selección de los productores para “Purpose”.</p>
+<p class="story-body-text story-content" data-para-count="413" data-total-count="3177" id="story-continues-14" tabindex="-1">Se hizo buen amigo de Diplo y Skrillex ⎯quienes conforman “Jack Ü”⎯ e hicieron juntos “<a href="http://www.nytimes.com/interactive/2015/08/25/arts/music/justin-bieber-diplo-skrillex-make-a-hit-song.html" target="_blank">Where Are Ü Now</a>”, una excelente canción a pesar de esas fastidiosas diéresis que le ponen a todo. Skrillex también colaboró con él en “Sorry”, pero su toque es mucho más sutil en este tema: nada de líneas de bajo tambaleantes, ni siquiera un solo momento para levantar el puño cuando termina un beat.</p>
+<p class="story-body-text story-content" data-para-count="102" data-total-count="3279" id="story-continues-15" tabindex="-1">Esta canción es un triunfo de la música por encima de la narrativa infernal de la industria del pop.</p>
+<p class="story-body-text story-content" data-para-count="75" data-total-count="3354" id="story-continues-16" tabindex="-1"><em>Mary H. K. Choi es escritora y conductora del podcast “Hey, Cool Job!”.</em></p>
+<figure id="media-100000004256848" class="media photo media-100000004256848 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/03/13/magazine/13mus-sydthakydl5/13mus-sydthakydl5-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-18">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/03/13/magazine/13mus-sydthakydl5/13mus-sydthakydl5-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/03/13/magazine/13mus-sydthakydl5/13mus-sydthakydl5-superJumbo-v2.jpg" data-mediaviewer-caption="Left to right: Christopher A. Smith, the Internet’s drummer; Bennett; and Tyrone McKinley. Bennett’s house serves as a home base for the band and extended circle of friends." data-mediaviewer-credit="Graeme Mitchell for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/03/13/magazine/13mus-sydthakydl5/13mus-sydthakydl5-master675-v2.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Left to right: Christopher A. Smith, the Internet’s drummer; Bennett; and Tyrone McKinley. Bennett’s house serves as a home base for the band and extended circle of friends.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Graeme Mitchell for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="141" data-total-count="3495" id="story-continues-18" tabindex="-1"><strong>&#8220;Get Away&#8221;</strong><br />Syd Tha Kid &amp; The Internet<br /><em>Cómo hacer tu propio camino en la industria de la música posdisqueras.</em><br />por Jenna Wortham</p>
+<p class="story-body-text story-content" data-para-count="304" data-total-count="3799" id="story-continues-19" tabindex="-1">Era una noche lluviosa de enero en Los Ángeles y la audiencia de “<a href="https://www.youtube.com/watch?v=rRVgdE4T5AI" target="_blank">Jimmy Kimmel Live!</a>” disfrutó de “Get Away”, una canción de la banda &#8220;The Internet&#8221; que es un himno punzante sobre cómo apaciguar a una novia infeliz. El público levantó los brazos y bailó al ritmo de la música.</p>
+<p class="story-body-text story-content" data-para-count="440" data-total-count="4239" id="story-continues-20" tabindex="-1">Las mujeres parecían especialmente cautivadas por Sydney Bennett ⎯mejor conocida como Syd tha Kid⎯ la cantante y líder de la banda, cuyo atractivo sexual le otorgó una carga de profundidad a la presentación. Bennett tiene 23 años, tez morena, un mohicano teñido de rubio y proyecta la actitud relajada de una <em>skater</em> adolescente y así se viste. En la presentación usó Vans, una camiseta y jeans a la cadera, todo de color negro.</p>
+<p class="story-body-text story-content" data-para-count="431" data-total-count="4670" id="story-continues-21" tabindex="-1">Mientras cantaba se movió por cada centímetro del pequeño escenario, observando a la multitud, como si quisiera averiguar si la persona que le gusta asistió al show. Para crear su presencia escénica, Bennett estudió al cantante de R&amp;B D’Angelo, cuyo video para la canción “Untitled (How Does It Feel)” (2000) consiste en mostrar su torso bien definido y desnudo que escurre de sudor durante cuatro minutos y medio.</p>
+<p class="story-body-text story-content" data-para-count="234" data-total-count="4904" id="story-continues-22" tabindex="-1">Esta intérprete gravitó hacia artistas pioneros, como Missy Elliott y su sonido espacial, el soul sucio de Erykah Badu o el <em>acid jazz</em> de Jamiroquai. Pharrell Williams, el extraño <em>skater</em> y músico afroamericano, es su santo patrón.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="418" data-total-count="5322" id="story-continues-23" tabindex="-1">Como la mayoría de los chicos interesados en la música que vivieron en Los Ángeles a mediados de los años 2000, Bennett supo de un adolescente llamado Tyler Okonma, quien se hacía llamar Tyler, the Creator. Tenía un buen número de seguidores en MySpace, donde lanzaba su música. “Su producción me atrajo”, dice. “No sonaba a lo que todos los demás estaban haciendo: era diferente y estaba a la moda”.</p>
+<p class="story-body-text story-content" data-para-count="330" data-total-count="5652" id="story-continues-24" tabindex="-1">Los miembros de The Internet saben cómo armonizar las ideas alternativas con las identidades marginales y los artistas nuevos que los viejos medios tienden a ignorar. Han hecho un trabajo tan bueno que las personas como Bennett ⎯negra, <em>queer</em> y extraña⎯ pueden existir sin la carga de tener que representar algo más general.</p>
+<p class="story-body-text story-content" data-para-count="289" data-total-count="5941" id="story-continues-25" tabindex="-1">Bennett jamás será lo que no es. No está buscando que la valide una disquera ni el público. En un concierto reciente, miles de adolescentes mexicanos se apretujaron junto al escenario mientras cantaban en inglés y gritaban su nombre; Bennett parecía estar en casa, siendo ella misma.</p>
+<p class="story-body-text story-content" data-para-count="58" data-total-count="5999" id="story-continues-26" tabindex="-1"><em>Jenna Wortham es redactora de The New York Times Magazine.</em></p>
+<figure id="media-100000004256854" class="media photo media-100000004256854 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/03/13/magazine/13mus-wilco/13mus-wilco-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-28">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/03/13/magazine/13mus-wilco/13mus-wilco-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/03/13/magazine/13mus-wilco/13mus-wilco-superJumbo-v2.jpg" data-mediaviewer-caption="Jeff Tweedy (left) and members of Wilco in 2004." data-mediaviewer-credit="Michael Schmelling"  itemprop="url" itemid="https://static01.nyt.com/images/2016/03/13/magazine/13mus-wilco/13mus-wilco-master675-v2.jpg"/>
+		<meta itemprop="height" content="535" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Jeff Tweedy (left) and members of Wilco in 2004.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Michael Schmelling
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="105" data-total-count="6104" id="story-continues-28" tabindex="-1"><strong>&#8220;One Sunday Morning&#8221;</strong><br />Wilco<br /><em>Una canción de consuelo en una época de rencor.</em><br />por George Saunders</p>
+<p class="story-body-text story-content" data-para-count="511" data-total-count="6615" id="story-continues-29" tabindex="-1">En el grandilocuente y aterrador ambiente político actual escucho obsesivamente <a href="https://www.youtube.com/watch?v=xa2XnouRXKo" target="_blank">One Sunday Morning</a>”, el opus de Wilco que dura 12 minutos. Esta canción me provoca un conjunto de sentimientos que podría describir como calma mental, paciencia y una firme determinación por amar mejor; también sirve como un antídoto para la dureza del momento. Es un recordatorio de que, con la paciencia y empatía suficiente por los demás, las cosas pueden solucionarse incluso cuando las personas están en desacuerdo.</p>
+<p class="story-body-text story-content" data-para-count="322" data-total-count="6937" id="story-continues-30" tabindex="-1">¿Qué significa la canción? Bueno, un gran tema tiene un significado que va más allá del sentido más simple. Tiene un significado a partir de su sonido. La letra, que ya es hermosa puesto que Jeff Tweedy es uno de los grandes poetas de nuestra época, se hace aun más bella gracias a la forma en que Tweedy la canta.</p>
+<p class="story-body-text story-content" data-para-count="534" data-total-count="7471" id="story-continues-31" tabindex="-1">El efecto que todo esto tiene en el oyente es transformador. Escuchar “One Sunday Morning” me recompone: es como una especie de medicina aural. Siento una alteración positiva en el cuerpo y la mente, un sentido renovado de humildad inspirada por la tristeza del mundo, y una determinación por seguir intentando ser mejor. Me siento como si recordara las ventajas de estar vivo y el hecho de que hay más recursos positivos a mi alcance de los que utilizo actualmente. “One Sunday Morning” es como una oración de 12 minutos.</p>
+<p class="story-body-text story-content" data-para-count="62" data-total-count="7533" id="story-continues-32" tabindex="-1"><em>George Saunders es el autor del libro “Tenth of December”.</em></p>
+<figure id="media-100000004256712" class="media photo media-100000004256712 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/03/13/magazine/13mus-chamberlaindrummer/13mus-chamberlaindrummer-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-34">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/03/13/magazine/13mus-chamberlaindrummer/13mus-chamberlaindrummer-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/03/13/magazine/13mus-chamberlaindrummer/13mus-chamberlaindrummer-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Michael Tighe for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/03/13/magazine/13mus-chamberlaindrummer/13mus-chamberlaindrummer-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Michael Tighe for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="168" data-total-count="7701" id="story-continues-34" tabindex="-1"><strong>&#8220;John Cougar, John Deere, John 3:16 (Keith Urban)&#8221;</strong><br />Matt Chamberlain<br /><em>El baterista de sesión más grandioso enfrenta la era de las máquinas.</em><br />por Jeff Himmelman</p>
+<p class="story-body-text story-content" data-para-count="297" data-total-count="7998" id="story-continues-35" tabindex="-1">A fines de la primavera pasada, la estrella de la música <em>country</em>, Keith Urban, le envió un mensaje de texto a Matt Chamberlain, uno de los bateristas más respetados de la industria. Urban estaba trabajando en una canción que se convirtió en el éxito “<a href="https://www.youtube.com/watch?v=Gdu8M2val_w" target="_blank">John Cougar, John Deere, John 3:16</a>”.</p>
+<p class="story-body-text story-content" data-para-count="440" data-total-count="8438" id="story-continues-36" tabindex="-1">Buscaba un híbrido particular entre los sonidos acústicos y electrónicos de batería para hacer que la canción sobresaliera. ¿Estaría Chamberlain dispuesto a tomar un vuelo desde Los Ángeles a Nashville para intentarlo? Los dos trabajaron juntos años antes, y Chamberlain era buen amigo de Dann Huff, el productor del proyecto, así que empacó sus baquetas, una caja de ritmos Elektron que acababa de comprar y se dirigió al este.</p>
+<p class="story-body-text story-content" data-para-count="316" data-total-count="8754" id="story-continues-37" tabindex="-1">En Blackbird Studio, Nashville, Chamberlain programó un bucle de batería —una repetición mecánica más del <em>hip-hop</em> que del <em>country</em>— y después tocó la batería en vivo por encima del sonido del bucle, lo cual hizo más profundo el timbre y aportó acentos y acompañamientos cuando los versos lo requerían.</p>
+<p class="story-body-text story-content" data-para-count="260" data-total-count="9014" id="story-continues-38" tabindex="-1">En un par de horas el inicio con la batería, el bajo y la voz, así como toda la vibra de la canción estuvieron completas. El arreglo pegajoso, el coro y el tono <em>country</em> del tema elevaron a “John Cougar” al segundo lugar de la lista country de Billboard.</p>
+<p class="story-body-text story-content" data-para-count="208" data-total-count="9222" id="story-continues-39" tabindex="-1">Este es el trabajo del baterista de estudio moderno y es la razón por la que, cuando un proyecto de una gran disquera necesita un baterista, Chamberlain es la primera persona a la que los productores llaman.</p>
+<p class="story-body-text story-content" data-para-count="61" data-total-count="9283" id="story-continues-40" tabindex="-1"><em>Jeff Himmelman es un redactor de The New York Times Magazine.</em></p>
+<figure id="media-100000004191900" class="media photo media-100000004191900 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/02/08/magazine/08mag-rihanna-1/08mag-rihanna-1-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-42">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/02/08/magazine/08mag-rihanna-1/08mag-rihanna-1-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/02/08/magazine/08mag-rihanna-1/08mag-rihanna-1-superJumbo.jpg" data-mediaviewer-caption="Rihanna at the Hollywood Bowl in 2015." data-mediaviewer-credit="Kevin Winter/Getty Images for CBS Radio Inc."  itemprop="url" itemid="https://static01.nyt.com/images/2016/02/08/magazine/08mag-rihanna-1/08mag-rihanna-1-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Rihanna at the Hollywood Bowl in 2015.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Kevin Winter/Getty Images for CBS Radio Inc.
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="102" data-total-count="9385" id="story-continues-42" tabindex="-1"><strong>&#8220;Consideration&#8221;</strong><br />Rihanna<br /><em>Una estrella del pop exige un tiempo para ella.</em><br />por Doreen St. Félix</p>
+<p class="story-body-text story-content" data-para-count="368" data-total-count="9753" id="story-continues-43" tabindex="-1">Usualmente los duetos musicales se basan en la heterosexualidad y sus dramas. Por ejemplo: ella da, él recibe. Él le ruega, ella se rehúsa. Se reconcilian, pero los artistas siempre observan la distinción sexual clásica, lo cual hace que las circunstancias de la vocalista femenina sean un buen barómetro para las circunstancias del discurso femenino en general.</p>
+<p class="story-body-text story-content" data-para-count="562" data-total-count="10315" id="story-continues-44" tabindex="-1">Pero Rihanna, la gran experta de la autosatisfacción en el pop, es una ermitaña y todo el tiempo desdeña ese tipo de identidad recíproca. Así que lo más lógico es que hasta en el dueto de su último álbum, eligiera un espejo vocal y no un complemento vocal. En “<a href="https://www.youtube.com/watch?v=ouXN1Nibmpw" target="_blank">Consideration</a>”, la primera canción del álbum “Anti”, Rihanna y la cantante multigénero SZA son una bifurcación del mismo río que se enlaza y vuelve a separarse. Estas mujeres adoptan sus respectivas versiones de una actitud plácida: Rihanna canta con descaro; SZA, sin alegría.</p>
+<p class="story-body-text story-content" data-para-count="337" data-total-count="10652" id="story-continues-45" tabindex="-1">Cada una está tranquila pero sospechas que se dirigen a un posible furor. Cantan hasta que sus voces se funden; sus registros vocales combinan tan perfectamente que la primera vez que escuchas la canción, puede que no te des cuenta de que Rihanna no está cantando sola. La similitud es casi perturbadora y sugiere una erótica del yo.</p>
+<p class="story-body-text story-content" data-para-count="454" data-total-count="11106" id="story-continues-46" tabindex="-1">A menudo Rihanna visita Barbados, la nación que la vio nacer. Como ese país isleño, “Consideration” no se conecta con nada fuera de sí misma; es un relajante para quienes buscamos calma política y mental, una canción de cuna para adultos. El tema es arrogante en cuanto al “exterior”; invoca el aire privado de una habitación cerrada. A mí también me gustaría estar adentro mientras veo por la ventana y escucho el eco de mi propia voz.</p>
+<p class="story-body-text story-content" data-para-count="45" data-total-count="11151" id="story-continues-47" tabindex="-1"><em>Doreen St. Félix es un escritor de Brooklyn.</em></p>
+<figure id="media-100000004256765" class="media photo media-100000004256765 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/03/13/magazine/13mus-kendrickamardraxler2/13mus-kendrickamardraxler2-master675-v6.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-49">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/03/13/magazine/13mus-kendrickamardraxler2/13mus-kendrickamardraxler2-master675-v6.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/03/13/magazine/13mus-kendrickamardraxler2/13mus-kendrickamardraxler2-superJumbo-v6.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Kevin Mazur/Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/03/13/magazine/13mus-kendrickamardraxler2/13mus-kendrickamardraxler2-master675-v6.jpg"/>
+		<meta itemprop="height" content="449" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Kevin Mazur/Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="135" data-total-count="11286" id="story-continues-49" tabindex="-1"><strong>&#8220;The Blacker the Berry&#8221;</strong><br />Kendrick Lamar<br /><em>¿Quién tiene derecho a decir cómo se ve a sí misma la gente negra?</em><br />por Marlon James</p>
+<p class="story-body-text story-content" data-para-count="319" data-total-count="11605" id="story-continues-50" tabindex="-1">Casi todos los álbumes de rap tienen ese momento único con el que no puedes lidiar. Si eres mujer, hay por lo menos cinco. Ha pasado casi un año desde que escuché por primera vez “To Pimp a Butterfly” de Kendrick Lamar, una obra maestra del rap, ambiciosa e hipnótica, y pasó casi un año para que me gustara.</p>
+<p class="story-body-text story-content" data-para-count="409" data-total-count="12014" id="story-continues-51" tabindex="-1">La razón principal: la canción número 13, “<a href="https://www.youtube.com/watch?v=rMxNYQ71LOk" target="_blank">The Blacker the Berry</a>”. Hasta ese momento, musicalmente, si no es que en sus letras, “Butterfly” es casi una tormenta silenciosa, un álbum más introspectivo que extrovertido, aunque ataca el racismo institucional y las políticas del barrio. Después viene “The Blacker the Berry”, con todo y su batería explosiva, así como su rabia al estilo NWA.</p>
+<p class="story-body-text story-content" data-para-count="267" data-total-count="12281" id="story-continues-52" tabindex="-1">Por primera vez, Lamar está furioso, como si acabara de darse cuenta de que la única respuesta al estereotipo del hombre negro y enojado es enojarse aún más. Es la parte que, pensé, me engancharía más, pero resultó ser la parte que me hizo rechazar el álbum.</p>
+<p class="story-body-text story-content" data-para-count="700" data-total-count="12981" id="story-continues-53" tabindex="-1">Ni siquiera está &#8220;rapeando&#8221;, sino escupiendo fuego; pronuncia una línea, vuelve a ella y la dispara como el boxeador Jack Johnson cuando dijo: “Soy negro, nunca dejarán que lo olvide. Por supuesto que soy negro y jamás dejaré que lo olviden”. Kendrick enciende su “Soy negro” con el conocimiento de que no ha cambiado ni una sola cosa. Deja que el DJ jamaiquino Assassin lo apoye en el coro, y así dibuja la línea desde la plantación a la esquina de la calle; también utiliza el interruptor de quien controla la autodeterminación de la raza negra, desde la frase “los látigos dejaron cicatrices en mi espalda” hasta “el gran látigo se estacionó en la cuadra”.</p>
+<p class="story-body-text story-content" data-para-count="557" data-total-count="13538" id="story-continues-54" tabindex="-1">Y aquí estaba yo haciéndole lo mismo a Kendrick. Él solo era un hombre que se preguntaba cómo es que alguien puede llegar a ser parte de la conversación de Black Lives Matter cuando no le importa la vida de los negros. Cómo alguien puede sentir rabia por los asesinatos cuando el suicidio le parece bien. Exploró estos temas como conceptos, tal como lo hacen los artistas. Planteó preguntas difíciles y engañosas para las que no hay respuestas; llega a la mitad de su canción, sintiéndolas, respirándolas, pero mantiene el don de la invención.</p>
+<p class="story-body-text story-content" data-para-count="98" data-total-count="13636" id="story-continues-55" tabindex="-1">“The Blacker the Berry” es muchas cosas a la vez pero, en su esencia, es lo que llamamos arte.</p>
+<p class="story-body-text story-content" data-para-count="66" data-total-count="13702" id="story-continues-56" tabindex="-1"><em>Marlon James es el novelista ganador del Man Booker Prize en 2015.</em></p>
+<figure id="media-100000004069711" class="media photo media-100000004069711 embedded layout-large-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/03/arts/03COLDPLAY1/03COLDPLAY1-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-58">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/03/arts/03COLDPLAY1/03COLDPLAY1-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/03/arts/03COLDPLAY1/03COLDPLAY1-superJumbo-v2.jpg" data-mediaviewer-caption="Coldplay’s frontman, Chris Martin." data-mediaviewer-credit="Chad Batka for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/03/arts/03COLDPLAY1/03COLDPLAY1-master675-v2.jpg"/>
+		<meta itemprop="height" content="420" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Coldplay’s frontman, Chris Martin.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Chad Batka for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="121" data-total-count="13823" id="story-continues-58" tabindex="-1"><strong>&#8220;Hymn for the Weekend&#8221;</strong><br />Coldplay<br /><em>¿Coldplay es una banda insípida? Al futuro no le importará.</em><br />por Jeremy Gordon</p>
+<p class="story-body-text story-content" data-para-count="285" data-total-count="14108" id="story-continues-59" tabindex="-1">Durante casi dos décadas los miembros de Coldplay han escrito muchísimas canciones memorables, en las que combinan los sentimientos de las tarjetas Hallmark con melodías de himnos colosales; se han abierto camino hasta llegar a los corazones de la gente y las listas de popularidad.</p>
+<p class="story-body-text story-content" data-para-count="443" data-total-count="14551" id="story-continues-60" tabindex="-1">Son los sucesores de U2, otra banda que cristalizó la grandeza de la experiencia humana mediante innumerables temas de rock con duración de cuatro minutos, listos para la radio. Millones de personas que vieron el reciente Super Bowl sabían qué significaba que Chris Martin se sentara en el piano, preparándose para tocar las notas iniciales de “Clocks”. Como lo expresó el rapero Future en un tuit: “#Coldplay legendary forever”.</p>
+<p class="story-body-text story-content" data-para-count="307" data-total-count="14858" id="story-continues-61" tabindex="-1">Unas semanas antes del Super Bowl, Coldplay y Beyoncé lanzaron el video musical “<a href="https://www.youtube.com/watch?v=YykjpeuMNEk" target="_blank">Hymn for the Weekend</a>”, una colaboración del álbum más reciente de la banda. Canciones de alto perfil como esa se conciben como eventos, listos para ser tocados en megapresentaciones como el medio tiempo del Super Bowl.</p>
+<p class="story-body-text story-content" data-para-count="182" data-total-count="15040" id="story-continues-62" tabindex="-1">Pero en el medio tiempo se presentaron tanto Beyoncé como Coldplay, mas no la canción. Martin dijo que “Hymn” era demasiado nueva y no habría sido “apropiado” presentarla.</p>
+<p class="story-body-text story-content" data-para-count="235" data-total-count="15275" id="story-continues-63" tabindex="-1">Lo que la audiencia quería era la calidez de la familiaridad. Querían “Clocks”. La presentación en vivo habría sido un éxito, pero Martin sabe que habrá muchas oportunidades más adelante. La banda está destinada a perdurar.</p>
+<p class="story-body-text story-content" data-para-count="57" data-total-count="15332" id="story-continues-64" tabindex="-1"><em>Jeremy Gordon es editor adjunto de noticias en Pitchfork.</em></p>
+<p class="story-body-text story-content" data-para-count="107" data-total-count="15439" id="story-continues-65" tabindex="-1"><strong>&#8220;Hello&#8221;</strong><br />Lionel Richie<br /><em>Una magnífica balada cursi que jamás dejaremos de escuchar.</em><br />por Jody Rosen</p>
+<p class="story-body-text story-content" data-para-count="388" data-total-count="15827" id="story-continues-66" tabindex="-1">“<a href="https://www.youtube.com/watch?v=b_ILDFp5DGA" target="_blank">Hello</a>” de Lionel Richie comienza discretamente, casi a escondidas, presentando una pequeña y ácida melodía de sintetizador por encima de los acordes sigilosos de un piano. La canción se adentró en la conciencia colectiva de una manera igualmente furtiva. Llegó a finales de 1983, sepultada en “Can’t Slow Down”, el segundo álbum solista del excantante de los Commodores.</p>
+<p class="story-body-text story-content" data-para-count="409" data-total-count="16236" id="story-continues-67" tabindex="-1">Los críticos no le prestaron atención a “Hello”, Richie fue ambivalente pues eliminó la canción de “Can’t Slow Down” en algún momento durante las sesiones de grabación, antes de volver a incluirla. Pero cuando “Hello” fue lanzada como sencillo en febrero de 1984, se disparó hasta la posición número uno de la lista Hot 100 de Billboard y llegó a los primeros lugares en todo el mundo.</p>
+<p class="story-body-text story-content" data-para-count="373" data-total-count="16609" id="story-continues-68" tabindex="-1">Recientemente, “Hello” ha seducido a una nueva generación que descubrió el video clásico en YouTube. Lo más destacado viene en la escena final, cuando la heroína-escultora muestra un espantoso busto de Richie hecho en terracota (cuando el cantante se quejó de que no se parecía a él, Bob Giraldi, el director, le respondió: “Lionel, la chica está ciega”).</p>
+<p class="story-body-text story-content" data-para-count="335" data-total-count="16944" id="story-continues-69" tabindex="-1">El resurgimiento de “Hello” es una curiosidad, un trozo de pop desechado que volvió a la corriente comercial gracias a los giros impredecibles de internet. Pero también es un testamento al magnetismo de Lionel Richie, de 66 años, quien ha tenido una presencia más duradera y ha sido mejor músico de lo que muchos han admitido.</p>
+<p class="story-body-text story-content" data-para-count="301" data-total-count="17245" id="story-continues-70" tabindex="-1">La transformación en meme de “Hello” ha coincidido con un resurgimiento más amplio de Richie. “Tuskegee” (2012), su décimo álbum, fue un éxito inesperado que emparejó al cantante con estrellas <em>country</em> gracias a las versiones nuevas de “Easy”, “Say You, Say Me” y otros clásicos.</p>
+<p class="story-body-text story-content" data-para-count="279" data-total-count="17524" id="story-continues-71" tabindex="-1">Richie ha pasado varios años abarrotando estadios, resurgiendo silenciosamente como un artista de grandes ventas en sus giras. En junio pasado, tocó en el festival musical de Glastonbury en Inglaterra y atrajo una multitud de casi 200.000 personas, la más grande del festival.</p>
+<p class="story-body-text story-content" data-para-count="78" data-total-count="17602" id="story-continues-72" tabindex="-1"><em>Jody Rosen es una crítica independiente de The New York Times Style Magazine.</em></p>
+<p class="story-body-text story-content" data-para-count="108" data-total-count="17710" id="story-continues-73" tabindex="-1"><strong>&#8220;El Taxi&#8221;</strong><br />Pitbull<br /><em>‘Mr. Worldwide’ habla en código pancaribeño.</em><br />por Julianne Escobedo Shepherd</p>
+<p class="story-body-text story-content" data-para-count="428" data-total-count="18138" id="story-continues-74" tabindex="-1">Armando Christian Pérez, mejor conocido como Pitbull, nació en Miami y sus padres son inmigrantes cubanos pero se convirtió en Mr. Worldwide mediante su comprensión de cómo funciona lo viral. “<a href="https://www.youtube.com/watch?v=qRp3-D3SMwI" target="_blank">El Taxi</a>” es un fantástico ejemplo: lanzó la canción en julio de 2014, pero fue en este año —después de 400 millones de visitas en YouTube— cuando alcanzó el primer lugar en la lista de éxitos digitales de Billboard.</p>
+<p class="story-body-text story-content" data-para-count="517" data-total-count="18655" id="story-continues-75" tabindex="-1">Como la mayoría de sus grandes éxitos retoma una canción muy querida y más vieja que usa como <em>sample</em>, la hace deslumbrante y la interpola en una conversación entre múltiples lenguas, nacionalidades y culturas. En este caso, el detonante es el éxito de 1993 “Murder She Wrote”, de Chaka Demus and Pliers: un clásico del <em>dancehall riddim</em> jamaiquino que reúne a Pitbull, junto con Sensato (el rapero dominicano estadounidense) y Osmani García (el reguetonero cubano) en una suerte de diálogo pancaribeño.</p>
+<p class="story-body-text story-content" data-para-count="379" data-total-count="19034" id="story-continues-76" tabindex="-1">Jamaica y Cuba han disfrutado una relación amistosa desde principios de los setenta, cuando Jamaica presionó en la Organización de Estados Americanos para apoyar a Cuba. Lo más importante, sin embargo, es Miami, el hogar espiritual de las emociones de “El Taxi”, el lugar donde los inmigrantes caribeños han mezclado y confundido culturas e influencias durante décadas.</p>
+<p class="story-body-text story-content" data-para-count="427" data-total-count="19461" id="story-continues-77" tabindex="-1">En 2015, Pitbull se describió en una entrevista para Billboard como “el epítome del sueño estadounidense, el que lleva las de perder, el luchador, el que siempre está hambriento, siempre agradecido”. Algunos podrían ser alérgicos al pulso estrambótico de su sonido proveniente de las fiestas en Miami. Pero cada <em>beat</em> ilustra claramente la manera en que los inmigrantes han aprendido a utilizar el desdén a su favor.</p>
+<p class="story-body-text story-content" data-para-count="61" data-total-count="19522" id="story-continues-78" tabindex="-1"><em>Julianne Escobedo Shepherd es la editora cultural de Jezebel.</em></p>
+<figure id="media-100000004181416" class="media photo media-100000004181416 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/02/02/arts/03BOWIE/03BOWIE-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-80">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/02/02/arts/03BOWIE/03BOWIE-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/02/02/arts/03BOWIE/03BOWIE-superJumbo.jpg" data-mediaviewer-caption="David Bowie, performing in Athens in 1996, died last month at 69." data-mediaviewer-credit="Reuters"  itemprop="url" itemid="https://static01.nyt.com/images/2016/02/02/arts/03BOWIE/03BOWIE-master675.jpg"/>
+		<meta itemprop="height" content="490" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">David Bowie, performing in Athens in 1996, died last month at 69.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Reuters
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="47" data-total-count="19569" id="story-continues-80" tabindex="-1"><strong>&#8220;Lazarus&#8221;</strong><br />David Bowie<br />por Will Hermes</p>
+<p class="story-body-text story-content" data-para-count="444" data-total-count="20013" id="story-continues-81" tabindex="-1">Cuando David Bowie murió en enero, tan solo dos días después de lanzar su álbum “Blackstar”, los fanáticos comenzaron a analizar las canciones para encontrar mensajes escondidos. Algunos señalaron que una “estrella negra” puede referirse a un tipo de lesión. Otros dijeron que se refería a una canción profunda e inspirada en la mortalidad de uno de los ídolos de Bowie, Elvis Presley, que también se titula “Black Star”.</p>
+<p class="story-body-text story-content" data-para-count="452" data-total-count="20465" id="story-continues-82" tabindex="-1">Y cuando llegaron las noticias sobre su lucha por recuperar la salud, el estallido creativo de sus últimos días sugirió una suerte de <em>ars moriendi</em> genialmente coreografiada, un arte de morir. “<a href="https://www.youtube.com/watch?v=y-JqH1M4Ya8" target="_blank">Lazarus</a>”, es la canción que recorre toda su carrera y que completó tan solo días antes de su muerte, allí canta: “Look up here, I’m in heaven”, para después agregar con un guiño cósmicamente paternal: “Dropped my cellphone down below”.</p>
+<p class="story-body-text story-content" data-para-count="669" data-total-count="21134" id="story-continues-83" tabindex="-1">Hay una tradición de “poemas de la muerte” en algunos países asiáticos, y conforme una generación de músicos extrovertidos pasan a mejor vida, el álbum del adiós se ha convertido en un equivalente occidental. “Expression”, de John Coltrane, podría considerarse un predecesor. Warren Zevon creó “The Wind” después de haber sido diagnosticado con un cáncer inoperable. En el último álbum de la serie “American Recordings” de Johnny Cash, que se lanzó mientras estaba vivo, presentó “Hurt” de Trent Reznor como un guiño a la muerte y después cerró con “We’ll Meet Again”, una despedida de la época de la Segunda Guerra Mundial.</p>
+<p class="story-body-text story-content" data-para-count="439" data-total-count="21573" id="story-continues-84" tabindex="-1">En una era en la que nuestras muertes generalmente están dictadas por una institución médica guiada por las ganancias, estas despedidas conscientes son inspiradoras. La muerte es uno de los principales sucesos de la vida: ¿no deberíamos ser nosotros quienes la compongamos? Por ejemplo, Lou Reed murió en casa, rodeado de amigos y su familia, con un tributo póstumo al que solo se asistió mediante invitación en el Apollo Theater.</p>
+<p class="story-body-text story-content" data-para-count="303" data-total-count="21876" id="story-continues-85" tabindex="-1">No hubo funeral público para Bowie, solo una <a href="https://www.instagram.com/p/BARI1jTG91W/?taken-by=davidbowie" target="_blank">foto final</a> que se publicó en Instagram, la cual se tomó poco antes de que muriera: el antiguo y eterno Ziggy Stardust lucía elegante usando un traje de diseñador, un sombrero formal y sin calcetines, con una sonrisa enorme, listo para el siguiente acto.</p>
+<p class="story-body-text story-content" data-para-count="47" data-total-count="21923" id="story-continues-86" tabindex="-1"><em>Will Hermes es un colaborador de Rolling Stone.</em></p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/beyonce/" rel="tag">Beyoncé</a>, <a href="https://www.nytimes.com/es/tag/coldplay/" rel="tag">Coldplay</a>, <a href="https://www.nytimes.com/es/tag/david-bowie/" rel="tag">David Bowie</a>, <a href="https://www.nytimes.com/es/tag/justin-bieber/" rel="tag">Justin Bieber</a>, <a href="https://www.nytimes.com/es/tag/keith-urban/" rel="tag">Keith Urban</a>, <a href="https://www.nytimes.com/es/tag/kendrick-lamar/" rel="tag">Kendrick Lamar</a>, <a href="https://www.nytimes.com/es/tag/lionel-richie/" rel="tag">Lionel Richie</a>, <a href="https://www.nytimes.com/es/tag/pitbull/" rel="tag">Pitbull</a>, <a href="https://www.nytimes.com/es/tag/rihanna/" rel="tag">Rihanna</a>, <a href="https://www.nytimes.com/es/tag/the-internet/" rel="tag">The Internet</a>, <a href="https://www.nytimes.com/es/tag/wilco/" rel="tag">Wilco</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/03/24/diez-canciones-para-saber-hacia-donde-va-la-musica/"
+				data-title="Cultura: ¿Hacia dónde va la música? El futuro del pop en diez canciones"
+				data-author=""
+				data-media=""
+				data-description="Hemos reunido las pocas canciones que todos tenemos en común para mostrar los caminos creativos que exploran artistas como Sydney Bennett, Rihanna, Justin Bieber y célebres compositores del pop como Lionel Richie y David Bowie."
+				data-publish-date="24 de marzo de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":809,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

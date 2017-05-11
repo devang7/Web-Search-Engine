@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-jumbo-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-jumbo-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-jumbo-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-jumbo-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004817143"/>
+<meta name="hdl" content="Millones de dólares en contratos, 50.000 escuelas y 70.000 canchas: el plan de China para conquistar el fútbol" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20170109" />
+<meta name="utime" content="20170109160021" />
+<meta name="ptime" content="20170109160021" />
+<meta name="DISPLAYDATE" content="Jan. 9, 2017" />
+<meta name="dat" content="Jan. 9, 2017" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="el-gran-sueno-de-xi-jinping-es-convertir-a-china-en-una-potencia-del-futbol" />
+<meta property="og:url" content="https://www.nytimes.com/es/2017/01/09/el-gran-sueno-de-xi-jinping-es-convertir-a-china-en-una-potencia-del-futbol/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Millones de dólares en contratos, 50.000 escuelas y 70.000 canchas: el plan de China para conquistar el fútbol" />
+<meta property="og:description" content="Formar al siguiente Ronaldo o Messi se ha convertido en un proyecto nacional en China donde el aficionado número, el presidente Xi Jinping, está decidido a transformar al país en una gran potencia futbolística." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-1/20CHINASOCCER-1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2017-01-09" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2017/01/09/el-gran-sueno-de-xi-jinping-es-convertir-a-china-en-una-potencia-del-futbol/" />
+<meta property="twitter:title" content="Millones de dólares en contratos, 50.000 escuelas y 70.000 canchas: el plan de China para conquistar el fútbol" />
+<meta property="twitter:description" content="Formar al siguiente Ronaldo o Messi se ha convertido en un proyecto nacional en China donde el aficionado número, el presidente Xi Jinping, está decidido a transformar al país en una gran potencia futbolística." />
+<meta name="author" content="Chris Buckley" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Chris Buckley" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="deportes" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="deportes" />
+<meta name="id" content="100000004817143"/>
+<meta name="wordCount" content="2049"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2017/01/09/el-gran-sueno-de-xi-jinping-es-convertir-a-china-en-una-potencia-del-futbol/">
+<meta name="nyt-collection:uri" content="year=2017&amp;monthnum=01&amp;day=09&amp;name=el-gran-sueno-de-xi-jinping-es-convertir-a-china-en-una-potencia-del-futbol">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=32647">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2017\/01\/09\/el-gran-sueno-de-xi-jinping-es-convertir-a-china-en-una-potencia-del-futbol\/"},"headline":"Millones de d\u00f3lares en contratos, 50.000 escuelas y 70.000 canchas: el plan de China para conquistar el f\u00fatbol","datePublished":"2017-01-09T16:00:21+00:00","dateModified":"2017-01-09T14:48:42+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/12\/20\/world\/20CHINASOCCER-1\/20CHINASOCCER-1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Formar al siguiente Ronaldo o Messi se ha convertido en un proyecto nacional en China donde el aficionado n\u00famero, el presidente Xi Jinping, est\u00e1 decidido a transformar al pa\u00eds en una gran potencia futbol\u00edstica."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2017/01/09/el-gran-sueno-de-xi-jinping-es-convertir-a-china-en-una-potencia-del-futbol/" hreflang="es" />
+<link rel="alternate" href="https://www.nytimes.com/2017/01/04/world/asia/china-soccer-xi-jinping.html?smprod=nytcore-iphone&amp;#038;smid=nytcore-iphone-share&amp;#038;_r=0" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/deportes" />
+<title>Millones de dólares en contratos, 50.000 escuelas y 70.000 canchas: el plan de China para conquistar el fútbol &#8211; Español</title>
+<link rel="canonical" href="https://www.nytimes.com/2017/01/04/world/asia/china-soccer-xi-jinping.html?smprod=nytcore-iphone&#038;smid=nytcore-iphone-share&#038;_r=0" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2017/01/09/el-gran-sueno-de-xi-jinping-es-convertir-a-china-en-una-potencia-del-futbol/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-32647 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Millones de dólares en contratos, 50.000 escuelas y 70.000 canchas: el plan de China para conquistar el fútbol
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2017/01/09/el-gran-sueno-de-xi-jinping-es-convertir-a-china-en-una-potencia-del-futbol/"
+					data-title="Noticias: Millones de dólares en contratos, 50.000 escuelas y 70.000 canchas: el plan de China para conquistar el fútbol"
+					data-author="POR CHRIS BUCKLEY"
+					data-media=""
+					data-description="Formar al siguiente Ronaldo o Messi se ha convertido en un proyecto nacional en China donde el aficionado número, el presidente Xi Jinping, está decidido a transformar al país en una gran potencia futbolística."
+					data-publish-date="9 de enero de 2017"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/deportes/">Deportes</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Millones de dólares en contratos, 50.000 escuelas y 70.000 canchas: el plan de China para conquistar el fútbol</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Chris Buckley</span>
+</span>
+
+					<time class="dateline" datetime="2017-01-09">9 de enero de 2017</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2017/01/09/el-gran-sueno-de-xi-jinping-es-convertir-a-china-en-una-potencia-del-futbol/"
+							data-title="Noticias: Millones de dólares en contratos, 50.000 escuelas y 70.000 canchas: el plan de China para conquistar el fútbol"
+							data-author="POR CHRIS BUCKLEY"
+							data-media=""
+							data-description="Formar al siguiente Ronaldo o Messi se ha convertido en un proyecto nacional en China donde el aficionado número, el presidente Xi Jinping, está decidido a transformar al país en una gran potencia futbolística."
+							data-publish-date="9 de enero de 2017"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004830096" class="media photo lede layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-1/20CHINASOCCER-1-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-1/20CHINASOCCER-1-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-1/20CHINASOCCER-1-superJumbo.jpg" data-mediaviewer-caption="Un niño de 8 años practica cómo driblar en la Escuela de Fútbol Evergrande, ubicada en Qingyuan, una ciudad del sur de China. Casi todos los días, los estudiantes se arremolinan en los campos con la esperanza de alcanzar la gloria del fútbol. " data-mediaviewer-credit="Gilles Sabrié para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-1/20CHINASOCCER-1-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Un niño de 8 años practica cómo driblar en la Escuela de Fútbol Evergrande, ubicada en Qingyuan, una ciudad del sur de China. Casi todos los días, los estudiantes se arremolinan en los campos con la esperanza de alcanzar la gloria del fútbol. </span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Gilles Sabrié para The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="https://www.nytimes.com/2017/01/04/world/asia/china-soccer-xi-jinping.html?smprod=nytcore-iphone&#038;smid=nytcore-iphone-share&#038;_r=0&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="469" data-total-count="469" id="story-continues-2" tabindex="-1">QINGYUAN, China — Los 48 campos de fútbol de la enorme Escuela de Fútbol Evergrande, ubicada en el sur de China, dan la impresión de que apenas pueden contener a sus 2800 estudiantes. A espaldas de la fachada clásica de la escuela, que parece inspirada en Hogwarts de Harry Potter, hay jóvenes atletas que casi todos los días se arremolinan en los campos cercanos para patear, driblar y pasar con la esperanza de alcanzar la gloria y la riqueza del deporte rey.</p>
+<p class="story-body-text story-content" data-para-count="341" data-total-count="810" id="story-continues-3" tabindex="-1">70“Cuando sea grande quiero dedicarme al fútbol”, aseguró Wang Kai, después de una sesión matutina de entrenamiento bajo la supervisión de un entrenador español. Este niño desgarbado de 13 años —que ha estudiado en el internado durante más de tres años— dijo sobre su futuro: “Quiero ser el Cristiano Ronaldo de China”.</p>
+<p class="story-body-text story-content" data-para-count="214" data-total-count="1024" id="story-continues-4" tabindex="-1">Formar al siguiente Ronaldo o Messi se ha convertido en un proyecto nacional en China donde el aficionado número, el presidente Xi Jinping, está decidido a transformar al país en una gran potencia futbolística.</p>
+<p class="story-body-text story-content" data-para-count="310" data-total-count="1334" id="story-continues-5" tabindex="-1">Es una iniciativa casi imposible porque los equipos chinos han tenido clasificaciones muy modestas en las competencias internacionales recientes. Sin embargo, el esfuerzo gubernamental ya ha implementado un aumento de gastos y apoyo para el juego que ha impresionado a aficionados y jugadores de todo el mundo.</p>
+<figure id="media-100000004853977" class="media photo media-100000004853977 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/01/05/world/asia/05china-soccer-still/05china-soccer-still-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-7">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/01/05/world/asia/05china-soccer-still/05china-soccer-still-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/01/05/world/asia/05china-soccer-still/05china-soccer-still-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Aly Song/Reuters"  itemprop="url" itemid="https://static01.nyt.com/images/2017/01/05/world/asia/05china-soccer-still/05china-soccer-still-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Aly Song/Reuters
+		</span>
+	</figcaption>
+</figure>
+
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="395" data-total-count="1729" id="story-continues-7" tabindex="-1">En las últimas dos semanas, la liga más importante de China ha fichado a estrellas extranjeras provenientes de Europa y América del Sur con contratos que supuestamente rondan los 40 millones de dólares al año, el sueldo más alto de cualquier futbolista en el mundo. Un club chino le prometió 105 millones de dólares a Cristiano Ronaldo quien, según su representante, declinó la oferta.</p>
+<p class="story-body-text story-content" data-para-count="233" data-total-count="1962" id="story-continues-8" tabindex="-1">Estas sumas cautivadoras están sacudiendo el panorama del fútbol profesional. Antonio Conte, el entrenador del mítico Chelsea de Inglaterra, denunció que el despilfarro chino era un “peligro para todos los equipos del mundo”.</p>
+<p class="story-body-text story-content" data-para-count="349" data-total-count="2311" id="story-continues-9" tabindex="-1">El deseo de igualar el ascenso económico de China con el éxito en el campo de juego se ha vuelto el emblema de la ambición que tiene Jinping por convertir a China en una gran potencia con mayor confianza en sus capacidades. “Mi anhelo más grande para el fútbol chino es que sus equipos estén entre los mejores del mundo”, anunció en 2015.</p>
+<p class="story-body-text story-content" data-para-count="198" data-total-count="2509" id="story-continues-10" tabindex="-1">En los últimos dos años, el gobierno ha invertido en el fútbol el mismo esfuerzo que antes le había dedicado a ganar medallas olímpicas en deportes individuales como los clavados y la gimnasia.</p>
+<figure id="media-100000004852971" class="media photo media-100000004852971 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/01/05/world/05CHINASOCCER-1/05CHINASOCCER-1-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-12">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/01/05/world/05CHINASOCCER-1/05CHINASOCCER-1-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/01/05/world/05CHINASOCCER-1/05CHINASOCCER-1-superJumbo.jpg" data-mediaviewer-caption="Cristiano Ronaldo, a Portuguese superstar who plays for Real Madrid, was offered $105 million a year to play for a Chinese club, his agent said." data-mediaviewer-credit="Yuya Shino/European Pressphoto Agency"  itemprop="url" itemid="https://static01.nyt.com/images/2017/01/05/world/05CHINASOCCER-1/05CHINASOCCER-1-master315.jpg"/>
+		<meta itemprop="height" content="472" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Cristiano Ronaldo, a Portuguese superstar who plays for Real Madrid, was offered $105 million a year to play for a Chinese club, his agent said.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Yuya Shino/European Pressphoto Agency
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="415" data-total-count="2924" id="story-continues-12" tabindex="-1">El gobierno ha prometido limpiar y reorganizar el fútbol profesional, y desarrollar una nueva generación de jugadores con la construcción de miles de campos de juego y agregando los programas de fútbol en miles de escuelas. El objetivo es establecer un flujo de jugadores del más alto nivel que eventualmente puedan ganar el codiciado mundial masculino y regresen las glorias pasadas de la selección femenina.</p>
+<p class="story-body-text story-content" data-para-count="339" data-total-count="3263" id="story-continues-13" tabindex="-1">Este esfuerzo ha alentado a los clubes chinos a derrochar el dinero. Además de pagar varios millones de dólares a jugadores extranjeros, los dueños de los equipos chinos han gastado cientos de millones de dólares en inversiones en clubes europeos, con la esperanza de aprovechar su experiencia en los entrenamientos y la mercadotecnia.</p>
+<p class="story-body-text story-content" data-para-count="249" data-total-count="3512" id="story-continues-14" tabindex="-1">“El gasto actual ha creado expectativas a una escala enorme”, dijo Simon Chadwick, un profesor de gerencia deportiva de la Universidad de Salford en Gran Bretaña. “Gastar en grande en jugadores también significa adquirir héroes e iconos”.</p>
+<p class="story-body-text story-content" data-para-count="496" data-total-count="4008" id="story-continues-15" tabindex="-1">Pero si bien el fútbol condensa las ambiciones de Jinping también ilustra cómo podrían tambalearse sus planes si se convierten en una imposición tan apresurada como tergiversada, del mismo modo que ha pasado en otros escenarios. Ya ha generado resistencia por parte de los padres, quienes están preocupados de que sus hijos desperdicien su tiempo. También ha suscitado el miedo de que el despilfarro en estrellas extranjeras desvíe el dinero y la atención para fomentar el talento local.</p>
+<figure id="media-100000004830097" class="media photo media-100000004830097 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-2/20CHINASOCCER-2-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-17">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-2/20CHINASOCCER-2-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-2/20CHINASOCCER-2-superJumbo.jpg" data-mediaviewer-caption="Evergrande, with 48 soccer fields, is the biggest soccer boarding school in the world. President Xi Jinping has set his sights on transforming China into a great soccer power." data-mediaviewer-credit="Gilles Sabrié for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-2/20CHINASOCCER-2-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Evergrande, with 48 soccer fields, is the biggest soccer boarding school in the world. President Xi Jinping has set his sights on transforming China into a great soccer power.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Gilles Sabrié for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="210" data-total-count="4218" id="story-continues-17" tabindex="-1">Resulta que los riesgos que conlleva arreglar el fútbol son parecidos a los que se corren para arreglar la economía: el deseo por obtener un éxito deslumbrante y veloz pone en riesgo las metas a largo plazo.</p>
+<p class="story-body-text story-content" data-para-count="431" data-total-count="4649" id="story-continues-18" tabindex="-1">El Diario del Pueblo, el principal periódico del Partido Comunista, <a href="http://sports.people.com.cn/n1/2016/1218/c14820-28957628.html" target="_blank">advirtió</a> recientemente sobre una “burbuja” de gastos imprudentes en el fútbol profesional chino que podría afectar de manera grave al deporte. Hay demasiados inversionistas con expectativas febriles, mientras que algunos clubes, funcionarios y escuelas solo se están dejando llevar por la inercia de desarrollar jugadores jóvenes, indicó el periódico.</p>
+<p class="story-body-text story-content" data-para-count="376" data-total-count="5025" id="story-continues-19" tabindex="-1">“Uno de los problemas más grandes es buscar objetivos a corto plazo”, comentó Cameron Wilson, un residente escocés de Shanghái que edita <a href="https://wildeastfootball.net/2016/02/read-chinese-footballs-50-point-reform-plan-in-full-exclusive-translation/" target="_blank">Wild East Football</a>, un sitio web que sigue este deporte en China. “Existen todos esos grandes planes y esas ideas geniales. Pero cuando hay que remontarse al nivel común de las provincias, la gente parece dedicarse a lo suyo”.</p>
+<p class="story-body-text story-content" data-para-count="421" data-total-count="5446" id="story-continues-20" tabindex="-1">Los aficionados al fútbol chino están emocionados de contar con selecciones competitivas en lugar de las deslucidas escuadras que tienen actualmente. La selección nacional masculina recientemente ocupó el <a href="http://www.fifa.com/fifa-world-ranking/associations/association=chn/men/index.html" target="_blank">lugar 83 de la clasificación de la FIFA</a> —apenas arriba de las islas Feroe, un remoto asentamiento de Dinamarca con menos de 50.000 habitantes— y es poco probable que consiga un lugar para el Mundial de 2018.</p>
+<figure id="media-100000004830098" class="media photo media-100000004830098 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-3/20CHINASOCCER-3-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-22">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-3/20CHINASOCCER-3-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-3/20CHINASOCCER-3-superJumbo.jpg" data-mediaviewer-caption="The school’s manicured gardens. China’s soccer teams have ranked poor to middling in recent international competitions." data-mediaviewer-credit="Gilles Sabrié for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-3/20CHINASOCCER-3-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The school’s manicured gardens. China’s soccer teams have ranked poor to middling in recent international competitions.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Gilles Sabrié for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="202" data-total-count="5648" id="story-continues-22" tabindex="-1">La selección femenina —el orgullo del fútbol chino en décadas pasadas— no vive su mejor momento. Fue subcampeona del mundial femenino de 1999, pero cayó al <a href="http://www.fifa.com/fifa-world-ranking/ranking-table/women/" target="_blank">lugar 13</a> en la última clasificación.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="339" data-total-count="5987" id="story-continues-23" tabindex="-1">“La selección nacional es una broma”, opinó Xu Yun, de 16 años, quien asistió al Estadio de los Trabajadores en Pekín para ver cómo su equipo favorito aplastaba a un oponente de la provincia de Henan. “Creo que van a tener que pasar décadas para lograr algo bueno. No solo se trata de gastar dinero, se trata de la actitud”.</p>
+<p class="story-body-text story-content" data-para-count="336" data-total-count="6323" id="story-continues-24" tabindex="-1">Durante años, el fútbol profesional estuvo marcado por <a href="https://www.thechinastory.org/yearbooks/yearbook-2013/forum-counting-and-corruption/own-goal-football-in-china/" target="_blank">una corrupción descarada</a>, incluso para los estándares chinos. Desde que la divulgación del arreglo de partidos se convirtió en un escándalo nacional en 2009, se ha limpiado lo peor de esa problemática. “Aún existe”, aseguró Wilson. “Solo que no es tan descarada”.</p>
+<figure id="media-100000004830099" class="media photo media-100000004830099 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-4/20CHINASOCCER-4-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-26">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-4/20CHINASOCCER-4-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-4/20CHINASOCCER-4-superJumbo.jpg" data-mediaviewer-caption="A 7-year-old student in his dormitory. Parents pay up to about $8,700 a year to send children to the school, which has 2,800 students." data-mediaviewer-credit="Gilles Sabrié for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-4/20CHINASOCCER-4-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A 7-year-old student in his dormitory. Parents pay up to about $8,700 a year to send children to the school, which has 2,800 students.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Gilles Sabrié for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="304" data-total-count="6627" id="story-continues-26" tabindex="-1">Para Jinping, el fútbol ha sido una pasión desde su infancia. En sus viajes al extranjero se ha tomado fotografías con <a href="http://news.xinhuanet.com/english/2015-09/22/c_134648362.htm" target="_blank">David Beckham</a> y otras celebridades del fútbol. En Irlanda, en 2012, se hizo famoso por <a href="http://news.qq.com/a/20120220/000693.htm" target="_blank">patear un balón</a> con mucho entusiasmo, pero también dio la impresión de estar un poco tieso.</p>
+<p class="story-body-text story-content" data-para-count="194" data-total-count="6821" id="story-continues-27" tabindex="-1">En septiembre, el presidente volvió a visitar <a href="http://news.xinhuanet.com/politics/2016-09/09/c_1119541878.htm" target="_blank">su antigua escuela en Pekín</a> donde aprendió a patear el balón y se convirtió en un aficionado del juego, según la autobiografía de su maestro.</p>
+<p class="story-body-text story-content" data-para-count="148" data-total-count="6969" id="story-continues-28" tabindex="-1">“Miren lo sano que estoy”, le dijo Jinping a los jóvenes de la escuela. “Pude lograrlo gracias al deporte que practiqué cuando era joven”.</p>
+<p class="story-body-text story-content" data-para-count="603" data-total-count="7572" id="story-continues-29" tabindex="-1">Los inversionistas privados se han centrado en el fútbol profesional, alentados por el apoyo que Jinping le ha dado al juego y, en apariencia, para ganarse el favor del gobierno. En la temporada principal de fichajes profesionales del año pasado, los 16 equipos de la Liga China gastaron cerca de 300 millones de dólares en contratos para jugadores extranjeros y superaron por casi 120 millones de dólares el gasto que realizó la Liga Premier de Inglaterra, según <a href="https://www.fifatms.com/wp-content/uploads/2016/06/China_fcbusiness_May2016.pdf" target="_blank">FIFA TMS</a>, una empresa que recopila datos sobre las transferencias de jugadores. Es probable que los costos en 2017 sean aún mayores.</p>
+<figure id="media-100000004830100" class="media photo media-100000004830100 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-5/20CHINASOCCER-5-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-31">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-5/20CHINASOCCER-5-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-5/20CHINASOCCER-5-superJumbo.jpg" data-mediaviewer-caption="Stretching under the guidance of a Spanish coach. A number of coaches come from Spain, and students spend 90 minutes a day on soccer drills." data-mediaviewer-credit="Gilles Sabrié for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-5/20CHINASOCCER-5-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Stretching under the guidance of a Spanish coach. A number of coaches come from Spain, and students spend 90 minutes a day on soccer drills.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Gilles Sabrié for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="483" data-total-count="8055" id="story-continues-31" tabindex="-1">No obstante, la atención del mandatario chino está centrada a largo plazo y en la siguiente generación de jugadores. Su <a href="https://wildeastfootball.net/2016/02/read-chinese-footballs-50-point-reform-plan-in-full-exclusive-translation/" target="_blank">plan</a> busca que 50.000 escuelas hagan hincapié en el fútbol para 2025, en comparación con las 5000 que lo hacían en 2015. La cantidad de campos de fútbol a lo largo del país crecerá de 11.000 a más 70.000 para fines de 2020. Para entonces, según el plan, 50 millones de chinos, incluidos 30 millones de estudiantes, jugarán fútbol de manera habitual.</p>
+<p class="story-body-text story-content" data-para-count="208" data-total-count="8263" id="story-continues-32" tabindex="-1">“Ahora los directores de todas las escuelas le están poniendo mucha más atención al fútbol”, indicó Dai Wei, director atlético de Bayi, la antigua escuela de Jinping. “Antes eso era impensable”.</p>
+<p class="story-body-text story-content" data-para-count="277" data-total-count="8540" id="story-continues-33" tabindex="-1">Sin embargo, hay una resistencia cultural profunda, incluso en la Escuela Bayi. Dai explicó que algunos padres desalientan a sus hijos para que no le dediquen tanto tiempo a los deportes, porque tienen mucha tarea y enfrentan una dura competencia en los exámenes académicos.</p>
+<p class="story-body-text story-content" data-para-count="298" data-total-count="8838" id="story-continues-34" tabindex="-1">Aunque China ha sobresalido en los deportes individuales que demandan una intensa disciplina desde una edad temprana, al país no le ha ido tan bien fomentando deportes grupales, en los que las habilidades como el trabajo en equipo y la improvisación son tan valiosas como el virtuosismo personal.</p>
+<figure id="media-100000004830102" class="media photo media-100000004830102 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-7/20CHINASOCCER-7-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-36">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-7/20CHINASOCCER-7-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-7/20CHINASOCCER-7-superJumbo.jpg" data-mediaviewer-caption="The entrance to the school. The government has promised to build a new generation of players by creating tens of thousands of soccer fields and adding soccer programs in tens of thousands of schools." data-mediaviewer-credit="Gilles Sabrié for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/20/world/20CHINASOCCER-7/20CHINASOCCER-7-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The entrance to the school. The government has promised to build a new generation of players by creating tens of thousands of soccer fields and adding soccer programs in tens of thousands of schools.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Gilles Sabrié for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="218" data-total-count="9056" id="story-continues-36" tabindex="-1">La escuela privada Evergrande, el internado de fútbol más grande del mundo, asegura que su fórmula de entrenamiento intenso combinado con una educación sólida podría ser el método para formar jugadores jóvenes.</p>
+<p class="story-body-text story-content" data-para-count="335" data-total-count="9391" id="story-continues-37" tabindex="-1">“A medida que se hagan más escuelas de fútbol, cada vez habrá más niños que juegan y también se multiplicarán las estrellas”, señaló Liu Jiangnan, director de la escuela que abrió en 2012. “En mi opinión, dentro de siete u ocho años, la mitad de los miembros de la selección nacional china serán de esta escuela”.</p>
+<p class="story-body-text story-content" data-para-count="390" data-total-count="9781" id="story-continues-38" tabindex="-1">Ante estas esperanzas, los padres pagan cerca de 8700 dólares al año para que sus hijos puedan estudiar en este lugar donde hay 24 técnicos españoles que supervisan los entrenamientos. Los estudiantes pasan 90 minutos al día entrenando y también juegan los fines de semana. Los mejores obtienen becas y los niños de familias pobres, descuentos, según los funcionarios de la escuela.</p>
+<p class="story-body-text story-content" data-para-count="222" data-total-count="10003" id="story-continues-39" tabindex="-1">Pero incluso aquí, los niños aprenden el juego más tarde que los de Europa y América del Sur y suelen carecer de bases firmes en cuanto al trabajo en equipo y las tácticas, indicó Zarco Díaz, un entrenador español.</p>
+<p class="story-body-text story-content" data-para-count="67" data-total-count="10070" id="story-continues-40" tabindex="-1">“Los niños están mejorando, año con año”, dijo esperanzado.</p>
+<p class="story-body-text story-content" data-para-count="108" data-total-count="10178" id="story-continues-41" tabindex="-1">No obstante, el enfoque que se tiene en Evergrande es demasiado caro para que se pueda copiar a gran escala.</p>
+<p class="story-body-text story-content" data-para-count="426" data-total-count="10604" id="story-continues-42" tabindex="-1">Algunas escuelas que enfrentan escasez de entrenadores y espacio para campos han ideado sus propios entrenamientos como la <a href="http://china.huanqiu.com/article/2015-03/5940967.html" target="_blank">gimnasia futbolística</a>, en la cual los niños están parados en fila mientras lanzan un balón de aquí para allá. Eso puede impresionar a los <a href="http://v.ku6.com/show/JAJ6C2ccbDTnsBhDDP2eMA...html" target="_blank">funcionarios que los visiten</a> pero es una pobre preparación para el libre flujo del juego, indicó Zhang Lu, un comentarista de fútbol ampliamente reconocido.</p>
+<p class="story-body-text story-content" data-para-count="455" data-total-count="11059" id="story-continues-43" tabindex="-1">“El fútbol chino ha fallado por la prisa de alcanzar el éxito instantáneo”, aseguró Zhang, en una entrevista reciente en la que recordó los anteriores intentos fallidos para que creciera el deporte en las décadas de 1980 y 1990. “El problema es que nuestra manera de pensar está muy arraigada en ideas tradicionales. Todos creen que el fútbol solo consiste en obtener resultados, en las competencias, los entrenamientos y crear estrellas”.</p>
+<p class="story-body-text story-content" data-para-count="308" data-total-count="11367" id="story-continues-44" tabindex="-1">En cambio, Zhang ha estado alentando a las escuelas para que se concentren más en la diversión y la participación general. Este enfoque hace que los niños puedan liberarse de la monotonía del salón de clases y eventualmente producirá más campeones del futuro que un enfoque elitista, argumenta Zhang.</p>
+<p class="story-body-text story-content" data-para-count="225" data-total-count="11592" id="story-continues-45" tabindex="-1">Algunas escuelas están probando este método. En una tarde reciente, se quitó el esmog que suele cubrir Pekín y los niños de la Escuela Primaria Caoqiao salieron corriendo a los campos entre gritos y chillidos de júbilo.</p>
+<p class="story-body-text story-content" data-para-count="186" data-total-count="11778" id="story-continues-46" tabindex="-1">“Esta mañana se canceló el fútbol por el esmog”, comentó el director, Lin Yanling. “Pero al mediodía avisé a los niños que ya se podía jugar y enloquecieron de alegría”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Adam Wu colaboró en este reportaje.</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/chelsea/" rel="tag">Chelsea</a>, <a href="https://www.nytimes.com/es/tag/china/" rel="tag">China</a>, <a href="https://www.nytimes.com/es/tag/cristiano-ronaldo/" rel="tag">Cristiano Ronaldo</a>, <a href="https://www.nytimes.com/es/tag/lionel-messi/" rel="tag">Lionel Messi</a>, <a href="https://www.nytimes.com/es/tag/partido-comunista/" rel="tag">Partido Comunista</a>, <a href="https://www.nytimes.com/es/tag/real-madrid/" rel="tag">Real Madrid</a>, <a href="https://www.nytimes.com/es/tag/xi-jinping/" rel="tag">Xi Jinping</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2017/01/09/el-gran-sueno-de-xi-jinping-es-convertir-a-china-en-una-potencia-del-futbol/"
+				data-title="Noticias: Millones de dólares en contratos, 50.000 escuelas y 70.000 canchas: el plan de China para conquistar el fútbol"
+				data-author="POR CHRIS BUCKLEY"
+				data-media=""
+				data-description="Formar al siguiente Ronaldo o Messi se ha convertido en un proyecto nacional en China donde el aficionado número, el presidente Xi Jinping, está decidido a transformar al país en una gran potencia futbolística."
+				data-publish-date="9 de enero de 2017"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/06/tevez-china-y-la-revolucion-del-futbol/">
+					<div class="story-body">
+						<h3 class="kicker">Comentario</h3>
+
+						<h2 class="headline">
+							<span class="title">Tévez, China y la revolución del fútbol</span>
+							<time class="dateline">6 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/01/06/universal/es/6tevezES1/6tevezES1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/05/china-desarrolla-una-propaganda-politica-con-un-toque-millennial/">
+					<div class="story-body">
+						<h3 class="kicker">Asia</h3>
+
+						<h2 class="headline">
+							<span class="title">China desarrolla una propaganda política con un toque &#8216;millennial&#8217;</span>
+							<time class="dateline">5 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/12/20/world/20PROPAGANDA-1/20PROPAGANDA-1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/09/arrestan-a-un-sospechoso-por-disparar-a-un-agente-consular-estadounidense-en-guadalajara/">
+					<div class="story-body">
+						<h3 class="kicker">México</h3>
+
+						<h2 class="headline">
+							<span class="title">Arrestan a un sospechoso por disparar a un agente consular estadounidense en Guadalajara</span>
+							<time class="dateline">9 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/01/09/world/09guadalajara/09guadalajara-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/09/la-era-de-trump-revive-el-fantasma-de-las-redadas-migratorias-y-los-viejos-miedos-de-deportaciones-masivas/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">Trump revive el miedo de las redadas migratorias y las deportaciones masivas en Estados Unidos</span>
+							<time class="dateline">9 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/12/27/us/00raids-a1/00raids-a1-thumbStandard-v3.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":1201,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

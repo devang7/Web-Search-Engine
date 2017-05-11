@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004775874"/>
+<meta name="hdl" content="Para un prodigio del tenis coreano, ser sordo no es un obstáculo" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20161204" />
+<meta name="utime" content="20161204120004" />
+<meta name="ptime" content="20161204120004" />
+<meta name="DISPLAYDATE" content="Dec. 4, 2016" />
+<meta name="dat" content="Dec. 4, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="para-un-prodigio-del-tenis-coreano-ser-sordo-no-es-un-obstaculo" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/12/04/para-un-prodigio-del-tenis-coreano-ser-sordo-no-es-un-obstaculo/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Para un prodigio del tenis coreano, ser sordo no es un obstáculo" />
+<meta property="og:description" content="Lee Duck-hee es un sudcoreano de 18 años clasificado como el 143 del mundo que juega un deporte en el cual se considera crucial escuchar la pelota. " />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/11/27/sports/27DEAF02/27DEAF02-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-12-04" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/12/04/para-un-prodigio-del-tenis-coreano-ser-sordo-no-es-un-obstaculo/" />
+<meta property="twitter:title" content="Para un prodigio del tenis coreano, ser sordo no es un obstáculo" />
+<meta property="twitter:description" content="Lee Duck-hee es un sudcoreano de 18 años clasificado como el 143 del mundo que juega un deporte en el cual se considera crucial escuchar la pelota. " />
+<meta name="author" content="Ben Rothenberg" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Ben Rothenberg" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="asia" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="asia" />
+<meta name="id" content="100000004775874"/>
+<meta name="wordCount" content="2755"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/12/04/para-un-prodigio-del-tenis-coreano-ser-sordo-no-es-un-obstaculo/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=12&amp;day=04&amp;name=para-un-prodigio-del-tenis-coreano-ser-sordo-no-es-un-obstaculo">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=30482">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/12\/04\/para-un-prodigio-del-tenis-coreano-ser-sordo-no-es-un-obstaculo\/"},"headline":"Para un prodigio del tenis coreano, ser sordo no es un obst\u00e1culo","datePublished":"2016-12-04T12:00:04+00:00","dateModified":"2016-12-02T17:02:39+00:00","author":{"@type":"Person","name":"Paula Duran"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/11\/27\/sports\/27DEAF02\/27DEAF02-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Lee Duck-hee es un sudcoreano de 18 a\u00f1os clasificado como el 143 del mundo que juega un deporte en el cual se considera crucial escuchar la pelota. "}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/12/04/para-un-prodigio-del-tenis-coreano-ser-sordo-no-es-un-obstaculo/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/11/22/sports/tennis/deaf-player-lee-duck-hee-south-korea.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/asia" />
+<title>Para un prodigio del tenis coreano, ser sordo no es un obstáculo &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/11/22/sports/tennis/deaf-player-lee-duck-hee-south-korea.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/12/04/para-un-prodigio-del-tenis-coreano-ser-sordo-no-es-un-obstaculo/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+		<script src="https://a1.nyt.com/assets/article/latest/js/article/common/layout.js"></script>
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-30482 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard intl-masthead-theme-light" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Para un prodigio del tenis coreano, ser sordo no es un obstáculo
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/12/04/para-un-prodigio-del-tenis-coreano-ser-sordo-no-es-un-obstaculo/"
+					data-title="Noticias: Para un prodigio del tenis coreano, ser sordo no es un obstáculo"
+					data-author="POR BEN ROTHENBERG"
+					data-media=""
+					data-description="Lee Duck-hee es un sudcoreano de 18 años clasificado como el 143 del mundo que juega un deporte en el cual se considera crucial escuchar la pelota. "
+					data-publish-date="4 de diciembre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2gVH5o3">http://nyti.ms/2gVH5o3</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+	
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main has-full-bleed-image-lede">
+	<header id="story-header" class="story-header">
+			<figure id="media-100000004781595" class="media cover photo layout-horizontal-full-bleed" data-bleed-style="full-bleed" itemid="https://static01.nyt.com/images/2016/11/27/sports/27DEAF02/27DEAF02-articleLarge-v3.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="presentation">
+				<span class="visually-hidden"></span>
+				<div class="image">
+					<img
+						src="https://static01.nyt.com/images/2016/11/27/sports/27DEAF02/27DEAF02-articleLarge-v3.jpg"
+						alt="Lee Duck-hee, 18, second from right, eating lunch with his peers after winning a gold medal at the National Sports Festival in Asan, South Korea, last month."
+						data-jumbosrc="https://static01.nyt.com/images/2016/11/27/sports/27DEAF02/27DEAF02-jumbo-v3.jpg"
+						data-superjumbosrc="https://static01.nyt.com/images/2016/11/27/sports/27DEAF02/27DEAF02-superJumbo-v3.jpg"
+						id="media-image-100000004781595"
+					>
+				</div>
+				<figcaption id="media-caption-100000004781595" class="caption" itemprop="caption description">
+					<span class="caption-text">Lee Duck-hee, 18, second from right, eating lunch with his peers after winning a gold medal at the National Sports Festival in Asan, South Korea, last month.</span>
+
+					<span class="credit" itemprop="copyrightHolder">
+						<span class="visually-hidden">crédito</span>
+						Jean Chung for The New York Times
+					</span>
+				</figcaption>
+				<meta itemprop="height" content="301">
+				<meta itemprop="width" content="600">
+			</figure>
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/asia/">Asia</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Para un prodigio del tenis coreano, ser sordo no es un obstáculo</h1>
+				<p itemprop="headline" id="story-deck" class="deck">Lee Duck-hee es un sudcoreano de 18 años clasificado como el 143 del mundo que juega un deporte en el cual se considera crucial escuchar la pelota. </p>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Ben Rothenberg</span>
+</span>
+
+					<time class="dateline" datetime="2016-12-04">4 de diciembre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/12/04/para-un-prodigio-del-tenis-coreano-ser-sordo-no-es-un-obstaculo/"
+							data-title="Noticias: Para un prodigio del tenis coreano, ser sordo no es un obstáculo"
+							data-author="POR BEN ROTHENBERG"
+							data-media=""
+							data-description="Lee Duck-hee es un sudcoreano de 18 años clasificado como el 143 del mundo que juega un deporte en el cual se considera crucial escuchar la pelota. "
+							data-publish-date="4 de diciembre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+			<script>
+				if (window.magnum && window.magnum.responsiveImages && window.magnum.responsiveImages.setCoverImage) {
+					window.magnum.responsiveImages.setCoverImage('100000004781595','full-bleed',301,600,0,0,0,0);
+				}
+			</script>
+
+			
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/11/22/sports/tennis/deaf-player-lee-duck-hee-south-korea.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="360" data-total-count="360" id="story-continues-1" tabindex="-1">ASAN, Corea del Sur — Para aumentar sus posibilidades de éxito en el evento de tenis para muchachos del Festival Nacional Deportivo, el bachillerato Mapo de Seúl llevó a un profesional de Jecheon, una ciudad ubicada a dos horas al sureste de la capital. Se llama Lee Duck-hee y llamó la atención del entrenador por primera vez cuando estaba en primaria.</p>
+<p class="story-body-text story-content" data-para-count="419" data-total-count="779" id="story-continues-2" tabindex="-1">Los jugadores de la escuela Mapo se empujaban contra la cerca que se encuentra a lo largo de las polvorientas canchas de cemento para ver la final del torneo. Vitoreaban en apoyo a Lee, de 18 años, quien lanzaba tiros ganadores de derecha a un oponente con lentes. La victoria de 6-1, 6-1 no tomó mucho tiempo. Pero no es una sorpresa: Lee es el mejor jugador adolescente de Corea del Sur y el número 143 del mundo.</p>
+<p class="story-body-text story-content" data-para-count="160" data-total-count="939" id="story-continues-3" tabindex="-1">“Su nivel de habilidad, potencia y devolución es totalmente distinto al nivel de bachillerato”, dijo Jeong Yeong-sok, su compañero de dobles en el torneo.</p>
+<p class="story-body-text story-content" data-para-count="449" data-total-count="1388" id="story-continues-4" tabindex="-1">Lee también es excepcional entre profesionales. Es sordo y ningún jugador sordo ha llegado tan alto en la historia del deporte. En el tenis, se cree que es insuficiente solo ver la pelota. Los mejores jugadores dicen que escucharla permite tener reacciones más rápidas, una ventaja crucial en un deporte en el que los servicios poderosos y los disparos desde el fondo de la cancha significan que cada pequeña fracción de segundo es importante.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="452" data-total-count="1840" id="story-continues-5" tabindex="-1">“Hay muchos efectos en el tenis y puedo escuchar cuáles salen de una raqueta porque sé cómo suenan todos”, señaló Katie Mancebo, una entrenadora de tenis universitario y entrenadora voluntaria del equipo de tenis para sordos de Estados Unidos. “Pero un jugador sordo no conoce el sonido, así que se concentran más en lo que la otra persona está haciendo, cómo hacen el contacto y cómo se ve la pelota a medida que se acerca a la red”.</p>
+<p class="story-body-text story-content" data-para-count="127" data-total-count="1967" id="story-continues-6" tabindex="-1">Joo Hyun-sang, el entrenador de tenis del bachillerato Mapo, dijo que al principio estaba escéptico sobre el potencial de Lee.</p>
+<figure id="media-100000004781667" class="media photo media-100000004781667 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/11/27/sports/27DEAF12/27DEAF12-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-8">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/11/27/sports/27DEAF12/27DEAF12-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/11/27/sports/27DEAF12/27DEAF12-superJumbo.jpg" data-mediaviewer-caption="Lee is continuing his rise despite a big disadvantage: being unable to hear the ball." data-mediaviewer-credit="Jean Chung for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/11/27/sports/27DEAF12/27DEAF12-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Lee is continuing his rise despite a big disadvantage: being unable to hear the ball.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Jean Chung for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="259" data-total-count="2226" id="story-continues-8" tabindex="-1">“Cuando lo conocí por primera vez, tuve algunas dudas de que su sordera fuera un obstáculo para que se convirtiera en un gran jugador”, señaló. “Pero confié en él cuando vi cómo se desarrollaba y mejoraba. Estaba seguro de que podía hacerlo”.</p>
+<p class="story-body-text story-content" data-para-count="449" data-total-count="2675" id="story-continues-9" tabindex="-1">Aunque ya es el jugador con la segunda mejor clasificación dentro de los profesionales menores de 19, Lee aún no ha terminado de abrirse camino. Todavía tiene que jugar un partido del cuadro principal en un torneo de la ATP o un Grand Slam. No obstante, en septiembre llegó por primera vez a la final de un Challenger, el nivel anterior al ATP World Tour, que se jugó en Taiwán, y ya ha logrado avanzar dos veces a semifinales desde entonces.</p>
+<p class="story-body-text story-content" data-para-count="111" data-total-count="2786" id="story-continues-10" tabindex="-1">Pero si continúa su camino ascendente, Lee derrumbará muchos de los mitos acerca de la complejidad del tenis.</p>
+<p class="story-body-text story-content" data-para-count="344" data-total-count="3130" id="story-continues-11" tabindex="-1">Hay estudios que han mostrado que los humanos reaccionan más rápido a un estímulo auditivo que a uno visual. Según una investigación que realizaron los institutos nacionales de salud el año pasado, la reacción promedio ante estímulos visuales está entre 180 y 200 milisegundos, y entre 140 y 160 milisegundos para estímulos auditivos.</p>
+<p class="story-body-text story-content" data-para-count="166" data-total-count="3296" id="story-continues-12" tabindex="-1">Todd Perry, un exjugador australiano de dobles que trabaja como entrenador, dijo que suele escuchar los disparos de sus jugadores para saber cómo mejorar los golpes.</p>
+<p class="story-body-text story-content" data-para-count="354" data-total-count="3650" id="story-continues-13" tabindex="-1">“Cuando entrenas a alguien, puedes escuchar el golpe limpio que sale de la raqueta y puedes cambiar ciertas cosas para asegurarte de que este golpe salga limpio; todo se hace por medio del sonido”, comentó. “Si ves a jugadores diferentes y te concentras en el sonido que producen, te das cuenta de que cada uno también suena bastante distinto”.</p>
+<figure id="media-100000004781614" class="media photo media-100000004781614 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/11/27/sports/27DEAF03/27DEAF03-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-15">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/11/27/sports/27DEAF03/27DEAF03-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/11/27/sports/27DEAF03/27DEAF03-superJumbo.jpg" data-mediaviewer-caption="Lee and his mother, Park Mi-ja. She taught him to speak and to read lips, and she committed to help him build a career in tennis." data-mediaviewer-credit="Jean Chung for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/11/27/sports/27DEAF03/27DEAF03-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Lee and his mother, Park Mi-ja. She taught him to speak and to read lips, and she committed to help him build a career in tennis.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Jean Chung for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="389" data-total-count="4039" id="story-continues-15" tabindex="-1">Martina Navratilova ha sido una de las voces más fuertes al respecto de la importancia del sonido en su forma de jugar tenis. Ha dicho que el exceso de gruñidos es hacer “trampa” porque cree que es una manera injusta de disfrazar el sonido de la pelota que sale de la raqueta. En el Abierto de Estados Unidos de 1993, culpó a los aviones que sobrevolaban de interferir con su juego.</p>
+<p class="story-body-text story-content" data-para-count="334" data-total-count="4373" id="story-continues-16" tabindex="-1">“En verdad dependes del sonido que emite el golpe de la pelota, en particular cuando te subes a la red”, indicó Navratilova. “Primero escuchas la pelota. Después reaccionas a la velocidad y el efecto según el sonido. Y cuando no lo escuchas, realmente te confundes. Ahí fallé algunas voleas porque no escuché la pelota”.</p>
+<p class="story-body-text story-content" data-para-count="189" data-total-count="4562" id="story-continues-17" tabindex="-1">Andy Murray también tuvo problemas con las condiciones de sonido del Abierto de Estados Unidos de este año, cuando la lluvia golpeaba el techo recién construido del Estadio Arthur Ashe.</p>
+<p class="story-body-text story-content" data-para-count="245" data-total-count="4807" id="story-continues-18" tabindex="-1">“Si jugáramos con las orejas cubiertas o con audífonos puestos, sería una gran ventaja para nuestros adversarios si ellos no están en las mismas condiciones. Es complicado, ¿sabes? Se puede jugar así, pero claramente es más difícil”.</p>
+<p class="story-body-text story-content" data-para-count="524" data-total-count="5331" id="story-continues-19" tabindex="-1">El ejemplo hipotético de Murray alguna vez se puso a prueba. Tobias Burz, un jugador sordo que ahora es el director técnico de tenis para el Comité Internacional de Deportes para Sordos, relató un experimento que alguna vez llevó a cabo con un oponente que tenía una mayor capacidad auditiva. Después de que ganara 6-2 el primer set, su adversario sintió curiosidad por ver qué se sentía ser un jugador sordo, por lo que usó tapones para los oídos y se puso unos audífonos para el siguiente set: Burz ganó 6-3.</p>
+<h4 class="story-subheading story-content">Un diagnóstico sorprendente</h4>
+
+<p class="story-body-text story-content" data-para-count="282" data-total-count="5613" id="story-continues-21" tabindex="-1">Park Mi-ja y su esposo, Lee Sang-jin, se dieron cuenta de que su hijo era diferente pero se negaban a saber cuál era su problema. Lee Duck-hee había nacido mientras su padre terminaba el servicio militar obligatorio en el ejército sudcoreano, y dejó a Park sola con su pequeño.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="273" data-total-count="5886" id="story-continues-22" tabindex="-1">Park llevó a Duck-hee a un hospital de Seúl para hacerle pruebas cuando tenía dos años. “El doctor dijo: ‘Este bebé no escucha nada; es sordo’”, recordó. “Estaba muy sorprendida y no podía reaccionar. Pero sabía que no podía ir a casa en ese instante”.</p>
+<figure id="media-100000004781620" class="media photo media-100000004781620 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/11/27/sports/27DEAF07/27DEAF07-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-24">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/11/27/sports/27DEAF07/27DEAF07-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/11/27/sports/27DEAF07/27DEAF07-superJumbo.jpg" data-mediaviewer-caption="On Lee’s tennis bag, a keychain made by a fan features the South Korean flag and Lee’s initials." data-mediaviewer-credit="Jean Chung for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/11/27/sports/27DEAF07/27DEAF07-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">On Lee’s tennis bag, a keychain made by a fan features the South Korean flag and Lee’s initials.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Jean Chung for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="189" data-total-count="6075" id="story-continues-24" tabindex="-1">Park fue a ver a su hermana, quien vivía en Seúl, y ahí rompió en llanto. “Desde el momento que la vi, me llegaron todo el dolor y la tristeza, y no pude dejar de llorar”, comentó.</p>
+<p class="story-body-text story-content" data-para-count="215" data-total-count="6290" id="story-continues-25" tabindex="-1">Después de unas horas, se tranquilizó y llamó a su esposo, quien viajó en auto desde Jecheon a Seúl para recogerla. Durante el trayecto de regreso a casa, tomaron la decisión de no quedarse cruzados de brazos.</p>
+<p class="story-body-text story-content" data-para-count="204" data-total-count="6494" id="story-continues-26" tabindex="-1">“Es nuestro primogénito. El periodo de tristeza duró solo una semana; después tuvimos el valor suficiente para dar el siguiente paso: investigar sobre la educación para personas con discapacidad”.</p>
+<p class="story-body-text story-content" data-para-count="528" data-total-count="7022" id="story-continues-27" tabindex="-1">Cuando Duck-hee tenía cuatro años, sus padres lo inscribieron en una escuela para personas con discapacidad en Chungju, a una hora de su casa. Mientras casi todos los alumnos vivían en los dormitorios y solo veían a sus familias los fines de semana, Park estaba decidida a pasar más tiempo con su primogénito y lo llevaba en auto; era un trayecto de una hora de ida y otra de regreso. También decidió enviarlo a una escuela común y corriente por las tardes para que se adaptara a la vida de la gente sin discapacidades.</p>
+<p class="story-body-text story-content" data-para-count="428" data-total-count="7450" id="story-continues-28" tabindex="-1">“Quería que se integrara con la gente normal”, dijo. “Cuando vi a los alumnos más grandes de la escuela para sordos, me di cuenta de que solo conocían el lenguaje de señas, así que cuando tomaban el autobús tenían que comunicarse con el chofer por medio de mensajes escritos. Y cuando tienen 18 o 19 años, sus oportunidades de obtener un trabajo son muy limitadas porque son personas que solo hablan con señas”.</p>
+<p class="story-body-text story-content" data-para-count="341" data-total-count="7791" id="story-continues-29" tabindex="-1">Gracias a que observó las clases en la escuela para sordos, Park comenzó a enseñar a su hijo a hablar y a leer los labios: usaba tarjetas con fotos de las distintas posiciones de la boca. Después de unos años, Duck-hee dejó la escuela para sordos por completo y cumplió los deseos de sus padres: nunca aprendió el lenguaje de señas.</p>
+<p class="story-body-text story-content" data-para-count="330" data-total-count="8121" id="story-continues-30" tabindex="-1">“Solo un porcentaje muy pequeño de los estudiantes sordos puede socializar con la gente normal y puede ganarse la vida”, señaló Park. “La mayoría se rinde y regresa a vivir con sus padres, y los padres tienen que encargarse de ellos. Solo queríamos que Duck-hee fuera independiente y viviera como una persona normal”.</p>
+<p class="story-body-text story-content" data-para-count="510" data-total-count="8631" id="story-continues-31" tabindex="-1">Lee Sang-jin impuso un récord en 200 metros planos cuando compitió como estudiante de bachillerato en el Festival Nacional Deportivo, por lo que pensó que los deportes serían el mejor camino que podía seguir su hijo. Creía que la sordera de su hijo no haría posible que su hijo practicara un deporte colectivo, así que se concentró en deportes individuales como el golf, la arquería y el tiro al blanco con pistola. Sin embargo, Duck-hee se decidió cuando vio a su primo, Woo Chung-hyo, jugar tenis.</p>
+<figure id="media-100000004781650" class="media photo media-100000004781650 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/11/27/sports/27DEAF10/27DEAF10-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-33">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/11/27/sports/27DEAF10/27DEAF10-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/11/27/sports/27DEAF10/27DEAF10-superJumbo.jpg" data-mediaviewer-caption="At this year’s United States Open, Andy Murray struggled with the noise of the rain pelting the roof at Arthur Ashe Stadium." data-mediaviewer-credit="Santiago Mejia/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/11/27/sports/27DEAF10/27DEAF10-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">At this year’s United States Open, Andy Murray struggled with the noise of the rain pelting the roof at Arthur Ashe Stadium.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Santiago Mejia/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="259" data-total-count="8890" id="story-continues-33" tabindex="-1">“Me interesó mucho ver el tenis y me dije: ‘¿Por qué no lo juego?’”, comentó Lee Duck-hee. “Mi primo me dio la raqueta, intenté unos golpes y me gustó. En verdad me atrajo el tenis; simplemente me gusta hacer los movimientos con la raqueta”.</p>
+<p class="story-body-text story-content" data-para-count="122" data-total-count="9012" id="story-continues-34" tabindex="-1">Sus padres también se comprometieron por completo, ya que depositaron expectativas altas en la carrera tenística de Lee.</p>
+<p class="story-body-text story-content" data-para-count="401" data-total-count="9413" id="story-continues-35" tabindex="-1">“No era como un pasatiempo o para que se divirtiera; nos lo tomamos muy en serio”, aseguró Park. “Cuando su padre y yo tuvimos la primera reunión con su primer entrenador, le dijimos que no estaba ahí para divertirse: estábamos construyendo su carrera y un camino a futuro. Así que le pedimos que tomara las clases con seriedad. Si no tenía oportunidad ni potencial, no continuaríamos”.</p>
+<figure id="media-100000004781624" class="media photo media-100000004781624 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/11/27/sports/27DEAF09/27DEAF09-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-37">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/11/27/sports/27DEAF09/27DEAF09-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/11/27/sports/27DEAF09/27DEAF09-superJumbo.jpg" data-mediaviewer-caption="Lee looking at instant messages on a cellphone on his way home after winning a gold medal at the National Sports Festival." data-mediaviewer-credit="Jean Chung for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/11/27/sports/27DEAF09/27DEAF09-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Lee looking at instant messages on a cellphone on his way home after winning a gold medal at the National Sports Festival.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Jean Chung for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="311" data-total-count="9724" id="story-continues-37" tabindex="-1">Lee siguió en el apartamento de su familia en Jecheon, donde su madre trabaja como peluquera y su padre es reportero, pero el tenis que practicaba empezó a ganar notoriedad a nivel nacional. Aunque Lee acumulaba victorias en cada una de las categorías por edad, muchos padres y entrenadores seguían dudando.</p>
+<p class="story-body-text story-content" data-para-count="437" data-total-count="10161" id="story-continues-38" tabindex="-1">“Noventa por ciento del personal de entrenamiento, los padres y las familias de otros jugadores siempre dijeron que Duck-hee no llegaría a nivel profesional”, comentó Park. “Siempre comentaban que ese era nivel de escuela primaria, que la velocidad de la pelota era muy lenta, y que por eso ganaba. Pero que cuando llegara al nivel profesional la velocidad aumentaría mucho y no podría reaccionar porque no iba a escucharla”.</p>
+<h4 class="story-subheading story-content">Agudeza visual</h4>
+
+<p class="story-body-text story-content" data-para-count="547" data-total-count="10708" id="story-continues-40" tabindex="-1">Aunque no ha habido jugadores sordos que hayan obtenido los logros profesionales de Lee, un puñado de jugadores sordos y con dificultades auditivas se ha destacado a nivel universitario en Estados Unidos.<br />Paige Stringer, quien creó la Fundación Mundial para Niños con Pérdida Auditiva, jugó para la Universidad de Washington, donde tenía un compañero de dobles que también era sordo. Ella tiene una hipótesis según la cual la desventaja de los jugadores sordos de no poder escuchar se puede compensar con el aumento de la agudeza visual.</p>
+<p class="story-body-text story-content" data-para-count="288" data-total-count="10996" id="story-continues-41" tabindex="-1">“En general, la gente que nace sorda o con dificultades auditivas puede tener un sentido más fuerte de la intuición y suele captar las pistas sutiles en el rostro o en el lenguaje corporal de una persona, a diferencia de la gente con una capacidad auditiva normal”, opinó Stringer.</p>
+<p class="story-body-text story-content" data-para-count="337" data-total-count="11333" id="story-continues-42" tabindex="-1">La anticipación aguda se ha vuelto la fortaleza de Lee. Woo, su primo y entrenador, dijo que Lee podía leer el tipo de disparo que haría su oponente con solo observar atentamente el movimiento de su brazo al momento de preparar el golpe. Christopher Rungkat enfrentó en alguna ocasión a Lee y expresó asombro ante su anticipación.</p>
+<p class="story-body-text story-content" data-para-count="174" data-total-count="11507" id="story-continues-43" tabindex="-1">“Siempre parece saber dónde le voy a pegar a la pelota”, confesó Rungkat a los reporteros el año pasado. “No creo que adivine; es más como si me leyera la mente”.</p>
+<h4 class="story-subheading story-content">El esfuerzo para ser el mejor</h4>
+
+<p class="story-body-text story-content" data-para-count="290" data-total-count="11797" id="story-continues-45" tabindex="-1">La meta de Lee es ser el número uno de la clasificación mundial, pero primero aspira a convertirse en el mejor jugador de la historia de Corea del Sur, lo cual significa superar el mayor logro de Lee Hyung-taik, quien llegó al número 36 en 2007 y ganó un título individual de la ATP.</p>
+<p class="story-body-text story-content" data-para-count="380" data-total-count="12177" id="story-continues-46" tabindex="-1">En popularidad, el tenis se queda atrás de deportes como el béisbol y el fútbol, y Corea del Sur no es sede de un evento de la ATP. Sin embargo, la Asociación Coreana de Tenis espera que con Lee Duck-hee y Chung Hyeon, otro talentoso jugador joven de 20 años y clasificado 104, el equipo de Copa Davis del país pueda regresar al Grupo Mundial, del cual fue relegado en 2008.</p>
+<p class="story-body-text story-content" data-para-count="369" data-total-count="12546" id="story-continues-47" tabindex="-1">Lee no cree que su discapacidad auditiva sea un lastre —“Realmente no me importa”, dijo—, pero reconoce que sí podría serlo otra desventaja física: sus 1,75 metros de estatura. En una época de constante competencia física, solo uno de los mejores 50 jugadores de la ATP es tan bajo como Lee: David Ferrer. Solo seis jugadores miden menos de 1,83 metros.</p>
+<p class="story-body-text story-content" data-para-count="347" data-total-count="12893" id="story-continues-48" tabindex="-1">Lee viaja con Woo, con quien puede volear y habla un poco de inglés, mientras los dos cursan juntos el primer tramo del circuito. Woo dijo que, aunque haya ocasiones en que Lee se sienta intimidado por ser uno de los más jóvenes del tour, siempre mantiene una actitud positiva y socialmente se siente cómodo al interactuar con otros jugadores.</p>
+<p class="story-body-text story-content" data-para-count="354" data-total-count="13247" id="story-continues-49" tabindex="-1">A pesar de que Lee puede competir sin muchos problemas en las canchas, salvo cuando no se percata de que la bola salió o rozó la red, hay otras reglas que pueden ser desafiantes para un jugador sordo. Todos los jugadores están obligados a participar en conferencias de prensa después de cada partido si así los solicitan los medios de comunicación.</p>
+<p class="story-body-text story-content" data-para-count="373" data-total-count="13620" id="story-continues-50" tabindex="-1">Las entrevistas formales pueden resultar molestas para Lee, porque debe leer los labios de un intérprete y su forma de hablar no se suele comprender fácilmente. Cuando una estación de televisión entrevistó a Lee después de un partido del Festival Nacional Deportivo, se usaron subtítulos. Sin embargo, Lee también puede obtener beneficios de su singular situación.</p>
+<p class="story-body-text story-content" data-para-count="239" data-total-count="13859" id="story-continues-51" tabindex="-1">“Por supuesto que quiero que traten a mi jugador como uno normal, pero tenemos algunas oportunidades y ventajas porque es sordo, en el aspecto de los negocios”, señaló su agente, Lee Dong-yeop. “Porque nadie ha hecho esto antes”.</p>
+<p class="story-body-text story-content" data-para-count="529" data-total-count="14388" id="story-continues-52" tabindex="-1">Uno de los primeros beneficios llegó por parte de Hyundai, la automotriz coreana que comenzó a patrocinar a Lee cuando tenía 13 años y que recientemente renovó su apoyo hasta 2020. En un comunicado de Hyundai, dijeron que estaban “asombrados y se sentían inspirados por el espíritu incansable de Lee, ya que quería ser uno de los mejores jugadores de tenis a pesar de tener la desventaja de ser sordo”, y que la compañía “sentía la necesidad de apoyarlo al ser una empresa responsable de la sociedad coreana”.</p>
+<p class="story-body-text story-content" data-para-count="318" data-total-count="14706" id="story-continues-53" tabindex="-1">El financiamiento de Hyundai proporciona a Lee una base financiera estable que pocos jugadores en desarrollo pueden tener. Su representante espera que el aumento de apoyos, tanto de premios monetarios como de patrocinios adicionales, permita que algún día Lee viaje con un agente y un intérprete de tiempo completo.</p>
+<p class="story-body-text story-content" data-para-count="63" data-total-count="14769" id="story-continues-54" tabindex="-1">“El dinero puede resolver ese tipo de problemas”, señaló.</p>
+<figure id="media-100000004781652" class="media photo media-100000004781652 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/11/27/sports/27DEAF11/27DEAF11-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-56">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/11/27/sports/27DEAF11/27DEAF11-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/11/27/sports/27DEAF11/27DEAF11-superJumbo.jpg" data-mediaviewer-caption="Lee raises his racket to catch the attention of the chair umpire during a match. He can compete without much issue on court, save for sometimes not noticing out or let calls." data-mediaviewer-credit="Jean Chung for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/11/27/sports/27DEAF11/27DEAF11-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Lee raises his racket to catch the attention of the chair umpire during a match. He can compete without much issue on court, save for sometimes not noticing out or let calls.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Jean Chung for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="172" data-total-count="14941" id="story-continues-56" tabindex="-1">Stringer dijo que creía que no había razón para que la presencia de atletas sordos fuera menos común en los niveles de la élite del tenis que en la población general.</p>
+<p class="story-body-text story-content" data-para-count="494" data-total-count="15435" id="story-continues-57" tabindex="-1">“La cima de cualquier deporte está limitada a un grupo muy selecto de atletas talentosos”, explicó. “Por lo tanto, es un asunto de porcentajes. Hay más posibilidades de que haya más gente con una audición normal que con sordera entre los mejores 150. Apuesto a que el éxito de Lee Duck-hee tiene que ver con sus talentos atléticos, su personalidad, inteligencia, ética laboral, sus oportunidades y el grupo de apoyo que lo rodea; su sordera tiene menos peso que esos atributos”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/corea-del-sur/" rel="tag">corea del sur</a>, <a href="https://www.nytimes.com/es/tag/lee-duck-hee/" rel="tag">Lee Duck-hee</a>, <a href="https://www.nytimes.com/es/tag/tennis/" rel="tag">tennis</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/12/04/para-un-prodigio-del-tenis-coreano-ser-sordo-no-es-un-obstaculo/"
+				data-title="Noticias: Para un prodigio del tenis coreano, ser sordo no es un obstáculo"
+				data-author="POR BEN ROTHENBERG"
+				data-media=""
+				data-description="Lee Duck-hee es un sudcoreano de 18 años clasificado como el 143 del mundo que juega un deporte en el cual se considera crucial escuchar la pelota. "
+				data-publish-date="4 de diciembre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2015/09/10/la-historia-detras-del-exito-improbable-de-novak-djokovic/">
+					<div class="story-body">
+						<h3 class="kicker">Deportes</h3>
+
+						<h2 class="headline">
+							<span class="title">La historia detrás del éxito improbable de Novak Djokovic</span>
+							<time class="dateline">10 de septiembre de 2015</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2015/09/11/opinion/Djokovic2-es/Djokovic2-es-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2015/07/14/es-hora-de-valorar-la-grandeza-de-serena-williams/">
+					<div class="story-body">
+						<h3 class="kicker">Deportes</h3>
+
+						<h2 class="headline">
+							<span class="title">Es hora de valorar la grandeza de Serena Williams</span>
+							<time class="dateline">14 de julio de 2015</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2015/07/14/sports/14CLAREYweb1/14CLAREYweb1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/10/20/ibm-le-apuesta-en-grande-a-watson-su-nueva-tecnologia-de-inteligencia-artificial/">
+					<div class="story-body">
+						<h3 class="kicker">Tecnología</h3>
+
+						<h2 class="headline">
+							<span class="title">IBM le apuesta en grande a Watson, su nueva tecnología de inteligencia artificial</span>
+							<time class="dateline">20 de octubre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/10/17/business/17WATSON2/17WATSON2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/12/02/el-obstaculo-para-los-planes-de-deportacion-de-trump-las-cortes-de-inmigracion-saturadas/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">El obstáculo para los planes de deportación de Trump: las cortes de inmigración saturadas</span>
+							<time class="dateline">2 de diciembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/12/02/us/02courts-1jp/04courts1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+			
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-transparent-ffffff' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-transparent-ffffff', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":1099,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

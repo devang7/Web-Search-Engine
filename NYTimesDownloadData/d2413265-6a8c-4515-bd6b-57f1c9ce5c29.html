@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004833234"/>
+<meta name="hdl" content="WhatsApp, un lenguaje común para millones de inmigrantes" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20161227" />
+<meta name="utime" content="20161227120058" />
+<meta name="ptime" content="20161227120058" />
+<meta name="DISPLAYDATE" content="Dec. 27, 2016" />
+<meta name="dat" content="Dec. 27, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="whatsapp-un-lenguaje-comun-para-millones-de-inmigrantes" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/12/27/whatsapp-un-lenguaje-comun-para-millones-de-inmigrantes/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="WhatsApp, un lenguaje común para millones de inmigrantes" />
+<meta property="og:description" content="Para los migrantes la aplicación se ha convertido en la mejor manera de mantenerse conectados a lo largo de una ruta o, cuando llegan a su destino, para seguir vinculados con su antigua vida. La eligen por su privacidad y su facilidad de uso." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/12/22/technology/22state-illo/22state-illo-videoSixteenByNine768.gif" />
+<meta property="article:published" itemprop="datePublished" content="2016-12-27" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/12/27/whatsapp-un-lenguaje-comun-para-millones-de-inmigrantes/" />
+<meta property="twitter:title" content="WhatsApp, un lenguaje común para millones de inmigrantes" />
+<meta property="twitter:description" content="Para los migrantes la aplicación se ha convertido en la mejor manera de mantenerse conectados a lo largo de una ruta o, cuando llegan a su destino, para seguir vinculados con su antigua vida. La eligen por su privacidad y su facilidad de uso." />
+<meta name="author" content="Farhad Manjoo" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Farhad Manjoo" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="tecnologia" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="tecnologia" />
+<meta name="id" content="100000004833234"/>
+<meta name="wordCount" content="1613"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/12/27/whatsapp-un-lenguaje-comun-para-millones-de-inmigrantes/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=12&amp;day=27&amp;name=whatsapp-un-lenguaje-comun-para-millones-de-inmigrantes">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=31922">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/12\/27\/whatsapp-un-lenguaje-comun-para-millones-de-inmigrantes\/"},"headline":"WhatsApp, un lenguaje com\u00fan para millones de inmigrantes","datePublished":"2016-12-27T12:00:58+00:00","dateModified":"2016-12-26T16:44:53+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/12\/22\/technology\/22state-illo\/22state-illo-videoSixteenByNine768.gif","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Para los migrantes la aplicaci\u00f3n se ha convertido en la mejor manera de mantenerse conectados a lo largo de una ruta o, cuando llegan a su destino, para seguir vinculados con su antigua vida. La eligen por su privacidad y su facilidad de uso."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/12/27/whatsapp-un-lenguaje-comun-para-millones-de-inmigrantes/" hreflang="es" />
+<link rel="alternate" href="https://www.nytimes.com/2016/12/21/technology/for-millions-of-immigrants-a-common-language-whatsapp.html?smid=fb-nytimes&amp;#038;smtyp=cur&amp;#038;_r=1&amp;#038;referer=http://m.facebook.com" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/tecnologia" />
+<title>WhatsApp, un lenguaje común para millones de inmigrantes &#8211; Español</title>
+<link rel="canonical" href="https://www.nytimes.com/2016/12/21/technology/for-millions-of-immigrants-a-common-language-whatsapp.html?smid=fb-nytimes&#038;smtyp=cur&#038;_r=1&#038;referer=http://m.facebook.com" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/12/27/whatsapp-un-lenguaje-comun-para-millones-de-inmigrantes/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-31922 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				WhatsApp, un lenguaje común para millones de inmigrantes
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/12/27/whatsapp-un-lenguaje-comun-para-millones-de-inmigrantes/"
+					data-title="Noticias: WhatsApp, un lenguaje común para millones de inmigrantes"
+					data-author="POR FARHAD MANJOO"
+					data-media=""
+					data-description="Para los migrantes la aplicación se ha convertido en la mejor manera de mantenerse conectados a lo largo de una ruta o, cuando llegan a su destino, para seguir vinculados con su antigua vida. La eligen por su privacidad y su facilidad de uso."
+					data-publish-date="27 de diciembre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2iAmBVN">http://nyti.ms/2iAmBVN</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/tecnologia/">Tecnología</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">WhatsApp, un lenguaje común para millones de inmigrantes</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Farhad Manjoo</span>
+</span>
+
+					<time class="dateline" datetime="2016-12-27">27 de diciembre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/12/27/whatsapp-un-lenguaje-comun-para-millones-de-inmigrantes/"
+							data-title="Noticias: WhatsApp, un lenguaje común para millones de inmigrantes"
+							data-author="POR FARHAD MANJOO"
+							data-media=""
+							data-description="Para los migrantes la aplicación se ha convertido en la mejor manera de mantenerse conectados a lo largo de una ruta o, cuando llegan a su destino, para seguir vinculados con su antigua vida. La eligen por su privacidad y su facilidad de uso."
+							data-publish-date="27 de diciembre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004833413" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/22/technology/22state-illo/22state-illo-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/22/technology/22state-illo/22state-illo-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/22/technology/22state-illo/22state-illo-superJumbo.jpg" data-mediaviewer-caption="Más de mil millones de personas utilizan WhatsApp regularmente; este servicio permite que los usuarios envíen mensajes de texto y hagan llamadas telefónicas sin costo en internet. 
+" data-mediaviewer-credit="Doug Chayka"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/22/technology/22state-illo/22state-illo-master1050.jpg"/>
+		<meta itemprop="height" content="693" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Más de mil millones de personas utilizan WhatsApp regularmente; este servicio permite que los usuarios envíen mensajes de texto y hagan llamadas telefónicas sin costo en internet. 
+</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Doug Chayka
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="https://www.nytimes.com/2016/12/21/technology/for-millions-of-immigrants-a-common-language-whatsapp.html?smid=fb-nytimes&#038;smtyp=cur&#038;_r=1&#038;referer=http%3A%2F%2Fm.facebook.com&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="304" data-total-count="304" id="story-continues-2" tabindex="-1">Cuando Facebook compró WhatsApp por más de 19.000 millones de dólares en 2014, Jan Koum, fundador de la empresa de mensajería electrónica, dispuso que una parte del acuerdo se firmara afuera del centro suburbano de servicios sociales en el que alguna vez hizo fila para recoger cupones de alimentos.</p>
+<p class="story-body-text story-content" data-para-count="499" data-total-count="803" id="story-continues-3" tabindex="-1">Koum, como muchos en la industria de la tecnología, es inmigrante. Era adolescente cuando él y su madre se mudaron a la Bahía de San Francisco a principios de los noventa, en parte para escapar de la ola antisemita que azotaba a su Ucrania nativa. Koum contó en una entrevista con <a href="http://www.forbes.com/forbes/welcome/?toURL=http://www.forbes.com/sites/parmyolson/2014/02/19/exclusive-inside-story-how-jan-koum-built-whatsapp-into-facebooks-new-19-billion-baby/&amp;refURL=&amp;referrer=#431468934ffb" target="_blank">Forbes</a> que su madre trabajaba como niñera y barría pisos en un supermercado para poder sobrevivir en el nuevo país: cuando se enteró de que tenía cáncer, la familia se mantenía con sus pagos de incapacidad.</p>
+<p class="story-body-text story-content" data-para-count="539" data-total-count="1342" id="story-continues-4" tabindex="-1">Las anécdotas de las desgracias que viven los inmigrantes son comunes en Silicon Valley. Sin embargo, la historia de Koum resuena mucho más porque su aplicación se ha convertido en un pilar de la vida del inmigrante. Más de mil millones de personas utilizan WhatsApp de manera regular; este servicio permite que los usuarios envíen mensajes de texto y hagan llamadas gratis por internet. La aplicación es particularmente popular en India, donde tiene más de 160 millones de usuarios, así como en Europa, América del Sur y África.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="328" data-total-count="1670" id="story-continues-5" tabindex="-1">Aunque es gratuita tiene un récord relativamente bueno de privacidad y seguridad, y es popular en muchas partes del mundo. WhatsApp ha podido cultivar una audiencia inusual: se ha convertido en la <em>lingua franca</em> de las personas que, por su propia decisión u obligados, han abandonado sus hogares para lanzarse a lo desconocido.</p>
+<p class="story-body-text story-content" data-para-count="408" data-total-count="2078" id="story-continues-6" tabindex="-1">Esto sucede mientras el mundo sufre cada vez más guerras causadas por la migración; 2016 fue, entre otras cosas, una batalla prolongada y ardua por los derechos y privilegios de los migrantes, ya fueran los sirios en Europa, los europeos en la pelea del Reino Unido por el &#8220;brexit&#8221; o el problema de las inmigraciones mexicana y musulmana que dominó la contienda presidencial en Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="316" data-total-count="2394" id="story-continues-7" tabindex="-1">Más allá de los titulares, lo que a menudo pasa desapercibido en las políticas de migración son las dinámicas de la vida del migrante; en particular las formas sorprendentes y sutiles en que la tecnología, sobre todo los teléfonos inteligentes y las redes sociales, han alterado la experiencia del inmigrante.</p>
+<p class="story-body-text story-content" data-para-count="516" data-total-count="2910" id="story-continues-8" tabindex="-1">Los inmigrantes utilizan tipos distintos de aplicaciones, desde luego, de Facebook a Skype o WeChat, que es popular en China. Pero para muchos, WhatsApp ha sido el centro de esa conectividad recién encontrada. Donde haya gente que abandona sus hogares para dirigirse a destinos desconocidos, es probable que se use WhatsApp. Para los migrantes se ha convertido en la mejor manera de mantenerse conectados a lo largo de una ruta o, una vez que han llegado, de seguir en contacto con las personas que dejaron en casa.</p>
+<p class="story-body-text story-content" data-para-count="407" data-total-count="3317" id="story-continues-9" tabindex="-1">Los <a href="http://qz.com/500062/the-most-crucial-item-that-migrants-and-refugees-carry-is-a-smartphone/" target="_blank">refugiados sirios</a> que atraviesan Europa han utilizado WhatsApp para pasar consejos, advertencias y llamadas de auxilio a quienes estén en el camino. La aplicación se ha utilizado a lo largo de la frontera entre México y Estados Unidos, donde Donald Trump quiere construir su muro. El año pasado, una ola de venezolanos llegó a Miami y lo primero que muchos hicieron al llegar fue <a href="http://www.univision.com/univision-news/immigration/whatsapp-a-lifeline-for-new-venezuelan-immigrants-in-miami" target="_blank">utilizar WhatsApp</a>.</p>
+<p class="story-body-text story-content" data-para-count="377" data-total-count="3694" id="story-continues-10" tabindex="-1">Incluso para las personas que se han ido de sus países voluntariamente para buscar empleo y salud en un nuevo lugar, este servicio de mensajería ha alterado por completo los límites de sus vidas. Algunas personas que durante décadas han estado en Estados Unidos me dijeron que WhatsApp ha aliviado la sensación de aislamiento y añoranza que forma parte de ser inmigrante.</p>
+<p class="story-body-text story-content" data-para-count="239" data-total-count="3933" id="story-continues-11" tabindex="-1">&#8220;Le doy mejor seguimiento a sus vidas diarias&#8221;, dijo Anne Reef, de 55 años, una antigua profesora de inglés que se mudó de Sudáfrica a Estados Unidos en 1988. Ahora vive en Memphis y trabaja en la universidad de esa ciudad.</p>
+<p class="story-body-text story-content" data-para-count="557" data-total-count="4490" id="story-continues-12" tabindex="-1">Durante los primeros años que Reef pasó en Estados Unidos las llamadas internacionales eran costosas; dependía de una llamada a la semana para enterarse de lo que ocurría en casa. A menudo recibía cartas que contenían fotos de niños recién nacidos y bodas. Enviar mensajes por fax se hizo popular en los noventa, y más tarde descubrió los correos electrónicos, Skype y Facebook. Pero no fue sino hasta que comenzó a usar WhatsApp, hace casi un año, que Reef empezó a sentir un cambio cualitativo en su conexión con la familia que tiene lejos.</p>
+<p class="story-body-text story-content" data-para-count="307" data-total-count="4797" id="story-continues-13" tabindex="-1">Hace poco un familiar suyo que vive en Australia —el hijo del primo de Reef— tuvo un bebé. Con WhatsApp, Reed puede ver muchas fotos del bebé. &#8220;Siento que participo mucho más en la vida del bebé. Siento que lo conozco, y que se ha convertido en más que un primo tercero para mí&#8221;, dijo.</p>
+<figure id="media-100000004833729" class="media photo media-100000004833729 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/22/business/22state1/22state1-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-15">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/22/business/22state1/22state1-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/22/business/22state1/22state1-superJumbo.jpg" data-mediaviewer-caption="Refugees in Calais, France, standing atop a hill for better mobile coverage. Smartphones and social networks have altered the migrant experience by allowing migrants to communicate along routes and with those they left back home." data-mediaviewer-credit="Mauricio Lima for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/22/business/22state1/22state1-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Refugees in Calais, France, standing atop a hill for better mobile coverage. Smartphones and social networks have altered the migrant experience by allowing migrants to communicate along routes and with those they left back home.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Mauricio Lima for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="708" data-total-count="5505" id="story-continues-15" tabindex="-1">Esto podría sonar como algo normal; después de todo, las fotos de bebés en internet no son revolucionarias. Pero las innovaciones de WhatsApp tienden a ser sutiles. Uno de los secretos de su crecimiento ha sido su enfoque en la simplicidad. La aplicación es poco vistosa, y tan solo permite hacer algunas cosas: mensajes de texto, llamadas de voz y videollamadas. Como resultado, es muy fácil de usar incluso para las personas que apenas se están adentrando en la tecnología digital. Este es uno de los motivos por los que a los migrantes les parece tan poderosa; les da acceso a un grupo más amplio de familiares que quizá no quisieron utilizar las redes sociales que aparecieron antes de WhatsApp.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="146" data-total-count="5651" id="story-continues-16" tabindex="-1">A menudo el uso de WhatsApp sigue un extraño patrón: los familiares mayores les sugieren a los jóvenes que lo utilicen, en vez de lo contrario.</p>
+<p class="story-body-text story-content" data-para-count="199" data-total-count="5850" id="story-continues-17" tabindex="-1">“Mi tía, que en algunos años cumplirá 80, fue la que de verdad me presionó para usarlo”, dijo Reef. Ahora, dijo, lo usa casi a diario; últimamente incluso ha hecho que sus hijos lo utilicen.</p>
+<p class="story-body-text story-content" data-para-count="323" data-total-count="6173" id="story-continues-18" tabindex="-1">La omnipresencia de WhatsApp también es importante, porque se ha convertido en el principal medio de comunicación entre las personas y su tierra natal —ya sea que su antigua casa esté en Bangalore, India; San Pablo, Brasil; Johannesburgo o París— para quienes se van, se convierte en una ventana a su antigua vida.</p>
+<p class="story-body-text story-content" data-para-count="285" data-total-count="6458" id="story-continues-19" tabindex="-1">“Tengo un grupo en el que está la familia de mi madre, y otro donde está la familia de mi esposo; todo el día nos enviamos mensajes”, dijo Mina Mehta, de 65 años, una técnica con licencia quirúrgica en Chicago, que se mudó de la India a Estados Unidos con su esposo en 1975.</p>
+<p class="story-body-text story-content" data-para-count="228" data-total-count="6686" id="story-continues-20" tabindex="-1">“Con esa retroalimentación constante de noticias de los que están en casa se pueden escuchar partes de sus vidas que no habrían mencionado en una llamada telefónica una vez a la semana”, me dijo Hemant, el hijo de Mehta.</p>
+<p class="story-body-text story-content" data-para-count="651" data-total-count="7337" id="story-continues-21" tabindex="-1">Para los migrantes que se van de sus casas a causa de la desesperación, WhatsApp ofrece otra ventaja que le falta a muchas otras redes: es segura. La aplicación está cifrada, lo cual evita el espionaje gubernamental. La empresa también ha sido firme en su oposición a la publicidad y algunas violaciones de la privacidad, aunque esa postura se ha suavizado desde la compra de Facebook. WhatsApp dijo en agosto que comenzaría a conectar a sus usuarios con los que están en la <a href="https://www.nytimes.com/es/2016/08/26/whatsapp-relaja-sus-terminos-de-confidencialidad-y-comparte-informacion-con-facebook/" target="_blank">base de datos de Facebook</a>, un cambio que provocó quejas por parte de algunos defensores de la privacidad (y eso podría ocasionarles una <a href="http://www.reuters.com/article/us-whatsapp-m-a-facebook-eu-idUSKBN14917T" target="_blank">multa de la Comisión Europea</a>).</p>
+<p class="story-body-text story-content" data-para-count="415" data-total-count="7752" id="story-continues-22" tabindex="-1">Aun así, para los refugiados sirios, WhatsApp se considera la herramienta de comunicación más segura según cuenta Majd Taby, una inmigrante siria en Estados Unidos que pasó algunas semanas de este año documentando las vidas de los refugiados para un <a href="http://syriandiaspora.com/" target="_blank">libro de fotografías</a> que está haciendo. Taby argumentó que, sin WhatsApp, las olas de migrantes que salen de Siria podrían haber sido mucho más pequeñas.</p>
+<p class="story-body-text story-content" data-para-count="243" data-total-count="7995" id="story-continues-23" tabindex="-1">“Lo que hizo WhatsApp fue quitarle lo desconocido al trayecto”, dijo. Durante los comienzos de la guerra civil siria, algunos de los primeros refugiados que se marchaban experimentaban una bienvenida de brazos abiertos en países europeos.</p>
+<p class="story-body-text story-content" data-para-count="301" data-total-count="8296" id="story-continues-24" tabindex="-1">“La gente abría grupos con sus amigos y, si uno de ellos lograba llegar al otro lado, podía enviarles un mensaje para decirles cómo había sido el viaje y compartir fotografías”, dijo Taby. “Por eso muchas personas han decidido usarlo. Habían visto en WhatsApp exactamente qué pasaría”.</p>
+<p class="story-body-text story-content" data-para-count="282" data-total-count="8578" id="story-continues-25" tabindex="-1">WhatsApp no tiene información de cómo los inmigrantes han adoptado la aplicación; una portavoz me dijo que, puesto que las comunicaciones en la aplicación están cifradas, la empresa no tiene manera de saber en qué momento las personas se están comunicando internacionalmente.</p>
+<p class="story-body-text story-content" data-para-count="149" data-total-count="8727" id="story-continues-26" tabindex="-1">Sin embargo, Koum, el director general de la empresa, dijo en un correo electrónico que los usuarios inmigrantes forman parte esencial del servicio.</p>
+<p class="story-body-text story-content" data-para-count="359" data-total-count="9086" id="story-continues-27" tabindex="-1">“Muchos de los que trabajamos en WhatsApp nacimos en otros países”, dijo. “Reconocemos lo importante que es para las personas conectarse con la familia que tienen a kilómetros de distancia, porque es algo en lo que pensamos mucho”. Cada función de la aplicación, agregó, “la diseñó alguien que vive la experiencia del inmigrante cada día”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/crisis-migratoria/" rel="tag">crisis migratoria</a>, <a href="https://www.nytimes.com/es/tag/siria/" rel="tag">Siria</a>, <a href="https://www.nytimes.com/es/tag/whatsapp/" rel="tag">whatsapp</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/12/27/whatsapp-un-lenguaje-comun-para-millones-de-inmigrantes/"
+				data-title="Noticias: WhatsApp, un lenguaje común para millones de inmigrantes"
+				data-author="POR FARHAD MANJOO"
+				data-media=""
+				data-description="Para los migrantes la aplicación se ha convertido en la mejor manera de mantenerse conectados a lo largo de una ruta o, cuando llegan a su destino, para seguir vinculados con su antigua vida. La eligen por su privacidad y su facilidad de uso."
+				data-publish-date="27 de diciembre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/08/26/whatsapp-relaja-sus-terminos-de-confidencialidad-y-comparte-informacion-con-facebook/">
+					<div class="story-body">
+						<h3 class="kicker">Tecnología</h3>
+
+						<h2 class="headline">
+							<span class="title">WhatsApp relaja sus políticas de privacidad y comparte información con Facebook</span>
+							<time class="dateline">26 de agosto de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/08/25/business/65WHATSUP/65WHATSUP-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/12/19/las-mas-grandes-fallas-y-exitos-tecnologicos-de-2016/">
+					<div class="story-body">
+						<h3 class="kicker">Tecnología</h3>
+
+						<h2 class="headline">
+							<span class="title">Los éxitos y fracasos tecnológicos del 2016</span>
+							<time class="dateline">19 de diciembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/03/fashion/03DISRUPTIONS2/03DISRUPTIONS2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/12/22/el-atentado-en-berlin-es-la-prueba-mas-dificil-para-merkel-en-sus-once-anos-de-gobierno/">
+					<div class="story-body">
+						<h3 class="kicker">Europa</h3>
+
+						<h2 class="headline">
+							<span class="title">El atentado en Berlín es la prueba más difícil para Merkel en sus once años de gobierno</span>
+							<time class="dateline">22 de diciembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/12/22/world/22Merkel/22Merkel-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/12/22/un-misterioso-stonehenge-en-brasil-modifica-lo-que-sabemos-sobre-la-historia-humana-en-el-amazonas/">
+					<div class="story-body">
+						<h3 class="kicker">Ciencia</h3>
+
+						<h2 class="headline">
+							<span class="title">Un misterioso ‘Stonehenge’ en Brasil modifica lo que sabemos sobre la historia humana en la Amazonia</span>
+							<time class="dateline">22 de diciembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/11/19/us/360-megalith2/360-megalith2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":1115,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

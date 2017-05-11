@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004548868"/>
+<meta name="hdl" content="Luca, la bacteria que podría explicar el origen de la humanidad" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20160801" />
+<meta name="utime" content="20160801093705" />
+<meta name="ptime" content="20160801093705" />
+<meta name="DISPLAYDATE" content="Aug. 1, 2016" />
+<meta name="dat" content="Aug. 1, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="esta-es-luca-la-bacteria-que-podria-explicar-el-origen-de-la-humanidad" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/08/01/esta-es-luca-la-bacteria-que-podria-explicar-el-origen-de-la-humanidad/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Luca, la bacteria que podría explicar el origen de la humanidad" />
+<meta property="og:description" content="Un grupo de científicos alemanes hizo un retrato genético del antepasado de todos los seres vivos, el cual aclara en gran medida el misterio de cómo surgió la vida en la Tierra. Lo llamaron Luca, el&quot;último ancestro común universal&quot;." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/07/26/science/26Origins/26Origins-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-08-01" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/08/01/esta-es-luca-la-bacteria-que-podria-explicar-el-origen-de-la-humanidad/" />
+<meta property="twitter:title" content="Luca, la bacteria que podría explicar el origen de la humanidad" />
+<meta property="twitter:description" content="Un grupo de científicos alemanes hizo un retrato genético del antepasado de todos los seres vivos, el cual aclara en gran medida el misterio de cómo surgió la vida en la Tierra. Lo llamaron Luca, el&quot;último ancestro común universal&quot;." />
+<meta name="author" content="Nicholas Wade" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Nicholas Wade" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="ciencia" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="ciencia" />
+<meta name="id" content="100000004548868"/>
+<meta name="wordCount" content="1258"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/08/01/esta-es-luca-la-bacteria-que-podria-explicar-el-origen-de-la-humanidad/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=08&amp;day=01&amp;name=esta-es-luca-la-bacteria-que-podria-explicar-el-origen-de-la-humanidad">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=20385">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/08\/01\/esta-es-luca-la-bacteria-que-podria-explicar-el-origen-de-la-humanidad\/"},"headline":"Luca, la bacteria que podr\u00eda explicar el origen de la humanidad","datePublished":"2016-08-01T09:37:05+00:00","dateModified":"2016-08-01T10:47:51+00:00","author":{"@type":"Person","name":"dulce.ramos"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/07\/26\/science\/26Origins\/26Origins-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Un grupo de cient\u00edficos alemanes hizo un retrato gen\u00e9tico del antepasado de todos los seres vivos, el cual aclara en gran medida el misterio de c\u00f3mo surgi\u00f3 la vida en la Tierra. Lo llamaron Luca, el\"\u00faltimo ancestro com\u00fan universal\"."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/08/01/esta-es-luca-la-bacteria-que-podria-explicar-el-origen-de-la-humanidad/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/07/26/science/last-universal-ancestor.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/ciencia" />
+<title>Luca, la bacteria que podría explicar el origen de la humanidad &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/07/26/science/last-universal-ancestor.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/08/01/esta-es-luca-la-bacteria-que-podria-explicar-el-origen-de-la-humanidad/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-20385 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Luca, la bacteria que podría explicar el origen de la humanidad
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/08/01/esta-es-luca-la-bacteria-que-podria-explicar-el-origen-de-la-humanidad/"
+					data-title="Noticias: Luca, la bacteria que podría explicar el origen de la humanidad"
+					data-author="POR NICHOLAS WADE"
+					data-media=""
+					data-description="Un grupo de científicos alemanes hizo un retrato genético del antepasado de todos los seres vivos, el cual aclara en gran medida el misterio de cómo surgió la vida en la Tierra. Lo llamaron Luca, el&quot;último ancestro común universal&quot;."
+					data-publish-date="1 de agosto de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2atSuaK">http://nyti.ms/2atSuaK</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/ciencia/">Ciencia</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Luca, la bacteria que podría explicar el origen de la humanidad</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Nicholas Wade</span>
+</span>
+
+					<time class="dateline" datetime="2016-08-01">1 de agosto de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/08/01/esta-es-luca-la-bacteria-que-podria-explicar-el-origen-de-la-humanidad/"
+							data-title="Noticias: Luca, la bacteria que podría explicar el origen de la humanidad"
+							data-author="POR NICHOLAS WADE"
+							data-media=""
+							data-description="Un grupo de científicos alemanes hizo un retrato genético del antepasado de todos los seres vivos, el cual aclara en gran medida el misterio de cómo surgió la vida en la Tierra. Lo llamaron Luca, el&quot;último ancestro común universal&quot;."
+							data-publish-date="1 de agosto de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004549937" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/07/26/science/26Origins/26Origins-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/07/26/science/26Origins/26Origins-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/07/26/science/26Origins/26Origins-superJumbo.jpg" data-mediaviewer-caption="William F. Martin afirma que el último antepasado común universal puede rastrearse hasta las fuentes hidrotermales en la profundidad del océano, como esta en Galápagos. " data-mediaviewer-credit="Archivo de Historia Universal/UIG, vía Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/07/26/science/26Origins/26Origins-master1050.jpg"/>
+		<meta itemprop="height" content="788" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">William F. Martin afirma que el último antepasado común universal puede rastrearse hasta las fuentes hidrotermales en la profundidad del océano, como esta en Galápagos. </span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Archivo de Historia Universal/UIG, vía Getty Images
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/07/26/science/last-universal-ancestor.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="225" data-total-count="225" id="story-continues-2" tabindex="-1">Un grupo de científicos ha generado un retrato genético del antepasado de todos los seres vivientes y, gracias a que es sorprendentemente específico, aclara en gran medida el misterio de cómo surgió la vida en la Tierra.</p>
+<p class="story-body-text story-content" data-para-count="379" data-total-count="604" id="story-continues-3" tabindex="-1">Este venerable ancestro era un organismo unicelular parecido a una bacteria. Tiene un nombre, o por lo menos, un acrónimo grandioso: Luca, por la sigla en inglés de &#8220;último ancestro común universal&#8221; (<em>Last Universal Common Ancestor</em>), y se calcula que vivió hace aproximadamente 4000 millones de años, cuando la Tierra tenía apenas 560 millones de años de edad.</p>
+<p class="story-body-text story-content" data-para-count="344" data-total-count="948" id="story-continues-4" tabindex="-1">El nuevo descubrimiento aviva el debate entre aquellos que creen que la vida comenzó en un ambiente extremo –como las fuentes hidrotermales en la profundidad del océano o en las faldas de los volcanes– y aquellos que sostienen que la vida surgió en ambientes más normales, como el “pequeño y cálido estanque” propuesto por Darwin.</p>
+<p class="story-body-text story-content" data-para-count="412" data-total-count="1360" id="story-continues-5" tabindex="-1">La naturaleza del ancestro más antiguo de todos los seres vivos ha sido incierta, puesto que los tres grandes dominios de la vida no parecen tener un punto original en común. Esos tres dominios son el de las bacterias, el de las arqueas y el de las eucariotas. Las arqueas son organismos parecidos a las bacterias pero con un metabolismo diferente, y las eucariotas incluyen a todas las plantas y los animales.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="432" data-total-count="1792" id="story-continues-6" tabindex="-1">En lo últimos años, los especialistas han creído que las bacterias y las arqueas fueron los dos primeros y que las eucariotas surgieron después. Eso abrió el camino para que un grupo de biólogos evolucionistas, liderados por William F. Martin, de la Universidad Heinrich Heine en Düsseldorf, Alemania, tratara de identificar la naturaleza del organismo a partir del cual surgieron los dominios de las bacterias y las arqueas.</p>
+<p class="story-body-text story-content" data-para-count="336" data-total-count="2128" id="story-continues-7" tabindex="-1">Los científicos partieron de los genes que codifican las proteínas de las bacterias y las arqueas. En los últimos 20 años se han recolectado aproximadamente seis millones de esos genes en bancos de datos de ADN, gracias a científicos que, con nuevas máquinas decodificadoras, depositan secuencias genéticas de miles de microbios.</p>
+<p class="story-body-text story-content" data-para-count="600" data-total-count="2728" id="story-continues-8" tabindex="-1">Los genes que hacen lo mismo en un humano y en un ratón están emparentados, por lo general, por ser descendientes comunes de un gen ancestral del primer mamífero. Así que, al comparar su secuencia de letras de ADN, los genes pueden colocarse en árboles genealógicos que muestran su evolución. Esa propiedad permitió al doctor Martin y a sus colaboradores asignar los seis millones de genes a una cantidad mucho menor de familias genéticas. Solo 355 genes cumplieron con los criterios de haberse originado, probablemente, a partir de Luca, el ancestro conjunto de las bacterias y las arqueas.</p>
+<p class="story-body-text story-content" data-para-count="295" data-total-count="3023" id="story-continues-9" tabindex="-1">Los genes se adaptan al ambiente de un organismo. Por eso, Martin esperaba que, al identificar los genes con más probabilidades de estar presentes en Luca, también pudiera tener una pista de dónde y cómo vivió ese ancestro. “El resultado me dejó atónito; no podía creerlo”, comentó.</p>
+<p class="story-body-text story-content" data-para-count="321" data-total-count="3344" id="story-continues-10" tabindex="-1">Los 355 genes señalaron, con bastante precisión, a un organismo que vivió en las condiciones existentes en fuentes hidrotermales de la profundidad del océano, esas nubes gaseosas, cargadas de metales e intensamente calientes provocadas por la interacción del agua del mar con el magma emergente de las profundidades.</p>
+<p class="story-body-text story-content" data-para-count="541" data-total-count="3885" id="story-continues-11" tabindex="-1">Las fuentes hidrotermales del fondo del mar están rodeadas de formas de vida exóticas y, con su química extrema, por mucho tiempo han parecido ser el lugar donde la vida se originó. Los 355 genes atribuibles a Luca incluyen algunos que metabolizan el hidrógeno como una fuente de energía, así como un gen de una enzima llamada girasa inversa, la cual se encuentra solo en microbios que viven a temperaturas extremadamente altas, según informaron el <a href="http://www.nature.com/articles/nmicrobiol2016116" target="_blank">Dr. Martin y sus colaboradores</a> en la publicación especializada Nature Microbiology.</p>
+<p class="story-body-text story-content" data-para-count="399" data-total-count="4284" id="story-continues-12" tabindex="-1">Es probable que el retrato de Luca hecho por el Dr. Martin sea ampliamente admirado. Sin embargo, ha dado un paso que ha desatado controversia. El doctor argumenta que Luca está muy cerca del origen mismo de la vida. Al organismo le faltan tantos genes necesarios para la vida que debió depender todavía de compuestos químicos en su ambiente. Por lo tanto, solo estaba “medio vivo”, escribe.</p>
+<p class="story-body-text story-content" data-para-count="320" data-total-count="4604" id="story-continues-13" tabindex="-1">El hecho de que Luca dependiera del hidrógeno y algunos metales apunta, según el doctor Martin, a que el origen de la vida podría estar en una fuente hidrotermal y no en un ambiente terrenal, visión planteada por una teoría rival que propuso el químico John Sutherland de la Universidad de Cambridge en Inglaterra.</p>
+<p class="story-body-text story-content" data-para-count="151" data-total-count="4755" id="story-continues-14" tabindex="-1">Otros piensan que el Luca descrito por Martin ya era un organismo altamente sofisticado que había evolucionado mucho más allá del origen de la vida.</p>
+<p class="story-body-text story-content" data-para-count="258" data-total-count="5013" id="story-continues-15" tabindex="-1">Luca y el origen de la vida son “sucesos separados por una gran distancia de innovación evolucionaria”, aseveró Jack Szostak, del Hospital General de Massachussetts, quien ha estudiado cómo pudieron haber evolucionado las primeras membranas celulares.</p>
+<p class="story-body-text story-content" data-para-count="430" data-total-count="5443" id="story-continues-16" tabindex="-1">A partir de los datos del doctor Martin, está claro que Luca podía con la complicada tarea de sintetizar proteínas. Así, parece poco probable que no pudiera también sintetizar compuestos más simples, aunque los genes para hacerlo no se han detectado aún, mencionó Steven A. Benner de la Fundación para la Evolución Molecular Aplicada. “Es como decir que puedes construir un avión 747 pero no puedes refinar hierro”.</p>
+<p class="story-body-text story-content" data-para-count="305" data-total-count="5748" id="story-continues-17" tabindex="-1">El doctor Sutherland tampoco dio crédito al argumento de que Luca puede ubicarse en una zona gris de transición entre la no vida y la vida, justo porque dependía de su ambiente para obtener algunos compuestos esenciales. “Es como decir que estoy medio vivo porque dependo de mi supermercado local”.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="553" data-total-count="6301" id="story-continues-18" tabindex="-1">Ni el doctor Sutherland ni otros tienen problema con los orígenes de Luca. No obstante, eso no significa que la vida se haya originado ahí, afirman. La vida pudo haberse originado en cualquier sitio y luego haber quedado confinada al ambiente del fondo del océano por alguna catástrofe, como el Bombardeo Pesado Tardío, que ocurrió entre 4 y 3,8 mil millones de años atrás. Ese fenómeno consistió en una lluvia de meteoritos que chocaron contra la Tierra con tanta fuerza que los mares hirvieron y se convirtieron en una neblina incandescente.</p>
+<p class="story-body-text story-content" data-para-count="243" data-total-count="6544" id="story-continues-19" tabindex="-1">Los químicos como Sutherland manifiestan su inquietud acerca de que hubiera química prebiótica en un océano, el cual diluye con gran potencia los compuestos químicos antes de que puedan unirse y formar las moléculas complejas de la vida.</p>
+<p class="story-body-text story-content" data-para-count="338" data-total-count="6882" id="story-continues-20" tabindex="-1">Con base en los principios básicos de la química, Sutherland ha encontrado que la luz ultravioleta del sol es una fuente de energía esencial para echar a andar las reacciones correctas y, por lo tanto, los charcos con una base terrestre, en lugar del océano, constituyen el ambiente en el que es más posible que la vida haya surgido.</p>
+<p class="story-body-text story-content" data-para-count="248" data-total-count="7130" id="story-continues-21" tabindex="-1">“No establecimos un escenario favorito; lo dedujimos a partir de la química”, dijo como reprimenda al doctor Martin por no haber llevado a cabo simulaciones químicas para sustentar la situación de las fuentes hidrotermales del fondo del mar.</p>
+<p class="story-body-text story-content" data-para-count="155" data-total-count="7285" id="story-continues-22" tabindex="-1">El retrato de Luca que elaboró el Dr. Martin “es muy interesante, pero no tiene nada que ver con el verdadero origen de la vida”, aseveró Sutherland.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/ancestro-comun-universal/" rel="tag">ancestro común universal</a>, <a href="https://www.nytimes.com/es/tag/luca/" rel="tag">Luca</a>, <a href="https://www.nytimes.com/es/tag/origen-de-la-tierra/" rel="tag">origen de la tierra</a>, <a href="https://www.nytimes.com/es/tag/origen-de-los-seres-vivos/" rel="tag">origen de los seres vivos</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/08/01/esta-es-luca-la-bacteria-que-podria-explicar-el-origen-de-la-humanidad/"
+				data-title="Noticias: Luca, la bacteria que podría explicar el origen de la humanidad"
+				data-author="POR NICHOLAS WADE"
+				data-media=""
+				data-description="Un grupo de científicos alemanes hizo un retrato genético del antepasado de todos los seres vivos, el cual aclara en gran medida el misterio de cómo surgió la vida en la Tierra. Lo llamaron Luca, el&quot;último ancestro común universal&quot;."
+				data-publish-date="1 de agosto de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/18/eres-el-centro-del-universo-la-ciencia-lo-confirma/">
+					<div class="story-body">
+						<h3 class="kicker">Ciencia</h3>
+
+						<h2 class="headline">
+							<span class="title">Eres el centro del universo, la ciencia lo confirma</span>
+							<time class="dateline">18 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/18/universal/es/universepictolineES/universepictolineES-thumbStandard.png" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/06/11/no-hay-escape-en-los-agujeros-negros-segun-stephen-hawking-podria-haber-una-salida/">
+					<div class="story-body">
+						<h3 class="kicker">Ciencia</h3>
+
+						<h2 class="headline">
+							<span class="title">¿No hay escape en los agujeros negros? Según Stephen Hawking podría haber una salida</span>
+							<time class="dateline">11 de junio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/06/14/universal/es/hawkingES/hawkingES-thumbStandard.png" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2015/11/10/por-que-comer-ensaladas-nos-esta-engordando/">
+					<div class="story-body">
+
+						<h2 class="headline">
+							<span class="title">Por qué comer ensaladas nos está engordando</span>
+							<time class="dateline">10 de noviembre de 2015</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2015/10/25/opinion/sunday/25gray/25gray-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/14/britney-spears-la-superestrella-que-vive-en-una-jaula-de-oro/">
+					<div class="story-body">
+						<h3 class="kicker">Música</h3>
+
+						<h2 class="headline">
+							<span class="title">Britney Spears, la superestrella que vive en una jaula de oro</span>
+							<time class="dateline">14 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/26/arts/music/00Britney-promos-slide-QVN2/00Britney-promos-slide-QVN2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":899,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

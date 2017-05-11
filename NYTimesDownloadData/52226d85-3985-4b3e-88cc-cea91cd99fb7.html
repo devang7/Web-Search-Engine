@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004659475"/>
+<meta name="hdl" content="Para Michelle Obama, con cariño" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20161020" />
+<meta name="utime" content="20161020120051" />
+<meta name="ptime" content="20161020120051" />
+<meta name="DISPLAYDATE" content="Oct. 20, 2016" />
+<meta name="dat" content="Oct. 20, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="para-michelle-obama-con-carino" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/10/20/para-michelle-obama-con-carino/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Para Michelle Obama, con cariño" />
+<meta property="og:description" content="Cuatro cartas de agradecimiento para la primera dama de Estados Unidos, quien durante los últimos ocho años se dedicó, en silencio y con estoicismo y elegancia, a cambiar el rumbo de la historia del país." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/10/17/t-magazine/michelle-obama-slide-3G05/michelle-obama-slide-3G05-videoSixteenByNine768-v2.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-10-20" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/10/20/para-michelle-obama-con-carino/" />
+<meta property="twitter:title" content="Para Michelle Obama, con cariño" />
+<meta property="twitter:description" content="Cuatro cartas de agradecimiento para la primera dama de Estados Unidos, quien durante los últimos ocho años se dedicó, en silencio y con estoicismo y elegancia, a cambiar el rumbo de la historia del país." />
+<meta name="author" content="Chimamanda Ngozi Adichie, Gloria Steinem, John Meacham y Rashida Jones" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Chimamanda Ngozi Adichie, Gloria Steinem, John Meacham y Rashida Jones" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="estados-unidos" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="estados-unidos" />
+<meta name="id" content="100000004659475"/>
+<meta name="wordCount" content="3587"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/10/20/para-michelle-obama-con-carino/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=10&amp;day=20&amp;name=para-michelle-obama-con-carino">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=28320">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/10\/20\/para-michelle-obama-con-carino\/"},"headline":"Para Michelle Obama, con cari\u00f1o","datePublished":"2016-10-20T12:00:51+00:00","dateModified":"2016-10-20T10:53:47+00:00","author":{"@type":"Person","name":"Paula Duran"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/10\/17\/t-magazine\/michelle-obama-slide-3G05\/michelle-obama-slide-3G05-videoSixteenByNine768-v2.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Cuatro cartas de agradecimiento para la primera dama de Estados Unidos, quien durante los \u00faltimos ocho a\u00f1os se dedic\u00f3, en silencio y con estoicismo y elegancia, a cambiar el rumbo de la historia del pa\u00eds."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/10/20/para-michelle-obama-con-carino/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/10/17/t-magazine/michelle-obama-chimamanda-ngozi-adichie-gloria-steinem-letter.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/estadosunidos" />
+<title>Para Michelle Obama, con cariño &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/10/17/t-magazine/michelle-obama-chimamanda-ngozi-adichie-gloria-steinem-letter.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/10/20/para-michelle-obama-con-carino/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+		<script src="https://a1.nyt.com/assets/article/latest/js/article/common/layout.js"></script>
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-28320 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard intl-masthead-theme-light" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Para Michelle Obama, con cariño
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/10/20/para-michelle-obama-con-carino/"
+					data-title="Noticias: Para Michelle Obama, con cariño"
+					data-author="POR CHIMAMANDA NGOZI ADICHIE, GLORIA STEINEM, JOHN MEACHAM Y RASHIDA JONES"
+					data-media=""
+					data-description="Cuatro cartas de agradecimiento para la primera dama de Estados Unidos, quien durante los últimos ocho años se dedicó, en silencio y con estoicismo y elegancia, a cambiar el rumbo de la historia del país."
+					data-publish-date="20 de octubre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2dDv2f3">http://nyti.ms/2dDv2f3</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+	
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main has-full-bleed-image-lede">
+	<header id="story-header" class="story-header">
+			<figure id="media-100000004682044" class="media cover photo layout-vertical-full-bleed" data-bleed-style="full-bleed-cover" itemid="https://static01.nyt.com/images/2016/10/17/t-magazine/michelle-obama-slide-3G05/michelle-obama-slide-3G05-articleLarge.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="presentation">
+				<span class="visually-hidden"></span>
+				<div class="image">
+					<img
+						src="https://static01.nyt.com/images/2016/10/17/t-magazine/michelle-obama-slide-3G05/michelle-obama-slide-3G05-articleLarge.jpg"
+						alt="Michelle Obama"
+						data-jumbosrc="https://static01.nyt.com/images/2016/10/17/t-magazine/michelle-obama-slide-3G05/michelle-obama-slide-3G05-jumbo.jpg"
+						data-superjumbosrc="https://static01.nyt.com/images/2016/10/17/t-magazine/michelle-obama-slide-3G05/michelle-obama-slide-3G05-superJumbo.jpg"
+						id="media-image-100000004682044"
+					>
+				</div>
+				<figcaption id="media-caption-100000004682044" class="caption" itemprop="caption description">
+					<span class="caption-text">Michelle Obama</span>
+
+					<span class="credit" itemprop="copyrightHolder">
+						<span class="visually-hidden">crédito</span>
+						Collier Schorr
+					</span>
+				</figcaption>
+				<meta itemprop="height" content="753">
+				<meta itemprop="width" content="600">
+			</figure>
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/estados-unidos/">Estados Unidos</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Para Michelle Obama, con cariño</h1>
+				<p itemprop="headline" id="story-deck" class="deck">Cuatro cartas de agradecimiento para la primera dama de Estados Unidos, quien durante los últimos ocho años se dedicó, en silencio y con estoicismo y elegancia, a cambiar el rumbo de la historia del país.</p>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Chimamanda Ngozi Adichie</span>
+</span>
+, <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Gloria Steinem</span>
+</span>
+, <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">John Meacham</span>
+</span>
+ y <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Rashida Jones</span>
+</span>
+
+					<time class="dateline" datetime="2016-10-20">20 de octubre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/10/20/para-michelle-obama-con-carino/"
+							data-title="Noticias: Para Michelle Obama, con cariño"
+							data-author="POR CHIMAMANDA NGOZI ADICHIE, GLORIA STEINEM, JOHN MEACHAM Y RASHIDA JONES"
+							data-media=""
+							data-description="Cuatro cartas de agradecimiento para la primera dama de Estados Unidos, quien durante los últimos ocho años se dedicó, en silencio y con estoicismo y elegancia, a cambiar el rumbo de la historia del país."
+							data-publish-date="20 de octubre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+			<script>
+				if (window.magnum && window.magnum.responsiveImages && window.magnum.responsiveImages.setCoverImage) {
+					window.magnum.responsiveImages.setCoverImage('100000004682044','full-bleed-cover',753,600,0,0,0,0);
+				}
+			</script>
+
+			
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/10/17/t-magazine/michelle-obama-chimamanda-ngozi-adichie-gloria-steinem-letter.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<h4 class="story-subheading story-content"><em>Por Chimamanda Ngozi Adichie</em></h4>
+
+<p class="story-body-text story-content" data-para-count="989" data-total-count="989" id="story-continues-2" tabindex="-1">Tenía ritmo, fluidez y cadencia; sus manos surcaban el aire mientras equilibraba todo el peso de su cuerpo sobre un pie y después sobre el otro; un hermoso ritmo. Si no hubiera sido un cuerpo afroestadounidense, el movimiento habría parecido forzado. Las mangas tres cuartos de su vestido azul daban el toque de elegancia, al igual que el prendedor a juego. Pero el corte del vestido expresaba desdén hacia la acostumbrada rigidez de una “futura primera dama”; caía con suavidad sobre su cuerpo, sin esfuerzo alguno, como su energía. El prendedor que llevaba en el centro del pecho era un accesorio tradicional, sí, pero era grande y con una forma alegre. Michelle Obama hablaba. Era la Convención Nacional Demócrata de 2008. Mi ansiedad crecía y se arremolinaba en mi cuerpo mientras observaba, deseando con todas mis fuerzas que fuera lo más perfecta posible, no por mí, pues yo ya estaba convencida, sino por esos sectores de Estados Unidos que deseaban verla fallar.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="613" data-total-count="1602" id="story-continues-3" tabindex="-1">Aparecía por primera vez en la conciencia colectiva del público, con sentido común y un sentido del humor mordaz, segura de sí misma. Tenía el aire de una mujer que podía llevar una chequera, que podía reconocer un buen negocio y que sería capaz de reprender a quien hiciera falta. Era alta, segura y elegante. Se mostraba renuente a ser la primera dama, y no trató de ocultar esa renuencia con frases de cajón. Parecía mucho más honesta que única. Aportó a la definición de la silueta de su esposo, que en ese momento era borrosa, y le dio solidez, pues hizo que fuera algo más real, palpable.</p>
+<figure id="media-100000004712359" class="media photo media-100000004712359 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/10/17/t-magazine/entertainment/love-letter-slide-DYNH/love-letter-slide-DYNH-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-5">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/10/17/t-magazine/entertainment/love-letter-slide-DYNH/love-letter-slide-DYNH-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/10/17/t-magazine/entertainment/love-letter-slide-DYNH/love-letter-slide-DYNH-superJumbo.jpg" data-mediaviewer-caption="Chimamanda Ngozi Adichie" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/10/17/t-magazine/entertainment/love-letter-slide-DYNH/love-letter-slide-DYNH-master315.jpg"/>
+		<meta itemprop="height" content="394" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Chimamanda Ngozi Adichie</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="623" data-total-count="2225" id="story-continues-5" tabindex="-1">Pero tuvo que perder dimensiones para adaptarse al molde de primera dama. En el despacho de abogados donde se conocieron antes de enamorarse, fue mentora de su esposo; parecía que eran verdaderos amigos y compañeros, se trataban como iguales y tenían un matrimonio moderno en los Estados Unidos del nuevo siglo. No obstante, tanto electores como observadores, amplios sectores de Estados Unidos, querían que se ajustara y conformara, que eliminara de su hablar rastros de su ingenio y sagacidad. Cuando mencionó el mal aliento matutino de su esposo, un detalle curioso que lo humanizaba, se le acusó de humillarlo.</p>
+<p class="story-body-text story-content" data-para-count="468" data-total-count="2693" id="story-continues-6" tabindex="-1">Por decir lo que pensaba y sonreír únicamente cuando lo sentía, en vez de hacerlo constantemente como una muñeca, la identificaron con la caricatura más vulgar de Estados Unidos: la mujer negra furiosa. En general, no se tolera que las mujeres se enfaden, y si se trata de mujeres estadounidenses negras, con mayor razón se espera solamente agradecimiento eterno, y entre más servil mejor, como si su ciudadanía fuera un fenómeno que no pueden dar por hecho.</p>
+<p class="story-body-text story-content" data-para-count="242" data-total-count="2935" id="story-continues-7" tabindex="-1">“Amo a este país”, afirmó entre aplausos. Tenía que decirlo para calmar los humos de quienes la tildaban de antipatriótica porque se había atrevido a sugerir que, en su vida adulta, no siempre se había sentido orgullosa de su país.</p>
+<figure id="media-100000004682045" class="media photo media-100000004682045 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/10/17/t-magazine/michelle-obama-slide-PRGV/michelle-obama-slide-PRGV-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-9">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/10/17/t-magazine/michelle-obama-slide-PRGV/michelle-obama-slide-PRGV-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/10/17/t-magazine/michelle-obama-slide-PRGV/michelle-obama-slide-PRGV-superJumbo.jpg" data-mediaviewer-caption="&lt;strong&gt;Chloé&lt;/strong&gt; top, &lt;a href=&quot;http://www.barneys.com/&quot;&gt;barneys.com&lt;/a&gt;." data-mediaviewer-credit="Collier Schorr"  itemprop="url" itemid="https://static01.nyt.com/images/2016/10/17/t-magazine/michelle-obama-slide-PRGV/michelle-obama-slide-PRGV-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">&lt;strong&gt;Chloé&lt;/strong&gt; top, &lt;a href=&quot;http://www.barneys.com/&quot;&gt;barneys.com&lt;/a&gt;.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Collier Schorr
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="502" data-total-count="3437" id="story-continues-9" tabindex="-1">Por supuesto que amaba a su país. La historia de su vida, tal como la contaba, era totalmente estadounidense, empapada de nostalgia: un padre que trabajaba varios turnos y una madre que se quedaba en casa; un relato casi mítico de autosuficiencia y moderación, típico de la clase trabajadora. Pero también es descendiente de esclavos, esos seres humanos completos que el gobierno de Estados Unidos consideraba solo en parte humanos. Su ambivalencia debería ser uno de sus derechos esenciales.</p>
+<p class="story-body-text story-content" data-para-count="220" data-total-count="3657" id="story-continues-10" tabindex="-1">Michelle Obama estaba hablando. Sentía la necesidad de protegerla porque se dirigía a un país que muchas veces se apresura a interpretar la confianza de una mujer negra como arrogancia, y su franqueza como privilegio.</p>
+<p class="story-body-text story-content" data-para-count="246" data-total-count="3903" id="story-continues-11" tabindex="-1">Era informal, coloquial. Parecía genuina. Era genuina. Por todo el país, las miradas de las mujeres negras estaban fijas mientras observaban sin parpadear a esa especie de diosa que representaba con claridad y nitidez su imagen hacia el mundo.</p>
+<p class="story-body-text story-content" data-para-count="330" data-total-count="4233" id="story-continues-12" tabindex="-1">Su discurso fue vibrante, todo un éxito. Sin embargo, un dejo de pesar asomaba en sus ojos, detrás de sus palabras, y en sus mínimas y contadas equivocaciones. Era una oscura y comprimida esfera de aprensión, como si temiera tener que vivir durante ocho años conteniendo su respiración y sintiendo una piedra en su interior.</p>
+<p class="story-body-text story-content" data-para-count="192" data-total-count="4425" id="story-continues-13" tabindex="-1">Ocho años después, lucía un vestido azul más sencillo y sin intención de ser perfecto. El brillo del vestido y unos atrevidos aretes dejaban claro que ya no estaba haciendo una audición.</p>
+<p class="story-body-text story-content" data-para-count="312" data-total-count="4737" id="story-continues-14" tabindex="-1">Sus hijas ya habían crecido. Las había protegido y celebrado, y siempre que aparecieron en público lucieron perfectas, como si su apariencia cuidada fuera una especie de reproche. Se había autonombrado “mamá en jefe” y, enfundada en ese título poco amenazante, se había ocupado de lo que le importaba.</p>
+<p class="story-body-text story-content" data-para-count="1014" data-total-count="5751" id="story-continues-15" tabindex="-1">Acogió a veteranos y familias militares, y se convirtió en la defensora que siempre los escuchó. Abrió de par en par las puertas de la Casa Blanca para aquellos que su país había dejado al margen. Era de clase trabajadora, pero también estudió en Princeton, así que podía decir que las oportunidades sí existen. Su programa Reach Higher impulsó a las estudiantes de preparatoria a ir más allá, a desear más. Saltó la cuerda con niños en los jardines de la Casa Blanca como parte de su iniciativa para combatir la obesidad infantil. Sembró un jardín de vegetales y promovió acciones para ofrecer alimentos más saludables en las escuelas. Su influencia atravesó las fronteras cuando apoyó la educación de niñas en todo el mundo. Bailó en programas de televisión. Abrazó a más personas que cualquier otra primera dama en la historia; gracias a ella, “primera dama” ahora significa una persona cálida y accesible, una persona normal que motiva, una persona <em>cool</em> en varios niveles.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="433" data-total-count="6184" id="story-continues-16" tabindex="-1">Se convirtió en un icono del estilo estadounidense. Sus vestidos y sus ejercicios. Su porte y sus curvas. Brazos tonificados, dedos largos y delgados. Incluso sus tacones preferidos de media altura, para mujeres que no pueden concebir usar zapatos que no son de piso ni de tacón alto, han ganado cierto respeto gracias a ella. Ninguna figura pública encarna mejor el mantra de la individualidad femenina plena: usa lo que quieras.</p>
+<p class="story-body-text story-content" data-para-count="266" data-total-count="6450" id="story-continues-17" tabindex="-1">Era la Convención Demócrata de 2016. Michelle Obama estaba hablando. Dijo “niño negro” y “esclavos”, palabras que no habría utilizado ocho años antes, pues ocho años antes cualquier alusión concreta a la raza negra hubiera tenido consecuencias reales.</p>
+<figure id="media-100000004682189" class="media photo media-100000004682189 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/10/17/t-magazine/michelle-obama-slide-B5GM/michelle-obama-slide-B5GM-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-19">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/10/17/t-magazine/michelle-obama-slide-B5GM/michelle-obama-slide-B5GM-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/10/17/t-magazine/michelle-obama-slide-B5GM/michelle-obama-slide-B5GM-superJumbo.jpg" data-mediaviewer-caption="&lt;strong&gt;Céline&lt;/strong&gt; earrings, (212) 535-3703. &lt;strong&gt;Chloé&lt;/strong&gt; top, &lt;a href=&quot;http://www.barneys.com/&quot;&gt;barneys.com&lt;/a&gt;. &lt;strong&gt;Calvin Klein Collection&lt;/strong&gt; top (worn underneath), &lt;a href=&quot;http://www.calvinklein.us/&quot;&gt;calvinklein.com&lt;/a&gt;." data-mediaviewer-credit="Collier Schorr"  itemprop="url" itemid="https://static01.nyt.com/images/2016/10/17/t-magazine/michelle-obama-slide-B5GM/michelle-obama-slide-B5GM-master315.jpg"/>
+		<meta itemprop="height" content="501" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">&lt;strong&gt;Céline&lt;/strong&gt; earrings, (212) 535-3703. &lt;strong&gt;Chloé&lt;/strong&gt; top, &lt;a href=&quot;http://www.barneys.com/&quot;&gt;barneys.com&lt;/a&gt;. &lt;strong&gt;Calvin Klein Collection&lt;/strong&gt; top (worn underneath), &lt;a href=&quot;http://www.calvinklein.us/&quot;&gt;calvinklein.com&lt;/a&gt;.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Collier Schorr
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="164" data-total-count="6614" id="story-continues-19" tabindex="-1">Estaba relajada, emotiva, sentimental. No sentía más incertidumbre. Su ritmo era más sutil, ya no lo necesitaba como armadura; la conquista ya había culminado.</p>
+<p class="story-body-text story-content" data-para-count="331" data-total-count="6945" id="story-continues-20" tabindex="-1">Los insultos, tanto los descarados como los disimulados entre bromas, el escrutinio ácido, los escándalos fabricados, las preguntas de legitimidad, el tono de falta de respeto, tan presentes, tan casuales. Los enfrentó todos; algunas veces se sintió herida y algunas veces pestañeó, pero ante todo, siguió siendo ella misma.</p>
+<p class="story-body-text story-content" data-para-count="250" data-total-count="7195" id="story-continues-21" tabindex="-1">Michelle Obama estaba hablando. Entonces me percaté de que ella no había contenido la respiración durante ocho años. Había dejado salir el aire, en movimientos pequeños, con prudencia porque así debía hacerlo pero, de todas formas, exhalando.</p>
+<p class="story-body-text story-content" data-para-count="319" data-total-count="7514" id="story-continues-22" tabindex="-1"><em>Chimamanda Ngozi Adichie es autora de la novela &#8220;Americanah&#8221; y el ensayo con extensión de libro &#8220;We Should All Be Feminists&#8221;. La MacArthur Foundation le otorgó una beca Genius. Sus palabras han sido empleadas por Beyoncé y, más recientemente, en ropa de la colección primavera 2017 de Dior.</em></p>
+<h4 class="story-subheading story-content"><em>Por Gloria Steinem</em></h4>
+
+<p class="story-body-text story-content" data-para-count="665" data-total-count="8179" id="story-continues-24" tabindex="-1">Michelle Obama llegó a mi vida por etapas. Sabía que, al igual que su esposo, había estudiado Derecho en Harvard, pero que a diferencia de él, había crecido en el sur de Chicago y que sus padres no habían ido a la universidad. Cuando Barack Obama trabajó un verano en su despacho de Chicago, se conocieron porque ella era su mentora. Tras su exitosa campaña para el Senado de Estados Unidos, me llamó la atención que ella decidiera no mudarse a Washington, así que él viajaba de regreso todas las semanas a su casa en Chicago, donde estaban sus dos hijas y Michelle tenía un puesto importante como directora de asuntos de la comunidad en un hospital.</p>
+<figure id="media-100000004712362" class="media photo media-100000004712362 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/10/17/t-magazine/entertainment/love-letter-slide-8769/love-letter-slide-8769-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-26">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/10/17/t-magazine/entertainment/love-letter-slide-8769/love-letter-slide-8769-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/10/17/t-magazine/entertainment/love-letter-slide-8769/love-letter-slide-8769-superJumbo.jpg" data-mediaviewer-caption="Gloria Steinem" data-mediaviewer-credit="Carly Romeo"  itemprop="url" itemid="https://static01.nyt.com/images/2016/10/17/t-magazine/entertainment/love-letter-slide-8769/love-letter-slide-8769-master315.jpg"/>
+		<meta itemprop="height" content="393" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Gloria Steinem</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Carly Romeo
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="661" data-total-count="8840" id="story-continues-26" tabindex="-1">Pero la verdad, solo entró de lleno en mi imaginación cuando se convirtió en primera dama, una mujer alta, fuerte, elegante y de verdad inteligente, que además vivía en la Casa Blanca. Logró comunicar dignidad y humor al mismo tiempo, ser madre de dos hijas e insistir en mantener las cenas familiares, enfrentar los problemas de salud y cuestionar a una industria alimentaria nacional adicta a ganancias nada saludables. Hizo todo esto a pesar de los prejuicios de este país que formaban una corriente en su contra y cuestionaban con sutileza todo lo que hacía. ¿Era demasiado fuerte, física e intelectualmente, para ser una primera dama adecuada?</p>
+<p class="story-body-text story-content" data-para-count="238" data-total-count="9078" id="story-continues-27" tabindex="-1">Después de vivir bajo el microscopio público durante una década, ha logrado lo que ninguna otra primera dama (y pocas personas con cargos públicos) había logrado: llevó una vida pública sin sacrificar su privacidad y autenticidad.</p>
+<p class="story-body-text story-content" data-para-count="583" data-total-count="9661" id="story-continues-28" tabindex="-1">Gracias a ella, su intérprete y defensora, su esposo fue más humano y también más efectivo como presidente, pues también sabíamos que era capaz de ser su mayor crítica. Llegado el momento, habló sobre el dolor que le causaron las suposiciones racistas dirigidas a ella, pero esperó a que su esposo no pudiera sufrir ningún castigo político debido a su honestidad. Además, siempre ha sido el mejor tipo de mamá, de las que insisten en que los padres ejerzan esa paternidad por igual. En todo esto ha actuado con honestidad, humor y, lo que es más importante, amabilidad.</p>
+<p class="story-body-text story-content" data-para-count="879" data-total-count="10540" id="story-continues-29" tabindex="-1">Recientemente, durante la campaña presidencial Trump-Clinton, Michelle se ha convertido en una de los oradoras públicas más efectivas de nuestro tiempo. No es cualquier cosa. Y si hablamos de temas menos serios, siempre ha sido una mujer consciente de la diferencia entre moda (lo que las fuerzas externas dicen que debes vestir) y estilo (la forma de expresión de un ser único). Con ocasión de un almuerzo en la Casa Blanca organizado para mujeres que habían sido voceras y partidarias durante la segunda campaña del presidente Obama, invitó a niños de la escuela pública local a cantar y actuar. Esos talentosos estudiantes, que en su mayoría eran afroestadounidenses, se desenvolvieron con entusiasmo y con toda comodidad en una Casa Blanca que les pertenece tanto como a cualquier otra persona del país, pero en la que no hubieran entrado de no ser por Michelle.</p>
+<p class="story-body-text story-content" data-para-count="340" data-total-count="10880" id="story-continues-30" tabindex="-1">¿Qué hará ahora? Ya tomará esa decisión. Podría hacer cualquier cosa, desde convertirse en senadora de Estados Unidos por Illinois hasta encabezar campañas para promover la seguridad y la educación de las niñas de todo el mundo. También podría preferir una vida privada. Sin importar cuál sea su decisión, confío en su juicio.</p>
+<p class="story-body-text story-content" data-para-count="586" data-total-count="11466" id="story-continues-31" tabindex="-1">Aunque tengo edad suficiente para recordar a Eleanor y Franklin D. Roosevelt en la Casa Blanca (así como a las demás parejas y familias que han estado ahí desde entonces), nunca había visto tanto equilibrio e igualdad en las responsabilidades como padres, tanto amor, respeto, reciprocidad y placer en la compañía del otro. Nunca tendremos una democracia si no tenemos familias democráticas y una sociedad que prescinda de las categorías inventadas de raza y género. Michelle Obama quizá haya cambiado la historia de la manera más poderosa que existe: a través del ejemplo.</p>
+<p class="story-body-text story-content" data-para-count="230" data-total-count="11696" id="story-continues-32" tabindex="-1"><em>Gloria Steinem, activista feminista y escritora, ha recorrido Estados Unidos para expresar su respaldo a la candidatura de Hillary Clinton y para promover la edición de bolsillo de su diario de viajes “My Life on the Road”.</em></p>
+<h4 class="story-subheading story-content"><em>Por Jon Meacham</em></h4>
+
+<p class="story-body-text story-content" data-para-count="1108" data-total-count="12804" id="story-continues-34" tabindex="-1">En un hermoso día de principios de otoño de su último octubre en la Casa Blanca, Michelle Obama salió al soleado jardín sur y, en cierta forma, dijo adiós. El escenario fue su aclamado jardín orgánico, aunque el significado de raíz parecía ir más allá que cualquier iniciativa independiente. “Debo decirles que estar aquí con todos ustedes en este precioso jardín, que de verdad es hermoso, es un momento un tanto emotivo”, declaró Michelle Obama durante una ceremonia para develar otra versión más grande y fortificada del jardín. “Estamos experimentando muchos momentos emotivos como este, porque todo lo hacemos por última vez. Pero, en particular, este es mi bebé porque todo comenzó con este jardín. Así que, en realidad, estamos cerrando el ciclo justo donde arrancamos”. Recordó conversaciones que sostuvo en 2008 sobre el papel que podría desempeñar en la presidencia de Obama y, sin lugar a dudas, se percató de que el jardín surgió después de que “Barack ganó”, y añadió: “ganó dos veces”. Los invitados reunidos en el lugar aplaudieron con gusto.</p>
+<figure id="media-100000004712366" class="media photo media-100000004712366 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/10/17/t-magazine/entertainment/love-letter-slide-U58U/love-letter-slide-U58U-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-36">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/10/17/t-magazine/entertainment/love-letter-slide-U58U/love-letter-slide-U58U-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/10/17/t-magazine/entertainment/love-letter-slide-U58U/love-letter-slide-U58U-superJumbo.jpg" data-mediaviewer-caption="Jon Meacham" data-mediaviewer-credit="Gasper Tringale"  itemprop="url" itemid="https://static01.nyt.com/images/2016/10/17/t-magazine/entertainment/love-letter-slide-U58U/love-letter-slide-U58U-master315.jpg"/>
+		<meta itemprop="height" content="394" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Jon Meacham</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Gasper Tringale
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="800" data-total-count="13604" id="story-continues-36" tabindex="-1">En cierta forma, esa es la esencia de Michelle Obama, o al menos la esencia que ella nos permite ver: hablaba del bien público en general (el jardín, que fue parte de su campaña para combatir la obesidad infantil) y al mismo tiempo revelaba un pícaro sentido de competitividad. &#8220;Mi esposo ganó; ganó dos veces&#8221;. Ahora que el tiempo de hacer historia en la Casa Blanca llega a su fin, vale la pena reflexionar sobre las lecciones que nos deja la era de Obama. En mi opinión, tanto el presidente como la primera dama se han comportado de manera espléndida en la Casa Blanca y han cumplido la tarea más difícil con aparente facilidad: proyectar una elegancia que disimulaba la ambición y determinación que los llevaron, a una edad tan joven, a la cima de la vida estadounidense.</p>
+<p class="story-body-text story-content" data-para-count="674" data-total-count="14278" id="story-continues-37" tabindex="-1">Así han mantenido una tradición que, en nuestro país, data de la época de George Washington, la encarnación del ideal clásico de Cincinnatus, el líder reacio que recibió el llamado para abandonar su arado y dirigir a la nación. El presidente Obama recibe gran parte del crédito público por haber manejado sus ocho años con ecuanimidad, pero la primera dama fue un elemento crucial para su éxito. Supo elegir sus movimientos con cautela (incluso decidir manifestarse contra Donald Trump en la estela de la campaña de 2016), y ahora deja al país con la cálida impresión de que es una excelente madre, una cónyuge firme y una estadounidense devota y sensible.</p>
+<p class="story-body-text story-content" data-para-count="557" data-total-count="14835" id="story-continues-38" tabindex="-1">No todos están de acuerdo, por supuesto; nunca lo están. Quienes expresaron su escepticismo y odio hacia los Obama han cuestionado en varias ocasiones el patriotismo de Michelle, pero hay que recordar que se trata del mismo país que logró, en ciertos sectores, despreciar a Eleanor Roosevelt. Lo importante es que Michelle Obama, una abogada con visión y determinación, encontró la manera de soportar el escrutinio de los reflectores. A decir verdad, hizo mucho más que soportarlo. Como dijo William Faulkner, no solo perduró, sino que prevaleció.</p>
+<p class="story-body-text story-content" data-para-count="821" data-total-count="15656" id="story-continues-39" tabindex="-1">¿Cómo? Encontró, o pareció haber encontrado, lo que más se nos escapa en el mundo moderno: el equilibrio. No era la señora Roosevelt, Carter, Reagan o Clinton, que desempeñaba algún papel en cuestiones de Estado. En vez de eso, hizo lo que se suponía que la primera primera dama afroestadounidense tenía que hacer para desempeñar un papel público exitoso. En palabras de Voltaire, cultivó su propio jardín y nunca amenazó o intimidó a sus vecinos. Con seguridad, muchas más cosas ocurrieron bajo la superficie o tras puertas cerradas; la historia se encargará de eso. Por ahora, basta decir que abandona la Casa Blanca como una figura fuerte y popular con toda una vida de buena voluntad y grandes reservas de capital a las cuales recurrir mientras su esposo y ella escriben los siguientes capítulos.</p>
+<p class="story-body-text story-content" data-para-count="602" data-total-count="16258" id="story-continues-40" tabindex="-1">En 2008, mientras reflexionaba sobre la vida que iba a comenzar, Michelle Obama recordó tener algunas dudas sobre su jardín (quizá era un tipo de proyección de las dudas que sentía sobre todo el proyecto presidencial): “¿Y si plantamos este jardín y no crece nada?”, preguntó. “No sabíamos nada de la tierra, o de la luz del sol. Así que dijimos: &#8216;Dios, ¿qué hacemos si no crece nada…?&#8217;. Después recuerdo haberle dicho a Sam [Kass, antiguo asesor sénior de nutrición en la Casa Blanca]: ‘Más vale que funcione, compañero. Más vale que funcione’”. Y así fue.</p>
+<p class="story-body-text story-content" data-para-count="167" data-total-count="16425" id="story-continues-41" tabindex="-1"><em>Jon Meacham, biógrafo ganador del premio Pulitzer. Es escritor y su obra más reciente es “Destiny and Power: The American Odyssey of George Herbert Walker Bush”.</em></p>
+<h4 class="story-subheading story-content"><em>Por Rashida Jones</em></h4>
+
+<p class="story-body-text story-content" data-para-count="796" data-total-count="17221" id="story-continues-43" tabindex="-1">Conocí a Michelle Obama en la Casa Blanca gracias a una iniciativa de tutorías, para la cual la primera dama había reunido a un dinámico grupo de mujeres para hablar con adolescentes urbanas sobre sus metas académicas. Deportistas olímpicas, actrices, productoras, escritoras, una astronauta y una general de la Fuerza Aérea nos reunimos en el Ala Oeste para saludar a Michelle antes de dirigirnos a distintas escuelas locales. Fue cálida, delicada y encantadora. Nos agradeció estar ahí, nos abrazó a todas y nos hizo sentir como sus amigas. Como primera dama cumplía con todos los requisitos: esposa amorosa, madre protectora, promotora de la salud y el bienestar, jardinera entusiasta y, por si fuera poco, icono de estilo. Estos logros dejaron satisfechos a los tradicionalistas.</p>
+<figure id="media-100000004712360" class="media photo media-100000004712360 embedded layout-small-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/10/17/t-magazine/entertainment/love-letter-slide-5A19/love-letter-slide-5A19-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-45">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/10/17/t-magazine/entertainment/love-letter-slide-5A19/love-letter-slide-5A19-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/10/17/t-magazine/entertainment/love-letter-slide-5A19/love-letter-slide-5A19-superJumbo.jpg" data-mediaviewer-caption="Rashida Jones" data-mediaviewer-credit="Noam Galai/Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/10/17/t-magazine/entertainment/love-letter-slide-5A19/love-letter-slide-5A19-master315.jpg"/>
+		<meta itemprop="height" content="394" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Rashida Jones</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Noam Galai/Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="748" data-total-count="17969" id="story-continues-45" tabindex="-1">Pero como suele suceder, su reputación como la anfitriona perfecta atrajo las críticas de los progresistas. Aquí está Michelle Obama, activista franca, una mujer que no teme recordarnos que es una orgullosa mujer afroestadounidense, lo cual es revolucionario en sí mismo. Esta exabogada que habla en favor de los derechos de los homosexuales y el control de armas, dio un inolvidable discurso en la Convención Nacional Demócrata este año, que marcó un momento brillante en la vergonzosa historia de nuestro país. De repente, los progresistas estaban complacidos y los tradicionalistas, confundidos. Los medios quieren definirla, lo han intentado desde que Barack Obama asumió la presidencia en 2009. Pero eso es sencillamente imposible.</p>
+<p class="story-body-text story-content" data-para-count="451" data-total-count="18420" id="story-continues-46" tabindex="-1">Michelle Obama encarna a la mujer estadounidense moderna, y no lo digo de manera vaga o trivial. Es raro que alguien pueda expresar sus múltiples identidades al mismo tiempo sin perder su autenticidad. Mis amigas y yo muchas veces compartimos nuestra sensación de que somos “demasiado”. Somos complicadas, queremos ser demasiadas cosas. Quiero estar a cargo y también ser vulnerable. Quiero ser franca y respetada, pero también sexy y hermosa.</p>
+<p class="story-body-text story-content" data-para-count="675" data-total-count="19095" id="story-continues-47" tabindex="-1">Todas las mujeres luchamos por reconciliar las distintas personalidades que tenemos todo el tiempo, fundir nuestros deseos contradictorios, representarnos con honestidad y sentirnos bien con las contradicciones inherentes. Pues bien, Michelle logra hacerlo con elegancia, a pesar del escrutinio. Me parece que no hay nada mejor para el feminismo. Sus elecciones individuales nos obligan a aceptar que no hay una sola cosa que logre definir qué es ser mujer. Ni dos cosas, ni tres. Por desgracia, la posición de la primera dama es simbólica y por eso queda a merced del análisis incesante de los medios. Pero ningún artículo de opinión puede abarcar a una mujer real.</p>
+<p class="story-body-text story-content" data-para-count="1033" data-total-count="20128" id="story-continues-48" tabindex="-1">Si el objetivo del feminismo es lograr que existan las mismas oportunidades y opciones, Michelle me hace sentir que todas las opciones están disponibles. Puedes ir a Princeton y Harvard, puedes rapear con Missy Elliott, puedes ser madre y abogada y una influyente oradora. Puedes respaldar la ley de pago justo Lilly Ledbetter y también te puede gustar la moda. Puedes bailar con Ellen DeGeneres y recordar sin temor a la gente, en televisión en vivo, cuál es en realidad tu posición: “Cada mañana me despierto en una casa que construyeron esclavos y veo a mis hijas, dos hermosas e inteligentes jóvenes negras, jugar en el jardín de la Casa Blanca con sus perros”. Puedes colaborar con tu esposo y apoyarlo, y también utilizar tu capital cultural y político para respaldar a Hillary Clinton, y oponerte resueltamente a las “conversaciones entre amigos” de un oponente que busca intimidarla con el grito de batalla “¡Ya es suficiente!”, una expresión elocuente de lo que sienten muchas personas, yo incluida.</p>
+<p class="story-body-text story-content" data-para-count="209" data-total-count="20337" id="story-continues-49" tabindex="-1">Michelle Obama tendrá su propio legado, independiente del de su esposo. Su legado es que fue la primera primera dama que mostró a las mujeres que no tienen que elegir. Que está bien ser todo a la misma vez.</p>
+<p class="story-body-text story-content" data-para-count="259" data-total-count="20596" id="story-continues-50" tabindex="-1"><em>Rashida Jones es escritora, actriz y productora; protagonista de la serie de comedia de TBS “Angie Tribeca”. Su trabajo más reciente fue una colaboración para escribir el guion de un episodio de “Black Mirror”, que se estrenará este mes en Netflix.</em></p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/chimamanda-ngozi-adichie/" rel="tag">Chimamanda Ngozi Adichie</a>, <a href="https://www.nytimes.com/es/tag/gloria-steinem/" rel="tag">Gloria Steinem</a>, <a href="https://www.nytimes.com/es/tag/michelle-obama/" rel="tag">Michelle Obama</a>, <a href="https://www.nytimes.com/es/tag/primera-dama-de-estados-unidos/" rel="tag">primera dama de Estados Unidos</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/10/20/para-michelle-obama-con-carino/"
+				data-title="Noticias: Para Michelle Obama, con cariño"
+				data-author="POR CHIMAMANDA NGOZI ADICHIE, GLORIA STEINEM, JOHN MEACHAM Y RASHIDA JONES"
+				data-media=""
+				data-description="Cuatro cartas de agradecimiento para la primera dama de Estados Unidos, quien durante los últimos ocho años se dedicó, en silencio y con estoicismo y elegancia, a cambiar el rumbo de la historia del país."
+				data-publish-date="20 de octubre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/07/la-familia-obama-podria-vivir-de-escribir-libros-despues-de-la-casa-blanca/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">Memorias millonarias: los Obama podrían vivir de los libros después de la Casa Blanca</span>
+							<time class="dateline">7 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/09/05/us/05WHLETTER-web1/05WHLETTER-web1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/07/05/las-noches-de-obama-como-aprovecha-sus-valiosas-horas-de-soledad/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">Las noches de Obama: cómo aprovecha sus valiosas horas de soledad</span>
+							<time class="dateline">5 de julio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/06/26/us/27obama-web1/27obama-web1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/10/19/que-podemos-esperar-del-ultimo-debate-presidencial-entre-hillary-clinton-y-donald-trump/">
+					<div class="story-body">
+						<h3 class="kicker">Elecciones EE. UU.</h3>
+
+						<h2 class="headline">
+							<span class="title">Qué podemos esperar del último debate presidencial entre Hillary Clinton y Donald Trump</span>
+							<time class="dateline">19 de octubre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/10/19/us/19polbriefing/19polbriefing-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/10/19/los-cinco-meses-que-pep-guardiola-paso-en-mexico-y-que-definieron-su-carrera/">
+					<div class="story-body">
+						<h3 class="kicker">Fútbol</h3>
+
+						<h2 class="headline">
+							<span class="title">Los cinco meses que Pep Guardiola pasó en México y que definieron su carrera</span>
+							<time class="dateline">19 de octubre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/10/19/sports/19GUARDIOLAweb1/19GUARDIOLAweb1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+			
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-transparent-ffffff' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-transparent-ffffff', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":855,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

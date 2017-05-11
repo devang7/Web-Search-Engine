@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000003942930"/>
+<meta name="hdl" content="Morir solo en Nueva York" />
+<meta name="col" content="Cultura" id="column-name" />
+<meta name="pdate" content="20151204" />
+<meta name="utime" content="20151204102432" />
+<meta name="ptime" content="20151204102432" />
+<meta name="DISPLAYDATE" content="Dec. 4, 2015" />
+<meta name="dat" content="Dec. 4, 2015" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="morir-solo-en-nueva-york" />
+<meta property="og:url" content="https://www.nytimes.com/es/2015/12/04/morir-solo-en-nueva-york/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Morir solo en Nueva York" />
+<meta property="og:description" content="Con cada muerte aparece una historia de vida, tal vez algún significado. ¿Podría explicar alguien el final en soledad de George Bell?" />
+<meta property="og:image" content="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb1-copy/18DYINGweb1-videoSixteenByNine768-v6.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2015-12-04" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2015/12/04/morir-solo-en-nueva-york/" />
+<meta property="twitter:title" content="Morir solo en Nueva York" />
+<meta property="twitter:description" content="Con cada muerte aparece una historia de vida, tal vez algún significado. ¿Podría explicar alguien el final en soledad de George Bell?" />
+<meta name="author" content="N. R. Kleinfeld" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por N. R. Kleinfeld" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="cultura" />
+<meta name="cd12" content="cronica" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="cultura" />
+<meta name="ser" content="cronica" />
+<meta name="id" content="100000003942930"/>
+<meta name="wordCount" content="6950"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2015/12/04/morir-solo-en-nueva-york/">
+<meta name="nyt-collection:uri" content="year=2015&amp;monthnum=12&amp;day=04&amp;name=morir-solo-en-nueva-york">
+<meta name="PT" content="article">
+<meta name="article:section" content="Cultura">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/6?exclude=541">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2015\/12\/04\/morir-solo-en-nueva-york\/"},"headline":"Morir solo en Nueva York","datePublished":"2015-12-04T10:24:32+00:00","dateModified":"2016-01-24T22:48:17+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2015\/10\/14\/nyregion\/18DYINGweb1-copy\/18DYINGweb1-videoSixteenByNine768-v6.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Con cada muerte aparece una historia de vida, tal vez alg\u00fan significado. \u00bfPodr\u00eda explicar alguien el final en soledad de George Bell?"}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2015/12/04/morir-solo-en-nueva-york/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2015/10/18/nyregion/dying-alone-in-new-york-city.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="cultura/cronica" />
+<title>Morir solo en Nueva York &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2015/10/18/nyregion/dying-alone-in-new-york-city.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2015/12/04/morir-solo-en-nueva-york/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-541 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+					<span class="pipe">|</span>
+				Morir solo en Nueva York
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2015/12/04/morir-solo-en-nueva-york/"
+					data-title="Cultura: Morir solo en Nueva York"
+					data-author="POR N. R. KLEINFELD"
+					data-media=""
+					data-description="Con cada muerte aparece una historia de vida, tal vez algún significado. ¿Podría explicar alguien el final en soledad de George Bell?"
+					data-publish-date="4 de diciembre de 2015"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/cronica/">Crónica</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Morir solo en Nueva York</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">N. R. Kleinfeld</span>
+</span>
+
+					<time class="dateline" datetime="2015-12-04">4 de diciembre de 2015</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2015/12/04/morir-solo-en-nueva-york/"
+							data-title="Cultura: Morir solo en Nueva York"
+							data-author="POR N. R. KLEINFELD"
+							data-media=""
+							data-description="Con cada muerte aparece una historia de vida, tal vez algún significado. ¿Podría explicar alguien el final en soledad de George Bell?"
+							data-publish-date="4 de diciembre de 2015"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004072866" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb1-copy/18DYINGweb1-master1050-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb1-copy/18DYINGweb1-master1050-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb1-copy/18DYINGweb1-superJumbo-v2.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Josh Haner/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb1-copy/18DYINGweb1-master1050-v2.jpg"/>
+		<meta itemprop="height" content="669" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Josh Haner/The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2015/10/18/nyregion/dying-alone-in-new-york-city.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="238" data-total-count="238" id="story-continues-2" tabindex="-1">Su cuerpo apareció en la sala. La policía lo encontró acurrucado sobre una alfombra sucia. Una vecina dio la alarma, alertada por el olor fétido que salía del apartamento, en un edificio cualquiera de la calle 79, al norte de Queens.</p>
+<p class="story-body-text story-content" data-para-count="313" data-total-count="551" id="story-continues-3" tabindex="-1">La vivienda le pertenecía a un tal George Bell que vivía solo, así que era fácil suponer que el cuerpo era suyo. Poco más que una suposición. Estaba descompuesto. Era evidente que el hombre no había muerto el 12 de julio del año pasado, el mismo sábado que descubrieron su cadáver. Llevaba tiempo allí.</p>
+<p class="story-body-text story-content" data-para-count="303" data-total-count="854" id="story-continues-4" tabindex="-1">Sus vecinos le habían visto por última vez seis días antes, el domingo. El auto que movía de lado a lado de la calle para evitar las multas de tráfico se había quedado desde el jueves en el lado equivocado con una sanción en el parabrisas. Su vecina le llamó por teléfono sin obtener respuesta.</p>
+<p class="story-body-text story-content" data-para-count="121" data-total-count="975" id="story-continues-5" tabindex="-1">Fue entonces cuando el olor a muerto y la visita de la policía explicaron por qué George Bell no había movido el auto.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="339" data-total-count="1314" id="story-continues-6" tabindex="-1">Cincuenta mil personas mueren cada año en Nueva York. Una cifra que no deja de disminuir. Se vive más y mejor. La mayor parte de quienes mueren tiene amigos y parientes que se enteran de inmediato. Se publican esquelas. Se escriben tarjetas de pésame. Cuando muere alguien conocido o asesinan a un inocente, la ciudad entera lo lamenta.</p>
+<p class="story-body-text story-content" data-para-count="174" data-total-count="1488" id="story-continues-7" tabindex="-1">Unos pocos mueren solos, sin testigos. Nadie reclama sus cuerpos, nadie guarda luto. Apenas un nombre en una lista. En la de 2014, George Bell, de 72 años, fue uno de ellos.</p>
+<p class="story-body-text story-content" data-para-count="215" data-total-count="1703" id="story-continues-8" tabindex="-1">George Bell, nombre simple, dos sílabas. Sin respuestas sobre quién era, cuál fue su vida, qué le preocupó, a quien amó o quién le amó. Como la mayor parte de los neoyorkinos, su vida transcurrió al margen.</p>
+<p class="story-body-text story-content" data-para-count="152" data-total-count="1855" id="story-continues-9" tabindex="-1">Pero su muerte, aun en soledad, desató un proceso sofisticado. Implicó a una serie de personas que dependen, en parte o en su totalidad, de la muerte.</p>
+<p class="story-body-text story-content" data-para-count="320" data-total-count="2175" id="story-continues-10" tabindex="-1">En el caso de George Bell, la casualidad viajó desde Queens hasta el norte del estado de Nueva York pasando por Virginia y Florida. Docenas de personas que nunca le conocieron, ruedas del engranaje de la muerte que mueve la burocracia, terminaron resolviendo los asuntos de un hombre que dejó el mundo sin hacer ruido.</p>
+<p class="story-body-text story-content" data-para-count="307" data-total-count="2482" id="story-continues-11" tabindex="-1">Con cada muerte aparece una historia de vida, tal vez algún significado. ¿Podría explicar alguien el final en soledad de Bell? Tal vez no. Murió llevándose secretos. Sobre su vida y quienes le importaron. Sobre penas y alegrías. Es lo que tiene la muerte. Cierra unas puertas al tiempo que abre otras.</p>
+<figure id="media-100000004072879" class="media photo media-100000004072879 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb2-copy/18DYINGweb2-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-13">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb2-copy/18DYINGweb2-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb2-copy/18DYINGweb2-superJumbo.jpg" data-mediaviewer-caption="El apartamento era propiedad de un tal George Bell. Vivía solo." data-mediaviewer-credit="Josh Haner/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb2-copy/18DYINGweb2-master315.jpg"/>
+		<meta itemprop="height" content="473" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">El apartamento era propiedad de un tal George Bell. Vivía solo.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Josh Haner/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="258" data-total-count="2740" id="story-continues-13" tabindex="-1">CUANDO LOS BOMBEROS forzaron la puerta, la policía irrumpió en una vivienda llena de cosas, la parodia grotesca de un lugar “acogedor”. No cabía duda de que se trataba de uno de esos ancianos, aquejados de Síndrome de Diógenes, que lo acumulan todo.</p>
+<p class="story-body-text story-content" data-para-count="421" data-total-count="3161" id="story-continues-14" tabindex="-1">Llamaron al forense, que entra en escena cuando el motivo de la muerte no está claro o se trata de cuerpos sin identificar. Incluso cuando se trata de un esqueleto hay que declararlo muerto. Un perito buscó pruebas que ayudaran a localizar a algún familiar o identificar el cuerpo. En poco tiempo constataron que no había crimen (sin signos de que se hubiera forzado la cerradura, heridas de bala o sangre coagulada).</p>
+<p class="story-body-text story-content" data-para-count="99" data-total-count="3260" id="story-continues-15" tabindex="-1">Cerraron la cremallera de la bolsa. Lo llevaron al Hospital de Queens y lo congelaron en la morgue.</p>
+<p class="story-body-text story-content" data-para-count="239" data-total-count="3499" id="story-continues-16" tabindex="-1">Los vecinos no le conocían parientes. Los agentes encontraron nombres y teléfonos en el apartamento. Los llamaron sin resultado: No tenía esposa ni hermanos. La policía calcula que localiza parientes en un 85% de los casos. No en este.</p>
+<p class="story-body-text story-content" data-para-count="302" data-total-count="3801" id="story-continues-17" tabindex="-1">En la morgue de Queens, los profesionales entraron en escena. Cerca del 90% de los cadáveres que ingresan en los depósitos de la ciudad son identificados a través de fotografías por parientes o amigos. La mayoría salen para el cementerio en días. En el resto de los casos, las cosas se complican.</p>
+<p class="story-body-text story-content" data-para-count="135" data-total-count="3936" id="story-continues-18" tabindex="-1">Lo más fácil suelen ser las huellas dactilares; si no funcionan, se recurre a los expedientes médicos. Como último recurso, el ADN.</p>
+<p class="story-body-text story-content" data-para-count="104" data-total-count="4040" id="story-continues-19" tabindex="-1">Tardaron días en tomar huellas debido al estado de los dedos. El resultado tampoco ofreció respuestas.</p>
+<p class="story-body-text story-content" data-para-count="372" data-total-count="4412" id="story-continues-20" tabindex="-1">TRANSCURRIDOS NUEVE DÍAS sin encontrar familiares cercanos, el forense informó del deceso al albacea de oficio del Condado de Queens, que opera cerca del edificio de la Corte Suprema del Estado. Sus modestas instalaciones se encuentran al lado de un Tribunal conocido como de viudas y huérfanos, que legaliza testamentos y dirime todo lo relacionado con los fallecidos.</p>
+<p class="story-body-text story-content" data-para-count="141" data-total-count="4553" id="story-continues-21" tabindex="-1">Cada condado de la Ciudad de Nueva York cuenta con un albacea que gestiona las herencias de quienes fallecen sin testamentar o sin herederos.</p>
+<p class="story-body-text story-content" data-para-count="332" data-total-count="4885" id="story-continues-22" tabindex="-1">Los albaceas sólo llaman la atención cuando surgen quejas sobre su capacidad, honorarios o su tendencia a pasar por alto la depredación del cargo en la que incurren algunos políticos. También cuando actúan ilegalmente. El año pasado, el contable del albacea de un condado fue sentenciado a prisión por robarle a los muertos.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="219" data-total-count="5104" id="story-continues-23" tabindex="-1">Auditorías recientes han sacado a la luz una disfunción alarmante en ambas instituciones. Sus responsables se defendieron diciendo que son exageraciones. La última inspección en 2012 no encontró nada significativo.</p>
+<p class="story-body-text story-content" data-para-count="433" data-total-count="5537" id="story-continues-24" tabindex="-1">El departamento emplea a 15 personas en Queens y procesa unos 1.500 decesos al año. Lo dirige Lois M. Rosenblatt. La mayoría de los casos vienen de asilos, otros llegan desde medicina forense, tutores legales, policía, o funerarias. La mayor parte de los patrimonios que gestiona no llegan a 500 dólares, pero han manejado hasta 16 millones. Las cantidades pequeñas se procesan rápido. Las grandes llevan entre uno y dos años.</p>
+<p class="story-body-text story-content" data-para-count="344" data-total-count="5881" id="story-continues-25" tabindex="-1">La oficina cobra una comisión del 5 por ciento por los primeros 100.000 dólares. Esa cantidad disminuye progresivamente. El dinero pasa a la ciudad. Un 1% se destina a cubrir los gastos de la propia entidad. Su abogado, Gerard Sweeney, lleva 23 años en el cargo y cobra una cantidad inicial de 6 por ciento de los primeros $750.000 dólares.</p>
+<p class="story-body-text story-content" data-para-count="172" data-total-count="6053" id="story-continues-26" tabindex="-1">“En Nueva York te puedes morir en total anonimato”, le gusta decir, “hemos tenido casos de gente que llevaba meses muerta. Nadie los encuentra, nadie los extraña”.</p>
+<p class="story-body-text story-content" data-para-count="73" data-total-count="6126" id="story-continues-27" tabindex="-1">El hombre que se cree que fue George Bell, para Rosenblatt, un caso más.</p>
+<p class="story-body-text story-content" data-para-count="181" data-total-count="6307" id="story-continues-28" tabindex="-1">Mientras tanto, al forense le bastaría con unos rayos X para confirmar la identidad. La institución tomó radiografías pero sin registros con qué compararlas, de poco sirvieron.</p>
+<p class="story-body-text story-content" data-para-count="217" data-total-count="6524" id="story-continues-29" tabindex="-1">El departamento no sabía quiénes habían tratado a este hombre, así que comenzaron a llamar a hospitales y médicos del barrio. A quien contestaba el teléfono le preguntaban si George Bell había sido su paciente.</p>
+<p class="story-body-text story-content" data-para-count="311" data-total-count="6835" id="story-continues-30" tabindex="-1">En la oficina del condado trabajan tres investigadores que peinan las viviendas de los fallecidos y buscan pruebas de qué pudieron poseer en vida o de quienes pudieron ser sus familiares. Es un trabajo peculiar ese de ver lo que alguien guardó, lo que colgó en las paredes o cual era su desodorante favorito.</p>
+<p class="story-body-text story-content" data-para-count="168" data-total-count="7003" id="story-continues-31" tabindex="-1">El 24 de julio, dos investigadores, Juan Plaza y Ronald Rodríguez, ingresaron en el apartamento de Bell. Trabajan en pareja para que sea más difícil que alguno robe.</p>
+<p class="story-body-text story-content" data-para-count="181" data-total-count="7184" id="story-continues-32" tabindex="-1">Habían visto cosas peores. Como una vivienda tan llena de cosas que su inquilina murió de pie porque era imposible caerse. O un lugar del que tuvieron que salir espantando pulgas.</p>
+<p class="story-body-text story-content" data-para-count="36" data-total-count="7220" id="story-continues-33" tabindex="-1">Y sí, pocos han visto lo que ellos.</p>
+<figure id="media-100000004072880" class="media photo media-100000004072880 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb3-copy/18DYINGweb3-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-35">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb3-copy/18DYINGweb3-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb3-copy/18DYINGweb3-superJumbo.jpg" data-mediaviewer-caption="Ronald Rodríguez es uno de los tres investigadores que trabaja para la oficina del albacea de oficio del Condado de Queens; registra las residencias de los fallecidos, documentando sus pertenencias y buscando claves para encontrar a sus familiares." data-mediaviewer-credit="Josh Haner/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb3-copy/18DYINGweb3-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Ronald Rodríguez es uno de los tres investigadores que trabaja para la oficina del albacea de oficio del Condado de Queens; registra las residencias de los fallecidos, documentando sus pertenencias y buscando claves para encontrar a sus familiares.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Josh Haner/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="136" data-total-count="7356" id="story-continues-35" tabindex="-1">Plaza se dedicaba a la captura de datos antes de comenzar este trabajo en 1994; Rodríguez fue camarero y se interesó por esto en 2002.</p>
+<p class="story-body-text story-content" data-para-count="162" data-total-count="7518" id="story-continues-36" tabindex="-1">¿Qué se requiere para poder desempeñar este empleo? Rosenblatt, su jefe, lo resume: “Gente que esté dispuesta a entrar a estos apartamentos nauseabundos”.</p>
+<p class="story-body-text story-content" data-para-count="199" data-total-count="7717" id="story-continues-37" tabindex="-1">Rebuscaron entre la anarquía del apartamento, de 74 metros cuadrados. El aire, denso y hediondo. Plaza se aplicaba sin parar un Vicks en la nariz. Rodríguez parecía más duro. El Vicks le molesta.</p>
+<p class="story-body-text story-content" data-para-count="239" data-total-count="7956" id="story-continues-38" tabindex="-1">Por única cama, el sofá. Parecía que alguien había saqueado dormitorio y baño. La cocina estaba llena de basura, inservible. En una lista de la compra llena de manchas se leía: sal de mar, ajo, zanahorias, “Guía de televisión”.</p>
+<p class="story-body-text story-content" data-para-count="76" data-total-count="8032" id="story-continues-39" tabindex="-1">El grifo no funcionaba. Hacía mucho que la estufa no se usaba para cocinar.</p>
+<p class="story-body-text story-content" data-para-count="264" data-total-count="8296" id="story-continues-40" tabindex="-1">Los hombres hurgaron entre la basura en busca de un testamento, cuentas bancarias, una libreta de direcciones, una computadora o un teléfono. Ese tipo de cosas. Fotografías de parientes, ¿la mujer que aparece sobre la chimenea podría ser la madre o la hermana?</p>
+<p class="story-body-text story-content" data-para-count="303" data-total-count="8599" id="story-continues-41" tabindex="-1">Los objetos de valor se irían con ellos. ¿Es un Vermeer lo que cuelga del muro? Llévatelo. Una vez encontraron $30.000 dólares en efectivo; otra descubrieron un Rolex escondido en una radio. Sus expectativas no son altas: en una ocasión, dieron con una foto del muerto vestido de la Orden de Malta.</p>
+<p class="story-body-text story-content" data-para-count="136" data-total-count="8735" id="story-continues-42" tabindex="-1">Encontraron 241 dólares en billetes, 187,45 en monedas y un reloj plateado que no parecía especial, pero que se llevaron por si acaso.</p>
+<p class="story-body-text story-content" data-para-count="71" data-total-count="8806" id="story-continues-43" tabindex="-1">Colgado en el baño, un calendario abierto en el mes de agosto de 2007.</p>
+<p class="story-body-text story-content" data-para-count="379" data-total-count="9185" id="story-continues-44" tabindex="-1">En las paredes una cabeza de oso, cuernos de toro y fotografías de aviones y barcos de guerra. Sobre el sofá, en la pared, una serie de fotos de un paracaidista a punto de tocar tierra, junto con un certificado del primer salto de George Bell en 1963. Cajas vacías de comida china y pizza. Las estanterías, llenas de cintas de audio y video: “Top Gun” o “Braveheart”.</p>
+<p class="story-body-text story-content" data-para-count="237" data-total-count="9422" id="story-continues-45" tabindex="-1">La acumulación es un trastorno mental que lleva a la gente a actuar de manera incoherente; compran productos sólo por tenerlos. En el desorden había media docena de fundas para mesa de planchar o paquetes de luces navideñas sin usar.</p>
+<p class="story-body-text story-content" data-para-count="93" data-total-count="9515" id="story-continues-46" tabindex="-1">Los investigadores regresaron otras dos ocasiones para llevarse papeles y otros $95 dólares.</p>
+<p class="story-body-text story-content" data-para-count="96" data-total-count="9611" id="story-continues-47" tabindex="-1">Hurgar entre las posesiones de los muertos, percibiendo su miseria, ha cambiado a estos hombres.</p>
+<p class="story-body-text story-content" data-para-count="164" data-total-count="9775" id="story-continues-48" tabindex="-1">Rodríguez, de 57 años, divorciado, siente la urgencia. “Trato de vivir la vida como si fuera el último día”, dice, “nunca sabes cuándo te vas a morir”.</p>
+<figure id="media-100000004072881" class="media photo media-100000004072881 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb13-copy/18DYINGweb13-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-50">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb13-copy/18DYINGweb13-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb13-copy/18DYINGweb13-superJumbo.jpg" data-mediaviewer-caption="Juan Plaza, otro investigador, dice que la soledad de tantas muertes ha hecho mella en él." data-mediaviewer-credit="Josh Haner/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb13-copy/18DYINGweb13-master675.jpg"/>
+		<meta itemprop="height" content="675" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Juan Plaza, otro investigador, dice que la soledad de tantas muertes ha hecho mella en él.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Josh Haner/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<figure id="media-100000004072886" class="media photo media-100000004072886 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/10/18/nyregion/18DYINGweb15-copy/18DYINGweb15-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-51">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/10/18/nyregion/18DYINGweb15-copy/18DYINGweb15-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/10/18/nyregion/18DYINGweb15-copy/18DYINGweb15-superJumbo.jpg" data-mediaviewer-caption="“Trato de vivir la vida como si fuera el último día”, dice Rodríguez." data-mediaviewer-credit="Josh Haner/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/10/18/nyregion/18DYINGweb15-copy/18DYINGweb15-master675.jpg"/>
+		<meta itemprop="height" content="675" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">“Trato de vivir la vida como si fuera el último día”, dice Rodríguez.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Josh Haner/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="449" data-total-count="10224" id="story-continues-51" tabindex="-1">La soledad de tantas muertes ha hecho mella en Plaza, tiene miedo de ser él quien acabe tirado en el suelo. “Este trabajo enseña mucho”, dijo. ”Aprendes que debes compartirte. La gente se muere sin tener con quién hablar. Se muere y los parientes salen de quién sabe dónde. ‘Era mi tío. Era mi primo. Dame lo que tenía’. Dame, dame. Pero en vida nunca le hicieron una visita. Me cambió la vida desde que trabajo en esta oficina”.</p>
+<p class="story-body-text story-content" data-para-count="288" data-total-count="10512" id="story-continues-52" tabindex="-1">Tiene 52 años, también está divorciado y no tiene hijos, pero sigue incrementando su número de amigos. Todos los días envía mensajes de motivación por Instagram: “Con cada amanecer, valoremos cada minuto que tenemos”; “Sé amable, sonríe al mundo y el mundo te sonreirá”.</p>
+<p class="story-body-text story-content" data-para-count="197" data-total-count="10709" id="story-continues-53" tabindex="-1">“Cuando me muera, alguien se va a dar cuenta el mismo día o al día siguiente. Desde que trabajo aquí, mi lista de amistades se ha hecho cada vez más grande. No quiero morir solo”, expresó.</p>
+<p class="story-body-text story-content" data-para-count="365" data-total-count="11074" id="story-continues-54" tabindex="-1">EN SU CUBÍCULO DE QUEENS, con guantes, Patrick Stressler revisaba los papeles recuperados por los investigadores. Stressler es el responsable de hacer un listado de los bienes de Bell. Oficialmente, es “agente de bienes testamentarios”, título práctico a la hora de iniciar una conversación en una fiesta. Tiene 27 años. Antes fue cajero en un restaurante.</p>
+<p class="story-body-text story-content" data-para-count="177" data-total-count="11251" id="story-continues-55" tabindex="-1">Stressler revisa las pertenencias de gente a la que ya nunca conocerá. Tiene especial interés en las fotografías para “poder darse una idea de la historia de la persona”.</p>
+<p class="story-body-text story-content" data-para-count="212" data-total-count="11463" id="story-continues-56" tabindex="-1">Las fotos recorren rutinas. Un niño con pistolas de juguete. Un hombre de uniforme. Hombres de pesca. Una joven sentada en una silla. Un grupo de estudiantes en un escenario. “Otras épocas”, dijo Stressler.</p>
+<p class="story-body-text story-content" data-para-count="109" data-total-count="11572" id="story-continues-57" tabindex="-1">Pero al final, las fotos no revelaron mucho sobre lo que George Bell había hecho a lo largo de sus 72 años.</p>
+<p class="story-body-text story-content" data-para-count="333" data-total-count="11905" id="story-continues-58" tabindex="-1">La pila de papeles dio pocas pistas. Un pasaporte sin usar de 2007 a nombre de George Main Bell, hijo, en el que se veía a un hombre de cuello grueso y rostro gordo nacido el 15 de enero de 1942 o documentos en los que consta que su padre, George Bell, murió en 1969 a los 59 años, y su madre, Davina Bell, en 1981 a los 76 años.</p>
+<p class="story-body-text story-content" data-para-count="358" data-total-count="12263" id="story-continues-59" tabindex="-1">Algunas tarjetas de navidad. Varias de una mujer llamada Elsie Logan de Red Bank, Nueva Jersey, en las que le agradecía un regalo chocolates Godiva. Otra, del año 2001, decía: “Llamé el domingo alrededor de las 2, nadie contestó. Volveré a llamar”. Una tarjeta de Acción de Gracias de 2007 decía: “He intentado llamarte, pero nadie contesta”.</p>
+<p class="story-body-text story-content" data-para-count="206" data-total-count="12469" id="story-continues-60" tabindex="-1">Una tarjeta navideña de 2001 decía: “Con amor por siempre, Eleanore (Puffy)” y “Rara vez lo dije, pero espero que te des cuenta de lo mucho que significa para mí tenerte como amigo. Me importas”.</p>
+<figure id="media-100000004072921" class="media photo media-100000004072921 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb5-copy/18DYINGweb5-master675-v3.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-62">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb5-copy/18DYINGweb5-master675-v3.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb5-copy/18DYINGweb5-superJumbo-v3.jpg" data-mediaviewer-caption="La cocina estaba llena de basura y era inservible desde hacía tiempo; había boletos de lotería de hacía décadas que no habían salido ganadores." data-mediaviewer-credit="Josh Haner/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb5-copy/18DYINGweb5-master675-v3.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">La cocina estaba llena de basura y era inservible desde hacía tiempo; había boletos de lotería de hacía décadas que no habían salido ganadores.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Josh Haner/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<figure id="media-100000004072924" class="media photo media-100000004072924 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb6-copy/18DYINGweb6-master675-v3.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-63">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb6-copy/18DYINGweb6-master675-v3.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb6-copy/18DYINGweb6-superJumbo-v3.jpg" data-mediaviewer-caption="Repisas repletas de cintas de audio y video." data-mediaviewer-credit="Josh Haner/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb6-copy/18DYINGweb6-master675-v3.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Repisas repletas de cintas de audio y video.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Josh Haner/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<figure id="media-100000004072927" class="media photo media-100000004072927 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb4-copy/18DYINGweb4-master675-v3.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-64">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb4-copy/18DYINGweb4-master675-v3.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb4-copy/18DYINGweb4-superJumbo-v3.jpg" data-mediaviewer-caption="Entre aquel desorden había media docena de fundas sin abrir para mesas de planchar, varios empaques de luces navideñas, cuatro medidores de presión para neumáticos." data-mediaviewer-credit="Josh Haner/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb4-copy/18DYINGweb4-master675-v3.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Entre aquel desorden había media docena de fundas sin abrir para mesas de planchar, varios empaques de luces navideñas, cuatro medidores de presión para neumáticos.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Josh Haner/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="118" data-total-count="12587" id="story-continues-64" tabindex="-1">Tarjetas firmadas por alguien llamado Thomas Higginbotham, dirigidas a “Big George”, firmadas “tu amigo, Tom.”</p>
+<p class="story-body-text story-content" data-para-count="298" data-total-count="12885" id="story-continues-65" tabindex="-1">Y un hallazgo valioso: declaraciones de impuestos. La última mostraba un ingreso de 13.207 dólares por jubilación y otro de 21.311 de la Seguridad Social. Los estados de cuenta bancarios contenían el descubrimiento más importante: había dejado un saldo de varios cientos de miles de dólares.</p>
+<p class="story-body-text story-content" data-para-count="229" data-total-count="13114" id="story-continues-66" tabindex="-1">Hallaron también un testamento de 1982. En él. George Bell distribuía todo a partes iguales entre tres hombres y una mujer con quienes parecía no tener ninguna relación familiar. También especificaba que debía ser cremado.</p>
+<p class="story-body-text story-content" data-para-count="346" data-total-count="13460" id="story-continues-67" tabindex="-1">Stressler encontró direcciones en Internet y envió varias cartas pidiéndole a estas cuatro personas que le contactaran. Sólo respondió Martin Westbrook, que llamó desde Sprakers, al norte de Nueva York. Dijo que no había hablado con George Bell desde hacía tiempo. El testamento lo nombraba su ejecutor testamentario. Prefirió renunciar.</p>
+<p class="story-body-text story-content" data-para-count="257" data-total-count="13717" id="story-continues-68" tabindex="-1">Los cabos sueltos comenzaron a unirse. El automóvil, un Toyota RAV4 2005 color plata, fue enviado a subasta. Se supo que George Bell no había dado respuesta a dos cuestionarios para formar parte de un jurado; escribieron para explicar que ya no llegaría.</p>
+<p class="story-body-text story-content" data-para-count="160" data-total-count="13877" id="story-continues-69" tabindex="-1">Si en el apartamento se encuentran objetos de valor, las casas de subastas los ponen en venta. Cuando no hay nada, las empresas de limpieza se deshacen de todo.</p>
+<p class="story-body-text story-content" data-para-count="255" data-total-count="14132" id="story-continues-70" tabindex="-1">Entre sus documentos había una baja militar de 1966, después de seis años en la Reserva del Ejército. Se hizo una solicitud al Departamento de Veteranos, en San Luis, para enterrarlo en uno de sus cementerios y que el gobierno corriera con los gastos.</p>
+<p class="story-body-text story-content" data-para-count="210" data-total-count="14342" id="story-continues-71" tabindex="-1">Contestaron que Bell no estaba en activo ni había fallecido mientras formaba parte de la Reserva. El albacea apeló. Una semana después llegó una respuesta de 16 páginas que se resume de manera concisa: No.</p>
+<p class="story-body-text story-content" data-para-count="307" data-total-count="14649" id="story-continues-72" tabindex="-1">El albacea de oficio también se encarga de que el correo le haga llegar la correspondencia del difunto. Estados de cuenta o cartas que indiquen el paradero de parientes. Cuando llegan revistas, se cancelan las suscripciones y se solicitan reembolsos. Sean de 6,82 o 12,05 dólares, es parte de la herencia.</p>
+<p class="story-body-text story-content" data-para-count="115" data-total-count="14764" id="story-continues-73" tabindex="-1">No llegó mucho para George Bell: estados de cuenta, un aviso del seguro, facturas de servicios, correo no deseado.</p>
+<p class="story-body-text story-content" data-para-count="211" data-total-count="14975" id="story-continues-74" tabindex="-1">TODA VIDA MERECE una última morada, pero no todas son bonitas. La mayoría de las herencias le llegan al albacea después de que el cuerpo ya fue enterrado por familiares o amigos o siguiendo un plan ya pagado.</p>
+<p class="story-body-text story-content" data-para-count="159" data-total-count="15134" id="story-continues-75" tabindex="-1">Cuando alguien fallece en situación de indigencia el cuerpo se une a los que yacen en el olvido en el cementerio de los sin recursos: Hart Island en el Bronx.</p>
+<p class="story-body-text story-content" data-para-count="355" data-total-count="15489" id="story-continues-76" tabindex="-1">Si hay fondos, el albacea honra el testamento y a los parientes. Cuando no hay quien hable por el difunto, la oficina decide entre dos cementerios que cobran poco, en Nueva Jersey. De ser posible, los gastos totales son inferiores a 5,000 dólares. No siempre es fácil en una ciudad en la que el precio de un funeral puede superar varias veces ese monto.</p>
+<figure id="media-100000004072930" class="media photo media-100000004072930 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb8-copy/18DYINGweb8-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-78">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb8-copy/18DYINGweb8-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb8-copy/18DYINGweb8-superJumbo.jpg" data-mediaviewer-caption="El 15 de noviembre, John Sommese de la Funeraria Simonson se subió a una carroza fúnebre rentada para llevar el cuerpo de George Bell a un crematorio." data-mediaviewer-credit="Josh Haner/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb8-copy/18DYINGweb8-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">El 15 de noviembre, John Sommese de la Funeraria Simonson se subió a una carroza fúnebre rentada para llevar el cuerpo de George Bell a un crematorio.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Josh Haner/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="151" data-total-count="15640" id="story-continues-78" tabindex="-1">La Funeraria Simonson fue seleccionada por Susan Brown, asistente del albacea, para que cremara el cuerpo de Bell. Rotan los casos entre 16 funerarias.</p>
+<p class="story-body-text story-content" data-para-count="327" data-total-count="15967" id="story-continues-79" tabindex="-1">No se trató del primer caso atrapado en el limbo. Hace tiempo otra persona fallecida esperó semanas en la morgue mientras sus hermanos decidían los detalles del funeral. La hermana del finado quería que actuaran un cuarteto y una sección de viento; otro hermano discrepaba. El Tribunal se pronunció a favor de la hermana.</p>
+<p class="story-body-text story-content" data-para-count="198" data-total-count="16165" id="story-continues-80" tabindex="-1">El médico forense no tuvo suerte con George Bell. Las llamadas en frío continuaron. Mientras las investigaciones giraban en torno a Queens, las respuestas eran desalentadoras: ningún George Bell.</p>
+<p class="story-body-text story-content" data-para-count="379" data-total-count="16544" id="story-continues-81" tabindex="-1">Así que firmó un acta de defunción no verificada el 28 de julio; en ella se determinó que la causa de muerte fue enfermedad cardiovascular, arterioesclerosis e hipertensión, con obesidad como añadido. La posición en la que se encontró el cuerpo, la edad y el tamaño empujaron una decisión de probabilidad estadística. Su ocupación se registró como “desconocida”.</p>
+<p class="story-body-text story-content" data-para-count="232" data-total-count="16776" id="story-continues-82" tabindex="-1">La ley especifica que los cuerpos deben enterrarse, cremarse o salir de la ciudad en un lapso de cuatro días posteriores al hallazgo. El forense puede ordenar el entierro, pero sin identidad no hay cremación. No se puede revertir.</p>
+<p class="story-body-text story-content" data-para-count="179" data-total-count="16955" id="story-continues-83" tabindex="-1">Otros cuerpos llegaron a la morgue antes de seguir su camino hacia la tumba, mientras el cuerpo de quien creían era George Bell llegó a su segundo mes de estancia. Y al tercero.</p>
+<p class="story-body-text story-content" data-para-count="157" data-total-count="17112" id="story-continues-84" tabindex="-1">A PRINCIPIOS DE SEPTIEMBRE del año pasado, un vecino se quejó ante el albacea de que la nevera de George Bell tenía una fuga que se filtraba por el techo.</p>
+<p class="story-body-text story-content" data-para-count="145" data-total-count="17257" id="story-continues-85" tabindex="-1">Enviaron una empresa de limpieza para que se llevara el electrodoméstico. Diego Benítez, el dueño de la empresa, acudió con dos trabajadores.</p>
+<p class="story-body-text story-content" data-para-count="244" data-total-count="17501" id="story-continues-86" tabindex="-1">La nevera estaba desconectada y en su interior, repleto de cucarachas, se pudrían restos de comida china. Benítez lo roció con insecticida, lo limpió y se lo llevó a un centro de reciclaje. Semanas más tarde, otra empresa lo fumigó todo.</p>
+<p class="story-body-text story-content" data-para-count="248" data-total-count="17749" id="story-continues-87" tabindex="-1">Mientras eso sucedía, el forense siguió buscando radiografías. A finales de septiembre, tuvo éxito. Alguien había tomado una impresión del pecho de George Bell en el 2004. La radiografía estaba en el archivo. Llevaría un tiempo recuperarla.</p>
+<p class="story-body-text story-content" data-para-count="272" data-total-count="18021" id="story-continues-88" tabindex="-1">Pasaron semanas. A finales de octubre, el servicio de radiología respondió: Lo sentimos, se han destruido. El forense solicitó una confirmación por escrito. Cuando llegó decía: Nos equivocamos, aquí estaban las radiografías. Las recibió a principios de noviembre.</p>
+<p class="story-body-text story-content" data-para-count="219" data-total-count="18240" id="story-continues-89" tabindex="-1">Se hizo una comparación de los rayos X y listo. La primera semana de noviembre, casi cuatro semanas después de su llegada, se confirmó que el cuerpo era oficialmente el de George Bell, que en paz descanse, de Queens.</p>
+<p class="story-body-text story-content" data-para-count="236" data-total-count="18476" id="story-continues-90" tabindex="-1">HACÍA FRÍO. Caía el sol sobre Queens. Una mañana de sábado, en noviembre, John Sommese se subió a un coche fúnebre y se dirigió hacia la morgue. Es el propietario de la Funeraria Simonson. A sus 73 años aún se mantiene activo.</p>
+<p class="story-body-text story-content" data-para-count="185" data-total-count="18661" id="story-continues-91" tabindex="-1">Allí, un empleado retiró el cuerpo. Forense y dueño de la funeraria revisaron la etiqueta. El empleado lo colocó en un ataúd. George Bell se dirigía, por fin, a su última morada.</p>
+<p class="story-body-text story-content" data-para-count="315" data-total-count="18976" id="story-continues-92" tabindex="-1">Lo introdujeron en la parte trasera del coche fúnebre. Sommese colocó una bandera de los Estados Unidos sobre la caja. Las fuerzas armadas negaron el entierro militar, pero los años de George Bell en la Reserva del Ejército fueron suficientes para que el director de la funeraria respetase la costumbre militar.</p>
+<p class="story-body-text story-content" data-para-count="250" data-total-count="19226" id="story-continues-93" tabindex="-1">La siguiente parada fue el U.S. Columbarium, un crematorio del Middle Village. Sommese recorrió calles flanqueadas por árboles desnudos. La pantalla de la radio, sin volumen, indicaba que sonaba “You’re My Best Friend” interpretada por Queen.</p>
+<p class="story-body-text story-content" data-para-count="232" data-total-count="19458" id="story-continues-94" tabindex="-1">Aunque el director de la funeraria dijo que no se detenía a pensar en quienes transportaba, aceptó que casos como éste le entristecían: una persona muere y no aparece nadie, ni funeral ni sacerdote que desee que descanse en paz.</p>
+<p class="story-body-text story-content" data-para-count="416" data-total-count="19874" id="story-continues-95" tabindex="-1">Era cristiano, y creía que George Bell ya se encontraba en un lugar mejor. “No creo que todos deban tener un funeral muy lujoso”, dijo con voz suave, “pero creo que el entierro o la cremación deben hacerse con respeto, si no, ¿de qué sirve la sociedad? Creo que todos estamos conectados. Todos fuimos creados por el mismo Dios. ¿Tiene importancia que este hombre sea cremado con respeto? Sí, la tiene”.</p>
+<figure id="media-100000004072932" class="media photo media-100000004072932 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/10/18/nyregion/18DYINGweb7alt-copy/18DYINGweb7alt-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-97">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/10/18/nyregion/18DYINGweb7alt-copy/18DYINGweb7alt-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/10/18/nyregion/18DYINGweb7alt-copy/18DYINGweb7alt-superJumbo.jpg" data-mediaviewer-caption="Varios días después de la cremación de George Bell, el superintendente de U.S. Columbarium tomó una urna en forma de caja de zapatos y la llevó al área donde se almacenan las cenizas." data-mediaviewer-credit="Josh Haner/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/10/18/nyregion/18DYINGweb7alt-copy/18DYINGweb7alt-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Varios días después de la cremación de George Bell, el superintendente de U.S. Columbarium tomó una urna en forma de caja de zapatos y la llevó al área donde se almacenan las cenizas.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Josh Haner/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="60" data-total-count="19934" id="story-continues-97" tabindex="-1">Miró por el retrovisor. “A mí me importa este hombre”.</p>
+<p class="story-body-text story-content" data-para-count="135" data-total-count="20069" id="story-continues-98" tabindex="-1">Al llegar al U.S. Columbarium, se dirigió hacia el lugar de descarga, donde ya esperaba otro coche. Sí, había fila en el crematorio.</p>
+<p class="story-body-text story-content" data-para-count="359" data-total-count="20428" id="story-continues-99" tabindex="-1">Entrecerrando los ojos por el sol, Sommese caminaba de un lado a otro. El aire, pesado, no se movía. Después de 15 minutos se abrió la puerta y el director de la funeraria colocó el coche en posición. Cuando los trabajadores se llevaron el ataúd, guardó la bandera. Como no había familiares, el director de la funeraria la dobló para volver a usarla.</p>
+<p class="story-body-text story-content" data-para-count="159" data-total-count="20587" id="story-continues-100" tabindex="-1">El proceso de cremación dura casi tres horas y las cenizas se recogen en un par de días. Por un coste adicional, se entregan el mismo día. No fue necesario.</p>
+<p class="story-body-text story-content" data-para-count="328" data-total-count="20915" id="story-continues-101" tabindex="-1">El columbario almacena las cenizas de cerca de 40.000 difuntos, casi todas en bonitos nichos individuales. En la planta baja, cerca de los baños, hay un almacén con un árbol de bronce sobre la puerta. Es la alternativa económica. Los nombres se graban en las hojas del árbol. Cuando las hojas se llenan, se agregan palomas.</p>
+<p class="story-body-text story-content" data-para-count="206" data-total-count="21121" id="story-continues-102" tabindex="-1">Varios días después, Sommese colocó allí una urna. Después clavó una paloma de metal, con las alas extendidas, sobre el borde del árbol. Había un recién llegado: “George M. Bell Jr. 1942-2014”.</p>
+<p class="story-body-text story-content" data-para-count="351" data-total-count="21472" id="story-continues-103" tabindex="-1">CADA DOS SEMANAS, LOS JUEVES David R. Maltz &amp; Company, en Nueva York, subasta más de 100 vehículos; los demás días, subasta de todo. Ya vendió el Club Campestre de Woodcrest, Nueva York, cuatro máquinas de una trituradora o 22 franquicias de KFC. Quiebras, embargos, herencias y un flujo continuo de bienes enviados por el albacea de Queens.</p>
+<p class="story-body-text story-content" data-para-count="282" data-total-count="21754" id="story-continues-104" tabindex="-1">Un 30 de diciembre de esos en que el viento hace volar la basura de la calle, Maltz subastaba un Mustang convertible 2011, dos vehículos que ni siquiera encendían y el Toyota 2005 de George Bell. A pesar del modelo, sólo tenía 4.828 km recorridos, lo que aumentaba su atractivo.</p>
+<p class="story-body-text story-content" data-para-count="611" data-total-count="22365" id="story-continues-105" tabindex="-1">La subasta duró apenas un minuto —“oferta de 3.000; oferta de 3.500, 4.000…”— el coche llegó a 9.500 dólares contra toda expectativa. Descontados gastos se añadieron $ 8.631,50 a la herencia. El comprador fue Sam Maloof, asistente habitual, propietario de una distribuidora de vehículos usados en Brooklyn. Planeaba revenderlo. Después de la compra, su hermana, Janet Maloof, se enamoró del vehículo. Tenía el mismo modelo, del año 2005, del mismo color, pero con más de 160.934 km recorridos. Inspirado por el espíritu de la navidad, Maloof le regaló el auto de George Bell a su hermana.</p>
+<figure id="media-100000004072935" class="media photo media-100000004072935 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb10-copy/18DYINGweb10-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-107">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb10-copy/18DYINGweb10-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb10-copy/18DYINGweb10-superJumbo.jpg" data-mediaviewer-caption="El 30 de diciembre, David R. Maltz &amp;amp; Company, en Central Islip, Nueva York, subastó el Toyota 2005 de George Bell. A pesar de ser del año 2005, el vehículo sólo tenía 4.828 km recorridos, lo que aumentaba su atractivo." data-mediaviewer-credit="Josh Haner/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb10-copy/18DYINGweb10-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">El 30 de diciembre, David R. Maltz &amp;amp; Company, en Central Islip, Nueva York, subastó el Toyota 2005 de George Bell. A pesar de ser del año 2005, el vehículo sólo tenía 4.828 km recorridos, lo que aumentaba su atractivo.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Josh Haner/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="297" data-total-count="22662" id="story-continues-107" tabindex="-1">Un par de semanas después, el reloj se puso a la venta en la subasta de joyería y objetos de colección de Maltz. La puja comenzó en 1 dólar y terminó en 3. Se lo llevó un desempleado, Tony Nik, que murmuraba malhumorado, aun después de su triunfo, su preferencia por los precios ajustados.</p>
+<p class="story-body-text story-content" data-para-count="81" data-total-count="22743" id="story-continues-108" tabindex="-1">Al descontar los gastos se añadieron otros $2,31 dólares al patrimonio de Bell.</p>
+<p class="story-body-text story-content" data-para-count="279" data-total-count="23022" id="story-continues-109" tabindex="-1">Una semana después, seis empleados de un negocio que recoge basura llegaron al apartamento de Queens para vaciarlo. Sin expresar emoción alguna, metieron los restos de la vida de George Bell en bolsas de basura. Rompieron los muebles con martillos. En la radio, sonaba música.</p>
+<p class="story-body-text story-content" data-para-count="183" data-total-count="23205" id="story-continues-110" tabindex="-1">Al observar la basura y cavilando sobre la tristeza que desprendía, alguien dijo: “Depresión, creo. La gente se deprime y después, Dios los socorra, nadie se acuerda de ellos”.</p>
+<p class="story-body-text story-content" data-para-count="78" data-total-count="23283" id="story-continues-111" tabindex="-1">Les llevó siete horas meter todo en camiones que lo llevarían a un basurero.</p>
+<p class="story-body-text story-content" data-para-count="182" data-total-count="23465" id="story-continues-112" tabindex="-1">Se quedaron con algunas cosas. A uno le gustó un juego de platos de porcelana de Marilyn Monroe. Otro se quedó con un paquete sin abrir de calcetines Nike y varias esponjas nuevas.</p>
+<p class="story-body-text story-content" data-para-count="96" data-total-count="23561" id="story-continues-113" tabindex="-1">Un trabajador encontró unas botas marrones nuevas en su caja. Se las probó y le quedaron bien.</p>
+<p class="story-body-text story-content" data-para-count="60" data-total-count="23621" id="story-continues-114" tabindex="-1">Limpió el apartamento de George Bell con sus botas puestas.</p>
+<p class="story-body-text story-content" data-para-count="282" data-total-count="23903" id="story-continues-115" tabindex="-1">LAS PERSONAS QUE SE REPARTEN los bienes conforme al testamento son los herederos. Habían pasado más de 30 años desde que George Bell los eligió: Martin Westbrook, Frank Murzi, Albert Schober y Eleanore Albert. Además, había un beneficiario de sus cuentas: Thomas Higginbotham.</p>
+<p class="story-body-text story-content" data-para-count="144" data-total-count="24047" id="story-continues-116" tabindex="-1">Elizabeth Rooney, la investigadora de parentescos del albacea, se dispuso a buscarlos. Tenía que notificarles, por si impugnaban el testamento.</p>
+<p class="story-body-text story-content" data-para-count="207" data-total-count="24254" id="story-continues-117" tabindex="-1">Hubo una época en que los bienes de George Bell no podían distribuirse hasta siete meses después de nombrado el albacea. Es el periodo que especifican las leyes para que los acreedores ejerzan su opción.</p>
+<p class="story-body-text story-content" data-para-count="250" data-total-count="24504" id="story-continues-118" tabindex="-1">Después de una búsqueda en Internet, Rooney se enteró de que Murzi y Schober habían muerto. Westbrook estaba en Sprakers y Higginbotham en Lynchburg, Virginia. Rooney encontró a Albert, que ahora llevaba el apellido Flemm, al norte de Worcester.</p>
+<p class="story-body-text story-content" data-para-count="182" data-total-count="24686" id="story-continues-119" tabindex="-1">Se sorprendieron al enterarse de que George Bell les había dejado dinero. Flemm había hablado con él antes de su muerte; los demás no habían estado en contacto con él en años.</p>
+<p class="story-body-text story-content" data-para-count="305" data-total-count="24991" id="story-continues-120" tabindex="-1">Parte del trabajo de Rooney era elaborar un árbol genealógico que incluyera tres generaciones. Con ayuda de una empresa de genealogía buscó en censos y manifiestos de barcos que demostraban que los familiares de Bell habían llegado de Escocia y elaboró un árbol genealógico de 1,8 metros de largo.</p>
+<p class="story-body-text story-content" data-para-count="292" data-total-count="25283" id="story-continues-121" tabindex="-1">Rooney creó los árboles materno y paterno, cada uno con docenas de nombres. Encontró a cinco familiares vivos: dos primos maternos, uno que vivía en Edina, Minnesotta, y otro en Henderson, Nevada. Ninguno había estado en contacto con George Bell en décadas ni sabía a qué se dedicaba.</p>
+<p class="story-body-text story-content" data-para-count="117" data-total-count="25400" id="story-continues-122" tabindex="-1">Por parte de padre, Rooney identificó a dos primos, en Escocia e Inglaterra, de una tercera prima no localizó nada.</p>
+<p class="story-body-text story-content" data-para-count="353" data-total-count="25753" id="story-continues-123" tabindex="-1">Se llamaba Janet Bell y el protocolo determina que hay que publicar un aviso en un periódico. En el caso de herencias de tamaño considerable, el tribunal recurre a The New York Law Journal, donde la factura puede llegar a los 4.000 dólares. En este caso, eligió The Wave, un semanario de Queens con una tirada de 12.000 ejemplares por $247 dólares.</p>
+<p class="story-body-text story-content" data-para-count="198" data-total-count="25951" id="story-continues-124" tabindex="-1">La prima podría estar en Tayikistán o en Hog Jaw, Arkansas. Las probabilidades de que viera el aviso eran casi nulas. Nadie ha respondido a ninguno de los miles de avisos que Sweneey ha publicado.</p>
+<p class="story-body-text story-content" data-para-count="377" data-total-count="26328" id="story-continues-125" tabindex="-1">Se supo que Flemm había muerto de un ataque al corazón, el 3 de febrero, a los 66 años. Como había sobrevivido a Bell, la herencia de éste se sumaría a la suya. Sus herederos eran su hermano, James Albert, detective privado de Long Island que apenas recordaba haber oído de Bell, y un sobrino y dos sobrinas en Florida, de las cuales, una ignoraba la existencia de Bell.</p>
+<p class="story-body-text story-content" data-para-count="86" data-total-count="26414" id="story-continues-126" tabindex="-1">La muerte es un negocio. No necesitas haber conocido a alguien para recibir su dinero.</p>
+<p class="story-body-text story-content" data-para-count="233" data-total-count="26647" id="story-continues-127" tabindex="-1">Un corredor de bienes raíces de Queens puso a la venta el apartamento de Bell en 219.000 dólares. Era el último activo que quedaba por liquidar. Lo visitaron tres posibles compradores y se aceptó una oferta por $225.000 dólares.</p>
+<p class="story-body-text story-content" data-para-count="299" data-total-count="26946" id="story-continues-128" tabindex="-1">Tres meses más tarde, el consejo del edificio se negó a aceptar la venta. Apareció una pareja de mediana edad que vivía en la misma calle y se lo vendieron por $215.000 dólares. Le cedieron su hogar a su hijo y se mudarían, sobrescribiendo la vida de Bell, después de reformar el apartamento.</p>
+<p class="story-body-text story-content" data-para-count="377" data-total-count="27323" id="story-continues-129" tabindex="-1">Mientras tanto, Sweeney compareció ante el Tribunal para solicitar que se legitimara el testamento. Además de los dos beneficiarios conocidos, agregó la posibilidad de que hubiera parientes desconocidos, como la prima a la que no había podido localizar. El tribunal nombró a un tutor para que defendiera los intereses de estas personas, que, de hecho, podrían no existir.</p>
+<p class="story-body-text story-content" data-para-count="374" data-total-count="27697" id="story-continues-130" tabindex="-1">En septiembre, Sweeney hizo el recuento final de los bienes. No hubo objeción. Sumaban un total de $540.000 dólares. Las cuentas bancarias tenían $215.000 dólares, el único beneficiario era Higginbotham, que recibió el dinero. El resultado de la venta del apartamento, un seguro de vida, el vehículo y el reloj se sumaron al patrimonio: un total de $324.000 dólares.</p>
+<p class="story-body-text story-content" data-para-count="140" data-total-count="27837" id="story-continues-131" tabindex="-1">La ciudad se quedó con una comisión de 13.726 dólares. Los honorarios del albacea ascendieron a $3.238 dólares, y Sweeney cobró 19.453.</p>
+<p class="story-body-text story-content" data-para-count="370" data-total-count="28207" id="story-continues-132" tabindex="-1">Otros gastos incluyeron el mantenimiento, 7.360 dólares; la factura del funeral, 4.873; $2.800 de la compañía de limpieza; 1.663 para la investigación de parentesco; una multa de tráfico costó 222 dólares; El departamento de Bomberos cobró 704 por la ambulancia; 750 el tutor de los herederos; la tasación del reloj que se vendió en tres dólares costó 12,50.</p>
+<p class="story-body-text story-content" data-para-count="214" data-total-count="28421" id="story-continues-133" tabindex="-1">El monto resultante, unos $264.000 dólares, se dividió entre Westbrook y los herederos de Flemm. Catorce meses después de su muerte, los bienes de Bell fueron liquidados y el producto de su venta se distribuyó.</p>
+<p class="story-body-text story-content" data-para-count="116" data-total-count="28537" id="story-continues-134" tabindex="-1">George Bell después de muerto le daba su dinero a una serie de personas. Ninguno supo por qué los eligió a ellos.</p>
+<p class="story-body-text story-content" data-para-count="265" data-total-count="28802" id="story-continues-135" tabindex="-1">SU VIDA COMENZÓ modesta, sencilla. Muy apegado a sus padres. Dormía en un sofá cama en la sala, sus padres en el dormitorio. Continuó haciéndolo después de que murieran. Ambos eran escoceses. Su padre fabricaba herramientas y su madre trabajó como costurera.</p>
+<p class="story-body-text story-content" data-para-count="402" data-total-count="29204" id="story-continues-136" tabindex="-1">Después de la secundaria, trabajó con su padre. En 1961, conoció a alguien en un bar que se dedicaba a las mudanzas. Se hicieron amigos y George Bell entró en el negocio. Era Tom Higginbotham. Así entabló amistad con otros tres colegas: Frank Murzi, Albert Schober y Martin Westbrook, sus herederos. Se dedicaban, sobre todo, a la mudanza de oficinas. Todos bebían alcohol en grandes cantidades.</p>
+<figure id="media-100000004072950" class="media photo media-100000004072950 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb11-copy/18DYINGweb11-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-138">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb11-copy/18DYINGweb11-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb11-copy/18DYINGweb11-superJumbo.jpg" data-mediaviewer-caption="George Bell, a la izquierda, en 1956. Bell era muy apegado a sus padres." data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb11-copy/18DYINGweb11-master675.jpg"/>
+		<meta itemprop="height" content="675" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">George Bell, a la izquierda, en 1956. Bell era muy apegado a sus padres.</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="206" data-total-count="29410" id="story-continues-138" tabindex="-1">“Éramos una banda de alcohólicos”, dijo Westbrook. “Yo era bueno para la bebida. Pero George me hacía pasar vergüenza. Era un buen tipo, una especie de ermitaño. Mira que pasamos buenos ratos”.</p>
+<p class="story-body-text story-content" data-para-count="143" data-total-count="29553" id="story-continues-139" tabindex="-1">En palabras de Higginbotham: “Éramos grandes amigos. No sé si se puede decir de este modo, pero éramos hombres que se amaban entre sí”.</p>
+<p class="story-body-text story-content" data-para-count="128" data-total-count="29681" id="story-continues-140" tabindex="-1">Le llamaban Big George, porque era un hombre corpulento. Pesaba unos 95 kg. Su insaciable apetito lo llevaría a pesar casi 159.</p>
+<p class="story-body-text story-content" data-para-count="296" data-total-count="29977" id="story-continues-141" tabindex="-1">Le gustaban las bromas. Una vez, una mujer los invitó a él y a Higginbotham a una fiesta en casa de sus padres. Su padre tenía una pecera con peces tropicales. Le mostró a Bell la pecera. Vio un pez distinto de los demás y le dijo, “ése es uno caro”. Bell atrapó al pez y se lo tragó.</p>
+<p class="story-body-text story-content" data-para-count="355" data-total-count="30332" id="story-continues-142" tabindex="-1">Otro día, sus amigos estaban haciendo la mudanza de una empresa de finanzas. Después de llevar los escritorios a las oficinas nuevas, Bell deslizó notas en los cajones que decían: “Estoy perdidamente enamorado de ti. Búscame en el dispensador de agua fría”. O: “Hay una bomba debajo de tu silla. Tu próximo movimiento puede ser el último”.</p>
+<p class="story-body-text story-content" data-para-count="43" data-total-count="30375" id="story-continues-143" tabindex="-1">Bromas tontas. Big George a fin de cuentas.</p>
+<p class="story-body-text story-content" data-para-count="106" data-total-count="30481" id="story-continues-144" tabindex="-1">A sus amigos les costaba trabajo descifrarle. Había cosas que no contaba a nadie. Y no hacían preguntas.</p>
+<p class="story-body-text story-content" data-para-count="148" data-total-count="30629" id="story-continues-145" tabindex="-1">Su padre murió joven. Al envejecer, su madre quedó incapacitada debido a la artritis. Él la cuidó, alimentándola y bañándola hasta su muerte.</p>
+<p class="story-body-text story-content" data-para-count="143" data-total-count="30772" id="story-continues-146" tabindex="-1">Comenzó a salir con una mujer cuando ella tenía 19 y él 25. “Nos volvimos muy cercanos”, dijo ella, “él me hacía sentir especial”.</p>
+<p class="story-body-text story-content" data-para-count="249" data-total-count="31021" id="story-continues-147" tabindex="-1">Planearon casarse. Contrataron un salón de bodas. Él se compró un traje. Después, les contó a sus amigos que la madre de la novia quería que firmara un acuerdo prenupcial. Bell dio por terminado el compromiso y nunca tuvo otra relación seria.</p>
+<p class="story-body-text story-content" data-para-count="65" data-total-count="31086" id="story-continues-148" tabindex="-1">La mujer era Eleanore Albert, el cuarto nombre en el testamento.</p>
+<p class="story-body-text story-content" data-para-count="127" data-total-count="31213" id="story-continues-149" tabindex="-1">Ella se casó con un hombre mayor que ella y se mudó al norte para convertirse en la Sra. Flemm. En 2002, falleció su esposo.</p>
+<figure id="media-100000004072969" class="media photo media-100000004072969 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/10/18/nyregion/18DYINGweb16-copy/18DYINGweb16-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-151">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/10/18/nyregion/18DYINGweb16-copy/18DYINGweb16-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/10/18/nyregion/18DYINGweb16-copy/18DYINGweb16-superJumbo.jpg" data-mediaviewer-caption="Le decían Big George porque era un hombre fornido y corpulento, que pesaba unos 95 kg. Después, su insaciable apetito lo llevaría a pesar casi 159." data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2015/10/18/nyregion/18DYINGweb16-copy/18DYINGweb16-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Le decían Big George porque era un hombre fornido y corpulento, que pesaba unos 95 kg. Después, su insaciable apetito lo llevaría a pesar casi 159.</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="293" data-total-count="31506" id="story-continues-151" tabindex="-1">Ni el tiempo, ni la distancia mitigaron la cercanía que sentían. Hablaban por teléfono e intercambiaban mensajes. “El afecto mutuo nunca se desgastó”, dijo ella. Apenas un año antes, ella le había enviado una tarjeta para San Valentín: “George, pienso en ti a menudo. Con amor”.</p>
+<p class="story-body-text story-content" data-para-count="61" data-total-count="31567" id="story-continues-152" tabindex="-1">Sin que ella lo supiera, la había incluido en su testamento.</p>
+<p class="story-body-text story-content" data-para-count="170" data-total-count="31737" id="story-continues-153" tabindex="-1">Sus vidas terminaron de maneras similares. Ella vivía sola en un remolque. Murió de un ataque al corazón. La encontró un vecino. Había engordado mucho y la cremaron.</p>
+<p class="story-body-text story-content" data-para-count="148" data-total-count="31885" id="story-continues-154" tabindex="-1">La diferencia es que ella había dejado deudas. Lo que heredaría, decenas de miles de dólares del dinero de George Bell, nunca llegó a sus manos.</p>
+<p class="story-body-text story-content" data-para-count="262" data-total-count="32147" id="story-continues-155" tabindex="-1">Una parte se le entregó a su hermano. Otra parte llegó a manos de su sobrino, que conducía un autobús en Disney World. Un amigo de su tía había sido propietario de un Camaro convertible que a ella le gustaba, y él, en su honor, compraría un Camaro usado.</p>
+<p class="story-body-text story-content" data-para-count="244" data-total-count="32391" id="story-continues-156" tabindex="-1">Otra parte sería para Sarah Teta, una sobrina jubilada, que vivía en Altamonte Springs, Florida y decidió guardarlo. “Siempre oyes historias de gente que no conoces que se muere y hereda dinero. Nunca pensé que me pasaría a mí”, dijo.</p>
+<p class="story-body-text story-content" data-para-count="392" data-total-count="32783" id="story-continues-157" tabindex="-1">El resto se entregó a otra sobrina, Dorothy Gardiner, camarera jubilada que trabajaba cuidando enfermos a domicilio, vivía en Apopka, Florida, y nunca había oído hablar de George Bell. Había sobrevivido a dos cánceres y debía miles de dólares en gastos médicos. “He estado pagando $25 dólares al mes, que es lo que puedo pagar. Nunca me esperé esto. Es una locura”, manifestó.</p>
+<p class="story-body-text story-content" data-para-count="197" data-total-count="32980" id="story-continues-158" tabindex="-1">En 1996, George Bell se lastimó levantando un escritorio en uno de las mudanzas y su vida dio un giro. Recibió una indemnización y comenzó a cobrar una discapacidad. Ya no volvería a trabajar.</p>
+<p class="story-body-text story-content" data-para-count="118" data-total-count="33098" id="story-continues-159" tabindex="-1">Solía invitar a sus amigos a ver la televisión. Les cocinaba. Después dejaron de frecuentarlo. Nadie supo por qué.</p>
+<p class="story-body-text story-content" data-para-count="187" data-total-count="33285" id="story-continues-160" tabindex="-1">Sus antiguos amigos se habían separado. De sus compañeros de mudanzas, Murzi se jubiló en 1994 y murió en 2011. Schober se jubiló en 1996 y se fue a vivir a Brooklyn. Murió en 2002.</p>
+<figure id="media-100000004072971" class="media photo media-100000004072971 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/10/18/nyregion/18DYINGweb17-copy/18DYINGweb17-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-162">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/10/18/nyregion/18DYINGweb17-copy/18DYINGweb17-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/10/18/nyregion/18DYINGweb17-copy/18DYINGweb17-superJumbo.jpg" data-mediaviewer-caption="George Bell y un compañero de las mudanzas, Frank Murzi, en una fotografía sin fecha." data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2015/10/18/nyregion/18DYINGweb17-copy/18DYINGweb17-master675.jpg"/>
+		<meta itemprop="height" content="675" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">George Bell y un compañero de las mudanzas, Frank Murzi, en una fotografía sin fecha.</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="125" data-total-count="33410" id="story-continues-162" tabindex="-1">Higginbotham renunció al trabajo y se fue a vivir al norte en 1973. Trabajó para el estado como científico medioambiental.</p>
+<p class="story-body-text story-content" data-para-count="415" data-total-count="33825" id="story-continues-163" tabindex="-1">Ahora tiene 74 años, está jubilado y vive solo en Virginia. La última vez que habló con George Bell fue hace años. Tenía un código que usaba para dejar sonar el teléfono y colgar para que George le contestara la llamada. Con el tiempo, Bell dejó de contestar. Le enviaba tarjetas, suplicándole que le visitara, sin éxito. La última, meses antes de que Higginbotham se enterara de que Bell había muerto.</p>
+<p class="story-body-text story-content" data-para-count="436" data-total-count="34261" id="story-continues-164" tabindex="-1">Le costó trabajo aceptar la manera en la que el dinero de George Bell llegó a sus manos. “He estado preocupado. No he dormido bien. Me duele el estómago. Me subió la presión. Discutí con él una y otra vez que saliera de ese apartamento y se gastara el dinero y disfrutara la vida. Le envié tantos folletos de lugares que podía visitar. Pensé que entendía a George. Ahora me doy cuenta de que no lo comprendía para nada”.</p>
+<p class="story-body-text story-content" data-para-count="257" data-total-count="34518" id="story-continues-165" tabindex="-1">Higginbotham estaba satisfecho con el rumbo que había tomado su vida: su modesto apartamento de una habitación, su camioneta de 15 años. Depositó la herencia en fondos de inversión y pensó que les serviría a sus tres nietos para pagar la universidad.</p>
+<p class="story-body-text story-content" data-para-count="352" data-total-count="34870" id="story-continues-166" tabindex="-1">En 1994, Westbrook se lesionó la rodilla y dejó las mudanzas. Se fue a vivir a Sprakers. Tiene 74 años. La última vez que habló con George Bell fue hace varios años. Bell le contó que no salía mucho. Tenía tres nietos y quería irse a vivir a un sitio de clima más cálido; planeaba darle parte del dinero a la viuda de Murzi, su mejor amigo.</p>
+<p class="story-body-text story-content" data-para-count="74" data-total-count="34944" id="story-continues-167" tabindex="-1">“El dinero de Big George hará que mi vejez sea más llevadera”, dijo.</p>
+<p class="story-body-text story-content" data-para-count="208" data-total-count="35152" id="story-continues-168" tabindex="-1">Le conmovió mucho que hubiera muerto solo, sin que nadie lo supiera. “Sí, eso me pasará a mí”, dijo. “También estoy solo. Podría decir que sólo hablo con unas cuatro o cinco personas”, agregó.</p>
+<p class="story-body-text story-content" data-para-count="275" data-total-count="35427" id="story-continues-169" tabindex="-1">Sus últimos años, ya sin sus amigos de las mudanzas, la vida de George Bell se vació. Los vecinos le saludaban en la calle y él les sonreía. Le contaba historias a una vecina que vivía con sus padres. Hace poco, se hizo policía. Ella fue quien supo que olía a muerte.</p>
+<p class="story-body-text story-content" data-para-count="66" data-total-count="35493" id="story-continues-170" tabindex="-1">Al final, George Bell parecía conservar sólo un amigo verdadero.</p>
+<p class="story-body-text story-content" data-para-count="153" data-total-count="35646" id="story-continues-171" tabindex="-1">Fue cliente de un bar del vecindario llamado Budds Bar. Llegaba con su sudadera azul recortada tan a menudo que le conocían como Bell el de la sudadera.</p>
+<p class="story-body-text story-content" data-para-count="212" data-total-count="35858" id="story-continues-172" tabindex="-1">En abril de 2005, Budds cerró. Varios clientes se fueron a otro bar, Legends. George Bell fue unas cuantas veces, después se volvió cliente habitual de otro bar en Long Island. Ahí se encontraba con su amigo.</p>
+<figure id="media-100000004072972" class="media photo media-100000004072972 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb12-copy/18DYINGweb12-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-174">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb12-copy/18DYINGweb12-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb12-copy/18DYINGweb12-superJumbo.jpg" data-mediaviewer-caption="Frank Bertone, de 67 años, es un inspector jubilado de la compañía de electricidad de Nueva York. Durante la última década pasó más tiempo con George Bell que ninguna otra persona, pero no siente que lo conociera realmente. “Si hay algo que puedo decir de George es que nunca hablaba de nada personal. Nunca”, comentó." data-mediaviewer-credit="Josh Haner/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb12-copy/18DYINGweb12-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Frank Bertone, de 67 años, es un inspector jubilado de la compañía de electricidad de Nueva York. Durante la última década pasó más tiempo con George Bell que ninguna otra persona, pero no siente que lo conociera realmente. “Si hay algo que puedo decir de George es que nunca hablaba de nada personal. Nunca”, comentó.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Josh Haner/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="250" data-total-count="36108" id="story-continues-174" tabindex="-1">EL LETRERO a la entrada del Bantry Bay dice: “Entran como extraños, salen como amigos”. Escondido cerca de la ventana se ve a Frank Bertone, dando sorbos a su sopa y a una bebida. Lo conocen como el Dude. El último amigo cercano de George Bell.</p>
+<p class="story-body-text story-content" data-para-count="129" data-total-count="36237" id="story-continues-175" tabindex="-1">A principios de los 80 entró a Budds porque necesitaba ir al baño. Un hombre de gran tamaño gritó: “Tómate una cerveza”.</p>
+<p class="story-body-text story-content" data-para-count="274" data-total-count="36511" id="story-continues-176" tabindex="-1">Así era George Bell. Con el tiempo, floreció una amistad que se fortaleció a lo largo de los años de vida que le quedaban a George Bell. Se encontraban cada sábado en Bantry Bay. Pescaban. Pasaban el tiempo sin hacer gran cosa y así un día se perdía en el siguiente.</p>
+<p class="story-body-text story-content" data-para-count="249" data-total-count="36760" id="story-continues-177" tabindex="-1">“¿A dónde fuimos?”, dijo Bertone. “A ningún lado. Una vez nos sentamos durante horas en el estacionamiento de Bed Bath &amp; Beyond. ¿Y de qué hablamos? De los problemas del mundo. Sólo eso, los dos resolvimos los problemas del mundo”.</p>
+<p class="story-body-text story-content" data-para-count="67" data-total-count="36827" id="story-continues-178" tabindex="-1">George nunca hablaba de nada personal. Menos aún de su testamento.</p>
+<p class="story-body-text story-content" data-para-count="85" data-total-count="36912" id="story-continues-179" tabindex="-1">Bertone lo invitaba a su casa, pero Bell ponía excusas y nunca lo invitó a la suya.</p>
+<p class="story-body-text story-content" data-para-count="308" data-total-count="37220" id="story-continues-180" tabindex="-1">Una vez, hace unos ocho años, Bertone apareció en su casa porque pasó un tiempo sin tener noticias suyas. George Bell abrió la puerta, y le dijo que se fuera. Había una cortina en el recibidor que ocultaba el caos que había detrás. Bertone no tenía idea de que Bell había comenzado a guardarlo todo.</p>
+<p class="story-body-text story-content" data-para-count="199" data-total-count="37419" id="story-continues-181" tabindex="-1">Hacía pocos años, George Bell había ido a parar al hospital por un problema en el corazón y le pidió que le guardara un dinero. Le entregó un sobre gordo. En su interior había 55.000 dólares.</p>
+<p class="story-body-text story-content" data-para-count="146" data-total-count="37565" id="story-continues-182" tabindex="-1">Mike Kerins, el camarero, lo interrumpió: “Dos cosas sobre George. Me daba $100 dólares cada navidad, y nunca fue a comer a un restaurante”.</p>
+<figure id="media-100000004072973" class="media photo media-100000004072973 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb14-copy/18DYINGweb14-master675-v9.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-184">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb14-copy/18DYINGweb14-master675-v9.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb14-copy/18DYINGweb14-superJumbo-v9.jpg" data-mediaviewer-caption="Varios días después de la cremación de George Bell, el superintendente apiló una urna en el interior del área de almacenamiento. Después clavó una paloma de metal, con las alas extendidas, sobre la puerta, que identificaba al recién llegado." data-mediaviewer-credit="Josh Haner/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/10/14/nyregion/18DYINGweb14-copy/18DYINGweb14-master675-v9.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Varios días después de la cremación de George Bell, el superintendente apiló una urna en el interior del área de almacenamiento. Después clavó una paloma de metal, con las alas extendidas, sobre la puerta, que identificaba al recién llegado.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Josh Haner/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="103" data-total-count="37668" id="story-continues-184" tabindex="-1">Bell tenía diabetes y se quejaba de dolores en el hombro. Se medicaba pero alegaba que le sentaba mal.</p>
+<p class="story-body-text story-content" data-para-count="201" data-total-count="37869" id="story-continues-185" tabindex="-1">El Dude y Kerins dijeron que Bell tenía la impresión de que la vida se había ensañado con él. “George sentía mucho dolor. Creo que esperaba morirse, había tenido suficiente”, relató Kerins.</p>
+<p class="story-body-text story-content" data-para-count="53" data-total-count="37922" id="story-continues-186" tabindex="-1">Era como si la tristeza hubiera matado a George Bell.</p>
+<p class="story-body-text story-content" data-para-count="109" data-total-count="38031" id="story-continues-187" tabindex="-1">Sus días, predecibles y en un encierro del que sólo salía hasta la puerta para recoger comida a domicilio.</p>
+<p class="story-body-text story-content" data-para-count="202" data-total-count="38233" id="story-continues-188" tabindex="-1">La última vez que el Dude le vio fue una semana antes de que se encontrara su cuerpo. Había una oferta de camarón congelado en el supermercado. George Bell compró algo. Para esa cocina que no usaba.</p>
+<p class="story-body-text story-content" data-para-count="204" data-total-count="38437" id="story-continues-189" tabindex="-1">Bertone no se enteró de que había fallecido hasta que alguien llegó a Legends con la noticia. Kerins lo escuchó y le contó. Hicieron algunas llamadas para enterarse de algo, pero no averiguaron nada.</p>
+<p class="story-body-text story-content" data-para-count="49" data-total-count="38486" id="story-continues-190" tabindex="-1">¿Por qué murió solo, sin que nadie lo supiera?</p>
+<p class="story-body-text story-content" data-para-count="101" data-total-count="38587" id="story-continues-191" tabindex="-1">El Dude pensó en eso. “No lo sé. Me gustaría poder darte una respuesta. Pero no lo sé”, dijo.</p>
+<p class="story-body-text story-content" data-para-count="269" data-total-count="38856" id="story-continues-192" tabindex="-1">En las televisiones que están encima de una barra repleta, una mujer promocionaba un producto de limpieza. Bajo una luz tenue, Bertone vació su vaso. “Sabes, lo extraño”, dijo, “me habría gustado ver a George una vez más. Era mi amigo. Sólo una vez más”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2015/12/04/morir-solo-en-nueva-york/"
+				data-title="Cultura: Morir solo en Nueva York"
+				data-author="POR N. R. KLEINFELD"
+				data-media=""
+				data-description="Con cada muerte aparece una historia de vida, tal vez algún significado. ¿Podría explicar alguien el final en soledad de George Bell?"
+				data-publish-date="4 de diciembre de 2015"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":977,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

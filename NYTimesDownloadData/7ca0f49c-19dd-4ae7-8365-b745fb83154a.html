@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004138163"/>
+<meta name="hdl" content="El fin de la charla superficial" />
+<meta name="col" content="Cultura" id="column-name" />
+<meta name="pdate" content="20160121" />
+<meta name="utime" content="20160121123556" />
+<meta name="ptime" content="20160121123556" />
+<meta name="DISPLAYDATE" content="Jan. 21, 2016" />
+<meta name="dat" content="Jan. 21, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="el-fin-de-la-charla-superficial" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/01/21/el-fin-de-la-charla-superficial/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="El fin de la charla superficial" />
+<meta property="og:description" content="¿Por qué no podemos remplazar las conversaciones triviales con charlas más profundas, y hacernos, de entrada, las preguntas importantes? " />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/01/17/fashion/17Modern1/17Modern1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-01-21" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/01/21/el-fin-de-la-charla-superficial/" />
+<meta property="twitter:title" content="El fin de la charla superficial" />
+<meta property="twitter:description" content="¿Por qué no podemos remplazar las conversaciones triviales con charlas más profundas, y hacernos, de entrada, las preguntas importantes? " />
+<meta name="author" content="Tim Boomer" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por Tim Boomer" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="cultura" />
+<meta name="cd12" content="modernlove" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="cultura" />
+<meta name="ser" content="modernlove" />
+<meta name="id" content="100000004138163"/>
+<meta name="wordCount" content="1654"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/01/21/el-fin-de-la-charla-superficial/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=01&amp;day=21&amp;name=el-fin-de-la-charla-superficial">
+<meta name="PT" content="article">
+<meta name="article:section" content="Cultura">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/6?exclude=1311">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/01\/21\/el-fin-de-la-charla-superficial\/"},"headline":"El fin de la charla superficial","datePublished":"2016-01-21T12:35:56+00:00","dateModified":"2016-01-22T14:36:34+00:00","author":{"@type":"Person","name":"veronica"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/01\/17\/fashion\/17Modern1\/17Modern1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"\u00bfPor qu\u00e9 no podemos remplazar las conversaciones triviales con charlas m\u00e1s profundas, y hacernos, de entrada, las preguntas importantes? "}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/01/21/el-fin-de-la-charla-superficial/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/01/17/fashion/dating-the-end-of-small-talk.html?rref=collection%2Fcolumn%2Fmodern-love&amp;#038;action=click&amp;#038;contentCollection=fashion&amp;#038;region=rank&amp;#038;module=package&amp;#038;version=highlights&amp;#038;contentPlacement=4&amp;#038;pgtype=collection" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="cultura/modernlove" />
+<title>El fin de la charla superficial &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/01/17/fashion/dating-the-end-of-small-talk.html?rref=collection%2Fcolumn%2Fmodern-love&#038;action=click&#038;contentCollection=fashion&#038;region=rank&#038;module=package&#038;version=highlights&#038;contentPlacement=4&#038;pgtype=collection" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/01/21/el-fin-de-la-charla-superficial/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-1311 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+					<span class="pipe">|</span>
+				El fin de la charla superficial
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/01/21/el-fin-de-la-charla-superficial/"
+					data-title="Cultura: El fin de la charla superficial"
+					data-author="POR TIM BOOMER"
+					data-media=""
+					data-description="¿Por qué no podemos remplazar las conversaciones triviales con charlas más profundas, y hacernos, de entrada, las preguntas importantes? "
+					data-publish-date="21 de enero de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/modernlove/">Modern Love</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">El fin de la charla superficial</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Tim Boomer</span>
+</span>
+
+					<time class="dateline" datetime="2016-01-21">21 de enero de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/01/21/el-fin-de-la-charla-superficial/"
+							data-title="Cultura: El fin de la charla superficial"
+							data-author="POR TIM BOOMER"
+							data-media=""
+							data-description="¿Por qué no podemos remplazar las conversaciones triviales con charlas más profundas, y hacernos, de entrada, las preguntas importantes? "
+							data-publish-date="21 de enero de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004144494" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/17/fashion/17Modern1/17Modern1-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/17/fashion/17Modern1/17Modern1-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/17/fashion/17Modern1/17Modern1-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Brian Rea"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/17/fashion/17Modern1/17Modern1-master1050.jpg"/>
+		<meta itemprop="height" content="663" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Brian Rea
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/01/17/fashion/dating-the-end-of-small-talk.html?rref=collection%2Fcolumn%2Fmodern-love&#038;action=click&#038;contentCollection=fashion&#038;region=rank&#038;module=package&#038;version=highlights&#038;contentPlacement=4&#038;pgtype=collection&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="307" data-total-count="307" id="story-continues-2" tabindex="-1">Mi relación terminó hace casi dos años. Entonces decidí poner en pausa mi carrera de actuario en Boston y tomar unas largas vacaciones en Costa Rica, donde mi plan consistía en surfear y hacer yoga. Sí, mi reacción fue el mayor lugar común para un hombre occidental de 32 años con un corazón roto.</p>
+<p class="story-body-text story-content" data-para-count="457" data-total-count="764" id="story-continues-3" tabindex="-1">Después de cuatro semanas de estar ahí, mientras viajaba en auto con otros compañeros de la escuela de surf, nos encontramos con una mujer madura de rostro rojizo que buscaba quién la llevara en las afueras de un pueblito. Nuestro radio estaba descompuesto y estábamos aburridos, así que una mujer del grupo, Abby, le dijo: “La vamos a llevar bajo dos condiciones. Primero debe cantarnos una canción y después contarnos una historia, ¿acepta?”.</p>
+<p class="story-body-text story-content" data-para-count="192" data-total-count="956" id="story-continues-4" tabindex="-1">La viajera, estadounidense, respondió con una media sonrisa y asintió. Se soltó el cabello, que llevaba cubierto tras una visera de Disney. “¿Qué les gustaría que cante?”, preguntó.</p>
+<p class="story-body-text story-content" data-para-count="96" data-total-count="1052" id="story-continues-5" tabindex="-1">“Lo que usted quiera”, le respondí. “Siempre y cuando sea una canción de Rod Stewart”.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="67" data-total-count="1119" id="story-continues-6" tabindex="-1">Tras una interpretación de “Maggie May”, su historia comenzó.</p>
+<p class="story-body-text story-content" data-para-count="392" data-total-count="1511" id="story-continues-7" tabindex="-1">“Es interesante que me pidan una historia”, relató. “Porque ahora mismo estoy en medio de una historia de amor. Vine a Costa Rica hace un año y conocí al hombre de mis sueños. Estaba vendiendo joyas en un local de un mercado. Es italiano, y en cuanto hablé con él sentí algo que no había sentido en mi vida. Me invadió por completo. Como un amor de película, solo que real”.</p>
+<p class="story-body-text story-content" data-para-count="23" data-total-count="1534" id="story-continues-8" tabindex="-1">Esto sonaba prometedor.</p>
+<p class="story-body-text story-content" data-para-count="75" data-total-count="1609" id="story-continues-9" tabindex="-1">“¿Entonces está aquí para verlo?”, preguntó uno de mis compañeros.</p>
+<p class="story-body-text story-content" data-para-count="86" data-total-count="1695" id="story-continues-10" tabindex="-1">“Por supuesto, querido. Voy a la ciudad para verlo por primera vez en doce meses”.</p>
+<p class="story-body-text story-content" data-para-count="162" data-total-count="1857" id="story-continues-11" tabindex="-1">Sonreímos. Ahora, también nosotros éramos personajes de su historia. Los que la llevaríamos a través de una carretera polvosa hasta el hombre de sus sueños.</p>
+<p class="story-body-text story-content" data-para-count="47" data-total-count="1904" id="story-continues-12" tabindex="-1">“¿Y él siente lo mismo?”, preguntó Abby.</p>
+<p class="story-body-text story-content" data-para-count="61" data-total-count="1965" id="story-continues-13" tabindex="-1">“Sí, todos los días me envía correos para decírmelo”.</p>
+<p class="story-body-text story-content" data-para-count="44" data-total-count="2009" id="story-continues-14" tabindex="-1">Volteé a verla. “¿Le emociona verlo?”.</p>
+<p class="story-body-text story-content" data-para-count="54" data-total-count="2063" id="story-continues-15" tabindex="-1">“No he pensado en otra cosa durante todo un año”.</p>
+<p class="story-body-text story-content" data-para-count="62" data-total-count="2125" id="story-continues-16" tabindex="-1">“Así que, ¿vino sola hasta acá para verlo?”, pregunté.</p>
+<p class="story-body-text story-content" data-para-count="170" data-total-count="2295" id="story-continues-17" tabindex="-1">“Pues, tenía que hacerlo, ¿no? Estar lejos de él me rompía el corazón”. Se detuvo para tomar aliento. “Aunque también vino mi esposo; se quedó en la casa”.</p>
+<p class="story-body-text story-content" data-para-count="50" data-total-count="2345" id="story-continues-18" tabindex="-1">Todos levantamos las manos para hacerle preguntas.</p>
+<p class="story-body-text story-content" data-para-count="271" data-total-count="2616" id="story-continues-19" tabindex="-1">Después de mi viaje estaba en un bar de Boston comiendo filete, mientras aún lloraba porque Alejandra, la mujer que iba a ser mi esposa, había terminado conmigo. La había conocido cinco años antes y ella era toda mi inspiración: era la mujer que me enseñó a amar.</p>
+<p class="story-body-text story-content" data-para-count="377" data-total-count="2993" id="story-continues-20" tabindex="-1">Al lado de mí, en el bar, estaba una pareja en su primera cita. Me di cuenta porque su conversación me recordó aquellas pláticas incómodas que se tienen con las esposas de los compañeros de trabajo en las fiestas navideñas. Empezaron con una discusión sobre sus trayectos al bar. Los dos vivían a diez minutos en autobús y lograron hablar del tema durante media hora.</p>
+<p class="story-body-text story-content" data-para-count="256" data-total-count="3249" id="story-continues-21" tabindex="-1">Después, el clima: en Boston a veces llueve, y ambos se percataron de esto. Después de una hora, comenzaron con lo verdaderamente profundo. Uno de ellos era profesor, y el otro conocía a un profesor. ¿Cómo no iban a estar destinados al amor verdadero?</p>
+<p class="story-body-text story-content" data-para-count="400" data-total-count="3649" id="story-continues-22" tabindex="-1">Bueno, puede que haya estado canalizando hacia ellos un poco de mi ira por el rompimiento, pero todo lo que podía pensar era que no quería ser parte de este juego. Si ser soltero significaba tener que participar en este tipo de conversaciones, prefería no pasar por esa etapa. ¿Cómo podía ir de la conexión profunda que tenía con Alejandra a hablar de los horarios y los patrones climáticos?</p>
+<p class="story-body-text story-content" data-para-count="260" data-total-count="3909" id="story-continues-23" tabindex="-1">Recordé esa carretera polvosa en Costa Rica y a la mujer que le abrió su corazón a cuatro extraños. ¿Por qué no podíamos adoptar su franqueza? ¿Por qué conocer a un extraño significa muy a menudo que no podemos hablar de entrada de cosas importantes?</p>
+<p class="story-body-text story-content" data-para-count="659" data-total-count="4568" id="story-continues-24" tabindex="-1">Con esto en mente, decidí abordar mi regreso a las citas románticas bajo una política de decir no a las charlas superficiales. Y no es que fuera a insistir en que habláramos solo de temas serios y profundos; idealmente, también habría muchas bromas inteligentes y coqueteo. Simplemente, quería deshacerme de toda la paja aburrida acerca de datos y hechos: ya fuera hablar de la nieve o la lluvia, cuánto frío hace, en qué trabajamos, cuánto nos toma llegar al trabajo, a qué escuela fuimos… todas esas cosas que nos sentimos obligados a decir cuando hablamos con alguien nuevo pero que nos dicen poco acerca de quién es esa persona en realidad.</p>
+<p class="story-body-text story-content" data-para-count="382" data-total-count="4950" id="story-continues-25" tabindex="-1">¿Por qué no podemos remplazar la charla superficial con las conversaciones significativas para así hacernos preguntas profundas desde el principio? ¿Por qué no remplazar el parloteo acerca de los tiempos de trayecto con una conversación acerca de nuestras creencias más importantes y nuestros miedos más fuertes? ¿Preguntas que revelen quiénes somos y adónde queremos ir?</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="288" data-total-count="5238" id="story-continues-26" tabindex="-1">Aunque, la verdad, hubo algunos problemas con esta política, y así lo expresaron mis amigos emocionados. Argumentaban que algunos no se sienten cómodos cuando pasan directamente a ese tipo de conversación, y dedujeron que a ciertas personas les parece relajante la charla superficial.</p>
+<p class="story-body-text story-content" data-para-count="233" data-total-count="5471" id="story-continues-27" tabindex="-1">Eso es indudablemente cierto. Pero otro amigo replicó: “Si ella no se siente cómoda con la plática, entonces lo más probable es que, de cualquier forma, no sea la indicada para ti. Tu plan es una muy buena manera de filtrar”.</p>
+<p class="story-body-text story-content" data-para-count="282" data-total-count="5753" id="story-continues-28" tabindex="-1">Ese amigo tiene su propio y extraño sistema de filtración: les lleva cocos a las mujeres con las que tiene una cita por primera vez, pues dice que si la mujer no acepta el coco, entonces no es buena candidata para casarse. ¿Por qué? No tengo idea. Aun así, acepté su opinión.</p>
+<p class="story-body-text story-content" data-para-count="297" data-total-count="6050" id="story-continues-29" tabindex="-1">Otra queja frecuente: no puedes hacer grandes preguntas, sino hasta que sepas las respuestas de las pequeñas; necesitas saber esos datos para poder ir más allá. Sin embargo, yo diría que cualquier pregunta puede pasar de la charla superficial a la significativa con tan solo unas alteraciones.</p>
+<p class="story-body-text story-content" data-para-count="331" data-total-count="6381" id="story-continues-30" tabindex="-1">Una de las preguntas comunes que le hago a una mujer en la primera cita es a qué sitios ha viajado. La respuesta puede convertirse rápidamente en una lista de lugares y así estaríamos de regreso en el territorio del currículo. Así que, en vez de eso, preguntaría: “¿Cuál fue el lugar que más te inspiró y por qué?”.</p>
+<p class="story-body-text story-content" data-para-count="79" data-total-count="6460" id="story-continues-31" tabindex="-1">En lugar de preguntar por su trabajo, mejor: “¿Qué trabajo te apasiona?”.</p>
+<p class="story-body-text story-content" data-para-count="168" data-total-count="6628" id="story-continues-32" tabindex="-1">No le preguntaría acerca de su relación más larga —pues la duración no dice nada sobre la intensidad— más bien: “¿Cuándo te has sentido más enamorada?”.</p>
+<p class="story-body-text story-content" data-para-count="273" data-total-count="6901" id="story-continues-33" tabindex="-1">Mi primera oportunidad para poner en práctica esta nueva estrategia llegó con una mujer que conocí en una fiesta algunas semanas después. Se rio cuando le expliqué mi teoría en torno a las charlas importantes y las superficiales, y aceptó ser el conejillo de Indias.</p>
+<p class="story-body-text story-content" data-para-count="372" data-total-count="7273" id="story-continues-34" tabindex="-1">Se iba a mudar a otro sitio la siguiente semana, así que ambos sabíamos que solo tendríamos esa única cita, pero prometimos hacer todo lo que pudiéramos para evitar la charla superficial. Esa noche hablamos en grande y sobre cosas profundas. Me enteré del problema de su hermano con las drogas, del ex que había dejado años atrás y de lo que aún sentía por él.</p>
+<p class="story-body-text story-content" data-para-count="364" data-total-count="7637" id="story-continues-35" tabindex="-1">Pero también bromeamos acerca de cosas bobas y triviales; logramos convencer a extraños de que nos habíamos conocido en una feria tras sufrir un accidente en los carritos chocones, y fingimos que nos daba miedo una comida que todavía se movía en nuestros platos. Reímos y lloramos, y no supimos nada que pudiera estar en un currículo. Después, nos besamos.</p>
+<p class="story-body-text story-content" data-para-count="523" data-total-count="8160" id="story-continues-36" tabindex="-1">Desde entonces, evitar la charla superficial me ha traído una buena experiencia tras otra. Cada cita se ha convertido en una conexión real o, en el peor de los casos, una anécdota graciosa. Todo lo que se necesita es tener la voluntad para adentrarse a las conversaciones que nos hacen sentir incómodos o que muchos consideran inapropiadas para un primer encuentro. Sin embargo, después de un rato, se vuelve natural saltarse los datos y, en vez de eso, ir en busca de nuestros pensamientos y emociones más profundos.</p>
+<p class="story-body-text story-content" data-para-count="352" data-total-count="8512" id="story-continues-37" tabindex="-1">Mi vida continuó. Tuve citas, viajé y comencé un nuevo empleo. Después de un mes de trabajo, hice un viaje de trabajo con un nuevo colega. En la primera noche del viaje, terminé entablando una de esas conversaciones aburridas que la gente utiliza para pasar el tiempo. Mi compañero me contó lo básico sobre su escolaridad, su familia y su casa.</p>
+<p class="story-body-text story-content" data-para-count="115" data-total-count="8627" id="story-continues-38" tabindex="-1">“¿Y cuánto tiempo haces de tu casa a la oficina?”, me escuché preguntarle. Fue cuando me detuve horrorizado.</p>
+<p class="story-body-text story-content" data-para-count="305" data-total-count="8932" id="story-continues-39" tabindex="-1">Recordé a la viajera llena de polvo que conocí en Costa Rica, las citas y las conexiones significativas que había hecho al escapar de la charla superficial. Aunque mi colega y yo no estábamos en una cita, íbamos a pasar mucho tiempo juntos en el futuro próximo, en viajes de trabajo cortos y largos.</p>
+<p class="story-body-text story-content" data-para-count="84" data-total-count="9016" id="story-continues-40" tabindex="-1">Respiré profundamente y le pregunté: “¿Por qué te enamoraste de tu esposa?”.</p>
+<p class="story-body-text story-content" data-para-count="104" data-total-count="9120" id="story-continues-41" tabindex="-1">Volteó a verme con extrañeza, se quedó pensando un momento y después me contó una historia hermosa.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Tim Boomer trabaja como actuario en Boston.</p>
+
+			</div>
+
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/01/21/el-fin-de-la-charla-superficial/"
+				data-title="Cultura: El fin de la charla superficial"
+				data-author="POR TIM BOOMER"
+				data-media=""
+				data-description="¿Por qué no podemos remplazar las conversaciones triviales con charlas más profundas, y hacernos, de entrada, las preguntas importantes? "
+				data-publish-date="21 de enero de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":628,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

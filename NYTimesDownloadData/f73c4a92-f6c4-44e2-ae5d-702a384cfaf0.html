@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004577479"/>
+<meta name="hdl" content="Buscaba una nueva vida en Estados Unidos, pero terminó muerto entre las pandillas" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20160905" />
+<meta name="utime" content="20160905142439" />
+<meta name="ptime" content="20160905142439" />
+<meta name="DISPLAYDATE" content="Sep. 5, 2016" />
+<meta name="dat" content="Sep. 5, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="buscaba-una-nueva-vida-en-estados-unidos-pero-termino-muerto-entre-las-pandillas" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/09/05/buscaba-una-nueva-vida-en-estados-unidos-pero-termino-muerto-entre-las-pandillas/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Buscaba una nueva vida en Estados Unidos, pero terminó muerto entre las pandillas" />
+<meta property="og:description" content="El asesinato del inmigrante mexicano Roberto Rodríguez en el Bronx, en Nueva York, parecía el resultado de una pelea entre borrachos. Pero a medida que la policía miraba más cerca, la historia se volvía más complicada." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER1/23BXMURDER1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-09-05" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/09/05/buscaba-una-nueva-vida-en-estados-unidos-pero-termino-muerto-entre-las-pandillas/" />
+<meta property="twitter:title" content="Buscaba una nueva vida en Estados Unidos, pero terminó muerto entre las pandillas" />
+<meta property="twitter:description" content="El asesinato del inmigrante mexicano Roberto Rodríguez en el Bronx, en Nueva York, parecía el resultado de una pelea entre borrachos. Pero a medida que la policía miraba más cerca, la historia se volvía más complicada." />
+<meta name="author" content="James C. McKinley Jr." />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por James C. McKinley Jr." />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="estados-unidos" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="estados-unidos" />
+<meta name="id" content="100000004577479"/>
+<meta name="wordCount" content="4031"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/09/05/buscaba-una-nueva-vida-en-estados-unidos-pero-termino-muerto-entre-las-pandillas/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=09&amp;day=05&amp;name=buscaba-una-nueva-vida-en-estados-unidos-pero-termino-muerto-entre-las-pandillas">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=23244">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/09\/05\/buscaba-una-nueva-vida-en-estados-unidos-pero-termino-muerto-entre-las-pandillas\/"},"headline":"Buscaba una nueva vida en Estados Unidos, pero termin\u00f3 muerto entre las pandillas","datePublished":"2016-09-05T14:24:39+00:00","dateModified":"2016-11-17T13:38:50+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/08\/23\/nyregion\/23BXMURDER1\/23BXMURDER1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"El asesinato del inmigrante mexicano Roberto Rodr\u00edguez en el Bronx, en Nueva York, parec\u00eda el resultado de una pelea entre borrachos. Pero a medida que la polic\u00eda miraba m\u00e1s cerca, la historia se volv\u00eda m\u00e1s complicada."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/09/05/buscaba-una-nueva-vida-en-estados-unidos-pero-termino-muerto-entre-las-pandillas/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/08/25/nyregion/bronx-new-york-murder.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="americalatina/estadosunidos" />
+<title>Buscaba una nueva vida en Estados Unidos, pero terminó muerto entre las pandillas &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/08/25/nyregion/bronx-new-york-murder.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/09/05/buscaba-una-nueva-vida-en-estados-unidos-pero-termino-muerto-entre-las-pandillas/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+		<script src="https://a1.nyt.com/assets/article/latest/js/article/common/layout.js"></script>
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-23244 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard intl-masthead-theme-light" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				Buscaba una nueva vida en Estados Unidos, pero terminó muerto entre las pandillas
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/09/05/buscaba-una-nueva-vida-en-estados-unidos-pero-termino-muerto-entre-las-pandillas/"
+					data-title="América Latina: Buscaba una nueva vida en Estados Unidos, pero terminó muerto entre las pandillas"
+					data-author="POR JAMES C. MCKINLEY JR."
+					data-media=""
+					data-description="El asesinato del inmigrante mexicano Roberto Rodríguez en el Bronx, en Nueva York, parecía el resultado de una pelea entre borrachos. Pero a medida que la policía miraba más cerca, la historia se volvía más complicada."
+					data-publish-date="5 de septiembre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2cuaWBN">http://nyti.ms/2cuaWBN</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+	
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main has-full-bleed-image-lede">
+	<header id="story-header" class="story-header">
+			<figure id="media-100000004605336" class="media cover photo layout-horizontal-full-bleed" data-bleed-style="full-bleed" itemid="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER1/23BXMURDER1-articleLarge.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="presentation">
+				<span class="visually-hidden"></span>
+				<div class="image">
+					<img
+						src="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER1/23BXMURDER1-articleLarge.jpg"
+						alt="Residents of East 151 Street in the Bronx watched as the police investigated the death of Roberto Rodríguez, who was fatally stabbed on May 7. The blood on the ground at left was from Mr. Rodríguez’s friend Lázaro Martínez, who was also stabbed that night."
+						data-jumbosrc="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER1/23BXMURDER1-jumbo.jpg"
+						data-superjumbosrc="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER1/23BXMURDER1-superJumbo.jpg"
+						id="media-image-100000004605336"
+					>
+				</div>
+				<figcaption id="media-caption-100000004605336" class="caption" itemprop="caption description">
+					<span class="caption-text">Residents of East 151 Street in the Bronx watched as the police investigated the death of Roberto Rodríguez, who was fatally stabbed on May 7. The blood on the ground at left was from Mr. Rodríguez’s friend Lázaro Martínez, who was also stabbed that night.</span>
+
+					<span class="credit" itemprop="copyrightHolder">
+						<span class="visually-hidden">crédito</span>
+						Edwin J. Torres for The New York Times
+					</span>
+				</figcaption>
+				<meta itemprop="height" content="401">
+				<meta itemprop="width" content="600">
+			</figure>
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/estados-unidos/">Estados Unidos</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Buscaba una nueva vida en Estados Unidos, pero terminó muerto entre las pandillas</h1>
+				<p itemprop="headline" id="story-deck" class="deck">El asesinato del inmigrante mexicano Roberto Rodríguez en el Bronx, en Nueva York, parecía el resultado de una pelea entre borrachos. Pero a medida que la policía miraba más cerca, la historia se volvía más complicada.</p>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">James C. McKinley Jr.</span>
+</span>
+
+					<time class="dateline" datetime="2016-09-05">5 de septiembre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/09/05/buscaba-una-nueva-vida-en-estados-unidos-pero-termino-muerto-entre-las-pandillas/"
+							data-title="América Latina: Buscaba una nueva vida en Estados Unidos, pero terminó muerto entre las pandillas"
+							data-author="POR JAMES C. MCKINLEY JR."
+							data-media=""
+							data-description="El asesinato del inmigrante mexicano Roberto Rodríguez en el Bronx, en Nueva York, parecía el resultado de una pelea entre borrachos. Pero a medida que la policía miraba más cerca, la historia se volvía más complicada."
+							data-publish-date="5 de septiembre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+			<script>
+				if (window.magnum && window.magnum.responsiveImages && window.magnum.responsiveImages.setCoverImage) {
+					window.magnum.responsiveImages.setCoverImage('100000004605336','full-bleed',401,600,11.21103117506,29.6875,11.151079136691,7.0112179487179);
+				}
+			</script>
+
+			
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/08/25/nyregion/bronx-new-york-murder.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="294" data-total-count="294" id="story-continues-1" tabindex="-1">Las cámaras de seguridad captaron casi toda la pelea: los golpes borrachos que volaron en una esquina del sur del Bronx ya conocida por sus riñas y puñaladas, un hombre joven con una camiseta oscura que trata de huir de cuatro hombres que lo persiguen, un pit bull que corre junto a ellos.</p>
+<p class="story-body-text story-content" data-para-count="179" data-total-count="473" id="story-continues-2" tabindex="-1">Uno de los perseguidores era Roberto Rodríguez, un inmigrante mexicano conocido como Gordo por su tamaño considerable. Otro era su compañero de apartamento, Lázaro Martínez.</p>
+<p class="story-body-text story-content" data-para-count="168" data-total-count="641" id="story-continues-3" tabindex="-1">A las 23:10, las figuras desaparecieron en la bruma de un reflector. Ninguna cámara grabó lo que ocurrió después, pero un teléfono captó el final de la escena.</p>
+<p class="story-body-text story-content" data-para-count="363" data-total-count="1004" id="story-continues-4" tabindex="-1">Martínez yace en la acera, gimiendo. De una herida en el costado derecho le salía un hilo de sangre oscura. Dos personas le dicen: &#8220;Aguante, amigo&#8221;. Uno improvisa una venda con un pedazo de tela que arranca de su camiseta. Llega un policía a la escena y se agacha para examinar la herida, otro pide por radio que envíen una ambulancia al lugar.</p>
+<p class="story-body-text story-content" data-para-count="64" data-total-count="1068" id="story-continues-5" tabindex="-1">&#8220;Métele prisa&#8221;, dice. &#8220;Uno-cinco-uno&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="431" data-total-count="1499" id="story-continues-6" tabindex="-1">Rodríguez, de 30 años, camina en calma hacia la luz de la linterna de un policía que se acerca, según se ve en la cámara. Su silueta, gruesa, se tambalea de lado a lado, levanta el brazo y señala hacia un edificio verde, donde se ha escondido el hombre que ha huido. Se presiona el costado derecho con la mano; también ha sido apuñalado. Aun así, camina con propósito, y trata su herida como si solo fuera una molestia.</p>
+<figure id="media-100000004605337" class="media photo media-100000004605337 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER2/23BXMURDER2-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-8">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER2/23BXMURDER2-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER2/23BXMURDER2-superJumbo.jpg" data-mediaviewer-caption="A photo of Mr. Rodríguez from his Facebook page. He crossed the border from Mexico nine years ago to earn money to support his wife and newborn son." data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER2/23BXMURDER2-master315.jpg"/>
+		<meta itemprop="height" content="455" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A photo of Mr. Rodríguez from his Facebook page. He crossed the border from Mexico nine years ago to earn money to support his wife and newborn son.</span>
+	</figcaption>
+</figure>
+
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="280" data-total-count="1779" id="story-continues-8" tabindex="-1">Nueve años antes, con la esperanza de ganar dinero para conseguir una vida mejor para su hijo pequeño en México, Rodríguez contrató un coyote para cruzar el desierto de Sonora y llegó a Estados Unidos. En Nueva York consiguió trabajo en cocinas y en sitios construcción.</p>
+<p class="story-body-text story-content" data-para-count="360" data-total-count="2139" id="story-continues-9" tabindex="-1">Pero eso había sucedido hacía mucho tiempo, antes de que su mujer, que se había quedado en Hidalgo, se fuera con su cuñado; antes de que comenzara a beber demasiado y a consumir drogas, y de que terminara uniéndose a la pandilla Sureños 13 y mudándose a un edificio desvencijado y sin ascensor donde vivía con su pit bull y otros trabajadores como él.</p>
+<p class="story-body-text story-content" data-para-count="194" data-total-count="2333" id="story-continues-10" tabindex="-1">Ahora, una noche bochornosa de un sábado de mayo, con la mano aún tratando de tapar la herida, Rodríguez llevaba a la policía hasta la puerta por la que decía que el joven había entrado.</p>
+<p class="story-body-text story-content" data-para-count="117" data-total-count="2450" id="story-continues-11" tabindex="-1">¿Dónde está él?, preguntó uno de los agentes. &#8220;Justo aquí&#8221;, dijo Rodríguez señalando el edificio.</p>
+<p class="story-body-text story-content" data-para-count="245" data-total-count="2695" id="story-continues-12" tabindex="-1">Su calma contrastaba con un hecho fatal: el cuchillo le había perforado el hígado. Tenía una hemorragia interna. Bajó la cabeza, se apoyó en una barandilla de metal y otro amigo trató, en un inglés entrecortado, de describir al atacante.</p>
+<p class="story-body-text story-content" data-para-count="157" data-total-count="2852" id="story-continues-13" tabindex="-1">Cinco minutos después, llegó la ambulancia de Martínez. Mientras se lo llevaban, Rodríguez se acercó a un coche y se dejó caer contra la parte trasera.</p>
+<p class="story-body-text story-content" data-para-count="251" data-total-count="3103" id="story-continues-14" tabindex="-1">Entonces cayó de rodillas al suelo. Llamaron a otra ambulancia. Un policía le hizo reanimación cardiopulmonar. Los paramédicos se llevaron a Rodríguez a toda prisa al Lincoln Medical and Mental Center, donde Martínez ya estaba en el quirófano.</p>
+<p class="story-body-text story-content" data-para-count="22" data-total-count="3125" id="story-continues-15" tabindex="-1">Martínez sobrevivió.</p>
+<p class="story-body-text story-content" data-para-count="86" data-total-count="3211" id="story-continues-16" tabindex="-1">Rodríguez murió a 4000 kilómetros de su casa unos minutos después de medianoche.</p>
+<figure id="media-100000004605349" class="media photo media-100000004605349 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER6/23BXMURDER6-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-18">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER6/23BXMURDER6-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER6/23BXMURDER6-superJumbo.jpg" data-mediaviewer-caption="A family photo of the Rodríguezes. Roberto Rodríguez was the youngest of seven siblings, one of whom died young." data-mediaviewer-credit="Meghan Dhaliwal for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER6/23BXMURDER6-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A family photo of the Rodríguezes. Roberto Rodríguez was the youngest of seven siblings, one of whom died young.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Meghan Dhaliwal for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<h4 class="story-subheading story-content">Impresiones engañosas</h4>
+
+<p class="story-body-text story-content" data-para-count="299" data-total-count="3510" id="story-continues-19" tabindex="-1">La confusión respecto de quién era el que estaba más gravemente herido fue el preludio de la nebulosa que envolvió el asesinato de Rodríguez, el séptimo homicidio en lo que iba del año en el distrito 40, que desde entonces ha sumado varios más, hasta llegar a 12 a finales de agosto de 2016.</p>
+<p class="story-body-text story-content" data-para-count="335" data-total-count="3845" id="story-continues-20" tabindex="-1">Lo que a primera vista pareció una pelea entre extraños fue, en realidad, una pelea entre hombres que se conocían bien. Las huellas dactilares llevaron a la policía hasta un sospechoso, Alberto Aquino Simón, de 19 años, a quien se solía ver con Rodríguez. Un jurado terminaría acusándolo por homicidio e intento de homicidio.</p>
+<p class="story-body-text story-content" data-para-count="322" data-total-count="4167" id="story-continues-21" tabindex="-1">Cuando Aquino Simón se entregó 11 días después de las puñaladas; su abogado dijo que había actuado en defensa propia. Y unos días después, los investigadores se enteraron de que lo que parecía un episodio espontáneo de violencia entre borrachos podría haber sido en realidad un acto de venganza o intimidación.</p>
+<p class="story-body-text story-content" data-para-count="505" data-total-count="4672" id="story-continues-22" tabindex="-1">Resultó que Rodríguez le había dicho a varias personas que había visto cómo Aquino Simón apuñalaba a un miembro de otra pandilla durante una feria callejera en Bronx en junio de 2015. Rodríguez dijo que estaba dispuesto a testificar en la corte y no parecía preocupado por la posibilidad de enfrentarse a los Cholos 152, una pandilla mexicano-estadounidense cuyos miembros conocía bien y que consideraban que la intersección de 151 East Street con Courtlandt Avenue eran parte de su territorio.</p>
+<p class="story-body-text story-content" data-para-count="309" data-total-count="4981" id="story-continues-23" tabindex="-1">La esquina donde todo sucedió estaba lejos de la estrecha casa de cemento en la que Rodríguez había crecido en Tulancingo, Hidalgo. Era el hijo pequeño de un trabajador de la construcción que también hacía música y vivía con sus cinco hijos bajo un techo de hojalata sujeto tan solo por unas cuerdas.</p>
+<p class="story-body-text story-content" data-para-count="27" data-total-count="5008" id="story-continues-24" tabindex="-1">Su familia le llamaba Beto.</p>
+<figure id="media-100000004605350" class="media photo media-100000004605350 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER5/23BXMURDER5-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-26">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER5/23BXMURDER5-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER5/23BXMURDER5-superJumbo.jpg" data-mediaviewer-caption="The orange house in Tulancingo, Mexico, where Mr. Rodríguez grew up. His parents, son, sister and nephew still live there." data-mediaviewer-credit="Meghan Dhaliwal for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER5/23BXMURDER5-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The orange house in Tulancingo, Mexico, where Mr. Rodríguez grew up. His parents, son, sister and nephew still live there.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Meghan Dhaliwal for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="335" data-total-count="5343" id="story-continues-26" tabindex="-1">Su madre, Bárbara Robles, dijo que Rodríguez era un chico travieso al que le gustaba caminar y pescar pero se aburría en la escuela y dejó de estudiar en sexto grado. Cuando era pequeño ganaba dinero cargando las bolsas de la compra de la gente en la estación de autobuses, y a los 11 años comenzó a ir a la obra con su padre.</p>
+<p class="story-body-text story-content" data-para-count="385" data-total-count="5728" id="story-continues-27" tabindex="-1">Trabajó en fábricas textiles y se casó joven. Cuando su novia Maribel Peralta se embarazó, decidió mudarse a Estados Unidos para tener un mejor salario y dijo a su familia que ahorraría para abrir un gimnasio y comprar un lote de tierra en Tulancingo. &#8220;Ese era su único sueño, dejarle algo a su hijo para el futuro&#8221;, dijo su madre durante una entrevista en su casa.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="305" data-total-count="6033" id="story-continues-28" tabindex="-1">Justo antes de que naciera su hijo, Rodríguez intentó cruzar la frontera por primera vez. La patrulla fronteriza de Estados Unidos lo capturó después de caminar por el desierto de Sonora, estuvo diez días detenido y fue deportado. Cuando apareció en su casa aún tenía espinas clavadas en los pies.</p>
+<p class="story-body-text story-content" data-para-count="338" data-total-count="6371" id="story-continues-29" tabindex="-1">Ese mismo verano nació su hijo. El padre de Rodríguez, que vivía en Estados Unidos, pagó 3500 dólares para que él cruzara de nuevo la frontera. Esta vez lo logró y encontró trabajo en restaurantes y en la construcción. Su familia dice que llamaba a casa dos veces por semana para preguntar por el niño, Alan, y para pedir fotos.</p>
+<p class="story-body-text story-content" data-para-count="344" data-total-count="6715" id="story-continues-30" tabindex="-1">Pero después de un año todo empezó a ir mal: Peralta, su pareja, lo abandonó y dejó al niño con sus padres. Esa ruptura dejó a Rodríguez sin ancla emocional en México y, a medida que pasaban los años, su familia notó que cambiaba. Comenzó a llamar a casa borracho, se tatuó y empezó a consumir marihuana, dijo su hermana Griselda.</p>
+<p class="story-body-text story-content" data-para-count="413" data-total-count="7128" id="story-continues-31" tabindex="-1">La depresión y el abuso de alcohol son un patrón de comportamiento que los investigadores han detectado entre algunos hombres, migrantes ilegales, que se separan de sus familias y no pueden regresar a casa. Alyshia Gálvez, profesora de antropología y estudios latinoamericanos en la City University of New York (CUNY) cuenta que &#8220;un sacerdote de Puebla lo llama ‘síndrome del corazón roto’&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="43" data-total-count="7171" id="story-continues-32" tabindex="-1">Hace tres años Rodríguez dejó de llamar.</p>
+<p class="story-body-text story-content" data-para-count="247" data-total-count="7418" id="story-continues-33" tabindex="-1">Su hermana, sentada en un sillón en su casa a medio construir, cerca de una autopista en Tulancingo, dice: &#8220;Creo que fue entonces cuando lo perdimos. Antes de ir a Estados Unidos ni le gustaban los tatuajes ni tenía vicios. Cambió&#8221;.</p>
+<figure id="media-100000004609743" class="media photo media-100000004609743 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/25/nyregion/23BXMURDER9/23BXMURDER9-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-35">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/25/nyregion/23BXMURDER9/23BXMURDER9-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/25/nyregion/23BXMURDER9/23BXMURDER9-superJumbo.jpg" data-mediaviewer-caption="Graffiti on a storefront along 151st Street." data-mediaviewer-credit="Edwin J. Torres for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/25/nyregion/23BXMURDER9/23BXMURDER9-master675.jpg"/>
+		<meta itemprop="height" content="446" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Graffiti on a storefront along 151st Street.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Edwin J. Torres for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<h4 class="story-subheading story-content">A la deriva en Nueva York</h4>
+
+<p class="story-body-text story-content" data-para-count="230" data-total-count="7648" id="story-continues-36" tabindex="-1">Las señales de que Rodríguez estaba a la deriva comenzaron a aparecer en su página de Facebook: símbolos de la pandilla Sureños en las paredes de su apartamento, fotos de él posando con una pistola y con un cuchillo de caza.</p>
+<p class="story-body-text story-content" data-para-count="391" data-total-count="8039" id="story-continues-37" tabindex="-1">Hace unos tres años había conseguido un trabajo como cocinero de tacos en El Bravo, en Melrose Avenue, donde dijo a sus jefes que otros pandilleros le habían obligado a irse de Queens con amenazas de muerte. Fue allí, en los tiempos muertos alrededor de la mesa de billar del local, donde se hizo amigo de miembros de los Cholos 152 según recuerdan dos antiguos miembros de la pandilla.</p>
+<p class="story-body-text story-content" data-para-count="274" data-total-count="8313" id="story-continues-38" tabindex="-1">Rodríguez no duró mucho como cocinero. Fue despedido a los seis meses por vender droga desde la cocina, pedir préstamos que no pagaba y llegar a pelearse a golpes con los clientes, dijo el dueño del local. Los últimos meses estuvo trabajando en demoliciones en Yonkers.</p>
+<p class="story-body-text story-content" data-para-count="243" data-total-count="8556" id="story-continues-39" tabindex="-1">El apartamento que compartía con varias personas en el 298 de East 151st Street se hizo popular por sus fiestas ruidosas. Rodríguez no pagaba la renta, dijo el casero, pero les cobraba a los demás 200 dólares al mes por dormir en el suelo.</p>
+<p class="story-body-text story-content" data-para-count="127" data-total-count="8683" id="story-continues-40" tabindex="-1">Miembros de los Cholos fumaban marihuana y bebían en la escalera sucia y en el apartamento de Rodríguez, cuentan sus vecinos.</p>
+<p class="story-body-text story-content" data-para-count="208" data-total-count="8891" id="story-continues-41" tabindex="-1">Mientras bebía, Rodríguez solía quejarse amargamente por su bajo salario, su situación ilegal en el país y su lugar en la vida. Se peleaba por nada y usaba a su pit bull, Duchess, para intimidar a gente.</p>
+<p class="story-body-text story-content" data-para-count="139" data-total-count="9030" id="story-continues-42" tabindex="-1">&#8220;Cuando bebía era violento&#8221;, dijo Wanda Rodríguez, una vecina que lo consideraba su amigo. &#8220;Abusaba de la gente&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="259" data-total-count="9289" id="story-continues-43" tabindex="-1">De todos modos los vecinos dicen que también podía ser jovial y de gran corazón cuando estaba sobrio. Organizaba barbacoas en un pequeño patio de cemento frente a su edificio, asaba pollo que le compraba al por mayor a un amigo y ofrecía cervezas frías.</p>
+<p class="story-body-text story-content" data-para-count="663" data-total-count="9952" id="story-continues-44" tabindex="-1">Anhelaba tener compañía femenina según sus amigos. Hacía dos años había iniciado una relación por internet con una mujer divorciada en México y comenzó a enviarle dinero para apoyar a sus dos hijos, según cuenta la propia mujer, Ana Martínez. En sus días libres se sentaba siempre en la misma mesa, cerca de la nevera de las cervezas en el restaurante Huaxcuaxtla de Courtlandt Avenue, mirando a un altar de la Virgen de Guadalupe y escuchando música norteña en una rocola. Siempre pedía chilaquiles verdes y una cerveza modelo. &#8220;Para él la vida era esa botella de Modelo&#8221;, recuerda con una sonrisa la camarera que siempre lo atendía.</p>
+<figure id="media-100000004605344" class="media photo media-100000004605344 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER4/23BXMURDER4-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-46">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER4/23BXMURDER4-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER4/23BXMURDER4-superJumbo.jpg" data-mediaviewer-caption="Alberto Aquino-Simon, left, in court on May 24. A grand jury indicted him on charges of murder and attempted murder. He turned himself in, and his lawyer said he had acted in self-defense." data-mediaviewer-credit="Edwin J. Torres for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER4/23BXMURDER4-master675.jpg"/>
+		<meta itemprop="height" content="442" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Alberto Aquino-Simon, left, in court on May 24. A grand jury indicted him on charges of murder and attempted murder. He turned himself in, and his lawyer said he had acted in self-defense.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Edwin J. Torres for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<h4 class="story-subheading story-content">Tensión en el vecindario</h4>
+
+<p class="story-body-text story-content" data-para-count="97" data-total-count="10049" id="story-continues-47" tabindex="-1">Al principio los investigadores pensaron que el alcohol había sido el origen del apuñalamiento.</p>
+<p class="story-body-text story-content" data-para-count="461" data-total-count="10510" id="story-continues-48" tabindex="-1">Las peleas son habituales en el cruce entre 151st Street y Courtlandt Avenue dicen la policía y los vecinos. Suelen surgir por quejas triviales, por borrachos que se insultan o por triángulos amorosos. En cinco años ha habido al menos 11 apuñalamientos y tiroteos en dos cuadras. A veces, las personas que pelean son migrantes como Rodríguez que han llegado a la zona atraídos por las habitaciones baratas, y se les ve deambular por las esquinas de noche.</p>
+<p class="story-body-text story-content" data-para-count="519" data-total-count="11029" id="story-continues-49" tabindex="-1">Pero en esa calle viven también los hijos de migrantes mexicanos que comenzaron a llegar en grandes cantidades a mediados de los años noventa. En Nueva York y sus alrededores hay al menos 600.000 migrantes mexicanos. Los adolescentes y adultos jóvenes, cuyos padres provienen en su mayoría de pueblos rurales en Puebla, Guerrero y Oaxaca, están graduándose ahora de la secundaria y de la universidad. Algunos, como Aquino Simón, han dejado los estudios para unirse a pandillas como los Cholos o los Vatos Locos.</p>
+<p class="story-body-text story-content" data-para-count="561" data-total-count="11590" id="story-continues-50" tabindex="-1">La cuadra es un microcosmos de la diáspora mexicana en el sur del Bronx, con inmigrantes atravesando diferentes momentos de su experiencia estadounidense. En las entradas de los edificios se puede oler la carne picante a mediodía y se oye la música de acordeón de las rancheras. Los hombres van y vienen cubiertos aún con el polvo de los edificios que construyen, vestidos con trajes naranjas y esas gorras de béisbol que les encantan a los repartidores de comida en Manhattan. Las mujeres llevan a los niños a casa después de la escuela y el trabajo.</p>
+<p class="story-body-text story-content" data-para-count="391" data-total-count="11981" id="story-continues-51" tabindex="-1">Esas son las familias estables, las que trabajan duro. Pero en el edificio de Rodríguez vive gente que ya ha perdido el rumbo. Afuera del Hessen Deli, en la esquina de la 151 con Courtland, hombres somnolientos vagabundean durante toda la tarde y la noche. Cuando tienen dinero en efectivo compran cerveza, y por lo general la beben a una cuadra de la Calle 152, en la peor zona del barrio.</p>
+<p class="story-body-text story-content" data-para-count="210" data-total-count="12191" id="story-continues-52" tabindex="-1">Pedro Ortega, un nativo de Puebla que ha vivido 20 años en el barrio, donde tiene una tienda de fruta y un restaurante, dice que &#8220;hay muchos mexicanos por allí que prácticamente no tienen hogar&#8221;.</p>
+<figure id="media-100000004605343" class="media photo media-100000004605343 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER3/23BXMURDER3-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-54">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER3/23BXMURDER3-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER3/23BXMURDER3-superJumbo.jpg" data-mediaviewer-caption="A knife found near the scene of the stabbings was ruled out as the murder weapon. Detectives said it might have been discarded by someone else involved in the melee." data-mediaviewer-credit="Edwin J. Torres for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER3/23BXMURDER3-master675.jpg"/>
+		<meta itemprop="height" content="452" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A knife found near the scene of the stabbings was ruled out as the murder weapon. Detectives said it might have been discarded by someone else involved in the melee.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Edwin J. Torres for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<h4 class="story-subheading story-content">La pelea sube de tono</h4>
+
+<p class="story-body-text story-content" data-para-count="264" data-total-count="12455" id="story-continues-55" tabindex="-1">La tarde del 7 de mayo comenzó con Rodríguez y sus compañeros de apartamento armando fiesta desde temprano; a eso de las cuatro de la tarde, según Martínez. Los siete tenían el día libre. Vieron la televisión, escucharon música y asaron un lomo de cerdo.</p>
+<p class="story-body-text story-content" data-para-count="34" data-total-count="12489" id="story-continues-56" tabindex="-1">Y después se acabó la cerveza.</p>
+<p class="story-body-text story-content" data-para-count="429" data-total-count="12918" id="story-continues-57" tabindex="-1">Martínez dijo que salió con Miguel Martínez (no son familia) y con Rodríguez a eso de las 11 de la noche para comprar más cerveza y sándwiches en la tienda de la esquina. Allí, dijo, se encontraron con unos seis integrantes de los Cholos, entre ellos Aquino Simón. &#8220;Ya estaban allí, y buscaban problemas&#8221;, dijo. Aquino Simón gritó algo en inglés a Rodríguez y comenzó la pelea, según Lázaro Martínez.</p>
+<p class="story-body-text story-content" data-para-count="252" data-total-count="13170" id="story-continues-58" tabindex="-1">Pero otro inmigrante que vivía en la casa, Silvano Castañeda, le dijo a la policía que fue él a quien habían enviado a comprar cerveza y se metió en una pelea en la tienda. Dijo que varios de sus compañeros, incluido Rodríguez, fueron a ayudar.</p>
+<p class="story-body-text story-content" data-para-count="347" data-total-count="13517" id="story-continues-59" tabindex="-1">Otros creen que la pelea fue por dinero. Dos testigos dijeron en entrevistas que habían escuchado que Rodríguez, justo antes de la riña, le decía a sus amigos que lo habían robado y les había pedido que encontraran a los responsables. También le dijo a los primeros agentes que llegaron a la escena que Aquino Simón le había quitado algo.</p>
+<p class="story-body-text story-content" data-para-count="286" data-total-count="13803" id="story-continues-60" tabindex="-1">Los videos de las cámaras de seguridad de una organización en una esquina no ayudaron mucho. Muestran a Rodríguez que camina hacia un grupo de tres personas y, de repente, golpea a una mujer y la derriba junto a uno de sus acompañantes. La policía nunca encontró a esas personas.</p>
+<p class="story-body-text story-content" data-para-count="261" data-total-count="14064" id="story-continues-61" tabindex="-1">Entonces, Aquino Simón y al menos otros tres cholos reconocidos corren por la cuadra en dirección al 367 de East 151st Street, donde los vecinos dicen que se escondieron en una vivienda de la segunda planta que usaban para organizar fiestas y fumar marihuana.</p>
+<p class="story-body-text story-content" data-para-count="397" data-total-count="14461" id="story-continues-62" tabindex="-1">Treinta y cinco segundos después Aquino Simón aparece en otro video caminando de regreso por la acera hacia el edificio en el que se reúne la pandilla, con Lázaro Martínez y Miguel Martínez siguiéndolo. Aquino Simón golpea dos veces a Lázaro antes de retirarse de nuevo junto a otro hombre no identificado. Llegan Rodríguez y Castañeda y los cuatro caminan en grupo hacia Aquino Simón.</p>
+<p class="story-body-text story-content" data-para-count="416" data-total-count="14877" id="story-continues-63" tabindex="-1">Uno de los testigos dice que Aquino Simón corrió hacia el edificio diciéndole a su compañero que iba a matar a alguien y después regresó a la acera, un minuto después, con un cuchillo. Un segundo testigo vio a Rodríguez y a Lázaro Martínez tratando de abrir la puerta del edificio. Ninguno de ellos vio el momento de las puñaladas. Ambos hablaron desde el anonimato por miedo a represalias de los Cholos.</p>
+<p class="story-body-text story-content" data-para-count="453" data-total-count="15330" id="story-continues-64" tabindex="-1">Lázaro Martínez dijo que recordaba estar de pie en la acera peleándose con Aquino Simón y un segundo hombre que tenía un palo cuando el cuchillo de Aquino Simón entró de golpe. Entonces se desvaneció. Castañeda, que no quiso ser entrevistado, dijo a la policía que vio a Aquino Simón abrir la puerta del edificio y apuntar con su cuchillo a Martínez y a Rodríguez, parados en el rellano. Había sangre en el vestíbulo y fuera de la puerta.</p>
+<p class="story-body-text story-content" data-para-count="212" data-total-count="15542" id="story-continues-65" tabindex="-1">“Cada uno lo recuerda de manera diferente, así es como funciona”, dijo Rick Simplicio, el detective que lleva la investigación. “Pero si todos ponen a la misma persona en el mismo lugar, es suficiente”.</p>
+<p class="story-body-text story-content" data-para-count="434" data-total-count="15976" id="story-continues-66" tabindex="-1">El abogado de Aquino Simón, Todd Spodek, dijo que su cliente se quedó atrapado entre dos puertas en el vestíbulo mientras Rodríguez y Lázaro Martínez lo amenazaban desde fuera y Rodríguez movía un cuchillo. Dijo que Aquino Simón abrió la puerta exterior para tratar de hablar con Rodríguez, pero él, corpulento, lo empujó hacia dentro. Por miedo a morir, Aquino Simón usó el cuchillo para defenderse, según el abogado.</p>
+<p class="story-body-text story-content" data-para-count="69" data-total-count="16045" id="story-continues-67" tabindex="-1">“Fue una situación de ‘matar o morir&#8217;”, dijo el abogado.</p>
+<figure id="media-100000004605351" class="media photo media-100000004605351 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER7/23BXMURDER7-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-69">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER7/23BXMURDER7-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER7/23BXMURDER7-superJumbo.jpg" data-mediaviewer-caption="Barbara Rodríguez, 60, holds Alan, 10, who is the son of Roberto Rodríguez, at their home in Tulancingo." data-mediaviewer-credit="Meghan Dhaliwal for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER7/23BXMURDER7-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Barbara Rodríguez, 60, holds Alan, 10, who is the son of Roberto Rodríguez, at their home in Tulancingo.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Meghan Dhaliwal for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<h4 class="story-subheading story-content">El ataque previo</h4>
+
+<p class="story-body-text story-content" data-para-count="328" data-total-count="16373" id="story-continues-70" tabindex="-1">Los detectives pensaron primero que la pelea había sido provocada por un insulto trivial en la tienda cuando uno de los amigos de Rodríguez compraba cerveza. “Y simplemente escaló”, dijo el sargento Michael J. LoPuzzo, jefe de los detectives de la comisaría del distrito 40. “Allí no tenía que haber muerto nadie”.</p>
+<p class="story-body-text story-content" data-para-count="480" data-total-count="16853" id="story-continues-71" tabindex="-1">Entonces hubo un giro. El detective Simplicio recibió una pista que le decía que Rodríguez había tenido problemas con los Cholos porque pensaba testificar en un juicio contra Aquino Simón y decir que era responsable de apuñalar a un pandillero rival en junio de 2015 en un marcado del Bronx. Rodríguez había decidido testificar y que el barrio lo supiese. Eso daba un motivo para silenciarlo, según un abogado que defiende a Baraquiel Castelan, el hombre acusado por eso.</p>
+<p class="story-body-text story-content" data-para-count="93" data-total-count="16946" id="story-continues-72" tabindex="-1">“No podía guardar un secreto”, dijo Telesforo Del Valle Jr. “Y estaba muy enfadado”.</p>
+<p class="story-body-text story-content" data-para-count="189" data-total-count="17135" id="story-continues-73" tabindex="-1">En una entrevista en la prisión de la isla de Rikkers, Castelan defendió su inocencia, del mismo modo que cree que Rodríguez, su amigo, habría hecho. “Honestamente, yo no lo hice”.</p>
+<p class="story-body-text story-content" data-para-count="367" data-total-count="17502" id="story-continues-74" tabindex="-1">Castelan niega ser líder de una pandilla, dice que los Cholos son “más un grupo de amigos que una pandilla”. Pero la policía dice que fue él quien asumió el liderazgo de los Cholos a fines de 2013 después de que un pariente suyo, Miguel Castelan, terminara paralizado durante un tiroteo relacionado con una antigua pelea entre los Cholos y los Vatos Locos.</p>
+<p class="story-body-text story-content" data-para-count="399" data-total-count="17901" id="story-continues-75" tabindex="-1">El giro en la trama nacía de un contexto complicado. Anthony Velazquez, de 25 años, miembro conocido de los Vatos Locos, fue atacado por al menos ocho hombres en la feria del mercado del Bronx según una denuncia criminal. Velazquez tiene un hijo con la hermana de Baraquiel Castelan. Le dijo a la policía que Castelan lo había apuñalado después de una discusión sobre la custodia del bebé.</p>
+<p class="story-body-text story-content" data-para-count="322" data-total-count="18223" id="story-continues-76" tabindex="-1">Castelan dijo que él no participó en el ataque y que Rodríguez lo habría exonerado. Rodríguez había visto la pelea porque había tomado prestado el coche de Castelan ese día para llevar a varios cholos a la feria en el mercado. Entre ellos, a Aquino Simón, dijo. “Todos éramos amigos. Nos conocemos muy bien”.</p>
+<p class="story-body-text story-content" data-para-count="347" data-total-count="18570" id="story-continues-77" tabindex="-1">Rodríguez apareció ante el juez con otros testigos de la defensa el día que se reunió el jurado, según dijeron varios parientes de Castelan. Pero decidió no testificar después de saber que podían llegar a implicarlo a él también. Aún así, seguía teniendo intención de testificar en el juicio de Castelan este otoño según Del Valle.</p>
+<p class="story-body-text story-content" data-para-count="366" data-total-count="18936" id="story-continues-78" tabindex="-1">El Fiscal de Distrito del Bronx dijo que no tenía ninguna información sobre la intención de Rodríguez de testificar ante el jurado. Patrice O’Shaughnessy, portavoz del departamento, dijo que la fiscalía contaba con el testimonio de la víctima y de un segundo testigo que conocían a Castelan suficientemente bien como para identificarlos como el asaltante.</p>
+<p class="story-body-text story-content" data-para-count="70" data-total-count="19006" id="story-continues-79" tabindex="-1">Spodek dijo que su cliente no tuvo nada que ver con el apuñalamiento.</p>
+<p class="story-body-text story-content" data-para-count="214" data-total-count="19220" id="story-continues-80" tabindex="-1">Los agentes Simplicio y LoPuzzo dijeron que el tiempo revelará el motivo real tras el asesinato de Rodríguez. Pero por ahora tienen testigos que dicen que Aquino Simón apuñaló a Rodríguez y eso es suficiente.</p>
+<h4 class="story-subheading story-content">Diablito</h4>
+
+<p class="story-body-text story-content" data-para-count="331" data-total-count="19551" id="story-continues-82" tabindex="-1">Castelán dijo que había sido cercano a Aquino Simón, hijo de inmigrantes mexicanos que creció junto a una madre soltera en el este de Harlem. Según Castelán, Aquino Simón había aparecido en territorio de los Cholos alrededor de 2013 y se hizo amigo de varios pandilleros frecuentando El Bravo, donde trabajaba Rodríguez.</p>
+<p class="story-body-text story-content" data-para-count="308" data-total-count="19859" id="story-continues-83" tabindex="-1">Aunque Aquino Simón tenía buenas notas en la secundaria, dejó de estudiar cuando su novia quedó embarazada, cuenta su hermana Miriam Aquino. Para mantener a su hijo comenzó a trabajar como repartidor en un restaurante italiano en East 86 Street. Y después en un mayorista de alimentos en Hunts Point.</p>
+<p class="story-body-text story-content" data-para-count="210" data-total-count="20069" id="story-continues-84" tabindex="-1">Eric Chevere, gerente de un club, que lleva toda su vida en 151st Street, dijo que Aquino Simón le había confesado que se unió a los Cholos por miedo a otras pandillas. &#8220;Lo hizo por protección&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="316" data-total-count="20385" id="story-continues-85" tabindex="-1">También adoptó el nombre de Diablito. Comenzó a pintar grafitis con las letras CLS, de los Cholos, en edificios y postes de 151st Street, según gente que lo conoció bien. Fue detenido tres veces en dos años por crímenes como agresión física y robo pero, por su edad, no se puede acceder a su expediente.</p>
+<p class="story-body-text story-content" data-para-count="130" data-total-count="20515" id="story-continues-86" tabindex="-1">&#8220;Si él ve que te están dando una paliza, va a ir a ayudarte. Ese es el tipo de amigo que era&#8221;, dijo un expandillero.</p>
+<h4 class="story-subheading story-content">Enterrado en casa</h4>
+
+<p class="story-body-text story-content" data-para-count="329" data-total-count="20844" id="story-continues-88" tabindex="-1">Desde la muerte de Rodríguez, los hombres que viven en su casa evitan la calle, se encierran y no aceptan entrevistas. Se cree que temen represalias por parte de los Cholos por hablar con la policía. &#8220;Este lugar es peligrosos, es el infierno ahí fuera&#8221;, dijo Miguel Martínez al rechazar un pedido de entrevista.</p>
+<p class="story-body-text story-content" data-para-count="214" data-total-count="21058" id="story-continues-89" tabindex="-1">Los hombres que participaron en la pelea se han mudado y los que quedan se enfrentan al desalojo, según el casero. El detective Simplicio reconoce que será difícil localizarlos cuando llegue la fecha del juicio.</p>
+<p class="story-body-text story-content" data-para-count="223" data-total-count="21281" id="story-continues-90" tabindex="-1">En México, la familia de Rodríguez lo enterró junto a una iglesia, cerca de su casa, cuando consiguió reunir el dinero para repatriar sus restos. Su cuerpo no entraba en el ataúd normal que ofrece el gobierno mexicano.</p>
+<figure id="media-100000004605361" class="media photo media-100000004605361 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER8/23BXMURDER8-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-92">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER8/23BXMURDER8-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER8/23BXMURDER8-superJumbo.jpg" data-mediaviewer-caption="A shrine for Mr. Rodríguez built by his sister Griselda Rodríguez. The photo and flowers were accompanied by a doughnut and a cup of coffee “because he liked them so much,” she said." data-mediaviewer-credit="Meghan Dhaliwal for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/23/nyregion/23BXMURDER8/23BXMURDER8-master675.jpg"/>
+		<meta itemprop="height" content="449" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A shrine for Mr. Rodríguez built by his sister Griselda Rodríguez. The photo and flowers were accompanied by a doughnut and a cup of coffee “because he liked them so much,” she said.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Meghan Dhaliwal for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="354" data-total-count="21635" id="story-continues-92" tabindex="-1">Su hermana Griselda solloza en la cocina familiar cada vez que habla del dulce, del bullicioso hermano que ella conoció. Cerca había un pequeño altar que habían levantado para él: cuatro velas, una foto en la que lleva un pañuelo con los colores de la bandera de México en la cabeza, un donut y un vaso de café. &#8220;Le gustaban mucho&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="122" data-total-count="21757" id="story-continues-93" tabindex="-1">Griselda recordó la última vez que su hermano llamó a casa en 2013, cuando habló con el hijo al que apenas conocía.</p>
+<p class="story-body-text story-content" data-para-count="150" data-total-count="21907" id="story-continues-94" tabindex="-1">&#8220;Alan le preguntó: ‘¿Papá, cuando vas a volver?’”, recuerda. “Y Beto le respondió: ‘Cualquier día de estos. Cualquier día’”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Colaboraron con este texto Sandra E. Garcia, Benjamin Mueller, Ashley Southall e Isvett Verde desde Nueva York, y Paulina Villegas desde Tulancingo, México. Susan C. Beachy investigó. </p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/bronx/" rel="tag">Bronx</a>, <a href="https://www.nytimes.com/es/tag/cholos/" rel="tag">Cholos</a>, <a href="https://www.nytimes.com/es/tag/inmigrante-mexicano/" rel="tag">inmigrante mexicano</a>, <a href="https://www.nytimes.com/es/tag/vatos-locos/" rel="tag">Vatos Locos</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/09/05/buscaba-una-nueva-vida-en-estados-unidos-pero-termino-muerto-entre-las-pandillas/"
+				data-title="América Latina: Buscaba una nueva vida en Estados Unidos, pero terminó muerto entre las pandillas"
+				data-author="POR JAMES C. MCKINLEY JR."
+				data-media=""
+				data-description="El asesinato del inmigrante mexicano Roberto Rodríguez en el Bronx, en Nueva York, parecía el resultado de una pelea entre borrachos. Pero a medida que la policía miraba más cerca, la historia se volvía más complicada."
+				data-publish-date="5 de septiembre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/24/una-pelicula-expone-los-desafios-de-los-ninos-inmigrantes-que-regresan-a-mexico/">
+					<div class="story-body">
+						<h3 class="kicker">Cine</h3>
+
+						<h2 class="headline">
+							<span class="title">Una película expone los desafíos de los niños inmigrantes que regresan a México</span>
+							<time class="dateline">24 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/16/nyregion/16FILM1/16FILM1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/07/28/el-muro-de-trump-no-detendra-a-los-narcotraficantes-ni-a-los-migrantes-dicen-los-rancheros/">
+					<div class="story-body">
+						<h3 class="kicker">Elecciones EE. UU.</h3>
+
+						<h2 class="headline">
+							<span class="title">El muro de Trump no detendrá a los narcotraficantes ni a los migrantes, dicen los rancheros</span>
+							<time class="dateline">28 de julio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/07/18/us/thislandwalltestimage/thislandwalltestimage-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/08/01/donald-trump-es-racista/">
+					<div class="story-body">
+						<h3 class="kicker">Elecciones EE. UU.</h3>
+
+						<h2 class="headline">
+							<span class="title">¿Donald Trump es racista?</span>
+							<time class="dateline">1 de agosto de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/07/24/opinion/sunday/24kristof/24kristof-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/08/25/subidos-al-lomo-de-la-bestia-o-no-los-migrantes-seguiran-buscando-la-manera-de-llegar-a-estados-unidos/">
+					<div class="story-body">
+						<h3 class="kicker">Análisis</h3>
+
+						<h2 class="headline">
+							<span class="title">Subidos al lomo de La Bestia o no, los migrantes seguirán buscando la manera de llegar a Estados Unidos</span>
+							<time class="dateline">25 de agosto de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/08/25/universal/es/beastiaES/beastiaES-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+			
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-transparent-ffffff' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-transparent-ffffff', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":1048,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

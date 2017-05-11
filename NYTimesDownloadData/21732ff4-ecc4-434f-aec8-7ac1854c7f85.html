@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004358067"/>
+<meta name="hdl" content="Confundidos, aterrorizados y sin ayuda: los detalles que agrega el nuevo informe del caso Ayotzinapa" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20160425" />
+<meta name="utime" content="20160425133454" />
+<meta name="ptime" content="20160425133454" />
+<meta name="DISPLAYDATE" content="Apr. 25, 2016" />
+<meta name="dat" content="Apr. 25, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="confundidos-aterrorizados-y-sin-ayuda-los-detalles-que-agrega-el-nuevo-informe-del-caso-ayotzinapa" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/04/25/confundidos-aterrorizados-y-sin-ayuda-los-detalles-que-agrega-el-nuevo-informe-del-caso-ayotzinapa/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Confundidos, aterrorizados y sin ayuda: los detalles que agrega el nuevo informe del caso Ayotzinapa" />
+<meta property="og:description" content="Los informes del grupo de expertos internacionales exponen detalles atroces y muestran la responsabilidad de las  fuerzas de seguridad mexicanas en la desaparición de 43 estudiantes en Ayotzinapa, México. " />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/04/25/world/JP-IGUALA/JP-IGUALA-videoSixteenByNine768-v2.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-04-25" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/04/25/confundidos-aterrorizados-y-sin-ayuda-los-detalles-que-agrega-el-nuevo-informe-del-caso-ayotzinapa/" />
+<meta property="twitter:title" content="Confundidos, aterrorizados y sin ayuda: los detalles que agrega el nuevo informe del caso Ayotzinapa" />
+<meta property="twitter:description" content="Los informes del grupo de expertos internacionales exponen detalles atroces y muestran la responsabilidad de las  fuerzas de seguridad mexicanas en la desaparición de 43 estudiantes en Ayotzinapa, México. " />
+<meta name="author" content="Kirk Semple" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Kirk Semple" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="mexico" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="mexico" />
+<meta name="id" content="100000004358067"/>
+<meta name="wordCount" content="2010"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/04/25/confundidos-aterrorizados-y-sin-ayuda-los-detalles-que-agrega-el-nuevo-informe-del-caso-ayotzinapa/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=04&amp;day=25&amp;name=confundidos-aterrorizados-y-sin-ayuda-los-detalles-que-agrega-el-nuevo-informe-del-caso-ayotzinapa">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=10427">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/04\/25\/confundidos-aterrorizados-y-sin-ayuda-los-detalles-que-agrega-el-nuevo-informe-del-caso-ayotzinapa\/"},"headline":"Confundidos, aterrorizados y sin ayuda: los detalles que agrega el nuevo informe del caso Ayotzinapa","datePublished":"2016-04-25T13:34:54+00:00","dateModified":"2016-07-27T19:04:26+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/04\/25\/world\/JP-IGUALA\/JP-IGUALA-videoSixteenByNine768-v2.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Los informes del grupo de expertos internacionales exponen detalles atroces y muestran la responsabilidad de las  fuerzas de seguridad mexicanas en la desaparici\u00f3n de 43 estudiantes en Ayotzinapa, M\u00e9xico. "}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/04/25/confundidos-aterrorizados-y-sin-ayuda-los-detalles-que-agrega-el-nuevo-informe-del-caso-ayotzinapa/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/04/25/world/americas/missing-mexican-students-suffered-a-night-of-terror-investigators-say.html?action=click&amp;#038;contentCollection=Americas&amp;#038;module=RelatedCoverage&amp;#038;region=EndOfArticle&amp;#038;pgtype=article" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="americalatina/mexico" />
+<title>Confundidos, aterrorizados y sin ayuda: los detalles que agrega el nuevo informe del caso Ayotzinapa &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/04/25/world/americas/missing-mexican-students-suffered-a-night-of-terror-investigators-say.html?action=click&#038;contentCollection=Americas&#038;module=RelatedCoverage&#038;region=EndOfArticle&#038;pgtype=article" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/04/25/confundidos-aterrorizados-y-sin-ayuda-los-detalles-que-agrega-el-nuevo-informe-del-caso-ayotzinapa/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-10427 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				Confundidos, aterrorizados y sin ayuda: los detalles que agrega el nuevo informe del caso Ayotzinapa
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/04/25/confundidos-aterrorizados-y-sin-ayuda-los-detalles-que-agrega-el-nuevo-informe-del-caso-ayotzinapa/"
+					data-title="América Latina: Confundidos, aterrorizados y sin ayuda: los detalles que agrega el nuevo informe del caso Ayotzinapa"
+					data-author="POR KIRK SEMPLE"
+					data-media=""
+					data-description="Los informes del grupo de expertos internacionales exponen detalles atroces y muestran la responsabilidad de las  fuerzas de seguridad mexicanas en la desaparición de 43 estudiantes en Ayotzinapa, México. "
+					data-publish-date="25 de abril de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/1T0jnRB">http://nyti.ms/1T0jnRB</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/mexico/">México</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Confundidos, aterrorizados y sin ayuda: los detalles que agrega el nuevo informe del caso Ayotzinapa</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Kirk Semple</span>
+</span>
+
+					<time class="dateline" datetime="2016-04-25">25 de abril de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/04/25/confundidos-aterrorizados-y-sin-ayuda-los-detalles-que-agrega-el-nuevo-informe-del-caso-ayotzinapa/"
+							data-title="América Latina: Confundidos, aterrorizados y sin ayuda: los detalles que agrega el nuevo informe del caso Ayotzinapa"
+							data-author="POR KIRK SEMPLE"
+							data-media=""
+							data-description="Los informes del grupo de expertos internacionales exponen detalles atroces y muestran la responsabilidad de las  fuerzas de seguridad mexicanas en la desaparición de 43 estudiantes en Ayotzinapa, México. "
+							data-publish-date="25 de abril de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004358380" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/25/world/JP-IGUALA/JP-IGUALA-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/25/world/JP-IGUALA/JP-IGUALA-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/25/world/JP-IGUALA/JP-IGUALA-superJumbo.jpg" data-mediaviewer-caption="Padres de los 43 estudiantes de magisterio desaparecidos en Iguala, Guerrero, en 2014." data-mediaviewer-credit="Adriana Zehbrauskas para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/25/world/JP-IGUALA/JP-IGUALA-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Padres de los 43 estudiantes de magisterio desaparecidos en Iguala, Guerrero, en 2014.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Adriana Zehbrauskas para The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/04/25/world/americas/missing-mexican-students-suffered-a-night-of-terror-investigators-say.html?action=click&#038;contentCollection=Americas&#038;module=RelatedCoverage&#038;region=EndOfArticle&#038;pgtype=article&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="144" data-total-count="144" id="story-continues-2" tabindex="-1">Los policías municipales rodearon el autobús, lanzaron gas lacrimógeno, pincharon las llantas y obligaron a los estudiantes a que se bajaran. </p>
+<p class="story-body-text story-content" data-para-count="188" data-total-count="332" id="story-continues-3" tabindex="-1">Uno de los oficiales dijo: &#8220;Los vamos a matar a todos&#8221;, según el testimonio del conductor del autobús. Otro policía se dirigió a él y le dijo: &#8220;A ti también&#8221;. </p>
+<p class="story-body-text story-content" data-para-count="250" data-total-count="582" id="story-continues-4" tabindex="-1">Mientras tanto, un oficial de inteligencia militar lo veía todo. Y cerca de donde sucedía había agentes de la policía estatal y la federal. A los estudiantes los subieron a vehículos de la policía y desde entonces no se ha sabido nada de ellos. </p>
+<p class="story-body-text story-content" data-para-count="336" data-total-count="918" id="story-continues-5" tabindex="-1">Se trataba de varios de los 43 estudiantes desaparecidos en el caos de una noche violenta de septiembre de 2014 en Iguala, un caso cuyo contexto —no se conoce aún el motivo de la desaparición— es cada vez más cuestionado. Sobre todo después de que una comisión de expertos extranjeros lo haya examinado durante más de un año. </p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="308" data-total-count="1226" id="story-continues-6" tabindex="-1">Pese a los obstáculos que el gobierno ha puesto al caso desde hace meses, los dos informes del grupo de expertos extranjeros —el segundo fue publicado el domingo— son el relato más detallado de los hechos de aquella noche, que dejaron seis muertos además de los 43 desaparecidos, y decenas de heridos.  </p>
+<p class="story-body-text story-content" data-para-count="320" data-total-count="1546" id="story-continues-7" tabindex="-1">El informe describe una noche de confusión y terror para los estudiantes y los habitantes de la ciudad, y una recolección de personas, con una metodología casi clínica, llevada a cabo por las fuerzas de seguridad que operaban en la ciudad de Iguala, estado de Guerrero, uno de los más pobres y violentos de México.  </p>
+<p class="story-body-text story-content" data-para-count="281" data-total-count="1827" id="story-continues-8" tabindex="-1">El gobierno ha detenido a 123 personas entre las que hay 73 policías municipales. Los acusa de vínculos con el crimen organizado por lo sucedido aquella noche; de trabajar para la organización Guerreros Unidos, pero no han sido capaces de dar con el motivo de su comportamiento. </p>
+<p class="story-body-text story-content" data-para-count="177" data-total-count="2004" id="story-continues-9" tabindex="-1">Los jóvenes desaparecidos eran estudiantes de la Escuela Normal Rural Raúl Isidro Burgos, una escuela de maestros con una larga trayectoria de activismo situada en Ayotzinapa. </p>
+<p class="story-body-text story-content" data-para-count="317" data-total-count="2321" id="story-continues-10" tabindex="-1">Estaban entre el centenar de estudiantes que habían ido a Iguala la noche del 26 de septiembre de 2014 para secuestrar varios autobuses. Solían hacerlo cada vez que necesitaban trasladarse a un evento y los devolvían una vez finalizada la actividad. Tanto las empresas como las autoridades toleraban esa práctica. </p>
+<p class="story-body-text story-content" data-para-count="168" data-total-count="2489" id="story-continues-11" tabindex="-1">El plan para la salida de esa noche era asegurar los autobuses e ir a la capital del país para participar en una marcha de recuerdo de una masacre estudiantil en 1968. </p>
+<p class="story-body-text story-content" data-para-count="166" data-total-count="2655" id="story-continues-12" tabindex="-1">Se desplazaban en dos autobuses que habían requisado antes. Se estacionaron en una de las calles de entrada a la ciudad y esperaron para interceptar más vehículos.</p>
+<p class="story-body-text story-content" data-para-count="353" data-total-count="3008" id="story-continues-13" tabindex="-1">Uno de los estudiantes dijo, según el primero de los informes del grupo de expertos, que &#8220;estábamos todos contentos, relajados y jugando con los choferes&#8221;. Ese informe fue elaborado a partir de entrevistas con los supervivientes, fuerzas de seguridad e informes de un centro de mando público con la participación de varias instituciones.  </p>
+<p class="story-body-text story-content" data-para-count="328" data-total-count="3336" id="story-continues-14" tabindex="-1">Pero las fuerzas de seguridad de la zona estaban al tanto de los planes de los estudiantes. La policía federal situó varias patrullas cerca de los estudiantes, y el centro de mando local que hacía la conexión entre las policías federal, estatal y municipal así como con el ejército, mantenía a los estudiantes vigilados.  </p>
+<p class="story-body-text story-content" data-para-count="262" data-total-count="3598" id="story-continues-15" tabindex="-1">A las 20:15, los estudiantes detuvieron y abordaron el primer autobús, que estaba frente a un restaurante. El conductor ya sabía qué hacer en caso de que los estudiantes reclamaran el autobús. Debía quedarse en el vehículo para garantizar que se devolvía. </p>
+<p class="story-body-text story-content" data-para-count="218" data-total-count="3816" id="story-continues-16" tabindex="-1">El chofer dijo que necesitaba hacer una parada en la terminal de autobuses de Iguala antes de conducir rumbo a Ayotzinapa. Pero una vez en el lugar, sorprendió a los estudiantes y los dejó encerrados en el vehículo. </p>
+<p class="story-body-text story-content" data-para-count="331" data-total-count="4147" id="story-continues-17" tabindex="-1">Sobre las 21:15, los estudiantes que se desplazaban en otros dos autobuses llegaron a la terminal y liberaron a sus compañeros. El grupo requisó tres autobuses más y dejó atrás uno que no tenía conductor. Los cinco autobuses se fueron rumbo a Ayotzinapa, tres de ellos por la salida norte de la ciudad, dos por la salida sur. </p>
+<p class="story-body-text story-content" data-para-count="22" data-total-count="4169" id="story-continues-18" tabindex="-1">Y comenzó el tiroteo. </p>
+<figure id="media-100000004358451" class="media photo media-100000004358451 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/25/world/americas/25IGUALA-1/25IGUALA-1-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-20">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/25/world/americas/25IGUALA-1/25IGUALA-1-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/25/world/americas/25IGUALA-1/25IGUALA-1-superJumbo.jpg" data-mediaviewer-caption="Portraits of some of the 43 missing students, in Chilpancingo, the capital of Guerrero State. The reason for their abduction remains a mystery." data-mediaviewer-credit="Sebastian Liste/Noor"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/25/world/americas/25IGUALA-1/25IGUALA-1-master675.jpg"/>
+		<meta itemprop="height" content="448" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Portraits of some of the 43 missing students, in Chilpancingo, the capital of Guerrero State. The reason for their abduction remains a mystery.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Sebastian Liste/Noor
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="266" data-total-count="4435" id="story-continues-20" tabindex="-1">Varios vehículos policiales seguían a los tres autobuses que iban por la salida norte y disparaban al aire. La amenaza no sirvió para que los estudiantes se detuvieran. Llegados a un punto, una de las camionetas de la policía obligó a detenerse a los autobuses. </p>
+<p class="story-body-text story-content" data-para-count="388" data-total-count="4823" id="story-continues-21" tabindex="-1">Varios de los estudiantes bajaron del autobús y comenzaron a a tirar piedras contra los policías que les bloqueaban el paso. El vehículo se fue. En otro lugar, uno de los estudiantes trató de desarmar a un policía por la espalda. Varios policías acudieron para ayudar a su compañero y el estudiante logró huir. Mientras huía, una bala perdida le hirió de levedad por la espalda. </p>
+<p class="story-body-text story-content" data-para-count="209" data-total-count="5032" id="story-continues-22" tabindex="-1">El convoy emprendió rumbo norte de nuevo. Mientras atravesaba la ciudad, los policías disparaban. Los estudiantes se resguardaron en el suelo de los vehículos y le ordenaron a los conductores que siguieran. </p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="464" data-total-count="5496" id="story-continues-23" tabindex="-1">Al llegar a una ronda de circunvalación, el camino estaba bloqueado por policías. Varios estudiantes se bajaron del autobús y trataron de mover el coche de policía que les cerraba el paso pero había policías apostados en la carretera que dispararon contra ellos. Para protegerse, los estudiantes se escondieron tras los autobuses. Le pidieron a la policía que dejara de disparar. Eran solo estudiantes. Uno de los autobuses tenía hasta 30 impactos de bala. </p>
+<p class="story-body-text story-content" data-para-count="264" data-total-count="5760" id="story-continues-24" tabindex="-1">Las balas quebraron las ventanas. Aldo Gutiérrez, uno de los estudiantes, recibió un impacto de bala en la cabeza. La primera llamada al número de emergencias se recibió a las 21:48. Los estudiantes que trataron de socorrer a Aldo también recibieron disparos. </p>
+<p class="story-body-text story-content" data-para-count="343" data-total-count="6103" id="story-continues-25" tabindex="-1">Otro estudiante recibió una bala que le arrancó varios dedos. Buscó refugio tras un camión. Dos policías llegaron hasta donde se escondía y lo golpearon. Un tercer estudiante recibió un impacto de bala en el brazo. Una ambulancia logró rescatar a tres heridos y llevarlos al hospital junto a un cuarto estudiante con un ataque de asma. </p>
+<p class="story-body-text story-content" data-para-count="160" data-total-count="6263" id="story-continues-26" tabindex="-1">El informe del grupo formado por cinco abogados y expertos en derechos humanos dice que &#8220;sintieron la confusión, el terror y la ausencia de ayuda&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="262" data-total-count="6525" id="story-continues-27" tabindex="-1">En algún momento, la policía hizo que un grupo de estudiantes que se protegía dentro del tercer autobús se bajara del vehículo y se tumbaran en el suelo. A las 22:50 los subieron a seis o siete patrullas y se los llevaron. Están entre los 43 desaparecidos. </p>
+<p class="story-body-text story-content" data-para-count="382" data-total-count="6907" id="story-continues-28" tabindex="-1">Mientras tanto, los dos autobuses que habían tomado la ruta del sur de la ciudad también se habían encontrado con problemas. A las 21:40, mientras se interceptaba a los tres autobuses en el norte, la policía detuvo uno de los dos vehículos, rompió las ventanas y arrojó gas lacrimógeno al interior para obligarlos a que se bajaran frente al edificio de tribunales de Iguala.</p>
+<p class="story-body-text story-content" data-para-count="171" data-total-count="7078" id="story-continues-29" tabindex="-1">Los estudiantes llamaron por teléfono desesperadamente. Familiares y amigos oyeron que la policía los atacaba. Oían disparos como sonido de fondo de las conversaciones. </p>
+<p class="story-body-text story-content" data-para-count="97" data-total-count="7175" id="story-continues-30" tabindex="-1">Bajaron a los pasajeros de los autobuses y se los llevaron. Son el resto de los 43 desaparecidos. </p>
+<p class="story-body-text story-content" data-para-count="185" data-total-count="7360" id="story-continues-31" tabindex="-1">En otro punto de Iguala, la policía había detenido otro de los autobuses que había huido hacia el sur. Los estudiantes, que sabían de los ataques por llamadas telefónicas, huyeron. </p>
+<p class="story-body-text story-content" data-para-count="195" data-total-count="7555" id="story-continues-32" tabindex="-1">Para tener una dimensión exacta del caos de aquella noche en Iguala es importante saber que otros autobuses y vehículos que no tenían nada que ver con los estudiantes también fueron atacados. </p>
+<p class="story-body-text story-content" data-para-count="397" data-total-count="7952" id="story-continues-33" tabindex="-1">Los Avispones, un equipo de fútbol de una secundaria de la ciudad de Chilpancingo, había jugado un partido en Iguala contra un equipo local. A las 23:15, los jugadores regresaban a casa en su autobús. Iban tranquilos, viendo una película. Para salir de Iguala tenían que atravesar un control de la policía hacia donde les dirigieron por el enfrentamiento entre la policía y los estudiantes. </p>
+<p class="story-body-text story-content" data-para-count="224" data-total-count="8176" id="story-continues-34" tabindex="-1">A unos cinco kilómetros de Iguala, la policía abrió fuego contra ellos. Mataron al conductor y a uno de los jugadores. Hirieron a siete personas más. Una mujer de 40 años que pasaba por allí en un taxi también murió. </p>
+<p class="story-body-text story-content" data-para-count="193" data-total-count="8369" id="story-continues-35" tabindex="-1">Los testigos dicen que entre quienes dispararon había oficiales de la policía y los análisis de balística demuestran que las armas utilizadas pertenecían a la policía municipal de Iguala. </p>
+<p class="story-body-text story-content" data-para-count="160" data-total-count="8529" id="story-continues-36" tabindex="-1">El informe dice que &#8220;la hipótesis más probable es que el autobús fue confundido con uno de los que transportaba a los estudiantes de magisterio&#8221;. </p>
+<p class="story-body-text story-content" data-para-count="248" data-total-count="8777" id="story-continues-37" tabindex="-1">Algunos de los jugadores, uno de ellos herido en un ojo y que sangraba en abundancia, consiguió llegar a un batallón militar cercano. No le ayudaron. &#8220;Nos dijeron que no podían hacer nada porque no tenían competencia sobre la zona&#8221;. </p>
+<p class="story-body-text story-content" data-para-count="215" data-total-count="8992" id="story-continues-38" tabindex="-1">En el resto de calles de entrada a Iguala desde Ayotzinapa grupos de hombres armados establecieron dos controles. La policía municipal de Huitzuco puso otro. En uno de ellos, dos civiles resultaron heridos de bala. </p>
+<p class="story-body-text story-content" data-para-count="146" data-total-count="9138" id="story-continues-39" tabindex="-1">El grupo de expertos concluyó que &#8220;la acción conjunta muestra un <em>modus operandi</em> coordinado para detener la salida de los autobuses&#8221;. </p>
+<p class="story-body-text story-content" data-para-count="349" data-total-count="9487" id="story-continues-40" tabindex="-1">Mientras tanto, en la entrada norte de la ciudad, los supervivientes del tiroteo contra los tres autobuses comenzaron a salir de los lugares en los que se habían escondido y a reagruparse en lugar hacia las 23:00. La policía ya se había ido y querían recopilar las pruebas del ataque mientras seguían intentando comunicarse con sus compañeros. </p>
+<p class="story-body-text story-content" data-para-count="120" data-total-count="9607" id="story-continues-41" tabindex="-1">Algunos periodistas y maestros llegaron al sitio y se montó una conferencia de prensa improvisada en medio de la calle. </p>
+<p class="story-body-text story-content" data-para-count="278" data-total-count="9885" id="story-continues-42" tabindex="-1">Alrededor de las 00:30, dos vehículos —uno blanco y otro negro— llegaron al lugar y comenzaron a tomar fotos de los reunidos. Algunos de sus ocupantes llevaban chalecos antibalas y estaban encapuchados. Hay testigos que dijeron haber visto un coche de policía en el lugar. </p>
+<p class="story-body-text story-content" data-para-count="219" data-total-count="10104" id="story-continues-43" tabindex="-1">Quince minutos más tarde, los vehículos regresaron y tres hombres se bajaron de ellos para abrir fuego contra la conferencia de prensa. Murieron dos hombres y hubo heridos, entre los que había maestros y estudiantes.</p>
+<p class="story-body-text story-content" data-para-count="354" data-total-count="10458" id="story-continues-44" tabindex="-1">Los supervivientes se escondieron en viviendas cercanas. Un maestro y varios estudiantes fueron a buscar ayuda para los heridos a un hospital cercano. No había ningún médico. Pese a que pedían que enviaran ambulancias al lugar y a que el ejército llegó hasta donde estaban, dentro del hospital, la ayuda tardó más de una hora en hacerse efectiva. </p>
+<p class="story-body-text story-content" data-para-count="114" data-total-count="10572" id="story-continues-45" tabindex="-1">A las tres de la mañana, los cuerpos de los dos muertos todavía estaban en la calle, sin cubrir, bajo la lluvia. </p>
+<p class="story-body-text story-content" data-para-count="277" data-total-count="10849" id="story-continues-46" tabindex="-1">Al amanecer, la situación ya se había calmado y los estudiantes que se habían escondido por toda la ciudad comenzaron a recibir llamadas que les decían que era seguro salir. A lo largo de la mañana, se reunieron en la fiscalía donde dieron testimonio ante un funcionario.</p>
+<p class="story-body-text story-content" data-para-count="204" data-total-count="11053" id="story-continues-47" tabindex="-1">Esa misma mañana apareció el cadáver de Julio César Mondragón, que había estado en la rueda de prensa improvisada en la calle. Había huido cuando comenzó el tiroteo y se había separado del grupo. </p>
+<p class="story-body-text story-content" data-para-count="221" data-total-count="11274" id="story-continues-48" tabindex="-1">Lo habían desollado. Tenía el cráneo roto y múltiples hemorragias internas. El estado de su cadáver muestra, según el informe del grupo de expertos, &#8220;el nivel de las atrocidades cometidas aquella noche&#8221;.    </p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Paulina Villegas contribuyó con este reportaje.</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/ayotzinapa/" rel="tag">Ayotzinapa</a>, <a href="https://www.nytimes.com/es/tag/desaparicion-forzada/" rel="tag">desaparición forzada</a>, <a href="https://www.nytimes.com/es/tag/guerrero/" rel="tag">Guerrero</a>, <a href="https://www.nytimes.com/es/tag/iguala/" rel="tag">Iguala</a>, <a href="https://www.nytimes.com/es/tag/mexico/" rel="tag">México</a>, <a href="https://www.nytimes.com/es/tag/tortura/" rel="tag">tortura</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/04/25/confundidos-aterrorizados-y-sin-ayuda-los-detalles-que-agrega-el-nuevo-informe-del-caso-ayotzinapa/"
+				data-title="América Latina: Confundidos, aterrorizados y sin ayuda: los detalles que agrega el nuevo informe del caso Ayotzinapa"
+				data-author="POR KIRK SEMPLE"
+				data-media=""
+				data-description="Los informes del grupo de expertos internacionales exponen detalles atroces y muestran la responsabilidad de las  fuerzas de seguridad mexicanas en la desaparición de 43 estudiantes en Ayotzinapa, México. "
+				data-publish-date="25 de abril de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/23/a-punto-de-abandonar-mexico-los-investigadores-del-caso-ayotzinapa-dicen-que-el-gobierno-frustro-su-trabajo/">
+					<div class="story-body">
+						<h3 class="kicker">México</h3>
+
+						<h2 class="headline">
+							<span class="title">A punto de abandonar México, los investigadores del caso Ayotzinapa dicen que el gobierno frustró su trabajo</span>
+							<time class="dateline">23 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/23/world/23mexico-web/23mexico-web-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/30/la-tragedia-de-los-desaparecidos-mexicanos/">
+					<div class="story-body">
+						<h3 class="kicker">Fotografía</h3>
+
+						<h2 class="headline">
+							<span class="title">La tragedia de los desaparecidos en México</span>
+							<time class="dateline">30 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/28/blogs/20160328-lens-yael-slide-JD3J/20160328-lens-yael-slide-JD3J-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/02/09/la-verdad-historica-sobre-los-estudiantes-desaparecidos-en-mexico-sufre-otro-reves/">
+					<div class="story-body">
+						<h3 class="kicker">México</h3>
+
+						<h2 class="headline">
+							<span class="title">La &#8216;verdad histórica&#8217; sobre los estudiantes desaparecidos en México sufre otro revés</span>
+							<time class="dateline">9 de febrero de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2015/09/10/world/10mexico/10mexico-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/25/el-gobierno-mexicano-no-colaboro-con-nuestra-investigacion-sobre-lo-que-sucedio-en-ayotzinapa-giei/">
+					<div class="story-body">
+						<h3 class="kicker">México</h3>
+
+						<h2 class="headline">
+							<span class="title">El gobierno mexicano no colaboró con nuestra investigación sobre lo que sucedió en Ayotzinapa: GIEI</span>
+							<time class="dateline">25 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/25/world/25IGUALA-2/25IGUALA-2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":903,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

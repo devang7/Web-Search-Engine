@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004638253"/>
+<meta name="hdl" content="Hay 27 millones de latinos que podrían votar en Estados Unidos, pero ¿qué diferencia harán?" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20160927" />
+<meta name="utime" content="20160927180055" />
+<meta name="ptime" content="20160927180055" />
+<meta name="DISPLAYDATE" content="Sep. 27, 2016" />
+<meta name="dat" content="Sep. 27, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="hay-27-millones-de-latinos-que-podrian-votar-en-estados-unidos-pero-que-diferencia-haran" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/09/27/hay-27-millones-de-latinos-que-podrian-votar-en-estados-unidos-pero-que-diferencia-haran/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Hay 27 millones de latinos que podrían votar en Estados Unidos, pero ¿qué diferencia harán?" />
+<meta property="og:description" content="Durante décadas, los analistas políticos han presentado al voto latino como el “gigante dormido” que afianzará a los demócratas en el poder. Sin embargo, elección tras elección, la participación se mantiene muy baja." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/09/18/magazine/18mag-cover-stickers/18mag-cover-stickers-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-09-27" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/09/27/hay-27-millones-de-latinos-que-podrian-votar-en-estados-unidos-pero-que-diferencia-haran/" />
+<meta property="twitter:title" content="Hay 27 millones de latinos que podrían votar en Estados Unidos, pero ¿qué diferencia harán?" />
+<meta property="twitter:description" content="Durante décadas, los analistas políticos han presentado al voto latino como el “gigante dormido” que afianzará a los demócratas en el poder. Sin embargo, elección tras elección, la participación se mantiene muy baja." />
+<meta name="author" content="Marcela Valdes" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Marcela Valdes" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="estados-unidos" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="estados-unidos" />
+<meta name="id" content="100000004638253"/>
+<meta name="wordCount" content="7220"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/09/27/hay-27-millones-de-latinos-que-podrian-votar-en-estados-unidos-pero-que-diferencia-haran/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=09&amp;day=27&amp;name=hay-27-millones-de-latinos-que-podrian-votar-en-estados-unidos-pero-que-diferencia-haran">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=26453">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/09\/27\/hay-27-millones-de-latinos-que-podrian-votar-en-estados-unidos-pero-que-diferencia-haran\/"},"headline":"Hay 27 millones de latinos que podr\u00edan votar en Estados Unidos, pero \u00bfqu\u00e9 diferencia har\u00e1n?","datePublished":"2016-09-27T18:00:55+00:00","dateModified":"2016-09-27T19:05:27+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/09\/18\/magazine\/18mag-cover-stickers\/18mag-cover-stickers-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Durante d\u00e9cadas, los analistas pol\u00edticos han presentado al voto latino como el \u201cgigante dormido\u201d que afianzar\u00e1 a los dem\u00f3cratas en el poder. Sin embargo, elecci\u00f3n tras elecci\u00f3n, la participaci\u00f3n se mantiene muy baja."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/09/27/hay-27-millones-de-latinos-que-podrian-votar-en-estados-unidos-pero-que-diferencia-haran/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/09/18/magazine/27-million-potential-hispanic-votes-but-what-will-they-really-add-up-to.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/estadosunidos" />
+<title>Hay 27 millones de latinos que podrían votar en Estados Unidos, pero ¿qué diferencia harán? &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/09/18/magazine/27-million-potential-hispanic-votes-but-what-will-they-really-add-up-to.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/09/27/hay-27-millones-de-latinos-que-podrian-votar-en-estados-unidos-pero-que-diferencia-haran/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+		<script src="https://a1.nyt.com/assets/article/latest/js/article/common/layout.js"></script>
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-26453 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Hay 27 millones de latinos que podrían votar en Estados Unidos, pero ¿qué diferencia harán?
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/09/27/hay-27-millones-de-latinos-que-podrian-votar-en-estados-unidos-pero-que-diferencia-haran/"
+					data-title="Noticias: Hay 27 millones de latinos que podrían votar en Estados Unidos, pero ¿qué diferencia harán?"
+					data-author="POR MARCELA VALDES"
+					data-media=""
+					data-description="Durante décadas, los analistas políticos han presentado al voto latino como el “gigante dormido” que afianzará a los demócratas en el poder. Sin embargo, elección tras elección, la participación se mantiene muy baja."
+					data-publish-date="27 de septiembre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2dxJRyj">http://nyti.ms/2dxJRyj</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+	
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main has-full-bleed-image-lede">
+	<header id="story-header" class="story-header">
+			<figure id="media-100000004645703" class="media cover photo layout-horizontal-full-bleed" data-bleed-style="full-bleed" itemid="https://static01.nyt.com/images/2016/09/18/magazine/18mag-cover-stickers/18mag-cover-stickers-articleLarge.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="presentation">
+				<span class="visually-hidden"></span>
+				<div class="image">
+					<img
+						src="https://static01.nyt.com/images/2016/09/18/magazine/18mag-cover-stickers/18mag-cover-stickers-articleLarge.jpg"
+						alt=""
+						data-jumbosrc="https://static01.nyt.com/images/2016/09/18/magazine/18mag-cover-stickers/18mag-cover-stickers-jumbo.jpg"
+						data-superjumbosrc="https://static01.nyt.com/images/2016/09/18/magazine/18mag-cover-stickers/18mag-cover-stickers-superJumbo.jpg"
+						id="media-image-100000004645703"
+					>
+				</div>
+				<figcaption id="media-caption-100000004645703" class="caption" itemprop="caption description">
+
+					<span class="credit" itemprop="copyrightHolder">
+						<span class="visually-hidden">crédito</span>
+						Craig Cutler para The New York Times
+					</span>
+				</figcaption>
+				<meta itemprop="height" content="328">
+				<meta itemprop="width" content="600">
+			</figure>
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/estados-unidos/">Estados Unidos</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Hay 27 millones de latinos que podrían votar en Estados Unidos, pero ¿qué diferencia harán?</h1>
+				<p itemprop="headline" id="story-deck" class="deck">Durante décadas, los analistas políticos han presentado al voto latino como el “gigante dormido” que afianzará a los demócratas en el poder. Sin embargo, elección tras elección, la participación se mantiene muy baja.</p>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Marcela Valdes</span>
+</span>
+
+					<time class="dateline" datetime="2016-09-27">27 de septiembre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/09/27/hay-27-millones-de-latinos-que-podrian-votar-en-estados-unidos-pero-que-diferencia-haran/"
+							data-title="Noticias: Hay 27 millones de latinos que podrían votar en Estados Unidos, pero ¿qué diferencia harán?"
+							data-author="POR MARCELA VALDES"
+							data-media=""
+							data-description="Durante décadas, los analistas políticos han presentado al voto latino como el “gigante dormido” que afianzará a los demócratas en el poder. Sin embargo, elección tras elección, la participación se mantiene muy baja."
+							data-publish-date="27 de septiembre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+			<script>
+				if (window.magnum && window.magnum.responsiveImages && window.magnum.responsiveImages.setCoverImage) {
+					window.magnum.responsiveImages.setCoverImage('100000004645703','full-bleed',328,600,0,0,0,0);
+				}
+			</script>
+
+			
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/09/18/magazine/27-million-potential-hispanic-votes-but-what-will-they-really-add-up-to.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="221" data-total-count="221" id="story-continues-1" tabindex="-1">Dos semanas después de que Hillary Clinton aceptara la nominación demócrata para la presidencia en Filadelfia, su campaña <a href="https://www.facebook.com/latinosconhillaryclinton/" target="_blank">Latinos con Hillary</a> arrancó en cinco ciudades de Virginia entre un montón de globos gigantes.</p>
+<p class="story-body-text story-content" data-para-count="847" data-total-count="1068" id="story-continues-2" tabindex="-1">Una de las fiestas de lanzamiento se realizó en el supermercado Todos del condado Prince William, en un modesto salón blanco donde se reunieron unas 40 personas alrededor de tres mesas cubiertas con una sencilla tela azul para escuchar hablar a la directora nacional de enlace con la comunidad latina de la campaña de Clinton, Lorella Praeli. Cuando tenía dos años, Praeli, que ahora tiene 28, perdió una pierna en un accidente automovilístico y sosteniéndose con sus muletas, dominó el salón con más destreza que muchos de los oradores que la precedieron, desplazándose entre las mesas para motivar a todos los presentes con respecto al proyecto. Aunque se invitó a la reunión a través de Facebook, la mayoría de los hombres y mujeres que asistieron eran experimentados políticos demócratas, miembros del personal y voluntarios.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="655" data-total-count="1723" id="story-continues-3" tabindex="-1">“No estoy aquí para hacerlo parecer bonito”, afirmó Praeli. “El trabajo que debemos hacer, la tarea y el reto que enfrentamos para los siguientes 96 días son enormes”. Explicó las actividades necesarias para registrar y hacer salir a votar a los latinos: tocar puertas, organizar reuniones para realizar llamadas telefónicas, convencer a amigos, rondar los mercados, enseñar a los hispanohablantes cómo, cuándo y dónde votar. En su discurso, la tarea sonó hercúlea. Casi para terminar, pidió a todos que se pusieran de pie y sintieran la energía que había en el salón mientras decían en español: “Vamos a hacer la diferencia”.</p>
+<p class="story-body-text story-content" data-para-count="338" data-total-count="2061" id="story-continues-4" tabindex="-1">“Quiero que lo digan y lo crean”, invitó Praeli. “Quiero que lo digan y se comprometan”. Lo dijo con una sonrisa, pero eran órdenes para salir a la marcha. “Si no lo creemos nosotros, no lo creerán otras personas”, sentenció Praeli en español. “Si no lo creemos en este salón, no haremos la diferencia en noviembre”.</p>
+<p class="story-body-text story-content" data-para-count="568" data-total-count="2629" id="story-continues-5" tabindex="-1">Los latinos llevan décadas escuchando que marcarán la diferencia. En los medios de comunicación de habla hispana este año, la retórica alrededor de las elecciones muchas veces incluso ha dado a entender que los latinos decidirán el resultado. La cobertura de las elecciones que realiza Telemundo tiene como eslogan la frase “<a href="http://www.telemundo.com/noticias/yo-decido-2016" target="_blank">Yo decido</a>”. El comentarista de noticias de Univisión Jorge Ramos declaró para The New York Times el año pasado que “la nueva regla en la política estadounidense es que nadie puede llegar a la Casa Blanca sin el voto hispano”.</p>
+<p class="story-body-text story-content" data-para-count="636" data-total-count="3265" id="story-continues-6" tabindex="-1">Es cierto que cada año 800.000 latinos cumplen 18 años y ambos partidos invierten millones de dólares en tratar de engatusar a los electores hispanos. Este año, 27 millones serán elegibles para votar. Sin embargo, la idea de la temible potencia política latina todavía es más mito que realidad. Muchos periodistas han escrito acerca del llamado “gigante dormido” de los electores hispanos por lo menos desde la década de los setenta, pero el hecho es que el porcentaje de latinos que salen a votar todavía es mínimo. Puede ser casi 20 puntos porcentuales menos que el de los afroestadounidenses y los blancos no hispanos.</p>
+<p class="story-body-text story-content" data-para-count="654" data-total-count="3919" id="story-continues-7" tabindex="-1">En la contienda entre Romney y Obama en 2012 y para el enfrentamiento de Bush y Dukakis en 1988, se registró exactamente el mismo porcentaje de latinos censados, el 48 por ciento. A pesar de que el número total de boletas latinas en las urnas se ha triplicado desde 1998, también se ha triplicado el número de ciudadanos latinos que no votan. En los últimos 28 años, solo una vez, durante el enfrentamiento de 1992 entre George H. W. Bush, Bill Clinton y Ross Perot, que provocó un salto en la cantidad total de votantes, el porcentaje de latinos que salieron a votar superó el 50 por ciento. La mayoría de las veces, <em>yo decido</em> quedarme en casa.</p>
+<p class="story-body-text story-content" data-para-count="840" data-total-count="4759" id="story-continues-8" tabindex="-1">Este año, el nuevo giro del viejo sueño es que Donald Trump por fin logrará despertar al gigante. No solo comenzó su campaña el verano pasado llamando “violadores” a los inmigrantes mexicanos, sino que ha dicho en repetidas ocasiones que construirá un muro entre México y Estados Unidos y, hasta hace poco, sostuvo que la deportación de 11 millones de inmigrantes no autorizados es la piedra fundamental de su plataforma. Desde septiembre de 2015, Javier Palomarez, presidente y director de la <a href="http://ushcc.com/" target="_blank">Cámara de Comercio Hispana de Estados Unidos</a>, declaró para Político: “Creo que lo mejor que ha pasado a los electores hispanos es un caballero de nombre Donald Trump. Ha cristalizado la angustia y el enojo de la comunidad hispana. Creo que podemos estar seguros de que los hispanos saldrán a votar en cifras récord”, agregó.</p>
+<p class="story-body-text story-content" data-para-count="963" data-total-count="5722" id="story-continues-9" tabindex="-1">Puede ser. No obstante, para que un sector demográfico con una trayectoria electoral mediocre logre una cifra récord de asistencia no basta esperar que por iniciativa propia salga a las urnas. En junio, <a href="https://www.mifamiliavota.org/" target="_blank">Mi Familia Vota</a> y el <a href="http://www.nclr.org/" target="_blank">Consejo Nacional de La Raza</a>, dos organizaciones sin ánimo de lucro que se dedican a organizar a los latinos, señalaron que necesitaban más dinero para alcanzar la cifra de electores registrados en 2012. En julio, el Centro de investigación Pew subrayó que “los electores hispanos están por debajo de todos los electores registrados en varios parámetros de participación”, pues no siguen las noticias relativas a las elecciones con tanta atención como otros ciudadanos y no piensan tanto en las elecciones. En una conferencia sobre el voto hispano que se celebró en la Ciudad de Nueva York en enero, la gran pregunta que quedó sin respuesta fue: “¿Por qué los latinos nunca se han presentado en realidad con fuerza?”.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="774" data-total-count="6496" id="story-continues-10" tabindex="-1">Buscando respuestas, pasé seis meses entrevistando a grupos de latinos en Virginia, un estado difícil donde la proporción latina de la población ha aumentado más del triple desde 1990. Me reuní con latinos católicos, pentecostales y mormones, con residentes legales, ciudadanos e inmigrantes no autorizados. Visité con frecuencia una iglesia y un centro comunitario, campos de fútbol y un club de baile. Estuve en eventos republicanos y demócratas y un parque. Entrevisté a guardias y trabajadores de la construcción, abogados y agentes de bienes raíces, propietarios de restaurantes y organizadores de la comunidad, estudiantes de nivel universitario y empleados políticos. En total, hablé con más de 100 personas del estado de distintos orígenes étnicos.</p>
+<figure id="media-100000004645138" class="media photo media-100000004645138 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/13/magazine/18voter-ss-slide-UYGV/18voter-ss-slide-UYGV-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-12">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/13/magazine/18voter-ss-slide-UYGV/18voter-ss-slide-UYGV-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/13/magazine/18voter-ss-slide-UYGV/18voter-ss-slide-UYGV-superJumbo.jpg" data-mediaviewer-caption="Dancing at 90 Grados Sports Bar, a Latino club in Manassas, Va." data-mediaviewer-credit="Photograph by Matt Eich for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/13/magazine/18voter-ss-slide-UYGV/18voter-ss-slide-UYGV-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Dancing at 90 Grados Sports Bar, a Latino club in Manassas, Va.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Photograph by Matt Eich for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="721" data-total-count="7217" id="story-continues-12" tabindex="-1">Para toda la energía que los activistas, en especial del bando demócrata, han invertido en lograr que los latinos emitan su voto, conocí a contados latinos, fuera de la clase media alta, que hablaran del voto como algo que hagan con regularidad. Las excepciones tendían a ser personas como Lucía Rodríguez, de 61 años, que se dedica a hacer la limpieza de hogares y ha votado sin falta por más de una década, incluso en 2008, cuando ella y su esposo, un guardia, vieron sus ahorros desvanecerse en la crisis hipotecaria. Después, durante varios años, hacer malabarismo para mantener a flote a su familia, trabajando todas las horas posibles, pero no dejó de votar. ¿Por qué? “Es un deber cívico”, dijo.</p>
+<p class="story-body-text story-content" data-para-count="773" data-total-count="7990" id="story-continues-13" tabindex="-1">Rodríguez explicó que en Bolivia, donde fue contadora, adquirió el hábito de votar porque a quienes no votaban se les podían imponer multas. En la iglesia mormona a la que asiste en Estados Unidos, estaba rodeada por amigos que votaban. Para aprobar su examen de ciudadanía, tuvo que estudiar sobre el gobierno estadounidense y aprender inglés. Su comportamiento con relación al voto tenía detrás muchos años de acciones y experiencia. A través de mis conversaciones, comencé a temer que las verdaderas raíces del compromiso político, que no se encuentran en programas de participación de cuatro años sino alrededor de mesas, en iglesias y salones de clase, están mucho más ausentes de la vida de los latinos en Estados Unidos de lo que la mayoría cree.</p>
+<p class="story-body-text story-content" data-para-count="1143" data-total-count="9133" id="story-continues-14" tabindex="-1">“Una persona que se encuentra entre que sí y que no necesita activación para convertirse en un votante”, afirmó Marvin Figueroa, de 30 años, un húmedo viernes de julio, de pie frente a una multitud de profesionales en una “Hora feliz por Hillary”. Según comentó, estos votantes dudosos por lo regular requieren “13 toques” (llamadas, visitas a domicilio, textos, etcétera) para ir a votar. Figueroa es el director político de Clinton para Virginia. Sus hojas de cálculo no solo incluyen latinos, también afroestadounidenses, millennials y musulmanes: cualquier grupo de electores que pueda convertirse en partidario de una coalición que apoye a Clinton. En Arlington, en el hogar de un contratista de defensa que se volvió demócrata después de que el movimiento del Tea Party llegara al congreso en 2010, la audiencia era en su mayoría femenina y caucásica, con solo una porción mínima de latinos. Las puertas del porche con ventanas permanecían abiertas, el aire acondicionado estaba apagado, la máquina para preparar margaritas estaba encendida. Los hispanohablantes convivían con todas las demás personas.</p>
+<p class="story-body-text story-content" data-para-count="350" data-total-count="9483" id="story-continues-15" tabindex="-1">Estadísticamente, los latinos que con mayor probabilidad emitirán sus votos son casi idénticos a otros electores estadounidenses. Tienen más de 40 años. Han vivido en Estados Unidos por lo menos 20 años. Son originarios de Puerto Rico y cubano-estadounidenses con una amplia trayectoria cultural de participación. Son graduados universitarios.</p>
+<p class="story-body-text story-content" data-para-count="257" data-total-count="9740" id="story-continues-16" tabindex="-1">Los latinos con menos probabilidades de votar representan un sector demográfico totalmente distinto. Tienen menos de 30 años, son mexicano-estadounidenses solteros. Sus familias ganan menos de 50.000 dólares al año. Quizá no terminaron la preparatoria.</p>
+<p class="story-body-text story-content" data-para-count="768" data-total-count="10508" id="story-continues-17" tabindex="-1">Datos como estoss sugieren que los factores que afectan el voto latino son los mismos que impiden la asistencia de todos los estadounidenses el día de las elecciones: pobreza, juventud, falta de educación. En la academia se demostró hace mucho que el voto va de la mano con la educación y el nivel de ingresos. En general, mientras más riqueza tenga y más títulos académicos obtenga una persona, es más probable que se presente a emitir su voto. No obstante, si estos factores fueran los únicos relevantes, muy probablemente el voto latino crecería de manera natural con el paso del tiempo al aumentar el número de latinos que asisten a la universidad y el promedio de edad de los latinos nacidos en Estados Unidos (en 2012, la edad promedio era 18 años).</p>
+<p class="story-body-text story-content" data-para-count="671" data-total-count="11179" id="story-continues-18" tabindex="-1">Sin embargo, si se observan con detenimiento las cifras, parece que todo es obra de la casualidad. Tomemos los ingresos, por ejemplo. Aunque cerca de una cuarta parte de los latinos viven en situación de pobreza, como grupo están un poco mejor que los afroestadounidenses. A pesar de esto, en 2012 los afroestadounidenses registraron las tasas más altas del país en términos de participación en las elecciones. Se cree que, más que los latinos, los afroestadounidenses han sido el bloque decisivo en las dos últimas carreras presidenciales y en la primaria demócrata de este año. Así que la pobreza no puede ser el factor por el cual el voto hispano es débil.</p>
+<p class="story-body-text story-content" data-para-count="936" data-total-count="12115" id="story-continues-19" tabindex="-1">Tampoco puede demostrarse que la juventud y la educación sean los factores más importantes. Entre los grupos raciales o étnicos importantes de Estados Unidos, los hispanos constituyen el grupo más joven y con menor nivel educativo. Casi una tercera parte de los latinos nacidos en el extranjero nunca llegaron al noveno grado. Algunos no han asistido a la escuela un solo día de su vida. Ahora bien, si la edad y la educación fueran los catalizadores decisivos, sería de esperar que la mayor asistencia de votantes se registrara entre los asiáticos-estadounidenses, quienes ocupan el segundo lugar en edad y el primero en educación. Más de la mitad de los asiáticos-estadounidenses ostentan un título de licenciatura. No obstante, la tasa de asistencia de este grupo a las urnas tiende a ser menor que la de los latinos. En 2012, el 53 por ciento de las personas de este grupo elegibles para votar no asistieron a las urnas.</p>
+<p class="story-body-text story-content" data-para-count="537" data-total-count="12652" id="story-continues-20" tabindex="-1">¿Entonces qué tienen en común los asiáticos y los hispanos, dos grupos con grandes diferencias en términos de edad, educación y cultura? Es obvio en cuanto se empieza a explorar: en los últimos 30 años, la mayoría de los inmigrantes de Estados Unidos han venido de Asia y Latinoamérica. Ambos grupos tienen problemas con el inglés. Cerca de una tercera parte de los adultos hispanos y una décima parte de los niños hispanos afirman que no pueden hablar inglés “muy bien”. Entre los asiáticos, las cifras son similares.</p>
+<figure id="media-100000004645141" class="media photo media-100000004645141 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/13/magazine/18voter-ss-slide-VMPO/18voter-ss-slide-VMPO-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-22">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/13/magazine/18voter-ss-slide-VMPO/18voter-ss-slide-VMPO-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/13/magazine/18voter-ss-slide-VMPO/18voter-ss-slide-VMPO-superJumbo.jpg" data-mediaviewer-caption="Outside an all-Spanish Mass at All Saints Catholic Church in Manassas." data-mediaviewer-credit="Photograph by Matt Eich for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/13/magazine/18voter-ss-slide-VMPO/18voter-ss-slide-VMPO-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Outside an all-Spanish Mass at All Saints Catholic Church in Manassas.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Photograph by Matt Eich for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="908" data-total-count="13560" id="story-continues-22" tabindex="-1">El sistema político estadounidense solía capacitar con eficiencia a los inmigrantes para impulsar palancas electorales. Con sus defectos, las maquinarias políticas urbanas como <a href="http://tammanyhallny.com/" target="_blank">Tammany Hall</a> eran excelentes para reclutar a inmigrantes italianos e irlandeses pobres y con escasa educación, y después pastorear a su agregado político en asuntos locales y nacionales. En general, sin embargo, los inmigrantes de Latinoamérica y Asia quedaban excluidos de las viejas maquinarias, tanto por leyes que limitaban su naturalización y emancipación como por el racismo. La Ley de Derecho al Voto de 1965 no se aplicó a hispanos ni asiáticos hasta 1975. Para ese entonces, la mayoría de las maquinarias urbanas estaba desmantelada, y los primeros inmigrantes de la ola actual de inmigrantes asiáticos e hispanos comenzaron a deshacer maletas en Los Ángeles, San Francisco, Nueva York, Atlanta y Washington.</p>
+<p class="story-body-text story-content" data-para-count="215" data-total-count="13775" id="story-continues-23" tabindex="-1">Los inmigrantes de Latinoamérica de inmediato se encontraron etiquetados en el grupo de “hispanos”, incluso quienes hablaban portugués o un idioma indígena y no tenían ningún vínculo ancestral con España.</p>
+<p class="story-body-text story-content" data-para-count="616" data-total-count="14391" id="story-continues-24" tabindex="-1">Es difícil galvanizar a un grupo tan heterogéneo. La categoría panétnica y multilingüe de “hispano” es un invento único de Estados Unidos, creado por legislación del congreso en los setenta. En su libro <a href="http://press.uchicago.edu/ucp/books/book/chicago/M/bo15345128.html" target="_blank">Making Hispanics</a>, G. Cristina Mora muestra cómo los burócratas, ejecutivos de los medios y activistas políticos crearon esta noción que combina a mexicano-estadounidenses, cubano-estadounidenses, puertorriqueños y otros grupos en las cifras del censo y programas federales. Siempre se pretendió que el término fuera ambiguo, según destaca Mora, para que pudiera ajustarse a distintos orígenes.</p>
+<p class="story-body-text story-content" data-para-count="798" data-total-count="15189" id="story-continues-25" tabindex="-1">Algunos hispanos nadaron para cruzar el río Bravo con la esperanza de ganar un buen salario, otros hispanos volaron en <em>business class</em> para inscribirse en escuelas de la Ivy League, otros hispanos desembarcaron en Florida en la Guerra Fría. También hay hispanos cuyas familias tenían tierras en el suroeste antes de que fuera parte de Estados Unidos (a estos “hispanos” les gusta bromear y decir que no cruzaron la frontera, sino que la frontera cruzó por encima de ellos). A diferencia de los afro-estadounidenses, que en su mayoría pueden encontrar en su historia una conexión con la esclavitud, los latinos no tienen ninguna historia en común. Trump, Figueroa alguna vez me dijo, “nos hace más latinos”: sus amenazas e insultos provocan un sentimiento unificador de indignación.</p>
+<p class="story-body-text story-content" data-para-count="750" data-total-count="15939" id="story-continues-26" tabindex="-1">Cuando se analizan las cifras y esta complicada historia, el 52 por ciento de latinos que no votan luce muy diferente. El problema no es su juventud, pobreza ni falta de educación. El problema es que cuando eres pobre, joven y no tienes educación, es más difícil superar los bajos niveles de socialización política de tu familia inmigrante. Para los estadounidenses de primera generación, la política muchas veces es solo otra expresión cultural que deben descifrar por su cuenta. Es raro que se trate de una prioridad. Los padres inmigrantes con quienes hablé atravesaron ríos y abordaron aviones para escapar de la violencia, ganar dinero o educar a sus hijos. Aprender el juego de la política estadounidense nunca estuvo en sus planes.</p>
+<p class="story-body-text story-content" data-para-count="822" data-total-count="16761" id="story-continues-27" tabindex="-1">En Virginia, descubrí que los diálogos sobre política eran tan reducidos entre los hijos de inmigrantes hispanohablantes nacidos en Estados Unidos que muchas veces me hicieron preguntas como: “¿Qué es Tea Party?” y “¿Quién es mi alcalde?”. Alicio Castañeda, estudiante de la Universidad George Mason y cuyos padres son originarios de México, me dijo que después de que comimos juntos en abril, empezó a leer más artículos noticiosos y a investigar más acerca de los candidatos presidenciales. Votó el Supermartes. Su amor por el equipo de fútbol Manchester United lo hizo ver el periódico The Guardian, y este le recordó que se trataba de un día importante en Estados Unidos. “En lo personal, siempre me ha interesado la política”, comentó, “pero no tenía con quién hablar del tema”.</p>
+<p class="story-body-text story-content" data-para-count="806" data-total-count="17567" id="story-continues-28" tabindex="-1">Hasta los años sesenta, las preparatorias ofrecían muchas veces cursos sobre democracia, civismo y gobierno. Al comenzar el siglo XXI, la mayoría de los adolescentes reciben una clase de este tipo, en el mejor de los casos. Esta escasez de clases de civismo afecta a todos los estadounidenses, pero para los latinos tiene un efecto devastador. Varios estudios han revelado que el solo hecho de escuchar a los padres hablar de política o ver cómo depositan su voto en la urna mejora las probabilidades de que un niño vote cuando se convierta en adulto. Una encuesta nacional que dirigió Mark Hugo López en 2002 reveló que los latinos jóvenes son los que tienen menos probabilidades de hablar de política con sus padres. También es más probable que los latinos crean que votar es “difícil”.</p>
+<p class="story-body-text story-content" data-para-count="724" data-total-count="18291" id="story-continues-29" tabindex="-1">El Supermartes logré ver lo que faltaba en muchas de las familias latinas con las que hablé cuando conocí a Kat Heller, una madre no hispana, salir de una casilla electoral con dos pequeños. Durante su infancia en Minnesota, Heller siempre acompañó a sus padres a votar. En una ocasión, cuando tenía unos 12 años, su padre la llevó a ver cómo contaban las boletas. “Recuerdo que sentí que era algo muy emocionante”, explicó. “Era ver cómo ocurría la historia. Todos esperaban y contenían la respiración”. Dentro de la casilla el Supermartes, Heller recargó a su hijo de 3 años sobre su cadera y le preguntó: “¿Por cuál crees que debemos votar?”. Sus 13 puntos de contacto habían comenzado.</p>
+<p class="story-body-text story-content" data-para-count="791" data-total-count="19082" id="story-continues-30" tabindex="-1">A falta de Tammany Hall y la materia de civismo en las escuelas, la tarea de convertir a los “nuevos estadounidenses” en votantes con frecuencia recae en voluntarios como Keisy Chávez. Chávez, de 45 años, pasó varios fines de semana este verano de pie afuera del supermercado Todos y otros lugares de Virginia del Norte, con una tabla para sujetar papeles en la mano, en busca de latinos que no se hubieran registrado aún para votar. La mañana de sábado en que me reuní con ella, lucía muy arreglada para la ocasión: sandalias doradas, pantalones capri blanco brillante, uñas de color intenso y una camiseta color anaranjado brillante con las palabras “New Virginia Majority”. No sería posible pedir una mejor voluntaria que Chávez para ayudar a promover el voto latino.</p>
+<p class="story-body-text story-content" data-para-count="223" data-total-count="19305" id="story-continues-31" tabindex="-1">Según han revelado las ciencias sociales, las invitaciones políticas funcionan mejor si las realiza alguien de la misma etnia. Chávez también cumple a la perfección otros requisitos: es bilingüe, desenvuelta y franca.</p>
+<p class="story-body-text story-content" data-para-count="501" data-total-count="19806" id="story-continues-32" tabindex="-1">Realizar dos nuevos registros de votantes por hora es un buen promedio. Chávez y su compañero cubrieron esta cifra con cuatro nuevos registros entre los dos (el colega esperaba a Chávez cuando el idioma dominante de la persona era el español). Aun así, la mayoría de las personas que pasaban por ahí los ignoraba. Un hombre de veintitantos años, de cabello muy negro, que sí se detuvo, dijo a Chávez en español que era ciudadano pero no estaba registrado. Ella intentó atraer su atención.</p>
+<p class="story-body-text story-content" data-para-count="76" data-total-count="19882" id="story-continues-33" tabindex="-1">“Está bien”, respondió con una sonrisa, “¿cuál es el problema?”.</p>
+<p class="story-body-text story-content" data-para-count="116" data-total-count="19998" id="story-continues-34" tabindex="-1">Él contestó que podía regresar para registrarse la semana siguiente y que debería darle su número de teléfono.</p>
+<p class="story-body-text story-content" data-para-count="73" data-total-count="20071" id="story-continues-35" tabindex="-1">“¿Qué pasa si no vienes la próxima semana?”, Chávez le preguntó.</p>
+<p class="story-body-text story-content" data-para-count="20" data-total-count="20091" id="story-continues-36" tabindex="-1">“Te lo prometo”.</p>
+<p class="story-body-text story-content" data-para-count="114" data-total-count="20205" id="story-continues-37" tabindex="-1">“Ya sabes qué pasa”, respondió. “Si no lo haces ahora, van a pasar otros cuatro años y no vas a votar”.</p>
+<p class="story-body-text story-content" data-para-count="306" data-total-count="20511" id="story-continues-38" tabindex="-1">Así siguió el intercambio por varios minutos. Finalmente, convencido de que Chávez no iba a darle su número de teléfono, el joven se alejó sin registrarse. Ganar votos, según me dijo Lola Quintela del comité demócrata del condado de Fairfax, es “trabajo de hormiga”, se hace granito a granito.</p>
+<p class="story-body-text story-content" data-para-count="1079" data-total-count="21590" id="story-continues-39" tabindex="-1">La experta en ciencia política Lisa García Bedolla propuso un método diferente en un artículo publicado en 2005 en la revista científica <a href="http://www.harvardhispanic.org/wp-content/uploads/2015/02/HJHP-Volume-17.pdf" target="_blank">The Harvard Journal of Hispanic Policy</a>. Argumenta que, dado que las relaciones sociales ejercen una fuerte influencia sobre el compromiso político, los latinos deberían politizar sus redes sociales existentes para mejorar su participación (también insiste en que se imparta civismo en las escuelas.) Me pareció que varios de los latinos que conocí votaban solo porque tenían alguna conexión con alguien interesado con la política. Manuel Fernández, de 25 años, un mexicano-estadounidense nacido en el estado de Nueva York, prefiere reconstruir y hacer trucos con autos a leer sobre política, pero ha votado en elecciones locales y presidenciales desde que cumplió 18 años porque su padre, Guadencio, que es empresario, lo convenció de que se registrara para votar y le dice cuándo y cómo emitir su voto. “Mi papá está realmente convencido”, externó. “Cuando mi papá dice que es hora de votar, vamos a votar”.</p>
+<p class="story-body-text story-content" data-para-count="687" data-total-count="22277" id="story-continues-40" tabindex="-1">La campaña de Clinton ha decidido dividir su estrategia entre estas tácticas. Después de analizar qué programas funcionaron mejor durante las primarias, Praeli comenzó a impulsar la expansión del programa bilingüe de Nevada Mujeres in Politics a estados divididos y en “expansión” de todo el país. <a href="https://www.hillaryclinton.com/forms/om-hvf-join/?gclid=CKPMpJXSrc8CFYYmhgodfa8NbQ&amp;utm_campaign=lb-1stdebate&amp;utm_content=143418118555&amp;utm_medium=om2016&amp;utm_source=gs&amp;utm_term=c" target="_blank">Mujeres in Politics</a> capacita a mujeres latinas para el trabajo de hormiga de promover la participación política y hacer llamadas telefónicas, pero también aprovecha las relaciones sociales para ampliar el alcance de la campaña en las comunidades de latinos. A cada mujer latina que participa se le da la tarea de atraer a otras cinco voluntarias latinas para que se unan.</p>
+<p class="story-body-text story-content" data-para-count="751" data-total-count="23028" id="story-continues-41" tabindex="-1">“Nuestra teoría es que si nos concentramos en las latinas y logramos que esas latinas hablen con otras latinas, tendremos a las mejores comunicadoras para lograr el objetivo”, puntualizó Praeli. “Las vemos como los directores generales de su familia y sus comunidades. Parte de la descripción de mi programa es que necesitas conocer la bodega donde haya más gente o a la secretaria de la iglesia que puede tener acceso a una comunidad de creyentes o a las comadres del barrio que tienen más influencia. Solo tienes que hablar con una latina para comprender de verdad esto”. Por supuesto, no está nada mal que las latinas hayan votado en mayor proporción que los latinos varones o que fueran una base clave para Clinton en las primarias.</p>
+<figure id="media-100000004645142" class="media photo media-100000004645142 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/13/magazine/18voter-ss-slide-V77B/18voter-ss-slide-V77B-superJumbo.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-43">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/13/magazine/18voter-ss-slide-V77B/18voter-ss-slide-V77B-superJumbo.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/13/magazine/18voter-ss-slide-V77B/18voter-ss-slide-V77B-superJumbo.jpg" data-mediaviewer-caption="Inside the church." data-mediaviewer-credit="Photograph by Matt Eich for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/13/magazine/18voter-ss-slide-V77B/18voter-ss-slide-V77B-superJumbo.jpg"/>
+		<meta itemprop="height" content="666" />
+		<meta itemprop="width" content="1000" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Inside the church.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Photograph by Matt Eich for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="1170" data-total-count="24198" id="story-continues-43" tabindex="-1">Fue una amiga latina quien atrajo a la misma Chávez a la política. Muchos años después de establecerse en Virginia cuando llegó de Perú, ganó dinero lavando platos, trabajando como mesera, lavando baños, haciendo la limpieza en oficinas, “limpiando lo que fuera”, dice. Llegó un momento en el que tenía tres trabajos: uno de tiempo completo, uno de medio tiempo y uno de fin de semana limpiando el aeropuerto por las noches. En 1996, obtuvo su licencia para bienes raíces. En 2009, después de que una amiga le pidió desfilar con Terry McAuliffe en una comitiva, se sintió tan cautivada por su preocupación por los latinos que decidió trabajar como voluntaria en su campaña para gobernador. Para Chávez, la experiencia fue adictiva: “Me la pasé exclamando: ‘Vaya, no sabía que existía todo esto’”. Desde entonces, ha trabajado como voluntaria con los demócratas de Virginia todos los años. Le parece que la temporada de elecciones es como una fiesta. “Me la paso de maravilla”, dijo. Cuando Praeli se dirigió a la audiencia durante la reunión de Latinos con Hillary en Todos, Chávez estuvo ahí, vestida de pies a cabeza de azul.</p>
+<p class="story-body-text story-content" data-para-count="796" data-total-count="24994" id="story-continues-44" tabindex="-1">Existe la creencia generalizada de que, debido a que cada vez hay más ciudadanos hispanos, Virginia y otros estados del sur se harán demócratas permanentemente. De hecho, en cada elección desde el 2001, los demócratas de Virginia han ampliado su red de empleados y voluntarios latinos experimentados. El trabajo de Praeli y Figueroa depende de estos veteranos y Clinton lo reconoció implícitamente incluso antes de la contratación de Figueroa. El 11 de junio, cinco días después de que The Associated Press <a href="https://www.nytimes.com/es/2016/06/07/clinton-logra-la-nominacion-democrata-segun-una-encuesta-de-ap/" target="_blank">declaró</a> que Hillary Clinton había ganado las primarias demócratas, el expresidente Bill Clinton sostuvo una reunión a puertas cerradas en Arlington con unos 20 líderes latinos clave de todo el estado. Tal como lo hizo Praeli después de él, comenzó a reunir a sus aliados.</p>
+<p class="story-body-text story-content" data-para-count="518" data-total-count="25512" id="story-continues-45" tabindex="-1">Sin embargo, los latinos no son demócratas por naturaleza, como tampoco son republicanos por naturaleza. En 1984, Ronald Reagan ganó la presidencia con casi la mitad de su voto en California. En 2004, George W. Bush ganó un segundo periodo con el 40 por ciento del voto latino nacional, lo que disparó el pánico en los círculos demócratas. Incluso en 2012, el 33 por ciento del voto latino en Virginia fue para Mitt Romney. También obtuvo el 39 por ciento del voto latino en Florida y el 42 por ciento en Ohio.</p>
+<p class="story-body-text story-content" data-para-count="1535" data-total-count="27047" id="story-continues-46" tabindex="-1">Desde un principio, los votantes latinos han estado en juego. El bloque electoral nacional que ahora denominamos voto hispano fue creación de demócratas mexicano-estadounidenses de clase media y alta que querían tener una mayor influencia en el gobierno y la política. Según el libro del historiador Ignacio M. García sobre este tema, organizaron clubes <a href="https://tshaonline.org/handbook/online/articles/wcv01" target="_blank">Viva Kennedy</a> en Texas, California, Nuevo México, Indiana, Illinois y otras partes. Trabajando en conjunto, con un logotipo absurdo de John Kennedy montado en un burro sonriente, estos clubes base lograron hacer participar a miles de hispanohablantes en estados con muchos delegados, lo que ayudó a Kennedy a escabullirse a la Casa Blanca por un margen de menos del uno por ciento del voto popular. Sin embargo, los republicanos llevaron la estrategia más allá: en Making Hispanics, Mora muestra cómo los miembros de la campaña de reelección de Richard Nixon en 1972, que se hicieron llamar <a href="http://www.eastvalleytribune.com/opinion/article_03b1d7b4-e1fb-11df-bf34-001cc4c002e0.html" target="_blank">Brown Mafia</a>, difundieron anuncios en español en la radio y la televisión. Prepararon tres campañas originales para atraer no solo a los mexicano-estadounidenses, sino también a los puertorriqueños y los cubano-estadounidenses. Con su ayuda, la reelección de Nixon fue avasalladora, con cerca del 35 por ciento de lo que en ese entonces se conocía como el voto “hispanohablante”. La verdadera pérdida para los republicanos desde que el presidente George W. Bush dejó el cargo es que sus candidatos dejaron perder el vínculo que él y Reagan crearon con los latinos.</p>
+<p class="story-body-text story-content" data-para-count="801" data-total-count="27848" id="story-continues-47" tabindex="-1">Muchos hispanos conservadores con los que hablé en Virginia expresaron que no hay un espacio exacto para ellos en ninguno de los partidos. Preferirían a un candidato que legalice a los inmigrantes no autorizados, declare ilícito el aborto, ofrezca educación universitaria gratuita, elimine las drogas y las pandillas, revierta el derecho legal al matrimonio entre homosexuales, apoye los préstamos a pequeñas empresas y aumente el salario mínimo. La reforma migratoria puede ser una preocupación que se identifica con los latinos, pero un informe reciente de Pew reveló que, al igual que en contiendas presidenciales anteriores, no es el principal problema de los votantes latinos. Más electores latinos señalan que la economía, la salud pública y el terrorismo son temas muy importantes.</p>
+<p class="story-body-text story-content" data-para-count="1033" data-total-count="28881" id="story-continues-48" tabindex="-1">Muchos de los latinos católicos que conocí aseveraron que la legislación del aborto es su principal prioridad. “Si podemos cerrar esa clínica”, indicó Iris Chávez con un brillo en los ojos, con respecto a una clínica para mujeres similar a <a href="https://www.plannedparenthood.org/esp/centro-de-salud" target="_blank">Planned Parenthood</a> que alguna vez se ubicó en Manassas, “podemos prenderle fuego a la nación”. A Chávez, de 26 años, la trajeron ilegalmente a Estados Unidos desde El Salvador cuando tenía 11 años y recibió la protección del programa &#8220;Acción diferida para los llegados en la infancia&#8221;, que creó Obama en 2012 para los millennials no autorizados que llegaron a Estados Unidos cuando eran niños. Trabaja media jornada como secretaria en la iglesia católica de Todos los Santos, a la que asisten tantos latinos el domingo por la tarde para la misa en español, que no caben en las bancas y deben permanecer de pie. No le gusta mucho Donald Trump, según me dijo, pero si pudiera votar, votaría por él debido a su creencia de que el aborto es un asesinato.</p>
+<p class="story-body-text story-content" data-para-count="924" data-total-count="29805" id="story-continues-49" tabindex="-1">Chávez es el tipo de latina que buscaba la Brown Mafia de Nixon, el mismo tipo que Reagan intentó ganarse con la amnistía de 1986, que legalizó a 2,7 millones de hispanos sin antecedentes criminales, y que Reince Priebus esperaba que los republicanos se sintieran impulsados a buscar de nuevo tras la autopsia de las elecciones de 2012 del Comité Nacional Republicano. Si el partido hubiera seguido el rumbo de George W. Bush, el supermercado Todos podría haberse convertido en la sede de eventos este comité. Carlos Castro, su dueño, se consideraba “casi 100 por ciento republicano” hasta 2007, cuando los republicanos del condado Prince William respaldaron una “resolución migratoria” en contra de los hispanos, y comenzó a reconsiderar su posición. Ahora es independiente. Otros conservadores del condado comentaron que protegerán sus votos hasta que llegue un candidato al que puedan apoyar con todo.</p>
+<p class="story-body-text story-content" data-para-count="528" data-total-count="30333" id="story-continues-50" tabindex="-1">El espectro de Trump ha provocado que muchos latinos cambien de opinión acerca de su registro; se han documentado alzas en Carolina del Norte y Georgia. En California, el incremento en los registros de principios de año fue de casi el doble de la cifra para el mismo periodo en 2012. Jairo Castillo, trabajador de la construcción nicaragüense-estadounidense en Virginia, se quejó en abril de que el voto “no cuenta”, pero cuando Trump obtuvo la nominación republicana en junio, se registró para votar por primera vez.</p>
+<p class="story-body-text story-content" data-para-count="1363" data-total-count="31696" id="story-continues-51" tabindex="-1">Incluso si el “efecto Trump” entre los latinos ayuda este año a llevar a Clinton a la Casa Blanca, ¿esos nuevos votantes se mantendrán comprometidos? De acuerdo con los datos históricos, es posible que no sea así. Según los expertos en ciencias políticas Matt Barreto y Gary M. Segura, más de un millón de latinos en California se registraron para votar por primera vez en los años siguientes a la aprobación en el estado de la Propuesta 187, una iniciativa aprobada en 1994 por votación que tenía como objetivo prohibir a los inmigrantes no autorizados el acceso a instituciones financiadas por el Estado (como escuelas) y establecía que los oficiales de policía debían informar el arresto de estos inmigrantes a las autoridades federales en la materia. En una elección estatal, se aprobó la iniciativa con el 59 por ciento de los votos. Pete Wilson, el gobernador republicano que había impulsado la medida, ganó la reelección ese mismo otoño. Poco tiempo después, un tribunal federal dictaminó que muchos de los elementos de la Propuesta 187 eran inconstitucionales y la revocó, pero el electorado de California no tardó en aprobar una prohibición para la acción afirmativa (Propuesta 209) y una reducción en la educación bilingüe (Propuesta 227). Se consideró ampliamente que ambas medidas estaban en contra de los hispanos.</p>
+<p class="story-body-text story-content" data-para-count="83" data-total-count="31779" id="story-continues-52" tabindex="-1">La Propuesta 187 y sus primas tuvieron efectos partidarios evidentes en California.</p>
+<p class="story-body-text story-content" data-para-count="895" data-total-count="32674" id="story-continues-53" tabindex="-1">En un <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1540-5907.2006.00175.x/full" target="_blank">artículo</a> publicado en The American Journal of Political Science en 2006, los politólogos Shaun Bowler, Stephen P. Nicholson y Segura determinaron que, antes de 1994, los votos latinos se dividían casi por igual entre los dos partidos. En contraste, tras la aprobación de estas propuestas, la probabilidad de que un latino se identificara como republicano cayó más de dos tercios, lo que arrasó con el avance que habían logrado los republicanos desde la campaña de Ronald Reagan en 1980. Los datos también revelaron que las propuestas provocaron el desplazamiento de muchos blancos no hispanos en California a la columna demócrata. Atacar a los inmigrantes no autorizados y a los latinos había causado un contragolpe blanco en contra de los republicanos que corresponde al desagrado que ha despertado la nominación de Trump entre muchos moderados del partido en esta temporada.</p>
+<p class="story-body-text story-content" data-para-count="781" data-total-count="33455" id="story-continues-54" tabindex="-1">No obstante, con el paso del tiempo, el efecto de la Propuesta 187 en la participación latina en las elecciones demostró no ser un parteaguas, sino un pequeño tropiezo. En septiembre pasado, Los Angeles Times destacó que solo el 17 por ciento de los latinos elegibles de California votaron en 2014. La participación fue similar entre los asiáticos-estadounidenses, mientras que la cifra de participación de los demás grupos raciales y étnicos combinados fue de más del doble. “Sin duda alguna, el Valle Central es el lugar donde los candidatos latinos deberían ganar elecciones”, subrayó la periodista Kate Linthicum. “Pero los candidatos latinos han perdido una elección tras otra en años recientes, en gran medida debido a que los latinos no salen a votar”.</p>
+<p class="story-body-text story-content" data-para-count="711" data-total-count="34166" id="story-continues-55" tabindex="-1">Entre los derrotados en 2014 estuvo Amanda Rentería, quien ahora es directora política nacional de la campaña presidencial de Hillary Clinton. Rentería se postuló para el congreso en un distrito del Valle Central que era 74 por ciento hispano. Creció en el Valle Central y fue profesora de matemáticas en su antigua preparatoria en Woodlake antes de asistir a la Harvard Business School y convertirse en la primera jefa de personal latina en la historia del senado. Perdió en la carrera para el congreso en 2014 por 17 puntos. Si los latinos hubieran votado por ella en la misma proporción que los afroestadounidenses salieron a votar por Obama, el día de hoy podría ocupar un escaño en el congreso.</p>
+<figure id="media-100000004645139" class="media photo media-100000004645139 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/13/magazine/18voter-ss-slide-N9CW/18voter-ss-slide-N9CW-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-57">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/13/magazine/18voter-ss-slide-N9CW/18voter-ss-slide-N9CW-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/13/magazine/18voter-ss-slide-N9CW/18voter-ss-slide-N9CW-superJumbo.jpg" data-mediaviewer-caption="Lorella Praeli, national director for the Latino vote for Hillary Clinton in Clinton campaign headquarters in Brooklyn Heights." data-mediaviewer-credit="Photograph by Matt Eich for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/13/magazine/18voter-ss-slide-N9CW/18voter-ss-slide-N9CW-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Lorella Praeli, national director for the Latino vote for Hillary Clinton in Clinton campaign headquarters in Brooklyn Heights.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Photograph by Matt Eich for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="758" data-total-count="34924" id="story-continues-57" tabindex="-1">Este marzo, el Instituto de Política Pública de California divulgó un informe en el que se detalla el abismo que se ha abierto en la política de California desde el surgimiento de la Propuesta 187. “Los electores de California”, propone, “tienden a ser mayores, blancos, con educación universitaria, de buena posición económica y propietarios de su casa. También tienden a identificarse como <em>haves</em> en vez de <em>have-nots</em> cuando se les pide elegir una de estas categorías económicas. La tendencia entre quienes no votan es que sean más jóvenes, latinos, menos adinerados, que renten y con menor probabilidad de tener educación universitaria que quienes votan y, en general, se identifican como miembros de una clase social desfavorecida’”.</p>
+<p class="story-body-text story-content" data-para-count="507" data-total-count="35431" id="story-continues-58" tabindex="-1">El informe enfatizó que, si bien California es un estado de mayoría-minoría en términos de su población, su electorado no lo es: el 60 por ciento de los electores que más probablemente asistirán a votar son blancos, mientras que solo el 18 por ciento son latinos. Sin embargo, sería iluso esperar que los demócratas se dediquen por completo al proyecto de lograr que los hispanos del estado vayan a votar dado que ya controlan mayorías sólidas en la asamblea y el senado del estado de California.</p>
+<p class="story-body-text story-content" data-para-count="664" data-total-count="36095" id="story-continues-59" tabindex="-1">“Debemos ser honestos”, declaró María Teresa Kumar, presidente y cofundadora de Voto Latino, una organización sin afiliación partidista, el otoño pasado. “En el tema del registro de electores, cada partido considera a las comunidades latina y afroestadounidense para obtener suficientes votos. No nos necesitan a todos”. Desde su oficina de Washington, orquesta las actividades para atraer a latinos jóvenes que muchas veces navegan el sistema político por sus familias. “Nuestro trabajo”, afirmó Kumar, “se trata de movilización y participación masiva. Para los partidos, se trata de lo poco que necesitan gastar para estar a la cabeza”.</p>
+<p class="story-body-text story-content" data-para-count="1102" data-total-count="37197" id="story-continues-60" tabindex="-1">Si la clasificación de Virginia como un estado en disputa sugiere que el voto latino puede triunfar, también alerta a actuar con cautela en cuanto a sus limitaciones. A principios de agosto, el senador Tim Kaine, compañero de fórmula de Hillary Clinton, apareció en el gimnasio verde y amarillo de la preparatoria Huguenot en Richmond. “¡Sí, con Kaine!”, gritó la multitud bajo los reflectores. Su reunión de bienvenida también fue una clase de historia. Kaine señaló que Virginia no tiene un presidente ni un vicepresidente desde hace 170 años. Cuando se mudó a Virginia en 1984, relató, ni los republicanos ni los demócratas se molestaron en hacer campaña en ese estado, y él atribuyó esta situación a un bloqueo de poder conservador que dependía de marginar a las mujeres y a las minorías. “Los empujamos fuera del tablero”, dijo. Pero desde que Barack Obama convirtió a Virginia en un estado en disputa, ha sido una parada de campaña de cada candidato a presidente. “Es mucho mejor vivir en un estado donde nadie puede dormirse en sus laureles”, concluyó Kaine.</p>
+<p class="story-body-text story-content" data-para-count="772" data-total-count="37969" id="story-continues-61" tabindex="-1">En realidad, el cambio que atrajo a voluntarios como Keisy Chávez al lado demócrata comenzó mucho tiempo antes de Obama. Cuando Mark Warner fue electo gobernador en 2001, su estrategia de campaña se basó en convencer a los republicanos del área rural que amaban la Nascar, no en incluir a las minorías. Sin embargo, la victoria del propio Kaine para la gubernatura en 2005 aplicó una estrategia urbana-suburbana que se basó en la participación de las comunidades multiétnicas y de rápido crecimiento de Virginia del Norte. Dada la experiencia de Kaine en casos de derechos civiles y su trabajo como misionero en Honduras, es posible que el cambio haya reflejado preferencias personales. También fue una respuesta astuta a la cambiante demografía de Virginia.</p>
+<p class="story-body-text story-content" data-para-count="686" data-total-count="38655" id="story-continues-62" tabindex="-1">Según el grupo de investigación demográfica de la Universidad de Virginia, en 1970 solo uno de cada cien residentes de Virginia había nacido fuera de Estados Unidos. Para 2012, esa proporción había aumentado a uno de cada nueve. Esas transformaciones demográficas no son exclusivas del estado. Entre 1990 y 2008, el número de latinos que vivían en Arkansas, Alabama, Georgia, Carolina del Norte, Carolina del Sur y Tennessee aumentó en un 602 por ciento, lo que provocó que en ciencias políticas se llamara a la región el “Nuevo South”. “Si pones tu fe en el votante de Virginia”, Kaine recuerda haberle dicho al candidato Obama en 2008, “vas a ganar Virginia”.</p>
+<p class="story-body-text story-content" data-para-count="520" data-total-count="39175" id="story-continues-63" tabindex="-1">Sin embargo, la mayoría de la Asamblea General de Virginia todavía es republicana y solo dos de sus representantes estatales, los delegados Alfonso López y Jason Miyares, son latinos. Harry Wiggins, presidente del comité demócrata del condado Prince William, describió el problema de esta forma: “Ganamos las presidenciales. Ganamos por Mark Warner. Ganamos por Tim Kaine. Ganamos por Terry McAuliffe. Pero perdimos el condado porque las elecciones son en los años intermedios y la participación es mínima”.</p>
+<p class="story-body-text story-content" data-para-count="836" data-total-count="40011" id="story-continues-64" tabindex="-1">Figueroa ya se prepara para la caída inevitable. “Los números van a desplomarse el año que entra en lugares que cuentan, como Prince William,” aseveró. En 2015, la oficina de censos publicó una ponderación para el condado Prince William de 22,3 por ciento latino, 21,8 por ciento afroestadounidense y 8,7 por ciento asiático. Sin embargo, el presidente de su consejo de supervisores es Corey Stewart, un republicano que también es presidente de la campaña de Donald Trump en el estado. “Cuando él sea presidente y yo gobernador, vas a ver un equipo tremendo en Virginia, y por fin vamos a eliminar a los inmigrantes no autorizados”, declaró Stewart al The Richmond Times-Dispatch en junio. La carrera para ser gobernador ocurrirá el año que viene, cuando ningún otro estado, salvo Nueva Jersey, tendrá elecciones.</p>
+<p class="story-body-text story-content" data-para-count="1165" data-total-count="41176" id="story-continues-65" tabindex="-1">Mientras hablaba Kaine, Figueroa estaba de pie al lado de la cabina de prensa, tecleando en su teléfono móvil y capturando la escena. En los días anteriores a la reunión, mencionó varias veces que estaba trabajando para que el evento fuera “más negro y más café”. Su mano se hizo notar en las gradas VIP ubicadas directamente frente a las cámaras de televisión, donde estaba sentado un grupo de personas que en su mayoría llevaban las inconfundibles camisetas azul brillante y blanco del equipo nacional de fútbol de El Salvador. Eran estudiantes, padres y maestros relacionados con el programa de enseñanza de inglés como lengua extranjera en la preparatoria Huguenot y su club internacional. Figueroa les había dado esos lugares en la sección VIP. Su pancarta en rojo, blanco y azul hecha en casa decía “¡Juntos se puede!” y dio a Kaine la oportunidad de aparecer en cámara, misma que aprovechó, mientras los señalaba y dirigía una ronda de vítores al son de “¡Sí se puede!”, que siempre tendrá un significado especial para quienes saben que no se originó en 2008 con Obama, sino con César Chávez y Dolores Huerta en 1972.</p>
+<p class="story-body-text story-content" data-para-count="538" data-total-count="41714" id="story-continues-66" tabindex="-1">Cuando Kaine concluyó su discurso, al ritmo de la canción <em>Shake It Off</em> que sonaba en el gimnasio, varios de estos estudiantes se unieron a la multitud que intentaba tomarse una <em>selfie</em> con él. Les pregunté a dos de ellos qué sabían de Kaine. “Fue alcalde de Virginia”, respondió uno. El otro añadió que había vivido en Honduras y era amigo de los latinos. Al parecer era todo lo que sabían. Hablé con dos padres que me dijeron en español que solo habían entendido algunas partes del discurso de Kaine, que dio en inglés.</p>
+<p class="story-body-text story-content" data-para-count="217" data-total-count="41931" id="story-continues-67" tabindex="-1">Entendí por qué uno de los padres parecía tener la cara larga durante gran parte de la reunión. Solo podía formarse una opinión si su hijo traducía los discursos para él. No entendía nada de lo que se decía.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/desafeccion-politica/" rel="tag">desafección política</a>, <a href="https://www.nytimes.com/es/tag/donald-trump/" rel="tag">Donald Trump</a>, <a href="https://www.nytimes.com/es/tag/hillary-clinton/" rel="tag">Hillary Clinton</a>, <a href="https://www.nytimes.com/es/tag/propuesta-187/" rel="tag">Propuesta 187</a>, <a href="https://www.nytimes.com/es/tag/voto-latino/" rel="tag">voto latino</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/09/27/hay-27-millones-de-latinos-que-podrian-votar-en-estados-unidos-pero-que-diferencia-haran/"
+				data-title="Noticias: Hay 27 millones de latinos que podrían votar en Estados Unidos, pero ¿qué diferencia harán?"
+				data-author="POR MARCELA VALDES"
+				data-media=""
+				data-description="Durante décadas, los analistas políticos han presentado al voto latino como el “gigante dormido” que afianzará a los demócratas en el poder. Sin embargo, elección tras elección, la participación se mantiene muy baja."
+				data-publish-date="27 de septiembre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/24/el-realismo-magico-de-donald-trump/">
+					<div class="story-body">
+						<h3 class="kicker">Comentario</h3>
+
+						<h2 class="headline">
+							<span class="title">El realismo mágico de Donald Trump</span>
+							<time class="dateline">24 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/09/24/universal/es/fonseca-opedES/fonseca-opedES-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/12/la-neumonia-de-hillary-clinton-y-sus-implicaciones-en-la-campana/">
+					<div class="story-body">
+						<h3 class="kicker">Elecciones EE. UU.</h3>
+
+						<h2 class="headline">
+							<span class="title">La neumonía de Hillary Clinton y sus implicaciones en la campaña</span>
+							<time class="dateline">12 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/09/12/us/12xp-pneumonia/12xp-pneumonia-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/01/mientras-clinton-se-prepara-e-investiga-trump-esta-confiado-ante-el-primer-debate-presidencial/">
+					<div class="story-body">
+						<h3 class="kicker">Elecciones EE. UU.</h3>
+
+						<h2 class="headline">
+							<span class="title">Mientras Clinton se prepara, Trump se muestra confiado antes del primer debate presidencial</span>
+							<time class="dateline">1 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/08/30/universal/es/30DEBATEweb1-copyES/30DEBATEweb1-thumbStandard-v3.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/08/17/el-voto-hispano-quiza-no-sea-tan-decisivo-en-las-elecciones-de-estados-unidos/">
+					<div class="story-body">
+						<h3 class="kicker">The Upshot</h3>
+
+						<h2 class="headline">
+							<span class="title">El voto latino quizá no sea tan decisivo en las elecciones de Estados Unidos</span>
+							<time class="dateline">17 de agosto de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/08/11/upshot/12UP-Chat-sub-2/12UP-Chat-sub-2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+			
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":823,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

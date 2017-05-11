@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000003912228"/>
+<meta name="hdl" content="Francisco, un papa humilde que quiere cambiar el mundo" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20151022" />
+<meta name="utime" content="20151022135605" />
+<meta name="ptime" content="20151022135605" />
+<meta name="DISPLAYDATE" content="Oct. 22, 2015" />
+<meta name="dat" content="Oct. 22, 2015" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="francisco-un-papa-humilde-que-quiere-cambiar-el-mundo" />
+<meta property="og:url" content="https://www.nytimes.com/es/2015/10/22/francisco-un-papa-humilde-que-quiere-cambiar-el-mundo/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Francisco, un papa humilde que quiere cambiar el mundo" />
+<meta property="og:description" content="A Francisco no parecen molestarle las contradicciones, e incluso es posible que ni siquiera las considera como tales. Ha promovido el diálogo abierto, y también las críticas. Está empeñado en abrir la iglesia, aunque no ha revelado cuál es el camino exacto que ésta debe seguir." />
+<meta property="og:image" content="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-NLUH-copy/19FRANCIS-SS-slide-NLUH-videoSixteenByNine768-v4.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2015-10-22" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2015/10/22/francisco-un-papa-humilde-que-quiere-cambiar-el-mundo/" />
+<meta property="twitter:title" content="Francisco, un papa humilde que quiere cambiar el mundo" />
+<meta property="twitter:description" content="A Francisco no parecen molestarle las contradicciones, e incluso es posible que ni siquiera las considera como tales. Ha promovido el diálogo abierto, y también las críticas. Está empeñado en abrir la iglesia, aunque no ha revelado cuál es el camino exacto que ésta debe seguir." />
+<meta name="author" content="Jim Yardley" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Jim Yardley" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="papa-francisco" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="papa-francisco" />
+<meta name="id" content="100000003912228"/>
+<meta name="wordCount" content="5266"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2015/10/22/francisco-un-papa-humilde-que-quiere-cambiar-el-mundo/">
+<meta name="nyt-collection:uri" content="year=2015&amp;monthnum=10&amp;day=22&amp;name=francisco-un-papa-humilde-que-quiere-cambiar-el-mundo">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=638">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2015\/10\/22\/francisco-un-papa-humilde-que-quiere-cambiar-el-mundo\/"},"headline":"Francisco, un papa humilde que quiere cambiar el mundo","datePublished":"2015-10-22T13:56:05+00:00","dateModified":"2016-02-12T02:47:46+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2015\/09\/19\/world\/europe\/19FRANCIS-SS-slide-NLUH-copy\/19FRANCIS-SS-slide-NLUH-videoSixteenByNine768-v4.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"A Francisco no parecen molestarle las contradicciones, e incluso es posible que ni siquiera las considera como tales. Ha promovido el di\u00e1logo abierto, y tambi\u00e9n las cr\u00edticas. Est\u00e1 empe\u00f1ado en abrir la iglesia, aunque no ha revelado cu\u00e1l es el camino exacto que \u00e9sta debe seguir."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2015/10/22/francisco-un-papa-humilde-que-quiere-cambiar-el-mundo/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2015/09/19/world/europe/pope-francis.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/papafrancisco" />
+<title>Francisco, un papa humilde que quiere cambiar el mundo &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2015/09/19/world/europe/pope-francis.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2015/10/22/francisco-un-papa-humilde-que-quiere-cambiar-el-mundo/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-638 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Francisco, un papa humilde que quiere cambiar el mundo
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2015/10/22/francisco-un-papa-humilde-que-quiere-cambiar-el-mundo/"
+					data-title="Noticias: Francisco, un papa humilde que quiere cambiar el mundo"
+					data-author="POR JIM YARDLEY"
+					data-media=""
+					data-description="A Francisco no parecen molestarle las contradicciones, e incluso es posible que ni siquiera las considera como tales. Ha promovido el diálogo abierto, y también las críticas. Está empeñado en abrir la iglesia, aunque no ha revelado cuál es el camino exacto que ésta debe seguir."
+					data-publish-date="22 de octubre de 2015"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/papa-francisco/">Papa Francisco</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Francisco, un papa humilde que quiere cambiar el mundo</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Jim Yardley</span>
+</span>
+
+					<time class="dateline" datetime="2015-10-22">22 de octubre de 2015</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2015/10/22/francisco-un-papa-humilde-que-quiere-cambiar-el-mundo/"
+							data-title="Noticias: Francisco, un papa humilde que quiere cambiar el mundo"
+							data-author="POR JIM YARDLEY"
+							data-media=""
+							data-description="A Francisco no parecen molestarle las contradicciones, e incluso es posible que ni siquiera las considera como tales. Ha promovido el diálogo abierto, y también las críticas. Está empeñado en abrir la iglesia, aunque no ha revelado cuál es el camino exacto que ésta debe seguir."
+							data-publish-date="22 de octubre de 2015"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000003929380" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-NLUH-copy/19FRANCIS-SS-slide-NLUH-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-NLUH-copy/19FRANCIS-SS-slide-NLUH-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-NLUH-copy/19FRANCIS-SS-slide-NLUH-superJumbo.jpg" data-mediaviewer-caption="El papa en Asunción en julio. Su humildad lo ha hecho inmensamente popular en todo el mundo." data-mediaviewer-credit="Natacha Pisarenko/Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-NLUH-copy/19FRANCIS-SS-slide-NLUH-master1050.jpg"/>
+		<meta itemprop="height" content="672" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">El papa en Asunción en julio. Su humildad lo ha hecho inmensamente popular en todo el mundo.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Natacha Pisarenko/Associated Press
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2015/09/19/world/europe/pope-francis.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="415" data-total-count="415" id="story-continues-2" tabindex="-1">CIUDAD DEL VATICANO — Unos días después de la elección del Papa Francisco, en la oficina de prensa del Vaticano se sorprendieron al enterarse de que el nuevo pontífice estaba oficiando, de manera inesperada, una misa matutina. Otros papas también habían oficiado misas matutinas, pero como pronto descubriría el mundo (y la oficina de prensa del Vaticano), a Francisco le gusta hacer las cosas a su manera.</p>
+<p class="story-body-text story-content" data-para-count="460" data-total-count="875" id="story-continues-3" tabindex="-1">Esta misa se celebraba en la pequeña capilla de la casa de huéspedes del Vaticano donde Francisco decidió vivir, en vez de en el ostentoso Palacio Apostólico como es tradición. Su audiencia no era los cardenales de la curia romana, sino jardineros, oficinistas y empleados de limpieza del Vaticano. Y Francisco no sólo presidió la celebración, como lo hacía el Papa Juan Pablo II. Predicó, sin notas, como si fuera un sencillo sacerdote de parroquia.</p>
+<p class="story-body-text story-content" data-para-count="45" data-total-count="920" id="story-continues-4" tabindex="-1">Pero un sacerdote armado con un gran mensaje.</p>
+<p class="story-body-text story-content" data-para-count="246" data-total-count="1166" id="story-continues-5" tabindex="-1">“La iglesia nos pide a todos nosotros cambiar algunas cosas”, dijo Francisco durante sus homilías matutinas, al reflexionar sobre una lectura de San Pablo. “Nos pide hacer a un lado las estructuras decadentes, pues éstas son inútiles”.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="373" data-total-count="1539" id="story-continues-6" tabindex="-1">El simbolismo de las misas matutinas, que Francisco ahora celebra cuatro veces por semana, es claro: reflejan un papado más humilde, en el que el papa es, más que nada, el pastor del rebaño y no un rey. Pero que el papa sea más humilde no implica que sus ambiciones lo sean. Pareciera que Francisco no estuviese tratando de cambiar a la Iglesia Católica sino al mundo.</p>
+<p class="story-body-text story-content" data-para-count="207" data-total-count="1746" id="story-continues-7" tabindex="-1">Los papas retan a la sociedad, eso es lo que se espera de ellos. Pero Francisco, que a sus 78 años visitó Cuba y Estados Unidos en septiembre pasado, ha alcanzado una estatura global única en poco tiempo.</p>
+<p class="story-body-text story-content" data-para-count="402" data-total-count="2148" id="story-continues-8" tabindex="-1">Su humildad lo ha hecho inmensamente popular, una figura sonriente que camina entre las multitudes en la Plaza de San Pedro. Habla en términos muy personales acerca de los olvidados por la economía global, ya sean los refugiados ahogados en el mar o las mujeres sin otra opción que dedicarse a la prostitución. Sus profundas críticas a la destrucción ambiental han capturado la atención mundial.</p>
+<p class="story-body-text story-content" data-para-count="430" data-total-count="2578" id="story-continues-9" tabindex="-1">Pero también es un estratega indescifrable; su presión para cambiar a la iglesia ha despertado ansiedad y esperanza, y también escepticismo. Muchos conservadores proyectan en él sus miedos. Muchos liberales asumen que comparte sus posiciones. Otros afirman que a Francisco no le preocupan tanto las etiquetas de derecha e izquierda como el debilitamiento de la popularidad de la iglesia en Latinoamérica y el resto del mundo.</p>
+<p class="story-body-text story-content" data-para-count="316" data-total-count="2894" id="story-continues-10" tabindex="-1">“Francisco es un excelente showman”, comentó Rubén Rufino Dri, crítico de Francisco y profesor emérito de sociología y religión en la Universidad de Buenos Aires. “El nuevo posicionamiento de la Iglesia es paternalista, no es una estrategia para empoderar a sus seguidores. Esto no es una revolución”.</p>
+<p class="story-body-text story-content" data-para-count="342" data-total-count="3236" id="story-continues-11" tabindex="-1">Francisco aún no ha puesto todas sus cartas sobre la mesa. Pero su misión espiritual de convertir a los pobres en la preocupación central de la iglesia ya le ha permitido intervenir en los principales debates a nivel global, como el cambio climático, la inmigración y la reflexiones sobre la economía capitalista tras la crisis de 2008.</p>
+<p class="story-body-text story-content" data-para-count="618" data-total-count="3854" id="story-continues-12" tabindex="-1">En cierta medida, la pregunta sobre cómo cambiará Francisco a la iglesia y su papel en la sociedad es ignorar los muchos cambios que ya han ocurrido. La doctrina es la misma, pero Francisco ha cambiado el énfasis y proyecta un tono más misericordioso y acogedor en una iglesia desgarrada por los escándalos de abuso sexual de sus clérigos e identificada con la rigidez teológica. El papa ha destacado la conexión histórica de la iglesia con los más desposeídos, mientras hace a un lado los temas de guerra entre culturas. Como resultado, su influencia geopolítica ha aumentado, y la de la iglesia también.</p>
+<p class="story-body-text story-content" data-para-count="229" data-total-count="4083" id="story-continues-13" tabindex="-1">“Tiene mucho soft power, y no sólo entre católicos”, afirmó Joseph S. Nye Jr., profesor en la Harvard Kennedy School. “Muchos papas han hablado de pobreza. Pero Francisco ha logrado mantenerlo en el centro del debate”.</p>
+<p class="story-body-text story-content" data-para-count="464" data-total-count="4547" id="story-continues-14" tabindex="-1">Su papado ha puesto un énfasis firme en las “periferias”, tanto existenciales como geográficas, y ha escogido sus viajes con cuidado, visitando a países más pequeños como Albania, Sri Lanka, Bosnia, Filipinas, Ecuador y Bolivia. Al llegar a Washington desde Cuba, Francisco reforzó su mensaje de que las periferias están conectadas con los centros de poder, y ningún país representa la élite del poder político y económico mejor que Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="572" data-total-count="5119" id="story-continues-15" tabindex="-1">Con gestos y palabras, Francisco ha confrontado a las élites una y otra vez, tanto dentro de la iglesia como fuera de ella. Ha criticado la actitud cerrada de la jerarquía católica por concentrarse en dogmas y en la “dimensión espiritual del mundo”, pero muy poco en la personas común. También ha atacado la ortodoxia que prevalece en la economía global, pues considera que la creencia de que los mercados y la búsqueda de la riqueza sortearán todas las dificultades, es una ideología falsa que no resolverá de manera integral las necesidades de los pobres.</p>
+<p class="story-body-text story-content" data-para-count="504" data-total-count="5623" id="story-continues-16" tabindex="-1">En Estados Unidos, las críticas de Francisco a los excesos del capitalismo, aunque suenen a verdad para muchos, han generado incomodidad incluso entre algunos simpatizantes y desprecio entre sus críticos, quienes lo han etiquetado de marxista o comunista. Aquellos que conocen a Francisco desde hace años se burlan de esas etiquetas, pero están de acuerdo en que puede ser esquivo, pues desde que era un joven líder jesuita en Argentina se ha rehusado a encajar en un bloque ideológico específico.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="252" data-total-count="5875" id="story-continues-17" tabindex="-1">“Le encanta ir en contra de las etiquetas”, indicó Austen Ivereigh, autor de la biografía “El gran reformador: Francisco, retrato de un papa radical”. “En cierto sentido, las élites siempre quieren apropiarse de él, pero él las elude”.</p>
+<figure id="media-100000003929384" class="media photo media-100000003929384 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-0W6G-copy/19FRANCIS-SS-slide-0W6G-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-19">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-0W6G-copy/19FRANCIS-SS-slide-0W6G-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-0W6G-copy/19FRANCIS-SS-slide-0W6G-superJumbo.jpg" data-mediaviewer-caption="La presión de Francisco para cambiar a la iglesia ha despertado ansiedad y esperanza, y también escepticismo. Muchos conservadores proyectan en él sus miedos. Muchos liberales asumen que comparte sus posiciones." data-mediaviewer-credit="Osservatore Romano, vía Reuters"  itemprop="url" itemid="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-0W6G-copy/19FRANCIS-SS-slide-0W6G-master675.jpg"/>
+		<meta itemprop="height" content="449" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">La presión de Francisco para cambiar a la iglesia ha despertado ansiedad y esperanza, y también escepticismo. Muchos conservadores proyectan en él sus miedos. Muchos liberales asumen que comparte sus posiciones.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Osservatore Romano, vía Reuters
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="335" data-total-count="6210" id="story-continues-19" tabindex="-1">Desde el momento en que salió al balcón de la Basílica de San Pedro para saludar a las masas tras su inesperada elección en marzo de 2013, Francisco hizo historia como el primer papa latinoamericano. Esa noche incluso bromeó y dijo que “sus hermanos cardenales” habían ido al “fin del mundo” para encontrar al nuevo papa.</p>
+<p class="story-body-text story-content" data-para-count="382" data-total-count="6592" id="story-continues-20" tabindex="-1">Fue un sutil recordatorio de la gran distancia que separa a su país de origen, Argentina, del Vaticano. Pero lo que ahora está claro es que no era solo una broma. El “fin del mundo” también era una metáfora para referirse a las villas miseria, como se le conoce a los barrios pobres en Argentina, y el punto de vista de la iglesia latinoamericana que él traía al Vaticano.</p>
+<p class="story-body-text story-content" data-para-count="218" data-total-count="6810" id="story-continues-21" tabindex="-1">Así pues, para entender mejor al papa de los jardineros, los empleados de limpieza y los pobres, lo mejor es comenzar en Argentina, donde el hombre que conocemos como Francisco era conocido como Jorge Mario Bergoglio.</p>
+<p class="story-body-text story-content" data-para-count="34" data-total-count="6844" id="story-continues-22" tabindex="-1"><strong>El arzobispo de los barrios pobres</strong></p>
+<figure class="promo media video embedded layout-large-horizontal" data-videoid="100000003932978" data-media-action="modal" data-autoplay="" data-embedded="" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-24">Continue reading the main story</a>	<span class="visually-hidden">Video</span>
+	<figcaption class="caption">
+		<h4 class="headline">Villa Priests of Buenos Aires</h4>
+		<div class="caption-video">
+			<div class="summary-credit">
+				<p class="summary">Priests working in the slums or “villas” of Buenos Aires are a legacy left behind by Pope Francis from when he was Archbishop Jorge Bergoglio.</p>
+				<span class="credit video-credit" itemprop="copyrightHolder">
+					By By FREDERICK BERNAS, ANDREW BLACKWELL and ALEXANDRA GARCIA
+					<span class="visually-hidden">Publish Date </span>on September 24, 2015.
+				</span>
+				<span class="credit photo-credit" itemprop="copyrightHolder">
+					Photo by The New York Times.
+				</span>
+				<a class="video-link" href="https://www.nytimes.com/video/world/americas/100000003932978/villa-priests-of-buenos-aires.html">Watch in Times Video &#187;</a>
+			</div>
+			<div class="sharetools-video-container">
+				<div id="sharetools-video-tools-100000003932978" class="sharetools sharetools-video-tools">
+					<ul>
+						<li class="sharetool embed-sharetool">
+							<a href="javascript:;" data-share="embed" data-modal-title="">
+								<i class="icon sprite-icon"></i>
+								<span class="sharetool-text ">Embed</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div id="sharetools-video-inline-100000003932978"
+					class="sharetools sharetools-video-inline"
+					data-shares="facebook|,twitter|"
+					data-url="https://www.nytimes.com/video/world/americas/100000003932978/villa-priests-of-buenos-aires.html"
+					data-title="Villa Priests of Buenos Aires"
+					data-description="Priests working in the slums or “villas” of Buenos Aires are a legacy left behind by Pope Francis from when he was Archbishop Jorge Bergoglio."
+					data-content-type="video">
+				</div>
+			</div>
+		</div>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="495" data-total-count="7339" id="story-continues-24" tabindex="-1">Para muchos argentinos, Jorge Mario Bergoglio era un misterio. Cuando se convirtió en el arzobispo de Buenos Aires en 1998, transformó la residencia oficial en un hostal para sacerdotes y se mudó al edificio de oficinas de la diócesis en el centro de la ciudad. Se instaló en una pequeña habitación en la que tenía un calentador portátil para los fines de semana, cuando la calefacción del edificio se apagaba automáticamente. Muchas veces preparaba sus propia comida en una cocineta.</p>
+<p class="story-body-text story-content" data-para-count="604" data-total-count="7943" id="story-continues-25" tabindex="-1">Como arzobispo, hablaba muy poco con los medios y no frecuentaba las zonas ricas de la capital. El arzobispo anterior se codeaba con las élites políticas (lo que provocó un escándalo de corrupción), pero Bergoglio estableció una clara distancia. Decidió concentrarse en los pobres de Argentina. Creó un grupo de sacerdotes que trabajaban y vivían en las villas miseria de Buenos Aires, que él visitaba con regularidad y donde solía presidir procesiones religiosas y celebrar misas. Antes de cada Pascua, visitaba los prisioneros en las cárceles, a pacientes enfermos de SIDA o a los ancianos.</p>
+<p class="story-body-text story-content" data-para-count="420" data-total-count="8363" id="story-continues-26" tabindex="-1">“Su papado es una continuidad clara de su enfoque hacia los pobres”, comentó el padre Augusto Zampini Davies, quien trabajó en el barrio Bajo Boulogne de Buenos Aires. “La iglesia, quienes lo designaron, querían un cambio, y lo querían desde la periferia. Pero lo que quizás no pensaron es que cuando comenzamos a ver el mundo desde la perspectiva de los más pobres, sufrimos una profunda transformación”.</p>
+<p class="story-body-text story-content" data-para-count="585" data-total-count="8948" id="story-continues-27" tabindex="-1">Los abuelos de Francisco, y su padre, eran inmigrantes de la región Piamonte de Italia que abandonaron el país con la esperanza de encontrar mejores oportunidades en Argentina. También buscaban huir del régimen fascista de Benito Mussolini. Planeaban viajar en octubre de 1927 a bordo del Principessa Mafalda, un trasatlántico italiano; pero por fortuna no lograron abordarlo: el barco se hundió en altamar. La familia tomó otra embarcación y llegó a Buenos Aires, a donde muchos otros italianos y europeos habían emigrado. Pocos años después, nació Jorge Mario Bergoglio.</p>
+<figure id="media-100000003929394" class="media photo media-100000003929394 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-HP6A-copy-copy/19FRANCIS-SS-slide-HP6A-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-29">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-HP6A-copy-copy/19FRANCIS-SS-slide-HP6A-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-HP6A-copy-copy/19FRANCIS-SS-slide-HP6A-superJumbo.jpg" data-mediaviewer-caption="Durante la infancia de Francisco, en los años 40, la iglesia católica argentina era nacionalista y se le identificaba muy de cerca con el peronismo." data-mediaviewer-credit="Jesuit General Curia, vía Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-HP6A-copy-copy/19FRANCIS-SS-slide-HP6A-master315.jpg"/>
+		<meta itemprop="height" content="441" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Durante la infancia de Francisco, en los años 40, la iglesia católica argentina era nacionalista y se le identificaba muy de cerca con el peronismo.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Jesuit General Curia, vía Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="614" data-total-count="9562" id="story-continues-29" tabindex="-1">La abuela de Jorge, Rosa, quien fue una influencia dominante en su vida, le enseñó italiano con las inflexiones piamontesas y le infundió el amor por la literatura. Entre sus novelas favoritas está el clásico italiano de Alessandro Manzoni “I Promessi Sposi” (“Los novios” en español), que ha leído al menos tres veces. Ivereigh, su biógrafo, considera que la visión que tiene Francisco de la iglesia como un “hospital de campaña” refleja influencias del libro, pues éste describe a los aguerridos sacerdotes que trabajan en un hospital de campo en épocas de guerra a las afueras de Milán.</p>
+<p class="story-body-text story-content" data-para-count="382" data-total-count="9944" id="story-continues-30" tabindex="-1">Cuando Jorge tenía 16 años salió a pasear con algunos compañeros, y al pasar frente a su basílica en Buenos Aires, sintió que tenía que entrar. “Yo no sé qué me pasó”, relató el Cardenal Bergoglio durante una entrevista en 2012 con una estación de radio comunitaria de Buenos Aires. “Sentí como si alguien me agarró desde adentro y me llevó al confesionario”.</p>
+<p class="story-body-text story-content" data-para-count="340" data-total-count="10284" id="story-continues-31" tabindex="-1">Al salir, el adolescente estaba convencido de que se convertiría en sacerdote. Aunque su familia tenía profundas raíces católicas, su madre, Regina, se opuso a que su hijo mayor ingresara al seminario. Sólo se arrepintió algunos años después de la ordenación de su hijo como jesuita; entonces, se arrodilló y pidió su bendición.</p>
+<p class="story-body-text story-content" data-para-count="546" data-total-count="10830" id="story-continues-32" tabindex="-1">Entre los católicos, a los jesuitas se les conoce como misioneros, intelectuales, educadores, escépticos, versados en política y celosos de su independencia. Ellos ayudaron a crear la Argentina moderna, pero la orden fue disuelta temporalmente en 1773 por el Papa Clemente XIV en un momento crucial de la historia latinoamericana: Clemente apoyó a los monarcas europeos que intentaban dividirse el continente mientras que los jesuitas apoyaron a las poblaciones indígenas que vivían en comunidades independientes conocidas como reducciones.</p>
+<p class="story-body-text story-content" data-para-count="441" data-total-count="11271" id="story-continues-33" tabindex="-1">Para Francisco, el evento más transformador de sus primeros años de sacerdocio fue el Concilio Vaticano II, que se reunió entre 1962 y 1965, y provocó debates internos que llevaron a la adopción de una actitud de apertura en la iglesia. Desde entonces es posible celebrar misa en los idiomas nativos, no sólo en latín, y la iglesia decidió abrir un diálogo sin precedentes con los miembros de otros credos, incluyendo a los judíos.</p>
+<p class="story-body-text story-content" data-para-count="506" data-total-count="11777" id="story-continues-34" tabindex="-1">Sin embargo, para muchos católicos, el concilio ocasionó profundas inquietudes y divisiones. Para los años setenta, los jesuitas estaban divididos, en parte debido a distintas interpretaciones sobre cómo lograr una verdadera justicia social, y el número de nuevos sacerdotes disminuyó notablemente. En Argentina, muchos jesuitas habían adoptado una rama con tintes marxistas de la teología de la liberación, un movimiento latinoamericano que buscaba un cambio estructural para ayudar a los pobres.</p>
+<p class="story-body-text story-content" data-para-count="326" data-total-count="12103" id="story-continues-35" tabindex="-1">Cuando tenía tan sólo 36 años de edad, el padre Bergoglio quedó a cargo de los jesuitas en Argentina. Más tarde admitiría que no tenía la madurez ni la preparación necesaria para esta posición. Pero logró generar lealtad entre sus seguidores y fue reconocido por lograr un aumento en el número de nuevos sacerdotes.</p>
+<p class="story-body-text story-content" data-para-count="348" data-total-count="12451" id="story-continues-36" tabindex="-1">Pero su estilo estricto también le ganó enemigos. Por décadas lo acusaron de no haber protegido a dos sacerdotes víctimas de secuestro y tortura por parte del gobierno militar de Argentina en los setenta, acusaciones que han rebatido sus biógrafos y otras personas de la iglesia argentina. Algunos jesuitas lo consideraban un ultraconservador.</p>
+<p class="story-body-text story-content" data-para-count="89" data-total-count="12540" id="story-continues-37" tabindex="-1">No sería la última vez que alguien intentaría encasillarlo en una ideología definida.</p>
+<p class="story-body-text story-content" data-para-count="27" data-total-count="12567" id="story-continues-38" tabindex="-1"><strong>‘Excremento del diablo’</strong></p>
+<p class="story-body-text story-content" data-para-count="475" data-total-count="13042" id="story-continues-39" tabindex="-1">Un martes por la mañana en junio pasado, el Papa Francisco apareció en la capilla de la casa de huéspedes Santa Marta para hablar de pobreza y del Evangelio. Había una lista de espera de cuatro meses para asistir a una de sus celebraciones matutinas, y Francisco las reserva en su mayoría para gente ordinaria, misioneros, sacerdotes y religiosas. Pero Radio Vaticana, la estación de la Santa Sede, tiene permiso para transmitir extractos de su mensaje a todo el mundo.</p>
+<p class="story-body-text story-content" data-para-count="408" data-total-count="13450" id="story-continues-40" tabindex="-1">Su mensaje central, para sorpresa de pocos, suele girar alrededor de la pobreza. Pobreza, como subrayó Francisco el 16 de junio, es “una palabra que siempre avergüenza”. Mencionó que muchas veces se escuchan quejas como “este sacerdote habla demasiado de pobreza, este obispo habla de pobreza, este cristiano, esta religiosa habla de pobreza”, seguidas por: “¿son un poco comunistas, verdad?”</p>
+<figure id="media-100000003929396" class="media photo media-100000003929396 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-FIYD-copy/19FRANCIS-SS-slide-FIYD-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-42">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-FIYD-copy/19FRANCIS-SS-slide-FIYD-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-FIYD-copy/19FRANCIS-SS-slide-FIYD-superJumbo.jpg" data-mediaviewer-caption="El Cardenal Jorge Mario Bergoglio en el metro de Buenos Aires en 2008. Fue elegido arzobispo de Buenos Aires en 1998." data-mediaviewer-credit="Pablo Leguizamon/Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-FIYD-copy/19FRANCIS-SS-slide-FIYD-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">El Cardenal Jorge Mario Bergoglio en el metro de Buenos Aires en 2008. Fue elegido arzobispo de Buenos Aires en 1998.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Pablo Leguizamon/Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="531" data-total-count="13981" id="story-continues-42" tabindex="-1">Los primeros meses del pontificado de Francisco enamoraron al mundo entero. Descubrimos un papa que vive como un hombre común y corriente, que pagó el hotel donde se hospedó antes de su inesperada elección, que sigue usando sus zapatos negros en vez de los tradicionales zapatos papales rojos. Lavó los pies de prisioneros, mujeres y musulmanes. Besó la cabeza de un hombre terriblemente desfigurado. Y marcó el rumbo de una actitud pública más amable hacia los homosexuales cuando dijo, “¿quién soy yo para juzgar?”</p>
+<p class="story-body-text story-content" data-para-count="629" data-total-count="14610" id="story-continues-43" tabindex="-1">Los tradicionalistas se quejaron, pero Francisco logró, casi de un día para otro, renovar la imagen de la iglesia, al menos en cuanto a la forma. Pero también comenzó a ocuparse del fondo. En noviembre de 2013 dio a conocer una suerte de declaración de su misión papal con “Evangelii Gaudium”, un amplio documento de 224 páginas que muchos católicos recibieron como un llamado optimista a vivir un catolicismo tolerante, alegre e incluyente, sobre todo con los pobres del mundo. Pero muchos se sorprendieron ante el duro ataque de Francisco al sistema económico global, al que calificó de “injusto en su raíz”.</p>
+<p class="story-body-text story-content" data-para-count="637" data-total-count="15247" id="story-continues-44" tabindex="-1">Tocó el tema con mayor profundidad en junio en su emblemática encíclica ambiental, “Laudato Si”, en la que sostiene que los países ricos tienen mayor responsabilidad en el cambio climático y están obligados a ayudar a los países pobres a manejar la crisis. Después, en su visita a Bolivia en julio, Francisco comparó los excesos del capitalismo con el “excremento del diablo” y se disculpó por la participación de la iglesia en el colonialismo español en América Latina. También aprovechó para advertir sobre el peligro que representa el “nuevo colonialismo” del materialismo, la desigualdad y la explotación.</p>
+<p class="story-body-text story-content" data-para-count="413" data-total-count="15660" id="story-continues-45" tabindex="-1">“Cuando el capital se convierte en ídolo y dirige las opciones de los seres humanos, cuando la avidez por el dinero tutela todo el sistema socioeconómico, arruina la sociedad, condena al hombre, lo convierte en esclavo, destruye la fraternidad interhumana, enfrenta pueblo contra pueblo y, como vemos, incluso pone en riesgo ésta, nuestra casa común”, afirmó Francisco en uno de sus discursos en Bolivia.</p>
+<p class="story-body-text story-content" data-para-count="305" data-total-count="15965" id="story-continues-46" tabindex="-1">Algunos conservadores de Estados Unidos consideran que el papa argentino está desplegando un ataque frontal en contra del estilo de vida de los estadounidenses. Otros lo etiquetaron de comunista o socialista. Algunos católicos adinerados decidieron cancelar sus donaciones y expresaron su inconformidad.</p>
+<p class="story-body-text story-content" data-para-count="261" data-total-count="16226" id="story-continues-47" tabindex="-1">“Espero que el sacerdote de mi parroquia no me regañe por decir esto, pero no me parece bien que mis obispos, mis cardenales o mi papa hablen de política económica”, respondió Jeb Bush, candidato presidencial republicano y católico, ante la encíclica.</p>
+<figure id="media-100000003929393" class="media photo media-100000003929393 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-JVI9-copy/19FRANCIS-SS-slide-JVI9-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-49">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-JVI9-copy/19FRANCIS-SS-slide-JVI9-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-JVI9-copy/19FRANCIS-SS-slide-JVI9-superJumbo.jpg" data-mediaviewer-caption="En el 2008, el Cardenal Bergoglio lavó y besó los pies de jóvenes adictos a las drogas durante una misa en Buenos Aires." data-mediaviewer-credit="Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-JVI9-copy/19FRANCIS-SS-slide-JVI9-master675.jpg"/>
+		<meta itemprop="height" content="452" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">En el 2008, el Cardenal Bergoglio lavó y besó los pies de jóvenes adictos a las drogas durante una misa en Buenos Aires.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="495" data-total-count="16721" id="story-continues-49" tabindex="-1">Para los que conocieron a Francisco en Argentina, tales etiquetas no cuadran con la realidad. Cuando fue líder de los jesuitas y arzobispo de Buenos Aires, Francisco criticó fuertemente al marxismo, en especial cuando algunos sacerdotes trataban de combinar la dialéctica de la lucha de clases violenta con el propósito de justicia social que predica el catolicismo. Más adelante, también criticó la creencia neoliberal de que la economía de mercado es la cura universal para los pobres.</p>
+<p class="story-body-text story-content" data-para-count="333" data-total-count="17054" id="story-continues-50" tabindex="-1">“Es muy crítico de la ideología porque las ideologías surgen de intelectuales y políticos que buscan manipular el corazón de las personas”, señaló Guzmán Carriquiry Lecour, secretario de la Pontificia Comisión para América Latina y antiguo amigo del papa. “Para él, las ideologías ocultan y denigran la realidad”.</p>
+<p class="story-body-text story-content" data-para-count="467" data-total-count="17521" id="story-continues-51" tabindex="-1">En los años setenta, Francisco apoyó una corriente argentina derivada de la teología de la liberación, conocida como teología del pueblo, que gira en torno a la cultura nativa y las tradiciones argentinas y, en consecuencia, rechaza el legado colonialista. Según esta teología, la fe se deriva de los pobres, y los pobres son centrales para el cristianismo. A diferencia de los sistemas que diseñan las élites o los intelectuales, el Evangelio es para todos.</p>
+<p class="story-body-text story-content" data-para-count="406" data-total-count="17927" id="story-continues-52" tabindex="-1">“No querían usar una visión liberal o marxista, así que buscaron en nuestra historia otro tipo de teoría para explicar la sociedad latinoamericana y argentina”, manifestó el padre Juan Carlos Scannone, profesor jesuita y un distinguido proponente de la teología. “No me atrevería a decir que Francisco es un teólogo del pueblo, pero sí ha recibido una fuerte influencia de esta teología”.</p>
+<p class="story-body-text story-content" data-para-count="448" data-total-count="18375" id="story-continues-53" tabindex="-1">Durante gran parte del siglo pasado, Argentina estuvo marcada por turbulencias económicas. Francisco creció sabiendo que sus abuelos y otros parientes en Argentina se habían visto profundamente afectados por los efectos globales del desplome del mercado de valores en 1929 y la Gran Depresión. Durante la infancia de Francisco, en los años 40, la iglesia católica argentina era nacionalista y se le identificaba muy de cerca con el peronismo.</p>
+<p class="story-body-text story-content" data-para-count="408" data-total-count="18783" id="story-continues-54" tabindex="-1">A lo largo de las décadas, el peronismo mutó al incorporar populismo, autoritarismo y nacionalismo hasta que finalmente Perón se separó de la iglesia católica. Durante la dictadura militar en 1971, cuando era un joven sacerdote, Francisco sirvió en la Guardia de Hierro, un grupo de justicia social de clase trabajadora cuyo objetivo era lograr el regreso de Perón, que había sido exiliado a España.</p>
+<p class="story-body-text story-content" data-para-count="564" data-total-count="19347" id="story-continues-55" tabindex="-1">Según Ivereigh, su biógrafo, Francisco terminó por rechazar las ideologías políticas y decidió concentrarse en el pueblo fiel y subió el tono al hablar contra los políticos, pues consideraba que hacían muy poco por los pobres. Como arzobispo de Buenos Aires, Francisco movilizó a la iglesia en respuesta a la crisis económica de Argentina de 2001 y 2002, asignó más sacerdotes a los barrios pobres, y abrió cocinas y escuelas, clínicas y centros de rehabilitación para personas con problemas de drogas, mientras disminuían los servicios públicos.</p>
+<p class="story-body-text story-content" data-para-count="277" data-total-count="19624" id="story-continues-56" tabindex="-1">También criticaba a los líderes políticos de Argentina durante la ceremonia tradicional del Te Deum, al que a veces asistía el presidente de turno. (Esta ceremonia coincide con el aniversario de la Revolución de Mayo en Argentina, precursora de la independencia nacional).</p>
+<p class="story-body-text story-content" data-para-count="196" data-total-count="19820" id="story-continues-57" tabindex="-1">Sus regaños enfurecieron a distintos líderes, incluido el ex presidente Néstor Kirchner. Sus detractores decían que interfería en asuntos seculares y que jugaba sus propios juegos políticos.</p>
+<p class="story-body-text story-content" data-para-count="123" data-total-count="19943" id="story-continues-58" tabindex="-1">“Toma riesgos”, explicó Abraham Skorka, rabino en Buenos Aires y amigo cercano del papa. “Le huye a la comodidad”.</p>
+<p class="story-body-text story-content" data-para-count="232" data-total-count="20175" id="story-continues-59" tabindex="-1">El Arzobispo Marcelo Sánchez Sorondo, un argentino que ha servido en el Vaticano por más de 40 años, declaró que Francisco no condena el capitalismo en su totalidad, pero sí critica la indiferencia que fomenta hacia los pobres.</p>
+<p class="story-body-text story-content" data-para-count="304" data-total-count="20479" id="story-continues-60" tabindex="-1">“Por supuesto, el papa no tiene la solución, la solución económica”, enfatizó Monseñor Sánchez Sorondo, canciller de la Pontificia Academia de las Ciencias. “Pero el papa actúa como una luz en la calle que dice: ‘Éste no es el camino. Este camino sacrifica a muchos y es excluyente’”.</p>
+<p class="story-body-text story-content" data-para-count="79" data-total-count="20558" id="story-continues-61" tabindex="-1">“Al papa le preocupa que la plutocracia destruya a la democracia”, agregó.</p>
+<p class="story-body-text story-content" data-para-count="255" data-total-count="20813" id="story-continues-62" tabindex="-1">Kenneth F. Hackett, embajador de Estados Unidos en la Santa Sede, opina que se ha simplificado equivocadamente la visión económica de Francisco y le parece irrisorio sugerir que el papa es socialista, pues se trata de una “caracterización ingenua”.</p>
+<p class="story-body-text story-content" data-para-count="89" data-total-count="20902" id="story-continues-63" tabindex="-1">Hackett continuó: “No creo que odie al capitalismo. Me parece que odia los excesos”.</p>
+<p class="story-body-text story-content" data-para-count="196" data-total-count="21098" id="story-continues-64" tabindex="-1">Hasta cierto punto, Francisco parece ir en contra de la primacía contemporánea de la economía sobre la fe. Cree que las respuestas se encuentran en el Evangelio, y no en Adam Smith o Karl Marx.</p>
+<p class="story-body-text story-content" data-para-count="21" data-total-count="21119" id="story-continues-65" tabindex="-1"><strong>Europa estaba agotada</strong></p>
+<p class="story-body-text story-content" data-para-count="604" data-total-count="21723" id="story-continues-66" tabindex="-1">El primero de septiembre, en la imponente nave de mármol de la Basílica de San Pedro, la cúpula del Vaticano parecía estar ordenada a la perfección para la primera celebración de la Jornada Mundial de Oración por el Cuidado de la Creación por parte de Francisco. Los cardenales estaban sentados en las primeras bancas, vestidos de rojo, y detrás de ellos los obispos, de morado. A continuación se encontraban los sacerdotes y misioneros; después, peregrinos y turistas. Frente al altar baldaquino de Bernini, un sacerdote balanceaba lentamente un incensario que liberaba bocanadas de incienso.</p>
+<p class="story-body-text story-content" data-para-count="366" data-total-count="22089" id="story-continues-67" tabindex="-1">Francisco estaba sentando en una silla blanca sobre una tarima elevada, mientras un monje capuchino dirigía la homilía sobre el medio ambiente. Mientras los turistas trataban de capturar el momento con sus celulares, el ritual y majestuosidad de la ceremonia parecían una burla directa del objetivo de Francisco de crear “una iglesia pobre y para los pobres.”</p>
+<figure id="media-100000003929382" class="media photo media-100000003929382 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-KRNJ-copy/19FRANCIS-SS-slide-KRNJ-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-69">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-KRNJ-copy/19FRANCIS-SS-slide-KRNJ-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-KRNJ-copy/19FRANCIS-SS-slide-KRNJ-superJumbo.jpg" data-mediaviewer-caption="El padre Jorge Bergoglio. Cuando Jorge tenía 16 años salió a pasear con algunos compañeros, y al pasar frente a su basílica en Buenos Aires, sintió que tenía que entrar. “Yo no sé qué me pasó”, relató el Cardenal Bergoglio durante una entrevista en 2012 con una estación de radio comunitaria de Buenos Aires. “Sentí como si alguien me agarró desde adentro y me llevó al confesionario”." data-mediaviewer-credit="Gamma-Rapho, via Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2015/09/19/world/europe/19FRANCIS-SS-slide-KRNJ-copy/19FRANCIS-SS-slide-KRNJ-master315.jpg"/>
+		<meta itemprop="height" content="466" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">El padre Jorge Bergoglio. Cuando Jorge tenía 16 años salió a pasear con algunos compañeros, y al pasar frente a su basílica en Buenos Aires, sintió que tenía que entrar. “Yo no sé qué me pasó”, relató el Cardenal Bergoglio durante una entrevista en 2012 con una estación de radio comunitaria de Buenos Aires. “Sentí como si alguien me agarró desde adentro y me llevó al confesionario”.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Gamma-Rapho, via Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="222" data-total-count="22311" id="story-continues-69" tabindex="-1">Los cardenales eligieron a Francisco en parte porque querían restablecer el orden en el Vaticano tras los escándalos y las fallas burocráticas que precedieron la inesperada renuncia de Benedicto XVI, en febrero de 2013.</p>
+<p class="story-body-text story-content" data-para-count="650" data-total-count="22961" id="story-continues-70" tabindex="-1">Desde entonces, Francisco ha delegado algunas facultades del Vaticano a un consejo de nueve cardenales de todo el mundo, al que se ha llamado C-9. Designó al australiano George Pell, que habla con total franqueza, para dirigir una nueva secretaría de economía que se encargará de organizar las finanzas del Vaticano. Creó una nueva comisión que se ocupará de la crisis de abuso sexual de los clérigos. Otro panel ayudó a formular las reformas recientes a las normas católicas aplicables a la anulación del matrimonio. Y otra comisión más se encargará de modernizar y consolidar las crecientes operaciones de comunicaciones del Vaticano.</p>
+<p class="story-body-text story-content" data-para-count="241" data-total-count="23202" id="story-continues-71" tabindex="-1">Sin embargo, las reformas de Francisco no están completas. Pero el cambio que él menciona con mayor frecuencia es el que más resistencia despierta: remodelar el enfoque pastoral de la iglesia y la aplicación de la doctrina de la iglesia.</p>
+<p class="story-body-text story-content" data-para-count="438" data-total-count="23640" id="story-continues-72" tabindex="-1">“La doctrina debe evolucionar con el tiempo, de otra manera no es doctrina”, indicó el padre Humberto Miguel Yañez, teólogo moral jesuita de la Pontificia Universidad Gregoriana en Roma y antiguo protegido de Bergoglio en Argentina. “La doctrina es la transmisión del Evangelio. Para transmitir el Evangelio, debemos estar en contacto con la cultura contemporánea. Cada era tiene sus propios problemas. Nada permanece igual”.</p>
+<p class="story-body-text story-content" data-para-count="379" data-total-count="24019" id="story-continues-73" tabindex="-1">La guerra al interior de la iglesia forja su propio idioma, y varios sacerdotes reformadores esperan que el énfasis de Francisco en temas como la “misericordia” y la “apertura” sea una señal de que se prepara para redirigir las enseñanzas respecto a los homosexuales, los divorciados, las parejas que viven juntas sin casarse y otros temas que causan división social.</p>
+<p class="story-body-text story-content" data-para-count="702" data-total-count="24721" id="story-continues-74" tabindex="-1">No cabe duda de que desde ya hay una lucha ideológica para determinar qué significa formar una “familia”, lo que será objeto de una importante reunión en el Vaticano, conocida como sínodo, en octubre. La polémica escaló en una reunión de cardenales en la que las facciones sostuvieron álgidas discusiones sobre la posición de la iglesia. Los conservadores que sospechan que el papa argentino quiere relajar la doctrina aún ofrecen resistencia. Por ejemplo, el martes pasado, en Estados Unidos, 11 cardenales publicaron un libro en el que advierten que la iglesia no debe diluir las normas que estipulan que los católicos divorciados que vuelven a casarse no pueden recibir la comunión.</p>
+<p class="story-body-text story-content" data-para-count="454" data-total-count="25175" id="story-continues-75" tabindex="-1">El año pasado, el Cardenal Gerhard Ludwig Müller, encargado de los temas doctrinales en el Vaticano, dijo a un periódico católico francés que ampliará su autoridad “para proporcionar estructura teológica” a las funciones del papa, pues Francisco es más pastor que teólogo. Muchos no sólo consideraron que sus comentarios tenían un aire de superioridad, sino que los interpretaron como una acción descarada para contener al papa argentino.</p>
+<p class="story-body-text story-content" data-para-count="548" data-total-count="25723" id="story-continues-76" tabindex="-1">Algunos conservadores de Estados Unidos, encabezados por el Cardenal Raymond Burke de Wisconsin, a quien Francisco ha dejado al margen, no han dudado en expresar sus críticas. Por otra parte, el periódico alemán Die Zeit informó hace poco que algunos funcionarios del Vaticano han hecho circular un documento de siete páginas en el que se detalla la frustración que ha provocado las reformas recientes de Francisco para agilizar el proceso de anulación. Los funcionarios acusan al papa de diluir el dogma y crear un “divorcio católico”.</p>
+<p class="story-body-text story-content" data-para-count="488" data-total-count="26211" id="story-continues-77" tabindex="-1">Francisco siempre ha tenido enemigos, tanto en Argentina como en el Vaticano, incluidos algunos que intentaron desacreditarlo durante el cónclave de 2005 en el que ocupó el segundo lugar, detrás de Benedicto, en la elección del nuevo papa. Pero muchos analistas y funcionarios del Vaticano afirman que la fricción de ahora también se debe a los cambios institucionales y la ambigüedad deliberada de un papa que ha creado estructuras nuevas pero aún mantiene vigentes las antiguas.</p>
+<p class="story-body-text story-content" data-para-count="395" data-total-count="26606" id="story-continues-78" tabindex="-1">“Algunos que tal vez se consideraban personal de confianza en el régimen anterior no saben cómo funciona el nuevo”, comentó un funcionario de alto rango en el Vaticano que prefirió el anonimato porque no está autorizado para hablar públicamente. “Para el papa, es una forma de mantener su propia autonomía. Nadie sabe bien cómo piensa, o quiénes son sus asesores más cercanos”.</p>
+<p class="story-body-text story-content" data-para-count="384" data-total-count="26990" id="story-continues-79" tabindex="-1">Tras la renuncia de Benedicto, muchos expertos predijeron que se elegiría a un papa de América Latina, donde está el 40 por ciento de los católicos del mundo. Pero esta elección no se trató solamente de cubrir una demografía. Francisco trajo consigo el punto de vista de una iglesia latinoamericana que, en décadas recientes, ha desarrollado su propia versión de catolicismo.</p>
+<p class="story-body-text story-content" data-para-count="477" data-total-count="27467" id="story-continues-80" tabindex="-1">Esta visión se manifestó con mayor claridad en 2007, cuando los obispos latinoamericanos se reunieron en un santuario mariano en Aparecida, Brasil. En esa ocasión, elaboraron una lista de prioridades para evangelizar en las calles. Decidieron dar prioridad a los migrantes, los pobres, los enfermos y los marginados de la sociedad. También optaron por una religión popular, parecida a la que sigue la gente común, y prometieron promover la protección del medio ambiente.</p>
+<p class="story-body-text story-content" data-para-count="153" data-total-count="27620" id="story-continues-81" tabindex="-1">¿Y quién fue el editor en jefe del documento? Francisco. Y llevó consigo el “Documento de Aparecida” a Roma como anteproyecto para su pontificado.</p>
+<p class="story-body-text story-content" data-para-count="302" data-total-count="27922" id="story-continues-82" tabindex="-1">“Europa estaba agotada”, subrayó Vincenzo Paglia, presidente del Pontificio Consejo para la Familia. “No tenía energía, ni siquiera para producir un papa. Por eso el papa sólo podía provenir de América Latina. No de África ni de Asia, porque esos continentes todavía no estaban listos”.</p>
+<p class="story-body-text story-content" data-para-count="12" data-total-count="27934" id="story-continues-83" tabindex="-1">La Mona Lisa</p>
+<p class="story-body-text story-content" data-para-count="431" data-total-count="28365" id="story-continues-84" tabindex="-1">Francisco está practicando su inglés. Algunos afirman que escribió el discurso que dirigirá al Congreso en Washington y ahora se concentra en cómo pronunciarlo. Su lengua materna es el español, habla italiano con fluidez y puede conversar en alemán y francés, pero sus amigos dicen que no se siente cómodo cuando habla inglés. Así que decidió practicar, porque no quiere que su pronunciación interfiera con su mensaje.</p>
+<p class="story-body-text story-content" data-para-count="118" data-total-count="28483" id="story-continues-85" tabindex="-1">“Sabe bien que este viaje es importante”, enfatizó Monseñor Paglia. “Así que se ha preparado a conciencia”.</p>
+<p class="story-body-text story-content" data-para-count="242" data-total-count="28725" id="story-continues-86" tabindex="-1">Estados Unidos también se preparó. Activistas que promueven diferentes causas sociales se han desplazado a Filadelfia para esperar a Francisco. En Washington y otros lugares se reúnen grupos para analizar a fondo el “efecto Francisco”.</p>
+<p class="story-body-text story-content" data-para-count="519" data-total-count="29244" id="story-continues-87" tabindex="-1">En Argentina, a algunos todavía les cuesta reconocer al Francisco alegre de la plaza de San Pedro como el mismo hombre tosco que una vez dirigió la iglesia de Buenos Aires. Ahí se propuso ser muy discreto y evitó a los medios de comunicación, salvo por unos cuantos periodistas de confianza. El joven jesuita, el Arzobispo Bergoglio, era conocido por su “piadosa cara larga”, según la biografía de Ivereigh. Algunas veces se le apodó “La Gioconda”, en referencia a la Mona Lisa y su enigmática sonrisa.</p>
+<p class="story-body-text story-content" data-para-count="205" data-total-count="29449" id="story-continues-88" tabindex="-1">“En algunos aspectos, como su relación con los medios o su sonrisa, ha cambiado un poco”, declaró el padre Yañez, el jesuita argentino. “Pero puedo ver a la misma persona y la misma coherencia”.</p>
+<p class="story-body-text story-content" data-para-count="441" data-total-count="29890" id="story-continues-89" tabindex="-1">Francisco se ha culpado por algunos conflictos del pasado en Argentina, en especial con sus hermanos jesuitas (con quienes se reconcilió tras convertirse en papa). En una larga entrevista que le hizo en 2013 el padre jesuita Antonio Spadaro, Francisco sostuvo que debido a su “manera autoritaria y rápida de tomar decisiones” cuando era un joven, lo tacharon erróneamente de ultraconservador. “Nunca he sido de derecha”, añadió.</p>
+<p class="story-body-text story-content" data-para-count="225" data-total-count="30115" id="story-continues-90" tabindex="-1">Pero tampoco es de izquierda. Aunque algunas de sus ideas sociales y económicas han inspirado a la izquierda estadounidense, se opone firmemente al aborto y cree que el matrimonio debe celebrarse entre un hombre y una mujer.</p>
+<p class="story-body-text story-content" data-para-count="326" data-total-count="30441" id="story-continues-91" tabindex="-1">“La gente proyecta en él sus propias aspiraciones”, expresó el alto funcionario del Vaticano. “Es posible que algunos tengan expectativas que no verán cumplidas totalmente. Tal vez algunos esperan que haya grandes cambios institucionales en áreas como el matrimonio entre homosexuales o la ordenación de mujeres”.</p>
+<p class="story-body-text story-content" data-para-count="329" data-total-count="30770" id="story-continues-92" tabindex="-1">A Francisco no parecen molestarle las contradicciones, e incluso es posible que ni siquiera las considera como tales. Ha promovido el diálogo abierto, y también las críticas, en preparación para el sínodo de octubre. Está empeñado en abrir la iglesia, aunque no ha revelado cuál es el camino exacto que ésta debe seguir.</p>
+<p class="story-body-text story-content" data-para-count="180" data-total-count="30950" id="story-continues-93" tabindex="-1">Pero todos los que lo conocen están de acuerdo en que, al final, Francisco tomará una decisión. Y entonces, el popular y enigmático papa pondrá todas sus cartas sobre la mesa.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Gaia Pianigiani contribuyó con este reportaje desde Ciudad del Vaticano, y Jonathan Gilbert desde Buenos Aires.</p>
+
+			</div>
+
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2015/10/22/francisco-un-papa-humilde-que-quiere-cambiar-el-mundo/"
+				data-title="Noticias: Francisco, un papa humilde que quiere cambiar el mundo"
+				data-author="POR JIM YARDLEY"
+				data-media=""
+				data-description="A Francisco no parecen molestarle las contradicciones, e incluso es posible que ni siquiera las considera como tales. Ha promovido el diálogo abierto, y también las críticas. Está empeñado en abrir la iglesia, aunque no ha revelado cuál es el camino exacto que ésta debe seguir."
+				data-publish-date="22 de octubre de 2015"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":797,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004108820"/>
+<meta name="hdl" content="‘El que no la golpee es infiel’: La historia de un linchamiento en Afganistán" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20160421" />
+<meta name="utime" content="20160421183714" />
+<meta name="ptime" content="20160421183714" />
+<meta name="DISPLAYDATE" content="Apr. 21, 2016" />
+<meta name="dat" content="Apr. 21, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="las-leyes-de-afganistan-no-le-hicieron-justicia-a-una-joven-asesinada-por-una-multitud-de-fanaticos-religiosos" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/04/21/las-leyes-de-afganistan-no-le-hicieron-justicia-a-una-joven-asesinada-por-una-multitud-de-fanaticos-religiosos/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="‘El que no la golpee es infiel’: La historia de un linchamiento en Afganistán" />
+<meta property="og:description" content="El asesinato de Farkhunda Malikzada y la respuesta del sistema judicial ponen en entredicho más de una década de esfuerzos de Occidente por instituir el Estado de derecho y mejorar la condición de las mujeres en Afganistán." />
+<meta property="og:image" content="https://static01.nyt.com/images/2015/12/27/world/27AFGHANWOMEN-web2/27AFGHANWOMEN-web2-videoSixteenByNine768-v2.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-04-21" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/04/21/las-leyes-de-afganistan-no-le-hicieron-justicia-a-una-joven-asesinada-por-una-multitud-de-fanaticos-religiosos/" />
+<meta property="twitter:title" content="‘El que no la golpee es infiel’: La historia de un linchamiento en Afganistán" />
+<meta property="twitter:description" content="El asesinato de Farkhunda Malikzada y la respuesta del sistema judicial ponen en entredicho más de una década de esfuerzos de Occidente por instituir el Estado de derecho y mejorar la condición de las mujeres en Afganistán." />
+<meta name="author" content="Alissa J. Rubin" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Alissa J. Rubin" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="asia" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="asia" />
+<meta name="id" content="100000004108820"/>
+<meta name="wordCount" content="6739"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/04/21/las-leyes-de-afganistan-no-le-hicieron-justicia-a-una-joven-asesinada-por-una-multitud-de-fanaticos-religiosos/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=04&amp;day=21&amp;name=las-leyes-de-afganistan-no-le-hicieron-justicia-a-una-joven-asesinada-por-una-multitud-de-fanaticos-religiosos">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=10213">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/04\/21\/las-leyes-de-afganistan-no-le-hicieron-justicia-a-una-joven-asesinada-por-una-multitud-de-fanaticos-religiosos\/"},"headline":"\u2018El que no la golpee es infiel\u2019: La historia de un linchamiento en Afganist\u00e1n","datePublished":"2016-04-21T18:37:14+00:00","dateModified":"2016-04-22T14:45:07+00:00","author":{"@type":"Person","name":"Elias Lopez"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2015\/12\/27\/world\/27AFGHANWOMEN-web2\/27AFGHANWOMEN-web2-videoSixteenByNine768-v2.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"El asesinato de Farkhunda Malikzada y la respuesta del sistema judicial ponen en entredicho m\u00e1s de una d\u00e9cada de esfuerzos de Occidente por instituir el Estado de derecho y mejorar la condici\u00f3n de las mujeres en Afganist\u00e1n."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/04/21/las-leyes-de-afganistan-no-le-hicieron-justicia-a-una-joven-asesinada-por-una-multitud-de-fanaticos-religiosos/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2015/12/27/world/asia/flawed-justice-after-a-mob-killed-an-afghan-woman.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/asia" />
+<title>‘El que no la golpee es infiel’: La historia de un linchamiento en Afganistán &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2015/12/27/world/asia/flawed-justice-after-a-mob-killed-an-afghan-woman.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/04/21/las-leyes-de-afganistan-no-le-hicieron-justicia-a-una-joven-asesinada-por-una-multitud-de-fanaticos-religiosos/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-10213 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				‘El que no la golpee es infiel’: La historia de un linchamiento en Afganistán
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/04/21/las-leyes-de-afganistan-no-le-hicieron-justicia-a-una-joven-asesinada-por-una-multitud-de-fanaticos-religiosos/"
+					data-title="Noticias: ‘El que no la golpee es infiel’: La historia de un linchamiento en Afganistán"
+					data-author="POR ALISSA J. RUBIN"
+					data-media=""
+					data-description="El asesinato de Farkhunda Malikzada y la respuesta del sistema judicial ponen en entredicho más de una década de esfuerzos de Occidente por instituir el Estado de derecho y mejorar la condición de las mujeres en Afganistán."
+					data-publish-date="21 de abril de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/1WIAqxA">http://nyti.ms/1WIAqxA</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/asia/">Asia</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">‘El que no la golpee es infiel’: La historia de un linchamiento en Afganistán</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Alissa J. Rubin</span>
+</span>
+
+					<time class="dateline" datetime="2016-04-21">21 de abril de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/04/21/las-leyes-de-afganistan-no-le-hicieron-justicia-a-una-joven-asesinada-por-una-multitud-de-fanaticos-religiosos/"
+							data-title="Noticias: ‘El que no la golpee es infiel’: La historia de un linchamiento en Afganistán"
+							data-author="POR ALISSA J. RUBIN"
+							data-media=""
+							data-description="El asesinato de Farkhunda Malikzada y la respuesta del sistema judicial ponen en entredicho más de una década de esfuerzos de Occidente por instituir el Estado de derecho y mejorar la condición de las mujeres en Afganistán."
+							data-publish-date="21 de abril de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004110371" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/27/world/27AFGHANWOMEN-web2/27AFGHANWOMEN-web2-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/27/world/27AFGHANWOMEN-web2/27AFGHANWOMEN-web2-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/27/world/27AFGHANWOMEN-web2/27AFGHANWOMEN-web2-superJumbo.jpg" data-mediaviewer-caption="Hundreds of people gathered in Kabul to bury Farkhunda. Women carried her coffin, breaking the custom of staying away from funerals." data-mediaviewer-credit="Massoud Hossaini/Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/27/world/27AFGHANWOMEN-web2/27AFGHANWOMEN-web2-master1050.jpg"/>
+		<meta itemprop="height" content="681" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Hundreds of people gathered in Kabul to bury Farkhunda. Women carried her coffin, breaking the custom of staying away from funerals.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Massoud Hossaini/Associated Press
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2015/12/27/world/asia/flawed-justice-after-a-mob-killed-an-afghan-woman.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="198" data-total-count="198" id="story-continues-2" tabindex="-1"><em>Alissa Rubin, periodista de <a href="http://topics.nytimes.com/top/reference/timestopics/people/r/alissa_johannsen_rubin/index.html" target="_blank">The New York Times</a>, ganó el Premio Pulitzer 2016 por su trabajo en Afganistán. Este reportaje sobre la muerte de Farkhunda Malikzada fue publicado en diciembre de 2015.</em></p>
+<p class="story-body-text story-content" data-para-count="271" data-total-count="469" id="story-continues-3" tabindex="-1">KABUL, Afganistán – Farkhunda tuvo la oportunidad de escapar de la muchedumbre que quería asesinarla. Dos policías afganos la lanzaron al techo de un cobertizo, pero los hombres enfurecidos tomaron varas y tablas de madera y la golpearon hasta que se soltó y cayó.</p>
+<p class="story-body-text story-content" data-para-count="275" data-total-count="744" id="story-continues-4" tabindex="-1">Con la cara ensangrentada, luchó por levantarse. Trató de taparse el cabello con las manos cuando se dio cuenta, horrorizada, de que sus atacantes le habían arrancado su hiyab negro mientras caía. Fue rodeada por la gente mientras pateaban y pisoteaban su menudo cuerpo.</p>
+<p class="story-body-text story-content" data-para-count="544" data-total-count="1288" id="story-continues-5" tabindex="-1">Las <a href="http://www.nytimes.com/2015/03/21/world/asia/horror-over-womans-lynching-in-afghanistan-but-some-support-too.html" target="_blank">últimas horas de Farkhunda Malikzada</a>, una mujer de 27 años que quería estudiar islam pero fue acusada de quemar una copia del Corán en un santuario musulmán, impactaron a la sociedad afgana. Esto sucedió porque muchos de sus asesinos se grabaron mientras la golpeaban y publicaron tomas de su cuerpo deshecho en las redes sociales. Cientos de hombres observaron el linchamiento mientras sostenían sus teléfonos en alto para poder capturar la violencia, pero sin intervenir en absoluto. Entre los que miraban había varios policías.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="351" data-total-count="1639" id="story-continues-6" tabindex="-1">A <a href="http://www.nytimes.com/2015/03/03/world/asia/afghanistan-a-thin-line-of-defense-against-honor-killings.html" target="_blank">diferencia de muchos abusos</a> que se cometen en privado contra mujeres afganas, este asesinato —ocurrido en marzo de 2015— provocó una protesta nacional. Farkhunda no había quemado nada, al contrario: según las investigaciones, enfrentó a hombres que deshonraban el santuario, pues vendían amuletos y, de forma clandestina, viagra y condones.</p>
+<p class="story-body-text story-content" data-para-count="293" data-total-count="1932" id="story-continues-7" tabindex="-1">Al principio, las <a href="http://www.nytimes.com/2015/05/07/world/asia/afghan-judge-sentences-4-to-death-over-mob-killing.html" target="_blank">sentencias</a> emanadas del juicio parecían un triunfo dentro de la larga lucha por hacerle justicia a las mujeres afganas. Pero una mirada más atenta sugiere lo contrario. En la apelación, se consideró inocente al adivino que, según los investigadores, inició los sucesos.</p>
+<p class="story-body-text story-content" data-para-count="304" data-total-count="2236" id="story-continues-8" tabindex="-1">Al guardia del santuario, quien urdió la acusación falsa de la quema del Corán e incitó a la muchedumbre, se le conmutó la sentencia. Los policías que no buscaron ayuda y se quedaron mirando recibieron un simple regaño. Algunos atacantes que pueden identificarse en los videos evitaron su captura.</p>
+<p class="story-body-text story-content" data-para-count="260" data-total-count="2496" id="story-continues-9" tabindex="-1">Los abogados afganos y los defensores de derechos humanos concuerdan en que la mayoría de los acusados no tuvieron juicios justos. La familia de Farkhunda huyó del país, pues teme represalias, además de estar preocupada de que no se condene a los asesinos.</p>
+<p class="story-body-text story-content" data-para-count="448" data-total-count="2944" id="story-continues-10" tabindex="-1">La muerte de Farkhunda y la respuesta del sistema judicial ponen en entredicho más de una década de esfuerzos de Occidente por instituir el Estado de derecho y mejorar la condición de las mujeres en Afganistán. Solo Estados Unidos ha destinado más de mil millones de dólares para capacitar a abogados y jueces, así como para mejorar la protección legal de las mujeres. Los países europeos han proporcionado decenas de millones adicionales.</p>
+<p class="story-body-text story-content" data-para-count="333" data-total-count="3277" id="story-continues-11" tabindex="-1">Pero como ha pasado con otras iniciativas de Occidente por reconstruir Afganistán, estos esfuerzos han fracasado, según abogados y funcionarios tanto afganos como occidentales. La sociedad afgana ha resistido más de 150 años de intentos de ese tipo provenientes de extranjeros, desde ingleses pasando por rusos y estadounidenses.</p>
+<p class="story-body-text story-content" data-para-count="522" data-total-count="3799" id="story-continues-12" tabindex="-1">Es un país donde los lazos de parentesco y el sistema de clanes pasan por encima de la justicia, y el dinero de Occidente ha convertido a la corrupción es un estilo de vida. Los programas sobre el Estado de derecho a menudo se diseñan con total ignorancia de las normas legales afganas, sostienen los abogados extranjeros y afganos. Además, los esfuerzos occidentales por elevar la condición legal de las mujeres han provocado un resentimiento feroz entre los poderosos personajes religiosos y muchos afganos comunes.</p>
+<p class="story-body-text story-content" data-para-count="196" data-total-count="3995" id="story-continues-13" tabindex="-1">No obstante, las afganas necesitan un sistema legal que las defienda porque sin el apoyo de sus familiares varones no tienen ningún poder, y usualmente son sus familiares quienes abusan de ellas.</p>
+<p class="story-body-text story-content" data-para-count="351" data-total-count="4346" id="story-continues-14" tabindex="-1">“¿Dónde quedó la justicia?”, preguntó Mujibullah Malikzada, el hermano mayor de Farkhunda, sentando en un departamento con muy pocos muebles en Tayikistán. “En mi país islámico, lincharon y quemaron sin respeto ni honor a una muchacha, ¿y qué ha pasado? Dejamos nuestro hogar. Nunca capturaron a toda la gente. ¿Qué podemos hacer?”.</p>
+<p class="story-body-text story-content" data-para-count="184" data-total-count="4530" id="story-continues-15" tabindex="-1">Como último recurso, la familia de Farkhunda apeló a la Corte Suprema Afgana, que tiene el poder de imponer nuevas sentencias y ordenar un nuevo juicio; su decisión está pendiente.</p>
+<p class="story-body-text story-content" data-para-count="318" data-total-count="4848" id="story-continues-16" tabindex="-1">“Si se le hace justicia a Farkhunda, se estará haciendo justicia a todas las mujeres afganas heridas, asesinadas, o de quienes se ha abusado”, afirmó Leena Alam, una actriz de la televisión afgana que se unió a cientos de mujeres en el funeral de Farkhunda donde desafiaron las tradiciones al cargar el ataúd.</p>
+<p class="story-body-text story-content" data-para-count="221" data-total-count="5069" id="story-continues-17" tabindex="-1">“Si no se le hace justicia, entonces todos estos años en que la comunidad internacional ha estado aquí, todo el apoyo que nos han dado, todo el dinero, toda esta guerra, no significarán nada. Se irán a la basura”.</p>
+<p class="story-body-text story-content" data-para-count="12" data-total-count="5081" id="story-continues-18" tabindex="-1"><strong>El asesinato</strong></p>
+<p class="story-body-text story-content" data-para-count="191" data-total-count="5272" id="story-continues-19" tabindex="-1">Farkhunda visitó por primera vez el santuario Shah-Do Shamshira (llamado así en honor a un guerrero extranjero que ayudó a llevar el islam a Afganistán) cuatro semanas antes de su muerte.</p>
+<p class="story-body-text story-content" data-para-count="405" data-total-count="5677" id="story-continues-20" tabindex="-1">Era un miércoles, el día de las mujeres en el santuario, cuando se prohíbe la presencia de hombres. Las mujeres acuden al adivino para comprar amuletos que les ayuden a embarazarse, encontrar marido o tener hijos varones. Conocidos como <em>tawis</em>, los talismanes son pequeños textos escritos sobre un trozo de papel que las mujeres pueden sujetar con un alfiler junto a su cuerpo o guardar en un bolsillo.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="320" data-total-count="5997" id="story-continues-21" tabindex="-1">A Farkhunda le escandalizó la manera en que se aprovechaban de la superstición femenina, recuerda su hermano Mujibullah. Enfrentó al guardia, Zainuddin, y al adivino, Mohammad Omran, a quienes les dijo: “Están abusando de las mujeres. Les están cobrando por algo que no es parte del islam, que no es religioso”.</p>
+<p class="story-body-text story-content" data-para-count="197" data-total-count="6194" id="story-continues-22" tabindex="-1">Como el ambiente en el santuario se puso tenso, explicó Mujibullah, “el guardia le dijo a Farkhunda: ‘¿Quién demonios eres tú? ¿Quién te crees para decir estas cosas? Vete de aquí’”.</p>
+<p class="story-body-text story-content" data-para-count="346" data-total-count="6540" id="story-continues-23" tabindex="-1">La familia Malikzada es educada. El padre de Farkhunda, Mohammad Nader Malikzada, de 72 años, trabajó durante casi 40 como el ingeniero principal en la Secretaría de Salud Pública de Afganistán, donde se encargó de que funcionara la tecnología médica. Mujibullah trabajaba en la Secretaría de Finanzas, y el segundo hermano es ingeniero.</p>
+<p class="story-body-text story-content" data-para-count="379" data-total-count="6919" id="story-continues-24" tabindex="-1">Farkhunda, una de ocho hermanas, sentía inclinación por el estudio. Las hermanas estudiaron para convertirse en maestras y algunas ya se habían graduado. Muchas seguían solteras aunque estaban en la década de los veinte años, algo inusual entre las afganas. La familia no era asidua a lugares como el santuario Shah-Do Shamshira, conocido por atraer a gentuza y peregrinos.</p>
+<figure id="media-100000004110374" class="media photo media-100000004110374 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/27/world/27AFGHANWOMEN-web4/27AFGHANWOMEN-web4-master675-v3.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-26">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/27/world/27AFGHANWOMEN-web4/27AFGHANWOMEN-web4-master675-v3.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/27/world/27AFGHANWOMEN-web4/27AFGHANWOMEN-web4-superJumbo-v3.jpg" data-mediaviewer-caption="Afghans at the Shah-Do Shamshira shrine, where Farkhunda was killed. It is one of Kabul's most well-known shrines." data-mediaviewer-credit="Lynsey Addario for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/27/world/27AFGHANWOMEN-web4/27AFGHANWOMEN-web4-master675-v3.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Afghans at the Shah-Do Shamshira shrine, where Farkhunda was killed. It is one of Kabul's most well-known shrines.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Lynsey Addario for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="368" data-total-count="7287" id="story-continues-26" tabindex="-1">Farkhunda tenía razón: algo raro sucedía en el santuario. Investigadores de la policía y de la Dirección General de Seguridad Nacional, el servicio de inteligencia afgano, se enteraron más tarde de que el adivino también vendía viagra y condones, dijo Shahla Farid, miembro del comité investigador que formó el Presidente Asharf Ghani después del asesinato.</p>
+<p class="story-body-text story-content" data-para-count="351" data-total-count="7638" id="story-continues-27" tabindex="-1">El viagra es muy popular y se encuentra fácilmente en Afganistán. Algunos hombres lo consideran un afrodisiaco; otros lo ven como un remedio si están nerviosos en su noche de bodas. Los investigadores también encontraron pruebas de embarazo y jabón para ducha con aroma dulce en el baño del adivino, lo que sugiere que algunas mujeres lo usaron.</p>
+<p class="story-body-text story-content" data-para-count="191" data-total-count="7829" id="story-continues-28" tabindex="-1">Farid y los policías dijeron que era probable que el adivino tuviera relaciones sexuales en el santuario y lo último que deseaba era que una joven celosa de su fe alterara su forma de vida.</p>
+<p class="story-body-text story-content" data-para-count="319" data-total-count="8148" id="story-continues-29" tabindex="-1">El 19 de marzo, el último día de su vida, Farkhunda regresó al santuario. Después de aleccionar a las mujeres sobre la inutilidad de los amuletos, juntó algunos usados y probablemente les prendió fuego dentro de un recipiente de basura, dijo Farid, quien también es profesora de leyes en la Universidad de Kabul.</p>
+<p class="story-body-text story-content" data-para-count="255" data-total-count="8403" id="story-continues-30" tabindex="-1">“El guardia, Zainuddin, es analfabeto; tomó los papeles quemados y los añadió a unas viejas páginas de un Corán quemado; eso fue lo que le mostró a la gente afuera de la mezquita como prueba de que ella había quemado el Corán”, explicó Farid.</p>
+<p class="story-body-text story-content" data-para-count="233" data-total-count="8636" id="story-continues-31" tabindex="-1">Esa es una acusación que casi garantiza una reacción violenta en Afganistán, donde incluso el rumor de que se está quemando un ejemplar del Corán puede lograr que cientos de personas salgan a las calles para hacer correr sangre.</p>
+<p class="story-body-text story-content" data-para-count="302" data-total-count="8938" id="story-continues-32" tabindex="-1">Muhammad Naeem, que vende comida para palomas en la acera frente al santuario, dijo que oyó al guardia cuando llamaba a la gente que pasaba por ahí: “Una mujer quemó el Corán. No sé si está enferma o mal de la cabeza, pero ¿qué clase de musulmanes son ustedes? Vayan y defiendan el Corán”.</p>
+<p class="story-body-text story-content" data-para-count="180" data-total-count="9118" id="story-continues-33" tabindex="-1">Eran casi las 4:00, hora de la oración de la tarde. Las calles estaban llenas y pronto se juntó una multitud. Videos tomados con celulares captaron el principio de la discusión.</p>
+<p class="story-body-text story-content" data-para-count="48" data-total-count="9166" id="story-continues-34" tabindex="-1">“¿Por qué lo quemaste?”, gritó un hombre.</p>
+<p class="story-body-text story-content" data-para-count="115" data-total-count="9281" id="story-continues-35" tabindex="-1">Mientras Farkhunda insistía en que no había hecho eso, otro hombre gritó: “Los estadounidenses te enviaron”.</p>
+<p class="story-body-text story-content" data-para-count="50" data-total-count="9331" id="story-continues-36" tabindex="-1">Ella respondió: “¿Cuáles estadounidenses?”.</p>
+<p class="story-body-text story-content" data-para-count="67" data-total-count="9398" id="story-continues-37" tabindex="-1">Entonces él le dijo: “Deja de hablar o te pegaré en la boca”.</p>
+<p class="story-body-text story-content" data-para-count="319" data-total-count="9717" id="story-continues-38" tabindex="-1">Naeem dijo que un policía había tratado de alejar a Farkhunda pero que ella, consciente de las costumbres afganas y de las estrictas enseñanzas islámicas, le había pedido al policía que trajera a una mujer policía. La multitud se desbordó. En las grabaciones puede oírse a la gente gritando: “¡Mátenla!”.</p>
+<p class="story-body-text story-content" data-para-count="246" data-total-count="9963" id="story-continues-39" tabindex="-1">“Entonces cayó al piso y la gente trató de golpearla y apalearla; la policía trataba de ayudarla a levantarse, y luego la gente del otro lado la empujaba”, recuerda Naeem. “Parecían niños jugando con un costal de harina en el suelo”.</p>
+<p class="story-body-text story-content" data-para-count="340" data-total-count="10303" id="story-continues-40" tabindex="-1">En los videos, al principio Farkhunda parecía gritar de dolor por las patadas, pero luego su cuerpo se convulsionaba por los golpes y pronto dejó de moverse del todo. Incluso cuando la muchedumbre la empujaba a la calle y trajo un coche para que pasara encima de ella, con el cual la arrastraron 90 metros, los policías no hicieron nada.</p>
+<p class="story-body-text story-content" data-para-count="335" data-total-count="10638" id="story-continues-41" tabindex="-1">Para ese entonces, no era sino una masa de sangre y huesos envuelta en ropa. Pero más personas se acercaban a golpearla. Uno de los que lo hacía con más fervor era un joven, Mohammad Yaquoub, que trabajaba en una óptica. Escuchó a la multitud cuando arrastraba a Farkhunda detrás del coche y salió corriendo, ansioso por unirse.</p>
+<p class="story-body-text story-content" data-para-count="196" data-total-count="10834" id="story-continues-42" tabindex="-1">Ocho meses después, bien vestido, con una pequeña barba y bigote, Yaqoub no parece alguien violento. Sin embargo, en los videos está tan inmerso en lo que hace que su ferocidad es terrorífica.</p>
+<p class="story-body-text story-content" data-para-count="256" data-total-count="11090" id="story-continues-43" tabindex="-1">“La gente decía: ‘El que no la golpee es infiel’. Entonces fue cuando me dejé llevar y le pegué dos veces”, dijo en una entrevista en la cárcel de Pul-i-Charkhi, al este de Kabul. “El tercer golpe fue contra el suelo y me lastimé la mano”.</p>
+<p class="story-body-text story-content" data-para-count="302" data-total-count="11392" id="story-continues-44" tabindex="-1">Después de regresar a la óptica para curarse escuchó a los hombres que todavía gritaban y dijo que se sintió atraído de nuevo. Arrastraron el cuerpo de Farkhunda a la orilla del río y Yaqoub buscó piedras pesadas para tirarlas sobre ella. Una era tan grande que apenas podía cargarla, relató.</p>
+<p class="story-body-text story-content" data-para-count="253" data-total-count="11645" id="story-continues-45" tabindex="-1">Yaqoub no era un trabajador analfabeto. Había terminado el segundo año de preparatoria y en la entrevista en prisión dijo tener 18 años. Explicó así su furia: “El Corán es como nuestro honor: es nuestro honor personal y el honor del profeta”.</p>
+<p class="story-body-text story-content" data-para-count="206" data-total-count="11851" id="story-continues-46" tabindex="-1">Mientras Yaqoub caminaba con la multitud, otros hombres le prendieron fuego a Farkhunda, usando sus propias mascadas para que ardiera pues las ropas de ella estaban tan empapadas de sangre que no prendían.</p>
+<p class="story-body-text story-content" data-para-count="285" data-total-count="12136" id="story-continues-47" tabindex="-1">En medio del linchamiento alguien encontró el teléfono de Farkhunda y llamó a su padre. Él, su esposa y Mujibullah fueron a la delegación. No supieron lo que había pasado con ella sino hasta que el General Abdul Rahman Rahimi, el jefe de la policía de Kabul, les dio la noticia.</p>
+<p class="story-body-text story-content" data-para-count="367" data-total-count="12503" id="story-continues-48" tabindex="-1">“Se comprobó que quemó el Corán”, les dijo a los anonadados padres, quienes sabían que ella era profundamente religiosa y planeaba estudiar teología en la Universidad de Kabul. El General Rahimi también les informó que había declarado en un canal de televisión afgano que Farkhunda padecía una enfermedad mental, con tal de calmar a la furiosa multitud.</p>
+<p class="story-body-text story-content" data-para-count="532" data-total-count="13035" id="story-continues-49" tabindex="-1">Era cierto que Farkhunda había recibido tratamiento para una enfermedad mental. No se conoce su gravedad pero los detalles que se proporcionaron a la Comisión Afgana Independiente de Derechos Humanos y otros investigadores indican que había pasado por varios periodos difíciles, incluyendo uno en el que permaneció casi todo el tiempo en cama y decía que le daba miedo rezar porque podría equivocarse, según su madre. Le dieron medicamentos y eso la ayudó por un tiempo, añadió, de acuerdo con el informe de la comisión.</p>
+<p class="story-body-text story-content" data-para-count="225" data-total-count="13260" id="story-continues-50" tabindex="-1">El General Rahimi dijo al padre de Farkhunda que la policía había fracasado en su intento por protegerla, y le aconsejó irse de Kabul por su propia seguridad. Meses después, su hermano Mujibullah recuerda su desesperanza.</p>
+<p class="story-body-text story-content" data-para-count="332" data-total-count="13592" id="story-continues-51" tabindex="-1">“Sentí que el cielo había tocado la tierra y que yo estaba en medio de los dos, hecho pedazos”, dijo. “He pensado que estoy en otro mundo. Alguien me dice que a una chica que amaba el Corán, que habría muerto por el Corán, la habían asesinado por quemar el Corán. No podía creer que se tratara de nuestra Farkhunda”.</p>
+<p class="story-body-text story-content" data-para-count="283" data-total-count="13875" id="story-continues-52" tabindex="-1">Dos días después del asesinato, la Secretaría de Asuntos Religiosos anunció que Farkhunda había sido inocente. Pronto pasó de ser una <a href="http://www.nytimes.com/2015/03/30/world/asia/farkhunda-woman-killed-in-kabul-transformed-from-pariah-to-martyr.html" target="_blank">persona a convertirse en una causa</a>. Se transmitieron videos de su muerte en la televisión afgana, los cuales avergonzaron a muchos ciudadanos.</p>
+<p class="story-body-text story-content" data-para-count="281" data-total-count="14156" id="story-continues-53" tabindex="-1">Una gran cantidad de muchachas, a las que se unieron algunos jóvenes, se reunieron de manera espontánea en el santuario y realizaron un velorio. Crearon la organización “Justicia para Farkhunda”. Marcharon, hicieron manifestaciones y exigieron que se juzgara a sus asesinos.</p>
+<p class="story-body-text story-content" data-para-count="181" data-total-count="14337" id="story-continues-54" tabindex="-1">Fue muy significativo que las mujeres se rebelaran contra la costumbre de mantenerse alejadas de los funerales cuando cientos de ellas se reunieron para cargar y escoltar su ataúd.</p>
+<p class="story-body-text story-content" data-para-count="200" data-total-count="14537" id="story-continues-55" tabindex="-1">Alam, la actriz afgana, dijo que sintió la obligación de ir al cementerio el día del entierro de Farkhunda. “Fueron mujeres quienes llevaron su cuerpo a su tumba y quienes la enterraron”, dijo.</p>
+<p class="story-body-text story-content" data-para-count="249" data-total-count="14786" id="story-continues-56" tabindex="-1">“Nos quitamos nuestros mantos y mascadas, los amarramos y los tomamos de cada lado, y así bajamos su féretro a la tumba. Recuerdo que se me hizo una pequeña cortada con la madera del ataúd, y yo no quería que esa pequeña herida se curara”.</p>
+<figure id="media-100000004110373" class="media photo media-100000004110373 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/27/world/27AFGHANWOMEN-web3/27AFGHANWOMEN-web3-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-58">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/27/world/27AFGHANWOMEN-web3/27AFGHANWOMEN-web3-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/27/world/27AFGHANWOMEN-web3/27AFGHANWOMEN-web3-superJumbo.jpg" data-mediaviewer-caption="More than 50 people were detained in connection with the killing, and 49 stood trial, including 19 police officers." data-mediaviewer-credit="Wakil Kohsar/Agence France-Presse — Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/27/world/27AFGHANWOMEN-web3/27AFGHANWOMEN-web3-master675.jpg"/>
+		<meta itemprop="height" content="449" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">More than 50 people were detained in connection with the killing, and 49 stood trial, including 19 police officers.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Wakil Kohsar/Agence France-Presse — Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="23" data-total-count="14809" id="story-continues-58" tabindex="-1"><strong>Investigación y juicio</strong></p>
+<p class="story-body-text story-content" data-para-count="178" data-total-count="14987" id="story-continues-59" tabindex="-1">El caso planteó dos desafíos para el sistema legal afgano: satisfacer la presión pública para castigar a los culpables y asegurarse de que el juicio se percibiera como justo.</p>
+<p class="story-body-text story-content" data-para-count="245" data-total-count="15232" id="story-continues-60" tabindex="-1">El Presidente Ghani presionó para que se tomaran acciones y declaró: “No toleraremos la justicia de la muchedumbre”. Alam actuó en el papel de Farkhunda en una <a href="http://www.nytimes.com/2015/04/28/world/asia/tears-replace-cheers-in-re-enactment-of-farkhundas-killing-in-afghanistan.html" target="_blank">recreación del asesinato</a> que se realizó justo antes del comienzo del juicio.</p>
+<p class="story-body-text story-content" data-para-count="470" data-total-count="15702" id="story-continues-61" tabindex="-1">El círculo de los culpables era amplio. Sin embargo, los grados de responsabilidad eran muy variados y terminaron por confundir a los fiscales, que solo acusaron a 30 civiles, 28 con los mismos cargos: asesinato e incendio. Los investigadores creían que el adivino, cuyo negocio estaba siendo amenazado, había incitado al guardia del santuario para acusar a Farkhunda. El adivino no estaba presente el día del asesinato pero de igual manera fue acusado de asesinato.</p>
+<p class="story-body-text story-content" data-para-count="322" data-total-count="16024" id="story-continues-62" tabindex="-1">Al parecer, dos o tres policías trataron de ayudar a Farkhunda, pero otros que llegaron más tarde parecen haberse sentido abrumados por la muchedumbre. Llamaron para que enviaran ayuda pero los refuerzos no llegaron porque, supuestamente, las camionetas de la policía no tenían combustible y sus radios no funcionaban.</p>
+<p class="story-body-text story-content" data-para-count="261" data-total-count="16285" id="story-continues-63" tabindex="-1">La multitud era muy grande, y nunca se determinó en qué momento de la golpiza, la arrastrada o el incendio murió Farkhunda. Los organismos de seguridad finalmente detuvieron a más de 50 personas, 49 de las cuales (incluyendo a 19 policías) fueron a juicio.</p>
+<p class="story-body-text story-content" data-para-count="508" data-total-count="16793" id="story-continues-64" tabindex="-1">No obstante, algunos que parecían culpables según los videos evitaron la captura y las acusaciones. Entre ellos están el conductor del coche que pasó sobre el cuerpo de Farkhunda y un hombre que vestía una sudadera con el número seis, a quien se le puede ver en los videos brincando varias veces sobre el cuerpo. También estaba implicado un personaje famoso a nivel local, Habib Deh Afghanan, que entrenó para ser boxeador y estaba en el santuario durante la golpiza, de acuerdo con algunos testigos.</p>
+<p class="story-body-text story-content" data-para-count="323" data-total-count="17116" id="story-continues-65" tabindex="-1">Un investigador de alto rango en la policía de Kabul reconoció que los oficiales no habían podido capturar a todos los responsables. Calculaba que tres o cuatro sospechosos clave habían huido de Kabul; no estaba claro si tenían relaciones con políticos que les avisaron, o si se detuvo a algunos y luego los soltaron.</p>
+<p class="story-body-text story-content" data-para-count="368" data-total-count="17484" id="story-continues-66" tabindex="-1">Ninguna de las fuerzas policiacas de la provincia habían tenido la voluntad ni el poder para arrestarlos, afirmó el investigador, quien pidió permanecer en anonimato porque el proceso de apelación aún está por comenzar. El caso se politizó, con una intensa presión por efectuar arrestos para demostrar que el gobierno estaba asumiendo una postura, según dijo.</p>
+<p class="story-body-text story-content" data-para-count="387" data-total-count="17871" id="story-continues-67" tabindex="-1">“Todos trataron de sacar provecho político de este caso”, afirmó el investigador. “Algunos lo usaron como un medio para atacar al jefe de la policía, otros para atacar al gobierno; otros más lo utilizaron, bajo el disfraz de la ‘sociedad civil’, para socavar el papel de los líderes espirituales o los estudiosos del islam. Así que todo eso dificultó nuestro trabajo”.</p>
+<p class="story-body-text story-content" data-para-count="371" data-total-count="18242" id="story-continues-68" tabindex="-1">Mientras que algunos de los culpables se salvaron, el sistema legal parece haber atrapado a unos cuantos inocentes. Se demostró que algunos de los arrestados no habían estado físicamente presentes durante el asesinato. Los abogados defensores afganos describieron múltiples fallas en la protección de los derechos de los acusados, incluyendo su derecho a un abogado.</p>
+<p class="story-body-text story-content" data-para-count="358" data-total-count="18600" id="story-continues-69" tabindex="-1">Zaki Ayoubi, un abogado idealista que había trabajado para una organización occidental de Estado de derecho, tiene la esperanza de cambiar el sistema legal. Comenzó a preocuparse por la falta de atención prestada a la asignación de abogados a los acusados. Buscó amigos de la universidad y de talleres sobre leyes occidentales y comenzó a reclutarlos.</p>
+<p class="story-body-text story-content" data-para-count="300" data-total-count="18900" id="story-continues-70" tabindex="-1">El concepto estadounidense de abogado defensor no existe en Afganistán, donde los abogados tradicionalmente desempeñan el papel de intermediarios entre los acusados, los fiscales y juez. No fue sino hasta 2008 cuando los defensores voluntarios trabajaron directamente con el Ministerio de Justicia.</p>
+<p class="story-body-text story-content" data-para-count="340" data-total-count="19240" id="story-continues-71" tabindex="-1">Ayoubi se dio cuenta de que, incluso si encontraba abogados defensores, el juicio estará muy politizado. El Presidente Ghani continuó diciendo lo que pensaba. Abdullah Abdullah, jefe del ejecutivo de Afganistán, visitó a la familia de Farkhunda para darle sus condolencias. Esto le indicaba a los jueces que debían encontrar culpables.</p>
+<p class="story-body-text story-content" data-para-count="319" data-total-count="19559" id="story-continues-72" tabindex="-1">El juez asignado para presidir el juicio fue Safiullah Majadidi, un hombre en quien se podía confiar para obtener los resultados que los líderes deseaban. Era famoso por haber dictado sentencia en 2014 en el caso de siete hombres acusados de violar a cuatro mujeres casadas en una zona rural de la provincia de Kabul.</p>
+<p class="story-body-text story-content" data-para-count="238" data-total-count="19797" id="story-continues-73" tabindex="-1">En ese caso Hamid Karzai, el presidente en ese entonces, afirmó <a href="http://www.nytimes.com/2014/09/28/world/asia/in-a-final-act-karzai-orders-execution-of-5-men-in-rape-case-.html" target="_blank">públicamente</a> antes del juicio que aprobaría una sentencia de muerte. El juez <a href="http://www.nytimes.com/2014/09/08/world/asia/afghan-court-sentences-7-men-to-death-in-rape-case.html" target="_blank">condenó</a> a cinco de los hombres a muerte aunque declararon que habían confesado bajo <a href="http://www.nytimes.com/2014/10/09/world/asia/5-afghan-men-hanged-in-rape-case-amid-human-rights-protests.html" target="_blank">tortura</a>.</p>
+<p class="story-body-text story-content" data-para-count="360" data-total-count="20157" id="story-continues-74" tabindex="-1">En el caso de Farkhunda, el juez Mujadidi también actuó rápido. Los fiscales entregaron su expediente completo a los jueces el 27 de abril, y el juicio comenzó cinco días después. No quedó claro si los jueces habían tenido tiempo de revisar las 4000 páginas de los expedientes, según los abogados extranjeros y afganos que siguieron de cerca el caso.</p>
+<p class="story-body-text story-content" data-para-count="414" data-total-count="20571" id="story-continues-75" tabindex="-1">Cuando inició el juicio, menos de siete de los 49 acusados tenían abogado defensor. No se notificó a ninguno de esos abogados la fecha ni la hora del juicio y solo tres o cuatro estuvieron presentes durante las audiencias. A pocos se les dio acceso a los documentos recabados por la fiscalía antes de que comenzara el proceso, por lo que no pudieron preparar la defensa de sus clientes, afirmaron los abogados.</p>
+<p class="story-body-text story-content" data-para-count="338" data-total-count="20909" id="story-continues-76" tabindex="-1">El juez Mujadidi mencionó en una entrevista que había asistido a sesiones de capacitación proporcionadas por varios programas de enseñanza del Estado de derecho con financiamiento estadounidense y uno alemán. Desde su punto de vista, “la decisión de la corte primaria estuvo en concordancia con la ley, lo que generó justicia”.</p>
+<p class="story-body-text story-content" data-para-count="282" data-total-count="21191" id="story-continues-77" tabindex="-1">Sostuvo que las críticas sobre la falta de abogados defensores y el escaso tiempo de preparación surgieron por la ambición de ellos. “Solo piensan en su negocio, no en la gente ni en el bienestar de otros”, dijo. “Incluso cobran de más a sus clientes para ganar dinero”.</p>
+<p class="story-body-text story-content" data-para-count="239" data-total-count="21430" id="story-continues-78" tabindex="-1">El juez Mujadidi añadió que se le preguntó a cada acusado si quería un abogado. “Todos dijeron que ellos mismos podían defenderse mejor y que sabían qué decir en el tribunal, así que no había necesidad de defensores”, afirmó.</p>
+<p class="story-body-text story-content" data-para-count="237" data-total-count="21667" id="story-continues-79" tabindex="-1">Abdul Masood Khorami, un abogado que representa a Yaqoub, el empleado de la óptica, ni siquiera sabía que el juicio ya había comenzado hasta que recibió una llamada del padre de Yaqoub, que estaba viendo los procesos por televisión.</p>
+<p class="story-body-text story-content" data-para-count="423" data-total-count="22090" id="story-continues-80" tabindex="-1">Khorami fue rápidamente a la sala, donde descubrió que el juicio se estaba realizando como si fuera un caso de terrorismo y no uno de asesinato. Había guardias muy bien armados y con lentes oscuros detrás de los jueces. Al fiscal le llevó la mayor parte de esos dos días terminar de leer la acusación. Luego el pánel de tres jueces tomó un día para deliberar en privado. Al tercer día, pronunciaron su veredicto.</p>
+<p class="story-body-text story-content" data-para-count="376" data-total-count="22466" id="story-continues-81" tabindex="-1">Se permitió a cada acusado o a su abogado hablar por cinco minutos después de que el fiscal leía las pruebas en su contra. Muchas de las declaraciones se pasaron el último día del juicio y es muy probable que los jueces no las hayan tomado en cuenta, pues habían deliberado el día anterior y dictaron la sentencia poco después de que los acusados terminaron de hablar.</p>
+<p class="story-body-text story-content" data-para-count="339" data-total-count="22805" id="story-continues-82" tabindex="-1">De todas formas, a muy pocos acusados se les dio la oportunidad de decir algo más que unas respuestas rápidas a preguntas, y lo mismo sucedió con la mayoría de sus abogados. Una excepción fue Khorami, que había aprendido la importancia de las objeciones en uno de los cursos occidentales que había tomado sobre el Estado de derecho.</p>
+<p class="story-body-text story-content" data-para-count="369" data-total-count="23174" id="story-continues-83" tabindex="-1">Entendió que también se trataba de un momento crucial para la ley afgana: si un asunto no se presenta en el tribunal, no se puede presentar en una apelación. Objetó una declaración en la que se señalaba que su cliente, Yaqoub, era adulto; dijo que podía probar que era menor de edad. Según las leyes afganas, no se puede condenar a un menor a la pena de muerte.</p>
+<p class="story-body-text story-content" data-para-count="302" data-total-count="23476" id="story-continues-84" tabindex="-1">En una entrevista, el Juez Mujadidi dijo que no le cree a Khorami. “Falsificó los papeles de su cliente para probar que era menor”, afirmó en referencia a un documento de identidad afgano; “pero la prueba de medicina forense y nuestros conocimientos nos dicen que era un adulto ya con barba”.</p>
+<p class="story-body-text story-content" data-para-count="321" data-total-count="23797" id="story-continues-85" tabindex="-1">El juez ignoró la objeción de Khorami y Yaqoub fue uno de los cuatro sentenciados a muerte. Los otros eran Zainuddin, el guardia del santuario; Sharaf Baghlani, un exempleado del servicio de inteligencia afgano que había presumido en Facebook sobre su papel en el asesinato de Farkhunda, y Abdul Basheer, un conductor.</p>
+<p class="story-body-text story-content" data-para-count="446" data-total-count="24243" id="story-continues-86" tabindex="-1">Otros ocho acusados fueron hallados culpables de haber tenido un papel protagonista en el asesinato de Farkhunda y a cada uno se les condenó a 16 años de cárcel. Los 18 acusados civiles fueron declarados inocentes por falta de evidencia. De los policías, se descartaron los casos de ocho y a 11 se les dio la pena más leve posible: se les pidió seguir trabajando en sus distritos policiales asignados durante un año y abstenerse de viajar.</p>
+<p class="story-body-text story-content" data-para-count="15" data-total-count="24258" id="story-continues-87" tabindex="-1"><strong>Cambios legales</strong></p>
+<p class="story-body-text story-content" data-para-count="250" data-total-count="24508" id="story-continues-88" tabindex="-1">El caso de Farkhunda mostró los límites del esfuerzo occidental por instaurar el Estado de derecho, pero sugirió que al menos hubo un logro significativo: los afganos realizaron un juicio y trataron de poner a las personas en manos de la justicia.</p>
+<p class="story-body-text story-content" data-para-count="332" data-total-count="24840" id="story-continues-89" tabindex="-1">Sin embargo, una investigación completa, un proceso que se percibiera justo y con sentencias basadas en evidencias habrían mandado el mensaje de que los afganos consideran que un linchamiento es inaceptable, que la policía y los tribunales pueden impartir justicia, y las víctimas, incluso las de sexo femenino, tienen derechos.</p>
+<p class="story-body-text story-content" data-para-count="401" data-total-count="25241" id="story-continues-90" tabindex="-1">En realidad, los afganos estaban divididos en cuanto al suceso y los castigos que deberían darse. Algunos creían que todos los que participaron en la multitud que golpeó a Farkhunda y lo celebraron debían ser castigados; otros pensaban que solo había que castigar a unos cuantos. Casi nadie tenía fe en el sistema judicial: en las encuestas, es la institución afgana en la que menos se confía.</p>
+<p class="story-body-text story-content" data-para-count="325" data-total-count="25566" id="story-continues-91" tabindex="-1">Al enfrentar presiones y creencias contradictorias, rumores y corrupción, muchas de las lecciones enseñadas por los abogados financiados por Occidente simplemente se ignoraron. Esto resulta sorprendente si se toma en cuenta que todos los implicados en el caso habían tenido alguna capacitación sobre el Estado de derecho.</p>
+<p class="story-body-text story-content" data-para-count="295" data-total-count="25861" id="story-continues-92" tabindex="-1">Desde 2005, de acuerdo con el <a href="https://www.sigar.mil/pdf/audits/SIGAR-15-68-AR.pdf" target="_blank">Inspector General Especial para la Reconstrucción de Afganistán</a>, Estados Unidos ha destinado más de mil millones de dólares a capacitar fiscales, abogados defensores y jueces en áreas como procesos legales, interrogatorio a testigos y digitalización de casos.</p>
+<p class="story-body-text story-content" data-para-count="224" data-total-count="26085" id="story-continues-93" tabindex="-1">También ha patrocinado programas que promueven la transparencia, la justicia para las mujeres, cambios en las prácticas de detención y un sistema más sólido de justicia informal, que es la predominante en zonas rurales.</p>
+<p class="story-body-text story-content" data-para-count="449" data-total-count="26534" id="story-continues-94" tabindex="-1">Todos los abogados defensores entrevistados para este artículo habían asistido a talleres o cursos legales financiados en parte por la Oficina de Asuntos Internacionales de Narcóticos y Aplicación de la Ley del Departamento de Estado, la Agencia de los Estados Unidos para el Desarrollo Internacional, el Departamento de Justicia, la Misión de Policía de la Unión Europea en Afganistán o países individuales como Canadá, Alemania o Suecia.</p>
+<p class="story-body-text story-content" data-para-count="355" data-total-count="26889" id="story-continues-95" tabindex="-1">Muchos fiscales también habían asistido a esos programas, de acuerdo con los capacitadores estadounidenses e internacionales. Aunque la mayoría de los jueces que participaron en el caso no respondieron a solicitudes para entrevistarlos, muchos que no participaron dijeron que era común que los jueces hubieran recibido alguna capacitación occidental.</p>
+<p class="story-body-text story-content" data-para-count="317" data-total-count="27206" id="story-continues-96" tabindex="-1">No obstante, los observadores afganos y occidentales dijeron que los esfuerzos se quedaron cortos por ignorar las reglas afganas y, en algunos casos, era por arrogancia. Algunos instructores enseñaron a los afganos cómo escoger a miembros de un jurado, cuando en Afganistán quienes dictan sentencia son los jueces.</p>
+<p class="story-body-text story-content" data-para-count="305" data-total-count="27511" id="story-continues-97" tabindex="-1">Algunos llevaron a abogados jóvenes para que enseñaran a afganos mayores en una sociedad en la que la edad es símbolo de autoridad y conocimiento. Los recovecos legales a menudo se perdían en las traducciones, de acuerdo con dos abogados internacionales que han pasado años trabajando en Afganistán.</p>
+<p class="story-body-text story-content" data-para-count="182" data-total-count="27693" id="story-continues-98" tabindex="-1">Un intento por reescribir el código de procedimientos penales, en lugar de traducirlo para que Occidente pudiera utilizarlo como punto de partida, capturó los absurdos del proceso.</p>
+<p class="story-body-text story-content" data-para-count="437" data-total-count="28130" id="story-continues-99" tabindex="-1">“En ese entonces, eran los italianos quienes estaban a cargo del Estado de derecho, así que escribieron uno parecido al código italiano”, dijo un abogado occidental que ha pasado muchos años en Afganistán y que pidió que no se mencionara su nombre, pues no tiene permiso para hablar en nombre de su organismo. “¿Por qué escribir uno nuevo cuando los afganos tienen un código de procedimientos penales que todos conocen?”.</p>
+<p class="story-body-text story-content" data-para-count="438" data-total-count="28568" id="story-continues-100" tabindex="-1">En cuanto a los esfuerzos por construir la igualdad de género, muchos ideales occidentales se oponen a creencias afganas muy arraigadas. Por ejemplo, un abogado recordó un curso de dos semanas para aprender a representar clientes en casos de ataque sexual. No obstante, a pesar de los esfuerzos occidentales, muy pocos casos de ataque sexual llegan a juicio en Afganistán debido a las presiones familiares y el miedo a las represalias.</p>
+<p class="story-body-text story-content" data-para-count="562" data-total-count="29130" id="story-continues-101" tabindex="-1">Siavash Rahbari, un abogado estadounidense que habla darí con fluidez y trabaja en cuestiones de Estado de derecho para la Asia Foundation, dijo que Occidente malinterpreta las necesidades de Afganistán. Los expertos pensaban que estaban ayudando a reconstruir un sistema en transición del periodo talibán a uno más laico. Pero más bien los afganos aún están tratando de decidir qué tipo de sistema quieren. El sistema aún se nutre de la ley islámica, así como de su propio código judicial, que tiene sus orígenes en los sistemas alemán y egipcio.</p>
+<p class="story-body-text story-content" data-para-count="430" data-total-count="29560" id="story-continues-102" tabindex="-1">Los abogados defensores y los fiscales estudian leyes y ciencias políticas en la universidad, pero casi todos los jueces estudian teología y la sharía (la ley islámica). Así que cuando se encuentran en un tribunal, cada uno llega con un marco de referencia completamente distinto. Con frecuencia hablan de cosas completamente diferentes. Y los jueces, que son la columna vertebral del sistema, a menudo se resisten al cambio.</p>
+<p class="story-body-text story-content" data-para-count="173" data-total-count="29733" id="story-continues-103" tabindex="-1">Los abogados afganos afirmaron que los diseñadores occidentales del programa no le prestaron atención a la deferencia de la sociedad afgana hacia la edad y la experiencia.</p>
+<p class="story-body-text story-content" data-para-count="386" data-total-count="30119" id="story-continues-104" tabindex="-1">“Un abogado estadounidense se para frente a un salón de abogados o jueces afganos en sus cuarenta o cincuenta, y el estadounidense está en sus treinta”, dijo Sayed Mohammad Saeeq Shajjan, un abogado afgano con un posgrado de Harvard que regresó a su país a ejercer su carrera. “Todos tienen su orgullo, así que dicen: ‘¿Por qué me está enseñando este jovenzuelo?’”.</p>
+<p class="story-body-text story-content" data-para-count="283" data-total-count="30402" id="story-continues-105" tabindex="-1">Shajjan también señaló como un error la falta de seguimiento. “Al final de una capacitación de un mes, hay una ceremonia, obtienen un certificado y se sacan fotos, pero ¿quién les hace seguimiento y observa si aprendieron algo o no? Nadie lo hace, y eso es un grave error”.</p>
+<p class="story-body-text story-content" data-para-count="153" data-total-count="30555" id="story-continues-106" tabindex="-1">La capacitación occidental no toma en cuenta la ubicuidad de la corrupción, un flagelo en el sistema judicial como en muchas cosas más de Afganistán.</p>
+<p class="story-body-text story-content" data-para-count="355" data-total-count="30910" id="story-continues-107" tabindex="-1">“Si tu cliente es pobre, se te pide que pagues un soborno o pasará 16 años en la cárcel”, dijo Muhammad Aziz Sofizada, un abogado defensor que representó a dos clientes en el caso de Farkhunda, incluyendo a uno que fue condenado a 16 años de cárcel. “¿Qué se supone que debes hacer? En este país, si no das dinero no puedes obtener nada”.</p>
+<p class="story-body-text story-content" data-para-count="412" data-total-count="31322" id="story-continues-108" tabindex="-1">Pero el juicio también mostró que algunas ideas sí se han arraigado, en particular entre un grupo creciente de abogados jóvenes y con influencia occidental. Michael J. Fannon, jefe de ese grupo ante la International Development Law Organization, trabajó en Afganistán durante seis años y dijo que cuando se fue en 2014 la cantidad de abogados defensores había aumentado a 2000, de 200 que había en 2008.</p>
+<p class="story-body-text story-content" data-para-count="345" data-total-count="31667" id="story-continues-109" tabindex="-1">Dos abogados defensores dijeron que aprovecharon su capacitación sobre elaboración de alegatos legales y presentación de objeciones ante los fiscales, pero eran minoría. Muchos que no estuvieron implicados en el juicio, y por lo tanto con mayor libertad para hablar, dijeron que creían que el sistema había fallado en el caso de Farkhunda.</p>
+<p class="story-body-text story-content" data-para-count="266" data-total-count="31933" id="story-continues-110" tabindex="-1">“Muchos no tenían un abogado defensor; hubo casi 50 personas en el juicio”, dijo Shajjan. “No puedes juzgar a una cantidad tan grande de acusados, y además sin abogados. Tienes que darles la oportunidad de hablar. Solo le otorgaron dos minutos a cada uno”.</p>
+<p class="story-body-text story-content" data-para-count="483" data-total-count="32416" id="story-continues-111" tabindex="-1">Los abogados de derechos humanos sostienen que el sistema legal necesitaba enviar una clara señal de que es inaceptable no hacer nada y mirar a la multitud mientras matan a alguien. “Todos los que observaron cómo la asesinaban deberían haber recibido una condena”, afirmó Shamsullah Ahmadzai, jefe de la oficina de la Comisión Afgana Independiente de Derechos Humanos de la región de Kabul. “Cuando están matando a alguien no se trata de un juego ni de una película”.</p>
+<p class="story-body-text story-content" data-para-count="21" data-total-count="32437" id="story-continues-112" tabindex="-1"><strong>Sentencias revertidas</strong></p>
+<p class="story-body-text story-content" data-para-count="323" data-total-count="32760" id="story-continues-113" tabindex="-1">Mientras quienes apoyaban a Farkhunda celebraban las sentencias del juicio, los abogados defensores se agrupaban a favor de sus clientes. A diferencia del juicio televisado, la apelación se realizó a puerta cerrada, según los abogados que participan en el caso y otros que se las arreglaron para colarse en la audiencia.</p>
+<p class="story-body-text story-content" data-para-count="327" data-total-count="33087" id="story-continues-114" tabindex="-1">Esa reserva va en contra de las reglas afganas de procedimientos penales, aunque hay un vacío que le permite a los jueces no anunciar un procedimiento a los medios noticiosos mientras no se le impida a nadie asistir. Se llamó a los acusados y sus abogados para discutir con los jueces en grupo, dependiendo de sus sentencias.</p>
+<p class="story-body-text story-content" data-para-count="296" data-total-count="33383" id="story-continues-115" tabindex="-1">Los abogados de los condenados a muerte o con largas penas de prisión señalaron que nadie se molestó en determinar cuándo murió Farkhunda. Según la ley afgana, la pena es menor por profanar un cadáver que por asesinato, por lo que Sofizada, Khorami y otros abogados ahondaron en ese punto.</p>
+<p class="story-body-text story-content" data-para-count="460" data-total-count="33843" id="story-continues-116" tabindex="-1">“¿Quién es el que le dio el primer golpe? ¿Quién el que le dio el golpe que la mató?”, preguntó Sofizada, quien representaba a un tendero llamado Mohmand. “Si se trata de violencia, ¿quién es el responsable de esta? ¿El hombre que comenzó todo y animó a la gente a golpearla? ¿El que repetía consignas que provocaban a las personas? ¿Fue un palazo lo que la mató? ¿Una pedrada? ¿Fue el hecho de que la quemaran o que la atropellaran?”.</p>
+<p class="story-body-text story-content" data-para-count="213" data-total-count="34056" id="story-continues-117" tabindex="-1">Yaqoub dijo que él solo había profanado un cadáver. “Sabía que estaba muerta porque no se movía”, dijo. Cuando se le preguntó si Farkhunda podría haber estado inconsciente pero no muerta, no respondió.</p>
+<p class="story-body-text story-content" data-para-count="469" data-total-count="34525" id="story-continues-118" tabindex="-1">El abogado de Taqoub, Khorami, utilizó su sesión con los jueces de apelación para tratar de convencerlos de que erróneamente se le había dado trato de adulto a Yaqoub. Elaboró una tazkera, el documento de identidad afgano, en el que se afirma que su cliente tenía 17 años en el momento del asesinato. Aunque el juez creía que este documento era falsificado, el panel de apelaciones consideró a Yaqoub menor de edad y redujo su sentencia a 10 años de cárcel.</p>
+<p class="story-body-text story-content" data-para-count="382" data-total-count="34907" id="story-continues-119" tabindex="-1">El argumento de que no había evidencias sobre quién había dado el golpe que mató a Farkhunda tuvo sentido tanto para el tribunal de apelaciones como para la Corte Suprema, según gente cercana a los tribunales. “Es muy difícil deslindar responsabilidades si no sabes qué la mató”, dijo alguien relacionado a la corte que habló con la condición de mantener su anonimato.</p>
+<p class="story-body-text story-content" data-para-count="377" data-total-count="35284" id="story-continues-120" tabindex="-1">Así que los jueces conmutaron otras tres sentencias de muerte a 20 años de cárcel. También revisaron la evidencia de que el adivino no se encontraba en el santuario cuando sucedió el asesinato de Farkhunda, y decidieron que no era culpable porque no había estado presente. Además exoneraron a un noveno policía, así que al final solo 10 acusados recibieron un castigo.</p>
+<p class="story-body-text story-content" data-para-count="317" data-total-count="35601" id="story-continues-121" tabindex="-1">Cuando los dictámenes del tribunal de apelaciones se hicieron públicos, en julio, la familia de Farkhunda y muchos grupos de mujeres quedaron estupefactos al darse cuenta de que no se les había dado la oportunidad de defender su caso. Mujibullah, el hermano de Farkhunda, dijo que el nuevo veredicto era una burla.</p>
+<p class="story-body-text story-content" data-para-count="200" data-total-count="35801" id="story-continues-122" tabindex="-1">“Puedes ver a ese muchacho que le pega con una gran piedra y el tribunal dice que es menor de edad”, dijo. “Aunque sea menor de edad, sabe cómo golpear, pero no sabe responder por sus actos”.</p>
+<p class="story-body-text story-content" data-para-count="526" data-total-count="36327" id="story-continues-123" tabindex="-1">Las abogadas que siguieron el caso afirmaron que el veredicto muestra el sesgo cultural contra las mujeres en Afganistán. “Había cierta discriminación hacia las mujeres”, dijo Najla Raheel, un abogado que toma casos a favor de las mujeres, incluso si no pueden pagar, y a quien designó el Presidente Ghani para dirigir al grupo que representa a la familia de Farkhunda en la apelación ante la Corte Suprema. “Algunos funcionarios del gobierno no querían que se castigara a 49 hombres por la muerte de una mujer”.</p>
+<p class="story-body-text story-content" data-para-count="295" data-total-count="36622" id="story-continues-124" tabindex="-1">Poco después del nuevo veredicto la familia de Farkhunda le pidió a la esposa de Ghani, Rula, quien se interesó en el caso, ayudarlos a conseguir visas temporales para salir del país. Sentían que las sentencias dictadas en la apelación mostraban que la mayoría de la gente no los apoyaba.</p>
+<p class="story-body-text story-content" data-para-count="294" data-total-count="36916" id="story-continues-125" tabindex="-1">Mientras tanto, el equipo legal designado por el Presidente Ghani decidió que hubo tantas fallas en el caso que el único camino justo sería pedir a la Corte Suprema un nuevo juicio, según Raheel y Ayoubi, quienes también se unieron al equipo legal que representa a la familia de Farkhunda.</p>
+<figure id="media-100000004110369" class="media photo media-100000004110369 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/27/world/27AFGHANWOMEN-web1/27AFGHANWOMEN-web1-master675-v5.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-127">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/27/world/27AFGHANWOMEN-web1/27AFGHANWOMEN-web1-master675-v5.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/27/world/27AFGHANWOMEN-web1/27AFGHANWOMEN-web1-superJumbo-v5.jpg" data-mediaviewer-caption="Farkhunda's half-finished grave outside Kabul." data-mediaviewer-credit="Lynsey Addario for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/27/world/27AFGHANWOMEN-web1/27AFGHANWOMEN-web1-master675-v5.jpg"/>
+		<meta itemprop="height" content="454" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Farkhunda's half-finished grave outside Kabul.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Lynsey Addario for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="22" data-total-count="36938" id="story-continues-127" tabindex="-1"><strong>El camino por recorrer</strong></p>
+<p class="story-body-text story-content" data-para-count="440" data-total-count="37378" id="story-continues-128" tabindex="-1">La solicitud de un nuevo juicio se presentó en agosto pasado, y la corte aún no anuncia su decisión. Esta instancia tiene amplia libertad para aumentar, reducir o eliminar los castigos y a menudo simplemente confirma las decisiones de las apelaciones o las manda de nuevo al tribunal para que se revisen. Ninguno de los abogados entrevistados para escribir este artículo recordaba que la corte hubiera mandado un caso a un nuevo juicio.</p>
+<p class="story-body-text story-content" data-para-count="497" data-total-count="37875" id="story-continues-129" tabindex="-1">La familia de <a href="http://www.nytimes.com/2015/07/03/world/asia/death-sentences-in-lynching-of-afghan-woman-reportedly-overturned.html" target="_blank">Farkhunda</a> comienza a temer que nunca habrá una decisión y ya los están olvidando. Ocho kilómetros al norte del santuario de Shah-Do-Shamshira, un descuidado cementerio cubre una colina en Chaikhana, un barrio al norte de Kabul. La tierra pedregosa es de color café y gris. Las tumbas también son grises, simples montones de piedras separadas por bardas. En el suelo hay botellas vacías y pequeñas bolsas de plástico rosa o azul que vuelan con el viento de finales de otoño.</p>
+<p class="story-body-text story-content" data-para-count="495" data-total-count="38370" id="story-continues-130" tabindex="-1">En la mitad del cementerio, lejos de la avenida principal, yace Farkhunda Malikzada. Su tumba es grande pero no está terminada. El ataúd se hundió en una losa de concreto que mira hacia el oeste, hacia la Meca. En cada una de las cuatro esquinas hay una columna inconclusa de concreto con varillas de metal salidas. Una bandera con su pálida cara fantasmal, envuelta en una hiyab negra, cuelga sobre la tumba. Cuesta trabajo distinguir sus facciones. Ya se está convirtiendo en un recuerdo.</p>
+<p class="story-body-text story-content" data-para-count="299" data-total-count="38669" id="story-continues-131" tabindex="-1">Un viernes, hace poco, las únicas personas cerca de la tumba eran cuatro niños vecinos para quienes el cementerio es un patio de juegos. Todos ellos sabían su nombre. Ishaq, de 6 años, se ofreció a explicar: “Su nombre es Farkhunda. Quemó el Corán, así que la castigaron y la lincharon”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Ahmad Shakib y Jawad Sukhanyar colaboraron en este reportaje.</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/afganistan/" rel="tag">Afganistán</a>, <a href="https://www.nytimes.com/es/tag/violencia-contra-las-mujeres/" rel="tag">violencia contra las mujeres</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/04/21/las-leyes-de-afganistan-no-le-hicieron-justicia-a-una-joven-asesinada-por-una-multitud-de-fanaticos-religiosos/"
+				data-title="Noticias: ‘El que no la golpee es infiel’: La historia de un linchamiento en Afganistán"
+				data-author="POR ALISSA J. RUBIN"
+				data-media=""
+				data-description="El asesinato de Farkhunda Malikzada y la respuesta del sistema judicial ponen en entredicho más de una década de esfuerzos de Occidente por instituir el Estado de derecho y mejorar la condición de las mujeres en Afganistán."
+				data-publish-date="21 de abril de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/05/afganos-siembran-libros-para-alimentar-mentes-hambrientas/">
+					<div class="story-body">
+						<h3 class="kicker">Asia</h3>
+
+						<h2 class="headline">
+							<span class="title">En Afganistán renace la esperanza gracias a pequeñas bibliotecas</span>
+							<time class="dateline">5 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/10/world/asia/afghanbooks-web3/afghanbooks-web3-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2015/10/20/al-posponer-la-retirada-de-afganistan-obama-busca-no-repetir-los-errores-de-irak/">
+					<div class="story-body">
+						<h3 class="kicker">Análisis</h3>
+
+						<h2 class="headline">
+							<span class="title">Al posponer la retirada de Afganistán, Obama busca no repetir los errores de Irak</span>
+							<time class="dateline">20 de octubre de 2015</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2015/10/16/world/16prexy-web-copy/16prexy-web-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/02/07/estados-unidos-extiende-hacia-afganistan-la-lucha-contra-el-estado-islamico/">
+					<div class="story-body">
+						<h3 class="kicker">Asia</h3>
+
+						<h2 class="headline">
+							<span class="title">La lucha contra el Estado Islámico llega a Afganistán</span>
+							<time class="dateline">7 de febrero de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/02/01/world/MILITARY1/MILITARY1-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2015/11/13/a-pesar-de-los-beneficios-muchos-padres-todavia-evitan-hablar-de-sexo-con-sus-hijos/">
+					<div class="story-body">
+						<h3 class="kicker">Salud</h3>
+
+						<h2 class="headline">
+							<span class="title">A pesar de los beneficios, muchos padres todavía evitan hablar de sexo con sus hijos</span>
+							<time class="dateline">13 de noviembre de 2015</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2015/11/05/health/05well_sex/05well_sex-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":918,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

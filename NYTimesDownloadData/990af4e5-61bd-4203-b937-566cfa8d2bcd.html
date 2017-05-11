@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004451747"/>
+<meta name="hdl" content="Cualquiera que sea el resultado, las elecciones en España sacudirán el sistema bipartidista" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20160624" />
+<meta name="utime" content="20160624110040" />
+<meta name="ptime" content="20160624110040" />
+<meta name="DISPLAYDATE" content="Jun. 24, 2016" />
+<meta name="dat" content="Jun. 24, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="las-elecciones-del-domingo-en-espana-pondran-fin-al-bipartidismo" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/06/24/las-elecciones-del-domingo-en-espana-pondran-fin-al-bipartidismo/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Cualquiera que sea el resultado, las elecciones en España sacudirán el sistema bipartidista" />
+<meta property="og:description" content="Podemos y el Partido Socialista Obrero Español, que cooperan en los gobiernos locales y autonómicos, tendrán que llegar a acuerdos en Madrid si quieren que su mayoría en algunas encuestas se traduzca en un gobierno alternativo al de Mariano Rajoy. " />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/06/24/world/24spain-web1/24spain-web1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-06-24" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/06/24/las-elecciones-del-domingo-en-espana-pondran-fin-al-bipartidismo/" />
+<meta property="twitter:title" content="Cualquiera que sea el resultado, las elecciones en España sacudirán el sistema bipartidista" />
+<meta property="twitter:description" content="Podemos y el Partido Socialista Obrero Español, que cooperan en los gobiernos locales y autonómicos, tendrán que llegar a acuerdos en Madrid si quieren que su mayoría en algunas encuestas se traduzca en un gobierno alternativo al de Mariano Rajoy. " />
+<meta name="author" content="Raphael Minder" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Raphael Minder" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="europa" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="europa" />
+<meta name="id" content="100000004451747"/>
+<meta name="wordCount" content="1377"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/06/24/las-elecciones-del-domingo-en-espana-pondran-fin-al-bipartidismo/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=06&amp;day=24&amp;name=las-elecciones-del-domingo-en-espana-pondran-fin-al-bipartidismo">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=16494">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/06\/24\/las-elecciones-del-domingo-en-espana-pondran-fin-al-bipartidismo\/"},"headline":"Cualquiera que sea el resultado, las elecciones en Espa\u00f1a sacudir\u00e1n el sistema bipartidista","datePublished":"2016-06-24T11:00:40+00:00","dateModified":"2016-06-24T12:45:08+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/06\/24\/world\/24spain-web1\/24spain-web1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Podemos y el Partido Socialista Obrero Espa\u00f1ol, que cooperan en los gobiernos locales y auton\u00f3micos, tendr\u00e1n que llegar a acuerdos en Madrid si quieren que su mayor\u00eda en algunas encuestas se traduzca en un gobierno alternativo al de Mariano Rajoy. "}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/06/24/las-elecciones-del-domingo-en-espana-pondran-fin-al-bipartidismo/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/06/24/world/europe/voting-again-spain-faces-threat-to-two-party-system.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/europa" />
+<title>Cualquiera que sea el resultado, las elecciones en España sacudirán el sistema bipartidista &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/06/24/world/europe/voting-again-spain-faces-threat-to-two-party-system.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/06/24/las-elecciones-del-domingo-en-espana-pondran-fin-al-bipartidismo/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-16494 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Cualquiera que sea el resultado, las elecciones en España sacudirán el sistema bipartidista
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/06/24/las-elecciones-del-domingo-en-espana-pondran-fin-al-bipartidismo/"
+					data-title="Noticias: Cualquiera que sea el resultado, las elecciones en España sacudirán el sistema bipartidista"
+					data-author="POR RAPHAEL MINDER"
+					data-media=""
+					data-description="Podemos y el Partido Socialista Obrero Español, que cooperan en los gobiernos locales y autonómicos, tendrán que llegar a acuerdos en Madrid si quieren que su mayoría en algunas encuestas se traduzca en un gobierno alternativo al de Mariano Rajoy. "
+					data-publish-date="24 de junio de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/28TZy4K">http://nyti.ms/28TZy4K</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/europa/">Europa</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Cualquiera que sea el resultado, las elecciones en España sacudirán el sistema bipartidista</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Raphael Minder</span>
+</span>
+
+					<time class="dateline" datetime="2016-06-24">24 de junio de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/06/24/las-elecciones-del-domingo-en-espana-pondran-fin-al-bipartidismo/"
+							data-title="Noticias: Cualquiera que sea el resultado, las elecciones en España sacudirán el sistema bipartidista"
+							data-author="POR RAPHAEL MINDER"
+							data-media=""
+							data-description="Podemos y el Partido Socialista Obrero Español, que cooperan en los gobiernos locales y autonómicos, tendrán que llegar a acuerdos en Madrid si quieren que su mayoría en algunas encuestas se traduzca en un gobierno alternativo al de Mariano Rajoy. "
+							data-publish-date="24 de junio de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004488941" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/06/24/world/24spain-web1/24spain-web1-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/06/24/world/24spain-web1/24spain-web1-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/06/24/world/24spain-web1/24spain-web1-superJumbo.jpg" data-mediaviewer-caption="Miembros del Partido Popular esperan la llegada de Mariano Rajoy a un mitin electoral en Málaga. Según las encuestas, Podemos tiene posibilidades serias de terminar segundo en las elecciones tras el Partido Popular." data-mediaviewer-credit="Jon Nazca/Reuters"  itemprop="url" itemid="https://static01.nyt.com/images/2016/06/24/world/24spain-web1/24spain-web1-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Miembros del Partido Popular esperan la llegada de Mariano Rajoy a un mitin electoral en Málaga. Según las encuestas, Podemos tiene posibilidades serias de terminar segundo en las elecciones tras el Partido Popular.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Jon Nazca/Reuters
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/06/24/world/europe/voting-again-spain-faces-threat-to-two-party-system.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="397" data-total-count="397" id="story-continues-2" tabindex="-1">BARCELONA, España — Los regímenes políticos no mueren tan fácilmente. Esa explicación puede ser tan buena como cualquier otra para explicar la parálisis en España desde que las últimas elecciones generales en diciembre no le dieran una victoria clara a nadie. Para muchos españoles, las elecciones del domingo son como la experiencia de la película &#8220;El día de la marmota&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="196" data-total-count="593" id="story-continues-3" tabindex="-1">Pero si los políticos españoles parecen no encontrar puntos de acuerdo en el ámbito estatal, hay un rayo de esperanza: en los gobiernos municipales y autonómicos sí se han dado esos acuerdos.</p>
+<p class="story-body-text story-content" data-para-count="281" data-total-count="874" id="story-continues-4" tabindex="-1">Por ejemplo, mientras los líderes socialistas y de Podemos —ahora agrios rivales por el dominio de la izquierda— han intercambiado golpes en el parlamento durante los últimos seis meses, han colaborado durante el último año en las tres ciudades más importantes de España.</p>
+<p class="story-body-text story-content" data-para-count="247" data-total-count="1121" id="story-continues-5" tabindex="-1">En Barcelona y Valencia, concejales de ambos partidos se sientan juntos en el consistorio municipal, y en Madrid, los socialistas permitieron que una jueza retirada que militó en al Partido Comunista, Manuela Carmena, se convirtiera en alcaldesa.</p>
+<p class="story-body-text story-content" data-para-count="428" data-total-count="1549" id="story-continues-6" tabindex="-1">Antoni Zalbalza, que fue secretario de Estado en un gobierno del partido socialista y es profesor de economía en la Universidad de Valencia, dice que &#8220;el comportamiento observado en política municipal y autonómica sirve de lección para reducir la rigidez de la política estatal. La política no puede girar en torno a las líneas rojas y los principios intocables que hacen que las coaliciones sean imposibles&#8221;.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="247" data-total-count="1796" id="story-continues-7" tabindex="-1">La diferencia, en todo caso, podría ser una cuestión de apuestas. Los políticos locales y autonómicos pueden trabajar juntos en cosas relativamente restringidas, las que permiten que las ciudades y los gobiernos autonómicos sigan funcionando.</p>
+<p class="story-body-text story-content" data-para-count="268" data-total-count="2064" id="story-continues-8" tabindex="-1">Pero en el ámbito estatal, la batalla por los votos del domingo puede no ser otra cosa que la supervivencia o el fin del sistema bipartidista que ha caracterizado la política española desde la transición a la democracia que comenzó a finales de los años setenta.</p>
+<p class="story-body-text story-content" data-para-count="314" data-total-count="2378" id="story-continues-9" tabindex="-1">El reto más importante al que se enfrenta el régimen es Podemos: un partido de reciente creación —hace tan solo dos años— que ha formado una coalición con un partido de izquierda más radical, Izquierda Unida, y amenaza la posición predominante que los socialistas han tenido hasta ahora en la izquierda.</p>
+<p class="story-body-text story-content" data-para-count="275" data-total-count="2653" id="story-continues-10" tabindex="-1">Según las encuestas, Podemos tiene posibilidades serias de terminar segundo en las elecciones tras el Partido Popular, conservador, dirigido por el presidente Mariano Rajoy. Pero una vez más no se espera que nadie consiga una mayoría suficiente para gobernar en solitario.</p>
+<p class="story-body-text story-content" data-para-count="427" data-total-count="3080" id="story-continues-11" tabindex="-1">De hecho, la frágil situación en la que se encuentra Rajoy sufrió un nuevo revés esta semana cuando un periódico de izquierda, Público, publicó una grabación en la que se escucha al ministro de Interior, Jorge Fernández Díaz, mientras trata —en apariencia— de implicar en delitos a políticos independentistas catalanes. Rajoy rechazó el miércoles las peticiones de la oposición para que destituya al ministro.</p>
+<p class="story-body-text story-content" data-para-count="424" data-total-count="3504" id="story-continues-12" tabindex="-1">Incluso después de que se vote el domingo, el escenario que se encontrarán los políticos españoles se parecerá mucho al de los últimos seis meses: una coalición que cree un nueva realidad política —con partidos nuevos que tienen la posibilidad de entrar al gobierno por primera vez— o una coalición que mantenga el orden actual (el Partido Popular apoyado por el Partido Socialista) contra los recién llegados.</p>
+<p class="story-body-text story-content" data-para-count="61" data-total-count="3565" id="story-continues-13" tabindex="-1">Si eso no sucede, los españoles tendrán que votar de nuevo.</p>
+<p class="story-body-text story-content" data-para-count="300" data-total-count="3865" id="story-continues-14" tabindex="-1">Parece que nadie desea que suceda eso y algunos políticos locales están pidiendo que los políticos en Madrid sigan su ejemplo y lleguen a acuerdos. La primera, Ada Colau, activista convertida en alcaldesa de Barcelona, que acaba de pactar con los socialistas para consolidar su gobierno municipal.</p>
+<p class="story-body-text story-content" data-para-count="266" data-total-count="4131" id="story-continues-15" tabindex="-1">&#8220;El sistema bipartidista ya ha terminado pero, en los partidos que han ocupado ese espacio, eso ha creado una serie de divisiones internas y ha llevado a una negativa a entender lo que está pasando&#8221;, dijo Colau durante una entrevista en el ayuntamiento.</p>
+<figure id="media-100000004488945" class="media photo media-100000004488945 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/06/24/world/24spain-web2/24spain-web2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-17">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/06/24/world/24spain-web2/24spain-web2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/06/24/world/24spain-web2/24spain-web2-superJumbo.jpg" data-mediaviewer-caption="The Socialist candidate, Pedro Sánchez, has struggled to shake off the image of a party mired almost as deeply in corruption scandals as Mr. Rajoy’s party." data-mediaviewer-credit="Eloy Alonso/Reuters"  itemprop="url" itemid="https://static01.nyt.com/images/2016/06/24/world/24spain-web2/24spain-web2-master675.jpg"/>
+		<meta itemprop="height" content="440" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The Socialist candidate, Pedro Sánchez, has struggled to shake off the image of a party mired almost as deeply in corruption scandals as Mr. Rajoy’s party.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Eloy Alonso/Reuters
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="244" data-total-count="4375" id="story-continues-17" tabindex="-1">El ascenso de Podemos ha desatado una crisis existencial dentro del Partido Socialista Obrero Español (PSOE), que se considera arquitecto de la España moderna, especialmente por haber fraguado el ingreso del país a la Unión Europea en 1986.</p>
+<p class="story-body-text story-content" data-para-count="324" data-total-count="4699" id="story-continues-18" tabindex="-1">Pero más recientemente, los socialistas han llevado a España a la crisis tras el estallido de la burbuja inmobiliaria en 2008. El candidato socialista, Pedro Sánchez, también ha peleado para deshacerse de la imagen de partido casi tan implicado en escándalos de corrupción como el partido conservador de Mariano Rajoy.</p>
+<p class="story-body-text story-content" data-para-count="167" data-total-count="4866" id="story-continues-19" tabindex="-1">En Andalucía, principal feudo del PSOE, dos antiguos líderes del partido han sido imputados por un desvío de fondos para parados a parientes y miembros del partido.</p>
+<p class="story-body-text story-content" data-para-count="127" data-total-count="4993" id="story-continues-20" tabindex="-1">La vieja guardia del partido socialista advierte que cualquier acuerdo con Podemos empujaría al partido a un papel secundario.</p>
+<p class="story-body-text story-content" data-para-count="287" data-total-count="5280" id="story-continues-21" tabindex="-1">Felipe González, quien fue presidente con el partido socialista, ha pedido que este negocie un acercamiento al Partido Popular de Mariano Rajoy en un movimiento similar a las grandes coaliciones que funcionan en Alemania y otros países. Su intención parece ser salvar el bipartidismo.</p>
+<p class="story-body-text story-content" data-para-count="188" data-total-count="5468" id="story-continues-22" tabindex="-1">&#8220;No hay pruebas de que la dispersión del voto, que es legítima, ayude a solucionar los problemas del país&#8221;, dijo González en declaraciones al canal de televisión La Sexta.</p>
+<p class="story-body-text story-content" data-para-count="250" data-total-count="5718" id="story-continues-23" tabindex="-1">Por ahora, la principal preocupación para Sánchez, el líder socialista, ha sido controlar a su partido. A principios de mayo, Sánchez evitó que Ximo Puig, líder de los socialistas valencianos, hiciera campaña junto a los candidatos de Podemos.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="181" data-total-count="5899" id="story-continues-24" tabindex="-1">De hecho, Pablo Iglesias, líder de Podemos, está aumentando sus intentos por explotar la tensión dentro del partido socialista sobre el modo de responder al éxito de su partido.</p>
+<p class="story-body-text story-content" data-para-count="223" data-total-count="6122" id="story-continues-25" tabindex="-1">Este mes, durante el único debate televisado entre los cuatro candidatos principales, Iglesias le dijo a Sánchez que se equivocaba de adversario cada vez que atacaba a Podemos y no al partido conservador de Mariano Rajoy.</p>
+<p class="story-body-text story-content" data-para-count="206" data-total-count="6328" id="story-continues-26" tabindex="-1">Aún así, una alianza entre Podemos y el PSOE no es muy probable. No solo por diferencias estratégicas, sino por la cuestión territorial más importante del país: los intentos de secesión de Cataluña.</p>
+<p class="story-body-text story-content" data-para-count="222" data-total-count="6550" id="story-continues-27" tabindex="-1">En diciembre, Podemos ganó las elecciones en Cataluña gracias a la popularidad de Ada Colau pero también porque el partido propuso permitir que los catalanes voten por su autodeterminación y eventual salida de España.</p>
+<p class="story-body-text story-content" data-para-count="311" data-total-count="6861" id="story-continues-28" tabindex="-1">Esa promesa se convirtió en un problema en las negociaciones en Madrid para formar un gobierno de coalición. Ninguno de los otros tres partidos apoya un referendo sobre la independencia de Cataluña. De hecho, el cuarto partido, Ciudadanos, nació con el propósito de oponer cualquier secesión de Cataluña.</p>
+<p class="story-body-text story-content" data-para-count="243" data-total-count="7104" id="story-continues-29" tabindex="-1">En lugar de esa votación, Sánchez y los socialistas prometen una reforma constitucional que convierta a España en un Estado federal. Cualquier paso atrás por parte de Pablo Iglesias podría implicar una ruptura dentro su propia formación.</p>
+<p class="story-body-text story-content" data-para-count="171" data-total-count="7275" id="story-continues-30" tabindex="-1">&#8220;La cuestión del referéndum no puede ponerse a un lado porque algunos han hecho una promesa firme y hay que darle una solución a este problema&#8221;, dijo Colau.</p>
+<p class="story-body-text story-content" data-para-count="226" data-total-count="7501" id="story-continues-31" tabindex="-1">Pese a las diferencias, los cuatro líderes de ámbito estatal de la política española prometen a los ciudadanos que no habrá elecciones por tercera vez aunque los resultados del domingo no ofrezcan un resultado definitivo.</p>
+<p class="story-body-text story-content" data-para-count="169" data-total-count="7670" id="story-continues-32" tabindex="-1">Se espera que las elecciones del domingo también señalen una desconexión creciente entre los políticos y el electorado. Las encuestas hablan de una abstención alta.</p>
+<p class="story-body-text story-content" data-para-count="355" data-total-count="8025" id="story-continues-33" tabindex="-1">&#8220;Es comprensible que muchos votantes contemplen estas elecciones desde la melancolía, la depresión o la abulia&#8221;, como ha escrito José Ignacio Torreblanca, profesor en la Universidad Nacional de Educación a Distancia y jefe de opinión del diario El País. &#8220;La calidad de la democracia española sigue dejando mucho que desear&#8221;.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/elecciones/" rel="tag">Elecciones</a>, <a href="https://www.nytimes.com/es/tag/espana/" rel="tag">España</a>, <a href="https://www.nytimes.com/es/tag/mariano-rajoy/" rel="tag">Mariano Rajoy</a>, <a href="https://www.nytimes.com/es/tag/pablo-iglesias/" rel="tag">Pablo Iglesias</a>, <a href="https://www.nytimes.com/es/tag/partido-popular/" rel="tag">Partido Popular</a>, <a href="https://www.nytimes.com/es/tag/partido-socialista-obrero-espanol/" rel="tag">Partido Socialista Obrero Español</a>, <a href="https://www.nytimes.com/es/tag/pedro-sanchez/" rel="tag">Pedro Sánchez</a>, <a href="https://www.nytimes.com/es/tag/podemos/" rel="tag">Podemos</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/06/24/las-elecciones-del-domingo-en-espana-pondran-fin-al-bipartidismo/"
+				data-title="Noticias: Cualquiera que sea el resultado, las elecciones en España sacudirán el sistema bipartidista"
+				data-author="POR RAPHAEL MINDER"
+				data-media=""
+				data-description="Podemos y el Partido Socialista Obrero Español, que cooperan en los gobiernos locales y autonómicos, tendrán que llegar a acuerdos en Madrid si quieren que su mayoría en algunas encuestas se traduzca en un gobierno alternativo al de Mariano Rajoy. "
+				data-publish-date="24 de junio de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/06/23/el-nuevo-gobierno-de-espana-dependera-de-la-division-o-la-unidad-de-la-izquierda/">
+					<div class="story-body">
+						<h3 class="kicker">Europa</h3>
+
+						<h2 class="headline">
+							<span class="title">El nuevo gobierno de España dependerá de la división o la unidad de la izquierda</span>
+							<time class="dateline">23 de junio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2015/03/11/world/11Podemos-copy-ES/11Podemos-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/17/denunciar-la-corrupcion-en-espana-es-una-tarea-arriesgada/">
+					<div class="story-body">
+						<h3 class="kicker">Europa</h3>
+
+						<h2 class="headline">
+							<span class="title">Denunciar la corrupción en España es una tarea arriesgada</span>
+							<time class="dateline">17 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/05/15/world/WHISTLEBLOWER1/WHISTLEBLOWER1-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2015/09/30/las-elecciones-refuerzan-el-independentismo-en-cataluna-y-revelan-conflicto-con-espana/">
+					<div class="story-body">
+						<h3 class="kicker">Europa</h3>
+
+						<h2 class="headline">
+							<span class="title">Las elecciones refuerzan el independentismo en Cataluña e intensifican su conflicto con España</span>
+							<time class="dateline">30 de septiembre de 2015</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2015/09/28/world/28CATALAN-2-copy/28CATALAN-2-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/01/el-laberinto-politico-de-espana/">
+					<div class="story-body">
+						<h3 class="kicker">Editorial</h3>
+
+						<h2 class="headline">
+							<span class="title">El laberinto político de España</span>
+							<time class="dateline">1 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/30/universal/es/rajoyES/rajoyES-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":685,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

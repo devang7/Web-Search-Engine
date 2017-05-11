@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004312595"/>
+<meta name="hdl" content="La historia de Mossack Fonseca, la firma de abogados que dio origen a los &#8216;Panama Papers&#8217;" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20160407" />
+<meta name="utime" content="20160407122648" />
+<meta name="ptime" content="20160407122648" />
+<meta name="DISPLAYDATE" content="Apr. 7, 2016" />
+<meta name="dat" content="Apr. 7, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="la-historia-de-mossack-fonseca-la-firma-de-abogados-que-dio-origen-a-los-panama-papers" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/04/07/la-historia-de-mossack-fonseca-la-firma-de-abogados-que-dio-origen-a-los-panama-papers/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="La historia de Mossack Fonseca, la firma de abogados que dio origen a los &#8216;Panama Papers&#8217;" />
+<meta property="og:description" content="Ramón Fonseca, socio fundador del bufete panameño, habla sobre los orígenes de la firma y el reciente escándalo de filtración de documentos que involucra a políticos, celebridades y deportistas." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/04/06/multimedia/07panama-fonseca/07panama-fonseca-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-04-07" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/04/07/la-historia-de-mossack-fonseca-la-firma-de-abogados-que-dio-origen-a-los-panama-papers/" />
+<meta property="twitter:title" content="La historia de Mossack Fonseca, la firma de abogados que dio origen a los &#8216;Panama Papers&#8217;" />
+<meta property="twitter:description" content="Ramón Fonseca, socio fundador del bufete panameño, habla sobre los orígenes de la firma y el reciente escándalo de filtración de documentos que involucra a políticos, celebridades y deportistas." />
+<meta name="author" content="Kirk Semple, Azam Ahmed y Eric Lipton" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Kirk Semple, Azam Ahmed y Eric Lipton" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="panama" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="panama" />
+<meta name="id" content="100000004312595"/>
+<meta name="wordCount" content="2992"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/04/07/la-historia-de-mossack-fonseca-la-firma-de-abogados-que-dio-origen-a-los-panama-papers/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=04&amp;day=07&amp;name=la-historia-de-mossack-fonseca-la-firma-de-abogados-que-dio-origen-a-los-panama-papers">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=9068">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/04\/07\/la-historia-de-mossack-fonseca-la-firma-de-abogados-que-dio-origen-a-los-panama-papers\/"},"headline":"La historia de Mossack Fonseca, la firma de abogados que dio origen a los 'Panama Papers'","datePublished":"2016-04-07T12:26:48+00:00","dateModified":"2016-07-27T19:28:03+00:00","author":{"@type":"Person","name":"paulina.chavira"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/04\/06\/multimedia\/07panama-fonseca\/07panama-fonseca-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Ram\u00f3n Fonseca, socio fundador del bufete paname\u00f1o, habla sobre los or\u00edgenes de la firma y el reciente esc\u00e1ndalo de filtraci\u00f3n de documentos que involucra a pol\u00edticos, celebridades y deportistas."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/04/07/la-historia-de-mossack-fonseca-la-firma-de-abogados-que-dio-origen-a-los-panama-papers/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/04/07/world/americas/panama-papers-leak-casts-light-on-a-law-firm-founded-on-secrecy.html?&amp;#038;hp&amp;#038;action=click&amp;#038;pgtype=Homepage&amp;#038;clickSource=story-heading&amp;#038;module=first-column-region&amp;#038;region=top-news&amp;#038;WT.nav=top-news" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="americalatina/panama" />
+<title>La historia de Mossack Fonseca, la firma de abogados que dio origen a los &#8216;Panama Papers&#8217; &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/04/07/world/americas/panama-papers-leak-casts-light-on-a-law-firm-founded-on-secrecy.html?&#038;hp&#038;action=click&#038;pgtype=Homepage&#038;clickSource=story-heading&#038;module=first-column-region&#038;region=top-news&#038;WT.nav=top-news" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/04/07/la-historia-de-mossack-fonseca-la-firma-de-abogados-que-dio-origen-a-los-panama-papers/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-9068 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				La historia de Mossack Fonseca, la firma de abogados que dio origen a los &#8216;Panama Papers&#8217;
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/04/07/la-historia-de-mossack-fonseca-la-firma-de-abogados-que-dio-origen-a-los-panama-papers/"
+					data-title="América Latina: La historia de Mossack Fonseca, la firma de abogados que dio origen a los &#8216;Panama Papers&#8217;"
+					data-author="POR KIRK SEMPLE, AZAM AHMED Y ERIC LIPTON"
+					data-media=""
+					data-description="Ramón Fonseca, socio fundador del bufete panameño, habla sobre los orígenes de la firma y el reciente escándalo de filtración de documentos que involucra a políticos, celebridades y deportistas."
+					data-publish-date="7 de abril de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/panama/">Panamá</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">La historia de Mossack Fonseca, la firma de abogados que dio origen a los &#8216;Panama Papers&#8217;</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Kirk Semple</span>
+</span>
+, <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Azam Ahmed</span>
+</span>
+ y <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Eric Lipton</span>
+</span>
+
+					<time class="dateline" datetime="2016-04-07">7 de abril de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/04/07/la-historia-de-mossack-fonseca-la-firma-de-abogados-que-dio-origen-a-los-panama-papers/"
+							data-title="América Latina: La historia de Mossack Fonseca, la firma de abogados que dio origen a los &#8216;Panama Papers&#8217;"
+							data-author="POR KIRK SEMPLE, AZAM AHMED Y ERIC LIPTON"
+							data-media=""
+							data-description="Ramón Fonseca, socio fundador del bufete panameño, habla sobre los orígenes de la firma y el reciente escándalo de filtración de documentos que involucra a políticos, celebridades y deportistas."
+							data-publish-date="7 de abril de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004311811" class="media photo lede layout-large-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/06/multimedia/07panama-fonseca/07panama-fonseca-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/06/multimedia/07panama-fonseca/07panama-fonseca-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/06/multimedia/07panama-fonseca/07panama-fonseca-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Carlos Jasso/Reuters"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/06/multimedia/07panama-fonseca/07panama-fonseca-master1050.jpg"/>
+		<meta itemprop="height" content="623" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Carlos Jasso/Reuters
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/04/07/world/americas/panama-papers-leak-casts-light-on-a-law-firm-founded-on-secrecy.html?amp;hp&#038;action=click&#038;pgtype=Homepage&#038;clickSource=story-heading&#038;module=first-column-region&#038;region=top-news&#038;WT_nav=top-news&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="310" data-total-count="310" id="story-continues-2" tabindex="-1">CIUDAD DE MÉXICO — Los dos hombres se aliaron en una era de incertidumbre política y económica en Panamá: uno era un reservado inmigrante alemán cuyo padre sirvió en el ala armada del Partido Nazi; el otro, un amable escritor en ciernes cuya familia se había opuesto a la dictadura militar de Panamá.</p>
+<p class="story-body-text story-content" data-para-count="498" data-total-count="808" id="story-continues-3" tabindex="-1">En 1986, mientras el país aún estaba bajo el yugo del General Manuel Noriega, estos hombres fusionaron sus pequeños despachos de abogados y así crearon lo que se convertiría en el centro de las operaciones bancarias sigilosas para la élite, un paraíso fiscal. A lo largo de las siguientes tres décadas, Jürgen Mossack y Ramón Fonseca expandieron su despacho hasta tener 500 empleados, compañías filiales en todo el mundo y una cartera de clientes poderosos, famosos y, a veces, infames.</p>
+<p class="story-body-text story-content" data-para-count="143" data-total-count="951" id="story-continues-4" tabindex="-1">En enero, un fiscal que investigaba la corrupción generalizada en Brasil dijo que la firma de abogados era “un enorme lavadero de dinero”.</p>
+<p class="story-body-text story-content" data-para-count="351" data-total-count="1302" id="story-continues-5" tabindex="-1">Los socios se habían vuelto muy adinerados, y Fonseca utilizó el éxito de la firma para lograr un papel influyente en los altos rangos de la política. Le dijo a sus asociados que quería limpiar el gobierno y se convirtió en consejero especial del Presidente Juan Carlos Varela, hasta que el escándalo de Brasil lo obligó a renunciar este año.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="189" data-total-count="1491" id="story-continues-6" tabindex="-1">En una entrevista, dijo que entrar a la política fue, en parte, una forma de dar algo a cambio: “Creo en compartir la pizza” escribió. “Por lo menos darle a los demás un pedazo”.</p>
+<p class="story-body-text story-content" data-para-count="520" data-total-count="2011" id="story-continues-7" tabindex="-1">La firma Mossack Fonseca fue construida sobre las garantías de privacidad a prueba de todo que ofrecía a sus clientes. Pero esta semana, una filtración de millones de documentos de la firma dejó al descubierto sus operaciones y expuso la proliferación de empresas fantasmas y paraísos fiscales para las personas más ricas del mundo. Las revelaciones ya provocaron que el primer ministro de Islandia se apartara de su cargo, y también han desencadenado investigaciones criminales por lo menos en dos continentes.</p>
+<p class="story-body-text story-content" data-para-count="582" data-total-count="2593" id="story-continues-8" tabindex="-1">La filtración de documentos también ha significado más escrutinio a los sectores legales y financieros de Panamá, justo cuando sus líderes intentaban deshacerse de la reputación del país como un lugar seguro para las fortunas de los criminales y los corruptos. En febrero, Panamá fue eliminado de una lista de países bajo vigilancia por parte de una agencia internacional que establece estándares para combatir el lavado de dinero y la financiación del terrorismo, pero a nivel internacional aún es considerado por muchos como un paraíso para los evasores de impuestos.</p>
+<p class="story-body-text story-content" data-para-count="227" data-total-count="2820" id="story-continues-9" tabindex="-1">El presidente de Panamá ha prometido cooperar con cualquier investigación judicial que se abra a partir de la información filtrada, lo cual podría incluir una indagación a su exconsejero, sin duda una situación incómoda.</p>
+<p class="story-body-text story-content" data-para-count="107" data-total-count="2927" id="story-continues-10" tabindex="-1">Mossack Fonseca ha negado haber cometido cualquier delito, y Fonseca ha defendido la inocencia de su firma.</p>
+<p class="story-body-text story-content" data-para-count="210" data-total-count="3137" id="story-continues-11" tabindex="-1">“Al final de esta tormenta el cielo será azul y la gente sabrá que el único crimen es hackear”, dijo Fonseca sobre los documentos de la firma en una entrevista de una hora que ofreció mediante WhatsApp.</p>
+<p class="story-body-text story-content" data-para-count="193" data-total-count="3330" id="story-continues-12" tabindex="-1">Pero algunas personas en Panamá que conocen a Fonseca dicen que los documentos filtrados no concuerdan con la manera en la que él ha tratado de presentarse a sí mismo y su papel en el país.</p>
+<p class="story-body-text story-content" data-para-count="323" data-total-count="3653" id="story-continues-13" tabindex="-1">Carlos Guevara Mann, un miembro del mismo partido y exfuncionario del gobierno, dijo que una vez le preguntó a Fonseca, ya un hombre adinerado y novelista exitoso, por qué tenía interés en la política. Según recordó Mann, el abogado le respondió que quería corregir la historia de los derechos humanos en el país.</p>
+<p class="story-body-text story-content" data-para-count="210" data-total-count="3863" id="story-continues-14" tabindex="-1">“Cuando juntas esa conversación con el hecho de que la firma ofrecía sus servicios a notorios violadores de derechos humanos como Gadafi, Mugabe, Asad y Putin es verdaderamente repugnante”, comentó Mann.</p>
+<p class="story-body-text story-content" data-para-count="350" data-total-count="4213" id="story-continues-15" tabindex="-1">Entre los documentos filtrados que obtuvo el Consorcio Internacional de Periodistas, aparece una cadena de correos entre los socios principales de la firma en la que se dan cuenta de que habían trabajado durante años con clientes iraníes que estaban incluidos en una lista de sanciones que publicó el gobierno de Estados Unidos y Naciones Unidas.</p>
+<p class="story-body-text story-content" data-para-count="191" data-total-count="4404" id="story-continues-16" tabindex="-1">“¡Esto es peligroso!”, escribió Mossack en un correo de septiembre de 2010 que le envió a Fonseca y a otros miembros de la firma. “Una alerta debió haberse activado de inmediato”.</p>
+<figure id="media-100000004313618" class="media photo media-100000004313618 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/07/world/07PANAMA/07PANAMA-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-18">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/07/world/07PANAMA/07PANAMA-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/07/world/07PANAMA/07PANAMA-superJumbo.jpg" data-mediaviewer-caption="Panama City on Monday. The president of Panama has vowed to cooperate with investigations over a law firm&amp;rsquo;s leaked documents." data-mediaviewer-credit="Arnulfo Franco/Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/07/world/07PANAMA/07PANAMA-master675.jpg"/>
+		<meta itemprop="height" content="439" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Panama City on Monday. The president of Panama has vowed to cooperate with investigations over a law firm&amp;rsquo;s leaked documents.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Arnulfo Franco/Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="167" data-total-count="4571" id="story-continues-18" tabindex="-1">Mossack culpó a los empleados de la oficina en Londres y escribió, “no están haciendo la auditoría de manera minuciosa, (o quizá no la hacen en lo absoluto)”.</p>
+<p class="story-body-text story-content" data-para-count="340" data-total-count="4911" id="story-continues-19" tabindex="-1">Los documentos filtrados han agitado los sectores bancarios y legales de Panamá, los cimientos de la economía del país, y dejaron fríos a los miembros de la clase empresarial. El colegio de abogados del país ha salido en defensa de la firma, pues dice que la información filtrada es parte de un ataque contra la reputación del país.</p>
+<p class="story-body-text story-content" data-para-count="201" data-total-count="5112" id="story-continues-20" tabindex="-1">“Les están provocando un daño terrible a ellos, a todos los abogados y a su país en general”, dijo José Alberto Álvarez, el presidente de la asociación, en una conferencia de prensa el lunes.</p>
+<p class="story-body-text story-content" data-para-count="134" data-total-count="5246" id="story-continues-21" tabindex="-1">Hay mucho en riesgo para Panamá, un país cuya economía depende en gran medida de las industrias de servicios legales y financieros.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="300" data-total-count="5546" id="story-continues-22" tabindex="-1">El crecimiento de Mossack Fonseca coincidió con el surgimiento de Panamá como un paraíso fiscal. El flujo creciente del capital a través de fronteras durante los setenta y ochenta creó un mercado para abogados y contadores capaces de proteger el dinero, y Panamá se preparó para tomar ventaja.</p>
+<p class="story-body-text story-content" data-para-count="426" data-total-count="5972" id="story-continues-23" tabindex="-1">Desde principios del siglo XX, su papel como centro de intercambio y embarque –el puente que une al continente y donde convergen el Océano Pacífico y el Mar Caribe– lo convirtió en un candidato claro para la contabilidad <em>offshore</em>. Los barcos internacionales ondeaban la bandera panameña para aprovechar su favorable estructura fiscal, que, según algunos expertos, fue copiada casi directamente del estado de Delaware.</p>
+<p class="story-body-text story-content" data-para-count="339" data-total-count="6311" id="story-continues-24" tabindex="-1">“Como siempre ha sido el centro del comercio internacional, encajó perfectamente con la financiación exterior y la planificación fiscal en el extranjero”, dijo Victor Fleischer, un profesor de San Diego State University. “No sé si se justifica o no, pero la gente siempre ha considerado que Panamá es un lugar un poco turbio”.</p>
+<p class="story-body-text story-content" data-para-count="116" data-total-count="6427" id="story-continues-25" tabindex="-1">La firma fue audaz y ágil, y logró responder a un panorama legislativo que evolucionaba. Su reputación floreció.</p>
+<p class="story-body-text story-content" data-para-count="140" data-total-count="6567" id="story-continues-26" tabindex="-1">Pero otras firmas panameñas de abogados también entraron al ruedo, incluyendo bufetes más prominentes y más grandes que Mossack Fonseca.</p>
+<p class="story-body-text story-content" data-para-count="144" data-total-count="6711" id="story-continues-27" tabindex="-1">“Todas las firmas panameñas importantes tienen una división como esta”, dijo Roberto Eismann, el fundador del diario La Prensa en Panamá.</p>
+<p class="story-body-text story-content" data-para-count="303" data-total-count="7014" id="story-continues-28" tabindex="-1">De hecho, Mossack Fonseca es tan solo una de las innumerables firmas en todo el mundo que se dedican a una industria mundial que alberga billones de dólares, y que podría privar a los países de hasta 200 mil millones de dólares en ingresos fiscales cada año, dicen expertos en impuestos y juristas.</p>
+<p class="story-body-text story-content" data-para-count="267" data-total-count="7281" id="story-continues-29" tabindex="-1">Los socios fundadores de Mossack Fonseca compraron casas enormes en vecindarios exclusivos en la capital panameña, así como lujosas casas de fin de semana. Sus hijos tomaban prestado el avión de la compañía y viajaban con sus amigos a la playa o a las montañas.</p>
+<p class="story-body-text story-content" data-para-count="23" data-total-count="7304" id="story-continues-30" tabindex="-1"><strong>Personalidades opuestas</strong></p>
+<p class="story-body-text story-content" data-para-count="224" data-total-count="7528" id="story-continues-31" tabindex="-1">Pero a pesar de su escalada paralela en los negocios y en la sociedad, Mossack y Fonseca aparentemente mantuvieron separadas sus vidas personales. Amigos y socios describen que sus personalidades son completamente distintas.</p>
+<p class="story-body-text story-content" data-para-count="416" data-total-count="7944" id="story-continues-32" tabindex="-1">Mossack nació en Alemania en 1948 y durante la Segunda Guerra Mundial su padre fue miembro de las Waffen-SS, de acuerdo a los archivos de inteligencia de la Armada de Estados Unidos que obtuvo y aportó el Consorcio Internacional de Periodistas de Investigación. La familia se mudó a Panamá en los sesenta donde, según los archivos de inteligencia, el padre de Mossack ofreció trabajar como espía para la CIA.</p>
+<p class="story-body-text story-content" data-para-count="288" data-total-count="8232" id="story-continues-33" tabindex="-1">Mossack ha mantenido un perfil bajo, pues ha evitado los eventos sociales de la alta sociedad panameña y ha sido disciplinado en su trabajo. Aunque está más concentrado en las operaciones diarias, hasta ahora ha rechazado las declaraciones públicas acerca de los documentos filtrados.</p>
+<p class="story-body-text story-content" data-para-count="284" data-total-count="8516" id="story-continues-34" tabindex="-1">En cambio, Fonseca ha sido una suerte de hombre de sociedad durante años. Nacido en Panamá en 1952, estudió en London School of Economics y después trabajó durante varios años en Naciones Unidas en Ginebra ¾”tratando de salvar el mundo”, como lo expresó en una entrevista.</p>
+<figure id="media-100000004312818" class="media photo media-100000004312818 embedded layout-large-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/07/world/video-sapin/video-sapin-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-36">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/07/world/video-sapin/video-sapin-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/07/world/video-sapin/video-sapin-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Patrick Kovarik/Agence France-Presse — Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/07/world/video-sapin/video-sapin-master675.jpg"/>
+		<meta itemprop="height" content="380" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Patrick Kovarik/Agence France-Presse — Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="195" data-total-count="8711" id="story-continues-36" tabindex="-1">Fue entonces, dijo, cuando comenzó a pensar en escribir una novela. Décadas más tarde, en los noventa, se volvió famoso como novelista, y ganó el premio literario más reconocido de Panamá.</p>
+<p class="story-body-text story-content" data-para-count="339" data-total-count="9050" id="story-continues-37" tabindex="-1">Pero tenía ambiciones aun más grandes: la política. Un día, cuando se quejó con su padre acerca de lo desgastada que estaba la política panameña, el señor lo regañó. “Mi padre me dijo: &#8216;No es justo criticar al torero desde tu asiento&#8217;”, escribió Fonseca en la entrevista. “&#8217;¡Métete al ruedo!&#8217;”.</p>
+<p class="story-body-text story-content" data-para-count="220" data-total-count="9270" id="story-continues-38" tabindex="-1">Para la década del 2000, estaba bien acomodado en el Partido Panameñista y se volvió asesor cercano de Varela. Después de que Varela se convirtió en presidente en 2014, Fonseca se unió a su gabinete como consejero.</p>
+<p class="story-body-text story-content" data-para-count="322" data-total-count="9592" id="story-continues-39" tabindex="-1">Dentro de Mossack Fonseca, ambos socios fundadores se pavoneaban. Exempleados han dicho que había un equipo de asistentes cuyo trabajo era conseguir cuartos de hotel, servicios de autos y entretenimiento para los clientes adinerados cuando llegaban a la ciudad, como recorridos por la ciudad vieja y el Canal de Panamá.</p>
+<p class="story-body-text story-content" data-para-count="310" data-total-count="9902" id="story-continues-40" tabindex="-1">“No hubo reyes ni príncipes que yo recuerde”, dijo Tarina Rodríguez, y agregó que trabajó en la firma durante tres años  como “directora de hospitalidad”; le reportaba directamente a Fonseca y Mossack. Las visitas, dijo, “eran empresarios muy discretos que querían conservar un perfil bajo”.</p>
+<p class="story-body-text story-content" data-para-count="313" data-total-count="10215" id="story-continues-41" tabindex="-1">También en entrevistas, varios exempleados describieron una cultura disciplinada y dijeron que al parecer los socios dirigían un negocio ético. Mossack y Fonseca, dijeron, insistían en el cumplimiento de las normas y exigían procedimientos detallados para la mayoría de los asuntos de negocios en la firma.</p>
+<p class="story-body-text story-content" data-para-count="250" data-total-count="10465" id="story-continues-42" tabindex="-1">“Había tantos procesos que debíamos seguir”, expresó Mileidy Castillo, quien dijo haber trabajado en la firma de 2011 a 2013. “A veces, con tal de hacer las cosas correctamente, debías seguir procesos, aunque el proceso fuera más largo”.</p>
+<p class="story-body-text story-content" data-para-count="355" data-total-count="10820" id="story-continues-43" tabindex="-1">Sin embargo, los expertos dicen que marcar una lista de tareas no es todo lo que debe hacerse para cumplir con las normas. En vez de eso, las firmas de abogados deben estar dispuestas a presionar a sus clientes para que revelen la identidad verdadera de quienes están involucrados en transacciones en paraísos fiscales y expongan la fuente de su dinero.</p>
+<p class="story-body-text story-content" data-para-count="252" data-total-count="11072" id="story-continues-44" tabindex="-1">“Muy a menudo, estas firmas en el extranjero están dispuestas a aceptar a cualquier cliente y seguir sus instrucciones”, dijo Jack Blumun, exinvestigador del Senado que ahora se especializa en examinar el lavado de dinero y las evasiones fiscales.</p>
+<p class="story-body-text story-content" data-para-count="321" data-total-count="11393" id="story-continues-45" tabindex="-1">Durante las décadas pasadas, se han multiplicado las cuentas en el extranjero y se han utilizado cada vez más para el lavado dinero, la evasión fiscal o el financiamiento del terrorismo. Quienes buscan violar la ley a menudo han disfrutado de la misma discreción que quienes tienen cuentas con propósitos legítimos.</p>
+<p class="story-body-text story-content" data-para-count="283" data-total-count="11676" id="story-continues-46" tabindex="-1">En la década del 2000 surgió un movimiento de transparencia internacional, encabezado por dos grandes agencias internacionales (ubicadas en Francia), pero Panamá —acostumbrado desde hace tiempo a seguir su propio camino— se quedó rezagado en cuanto al cumplimiento de la ley.</p>
+<p class="story-body-text story-content" data-para-count="142" data-total-count="11818" id="story-continues-47" tabindex="-1">&#8220;En los últimos 25 años, más o menos, probablemente hubo 15 años en los que casi no hubo regulación”, dijo Eismann sobre Panamá.</p>
+<p class="story-body-text story-content" data-para-count="378" data-total-count="12196" id="story-continues-48" tabindex="-1">Uno de los grupos internacionales, Financial Action Task Force, se enfocó en los países donde el dinero podía lavarse fácilmente o en los que se pueden financiar actividades terroristas; el otro, la Organización para la Cooperación y Desarrollo Económicos, se enfocó en los países donde una falta de transparencia facilitaba que los cuentahabientes evadieran impuestos.</p>
+<p class="story-body-text story-content" data-para-count="347" data-total-count="12543" id="story-continues-49" tabindex="-1">En 2014, la Financial Action Task Force puso a Panamá en su lista de países donde la transparencia y los sistemas de contabilidad eran muy deficientes, lo que significó un duro golpe para el país. El Presidente Varela rápidamente obligó a que se aceptaran leyes para enfrentar el problema y así Panamá fue eliminado de la lista en febrero.</p>
+<p class="story-body-text story-content" data-para-count="22" data-total-count="12565" id="story-continues-50" tabindex="-1"><strong>La última resistencia</strong></p>
+<p class="story-body-text story-content" data-para-count="359" data-total-count="12924" id="story-continues-51" tabindex="-1">Pero Panamá ha sido reacio a seguir una iniciativa de transparencia mundial que la Organización para la Cooperación y Desarrollo Económicos lanzó en 2009. Mientras que la mayoría de los otros centros financieros internacionales, como las Islas Vírgenes Británicas, las Islas Caimán y Singapur aceptaron la iniciativa rápidamente, Panamá se contuvo.</p>
+<p class="story-body-text story-content" data-para-count="263" data-total-count="13187" id="story-continues-52" tabindex="-1">“Panamá es la instancia más importante que no colabora y sigue permitiendo que los fondos estén ocultos y las autoridades judiciales o fiscales no puedan rastrearlos”, dijo José Ángel Gurría, el secretario general del grupo en una declaración el lunes.</p>
+<p class="story-body-text story-content" data-para-count="177" data-total-count="13364" id="story-continues-53" tabindex="-1">Pero varios expertos fiscales señalaron que Panamá, con su negativa a cumplir con los estándares internacionales de transparencia, está en buena compañía: Estados Unidos.</p>
+<figure id="media-100000004311786" class="media photo media-100000004311786 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/06/multimedia/07panama-putin-spox/07panama-putin-spox-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-55">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/06/multimedia/07panama-putin-spox/07panama-putin-spox-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/06/multimedia/07panama-putin-spox/07panama-putin-spox-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Ivan Sekretarev/Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/06/multimedia/07panama-putin-spox/07panama-putin-spox-master675.jpg"/>
+		<meta itemprop="height" content="488" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Ivan Sekretarev/Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="137" data-total-count="13501" id="story-continues-55" tabindex="-1">Los países extranjeros han tenido problemas al obtener información sobre cuentas que sus ciudadanos tienen en Estados Unidos también.</p>
+<p class="story-body-text story-content" data-para-count="402" data-total-count="13903" id="story-continues-56" tabindex="-1">“Panamá no es la verdadera historia”, dijo Matt Gardner, el director ejecutivo del Institute on Taxation and Economic Policy, un grupo de investigación que radica en Washington D. C. “Esta filtración de documentos está abriendo una ventana para ver un mundo mucho más grande, pero debe entenderse como una ventana que ayuda a observar cómo funcionan las cosas en Estados Unidos también”.</p>
+<p class="story-body-text story-content" data-para-count="208" data-total-count="14111" id="story-continues-57" tabindex="-1">Desde que la información filtrada salió a la luz el fin de semana pasado, tanto la firma de abogados como Fonseca han dicho que no son responsables de las acciones de las empresas fantasmas que ellos crean.</p>
+<p class="story-body-text story-content" data-para-count="272" data-total-count="14383" id="story-continues-58" tabindex="-1">En la entrevista, Fonseca dijo que la compañía tenía cuidado de vetar a los clientes y que dejaría de trabajar con quienes tuvieran una “mala reputación”. Pero insistió en que sus clientes eran abogados, contadores e intermediarios… no dictadores, por ejemplo.</p>
+<p class="story-body-text story-content" data-para-count="252" data-total-count="14635" id="story-continues-59" tabindex="-1">“Somos como una fábrica de autos que le vende su auto a un distribuidor (un abogado, por ejemplo), y él se lo vende a una señora que choca con alguien”, escribió en un mensaje. “La fábrica no es responsable por lo que se hizo con el auto”.</p>
+<p class="story-body-text story-content" data-para-count="118" data-total-count="14753" id="story-continues-60" tabindex="-1">Fonseca dijo que su firma intentó determinar “lo mejor que pudieron” al propietario real de una empresa fantasma.</p>
+<p class="story-body-text story-content" data-para-count="281" data-total-count="15034" id="story-continues-61" tabindex="-1">“La industria se está volviendo más regulada y seria en cuanto a ser utilizada por los malos y nosotros damos la bienvenida a ese cambio”, comentó. Y agregó: “Pero, por favor, recuerden que hace 15 años se desconocía el término “diligencias previas de auditoría”.</p>
+<p class="story-body-text story-content" data-para-count="153" data-total-count="15187" id="story-continues-62" tabindex="-1">A lo largo de los años, las cortes y los investigadores gubernamentales ocasionalmente han logrado penetrar el escudo de discreción de Mossack Fonseca.</p>
+<p class="story-body-text story-content" data-para-count="387" data-total-count="15574" id="story-continues-63" tabindex="-1">En Brasil, Mossack Fonseca estuvo relacionada con una investigación de corrupción en torno a sobornos que políticos recibieron de manos de las empresas que negociaban con la compañía petrolera dirigida por el Estado. Los investigadores comenzaron a enfocarse en la firma después de encontrar una serie de apartamentos que estaban a nombre de familiares de un político encarcelado.</p>
+<p class="story-body-text story-content" data-para-count="376" data-total-count="15950" id="story-continues-64" tabindex="-1">La litigación reciente en Estados Unidos reveló una conexión entre una compañía fantasma establecida en Nevada y las oficinas centrales de Mossack Fonseca en Panamá. El descubrimiento llegó después de casi tres años de una batalla legal por parte del demandante, uno de los fondos especulativos mejor financiados del mundo dirigido por el multimillonario Paul Singer.</p>
+<p class="story-body-text story-content" data-para-count="369" data-total-count="16319" id="story-continues-65" tabindex="-1">El fondo especulativo intentaba rastrear dinero que había sido captado del erario público en Argentina y fue destinado a compañías fantasmas. La razón: el fondo especulativo era propietario de 1,7 mil millones de dólares de la deuda argentina que se originó en la crisis financiera del país a principios de la década de 2000, y Argentina se rehusaba a pagarla.</p>
+<p class="story-body-text story-content" data-para-count="161" data-total-count="16480" id="story-continues-66" tabindex="-1">Pero la tarea del fondo especulativo no era sencilla. Una compañía fantasma conocida como MF Nevada alegaba que no tenía relación alguna con Mossack Fonseca.</p>
+<p class="story-body-text story-content" data-para-count="166" data-total-count="16646" id="story-continues-67" tabindex="-1">Incluso al juez le pareció difícil de creer, y en un momento le preguntó al abogado de la compañía qué significaban las letras “M. F.” del nombre MF Nevada.</p>
+<p class="story-body-text story-content" data-para-count="91" data-total-count="16737" id="story-continues-68" tabindex="-1">“No lo sé”, respondió el abogado, lo cual provocó carcajadas en la sala del juzgado.</p>
+<p class="story-body-text story-content" data-para-count="403" data-total-count="17140" id="story-continues-69" tabindex="-1">Durante el interrogatorio, la persona enlistada en los documentos constitutivos reconoció que recibía órdenes de particulares en Mossack Fonseca. El juez federal en Nevada dictaminó que la empresa fantasma básicamente era un alter ego de Mossack Fonseca, con lo cual le otorgó al fondo especulativo acceso a información que normalmente retiene la firma de abogados mediante su fachada en Panamá.</p>
+<p class="story-body-text story-content" data-para-count="97" data-total-count="17237" id="story-continues-70" tabindex="-1">“Como abogados tenemos el deber de garantizar la discreción”, dijo Fonseca en la entrevista.</p>
+<p class="story-body-text story-content" data-para-count="41" data-total-count="17278" id="story-continues-71" tabindex="-1">Y siente que a su firma se la han robado.</p>
+<p class="story-body-text story-content" data-para-count="216" data-total-count="17494" id="story-continues-72" tabindex="-1">Fonseca dijo que actualmente está trabajando en una novela acerca de un periodista investigador que es “honesto y busca la verdad sin intenciones ocultas”, y ya ha comenzado a escribir el borrador de otro libro.</p>
+<p class="story-body-text story-content" data-para-count="90" data-total-count="17584" id="story-continues-73" tabindex="-1">El título tentativo: “¿Acaso la privacidad es un derecho humano que se ha perdido?”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Kirk Semple y Azam Ahmed reportaron desde Ciudad de México, y Eric Lipton desde Washington. Ana Graciela Méndez colaboró en este reportaje desde la Ciudad de Panamá.</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/jurgen-mossack/" rel="tag">Jürgen Mossack</a>, <a href="https://www.nytimes.com/es/tag/mossack-fonseca/" rel="tag">Mossack Fonseca</a>, <a href="https://www.nytimes.com/es/tag/panama/" rel="tag">Panama</a>, <a href="https://www.nytimes.com/es/tag/panama-papers/" rel="tag">Panama Papers</a>, <a href="https://www.nytimes.com/es/tag/ramon-fonseca/" rel="tag">Ramón Fonseca</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/04/07/la-historia-de-mossack-fonseca-la-firma-de-abogados-que-dio-origen-a-los-panama-papers/"
+				data-title="América Latina: La historia de Mossack Fonseca, la firma de abogados que dio origen a los &#8216;Panama Papers&#8217;"
+				data-author="POR KIRK SEMPLE, AZAM AHMED Y ERIC LIPTON"
+				data-media=""
+				data-description="Ramón Fonseca, socio fundador del bufete panameño, habla sobre los orígenes de la firma y el reciente escándalo de filtración de documentos que involucra a políticos, celebridades y deportistas."
+				data-publish-date="7 de abril de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/04/los-medios-en-america-latina-y-espana-difunden-revelaciones-de-los-panama-papers/">
+					<div class="story-body">
+						<h3 class="kicker">Panamá</h3>
+
+						<h2 class="headline">
+							<span class="title">Los medios en América Latina y España difunden revelaciones de los &#8216;Panama Papers&#8217;</span>
+							<time class="dateline">4 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2015/12/28/world/28ARGENTINA1/28ARGENTINA1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/06/cambiara-algo-tras-las-revelaciones-de-los-panama-papers/">
+					<div class="story-body">
+						<h3 class="kicker">Editorial</h3>
+
+						<h2 class="headline">
+							<span class="title">¿Cambiará algo tras las revelaciones de los &#8216;Panama Papers&#8217;?</span>
+							<time class="dateline">6 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/06/opinion/06wed1/06wed1-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/04/los-panama-papers-revelan-como-algunos-poderosos-de-todo-el-mundo-ocultan-sus-fortunas/">
+					<div class="story-body">
+						<h3 class="kicker">Internacional</h3>
+
+						<h2 class="headline">
+							<span class="title">Los &#8216;Panama Papers&#8217; revelan cómo algunos poderosos de todo el mundo ocultan sus fortunas</span>
+							<time class="dateline">4 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/04/world/04leak2-web/04leak2-web-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/06/pedro-almodovar-cancela-promocion-de-su-mas-reciente-pelicula-por-vinculos-a-los-panama-papers/">
+					<div class="story-body">
+						<h3 class="kicker">Cine</h3>
+
+						<h2 class="headline">
+							<span class="title">Pedro Almodóvar cancela promoción de su nueva película por vínculos con los &#8216;Panama Papers&#8217;</span>
+							<time class="dateline">6 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/06/arts/international/06artsbeat-almodovar/06artsbeat-almodovar-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":1062,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-jumbo-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-jumbo-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-jumbo-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-jumbo-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004895136"/>
+<meta name="hdl" content="36 horas en Santiago de Chile" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20170131" />
+<meta name="utime" content="20170131120026" />
+<meta name="ptime" content="20170131120026" />
+<meta name="DISPLAYDATE" content="Jan. 31, 2017" />
+<meta name="dat" content="Jan. 31, 2017" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="36-horas-en-santiago-de-chile" />
+<meta property="og:url" content="https://www.nytimes.com/es/2017/01/31/36-horas-en-santiago-de-chile/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="36 horas en Santiago de Chile" />
+<meta property="og:description" content="El área metropolitana de casi siete millones de habitantes es el hogar de un paisaje cultural dinámico y repleto de energía. Con los Andes siempre a la vista, Santiago se merece otra —o una primera— oportunidad." />
+<meta property="og:image" content="https://static01.nyt.com/images/2017/01/29/travel/29HOURS1/29HOURS1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2017-01-31" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2017/01/31/36-horas-en-santiago-de-chile/" />
+<meta property="twitter:title" content="36 horas en Santiago de Chile" />
+<meta property="twitter:description" content="El área metropolitana de casi siete millones de habitantes es el hogar de un paisaje cultural dinámico y repleto de energía. Con los Andes siempre a la vista, Santiago se merece otra —o una primera— oportunidad." />
+<meta name="author" content="Nell McShane Wulfhart" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Nell McShane Wulfhart" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="chile" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="chile" />
+<meta name="id" content="100000004895136"/>
+<meta name="wordCount" content="1893"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2017/01/31/36-horas-en-santiago-de-chile/">
+<meta name="nyt-collection:uri" content="year=2017&amp;monthnum=01&amp;day=31&amp;name=36-horas-en-santiago-de-chile">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=34420">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2017\/01\/31\/36-horas-en-santiago-de-chile\/"},"headline":"36 horas en Santiago de Chile","datePublished":"2017-01-31T12:00:26+00:00","dateModified":"2017-01-31T14:42:38+00:00","author":{"@type":"Person","name":"marina.franco"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2017\/01\/29\/travel\/29HOURS1\/29HOURS1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"El \u00e1rea metropolitana de casi siete millones de habitantes es el hogar de un paisaje cultural din\u00e1mico y repleto de energ\u00eda. Con los Andes siempre a la vista, Santiago se merece otra \u2014o una primera\u2014 oportunidad."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2017/01/31/36-horas-en-santiago-de-chile/" hreflang="es" />
+<link rel="alternate" href="https://www.nytimes.com/interactive/2017/01/26/travel/what-to-do-36-hours-in-santiago-chile.html?mcid=nyt-es&amp;#038;subid=article" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="americalatina/chile" />
+<title>36 horas en Santiago de Chile &#8211; Español</title>
+<link rel="canonical" href="https://www.nytimes.com/interactive/2017/01/26/travel/what-to-do-36-hours-in-santiago-chile.html?mcid=nyt-es&#038;subid=article" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2017/01/31/36-horas-en-santiago-de-chile/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-34420 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				36 horas en Santiago de Chile
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2017/01/31/36-horas-en-santiago-de-chile/"
+					data-title="América Latina: 36 horas en Santiago de Chile"
+					data-author="POR NELL MCSHANE WULFHART"
+					data-media=""
+					data-description="El área metropolitana de casi siete millones de habitantes es el hogar de un paisaje cultural dinámico y repleto de energía. Con los Andes siempre a la vista, Santiago se merece otra —o una primera— oportunidad."
+					data-publish-date="31 de enero de 2017"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2jzlNwj">http://nyti.ms/2jzlNwj</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/chile/">Chile</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">36 horas en Santiago de Chile</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Nell McShane Wulfhart</span>
+</span>
+
+					<time class="dateline" datetime="2017-01-31">31 de enero de 2017</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2017/01/31/36-horas-en-santiago-de-chile/"
+							data-title="América Latina: 36 horas en Santiago de Chile"
+							data-author="POR NELL MCSHANE WULFHART"
+							data-media=""
+							data-description="El área metropolitana de casi siete millones de habitantes es el hogar de un paisaje cultural dinámico y repleto de energía. Con los Andes siempre a la vista, Santiago se merece otra —o una primera— oportunidad."
+							data-publish-date="31 de enero de 2017"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004883947" class="media photo lede layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/01/29/travel/29HOURS1/29HOURS1-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/01/29/travel/29HOURS1/29HOURS1-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/01/29/travel/29HOURS1/29HOURS1-superJumbo.jpg" data-mediaviewer-caption="Toma aérea de Santiago de Chile" data-mediaviewer-credit="Victor Ruiz Caballero para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/01/29/travel/29HOURS1/29HOURS1-master1050.jpg"/>
+		<meta itemprop="height" content="699" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Toma aérea de Santiago de Chile</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Victor Ruiz Caballero para The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="https://www.nytimes.com/interactive/2017/01/26/travel/what-to-do-36-hours-in-santiago-chile.html?mcid=nyt-es&#038;subid=article&#038;ref=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="239" data-total-count="239" id="story-continues-2" tabindex="-1">Para muchos visitantes de América del Sur, la capital de Chile ha estado fuera del radar, pues su innovador ambiente culinario se ve eclipsado por el de Lima y sus espacios artísticos se consideran menos vanguardistas que los de <a href="https://www.nytimes.com/es/2016/02/26/las-varias-vidas-de-la-septima/" target="_blank">Bogotá</a>.</p>
+<p class="story-body-text story-content" data-para-count="622" data-total-count="861" id="story-continues-3" tabindex="-1">Sin embargo, Santiago es un destino que destaca por sí solo. El área metropolitana de casi siete millones de habitantes es el hogar de un paisaje cultural dinámico y repleto de energía. Los chefs de clase mundial están forjando una nueva cocina chilena; vecindarios como Barrio Italia están llenos de nuevas tiendas de diseño de vanguardia e, incluso en una tarde tranquila de domingo, las calles están rebosantes de ciclistas que hacen acrobacias y patinadores que intentan superarse entre sí. Extendiéndose bajo los Andes, que siempre están a la vista, Santiago se merece otra —o una primera— oportunidad.</p>
+<h4 class="story-subheading story-content">Viernes</h4>
+
+<p class="story-body-text story-content" data-para-count="21" data-total-count="882" id="story-continues-5" tabindex="-1"><strong>14:00<br />Cazuelas y Café</strong></p>
+<p class="story-body-text story-content" data-para-count="231" data-total-count="1113" id="story-continues-6" tabindex="-1">Pasear por los pasajes estrechos y concurridos de <a href="http://www.lavegacentral.com/33/index.php" target="_blank">La Vega Central</a>, el mercado más grande y extenso de la ciudad, provoca una sobrecarga sensorial con puestos de fruta y verdura donde los vendedores anuncian a gritos sus productos.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="490" data-total-count="1603" id="story-continues-7" tabindex="-1">Ahí encontrarás papas rojas moteadas y aguacates (conocidos en Chile como palta) que puedes comer con todo y cáscara, así como puestos donde se sirven empanadas rellenas de queso recién salidas del horno y montones de fruta seca. Hay un grupo de pequeños restaurantes en la colindante Vega Chica, muchos de los cuales sirven comida chilena y peruana, incluyendo abundantes cazuelas (estofados generalmente desbordantes de pollo, maíz, zanahorias y papas), ideales para un día frío.</p>
+<p class="story-body-text story-content" data-para-count="198" data-total-count="1801" id="story-continues-8" tabindex="-1">Desvíate hacia la salida de la calle Dávila Baeza para hacer una parada en <a href="http://www.cafealtura.cl/" target="_blank">Café Altura</a>, un popular puesto ambulante que tuesta y vende uno de los mejores cafés de la ciudad (cierra a las 16:00).</p>
+<p class="story-body-text story-content" data-para-count="16" data-total-count="1817" id="story-continues-9" tabindex="-1"><strong>17:00<br />Dos por uno</strong></p>
+<p class="story-body-text story-content" data-para-count="590" data-total-count="2407" id="story-continues-10" tabindex="-1">En el exuberante Parque Forestal se encuentran dos museos (de entrada libre) que comparten un solo edificio y que vale la pena visitar tan solo por su arquitectura neoclásica y techo con domo de cristal. La colección del <a href="http://www.mnba.cl/" target="_blank">Museo Nacional de Bellas Artes</a> está llena de obras de pintores chilenos como Luis Vargas Rosas y Roberto Matta, mientras que las exhibiciones de arte siempre cambiantes del <a href="http://www.mac.uchile.cl/" target="_blank">Museo de Arte Contemporáneo</a> son de artistas que trabajan en toda América Latina. Asegúrate de ir a la sala en el sótano para ver exhibiciones modernas y sugerentes en ese espacio cavernoso.</p>
+<p class="story-body-text story-content" data-para-count="27" data-total-count="2434" id="story-continues-11" tabindex="-1"><strong>19:00<br />Carignan y Carménère</strong></p>
+<p class="story-body-text story-content" data-para-count="736" data-total-count="3170" id="story-continues-12" tabindex="-1">En la moderna calle José Victorino Lastarria, donde una decena de restaurantes han abierto en los últimos años, está <a href="http://www.bocanariz.cl/" target="_blank">Bocanáriz</a>, una vinoteca bien establecida donde se sirven cientos de botellas chilenas. Sesiones de cata de tres vinos cada una (entre 4200 y 20.800 pesos chilenos o 6,40 y 31,70 dólares) se dividen en categorías como “costera” y “biodinámica”, o puedes probar cualquiera de los 36 clásicos distintos. Este es el lugar para aprender cómo diferenciar un carignan de un carménère, así como para probar algunos de los prometedores sauvignon blanc chilenos. Al otro lado de la calle está el cine <a href="http://www.elbiografo.cl/wordpress/" target="_blank">El Biógrafo</a>, que proyectaba películas en contra de la dictadura durante el régimen de Augusto Pinochet.</p>
+<p class="story-body-text story-content" data-para-count="18" data-total-count="3188" id="story-continues-13" tabindex="-1"><strong>20:30<br />Cena y tragos</strong></p>
+<p class="story-body-text story-content" data-para-count="461" data-total-count="3649" id="story-continues-14" tabindex="-1">Reserva con anticipación una de las pocas mesas del <a href="http://www.040.cl/" target="_blank">Restaurante 040</a>, dirigido por el chef español Sergio Barroso, quien estuvo trabajando un tiempo en El Bulli antes de mudarse a Chile. Barroso toma lo mejor de los ingredientes chilenos —erizo de mar, ostras, flores comestibles— y los presenta de una manera original, como el “ravioli” de pescado ahumado envuelto en delgadas tiras de palta. Una cena con tragos para dos cuesta cerca de 80.000 pesos.</p>
+<p class="story-body-text story-content" data-para-count="426" data-total-count="4075" id="story-continues-15" tabindex="-1">Después, pide ver la “habitación No. 9” (el hotel solo tiene ocho habitaciones), y te guiarán a través de una puerta falsa para entrar a un elevador que te llevará a la azotea. Los cocteles artesanales, hechos con ingredientes como canela, maracuyá y pisco chileno de alta calidad, podrían ser los mejores de la ciudad y son una excelente excusa para quedarse hasta la madrugada disfrutando las vistas de la ciudad.</p>
+<figure id="media-100000004892915" class="media photo media-100000004892915 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/01/28/travel/28hours-santiago02-inyt/28hours-santiago02-inyt-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-17">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/01/28/travel/28hours-santiago02-inyt/28hours-santiago02-inyt-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/01/28/travel/28hours-santiago02-inyt/28hours-santiago02-inyt-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Victor Ruiz Caballero to The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/01/28/travel/28hours-santiago02-inyt/28hours-santiago02-inyt-master1050.jpg"/>
+		<meta itemprop="height" content="717" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Victor Ruiz Caballero to The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<h4 class="story-subheading story-content">Sábado</h4>
+
+<p class="story-body-text story-content" data-para-count="16" data-total-count="4091" id="story-continues-18" tabindex="-1"><strong>11:00<br />Barrio <em>chic</em></strong></p>
+<p class="story-body-text story-content" data-para-count="210" data-total-count="4301" id="story-continues-19" tabindex="-1">El vecindario Barrio Italia se ha estado desarrollando con velocidad en los últimos años y ahora la franja principal, avenida Italia, está llena de restaurantes, tiendas de antigüedades y boutiques de moda.</p>
+<p class="story-body-text story-content" data-para-count="608" data-total-count="4909" id="story-continues-20" tabindex="-1">Un paseo puede tomarte horas si te detienes en cada uno de los pequeños callejones que salen de la avenida: cada uno cuenta con una minicolección de tiendas que venden distintos productos, como utensilios de diseñador para el hogar, zapatos de cuero hechos en Chile, joyas o libros, y casi cada una tiene su propio restaurante o café, a menudo en un patio al aire libre. Aquí es donde puedes ir de compras en Santiago, con muchas pausas para recargarte de café, un bocadillo o pisco sour: prueba un americano y un plato de pan tostado con palta en el Café de la Candelaria, que está lleno de plantas.</p>
+<p class="story-body-text story-content" data-para-count="20" data-total-count="4929" id="story-continues-21" tabindex="-1"><strong>13:00<br />Cultura y K-pop</strong></p>
+<p class="story-body-text story-content" data-para-count="386" data-total-count="5315" id="story-continues-22" tabindex="-1">El <a href="http://www.gam.cl/" target="_blank">Centro Gabriela Mistral</a> es un vistoso centro cultural (con un exterior oxidado de excelente diseño y un enorme pez dorado hecho de tiras de madera que cuelga por encima de la terraza), que es una plataforma para la creatividad, desde las exhibiciones de artes visuales hasta los grupos de chicas adolescentes que practican pasos de baile de K-pop (pop coreano) afuera de la entrada.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="796" data-total-count="6111" id="story-continues-23" tabindex="-1">Dirígete al nivel inferior para ver qué se está exhibiendo en el Museo de Arte Popular Americano, ojea los títulos de la librería o incluso compra una botella de vino en la vinatería. Revisa el <a href="http://www.mapa.uchile.cl/" target="_blank">sitio web</a> para enterarte de los eventos, que incluyen espectáculos de baile, música en vivo, fotografía y mucho más. Después, da un paseo de cinco minutos por la avenida Libertador General Bernardo O’Higgins (conocida como La Alameda) hasta la <a href="http://www.falemana.cl/" target="_blank">Fuente Alemana</a>, que no ha cambiado en décadas, para comer uno de los mejores emparedados en una ciudad donde los sándwiches se consideran un platillo esencial. Prueba el rumano, una sabrosa y abundante hamburguesa de carne de cerdo molida con ajo sobre un bollo suave y blanco, y dale el toque final con una palta (4900 pesos o 7,50 dólares).</p>
+<p class="story-body-text story-content" data-para-count="36" data-total-count="6147" id="story-continues-24" tabindex="-1"><strong>16:00<br />Recordando los derechos humanos</strong></p>
+<p class="story-body-text story-content" data-para-count="339" data-total-count="6486" id="story-continues-25" tabindex="-1">El <a href="http://ww3.museodelamemoria.cl/" target="_blank">Museo de la Memoria y los Derechos Humanos</a> cuenta con una colección conmovedora e informativa de videos, audio y otras reliquias de los largos años de la dictadura de Augusto Pinochet. Las baratijas que hacían los presos políticos —caballos de mar esculpidos en hueso, un juego de dominó de papel— son particularmente emotivas.</p>
+<p class="story-body-text story-content" data-para-count="392" data-total-count="6878" id="story-continues-26" tabindex="-1">Hay videos del golpe de Estado de 1973 (respaldado por Estados Unidos); de los tanques y bombas que atacaron el palacio de La Moneda y derrocaron a Salvador Allende; así como de filas de detenidos con los ojos vendados y las manos sobre la cabeza. La abundancia de documentos, pósteres y pancartas con la pregunta “¿Dónde están?”, en referencia a los desaparecidos, es aleccionadora.</p>
+<figure id="media-100000004883951" class="media photo media-100000004883951 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/01/29/travel/29HOURS2/29HOURS2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-28">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/01/29/travel/29HOURS2/29HOURS2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/01/29/travel/29HOURS2/29HOURS2-superJumbo.jpg" data-mediaviewer-caption="The Museo de la Memoria y los Derechos Humanos (Memory and Human Rights Museum) displays documents, relics and footage from the Pinochet dictatorship" data-mediaviewer-credit="Victor Ruiz Caballero to The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/01/29/travel/29HOURS2/29HOURS2-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The Museo de la Memoria y los Derechos Humanos (Memory and Human Rights Museum) displays documents, relics and footage from the Pinochet dictatorship</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Victor Ruiz Caballero to The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="20" data-total-count="6898" id="story-continues-28" tabindex="-1"><strong>19:00<br /><a href="http://99restaurante.com/" target="_blank">99 Restaurantes</a></strong></p>
+<p class="story-body-text story-content" data-para-count="587" data-total-count="7485" id="story-continues-29" tabindex="-1">Este es uno de los restaurantes más destacados controlados por chefs y es dirigido por el jovial Kurt Schmidt, quien examina platillos chilenos como sopaipillas (masa frita) y pebre (salsa), y los reinventa como alimentos sofisticados y modernos. El menú de degustación está lleno de conservas y quesos caseros y cada platillo se presenta de una manera muy atractiva. El maridaje de vino, una vibrante colección de licores biodinámicos y caseros, es excepcional, y los postres, preparados por el calificado chef Gustavo Saez, son caprichosos, hermosos y deliciosos al mismo tiempo.</p>
+<p class="story-body-text story-content" data-para-count="21" data-total-count="7506" id="story-continues-30" tabindex="-1"><strong>22:00<br />Bebidas y <em>kitsch</em></strong></p>
+<p class="story-body-text story-content" data-para-count="668" data-total-count="8174" id="story-continues-31" tabindex="-1"><a href="http://saritacoloniarestoran.cl/" target="_blank">Sarita Colonia</a> describe su comida, un híbrido peruano y asiático, como “travestí peruana”, pero es el ambiente electrizante del restaurante/bar de varios pisos y la decoración extravagante lo que atrae a los fiesteros de la zona: confesionarios católicos <em>kitsch</em> y vitrales de colores; muros color rosa chillante e imponentes candelabros; máscaras de colores brillantes y letreros neón. La atmósfera es escandalosa y la clientela, que bebe cocteles como el Cristo de Loreto –una mezcla de Jack Daniel’s, jarabe de guayaba, jengibre y limón–, siempre está dispuesta a celebrar. En una noche cálida, intenta obtener un lugar en el patio de la azotea.</p>
+<h4 class="story-subheading story-content">Domingo</h4>
+
+<p class="story-body-text story-content" data-para-count="27" data-total-count="8201" id="story-continues-33" tabindex="-1"><strong>11:00<br />Almuerzo en Bellavista</strong></p>
+<p class="story-body-text story-content" data-para-count="373" data-total-count="8574" id="story-continues-34" tabindex="-1">El vecindario de moda Bellavista es una de las zonas con más actividad los domingos, cuando muchos residentes prefieren quedarse en casa con su familia. Casi siempre hay una fila para tener una mesa en la acera en <a href="http://galindo.cl/" target="_blank">Galindo</a>, un favorito del vecindario desde mediados de los setenta, que tiene el tipo de comida sustanciosa y casera perfecta para recuperarse con un almuerzo.</p>
+<p class="story-body-text story-content" data-para-count="335" data-total-count="8909" id="story-continues-35" tabindex="-1">Aquí los platillos recomendados son el sartén de hierro fundido de pastel de choclo, una tarta de maíz ligeramente dulce rellena de carne molida, huevo y pollo; las costillas de cerdo ahumado, y un crème caramel con una botella de cerveza Quimera para acompañarlos. El almuerzo para dos cuesta cerca de 20.000 pesos o 31 dólares.</p>
+<p class="story-body-text story-content" data-para-count="34" data-total-count="8943" id="story-continues-36" tabindex="-1"><strong>12:30<br />Espacios verdes y aire fresco</strong></p>
+<p class="story-body-text story-content" data-para-count="696" data-total-count="9639" id="story-continues-37" tabindex="-1">El Parque Metropolitano, conocido como el “pulmón verde” de Santiago, una ciudad notablemente contaminada, es un lugar excelente para hacer un poco de ejercicio después de almorzar y respirar aire limpio durante una hora o dos. Aunque el parque tiene grandes senderos de ciclismo y caminatas, el punto culminante para la mayoría será la estatua de 15 metros de alto de la Virgen María que está en lo alto del cerro San Cristóbal, una colina desde donde se ve toda la ciudad. Toma cerca de 40 minutos llegar a la cima; también se puede tomar el teleférico (2600 pesos o 4 dólares por viaje redondo los fines de semana), el cual atraviesa la colina verde como si fuera un ferrocarril.</p>
+<p class="story-body-text story-content" data-para-count="20" data-total-count="9659" id="story-continues-38" tabindex="-1"><strong>14:00<br />Fuente de sodas</strong></p>
+<p class="story-body-text story-content" data-para-count="586" data-total-count="10245" id="story-continues-39" tabindex="-1"><a href="https://www.facebook.com/LasCabrasFuenteDeSoda/" target="_blank">Las Cabras</a> está inspirada en las clásicas fuentes de soda chilenas y la decoración, desde los gabinetes hasta los conos de servilletas desechables, da en el clavo, al igual que el excelente servicio. La comida es detallada, con un enfoque en productos y cortes de calidad como la carne mechada. Platillos tradicionales, como el palta cardenal, una palta rellena de ensalada de camarón, tienen el tipo de sabor que se logra con una preparación sin prisas. Agrega un tarro de cerveza patagónica como la Austral lager. El almuerzo para dos cuesta cerca de 17.000 pesos o 26 dólares.</p>
+<figure id="media-100000004883952" class="media photo media-100000004883952 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/01/29/travel/29HOURS3/29HOURS3-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-41">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/01/29/travel/29HOURS3/29HOURS3-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/01/29/travel/29HOURS3/29HOURS3-superJumbo.jpg" data-mediaviewer-caption="The Asian-Peruvian restaurant Sarita Colonia." data-mediaviewer-credit="Victor Ruiz Caballero to The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/01/29/travel/29HOURS3/29HOURS3-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The Asian-Peruvian restaurant Sarita Colonia.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Victor Ruiz Caballero to The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<h4 class="story-subheading story-content">Alojamiento</h4>
+
+<p class="story-body-text story-content" data-para-count="385" data-total-count="10630" id="story-continues-42" tabindex="-1">El <a href="http://hotelcarmenere.com/" target="_blank">Hotel Carménère Eco</a>, al norte del vecindario de moda Barrio Italia, tiene cinco acogedoras habitaciones y un jardín donde los invitados pueden desayunar durante el verano (los precios de las habitaciones empiezan en los 150 dólares con desayuno incluido). También hay una pequeña cava para probar vinos chilenos orgánicos, sin mencionar el servicio excepcionalmente amigable.</p>
+<p class="story-body-text story-content" data-para-count="401" data-total-count="11031" id="story-continues-43" tabindex="-1">Tan solo ocho habitaciones conforman el hotel <a href="http://www.tintoboutiquehotel.com/" target="_blank">Tinto Boutique</a> en Bellavista, uno de los vecindarios de vida nocturna más concurridos de la ciudad (los precios de las habitaciones dobles rondan los 129 dólares con el desayuno incluido). El bar de estilo retro en el techo es uno de los más atractivos de la ciudad y está abierto solo para invitados y para los comensales que cenan en el restaurante.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/36-horas/" rel="tag">36 horas</a>, <a href="https://www.nytimes.com/es/tag/chile/" rel="tag">Chile</a>, <a href="https://www.nytimes.com/es/tag/cocina/" rel="tag">cocina</a>, <a href="https://www.nytimes.com/es/tag/santiago/" rel="tag">Santiago</a>, <a href="https://www.nytimes.com/es/tag/viajes/" rel="tag">viajes</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2017/01/31/36-horas-en-santiago-de-chile/"
+				data-title="América Latina: 36 horas en Santiago de Chile"
+				data-author="POR NELL MCSHANE WULFHART"
+				data-media=""
+				data-description="El área metropolitana de casi siete millones de habitantes es el hogar de un paisaje cultural dinámico y repleto de energía. Con los Andes siempre a la vista, Santiago se merece otra —o una primera— oportunidad."
+				data-publish-date="31 de enero de 2017"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/12/36-horas-en-puerto-vallarta/">
+					<div class="story-body">
+						<h3 class="kicker">México</h3>
+
+						<h2 class="headline">
+							<span class="title">36 horas en Puerto Vallarta</span>
+							<time class="dateline">12 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/12/24/travel/24hours-puerto-vallarta1-inyt/24hours-puerto-vallarta1-inyt-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/29/36-horas-en-ciudad-de-mexico/">
+					<div class="story-body">
+						<h3 class="kicker">México</h3>
+
+						<h2 class="headline">
+							<span class="title">36 horas en Ciudad de México</span>
+							<time class="dateline">29 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/20/travel/30HOURS1/30HOURS1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/30/sean-spicer-secretario-de-prensa-de-trump-este-trabajo-no-es-para-hacer-amigos/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">Sean Spicer, secretario de Prensa de Trump: &#8216;Este trabajo no es para hacer amigos&#8217;</span>
+							<time class="dateline">30 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/01/30/business/30SPICER/30SPICER-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/27/un-museo-submarino-alimenta-a-los-peces-y-provee-critica-social/">
+					<div class="story-body">
+						<h3 class="kicker">Arte</h3>
+
+						<h2 class="headline">
+							<span class="title">Un museo submarino alimenta a los peces y ofrece crítica social</span>
+							<time class="dateline">27 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/01/19/world/19Lanzarote2/19Lanzarote2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":874,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

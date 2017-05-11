@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000003632990"/>
+<meta name="hdl" content="Venenos que embellecen las uñas" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20150508" />
+<meta name="utime" content="20150508112457" />
+<meta name="ptime" content="20150508112457" />
+<meta name="DISPLAYDATE" content="May. 8, 2015" />
+<meta name="dat" content="May. 8, 2015" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="venenos-que-embellecen-las-unas" />
+<meta property="og:url" content="https://www.nytimes.com/es/2015/05/08/venenos-que-embellecen-las-unas/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Venenos que embellecen las uñas" />
+<meta property="og:description" content="Se ha vinculado a químicos en los productos para uñas con retraso en el desarrollo de los niños, abortos y enfermedades pulmonares. Pero la industria ha frenado la reglamentación." />
+<meta property="og:image" content="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_1/NAILSpart2test1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2015-05-08" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2015/05/08/venenos-que-embellecen-las-unas/" />
+<meta property="twitter:title" content="Venenos que embellecen las uñas" />
+<meta property="twitter:description" content="Se ha vinculado a químicos en los productos para uñas con retraso en el desarrollo de los niños, abortos y enfermedades pulmonares. Pero la industria ha frenado la reglamentación." />
+<meta name="author" content="Sarah Maslin Nir" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Sarah Maslin Nir" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="estados-unidos" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="estados-unidos" />
+<meta name="id" content="100000003632990"/>
+<meta name="wordCount" content="5024"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2015/05/08/venenos-que-embellecen-las-unas/">
+<meta name="nyt-collection:uri" content="year=2015&amp;monthnum=05&amp;day=08&amp;name=venenos-que-embellecen-las-unas">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=10165">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2015\/05\/08\/venenos-que-embellecen-las-unas\/"},"headline":"Venenos que embellecen las u\u00f1as","datePublished":"2015-05-08T11:24:57+00:00","dateModified":"2016-04-21T12:22:08+00:00","author":{"@type":"Person","name":"paulina.chavira"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2015\/05\/01\/nyregion\/NAILSpart2_1\/NAILSpart2test1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Se ha vinculado a qu\u00edmicos en los productos para u\u00f1as con retraso en el desarrollo de los ni\u00f1os, abortos y enfermedades pulmonares. Pero la industria ha frenado la reglamentaci\u00f3n."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2015/05/08/venenos-que-embellecen-las-unas/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2015/05/11/nyregion/nail-salon-workers-in-nyc-face-hazardous-chemicals.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/estadosunidos" />
+<title>Venenos que embellecen las uñas &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2015/05/11/nyregion/nail-salon-workers-in-nyc-face-hazardous-chemicals.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2015/05/08/venenos-que-embellecen-las-unas/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-10165 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Venenos que embellecen las uñas
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2015/05/08/venenos-que-embellecen-las-unas/"
+					data-title="Noticias: Venenos que embellecen las uñas"
+					data-author="POR SARAH MASLIN NIR"
+					data-media=""
+					data-description="Se ha vinculado a químicos en los productos para uñas con retraso en el desarrollo de los niños, abortos y enfermedades pulmonares. Pero la industria ha frenado la reglamentación."
+					data-publish-date="8 de mayo de 2015"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/1WI4Gsj">http://nyti.ms/1WI4Gsj</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/estados-unidos/">Estados Unidos</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Venenos que embellecen las uñas</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Sarah Maslin Nir</span>
+</span>
+
+					<time class="dateline" datetime="2015-05-08">8 de mayo de 2015</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2015/05/08/venenos-que-embellecen-las-unas/"
+							data-title="Noticias: Venenos que embellecen las uñas"
+							data-author="POR SARAH MASLIN NIR"
+							data-media=""
+							data-description="Se ha vinculado a químicos en los productos para uñas con retraso en el desarrollo de los niños, abortos y enfermedades pulmonares. Pero la industria ha frenado la reglamentación."
+							data-publish-date="8 de mayo de 2015"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000003658815" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_1/NAILSpart2test1-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_1/NAILSpart2test1-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_1/NAILSpart2test1-superJumbo.jpg" data-mediaviewer-caption="Eugenia Colon holding an X-ray of her lungs from 2010. In the nail salon she owned in Brooklyn, she molded talon-like nails in a haze of acrylic powder, ignoring a persistent cough." data-mediaviewer-credit="Nicole Bengiveno/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_1/NAILSpart2test1-master1050.jpg"/>
+		<meta itemprop="height" content="699" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Eugenia Colon holding an X-ray of her lungs from 2010. In the nail salon she owned in Brooklyn, she molded talon-like nails in a haze of acrylic powder, ignoring a persistent cough.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Nicole Bengiveno/The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2015/05/11/nyregion/nail-salon-workers-in-nyc-face-hazardous-chemicals.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="190" data-total-count="190" id="story-continues-2" tabindex="-1">Cada vez que un cliente abría la puerta de vidrio del salón en Ridgewood, Queens, donde Nancy Otavalo trabajaba, un alegre coro resonaba de todas las manicuristas: “¡Elige un color!”.</p>
+<p class="story-body-text story-content" data-para-count="406" data-total-count="596" id="story-continues-3" tabindex="-1">Otavalo, una inmigrante ecuatoriana de 39 años, casi siempre estaba sentada en la primera mesa. Mientras cortaba y pulía uñas, hablaba de su bebé, que ya empezaba a andar, o de su robusto hijo de nueve años. Pero nunca mencionaba al otro bebé que había soñado tener, el que perdió el año pasado a causa de un aborto espontáneo que comenzó cuando estaba dando un masaje de hombros a una clienta.</p>
+<p class="story-body-text story-content" data-para-count="296" data-total-count="892" id="story-continues-4" tabindex="-1">En la segunda mesa estaba Mónica A. Rocano, de 30 años, quien algunas veces traía de visita a su hija, pero los clientes nunca conocieron a su hijo de tres años, Matthew Ramon. La gente piensa que Matthew es tímido, pero la verdad es que a duras penas ha logrado aprender a hablar y caminar.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="234" data-total-count="1126" id="story-continues-5" tabindex="-1">Al lado de Rocano estaba otra manicurista, más silenciosa. En sus ratos libres miraba cosas en internet usando su teléfono, en busca de algo que pudiera explicar el aborto que sufrió el año pasado. O los otros cuatro antes de ese.</p>
+<p class="story-body-text story-content" data-para-count="519" data-total-count="1645" id="story-continues-6" tabindex="-1">Historias similares de enfermedad y tragedia abundan en los salones de uñas de todo el país, de niños que nacieron lentos o “especiales”, abortos espontáneos y cánceres, de toses que no cesan y dolorosas lesiones en la piel. Estos casos se han vuelto tan comunes que las manicuristas veteranas le advierten a las jóvenes que están en edad de tener hijos que se mantengan lejos del negocio, por la fuerte dosis de esmaltes, solventes, endurecedores y pegamentos que las trabajadoras de uñas manejan a diario.</p>
+<p class="story-body-text story-content" data-para-count="289" data-total-count="1934" id="story-continues-7" tabindex="-1">Un número creciente de investigaciones médicas demuestra que los químicos en los productos para uñas (los ingredientes que hacen que no se astillen con facilidad, que sean flexibles, sequen rápido y tengan colores brillantes, por ejemplo) también ocasionan serios problemas de salud.</p>
+<p class="story-body-text story-content" data-para-count="266" data-total-count="2200" id="story-continues-8" tabindex="-1">Sin embargo, el riesgo para una clienta típica que busca embellecer sus uñas con una manicura estilo francés no es de la misma magnitud que para las manicuristas encargadas de manejar los químicos y respirar los vapores durante incontables horas, día tras día.</p>
+<p class="story-body-text story-content" data-para-count="420" data-total-count="2620" id="story-continues-9" tabindex="-1">La preponderancia de malestares respiratorios y cutáneos entre las personas que trabajan en locales de uñas es bien conocida. Sin embargo, no hay tanta certeza en cuanto al riesgo que tienen de padecer problemas médicos más serios. Se conoce que algunos de los químicos presentes en estos productos causan cáncer; otros se han vinculado con desarrollo fetal anormal, abortos y otros daños a la salud reproductiva.</p>
+<p class="story-body-text story-content" data-para-count="318" data-total-count="2938" id="story-continues-10" tabindex="-1">Varios estudios han encontrado que los índices de mortandad por la enfermedad de Hodgkin (cáncer en el tejido linfático), los casos de bebés que nacen con un peso inferior al promedio y el mieloma múltiple son elevados entre cosmetólogos, un grupo que incluye a manicuristas, así como estilistas y maquillistas.</p>
+<p class="story-body-text story-content" data-para-count="375" data-total-count="3313" id="story-continues-11" tabindex="-1">Las conclusiones son más bien vagas, en parte debido a que la investigación es muy limitada. Muy pocas investigaciones se concentran específicamente en las manicuristas: se sabe muy poco sobre el verdadero grado de exposición que tienen a químicos peligrosos o cuál es el efecto acumulado en el transcurso del tiempo y si se puede hacer una conexión real con su salud.</p>
+<p class="story-body-text story-content" data-para-count="483" data-total-count="3796" id="story-continues-12" tabindex="-1">La ley federal que regula los cosméticos tiene más de 75 años de antigüedad y no le exige a las compañías compartir información con la Administración de Alimentos y Medicamentos de Estados Unidos (FDA). La ley prohíbe ingredientes nocivos para los usuarios, pero no incluye disposiciones para que dicha entidad evalúe los efectos de los químicos antes de que lleguen a las tiendas. Los grupos a favor de la industria han peleado por requisitos de monitoreo más estrictos.</p>
+<p class="story-body-text story-content" data-para-count="167" data-total-count="3963" id="story-continues-13" tabindex="-1">Los voceros de la industria dicen que sus productos contienen cantidades minúsculas de químicos considerados potencialmente nocivos y que no suponen ninguna amenaza.</p>
+<p class="story-body-text story-content" data-para-count="309" data-total-count="4272" id="story-continues-14" tabindex="-1">“Lo que escucho son insinuaciones hechas con base en las palabras ‘vinculado a’”, comentó Doug Schoon, copresidente del Consejo de Seguridad de Fabricantes de Uñas de la Asociación de Profesionales de la Belleza, quien agregó: “En lo que respecta al esmalte de uñas, no hay pruebas de daño”.</p>
+<p class="story-body-text story-content" data-para-count="101" data-total-count="4373" id="story-continues-15" tabindex="-1">Los defensores de la salud y los funcionarios están en desacuerdo y destacan las pruebas acumuladas.</p>
+<p class="story-body-text story-content" data-para-count="360" data-total-count="4733" id="story-continues-16" tabindex="-1">“Sabemos que muchos de los químicos son muy peligrosos”, expresó David Michaels, subsecretario de la Administración Federal de Seguridad y Salud Ocupacional (OSHA), misma agencia que da seguimiento a la seguridad en los lugares de trabajo. “No necesitamos ver el efecto en las manicuristas para saber que es dañino para los trabajadores”, añadió.</p>
+<p class="story-body-text story-content" data-para-count="250" data-total-count="4983" id="story-continues-17" tabindex="-1">Tal era la cantidad de problemas de salud entre la mayoría de las manicuristas vietnamitas de Oakland, en California, que los trabajadores de Asian Health Services, una organización comunitaria local, decidieron investigar el caso hace una década.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="308" data-total-count="5291" id="story-continues-18" tabindex="-1">“Dijimos: ‘Caray, pero ¿qué está pasando en esta comunidad?’”, comentó Julia Liou, quien actualmente es directora del programa de planeación y desarrollo del centro de salud y cofundadora de California Healthy Nail Salon Collaborative. “Estamos ante una epidemia de gente enferma”, expresó.</p>
+<p class="story-body-text story-content" data-para-count="233" data-total-count="5524" id="story-continues-19" tabindex="-1">La organización ayudó a formar una coalición en California que presionó para que se aprobaran restricciones sobre los químicos que se utilizan en los salones de uñas, pero la industria cosmética logró detener la prohibición.</p>
+<p class="story-body-text story-content" data-para-count="341" data-total-count="5865" id="story-continues-20" tabindex="-1">En años recientes, en vista de la creciente preocupación sanitaria, algunos fabricantes de esmalte declararon que habían eliminado de sus productos algunas sustancias sujetas a controversia. No obstante, cuando agencias gubernamentales han sometido esos productos a pruebas aleatorias, se ha demostrado que los químicos siguen presentes.</p>
+<p class="story-body-text story-content" data-para-count="430" data-total-count="6295" id="story-continues-21" tabindex="-1">Algunos estados y municipios recomiendan a las manicuristas que usen guantes y otro tipo de protección, pero los propietarios de los salones casi siempre las disuaden de colocarse ese tipo de material. Y aunque muchos funcionarios que vigilan las condiciones laborales reconocen que el estándar federal que establece cuánto pueden exponerse los trabajadores a estos químicos debe ser revisado, aún ninguna agencia ha actuado.</p>
+<p class="story-body-text story-content" data-para-count="180" data-total-count="6475" id="story-continues-22" tabindex="-1">Por tanto, las manicuristas siguen aplicando esmalte de uñas, removiéndolo y limando uñas artificiales, mientras absorben químicos que son potencialmente nocivos para su salud.</p>
+<p class="story-body-text story-content" data-para-count="449" data-total-count="6924" id="story-continues-23" tabindex="-1">“Hay tantas historias, pero nadie se atreve a contarlas; nadie se atreve a decirlas porque no hay nadie que las escuche”, dijo Otavalo durante una entrevista en su día libre, mientras cuidaba de Matthew, el bebé con déficit de desarrollo de Mónica, su compañera de trabajo. “Hay miles de mujeres trabajando en esto, pero nadie que pregunte: ‘¿Qué te pasa? ¿Cómo te sientes?’ No hacemos otra cosa además de trabajar y trabajar”.</p>
+<p class="story-body-text story-content" data-para-count="24" data-total-count="6948" id="story-continues-24" tabindex="-1"><strong>‘No pueden respirar’</strong></p>
+<p class="story-body-text story-content" data-para-count="433" data-total-count="7381" id="story-continues-25" tabindex="-1">Las paredes del consultorio del Dr. Charles Hwu en el segundo piso de un edificio en Flushing, en Queens, están decoradas con caligrafía china, regalos de pacientes a los que ha cuidado desde la cuna hasta la madurez. En sus décadas como especialista en medicina interna, con pacientes en su mayoría asiáticos, el Dr. Hwu se ha encontrado una y otra vez con un conjunto específico de enfermedades que afectan a ciertas mujeres.</p>
+<p class="story-body-text story-content" data-para-count="397" data-total-count="7778" id="story-continues-26" tabindex="-1">“Por lo general, vienen a verme con problemas respiratorios, algunos síntomas similares a la alergia y también con asma: no pueden respirar”, comentó durante una pausa entre un paciente y otro el invierno pasado. “A juzgar por los síntomas de estas mujeres pareciera que fueran fumadoras, fumadoras pasivas o asmáticas, pero no son nada de eso. Trabajan en salones de uñas”, agregó.</p>
+<p class="story-body-text story-content" data-para-count="336" data-total-count="8114" id="story-continues-27" tabindex="-1">Entrevistas con más de 125 trabajadoras confirmaron que abundan los problemas en vías respiratorias, como los que observa el Dr. Hwu en consulta. Muchas han aprendido a tomarse las molestias como una broma: una nariz que sangra todo el tiempo, o la garganta que duele todos los días desde que comenzaron a trabajar como manicuristas.</p>
+<figure id="media-100000003658820" class="media photo media-100000003658820 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_2/NAILSpart2test2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-29">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_2/NAILSpart2test2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_2/NAILSpart2test2-superJumbo.jpg" data-mediaviewer-caption="Dr. Charles Hwu, in Flushing, Queens, has noticed a particular set of symptoms among the nail salon workers he treats:&amp;nbsp;&amp;ldquo;They come in usually with breathing problems, some symptoms similar to an allergy, and also asthma symptoms &amp;mdash; they cannot breathe.&amp;rdquo;" data-mediaviewer-credit="Nicole Bengiveno/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_2/NAILSpart2test2-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Dr. Charles Hwu, in Flushing, Queens, has noticed a particular set of symptoms among the nail salon workers he treats:&amp;nbsp;&amp;ldquo;They come in usually with breathing problems, some symptoms similar to an allergy, and also asthma symptoms &amp;mdash; they cannot breathe.&amp;rdquo;</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Nicole Bengiveno/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="433" data-total-count="8547" id="story-continues-29" tabindex="-1">En su salón en Mill Basin, en Brooklyn, Eugenia Colon pasó años moldeando hasta 30 juegos de uñas al día en una nube de polvo acrílico, haciendo caso omiso a una persistente tos que se hacía más fuerte con el paso del tiempo. Más adelante supo que padecía sarcoidosis, un tipo de inflamación en los pulmones. En las ecografías, sus pulmones parecían estar cubiertos de granos de arena, surcados por pequeñas cicatrices.</p>
+<p class="story-body-text story-content" data-para-count="204" data-total-count="8751" id="story-continues-30" tabindex="-1">El doctor que diagnosticó su enfermedad le preguntó a qué se dedicaba. Cuando ella contestó, el doctor le explicó que mientras embellecía a otras mujeres, inhalaba nubes de acrílico y otros polvos.</p>
+<p class="story-body-text story-content" data-para-count="149" data-total-count="8900" id="story-continues-31" tabindex="-1">“Haciendo eso ganamos dinero, ¿pero valió la pena? Todo tiene su precio”, exclama Colon, de 52 años, ahora esteticista en un spa de Manhattan.</p>
+<p class="story-body-text story-content" data-para-count="335" data-total-count="9235" id="story-continues-32" tabindex="-1">De los 20 químicos comunes para uñas que ocasionan problemas de salud, y que están enumerados en un folleto que publicó la Agencia de Protección Ambiental, 17 son dañinos para el tracto respiratorio. La sobreexposición ocasiona síntomas como quemaduras en la garganta o los pulmones, problemas para respirar o falta de aliento.</p>
+<p class="story-body-text story-content" data-para-count="491" data-total-count="9726" id="story-continues-33" tabindex="-1">Un estudio del año 2006 que se publicó en la Revista de Medicina Ocupacional y Ambiental incluyó a más de 500 manicuristas de Colorado y encontró que cerca del 20 por ciento de ellas había padecido tos, casi todos los días y las noches. La misma investigación mostró que las empleadas que trabajaban elaborando uñas artificiales tenían tres veces más posibilidades de volverse asmáticas a consecuencia de su trabajo, en comparación con alguien que no pertenece a esa industria.</p>
+<p class="story-body-text story-content" data-para-count="300" data-total-count="10026" id="story-continues-34" tabindex="-1">Los problemas cutáneos también se ven por todas partes entre las trabajadoras de los salones de uñas. Muchos de los químicos usados en estos establecimientos entran en la categoría de sensibilizadores de la piel, capaces de provocar reacciones dolorosas, de acuerdo con agencias gubernamentales.</p>
+<p class="story-body-text story-content" data-para-count="316" data-total-count="10342" id="story-continues-35" tabindex="-1">Algunas manicuristas con experiencia dicen que pueden reconocer a una colega cuando la ven en la calle: tienen las mismas manchas color café en las mejillas. Investigadores han descubierto que algunos aditivos de color en los cosméticos, en especial un tipo de rojo intenso, ocasionan esa decoloración en la piel.</p>
+<figure id="media-100000003658827" class="media photo media-100000003658827 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_3/NAILSpart2test3-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-37">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_3/NAILSpart2test3-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_3/NAILSpart2test3-superJumbo.jpg" data-mediaviewer-caption="When Ki Ok Chung, a manicurist for almost two decades, had her fingerprints taken in the early 2000s for her United States citizenship, her prints were almost nonexistent. She says constant work with files, solvents and emollients is responsible." data-mediaviewer-credit="Yeong-Ung Yang for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_3/NAILSpart2test3-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">When Ki Ok Chung, a manicurist for almost two decades, had her fingerprints taken in the early 2000s for her United States citizenship, her prints were almost nonexistent. She says constant work with files, solvents and emollients is responsible.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Yeong-Ung Yang for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="280" data-total-count="10622" id="story-continues-37" tabindex="-1">Cuando Ki Ok Chung, una manicurista que trabajó en salones por casi dos décadas, pasó por el proceso de que le tomaran las huellas dactilares a principios del año 2000 para obtener la ciudadanía estadounidense, descubrió algo perturbador: sus huellas eran casi inexistentes.</p>
+<p class="story-body-text story-content" data-para-count="335" data-total-count="10957" id="story-continues-38" tabindex="-1">Tuvieron que hacer el registro en varias ocasiones. Ella cree que el trabajo constante con limas, solventes y emolientes había sido el causante del desgaste de sus yemas. “Me di cuenta de que mis huellas dactilares habían desaparecido”, dijo. En la actualidad, no puede tocar platos calientes o fríos sin sentir un dolor fuerte.</p>
+<p class="story-body-text story-content" data-para-count="767" data-total-count="11724" id="story-continues-39" tabindex="-1">Incluso cuando el clima se volvió más cálido con la llegada de la primavera el año pasado, Zoila Calle, una manicurista que trabajaba en Harlem, seguía usando guantes, tanto en exteriores como en interiores. Con ello escondía unas ámpulas de color negro tan dolorosas que no podía sujetar un frasco de esmalte o usar el teclado de su teléfono. Tenía 22 años y, por segunda ocasión, sus manos habían desarrollado verrugas, un padecimiento común entre las trabajadoras de salones de uñas. Si bien la clientela suele inquietarse por la higiene de los locales, son las manicuristas las que asumen el riesgo real, ya que padecen de incontables infecciones por hongos y otras enfermedades de la piel por la cantidad de manos y pies que tocan todos los días.</p>
+<p class="story-body-text story-content" data-para-count="279" data-total-count="12003" id="story-continues-40" tabindex="-1">“Es una industria hermosa, hace a la gente sentirse bien”, dijo en una entrevista Colon, propietaria del salón en Mill Basin, dejando escapar un sonido sibilante después de su risa. “Pero si la gente supiera lo que sucede en verdad, no existiría. No irían”, comentó.</p>
+<p class="story-body-text story-content" data-para-count="22" data-total-count="12025" id="story-continues-41" tabindex="-1"><strong>Abortos y advertencias</strong></p>
+<p class="story-body-text story-content" data-para-count="284" data-total-count="12309" id="story-continues-42" tabindex="-1">En cierta forma, Rocano, una de las manicuristas en el salón de Ridgewood, se consideraba afortunada. Las colegas que se sentaban a sus costados habían pasado por un aborto el año pasado, que describieron por separado exactamente en la misma forma: “Fue como perder un sueño”.</p>
+<p class="story-body-text story-content" data-para-count="352" data-total-count="12661" id="story-continues-43" tabindex="-1">Ella, en cambio, tuvo a su bebé. Matthew era un bultito de cabellos castaños y piel color ámbar cuando nació, un niño en el que su madre había puesto sus esperanzas. Sosteniéndolo entre sus brazos, recordó a la hija que había dejado en Ecuador y que no había visto en más de seis años. Esta vez sintió que haría lo correcto con este hijo.</p>
+<p class="story-body-text story-content" data-para-count="372" data-total-count="13033" id="story-continues-44" tabindex="-1">Sin embargo, a medida que el bebé crecía, parecía que algo no estaba del todo bien. Sus piernas eran débiles: se doblaban cuando trataba de ponerse de pie. A los tres años aún no podía decir su nombre. En visitas al pediatra, Mónica A. Rocano descubrió que el desarrollo de Matthew estaba retrasado en casi todas las mediciones, tanto física como cognitivamente.</p>
+<figure id="media-100000003659132" class="media photo media-100000003659132 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_5/NAILS2TEST5-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-46">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_5/NAILS2TEST5-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_5/NAILS2TEST5-superJumbo.jpg" data-mediaviewer-caption="Nancy Otavalo with her daughter, 4, at bottom of window, and her niece." data-mediaviewer-credit="Nicole Bengiveno/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_5/NAILS2TEST5-master675.jpg"/>
+		<meta itemprop="height" content="446" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Nancy Otavalo with her daughter, 4, at bottom of window, and her niece.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Nicole Bengiveno/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="381" data-total-count="13414" id="story-continues-46" tabindex="-1">En algún momento, su médico le preguntó a qué se dedicaba. Cuando Rocano le dijo, el médico preguntó durante cuánto tiempo había trabajado en el salón de uñas durante su embarazo. “Seis meses”, dijo ella. El doctor comentó que “cuando los bebés se están formando en el vientre, absorben todo, y si están expuestos a cualquier cosa, puede dañarlos”, recuerda.</p>
+<p class="story-body-text story-content" data-para-count="291" data-total-count="13705" id="story-continues-47" tabindex="-1">Un día, hace cinco años, el doctor le hizo una advertencia similar a la manicurista que trabaja en la mesa a la derecha de Rocano, en su consulta en la unidad de obstetricia en Wyckoff Heights Medical Center en Brooklyn. Ahí se enteró de que había tenido un aborto por tercera ocasión.</p>
+<p class="story-body-text story-content" data-para-count="474" data-total-count="14179" id="story-continues-48" tabindex="-1">“Fui al hospital y les dije: ‘Soy manicurista’”, dice la mujer, quien se negó a dar su nombre porque quiere que su historial médico permanezca privado. Su médico la instó a cambiar de trabajo. “&#8217;Los químicos no son saludables para los pulmones, el hígado, y algunas veces ocasionan cáncer&#8217;”, recordó, “yo me reí y dije: ‘¿Quién va a pagar mis facturas?’”. Desde entonces la manicurista ha pasado por otros dos abortos espontáneos.</p>
+<p class="story-body-text story-content" data-para-count="262" data-total-count="14441" id="story-continues-49" tabindex="-1">En círculos científicos los tres químicos de los productos de uñas asociados con los problemas de salud más graves son el ftalato de dibutilo, el tolueno y el formaldehído: se les conoce como el “trío tóxico” entre los defensores de las manicuristas.</p>
+<p class="story-body-text story-content" data-para-count="404" data-total-count="14845" id="story-continues-50" tabindex="-1">El ftalato de dibutilo, conocido por sus siglas en inglés como DBP, hace que el esmalte de uñas y otros productos sean maleables. En Australia esta sustancia forma parte de la lista de tóxicos para la reproducción, y los productos que la contienen deben incluir en su etiqueta las siguientes frases: “Puede ocasionar daño al bebé nonato” y “Posible riesgo de disminución en la fertilidad”.</p>
+<p class="story-body-text story-content" data-para-count="337" data-total-count="15182" id="story-continues-51" tabindex="-1">A partir de junio de 2015 se prohibirá el uso de este químico en cosméticos de ese país. El DBP es uno de los más de 1300 químicos prohibidos para el uso en cosméticos en la Unión Europea. Pero en Estados Unidos, donde se han prohibido menos de una docena de químicos en dichos productos, no hay ninguna limitación para su uso.</p>
+<p class="story-body-text story-content" data-para-count="364" data-total-count="15546" id="story-continues-52" tabindex="-1">El tolueno, un tipo de solvente, ayuda a que el esmalte de uñas se aplique de manera uniforme. Pero la Agencia de Protección Ambiental dice en una ficha técnica que puede dañar las funciones cognitivas y del riñón. Asímismo, la exposición constante durante el embarazo puede “tener efectos adversos en el feto en desarrollo”, de acuerdo con la agencia.</p>
+<p class="story-body-text story-content" data-para-count="349" data-total-count="15895" id="story-continues-53" tabindex="-1">El formaldehído, mejor conocido por su uso para embalsamar, es un agente endurecedor en los productos para uñas. En 2011, el Programa Nacional de Toxicología, que pertenece al Departamento de Salud y Servicios Humanos de Estados Unidos, lo etiquetó como carcinógeno humano. Para el 2016 se prohibirá su uso en cosméticos en la Unión Europea.</p>
+<p class="story-body-text story-content" data-para-count="167" data-total-count="16062" id="story-continues-54" tabindex="-1">Miembros de la industria de cosméticos dicen que vincular químicos con los problemas de salud de las manicuristas equivale a hacer conclusiones científicas erradas.</p>
+<p class="story-body-text story-content" data-para-count="261" data-total-count="16323" id="story-continues-55" tabindex="-1">“El uso [de ftalato de dibutilo, tolueno y formaldehído] es seguro conforme a las actuales condiciones de uso en Estados Unidos”, dijo Lisa Powers, portavoz del Consejo de Productos para el Cuidado Personal, la principal asociación dentro de la industria.</p>
+<p class="story-body-text story-content" data-para-count="227" data-total-count="16550" id="story-continues-56" tabindex="-1">“La FDA no pone en duda el uso seguro e histórico de esos ingredientes”, continuó. En realidad, la responsabilidad de evaluar la seguridad de los químicos para fines cosméticos queda en manos de las propias compañías.</p>
+<p class="story-body-text story-content" data-para-count="436" data-total-count="16986" id="story-continues-57" tabindex="-1">Aun cuando insisten en que son seguros, algunas empresas de esmalte de uñas han comenzado a eliminar ciertos químicos de sus fórmulas voluntariamente. Para 2006, varias de las más importantes marcas habían anunciado que sus productos ya no tendrían ninguno de esos tres ingredientes. Los nuevos productos fueron etiquetados como “3-free” o “5-free” en referencia al número de químicos que en apariencia ya no contenían.</p>
+<p class="story-body-text story-content" data-para-count="333" data-total-count="17319" id="story-continues-58" tabindex="-1">Sin embargo, un estudio que realizó la FDA en 2010 y otro a cargo del Departamento de Control de Sustancias Tóxicas de la Agencia de Protección Ambiental de California, de 2012, encontraron en pruebas aleatorias que algunos productos, incluso los que tenían la etiqueta “3-free” o “5-free”, sí contenían esos químicos.</p>
+<p class="story-body-text story-content" data-para-count="291" data-total-count="17610" id="story-continues-59" tabindex="-1">A raíz de visitas rutinarias a los salones en Oakland, Liou y sus colegas de Asian Health Services, así como Thu Quach, investigadora científica, encontraron cosas alarmantes: casi todas las manicuristas entrevistadas decían tener problemas de salud; algunas estaban gravemente enfermas.</p>
+<p class="story-body-text story-content" data-para-count="246" data-total-count="17856" id="story-continues-60" tabindex="-1">La Dra. Quach, del Instituto de Prevención del Cáncer de California, se propuso llevar a cabo una encuesta de salud entre las trabajadoras de los salones de uñas en el condado de Alameda, al que pertenece Oakland. Así llovieron las historias.</p>
+<p class="story-body-text story-content" data-para-count="336" data-total-count="18192" id="story-continues-61" tabindex="-1">Le Thi Lam, una manicurista vietnamita que vino a Estados Unidos en 1988 después de huir del gobierno comunista de su país, fue de las primeras; todo empezó en un salón de Sacramento, donde se hizo experta en uñas de acrílico, esculpiéndolas todo el día a partir de una sustancia densa hecha de solvente y polímeros plásticos.</p>
+<p class="story-body-text story-content" data-para-count="370" data-total-count="18562" id="story-continues-62" tabindex="-1">En 1991 descubrió que tenía un problema de tiroides; también había desarrollado asma. Renunció porque estaba demasiado enferma para seguir trabajando y se sentía preocupada por los químicos que estaba manipulando. Pero al poco tiempo regresó, incapaz de encontrar otro trabajo con su inglés tan limitado. Diez años más tarde le diagnosticaron cáncer de seno.</p>
+<p class="story-body-text story-content" data-para-count="340" data-total-count="18902" id="story-continues-63" tabindex="-1">“Sé que las manicuristas como yo están pasando por lo mismo y tienen serios problemas de salud”, dijo Lam, sentada en un salón de conferencias en Asian Health Services el verano pasado; su blusa escondía una cicatriz roja desde el esternón hasta la axila. “Pero siguen dependiendo de sus trabajos para ganarse la vida”, acotó.</p>
+<p class="story-body-text story-content" data-para-count="431" data-total-count="19333" id="story-continues-64" tabindex="-1">La Dra. Quach continuó con su investigación y realizó diversos estudios. En uno de ellos descubrió que las manicuristas presentaban un mayor riesgo de diabetes gestacional y de dar a luz a bebés de talla baja. En otro, que se concentró en el cáncer, no encontró ninguna correlación. Ambos estudios se vieron obstaculizados por la falta de datos. Principalmente, señalan la necesidad de llevar a cabo más investigaciones.</p>
+<p class="story-body-text story-content" data-para-count="293" data-total-count="19626" id="story-continues-65" tabindex="-1">“Lo que sabemos es lo que nos informan la mujeres una y otra vez: que algo está pasando. Esos químicos que utilizan son sustancias a las que sabemos que la gente reacciona y las trabajadoras que están reaccionando nos están contando sus historias. Todo está ahí”, dijo la Dra. Quach.</p>
+<p class="story-body-text story-content" data-para-count="33" data-total-count="19659" id="story-continues-66" tabindex="-1"><strong>‘El zorro cuida el gallinero’</strong></p>
+<p class="story-body-text story-content" data-para-count="228" data-total-count="19887" id="story-continues-67" tabindex="-1">La normatividad sobre químicos en los productos para las uñas está a cargo de la Ley Federal de Alimentos, Medicamentos y Cosméticos de 1938. La parte de la ley relacionada con los cosméticos tiene un total de 591 palabras.</p>
+<p class="story-body-text story-content" data-para-count="548" data-total-count="20435" id="story-continues-68" tabindex="-1">La FDA explica en su página web la forma en la que la ley limita sus funciones: “Los productos cosméticos y sus ingredientes no necesitan aprobación de la FDA antes de su lanzamiento en el mercado, con excepción de los aditivos de color”. Continúa: “Ni la ley ni las disposiciones de la FDA exigen que se lleven a cabo pruebas específicas para comprobar la seguridad de productos o ingredientes particulares”. Asímismo: “La ley tampoco exige a las compañías cosméticas que le hagan llegar información sobre riesgos a la FDA”.</p>
+<p class="story-body-text story-content" data-para-count="568" data-total-count="21003" id="story-continues-69" tabindex="-1">En 1976 la propia industria cosmética creó la Revisión de Ingredientes Cosméticos (CIR), compuesta por un grupo de expertos que supuestamente “revisa y evalúa la seguridad de los ingredientes utilizados en los cosméticos de manera abierta, imparcial y experta”, de acuerdo con su página de internet. Pero el grupo de expertos está financiado en su totalidad por el Consejo de Productos para el Cuidado Personal, un grupo de cabildeo de la industria. Las oficinas de los expertos se encuentran en el mismo edificio que el Consejo de Productos en Washington.</p>
+<p class="story-body-text story-content" data-para-count="266" data-total-count="21269" id="story-continues-70" tabindex="-1">Aún así, Powers dijo que el grupo de expertos operaba en forma independiente; ella es la portavoz oficial del grupo de cabildeo de la industria y también es quien da respuesta a todas las preguntas sobre la industria, así como las dirigidas al grupo de expertos.</p>
+<figure id="media-100000003658917" class="media photo media-100000003658917 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_4/NAILSpart2test4-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-72">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_4/NAILSpart2test4-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_4/NAILSpart2test4-superJumbo.jpg" data-mediaviewer-caption="Toan Ngoc Do, left, a manicurist student, worked on the nails of a fellow student, Tien Dang Thuy, during a class at the International College of Cosmetology in San Francisco last May." data-mediaviewer-credit="Ramin Rahimian for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/05/01/nyregion/NAILSpart2_4/NAILSpart2test4-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Toan Ngoc Do, left, a manicurist student, worked on the nails of a fellow student, Tien Dang Thuy, during a class at the International College of Cosmetology in San Francisco last May.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Ramin Rahimian for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="323" data-total-count="21592" id="story-continues-72" tabindex="-1">Desde su fundación, el grupo ha revisado solo una mínima parte de las sustancias que se utilizan en cosméticos, entre las que se encuentran el ftalato de dibutilo y el tolueno. El equipo de expertos determinó que la forma en la que se utilizan en los productos para las uñas es segura: en las uñas, mas no en la piel.</p>
+<p class="story-body-text story-content" data-para-count="332" data-total-count="21924" id="story-continues-73" tabindex="-1">“Es un clásico caso del zorro que cuida al gallinero”, dice Janet Nudelman, directora de programas y políticas del Breast Cancer Fund, quien ha abogado por una normatividad más rigurosa. “Tenemos a un grupo de expertos financiado por la industria que evalúa la seguridad de la misma industria que lo financia”, concluye.</p>
+<p class="story-body-text story-content" data-para-count="366" data-total-count="22290" id="story-continues-74" tabindex="-1">Se han hecho esfuerzos recientemente por revisar la ley de 1938 y regular de manera más estricta los químicos en los cosméticos, pero ninguno ha logrado avanzar ante la resistencia de la industria. Desde 2013, el Consejo de Productos, solo uno de los varios grupos del ramo industrial, ha repartido cerca de 2 millones de dólares para el cabildeo en el congreso.</p>
+<p class="story-body-text story-content" data-para-count="522" data-total-count="22812" id="story-continues-75" tabindex="-1">Después de que las conversaciones entre la industria de cosméticos y la FDA se vinieron abajo el año pasado, Michael R. Taylor, subcomisionado de la agencia para alimentos y medicina veterinaria, reprendió a la industria en una carta abierta por impulsar una medida que declararía que una amplia variedad de químicos potencialmente peligrosos era segura “sin ninguna base científica creíble”, además de declarar seguros a otros que se sabe suponen “un riesgo verdadero y sustancial para los consumidores”.</p>
+<p class="story-body-text story-content" data-para-count="337" data-total-count="23149" id="story-continues-76" tabindex="-1">Powers comentó que la carta malinterpretaba la postura de la industria: “La ley fue creada o aprobada en 1938. Nadie está diciendo que no deberíamos echarle un vistazo ahora y decir: ‘¿Es un enfoque contemporáneo? ¿Necesita traernos al siglo XXI?’ Todos estamos de acuerdo en ello. Pero ese no es un titular muy atractivo”.</p>
+<p class="story-body-text story-content" data-para-count="501" data-total-count="23650" id="story-continues-77" tabindex="-1">El Consejo de Productos dijo que apoyaba un proyecto de ley que se presentó en abril por la Senadora demócrata Dianne Feinstein, de California, y la republicana Susan Collins de Maine, que ampliaría el poder regulatorio de la FDA, al punto de conferirle la autoridad necesaria para sacar cosméticos del mercado. Pero muchos activistas se han quejado porque la ley permitiría que la industria se siga monitoreando a sí misma; tampoco dejaría que los estados diseñen regulaciones más estrictas.</p>
+<p class="story-body-text story-content" data-para-count="440" data-total-count="24090" id="story-continues-78" tabindex="-1">La Administración de Seguridad y Salud Ocupacional es la agencia federal que establece los límites de exposición a químicos en el lugar de trabajo. Los estudios que han analizado los niveles de exposición a los químicos, en el caso de las manicuristas, han encontrado que están por debajo de estas normas. Los defensores de la salud dicen que las reglas de la Administración de Seguridad son terriblemente obsoletas e insuficientes.</p>
+<p class="story-body-text story-content" data-para-count="292" data-total-count="24382" id="story-continues-79" tabindex="-1">Incluso el doctor Michaels, director de la Administración de Seguridad, dijo que las normas de su agencia necesitaban una revisión. Dijo que actualmente los trabajadores “pueden estar expuestos a niveles que son legales conforme a la OSHA, pero que no por ello dejan de ser peligrosos”.</p>
+<p class="story-body-text story-content" data-para-count="495" data-total-count="24877" id="story-continues-80" tabindex="-1">La agencia elabora folletos que advierten a las manicuristas sobre los riesgos a los que se enfrentan, por lo que las invitan a usar guantes y ventilar los salones. Estas y otras medidas son obligatorias cuando se exceden los límites de exposición. Pero en la práctica, debido a que las normas son tan laxas, los salones de uñas están en libertad de no hacer nada. El Dr. Michaels explicó que la agencia estaba atada de pies y manos debido a su engorroso proceso interno para crear normas.</p>
+<p class="story-body-text story-content" data-para-count="152" data-total-count="25029" id="story-continues-81" tabindex="-1">“Cada trabajador tiene derecho de regresar seguro a su hogar al final de cada jornada laboral. Ellas no deberían llegar a casa enfermas”, expresó.</p>
+<p class="story-body-text story-content" data-para-count="466" data-total-count="25495" id="story-continues-82" tabindex="-1">El debate sobre los químicos también se ha llevado a cabo a nivel estatal. En 2005, los legisladores de California propusieron prohibir el uso de DBP en los cosméticos que se venden o fabrican en el estado. Grupos de la industria llenaron el Capitolio estatal (algunos llevaban canastas de regalos llenas de labiales y esmaltes de uñas) y se gastaron más de medio millón de dólares en la lucha contra la prohibición, según consta en los registros estatales.</p>
+<p class="story-body-text story-content" data-para-count="376" data-total-count="25871" id="story-continues-83" tabindex="-1">Algunas de las marcas más conocidas —Estée Lauder, Mary Kay y OPI, entre otras— se les unieron. Al final, el proyecto de ley fracasó. Se aprobó una medida mucho más limitada —a pesar de las protestas de la industria— que exigía que las compañías cosméticas dieran a conocer los químicos nocivos al Departamento de Servicios de Salud del Estado de California.</p>
+<p class="story-body-text story-content" data-para-count="430" data-total-count="26301" id="story-continues-84" tabindex="-1">Obstaculizados por una industria poderosa, los defensores de California tuvieron que reducir sus metas; presentaron un programa que reconocía oficialmente a los “salones de uñas saludables”, aquellos que usaban productos “más verdes” y que tenían ventilación. El Ayuntamiento de la Ciudad de Nueva York celebró una audiencia este mes en relación con una medida con la que se crearía un programa voluntario similar.</p>
+<p class="story-body-text story-content" data-para-count="107" data-total-count="26408" id="story-continues-85" tabindex="-1">Sin embargo, hoy en día, de entre los miles de salones en California, solo unos 55 pertenecen al programa.</p>
+<p class="story-body-text story-content" data-para-count="463" data-total-count="26871" id="story-continues-86" tabindex="-1">Uno de ellos es Lulu Nail Spa, un pequeño salón con un muro de color rosa oscuro y sillones blancos de piel para pedicura, ubicado en Burlingame. El local se ganó el nombramiento en mayo por cambiar ciertos productos, usar guantes y abrir las puertas para expulsar los gases del salón. La propietaria, Hai Thi Le, una inmigrante vietnamita, dijo que esperaba que el nuevo distintivo que colocó en la ventana atraería a clientela con orientación ecologista.</p>
+<p class="story-body-text story-content" data-para-count="276" data-total-count="27147" id="story-continues-87" tabindex="-1">Pero no hizo los cambios solo para atraer más clientes. En su juventud, Le trabajaba en el salón de su hermano e inhalaba tanto polvo acrílico que cuando besaba a su marido después de volver del trabajo, él se quejaba de que su aliento olía a solvente y polvo plástico.</p>
+<p class="story-body-text story-content" data-para-count="24" data-total-count="27171" id="story-continues-88" tabindex="-1"><strong>De pie frente a la brisa</strong></p>
+<p class="story-body-text story-content" data-para-count="321" data-total-count="27492" id="story-continues-89" tabindex="-1">En sus días libres del salón, Nancy Otavalo estuvo por un tiempo a cargo de una guardería infantil en su casa junto con su hermana, otra manicurista. Recogían a los niños de otras manicuristas a la salida de la escuela por un monto y los entretenían en el apartamento que compartían con sus familias en un sótano.</p>
+<p class="story-body-text story-content" data-para-count="175" data-total-count="27667" id="story-continues-90" tabindex="-1">Matthew, el hijo de su colega que apenas puede hablar, era el favorito: pasaba la tarde en un sofá de piel negro, comprado con propinas, que es el elemento central del hogar.</p>
+<p class="story-body-text story-content" data-para-count="227" data-total-count="27894" id="story-continues-91" tabindex="-1">Después de que Otavalo tuvo un aborto espontáneo el año pasado, pasó muchas horas recostada en el mismo sillón negro de piel, en silencio y con las luces apagadas, incapaz de recobrar la fuerza de voluntad para levantarse.</p>
+<p class="story-body-text story-content" data-para-count="350" data-total-count="28244" id="story-continues-92" tabindex="-1">Una semana después de que le hicieron un legrado en el Woodhull Medical Center de Brooklyn, se levantó, se maquilló generosamente, de la forma como dice su hermana que hay que hacer para sentirse segura, y regresó a trabajar a su mesa. Los clientes que iban por su manicura semanal no tenían ni idea de lo que había pasado; todo parecía igual.</p>
+<p class="story-body-text story-content" data-para-count="297" data-total-count="28541" id="story-continues-93" tabindex="-1">Excepto que, de vez en cuando, después de que Otavalo aplicaba la pincelada final de la capa de pintura en la mano de una clienta, movía su silla hacia atrás y caminaba hacia el frente del salón. Abría las puertas de vidrio de par en par y se quedaba de pie por un rato, para sentir la brisa.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Jiha Ham, Yuhan Liu, Julie Turkewitz, Isvett Verde, Yeong-Ung Yang y Heyang Zhang colaboraron con este reportaje. Susan C. Beachy colaboró con la investigación.</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/cancer/" rel="tag">cáncer</a>, <a href="https://www.nytimes.com/es/tag/explotacion-laboral/" rel="tag">explotación laboral</a>, <a href="https://www.nytimes.com/es/tag/manicura/" rel="tag">manicura</a>, <a href="https://www.nytimes.com/es/tag/salud/" rel="tag">salud</a>, <a href="https://www.nytimes.com/es/tag/sarcoidosis/" rel="tag">sarcoidosis</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2015/05/08/venenos-que-embellecen-las-unas/"
+				data-title="Noticias: Venenos que embellecen las uñas"
+				data-author="POR SARAH MASLIN NIR"
+				data-media=""
+				data-description="Se ha vinculado a químicos en los productos para uñas con retraso en el desarrollo de los niños, abortos y enfermedades pulmonares. Pero la industria ha frenado la reglamentación."
+				data-publish-date="8 de mayo de 2015"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2015/05/07/un-trabajo-tan-duro-como-las-unas/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">Un trabajo tan duro como las uñas</span>
+							<time class="dateline">7 de mayo de 2015</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb1-copy-ES/NAILStest3-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":988,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

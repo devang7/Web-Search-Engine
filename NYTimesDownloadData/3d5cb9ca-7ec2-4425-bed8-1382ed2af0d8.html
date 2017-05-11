@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004089994"/>
+<meta name="hdl" content="El voto latino será decisivo en Estados Unidos… si los dejan votar" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20160414" />
+<meta name="utime" content="20160414190417" />
+<meta name="ptime" content="20160414190417" />
+<meta name="DISPLAYDATE" content="Apr. 14, 2016" />
+<meta name="dat" content="Apr. 14, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="favor-de-no-votar-las-tacticas-electorales-contra-los-latinos-en-estados-unidos" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/04/14/favor-de-no-votar-las-tacticas-electorales-contra-los-latinos-en-estados-unidos/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="El voto latino será decisivo en Estados Unidos… si los dejan votar" />
+<meta property="og:description" content="Las elecciones de 2016 serán las primeras que se realicen después de las modificaciones republicanas a la ley electoral; si la justicia federal no actúa antes, estos cambios podrían perjudicar a los electores hispanos." />
+<meta property="og:image" content="https://static01.nyt.com/images/2015/12/20/magazine/20voting1/20voting1-videoSixteenByNine768-v5.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-04-14" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/04/14/favor-de-no-votar-las-tacticas-electorales-contra-los-latinos-en-estados-unidos/" />
+<meta property="twitter:title" content="El voto latino será decisivo en Estados Unidos… si los dejan votar" />
+<meta property="twitter:description" content="Las elecciones de 2016 serán las primeras que se realicen después de las modificaciones republicanas a la ley electoral; si la justicia federal no actúa antes, estos cambios podrían perjudicar a los electores hispanos." />
+<meta name="author" content="Jim Rutenberg" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Jim Rutenberg" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="politica" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="politica" />
+<meta name="id" content="100000004089994"/>
+<meta name="wordCount" content="8328"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/04/14/favor-de-no-votar-las-tacticas-electorales-contra-los-latinos-en-estados-unidos/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=04&amp;day=14&amp;name=favor-de-no-votar-las-tacticas-electorales-contra-los-latinos-en-estados-unidos">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=891">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/04\/14\/favor-de-no-votar-las-tacticas-electorales-contra-los-latinos-en-estados-unidos\/"},"headline":"El voto latino ser\u00e1 decisivo en Estados Unidos\u2026 si los dejan votar","datePublished":"2016-04-14T19:04:17+00:00","dateModified":"2016-04-14T15:04:24+00:00","author":{"@type":"Person","name":"veronica"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2015\/12\/20\/magazine\/20voting1\/20voting1-videoSixteenByNine768-v5.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Las elecciones de 2016 ser\u00e1n las primeras que se realicen despu\u00e9s de las modificaciones republicanas a la ley electoral; si la justicia federal no act\u00faa antes, estos cambios podr\u00edan perjudicar a los electores hispanos."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/04/14/favor-de-no-votar-las-tacticas-electorales-contra-los-latinos-en-estados-unidos/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2015/12/20/magazine/block-the-vote.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/politica" />
+<title>El voto latino será decisivo en Estados Unidos… si los dejan votar &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2015/12/20/magazine/block-the-vote.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/04/14/favor-de-no-votar-las-tacticas-electorales-contra-los-latinos-en-estados-unidos/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-891 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				El voto latino será decisivo en Estados Unidos… si los dejan votar
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/04/14/favor-de-no-votar-las-tacticas-electorales-contra-los-latinos-en-estados-unidos/"
+					data-title="Noticias: El voto latino será decisivo en Estados Unidos… si los dejan votar"
+					data-author="POR JIM RUTENBERG"
+					data-media=""
+					data-description="Las elecciones de 2016 serán las primeras que se realicen después de las modificaciones republicanas a la ley electoral; si la justicia federal no actúa antes, estos cambios podrían perjudicar a los electores hispanos."
+					data-publish-date="14 de abril de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/politica/">Política</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">El voto latino será decisivo en Estados Unidos… si los dejan votar</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Jim Rutenberg</span>
+</span>
+
+					<time class="dateline" datetime="2016-04-14">14 de abril de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/04/14/favor-de-no-votar-las-tacticas-electorales-contra-los-latinos-en-estados-unidos/"
+							data-title="Noticias: El voto latino será decisivo en Estados Unidos… si los dejan votar"
+							data-author="POR JIM RUTENBERG"
+							data-media=""
+							data-description="Las elecciones de 2016 serán las primeras que se realicen después de las modificaciones republicanas a la ley electoral; si la justicia federal no actúa antes, estos cambios podrían perjudicar a los electores hispanos."
+							data-publish-date="14 de abril de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2015/12/20/magazine/block-the-vote.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="50" data-total-count="50" id="story-continues-1" tabindex="-1"><div class="lede-container">
+<figure id="media-100000004089993" class="media photo lede layout-large-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/20/magazine/20voting1/20voting1-blog427-v5.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/20/magazine/20voting1/20voting1-blog427-v5.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/20/magazine/20voting1/20voting1-superJumbo-v5.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Illustration by Ben Wiseman"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/20/magazine/20voting1/20voting1-blog427-v5.jpg"/>
+		<meta itemprop="height" content="260" />
+		<meta itemprop="width" content="427" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Illustration by Ben Wiseman
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+<br /><em>Este artículo fue publicado en diciembre de 2015.</em></p>
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="893" data-total-count="943" id="story-continues-2" tabindex="-1">En septiembre del año 2000, Óscar Del Toro, de Monterrey, llegó con su esposa y sus tres hijos al aeropuerto de Houston para comenzar una nueva vida en Estados Unidos. Del Toro, que en ese entonces tenía 38 años, había pasado toda su vida en México. Su padre y su madre se habían nacionalizado como estadounidenses, vivían cerca de Houston y querían traerlo a Estados Unidos. Pero, siendo ya un adulto con esposa e hijos, los trámites se alargaron. Siguió con su vida en México, donde construyó un negocio de venta de impresoras láser y compró una casa de cuatro habitaciones. Se había olvidado de la posibilidad de mudarse a Estados Unidos hasta que, poco antes de la Navidad de 1999, su madre lo sorprendió. Tenía un regalo para él: una carta del servicio de inmigración y naturalización en la que lo invitaban, junto a su familia, a solicitar la residencia permanente.</p>
+<p class="story-body-text story-content" data-para-count="706" data-total-count="1649" id="story-continues-3" tabindex="-1">Los padres de Del Toro vivían en Pasadena, una ciudad petrolera a las afueras de Houston. Y allí fue donde se mudó, a un apartamento pequeño de tres habitaciones al norte de la ciudad. La zona norte de Pasadena es un área de mayoría latina donde abundan letreros en español que anuncian carnicerías, peluquerías y, claro, despachos de abogados especializados en inmigración. En los últimos años, se han mudado allá tantos mexicanos –a un casco histórico semiabandonado, un lugar en el que la hierba crece entre las grietas de las aceras– que los que viven ahí ya lo llaman ‘‘Nuevo León’’, como el estado fronterizo del que muchos de ellos llegaron, incluida la familia Del Toro.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="581" data-total-count="2230" id="story-continues-4" tabindex="-1">A mediados del siglo pasado la mayoría de los habitantes de Pasadena eran blancos, pero decidieron mudarse al sur de la ciudad, donde las asociaciones de vecinos ven como algo normal recibir subvenciones del gobierno local para construir parques infantiles. Ese barrio se extiende alrededor de un corredor comercial, Fairmont Parkway, repleto de tiendas y franquicias de restaurantes. Todo está decorado con árboles y plantas de colores vivos. El alcalde, Johnny Isbell, lo considera “la gallina de los huevos de oro” por los ingresos de impuestos que le genera a la ciudad.</p>
+<p class="story-body-text story-content" data-para-count="810" data-total-count="3040" id="story-continues-5" tabindex="-1">Al llegar a Pasadena, Del Toro trató de vender impresoras a los negocios de la zona sur. Pero con su inglés limitado y sin contactos, le costó mucho establecerse. Durante los primeros años, le fue mal. ‘‘Perdí todo, me acabé todo el efectivo que tenía’’, me dijo en octubre en un pequeño restaurante en el norte de Pasadena llamado Tostada Regia. Del Toro, de 53 años, es una persona sencilla que inspira confianza. Tiene panza y las canas de quien ha sacado adelante a tres hijos en un país que no es el suyo. Comenzó a irle bien cuando se le ocurrió una estrategia diferente: en vez de buscar clientes entre los empresarios ya establecidos en el sur de la ciudad, pensó en el enorme potencial del norte. &#8220;Me concentré en dueños de negocios pequeños que hablaban español&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="770" data-total-count="3810" id="story-continues-6" tabindex="-1">Lo hizo en el momento perfecto. Muchos negocios de habla hispana comenzaban de cero al igual que él, así que necesitarían equipo de oficina mientras fueran creciendo. Tenían menor poder adquisitivo, pero lo compensaban en tamaño. Si en el año 2000 el 48 por ciento de la población de Pasadena, una ciudad de 140.000 habitantes, eran hispanos, en la actualidad esa cifra se aproxima al 63 por ciento. Ahí encontró su mercado y comenzó a irle bien. Tanto que compró una casa de cuatro habitaciones, con jardín y estacionamiento para dos autos, y se volvió miembro de la Cámara de Comercio local. En 2006 obtuvo la nacionalidad estadounidense. Se cumplía el sueño americano. &#8220;Fue como una bendición&#8221;, dijo. &#8220;Pude comenzar de nuevo&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="911" data-total-count="4721" id="story-continues-7" tabindex="-1">Como recién llegado al entorno empresarial de Pasadena, Del Toro comenzó a percibir una cierta sensación de desigualdad en el norte de la ciudad. Sus clientes se quejaban de problemas como aceras rotas o alcantarillas que provocaban inundaciones cada vez que llovía. En 2008, el alcalde dio un discurso ante la Cámara de Comercio en el que vinculó infracciones de tránsito, como manejar sin seguro o bajo la influencia del alcohol, con la situación migratoria de las personas que las cometían. Proponía informar a las autoridades migratorias de dichos arrestos. A Del Toro le pareció que Isbell quería culpar a los inmigrantes no autorizados de todos los problemas de la ciudad. Del Toro abandonó el lugar. Le pareció que el alcalde buscaba una maniobra de distracción de los temas realmente importantes, como el hecho de que mientras en el sur crecían flores, en el norte se imponía la maleza.</p>
+<p class="story-body-text story-content" data-para-count="1095" data-total-count="5816" id="story-continues-8" tabindex="-1">En 2009, Dana Philibert, una corredora de seguros y cliente de Del Toro, decidió postularse como candidata contra Isbell, y prometió a los electores ser más juiciosa con el dinero de la ciudad. Del Toro ofreció colaborar en su campaña visitando casa por casa a los hispanos del norte como había hecho para mejorar su negocio. La candidata perdió, pero Del Toro descubrió que le gustaba el estilo de hacer política de Estados Unidos. Philibert pertenecía al Partido Republicano, así que Del Toro, miembro de la ultraconservadora Asociación Nacional del Rifle y jugador de golf, asistió a un par de reuniones locales de los republicanos. Pronto decidió que eso no era lo que buscaba: no solo porque Isbell y otros republicanos de Pasadena mostraban una actitud cada vez más belicosa hacia los inmigrantes sin permiso de residencia, sino también por su posición frente al aborto o los derechos de las personas homosexuales. &#8220;Siempre admiré a Estados Unidos en este aspecto&#8221;, declaró. &#8220;Está bien que seas como eres. No tienes que cambiar y ser diferente&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="499" data-total-count="6315" id="story-continues-9" tabindex="-1">Los demócratas se mostraban más abiertos a escuchar a gente como Del Toro, quizá porque no gobernaban desde hacía muchos años y el voto hispano parecía su única esperanza de llegar al poder. Según la tendencia actual, Texas podría tener una mayoría latina en 2042. Y en elecciones nacionales el 70 por ciento de los hispanos vota por candidatos demócratas. Pero esa tendencia, que parece irreversible, no se traduce aún en resultados. Los hispanos han sido y son grandes abstencionistas.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="307" data-total-count="6622" id="story-continues-10" tabindex="-1">En 2014, cuando la senadora estatal Wendy Davis intentó ganar apoyo entre los hispanos en su campaña para la gobernación, Del Toro participó de nuevo como voluntario y volvió a hacer campaña puerta en puerta. Pero el porcentaje de hispanos que votó fue muy bajo y Davis perdió de manera contundente.</p>
+<figure id="media-100000004093506" class="media photo media-100000004093506 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-TC88/20voting-ss-slide-TC88-master675-v3.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-12">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-TC88/20voting-ss-slide-TC88-master675-v3.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-TC88/20voting-ss-slide-TC88-superJumbo-v3.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Jeff Wilson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-TC88/20voting-ss-slide-TC88-master675-v3.jpg"/>
+		<meta itemprop="height" content="844" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Jeff Wilson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="635" data-total-count="7257" id="story-continues-12" tabindex="-1">Sin embargo, en Pasadena, la influencia de la comunidad hispana seguía en aumento. Dos veteranos mexicoamericanos del cuerpo de Marines, Ornaldo Ybarra y Cody Ray Wheeler, resultaron elegidos para el ayuntamiento de la ciudad y le pisaban los talones a Isbell. Parecía inminente que, en una zona de mayoría hispana, los latinos ganarían el escaño que marcaría la diferencia y lograran ser mayoría. Fue entonces cuando Del Toro comenzó a considerar su realidad. Tenía 52 años, llevaba 14 en el país, apenas comenzaba a entender cómo funcionaba la política estadounidense y lo que veía no solo no le gustaba, lo enfurecía.</p>
+<p class="story-body-text story-content" data-para-count="543" data-total-count="7800" id="story-continues-13" tabindex="-1">Para evitar una derrota, el alcalde propuso reducir de ocho a seis el número de distritos del ayuntamiento y añadir dos nuevos escaños plurinominales para representar a toda la ciudad. Las elecciones plurinominales parecen más democráticas. Suman votos de toda la ciudad y no de cada distrito. Pero como el porcentaje de hispanos que votaban en las elecciones locales era tan bajo, los blancos ganarían y el alcalde conservaría su mayoría. &#8220;Crearon dos distritos plurinominales para conservar el poder&#8221;, enfatizó Del Toro.</p>
+<p class="story-body-text story-content" data-para-count="946" data-total-count="8746" id="story-continues-14" tabindex="-1">Isbell no fue el primer político texano en proponer este plan; varios han intentado la misma táctica en otras ciudades de Texas, como Galveston y Freeport. Y no es una práctica restringida solo a Texas. En otros 14 estados la justicia federal ha bloqueado reformas discriminatorias que tienen como objetivo limitar el acceso de ciertas minorías a los cargos de representación pública. Pero en este caso, Isbell se salió con la suya. La reforma se aprobó y nadie pudo detenerla.<br />Del Toro decidió que si la ley no detenía a Isbell, él trataría de hacerlo. Se presentó como candidato a uno de esos nuevos escaños. Sabía que se trataba de una batalla que tenía casi perdida, pero creía que &#8220;si quieres ganar algo, a veces hay que luchar aunque la causa esté perdida &#8220;. En febrero, cuando le tocó presentar los documentos para la candidatura, firmó bajo la línea que dice: &#8220;Soy ciudadano de Estados Unidos&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="37" data-total-count="8783" id="story-continues-15" tabindex="-1"><strong>2. ‘La última línea de defensa’</strong></p>
+<p class="story-body-text story-content" data-para-count="885" data-total-count="9668" id="story-continues-16" tabindex="-1">El 15 de marzo de 1965, Lyndon Johnson le exigió al congreso que aprobara la Ley de Derechos Electorales (Voting Rights Act o VRA), que otorgaba al gobierno federal poderes excepcionales sobre los estados para ponerle fin a la &#8220;discriminación sistemática e ingeniosa&#8221; que limitaba los derechos de los electores negros en el sur del país. Desde entonces, y gracias a una serie de artículos de esa ley conocidos como la Sección 5, el gobierno federal es competente para bloquear cualquier legislación electoral que podría fomentar la discriminación en estados de tradición racista, en especial, los antiguos estados confederados como Texas. Para los negros ha sido difícil ejercer su derecho al voto a lo largo de la historia, pero en 2008 la tasa de asistencia de los negros a las urnas ya era similar a la de los blancos. Y Estados Unidos eligió a Barack Obama.</p>
+<p class="story-body-text story-content" data-para-count="1043" data-total-count="10711" id="story-continues-17" tabindex="-1">Pero contra toda lógica, después de la elección de Obama los republicanos aprobaron leyes electorales discriminatorias en algunos lugares en los que gobiernan. Se redujo el plazo de votación anticipada, que facilita el acceso a las urnas de las personas de menos recursos, algo muy útil para las iglesias de mayoría negra que suelen motivar a sus fieles para ir a las urnas durante sus servicios dominicales. También derogaron leyes que permitían a las personas registrarse y votar al mismo tiempo, algo muy conveniente para los estadounidenses más pobres que cambian de domicilio con mayor frecuencia y que, sin esta ventaja, se ven obligados a actualizar continuamente su información electoral. Además, se aprobaron nuevas leyes que establecieron límites estrictos al tipo de identificaciones con fotografía que pueden aceptarse en las casillas: la legislación de Texas establecía que podían aceptarse permisos para portar armas, más habituales entre los blancos, pero no identificaciones de trabajo o de escuelas públicas.</p>
+<p class="story-body-text story-content" data-para-count="1691" data-total-count="12402" id="story-continues-18" tabindex="-1">Algunos abogados especializados en derechos civiles argumentaron que la situación no era más que un caso moderno del tipo de leyes que el congreso pretendía bloquear cuando aprobó la Ley de Derechos Electorales, y en varios casos los tribunales estuvieron de acuerdo con ellos. Mientras esta ley se mantuvo intacta, los estados que la aplicaban tenían poco margen de maniobra. En 2012, la justicia federal bloqueó la legislación de Texas sobre identificaciones aceptadas para votar, y el Departamento de Justicia retrasó la legislación de Misisipi sobre identificaciones con fotografía tras solicitar más información sobre sus posibles efectos discriminatorios. Alabama también aprobó una ley sobre identificaciones que no podía entrar en vigor hasta recibir autorización federal. Y entonces llegó la sentencia de un caso conocido como Shelby County vs. Holder: la Sección 5 dejó de ser aplicable en los estados con el argumento de que la información a partir de la cual se redactó y aprobó ya no correspondía con la realidad social y demográfica de gran parte del país. Fue el mayor cambio en materia electoral desde 1965 y, según expertos en la defensa de derechos civiles, el mayor retroceso en la materia. Después de ese caso, Texas, Misisipi y Alabama siguieron adelante con su legislación sobre identificaciones mientras se resolvían las apelaciones ante la justicia federal. En Carolina del Norte, los republicanos aprobaron numerosas restricciones, incluida también una ley sobre las identificaciones y recortes al plazo de votación anticipada que afectaron de manera desproporcionada a las minorías. (También está pendiente una apelación federal). </p>
+<p class="story-body-text story-content" data-para-count="812" data-total-count="13214" id="story-continues-19" tabindex="-1">Las elecciones presidenciales de 2016 serán las primeras que se realicen después de las modificaciones republicanas a la ley electoral que, si la justicia federal no actúa antes, podrían ser aplicadas en su totalidad. Los abogados que defienden los derechos civiles han mostrado su preocupación por los cambios que podrían perjudicar a los electores. Carolina del Norte, Virginia y Florida serían algunos de los estados más afectados y, además, allí las batallas electorales estarán entre las más reñidas. Marc Elias, un veterano abogado del Partido Demócrata y asesor de la campaña presidencial de Hillary Clinton, comentó: ‘‘Es probable que se realicen más juicios por el derecho al voto en estas elecciones de los que hemos visto desde que se aprobó la Ley de Derechos Electorales’’.</p>
+<p class="story-body-text story-content" data-para-count="1171" data-total-count="14385" id="story-continues-20" tabindex="-1">Pero la competencia más intensa no es sobre el mapa electoral actual, sino sobre el mapa del futuro, probablemente muy moldeado por la población hispana. Esta población podría realinear la política nacional durante varias generaciones.<br />Los hispanos han sentido la hostilidad de la población anglosajona desde mediados del siglo XIX, cuando a través del uso de la violencia e incluso amenazas de prisión, Texas comenzó a tratar de alejarlos de las urnas. En 1975,  el congreso determinó que el estado quedaría bajo supervisión de la Sección 5, ya que Texas, entre otras cosas, seguía utilizando papeletas escritas únicamente en inglés. Incluso hoy en día, las cifras de ciudadanos hispanos que se registran y votan no han mejorado mucho con respecto a las de la población negra a finales de la época de segregación racial. En 2012, solo votaron el 38,8 por ciento de los hispanos con derecho a voto en Texas, según datos oficiales. La cifra asciende al 60 por ciento en el caso de negros y “anglos”, nombre informal de uso amplio que se da a los blancos que no son de origen hispano. En el censo los hispanos pueden identificarse con cualquier raza.</p>
+<p class="story-body-text story-content" data-para-count="1055" data-total-count="15440" id="story-continues-21" tabindex="-1">Si los hispanos comenzaran a registrarse y votaran en el mismo porcentaje que los anglos en Texas, y siguieran mostrando su preferencia por los demócratas sobre los republicanos en la misma proporción que lo hacen ahora para las elecciones presidenciales, los demócratas podrían reducir los 16 puntos de desventaja que tuvieron en 2012 a solo 6 puntos en 2024. La diferencia sería menor que la registrada en Virginia en 2004, cuatro años antes de que los demócratas ganaran el estado.<br />Si la tendencia demográfica continúa, Texas sería demócrata para 2036; y ante la posibilidad de ganar la carrera presidencial, el partido podría canalizar dinero y voluntarios al estado (algo que no ha hecho en casi 20 años). Las proyecciones muestran que el crecimiento de la población negra e hispana forzará una dinámica similar en Georgia en 2020, y convertirá también a Carolina del Norte en una apuesta más segura para los demócratas en 2024 o 2028; tan solo con el crecimiento histórico serían competitivos en Arizona en 2024 o incluso antes.</p>
+<p class="story-body-text story-content" data-para-count="911" data-total-count="16351" id="story-continues-22" tabindex="-1">Pero en Texas  hay mucho más en juego. Sus 38 votos del Colegio Electoral convierten al estado en &#8220;la última línea de defensa&#8221; republicana contra los demócratas, según ha declarado su gobernador, Greg Abbott. Eso explica por qué grupos liberales como Battleground Texas han comenzado a gastar importantes cantidades de dinero (10 millones de dólares en 2013 y 2014) en el registro de nuevos electores. También explica por qué el congresista Louie Gohmert, republicano de Texas, apareció en el canal conservador NewsMax TV acusando a la administración de Obama de alentar la entrada de inmigrantes al país para votar de manera ilícita. Sugirió que la ley de Texas sobre identificaciones ofrecía la mejor manera de defenderse contra esos electores sin documentos. Si nadie los detiene, advirtió Gohmert, ‘‘les garantizo que los republicanos nunca resultarán electos de nuevo’’.</p>
+<p class="story-body-text story-content" data-para-count="48" data-total-count="16399" id="story-continues-23" tabindex="-1"><strong>3. ‘Lo que pasa es que todavía no lo saben’</strong></p>
+<p class="story-body-text story-content" data-para-count="497" data-total-count="16896" id="story-continues-24" tabindex="-1">En septiembre de 1999, el entonces gobernador de Texas, George W. Bush, se reunió en la frontera con el entonces presidente mexicano, Ernesto Zedillo. Ante un mariachi listo para tocar, se abrazaron y cortaron el listón que inauguraría el puente entre Eagle Pass, Texas, y la ciudad mexicana de Piedras Negras, Coahuila. Desde el podio, sobre una tribuna con el escudo mexicano, Bush declaró: ‘‘Puentes, y no muros, son los mejores monumentos que puede dejar un funcionario público’’.</p>
+<p class="story-body-text story-content" data-para-count="1099" data-total-count="17995" id="story-continues-25" tabindex="-1">Cuando comenzó su campaña presidencial en el año 2000, Bush respondió a una cuestión que había generado conflictos entre los republicanos durante décadas: ¿qué hacer con la población hispana, cuyo rápido crecimiento en Estados Unidos estaba superando al de los anglos? El Gobernador Pete Wilson de California se había ganado el apoyo de muchos votantes anglosajones proponiendo leyes que daban ventaja a los anglos sobre las minorías, como prohibir la educación bilingüe o negar prestaciones a personas indocumentadas y a sus hijos. Pero Bush aplicó un enfoque distinto. Parecía estar de acuerdo con una declaración, atribuida a Ronald Reagan, según la cual los hispanos son republicanos que &#8220;todavía no saben que lo son&#8221;. Después de todo, fue Reagan quien firmó una amnistía para más de tres millones de inmigrantes que habían ingresado sin documentos a Estados Unidos en 1986. Bush se opuso públicamente al enfoque de Wilson, señalando que no iba a &#8220;utilizar a nuestros niños, los hijos de inmigrantes, como un tema político en Estados Unidos&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="410" data-total-count="18405" id="story-continues-26" tabindex="-1">Wilson ha pasado a la historia como el gobernador que eliminó California del mapa presidencial republicano por al menos una generación. En cambio, Bush logró darle al Partido Republicano una posición de control total en el gobierno estatal en Texas, antes de ganar la presidencia en el 2000. Y logró conservarla en 2004 con el mayor porcentaje republicano de voto hispano de la historia: el 44 por ciento.</p>
+<figure id="media-100000004093514" class="media photo media-100000004093514 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-Z0LW/20voting-ss-slide-Z0LW-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-28">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-Z0LW/20voting-ss-slide-Z0LW-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-Z0LW/20voting-ss-slide-Z0LW-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Jeff Wilson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-Z0LW/20voting-ss-slide-Z0LW-master315.jpg"/>
+		<meta itemprop="height" content="394" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Jeff Wilson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="745" data-total-count="19150" id="story-continues-28" tabindex="-1">Pero a la mitad del segundo periodo de Bush, el número de inmigrantes sin residencia legal en el país alcanzó una cifra récord: eran más de 12 millones. Entonces, el partido comenzó a sonar mucho más como Wilson. Cuando Bush intentó, en vano, que se aprobara una ley que ofrecía una &#8220;opción para obtener la ciudadanía” a los inmigrantes sin documentos, ni un solo miembro de la delegación republicana de su estado natal en el congreso lo apoyó. Los texanos argumentaron que Bush no comprendía la evolución del debate migratorio en su propio estado ni la presión que los recién llegados de México, Centroamérica y América Latina ejercían sobre la policía estatal y la administración; según ellos, era insostenible.</p>
+<p class="story-body-text story-content" data-para-count="1100" data-total-count="20250" id="story-continues-29" tabindex="-1">Los opositores de Bush tenían razón en cuanto a las cifras: el estado estaba experimentando profundos cambios demográficos. En 2005, la Oficina del Censo de Estados Unidos anunció que la población “minoritaria” de Texas ya no era minoritaria. Por primera vez ascendía a un 50,2 por ciento del total, en gran medida, debido al auge de la población hispana. Texas se convirtió en el último estado en sumarse a la categoría de &#8220;mayoría minoritaria&#8221; (junto con Hawái, Nuevo México y California). En 2011, la población “minoritaria” de Texas ya superaba el 55 por ciento, y las cifras del censo mostraban que la base tradicional anglo de apoyo republicana era de edad más avanzada que los hispanos, y que los hispanos se reproducían a tasas mayores, no solo en Texas, sino en todo el país. Sin embargo, en las elecciones nacionales, aunque el pastel del voto hispano no dejaba de aumentar, la rebanada de los republicanos se encogía. El 27 por ciento del voto hispano que obtuvo Mitt Romney en 2012 fue el tercer peor resultado de un candidato republicano desde 1980.</p>
+<p class="story-body-text story-content" data-para-count="1238" data-total-count="21488" id="story-continues-30" tabindex="-1">Para 2013, los líderes del Partido Republicano en Washington y sus principales empresas donantes, ansiosos por legalizar la fuerza de trabajo sin documentos, no ocultaban su inquietud. Tenían claro que sin un apoyo más sólido entre la población hispana, su futuro político podía estar en peligro y rogaron encarecidamente a sus candidatos que se acercaran a los electores latinos de cara a las elecciones de 2014 y 2016. &#8220;Si su tono no es abierto e incluyente&#8221;, escribió en National Review el presidente del partido, Reince Priebus, &#8220;lo están haciendo mal&#8221;. Pero en estados republicanos como Texas, Arizona, Alabama y Georgia los republicanos hacían caso omiso, con promesas para limitar las posibilidades educativas de las personas sin papeles de residencia y revocar el derecho a la ciudadanía por nacimiento. En su intento fallido por recuperar votos, el congresista por Georgia, Bob Barr, advirtió que la administración de Obama planeaba llevar &#8220;muchos ilegales&#8221; al estado en secreto. En Texas, el candidato republicano a vicegobernador, Dan Patrick, se refirió a los inmigrantes como &#8220;una invasión&#8221; y dijo que trabajaría duro para detenerla. Patrick ganó cómodamente.</p>
+<p class="story-body-text story-content" data-para-count="735" data-total-count="22223" id="story-continues-31" tabindex="-1">La tensión se hacía evidente en ciudades como Pasadena, donde en un tablero de anuncios alguien se quejaba por &#8220;todas esas horribles banderas mexicanas que ondean por ahí&#8221;. No decía nada sobre las banderas de los estados confederados que ondean en las casas de los pocos anglos al norte de la ciudad. En 2007 la ciudad estuvo en el centro del debate cuando un anglo, Joe Horn, asesinó a dos inmigrantes sin residencia legal tras sorprenderlos robando la casa de su vecino. Después de que un jurado determinara que Horn no había cometido ningún delito, el comentarista Glenn Beck, moderador de un programa de tendencia conservadora en una emisora local, celebró lo sucedido con una fiesta a las afueras de El Alamo.</p>
+<p class="story-body-text story-content" data-para-count="48" data-total-count="22271" id="story-continues-32" tabindex="-1"><strong>4. ‘Es difícil lograr que obedezcan la ley’</strong></p>
+<p class="story-body-text story-content" data-para-count="665" data-total-count="22936" id="story-continues-33" tabindex="-1">Johnny Isbell, alcalde de Pasadena desde hace 22 años, tiene pelo blanco con destellos castaños y, pese a sus 77 años, camina como alguien acostumbrado a llevar un arma encima. La entrevista tuvo lugar una tarde de noviembre en su despacho. Estaba sentado en una mecedora  al calor de una chimenea de gas, justo debajo de una copia enmarcada de la declaración de independencia de Texas. Pasadena, que ha pasado de tener 3500 habitantes cuando el alcalde nació a casi 150.000 hoy, es como cualquier otra ciudad estadounidense, dijo Isbell. &#8220;Es parte del Estados Unidos de hoy&#8221;, continuó. &#8220;Todas las ciudades tienen muchos más hispanos&#8221;. </p>
+<p class="story-body-text story-content" data-para-count="590" data-total-count="23526" id="story-continues-34" tabindex="-1">Cree que ha intentado ser el alcalde de una Pasadena hispana y anglosajona, del norte y del sur, y que si no lo ha conseguido ha sido porque la política no se lo ha permitido. También reconoce que la situación &#8220;parece ser peor ahora&#8221;. Isbell creció en el norte y se mudó al sur hace muchos años. Ahora estaba enfrentando a un grupo de legisladores hispanos envalentonados (Ornaldo Ybarra, Sammy Casados y Cody Ray Wheeler) que, junto a una concejal anglosajona, Pat Van Houte, le exigían respuestas a la desigualdad entre el norte y el sur, entre hispanos y anglosajones.</p>
+<figure id="media-100000004093508" class="media photo media-100000004093508 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-GKXS/20voting-ss-slide-GKXS-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-36">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-GKXS/20voting-ss-slide-GKXS-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-GKXS/20voting-ss-slide-GKXS-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Jeff Wilson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-GKXS/20voting-ss-slide-GKXS-master315.jpg"/>
+		<meta itemprop="height" content="473" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Jeff Wilson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="550" data-total-count="24076" id="story-continues-36" tabindex="-1">Isbell se preguntaba en voz alta si la oposición en el ayuntamiento no entendía cómo funcionaba la ciudad. &#8220;Hablan de construir aceras y arreglar calles, simplemente no están informados&#8221;, expresó Isbell con el ceño fruncido. &#8220;Así que quizá lo que necesitan es mejor educación&#8221;. Las plantas de Fairmont Parkway se colocaron para atraer clientes a los negocios y recaudar más impuestos sobre las ventas. &#8220;Las mujeres hacen sus compras en lugares en los que se sienten seguras y que se ven bien&#8221;, continuó.</p>
+<p class="story-body-text story-content" data-para-count="887" data-total-count="24963" id="story-continues-37" tabindex="-1">Ybarra y el resto de los demócratas tienen otro punto de vista. Los escaños plurinominales en el ayuntamiento fueron una estrategia de Isbell para conservar el poder y favorecer a sus amigos de toda la vida con proyectos absurdos, como una iniciativa para la reapertura del Gilley, el club donde se filmó la película de John Travolta &#8220;Urban Cowboy&#8221; en 1980.<br />&#8220;Estas personas no quieren dejar atrás la época en que fueron electas por primera vez&#8221;, apuntó Ybarra. &#8220;La ciudad ha cambiado&#8221;. Pero Isbell respondió que su decisión de cambiar el mapa electoral de la ciudad nació de su convencimiento de antaño de que la representación plurinominal es lo mejor para la ciudad. &#8220;Es mejor para los ciudadanos tener más de una opción para acudir a alguien&#8221;, dijo inclinando su mecedora hacia delante. &#8220;Siempre lo he creído&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="855" data-total-count="25818" id="story-continues-38" tabindex="-1">Isbell ya era miembro del ayuntamiento en 1992, cuando el alcalde anterior, John Ray Harrison (su némesis demócrata, y con quien intercambió la alcaldía con frecuencia) cambió el sistema electoral de Pasadena y creó distritos electorales más pequeños después de que los hispanos recurrieron a la justicia federal al apoyarse en la Ley de Derechos Electorales. La demanda argumentaba que el sistema plurinominal había evitado que los hispanos de la ciudad, que en ese entonces no llegaban al 30 por ciento de la población, eligieran a un representante. Otros grupos de derechos civiles promovieron juicios similares por todo el país. Y cuando la ciudad aprobó el cambio, no hubo marcha atrás. Estaba prohibido revertir cualquier modificación que defendiera el aumento de la representación política de las minorías siguiendo la Sección 5.</p>
+<p class="story-body-text story-content" data-para-count="1003" data-total-count="26821" id="story-continues-39" tabindex="-1">Tras la decisión de la Corte Suprema de Estados Unidos en 2013 revocar a la Sección 5, Isbell pudo hacer su movida. Para conseguirlo, financió un comité de acción política llamado “Ciudadanos por un cambio positivo”. La oposición lo acusó de recibir donaciones de empresas a las que su administración había favorecido con contratos públicos. El tesorero de la campaña era Cary Bass, cuyo negocio familiar, Bass &amp; Meineke, daba mantenimiento a los vehículos del ayuntamiento. El dinero de la oposición venía del Partido Demócrata y de un grupo liberal llamado Texas Organizing Project. En una reunión del consejo municipal, según detalló un diario local, una mujer hispana acusó a un concejal aliado con Isbell, Steve Cote, de haberle dicho con mucha franqueza a su asociación de vecinos que &#8220;si no autorizamos estas propuestas, nuestra ciudad se volverá azul&#8221; (en Estados Unidos, el azul es el color tradicional del Partido Demócrata, el rojo del Republicano).</p>
+<p class="story-body-text story-content" data-para-count="954" data-total-count="27775" id="story-continues-40" tabindex="-1">En marzo de 2014 el alcalde presentó al ayuntamiento su propuesta para un nuevo mapa electoral  que reducía el número de distritos uninominales de ocho a seis y reconfiguraba dos de los distritos de mayoría hispana, representados por Van Houte e Ybarra, para formar un solo distrito, más grande. Cuando tomó la palabra, Van Houte, antigua empleada del sistema público de pensiones, dijo que el plan era tan discriminatorio que podría contravenir la Ley de Derechos Electorales, incluso sin aplicar la Sección 5. El alcalde trató de detenerla pocos minutos después de comenzar su intervención. Acababa de aprobarse un límite de tiempo asignado a cada miembro para hablar: dos minutos. A continuación, Isbell ordenó a la policía que escoltara a la mujer fuera de la sala. &#8220;Es la tercera vez que lo hago&#8221;, dijo. &#8220;Es difícil lograr que obedezcan la ley. Todavía lo hacen, así que tengo que callarlos todo el tiempo&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="37" data-total-count="27812" id="story-continues-41" tabindex="-1"><strong>5. El &#8216;pequeño empujón&#8217;</strong></p>
+<p class="story-body-text story-content" data-para-count="390" data-total-count="28202" id="story-continues-42" tabindex="-1">La propuesta de Isbell de instaurar puestos plurinominales en Pasadena es una especie de introducción al tema de derechos electorales: pone en evidencia la facilidad con la que se puede modificar el lugar en el que los electores depositan su voto y así determinar el resultado de las elecciones. En el ámbito estatal, es un poco más complejo pero los principios básicos son los mismos.</p>
+<p class="story-body-text story-content" data-para-count="1145" data-total-count="29347" id="story-continues-43" tabindex="-1">La legislación para reconfigurar distritos es sencilla: comenzó con la constitución, que requiere que cada 10 años, tras la actualización del censo, el tamaño de las delegaciones al congreso de cada estado se reajuste a partir de los cambios demográficos. Con el tiempo, una combinación de casos sometidos a juicio y nuevas leyes solidificó un proceso que &#8220;equilibra&#8221; distritos de manera que todos representen alrededor del mismo número de personas, para que todos los votos tengan el mismo peso. En la mayoría de los estados, el partido que está en el poder controla el proceso. Los políticos estadounidenses han utilizado el sistema de reconfiguración de distritos desde hace más de un siglo para proteger sus puestos. Es habitual modificar las líneas divisorias de los distritos electorales de manera que un barrio políticamente hostil quede fuera. Pero la modificación de distritos también puede reducir el poder colectivo de las minorías, por ejemplo, al dividir un distrito negro grande a la mitad, o incluso en tres, y fundir esas porciones más pequeñas con otros distritos adyacentes de mayoría blanca.</p>
+<figure id="media-100000004093507" class="media photo media-100000004093507 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-6ZY9/20voting-ss-slide-6ZY9-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-45">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-6ZY9/20voting-ss-slide-6ZY9-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-6ZY9/20voting-ss-slide-6ZY9-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Jeff Wilson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-6ZY9/20voting-ss-slide-6ZY9-master315.jpg"/>
+		<meta itemprop="height" content="394" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Jeff Wilson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="350" data-total-count="29697" id="story-continues-45" tabindex="-1">La Ley de Derechos Electorales hizo que tales movimientos fueran ilegales y los estados protegidos por la Sección 5 vieron limitada su capacidad de acción en ese sentido. De hecho, las autoridades han rechazado todos los mapas nuevos que ha presentado Texas, ya sea bajo control demócrata o republicano, por ser discriminatorios con las minorías.</p>
+<p class="story-body-text story-content" data-para-count="738" data-total-count="30435" id="story-continues-46" tabindex="-1">Cuando el caso Shelby seguía su camino hacia la Corte Suprema, a los expertos en reconfiguración de distritos se les ocurrió una idea. Podían aprovechar los sofisticados sistemas computacionales que ya empleaban las campañas presidenciales para revisar información personal de los estadounidenses e identificar a sus partidarios más probables. Así, podrían motivarlos para acudir a las urnas, pero con fines opuestos: podían utilizar la misma información para reducir el número de electores de minorías, al dividir a los hispanos que menos probabilidades tenían de votar. Es lo que funcionarios del Departamento de Justicia afirman que hizo Texas en su último proceso de reconfiguración de distritos, que comenzó en 2011.</p>
+<p class="story-body-text story-content" data-para-count="1013" data-total-count="31448" id="story-continues-47" tabindex="-1">En noviembre, visité a Nina Perales, abogada sénior en el Mexican American Legal Defense and Educational Fund, de San Antonio. Perales es una de las abogadas que lleva un caso contra el estado de Texas por sus modificaciones de distritos electorales, y también promovió hace poco un juicio en contra de la ciudad de Pasadena por su plan de elección plurinominal. Ambos casos citan otra parte de la Ley de Derechos Electorales, la Sección 2, que estipula que no puede &#8220;negarse o reducirse el derecho al voto que tiene todo ciudadano de Estados Unidos por motivos de raza o color&#8221;. Sin la aplicación específica de la Sección 5, depende de grupos como este que existan casos basados en la Sección 2, que requieren mucho más tiempo y dinero, y cuyo resultado es más improbable. Bajo la Sección 5, los estados deben demostrar que la legislación nueva no es discriminatoria antes de aplicarla; conforme a la Sección 2, corresponde al demandante demostrar que una ley nueva es discriminatoria.</p>
+<p class="story-body-text story-content" data-para-count="482" data-total-count="31930" id="story-continues-48" tabindex="-1">Perales, que se recoge el pelo en un moño apretado, tiene la formalidad de una empresaria y así oculta un sentido del humor especialmente mordaz. Las paredes de su oficina, a unas cuadras de El Alamo, están cubiertas con mapas de colores y hojas de cálculo, recuerdos de sus casos favoritos. Donde un visitante cualquiera ve números y gráficos sin significado alguno, ella ve ingeniosos esquemas diseñados para privar a los hispanos, negros y otras minorías de sus derechos.</p>
+<p class="story-body-text story-content" data-para-count="1093" data-total-count="33023" id="story-continues-49" tabindex="-1">&#8220;Esto sucedió cuando se publicaron las cifras del censo&#8221;, dijo Perales, señalando una mapa de la frontera sur de Texas en su computadora. Un área verde con la marca &#8220;23&#8221; (para indicar el distrito 23 de Texas ante el congreso) ocupaba la mayor parte de la pantalla. Texas experimentó un aumento tan grande en su población para el censo de 2010, según explicó Perales, que ganó cuatro asientos nuevos en el congreso. Casi tres millones de los 4,3 millones de nuevos residentes del estado eran hispanos, y casi la tercera parte de ellos eran niños. Según esos nuevos datos, cada distrito de Texas debía tener unos 698.500 ciudadanos. Pero debido al gran aumento de la población hispana, el distrito número 23, en el que ambos partidos se turnaban el poder con frecuencia (entonces en manos republicanas), superaba el límite por 150.000 personas. Todo un reto para los republicanos, que, con mayoría en la cámara estatal, controlaban el proceso de división de los distritos y deseaban mantener su ventaja de 25 a 9 en la delegación del estado al congreso.</p>
+<p class="story-body-text story-content" data-para-count="775" data-total-count="33798" id="story-continues-50" tabindex="-1">La solución más obvia era mover la línea este del distrito 23 varios kilómetros al oeste. Pero eso significaría una mayor concentración de electores hispanos, lo que pondría en riesgo al republicano Francisco Canseco (aunque hispano, los electores hispanos no habían votado por él). Los republicanos también podrían haber separado a los electores hispanos sobrantes del distrito 23 para repartirlos en distritos demócratas contiguos y así lograr más participación anglo en el 23, lo que a su vez generaba más posibilidades de mantenerlo en manos republicanas. Pero ese movimiento habría sido una contravención a la Ley de Derechos Electorales al diluir un distrito hispano, algo no permitido en casi ninguna circunstancia, incluso sin aplicar la Sección 5.</p>
+<p class="story-body-text story-content" data-para-count="963" data-total-count="34761" id="story-continues-51" tabindex="-1">Para conservar el distrito en manos republicanas, según Perales, &#8220;crearon el “factor del pequeño empujón&#8221;, un plan brillante que habría pasado desapercibido si sus creadores no lo hubieran revelado en correos electrónicos hechos públicos posteriormente durante el juicio que revisó la situación. Fue obra de Eric Opiela, un abogado que trabajaba para el portavoz republicano de la Cámara de Texas, Joe Straus, y la delegación de Texas ante el congreso. Ambos partidos utilizan encuestas, análisis de datos y modelos para identificar con gran precisión a los electores que participarán en las elecciones y a los que no lo harán, además de determinar la tendencia, edad, raza y etnia del voto. Opiela propuso a quienes preparaban los mapas una reconfiguración del distrito que incluyera nuevos grupos de hispanos identificados como electores de participación baja (el asunto en uno de esos correos era &#8220;Parámetro útil&#8221;).</p>
+<p class="story-body-text story-content" data-para-count="1015" data-total-count="35776" id="story-continues-52" tabindex="-1">Los cartógrafos políticos podrían así &#8220;ajustar un poco aquí y un poco allá&#8221;, según dijo Perales, para que, en apariencia, el distrito cumpliera con la Ley de Derechos Electorales al mantener un número elevado de hispanos. En realidad, ese distrito con un gran número de hispanos se comportaría como un distrito anglo en las elecciones, es decir, un distrito republicano, porque el porcentaje de hispanos que votaban era muy bajo. En un caso específico, para aplicar esta estrategia se requirió dividir el distrito con una línea muy quebrada para lograr incluir una zona específica. Entonces, la oficina del procurador general Greg Abbott comparó los resultados de los candidatos con mayor respaldo hispano con la división antigua y con la nueva del distrito 23. Con la división antigua, el candidato que preferían los hispanos resultaba electo en al menos tres de 10 elecciones; con la división nueva, los hispanos lograban el resultado que deseaban solo en una de cada 10 elecciones.</p>
+<p class="story-body-text story-content" data-para-count="463" data-total-count="36239" id="story-continues-53" tabindex="-1">El tribunal federal que supervisa los casos VRA rechazó el plan por ser discriminatorio cuando Texas pidió autorización para aplicar los cambios bajo la Sección 5. Mientras tanto, los tribunales desarrollaron mapas temporales con abogados de ambas partes y trataron de equilibrar las diferencias entre las divisiones antiguas y las que los tribunales rechazaron por ser discriminatorias. Como ahora no opera la Sección 5, esos mapas temporales siguen en uso.</p>
+<p class="story-body-text story-content" data-para-count="886" data-total-count="37125" id="story-continues-54" tabindex="-1">En otro caso de discriminación en contra del estado de Texas, presentado en 2011, el Departamento de Justicia, Perales y sus colegas de San Antonio, Jose Garza y Martin Goland (que representan al caucus mexicoamericano en la cámara del estado) sostienen que los republicanos del estado de Texas tuvieron la intención de discriminar a los hispanos al elaborar el plan. Si ganan, podría dar pie a unas sanciones bajo la Ley de Derechos Electorales que obligarían a Texas a presentar cualquier cambio en el sistema electoral ante las autoridades federales durante un periodo determinado. La medida se ha aplicado en pocas ocasiones; Garza se siente &#8220;optimista pero con cierta precaución&#8221;. Los correos electrónicos demuestran que los republicanos que prepararon los mapas mostraban abiertamente su propósito de reducir al mínimo la influencia hispana en las elecciones.</p>
+<p class="story-body-text story-content" data-para-count="721" data-total-count="37846" id="story-continues-55" tabindex="-1">Con respecto a su modificación de distritos electorales, Texas ha explicado que quienes dibujaron el mapa tenían la intención de obtener ventaja política frente a los demócratas, lo cual está permitido, y no ventaja racial sobre los hispanos, que no está permitida. Si los jueces aceptan esa explicación, Texas podría salirse con la suya. Hasta ahora los tribunales se han mantenido al margen de las contiendas estrictamente partidarias. Pero Garza enfatiza que ya no es posible separar raza de afiliación partidista en Texas. &#8220;Actualmente, en esencia, el Partido Demócrata es un partido de minorías, y el Partido Republicano, un partido de blancos&#8221;, afirmó. &#8220;Ambas cosas van de la mano”.</p>
+<p class="story-body-text story-content" data-para-count="30" data-total-count="37876" id="story-continues-56" tabindex="-1"><strong>6. ‘Se aproxima el cambio’</strong></p>
+<p class="story-body-text story-content" data-para-count="380" data-total-count="38256" id="story-continues-57" tabindex="-1">En febrero de 2015, Oscar Del Toro inició formalmente su campaña para el Ayutamiento de Pasadena con dos publicaciones breves en Facebook, una en español y otra en inglés: &#8220;Bueno, soy candidato oficialmente&#8221;, declaró. &#8220;Me siento bendecido en mi nuevo país y estoy listo para hacer mi mejor esfuerzo para servir a mi comunidad, mi hogar Pasadena, TX&#8221;.</p>
+<figure id="media-100000004089992" class="media photo media-100000004089992 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/20/magazine/20voting3/20mag-20voting-t_CA1-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-59">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/20/magazine/20voting3/20mag-20voting-t_CA1-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/20/magazine/20voting3/20mag-20voting-t_CA1-superJumbo.jpg" data-mediaviewer-caption="On Nov. 18 in Houston, the federal judge Alfred H. Bennett swore in 1,636 new citizens, 1,383 of whom immediately registered to vote." data-mediaviewer-credit="Jeff Wilson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/20/magazine/20voting3/20mag-20voting-t_CA1-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">On Nov. 18 in Houston, the federal judge Alfred H. Bennett swore in 1,636 new citizens, 1,383 of whom immediately registered to vote.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Jeff Wilson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="528" data-total-count="38784" id="story-continues-59" tabindex="-1">Su rival en la contienda por el escaño plurinominal, Darrell Morrison, era uno de los aliados del alcalde en el ayuntamiento. Ha habido ocasiones en las que ha tenido que abstenerse de votar porque su empresa de ingeniería tenía negocios con la ciudad. Poco tiempo después de que Del Toro anunciara su candidatura, Morrison lo invitó a un Starbucks. Del Toro hizo alusión a esta reunión cuando lo visité en octubre en su casa, decorada en el mismo estilo de su hogar en México, con tejas de barro y muros color mostaza.</p>
+<p class="story-body-text story-content" data-para-count="805" data-total-count="39589" id="story-continues-60" tabindex="-1">&#8220;Dijo: ‘Quisiera saber quién te respalda, quién te brinda apoyo’, a lo que respondí: ‘Nadie’&#8221;, me contó Del Toro. &#8220;Me preguntó: ‘¿Qué quieres obtener de esta competencia?’. Yo dije: ‘Quiero lo mejor para Pasadena’. Esbozó una ligera sonrisa, como diciendo: ‘Sí cómo no, de verdad, dime qué quieres’. Yo respondí, ‘Quiero lo mejor para Pasadena’&#8221;. Del Toro recordó que por último, &#8220;preguntó si iba a decir algo malo de él. Le respondí: ‘No sé nada de usted en términos personales. Voy a hablar de lo que busco, mi intención no es atacar’&#8221;. (Cuando le pregunté a Morrison sobre lo que decía Del Toro, declaró: &#8220;Tuvimos una reunión cordial, nos presentamos y ambos acordamos realizar una campaña positiva&#8221;).</p>
+<p class="story-body-text story-content" data-para-count="983" data-total-count="40572" id="story-continues-61" tabindex="-1">Acto seguido, Del Toro recopiló todos los datos que pudo encontrar sobre las elecciones en su ciudad y comenzó a trazar recuentos anteriores en un enorme mapa de Pasadena, lleno de marcas verdes y notas moradas que quedó extendido sobre la mesa de su cocina. No fue muy difícil detectar un patrón. &#8220;Observé este sector, donde viven el alcalde y algunos concejales; ahí votan mucho. Un solo colegio electoral recibió como el 20 por ciento de la votación&#8221;, dijo mientras señalaba un distrito del sureste de Pasadena. &#8220;Así observé qué parte de Pasadena vota más y qué parte de Pasadena no vota&#8221;. Según descubrió, la parte que no vota está en el norte, donde según las cifras de sus predicciones, podría obtener el 80 por ciento (en vez del 30 por ciento de los votos de la población no hispana del sur, siendo optimistas). ¿Pero el 80 por ciento de cuántos electores en realidad? La asistencia a las urnas sería esencial para descubrirlo.</p>
+<p class="story-body-text story-content" data-para-count="549" data-total-count="41121" id="story-continues-62" tabindex="-1">Del Toro empezó a recorrer la ciudad de puerta en puerta, otra vez, con la ayuda de toda su familia. Su esposa, Wendy, se convirtió en su conductora y lo llevó por toda la ciudad. En el mapa, marcaban las casas ya visitadas. Sus hijas, Wendy y Stephanie, corrieron la voz entre sus amigos y los papás hispanos de sus amigos. Su hijo, Oscar Jr., que acababa de regresar de una misión con el ejército, ayudó con anuncios y publicidad por correo. La clave para la victoria estaba en el norte, pero Del Toro sabía que requeriría mucho esfuerzo.</p>
+<p class="story-body-text story-content" data-para-count="535" data-total-count="41656" id="story-continues-63" tabindex="-1">Del Toro estaba convencido de que la participación hispana era baja por una razón: la mayoría de las veces, dijo, era por miedo. En algunos casos, las familias de los electores venían de países con regímenes represivos. Pero en muchos otros, tenían miedo de las autoridades estadounidenses y se lo transmitían a sus hijos. Cuando recorrió el norte de la ciudad, escuchó las quejas habituales: &#8220;Ah, tienen muy buenos parques allá; tienen espacios con flores muy bonitas allá. Y mira, nosotros no tenemos aceras&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="637" data-total-count="42293" id="story-continues-64" tabindex="-1">Su respuesta era que había una manera de arreglar esos problemas. &#8220;Les decía, ‘Tienes un historial de crédito, ¿verdad?’ Ellos respondían, ‘Sí, sí lo tengo’. ‘Sabes cómo funciona. Si tienes buen historial, obtienes buenas condiciones. Si tu historial es malo, te ofrecen condiciones malas’. La gente comprendía el concepto con gran facilidad. Entonces, les decía: ‘Bien, pues los políticos saben cuánta gente vota en cada zona y en esas zonas, mucha gente va a votar. Aquí, no mucha gente va a votar. En términos políticos, el historial de esta zona es bajo. Por eso les dan lo mejor a ellos’&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="1535" data-total-count="43828" id="story-continues-65" tabindex="-1">Pero el miedo es poderoso. Cuando sus hijas intentaron convencer a sus amigos para votar por su papá, descubrieron que el clima local, estatal y nacional, combinado con la nueva ley sobre documentos de identificación para votar, le añadía tensión a un ambiente ya cargado de por sí. &#8220;Los padres de muchos de mis amigos preguntaban: ‘¿Qué información voy a tener que dar cuando me registre?’&#8221;, recordaba en noviembre, en un conversación telefónica, Wendy, la hija de Del Toro, de 25 años, que trabaja como agente de libertad condicional. &#8220;La palabra que usaban era ‘intimidados’&#8221;. Según comentó, una pregunta común era si les iban a preguntar sobre su estatus de ciudadanía; aunque eran ciudadanos, sentían aprensión ante la posibilidad de que los consideraran &#8220;ilegales&#8221;. Sus hijos sentían la misma ansiedad. Sus argumentos eran algo así como: &#8220;&#8216;No puedo votar porque no tengo licencia para conducir’, pequeños detalles como ese&#8221;. La confusión que crean las nuevas leyes electorales puede ser tan efectiva para disuadir el voto como la legislación misma: un estudio reciente de la Universidad Rice sugirió que la ley de Texas sobre los documentos de identificación evitó que asistieran a las urnas tantos electores que esas cifras bien pueden haber sido responsables de que un antiguo congresista de Estados Unidos, Pete Gallego, perdiera su escaño en 2014, aunque muchos de esos electores en realidad contaban con una identificación adecuada.</p>
+<figure id="media-100000004093513" class="media photo media-100000004093513 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-D8IL/20voting-ss-slide-D8IL-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-67">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-D8IL/20voting-ss-slide-D8IL-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-D8IL/20voting-ss-slide-D8IL-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Jeff Wilson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-D8IL/20voting-ss-slide-D8IL-master315.jpg"/>
+		<meta itemprop="height" content="394" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Jeff Wilson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="297" data-total-count="44125" id="story-continues-67" tabindex="-1">Las encuestas mostraban que Del Toro partía con una ligera ventaja frente a Morrison durante el periodo anticipado de votación de Pasadena, cuya duración fue de ocho días antes del día de las elecciones; pero Morrison venció a Del Toro en el conteo final, con el 61 por ciento de 4100 votos.</p>
+<p class="story-body-text story-content" data-para-count="803" data-total-count="44928" id="story-continues-68" tabindex="-1">Von Houte e Ybarra ganaron, con lo que se mantuvo intacto el control de cuatro puestos en el ayuntamiento por parte de la oposición. Pero incluso con el nuevo plan del alcalde, el quinto escaño, el que podría cambiarlo todo, estuvo a punto de cambiar de manos. Celestino Pérez, un empleado de ExxonMobil, activista de derechos humanos, casi logra vencer al aliado del alcalde Bruce Leamon. Los oponentes de Isbell habían contado con la posibilidad de que el distrito de Leamon fuera el siguiente de los distritos leales a Isbell que se volviera contra él según el mapa antiguo. Pero con el nuevo, se volvió un poco menos hispano. Pérez estuvo a solo 34 votos –una diferencia muy cerrada, pero no suficiente– de conseguirlo. Sin embargo, Ybarra declaró: &#8220;Se aproxima el cambio&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="33" data-total-count="44961" id="story-continues-69" tabindex="-1"><strong>7. ‘Solo observa los rostros’</strong></p>
+<p class="story-body-text story-content" data-para-count="1011" data-total-count="45972" id="story-continues-70" tabindex="-1">En una soleada mañana de mediados de noviembre, 1636 personas que estaban a punto de convertirse en ciudadanos estadounidenses ingresaron al auditorio de una escuela a las afueras de Houston. Cada mes, más o menos, se celebra una ceremonia de nacionalización. La mayoría de ellos provenían de México, Centroamérica y América Latina, pero también había otros de India, Pakistán o Irak; 115 países en total. Antes de empezar, se solicitó la presencia de Alfred H. Bennett, el juez federal responsable del acto, en la entrada del edificio. Una mujer hispana estaba en labor de parto. Estaba &#8220;a punto de dilatar&#8221;, informó el juez más tarde, &#8220;así que fue un placer tomarle el juramento en ese mismo lugar para que pudiera ir al hospital y dar a luz a una fuerte bebé&#8221;. Antes de dirigirse al podio desde el que presidiría la ceremonia, Bennett, de raza negra, me hizo la siguiente recomendación: &#8220;Solo observa los rostros y verás, más que otra cosa, alegría&#8221;.</p>
+<figure id="media-100000004093510" class="media photo media-100000004093510 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-9VZT/20voting-ss-slide-9VZT-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-72">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-9VZT/20voting-ss-slide-9VZT-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-9VZT/20voting-ss-slide-9VZT-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Jeff Wilson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/20/magazine/20voting-ss-slide-9VZT/20voting-ss-slide-9VZT-master315.jpg"/>
+		<meta itemprop="height" content="394" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Jeff Wilson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="1020" data-total-count="46992" id="story-continues-72" tabindex="-1">Tras la ceremonia, mientras los nuevos ciudadanos estadounidenses esperaban en fila para salir, algunos con lágrimas en las mejillas y otros con amplias sonrisas, Claudia Ortega-Hogue, con una chaqueta azul y un pin con la leyenda &#8220;Regístrate para votar&#8221;, se movía ágil entre la gente y repartía tarjetas de registro electoral y bolígrafos. Con la misma velocidad con la que los entregaba, los recogía poco después, ya completos. Ortega-Hogue es la vicepresidenta de la Liga de Mujeres Votantes en la zona de Houston. Para muchos grupos que defienden el derecho al voto, las ceremonias de nacionalización son cada vez más importantes debido a los límites y requisitos impuestos por las autoridades texanas sobre el trabajo de los voluntarios que registran votantes. Por ejemplo, existen sanciones penales a quienes pagan en función del número de personas registradas, lo que dificulta establecer espacios de registro en lugares tradicionales como centros comerciales o actividades al aire libre.</p>
+<p class="story-body-text story-content" data-para-count="1262" data-total-count="48254" id="story-continues-73" tabindex="-1">Ortega-Hogue, con familiares que consiguieron la ciudadanía durante la amnistía de Reagan, ayuda a registrar electores en las ceremonias de naturalización en Houston desde hace unos ocho años. &#8220;Esto me da energía&#8221;, subrayó, con un montón de formularios llenos en la mano. A medida que los nuevos estadounidenses abandonaban la sala, funcionarios de inmigración les daban sus certificados de nacionalidad. Esos documentos podrían resultar muy importantes para votar si los republicanos de Texas aprueban una nueva ley que agrega &#8220;comprobante de ciudadanía” a los requisitos para registrarse como elector. En 2009, el Departamento de Justicia sostuvo que un programa similar en Georgia había provocado que se eliminara indebidamente del censo electoral a miles de electores, de los cuales un número desproporcionado pertenecía a alguna minoría, porque existía la posibilidad de que no fueran ciudadanos cuando, de hecho, eran estadounidenses con plenos derechos. Cuando el secretario de estado de Ohio, Jon Husted, republicano, investigó las acusaciones de que en su estado habían votado personas sin ciudadanía en la elección de 2012, descubrió que se trataba de 17 votos entre cinco millones. Menos del 0,00001 por ciento.</p>
+<p class="story-body-text story-content" data-para-count="658" data-total-count="48912" id="story-continues-74" tabindex="-1">Después de la ceremonia hice otra parada en Pasadena para almorzar con Del Toro en un restaurante mexicano llamado Don’Key. Según me comentó mientras comíamos tacos, planea postularse de nuevo. Cuando mencioné la ceremonia a la que acababa de asistir, Del Toro me dijo que se convirtió en ciudadano estadounidense en ese mismo edificio. En su ceremonia, recordó, la principal oradora fue Sheila Jackson Lee, congresista negra de Houston. &#8220;Su discurso me impresionó&#8221;, compartió Del Toro. &#8220;Dijo: &#8216;Algunos hablarán mal de ustedes, los criticarán, pero no importa; hagan lo que quieran hacer’. Eso fue todo para mí&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="386" data-total-count="49298" id="story-continues-75" tabindex="-1">Recordó que después de su ceremonia, alguien le dio su primer formulario de registro para las elecciones. No parecía importante. En blanco y negro, impreso en papel de mala calidad, podía haber sido un formulario de impuestos. Del Toro lo llenó en ese mismo momento. Por fin era un ciudadano de verdad. Encogió los hombros y levantó la cabeza. &#8220;Lloré un poco&#8221;, dijo.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Jim Rutenberg es el corresponsal en jefe de política para la revista de The New York Times. </p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/elecciones-ee-uu-2016/" rel="tag">Elecciones EE. UU. 2016</a>, <a href="https://www.nytimes.com/es/tag/voto-latino/" rel="tag">voto latino</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/04/14/favor-de-no-votar-las-tacticas-electorales-contra-los-latinos-en-estados-unidos/"
+				data-title="Noticias: El voto latino será decisivo en Estados Unidos… si los dejan votar"
+				data-author="POR JIM RUTENBERG"
+				data-media=""
+				data-description="Las elecciones de 2016 serán las primeras que se realicen después de las modificaciones republicanas a la ley electoral; si la justicia federal no actúa antes, estos cambios podrían perjudicar a los electores hispanos."
+				data-publish-date="14 de abril de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/16/el-deficit-de-furia-de-los-latinos-en-estados-unidos/">
+					<div class="story-body">
+						<h3 class="kicker">Comentario</h3>
+
+						<h2 class="headline">
+							<span class="title">El déficit de furia de los latinos en Estados Unidos</span>
+							<time class="dateline">16 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/09/opinion/09tobarWeb/09tobarWeb-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/11/mas-latinos-residentes-buscan-la-ciudadania-para-votar-en-contra-de-trump/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">Más latinos residentes buscan la ciudadanía para votar en contra de Trump</span>
+							<time class="dateline">11 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/04/us/00naturalize-web01/00naturalize-web01-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/04/jorge-ramos-habla-en-entrevista-sobre-la-influencia-de-los-latinos-en-la-eleccion-de-estados-unidos/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">Jorge Ramos habla en entrevista sobre la influencia de los latinos en la elección de Estados Unidos</span>
+							<time class="dateline">4 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/06/magazine/06talk/06mag-06talk-t_CA0-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/02/25/univision-se-prepara-para-movilizar-a-los-votantes-latinos/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">Univisión se prepara para movilizar a los votantes latinos en Estados Unidos</span>
+							<time class="dateline">25 de febrero de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/02/22/us/23UNIVISION/23UNIVISION-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":1055,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

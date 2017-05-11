@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004221524"/>
+<meta name="hdl" content="La búsqueda de Google del equipo perfecto" />
+<meta name="col" content="Reposado" id="column-name" />
+<meta name="pdate" content="20160316" />
+<meta name="utime" content="20160316150012" />
+<meta name="ptime" content="20160316150012" />
+<meta name="DISPLAYDATE" content="Mar. 16, 2016" />
+<meta name="dat" content="Mar. 16, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="la-busqueda-de-google-por-el-equipo-perfecto" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/03/16/la-busqueda-de-google-por-el-equipo-perfecto/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="La búsqueda de Google del equipo perfecto" />
+<meta property="og:description" content="Los equipos tienden a innovar más rápido, detectan errores antes que los individuos y encuentran soluciones más efectivas para los problemas. La compañía tecnológica se pregunta cuál es la fórmula perfecta para tener un equipo de ensueño." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/02/28/magazine/28mag-teams1/28mag-teams1-videoSixteenByNine768-v2.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-03-16" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/03/16/la-busqueda-de-google-por-el-equipo-perfecto/" />
+<meta property="twitter:title" content="La búsqueda de Google del equipo perfecto" />
+<meta property="twitter:description" content="Los equipos tienden a innovar más rápido, detectan errores antes que los individuos y encuentran soluciones más efectivas para los problemas. La compañía tecnológica se pregunta cuál es la fórmula perfecta para tener un equipo de ensueño." />
+<meta name="author" content="Charles Duhigg" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por Charles Duhigg" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="reposado" />
+<meta name="cd12" content="tecnologia" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="reposado" />
+<meta name="ser" content="tecnologia" />
+<meta name="id" content="100000004221524"/>
+<meta name="wordCount" content="6050"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/03/16/la-busqueda-de-google-por-el-equipo-perfecto/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=03&amp;day=16&amp;name=la-busqueda-de-google-por-el-equipo-perfecto">
+<meta name="PT" content="article">
+<meta name="article:section" content="Reposado">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/10?exclude=5588">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/03\/16\/la-busqueda-de-google-por-el-equipo-perfecto\/"},"headline":"La b\u00fasqueda de Google del equipo perfecto","datePublished":"2016-03-16T15:00:12+00:00","dateModified":"2016-03-16T11:24:46+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/02\/28\/magazine\/28mag-teams1\/28mag-teams1-videoSixteenByNine768-v2.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Los equipos tienden a innovar m\u00e1s r\u00e1pido, detectan errores antes que los individuos y encuentran soluciones m\u00e1s efectivas para los problemas. La compa\u00f1\u00eda tecnol\u00f3gica se pregunta cu\u00e1l es la f\u00f3rmula perfecta para tener un equipo de ensue\u00f1o."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/03/16/la-busqueda-de-google-por-el-equipo-perfecto/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="reposado/tecnologia" />
+<title>La búsqueda de Google del equipo perfecto &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/03/16/la-busqueda-de-google-por-el-equipo-perfecto/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-5588 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/reposado/">Reposado</a></span>
+					<span class="pipe">|</span>
+				La búsqueda de Google del equipo perfecto
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/03/16/la-busqueda-de-google-por-el-equipo-perfecto/"
+					data-title="Reposado: La búsqueda de Google del equipo perfecto"
+					data-author="POR CHARLES DUHIGG"
+					data-media=""
+					data-description="Los equipos tienden a innovar más rápido, detectan errores antes que los individuos y encuentran soluciones más efectivas para los problemas. La compañía tecnológica se pregunta cuál es la fórmula perfecta para tener un equipo de ensueño."
+					data-publish-date="16 de marzo de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/reposado/">Reposado</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/tecnologia/">Tecnología</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">La búsqueda de Google del equipo perfecto</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Charles Duhigg</span>
+</span>
+
+					<time class="dateline" datetime="2016-03-16">16 de marzo de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/03/16/la-busqueda-de-google-por-el-equipo-perfecto/"
+							data-title="Reposado: La búsqueda de Google del equipo perfecto"
+							data-author="POR CHARLES DUHIGG"
+							data-media=""
+							data-description="Los equipos tienden a innovar más rápido, detectan errores antes que los individuos y encuentran soluciones más efectivas para los problemas. La compañía tecnológica se pregunta cuál es la fórmula perfecta para tener un equipo de ensueño."
+							data-publish-date="16 de marzo de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004230374" class="media photo lede layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/02/28/magazine/28mag-teams1/28mag-teams1-blog427.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/02/28/magazine/28mag-teams1/28mag-teams1-blog427.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/02/28/magazine/28mag-teams1/28mag-teams1-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="James Graham"  itemprop="url" itemid="https://static01.nyt.com/images/2016/02/28/magazine/28mag-teams1/28mag-teams1-blog427.jpg"/>
+		<meta itemprop="height" content="658" />
+		<meta itemprop="width" content="427" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			James Graham
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="250" data-total-count="250" id="story-continues-2" tabindex="-1"><strong>Como</strong> la mayoría de nosotros a los 25, Julia Rozovsky no tenía claro qué hacer con su vida. Había trabajado en una consultora, pero no acababa de encajar. Después hizo investigación para dos catedráticos de Harvard. Interesante pero solitario.</p>
+<p class="story-body-text story-content" data-para-count="549" data-total-count="799" id="story-continues-3" tabindex="-1">Quizá se adaptaría mejor a una gran empresa. O quizá en una <em>start-up</em>. Solo sabía que quería un trabajo que implicara mayor socialización. “Quería sentirme parte de un grupo, parte de algo que un grupo de personas estuvieran construyendo juntas”, me dijo. Valoró varias opciones –empresas de internet, un doctorado– pero nada acababa de cerrar. Así que en 2009 eligió un camino que le permitió no tomar una decisión: presentó una solicitud de ingreso en varias escuelas de negocios y fue aceptada en la Yale School of Management.</p>
+<p class="story-body-text story-content" data-para-count="170" data-total-count="969" id="story-continues-4" tabindex="-1">Cuando llegó al campus, entró en un grupo de estudio. La escuela elige uno para cada alumno. Lo hace con cuidado y con el objetivo de estrechar el vínculo entre ellos.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="643" data-total-count="1612" id="story-continues-5" tabindex="-1">Cada día, entre una y otra clase o antes de la cena, Rozovsky y sus cuatro compañeros de grupo se reunían para debatir sobre las tareas pendientes, comparar hojas de cálculo y buscar estrategias para los exámenes. Todos eran inteligentes y curiosos. Tenían algo más en común. Habían estudiado en universidades parecidas y habían trabajado en empresas similares. Eran esas experiencias compartidas lo que, como esperaba Rozovsky, haría que fuera fácil trabajar en equipo. Pero no fue así. “Hay mucha gente que dice que sus mejores amigos de la universidad son los que hicieron en los grupos de estudio. En mi caso no fue así”.</p>
+<p class="story-body-text story-content" data-para-count="615" data-total-count="2227" id="story-continues-6" tabindex="-1">Al contrario. El grupo de estudio se convirtió en una fuente de estrés para ella. Me explicó que “siempre sentía que tenía que demostrar quién era” y que las dinámicas de grupo la llevaban al límite. Cuando el grupo se reunía, a veces competían por el liderazgo y criticaban las ideas de los demás. Había conflictos respecto a quién estaba a cargo y quién representaría al grupo delante de la clase. “La gente trataba de mostrar autoridad hablando más alto o imponiéndose sobre los demás”, según explicó Rozovsky. “Siempre sentí que tenía que estar atenta para no cometer errores”.</p>
+<p class="story-body-text story-content" data-para-count="473" data-total-count="2700" id="story-continues-7" tabindex="-1">Así que empezó a buscar otro grupo al que unirse. Una compañera de clase mencionó que varios estudiantes estaban montando grupos para participar en “competiciones de caso” en las que se proponían soluciones a problemas de negocios que operaban en el mundo real ante un grupo de jueces que las evaluaban y entregaban premios, incluso de dinero. La participación era voluntaria y el trabajo no era tan distinto de lo que ya estaba haciendo en el grupo de estudio.</p>
+<p class="story-body-text story-content" data-para-count="588" data-total-count="3288" id="story-continues-8" tabindex="-1">Los miembros de su equipo de “competiciones de caso” tenían trayectorias profesionales variadas: un oficial del ejército, una investigadora en un centro de estudios, el director de una organización sin ánimo de lucro de la educación para la salud y una consultora de un programa de refugiados. Pese a sus experiencias disímiles, todos conectaron inmediatamente. Se enviaban correos con bromas y pasaban los primeros diez minutos de cada reunión charlando. Cuando llegaba el momento de la tormenta de ideas, Rozovsky recuerda: “Teníamos un montón de ideas descabelladas”.</p>
+<p class="story-body-text story-content" data-para-count="380" data-total-count="3668" id="story-continues-9" tabindex="-1">En una de sus competencias favoritas le pedían a los equipos que definieran el negocio que pudiera sustituir una cafetería gestionada por estudiantes en el propio campus de Yale. Al final, idearon un minigimnasio con alguna clase práctica y unas pocas máquinas. Ganaron la competición. El minigimnasio, con dos bicicletas estáticas y tres cintas de correr, sigue existiendo.</p>
+<p class="story-body-text story-content" data-para-count="525" data-total-count="4193" id="story-continues-10" tabindex="-1">A Rozovsky siempre le pareció extraño que su experiencia con los grupos fuera tan dispar. Ambos estaban formados por gente brillante y extrovertida. Cuando hablaba de uno en uno con los miembros del grupo de estudio, la relación era cálida y fluía de manera amigable. Solo cuando se reunían como equipo la situación se tornaba tensa. En cambio, el grupo para las competiciones y los casos prácticos siempre fue divertido, siempre fluyó. De algún modo, sus miembros funcionaban mejor como equipo que individualmente.</p>
+<p class="story-body-text story-content" data-para-count="120" data-total-count="4313" id="story-continues-11" tabindex="-1">Rozovsky me dijo que “no comprendía porqué las cosas eran tan diferentes. No tenía por qué suceder de ese modo”.</p>
+<p class="story-body-text story-content" data-para-count="226" data-total-count="4539" id="story-continues-12" tabindex="-1"><strong>Vivimos</strong> una época saturada de datos que nos permite examinar nuestros hábitos de trabajo y las peculiaridades de cada oficina con una capacidad de escrutinio con la que nuestros predecesores de cubículo solo podían soñar.</p>
+<p class="story-body-text story-content" data-para-count="389" data-total-count="4928" id="story-continues-13" tabindex="-1">Marshall Van Alstyne, investigador del MIT especializado en entender el modo en que se comparte la información, explica que “vivimos la edad de oro de la comprensión de la productividad de cada persona. De repente, podemos separar las pequeñas decisiones que tomamos, incluso aquellas de las que no nos damos cuenta y descubrir por qué hay personas mucho más efectivas que otras”.</p>
+<p class="story-body-text story-content" data-para-count="722" data-total-count="5650" id="story-continues-14" tabindex="-1">Aún así, muchas de las empresas más valiosas de hoy en día se han dado cuenta de que analizar a los trabajadores uno por uno con el objetivo de mejorar su rendimiento —lo que se conoce como “optimización del rendimiento del empleado”— no es suficiente. En un contexto de relaciones económicas cada vez más globalizadas y complejas, la mayor parte del trabajo se hace en equipo. Un estudio publicado en The Harvard Business Review descubrió que “el tiempo que jefes y empleados pasan en actividades que requieren de colaboración ha aumentado más de 50 por ciento” en las últimas dos décadas y, en muchas empresas, más de tres cuartas partes de la jornada laboral son de comunicación entre colegas.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="801" data-total-count="6451" id="story-continues-15" tabindex="-1">En Silicon Valley se potencia que los ingenieros de software trabajen juntos. Existen estudios que muestran que los grupos tienden a innovar más rápido, detectan errores antes que los individuos y encuentran soluciones más efectivas para los problemas. También que la gente que trabaja en equipo consigue más resultados y muestra más satisfacción con su empleo. Otro estudio recoge el punto de vista de ejecutivos que creen que la rentabilidad aumenta cuando los empleados están convencidos de incrementar el aspecto colaborativo de sus puestos. Dentro de las empresas, en la función pública y la enseñanza, la unidad organizativa fundamental es el equipo. Si una empresa quiere superar a la competencia no tiene que enfocarse en cómo trabajan sus empleados, sino en cómo trabajan juntos.</p>
+<p class="story-body-text story-content" data-para-count="830" data-total-count="7281" id="story-continues-16" tabindex="-1">Hace cinco años, Google, que es una de las mayores defensoras de que el estudio de los trabajadores puede transformar la productividad, se centró en cómo construir el equipo perfecto. El gigante tecnológico se ha gastado una cantidad tremenda de millones de dólares en medir casi cada aspecto de la vida de sus empleados. Su departamento de operaciones humanas ha estudiado a detalle desde la frecuencia con la que las personas comen juntas (los empleados más productivos tienden a construir redes más amplias cambiando de compañeros de almuerzo) hasta los rasgos que comparten los mejores jefes: no sorprende que la buena comunicación y la tendencia a no fijarse en cada detalle de la jornada de los empleados –<em>micromanaging–</em> sean aspectos fundamentales. Pero sí que eso les resultará nuevo a los jefes de Google.</p>
+<p class="story-body-text story-content" data-para-count="518" data-total-count="7799" id="story-continues-17" tabindex="-1">Los ejecutivos en el vértice de la cadena jerárquica habían pensado durante mucho tiempo que el mejor equipo era el que combinaba los mejores elementos. O compartían sabiduría popular del estilo de “es mejor poner a los introvertidos juntos” o “los equipos funcionan mejor cuando todos son amigos fuera del trabajo”. Quien lo explica es Abeer Dubey, uno de los responsables del departamento de análisis humano de la empresa. Explica también que “nadie había estudiado antes si eso era cierto o no”.</p>
+<p class="story-body-text story-content" data-para-count="181" data-total-count="7980" id="story-continues-18" tabindex="-1">En 2012, la compañía se embarcó en el Proyecto Aristóteles. Su objetivo: estudiar cientos de equipos de trabajo y comprender por qué mientras unos tropezaban, otros despegaban.</p>
+<p class="story-body-text story-content" data-para-count="240" data-total-count="8220" id="story-continues-19" tabindex="-1">Por aquel entonces, Rozovsky ya había decidido que lo que quería hacer con su vida era estudiar las tendencias de comportamiento de las personas. Tras graduarse en Yale, Google la contrató y entró a formar parte del equipo Aristóteles.</p>
+<p class="story-body-text story-content" data-para-count="806" data-total-count="9026" id="story-continues-20" tabindex="-1"><strong>Los investigadores del proyecto</strong> comenzaron por revisar medio siglo de estudios académicos sobre el funcionamiento de los equipo de trabajo. ¿Los mejores equipos eran los formados por gente que compartía intereses? ¿Era importante que todos se motivaran con el mismo tipo de recompensas? A partir de esos estudios los expertos escudriñaron los equipos de Google. ¿Socializan fuera de la oficina? ¿Compartían aficiones? ¿Tenían la misma formación? ¿Era mejor que los miembros de un equipo fueran tímidos o abiertos? Diseñaron esquemas que mostraban qué equipos mantenían esquemas de pertenencia superpuestos y qué grupos presentaban resultados superiores a los objetivos marcados. Trataron de entender cuánto tiempo duraba un equipo o si la igualdad de género tenía impacto en el éxito.</p>
+<p class="story-body-text story-content" data-para-count="556" data-total-count="9582" id="story-continues-21" tabindex="-1">Alguno de los equipos con las valoraciones más altas en la empresa estaban compuestos por amigos que pasaban tiempo juntos tras la jornada laboral. Otros por personas que se convertían en extrañas una vez que abandonaban la sala de reuniones. Algunos requerían de jefes con carácter. Otros preferían menos jerarquía. Lo más confuso de todo: que dos equipos de apariencia similar e incluso pertenencia superpuesta mostraban una efectividad totalmente diferentes. Dubey dice que “en Google se nos da bien encontrar pautas. Y aquí no las había”.</p>
+<p class="story-body-text story-content" data-para-count="246" data-total-count="9828" id="story-continues-22" tabindex="-1">Mientras batallaban por comprender qué era lo que convertía a un equipo en un ejemplo de éxito, Rozovsky siguió buscando junto con sus colegas investigaciones de disciplinas variadas y centradas en lo que se conoce como “normas grupales”.</p>
+<p class="story-body-text story-content" data-para-count="756" data-total-count="10584" id="story-continues-23" tabindex="-1">Las normas son las tradiciones, pautas de comportamiento y reglas no escritas que regulan cómo nos comportamos cuando estamos juntos. Un equipo podría alcanzar consenso sobre la efectividad de evitar los desacuerdos sobre el valor del debate mientras otro puede desarrollar una cultura que potencia discusiones firmes y desprecia el pensamiento grupal. Las normas pueden ser no escritas o reconocidas por todos de manera abierta. Su influencia es profunda en cualquiera de los casos. Los miembros de un equipo pueden comportarse como individuos en un momento determinado, al retar a la autoridad o elegir la independencia, pero cuando se juntan entre sí, las normas del grupo suelen pasar por encima de las preferencias individuales e imponen respeto.</p>
+<p class="story-body-text story-content" data-para-count="934" data-total-count="11518" id="story-continues-24" tabindex="-1">Los investigadores del proyecto comenzaron a analizar los datos recabados en busca de normas. Buscaron espacios en los que los miembros de un equipo describían una conducta concreta como parte de las normas no escritas de ese equipo y otras como parte de la cultura del mismo. Unos grupos decían que los colegas se interrumpían todo el tiempo y que sus jefes potenciaban ese comportamiento haciendo lo mismo entre ellos. Otros que, en sus equipos, los jefes marcaban el orden de la conversación y cuando alguien interrumpía a un colega, el resto le diría de manera educada que esperara su turno. Unos equipos celebraban los cumpleaños y comenzaban cada reunión compartiendo detalles sobre el fin de semana. Otros iban directo al grano y no hablaban de nada personal. Había equipos con personalidades expansivas que marcaban pautas y otros en los que los introvertidos salían de sus caparazones cuando comenzaba la reunión.</p>
+<p class="story-body-text story-content" data-para-count="1038" data-total-count="12556" id="story-continues-25" tabindex="-1">Después de observar cerca de un centenar de grupos durante más de un año, el Proyecto Aristóteles concluyó que comprender y ser capaces de influir sobre las normas de comportamiento grupal era fundamental para mejorar el desempeño de los equipos de trabajo en Google. Pero Rozovsky, que ya se había convertido en la investigadora principal, necesitaba descubrir cuáles eran las normas más importantes. El equipo había descubierto docenas de pautas de comportamiento que parecían importar pero las que eran significativas para un grupo contradecían las de otro con el mismo éxito. ¿Es mejor dejar que todos hablen cuanto quieran o debían los líderes con carácter ponerle coto a los debates que giraban sobre sí mismos? ¿Era más importante mostrar desacuerdos en público o limitar el conflicto? Los datos no ofrecían respuestas claras. De hecho, a veces mostraban direcciones opuestas. Lo único peor que no encontrar una pauta es encontrar demasiadas. ¿Cuáles eran las normas que compartían los equipos de éxito?</p>
+<p class="story-body-text story-content" data-para-count="59" data-total-count="12615" id="story-continues-26" tabindex="-1"><strong>Imagina</strong> que te proponen entrar en uno de estos dos equipos.</p>
+<p class="story-body-text story-content" data-para-count="475" data-total-count="13090" id="story-continues-27" tabindex="-1">El Equipo A está formado por personas que son inteligentes y tienen éxito. Ves un video del equipo trabajando y ves a profesionales que esperan a que salga un tema que manejan bien antes de hablar un buen rato explicando qué debería hacer el grupo. Cuando alguien se sale del tema, quien habla se detiene, recuerda la agenda y retoma la reunión. Ese equipo es eficiente. No hay charla ni se alarga el debate. La reunión termina cuando debe y cada uno regresa a su mesa.</p>
+<p class="story-body-text story-content" data-para-count="420" data-total-count="13510" id="story-continues-28" tabindex="-1">El Equipo B es diferente. Lo forman, a partes iguales, ejecutivos de éxito y jefes de rango medio que han demostrado poco profesionalmente. Sus miembros cambian de tema, se interrumpen y completan los unos a los otros. Cuando uno de ellos cambia de tema de repente, el resto del grupo lo sigue y se olvida de la agenda marcada. Al final, la reunión no termina. Todo el mundo se sienta y charla sobre sus propias vidas.</p>
+<p class="story-body-text story-content" data-para-count="35" data-total-count="13545" id="story-continues-29" tabindex="-1">¿A qué grupo preferirías unirte?</p>
+<p class="story-body-text story-content" data-para-count="297" data-total-count="13842" id="story-continues-30" tabindex="-1">En 2008, un grupo de psicólogos de Carnegie Mellon, MIT y Union College comenzaron a buscar respuestas: “Durante el último siglo, los psicólogos han avanzado de manera importante al medir y evaluar la inteligencia de las personas”. Al menos así lo formularon en la revista Science in 2010.</p>
+<p class="story-body-text story-content" data-para-count="365" data-total-count="14207" id="story-continues-31" tabindex="-1">“Con el enfoque estadístico desarrollado para medir la inteligencia de un individuo, comenzamos a medir de manera sistemática la inteligencia de un grupo”. Explicado de otra manera, los investigadores querían saber si hay un coeficiente de inteligencia colectiva que emerge de un grupo y es diferente de la inteligencia de sus miembros tomados de uno en uno.</p>
+<p class="story-body-text story-content" data-para-count="436" data-total-count="14643" id="story-continues-32" tabindex="-1">Para conseguirlo, reunieron a 699 personas, las dividieron en grupos pequeños y les dieron a cada una una serie de tareas que requerían formas de cooperación diferentes. En una de ellas, por ejemplo, se les pedía a los participantes que dijeran para qué podía usarse un ladrillo. Varios equipos descubrieron docenas de utilidades que mostraban inteligencia. Otros se limitaban a describir las mismas ideas con palabras diferentes.</p>
+<p class="story-body-text story-content" data-para-count="460" data-total-count="15103" id="story-continues-33" tabindex="-1">Otro les pedía a los grupos que planearan un viaje de compras y le dieron a cada miembro una lista de vegetales diferente. El único modo de maximizar la puntuación del grupo era que cada individuo sacrificara un artículo que querían en favor de lo que necesitaba el grupo. Varios grupos fueron capaces de dividir las compras, otros no fueron capaces de llenar sus carros de la compra porque ninguno estaba dispuesto a sacrificar sus intereses personales.</p>
+<p class="story-body-text story-content" data-para-count="566" data-total-count="15669" id="story-continues-34" tabindex="-1">En todo caso, lo que los investigadores buscaban era mostrar que el equipo que hacía bien una tarea, normalmente hacía bien las demás. Y a la inversa, quienes fallaban en una, parecían fallar en todas. Llegaron a la conclusión de que lo que distinguía los equipos “buenos” de los disfuncionales era cómo se trataban sus miembros entre ellos. Las normas adecuadas, en resumen, eran las que incrementaban la inteligencia colectiva mientras que un conjunto de normas erróneas podían hacer que todo renqueara incluso si todos sus miembros eran brillantes.</p>
+<p class="story-body-text story-content" data-para-count="490" data-total-count="16159" id="story-continues-35" tabindex="-1">Lo confuso de todo esto era que no todos los grupos de éxito se comportaban del mismo modo. La coordinadora de la investigación, Anita Wooley, dijo que “algunos equipos tenían un montón de gente lista que descubrió cómo repartirse el trabajo de manera uniforme mientras otros, con miembros más normales, descubrieron la manera de beneficiarse de las habilidades de cada individuo. Unos tenían un líder, otros trabajaban de manera más fluida y todos asumían cierto liderazgo”.</p>
+<p class="story-body-text story-content" data-para-count="143" data-total-count="16302" id="story-continues-36" tabindex="-1">A medida que los investigadores se adentraban en los grupos detectaron dos comportamientos que compartían todos aquellos que funcionaban bien.</p>
+<p class="story-body-text story-content" data-para-count="532" data-total-count="16834" id="story-continues-37" tabindex="-1">El primero, que en los equipos buenos todos hablaban más o menos lo mismo, un fenómeno denominado “igualdad en la distribución de turnos de conversación”. En algunos, todo el mundo hablaba para cada tarea, en otros, el liderazgo pasaba de uno a otro miembro en función de la tarea. Pero en todos, al final del día, todos habían hablado lo mismo. Según Woolley: “Mientras todos tuvieran oportunidad de hablar, todo iba bien. Pero si hablaba solo una persona o un pequeño grupo, la inteligencia colectiva disminuía”.</p>
+<p class="story-body-text story-content" data-para-count="858" data-total-count="17692" id="story-continues-38" tabindex="-1">Y el segundo era que todos los equipos que ofrecían buenos resultados tenían una “sensibilidad social alta” o, lo que es lo mismo, se les daba bien intuir cómo se sentían los demás en función de su tono de voz, las expresiones usadas y otras señales no verbales. Uno de los modos más simples de medir la sensibilidad social de alguien es mostrarle fotos de los ojos de varias personas y pedirle que describa qué sienten esos ojos. Se llama el examen de la “lectura de la mente en los ojos”. Los miembros de los equipos de más éxito consiguieron resultados por encima de la media. Parecían saber cuando alguien estaba triste o sentía que se le hacía de lado. Los miembros de los equipos que ofrecían peores resultados también ofrecían resultados por debajo de la media. Como grupo, pareciera que tienen menos empatía con sus colegas.</p>
+<p class="story-body-text story-content" data-para-count="667" data-total-count="18359" id="story-continues-39" tabindex="-1">En otras palabras, si se te da a elegir entre el Equipo A, más recto y serio, y el Equipo B, que fluye con más libertad, probablemente optes por el Equipo B. El Equipo A puede estar lleno de gente inteligente, optimizado para elevar el rendimiento individual. Pero las normas del grupo no hacen hincapié en la igualdad al expresarse y el intercambio de información personal que permita a sus miembros saber cómo se siente cada uno o lo que queda sin decir no es habitual. Es muy probable que los miembros del Equipo A continúen actuando como individuos una vez que se junten y no hay muchas evidencias de que, como grupo, gocen de mayor inteligencia colectiva.</p>
+<p class="story-body-text story-content" data-para-count="459" data-total-count="18818" id="story-continues-40" tabindex="-1">Mientras, en el Equipo B, la gente tenderá a quitarse la palabra, salirse por la tangente y socializar en lugar de centrarse en sus tareas. El equipo podría parecerle ineficiente a un observador externo, pero todos los miembros del equipo hablan lo que necesitan, son sensibles respecto a cómo se siente cada uno y comparten tanto historias personales como emociones. Aunque este equipo puede no tener estrellas en su seno, la suma es mayor que sus partes.</p>
+<p class="story-body-text story-content" data-para-count="695" data-total-count="19513" id="story-continues-41" tabindex="-1">En el mundo de la psicología, los investigadores se refieren de manera coloquial a características como la “igualdad en la distribución de turnos de conversación” y “la sensibilidad social promedio” como modalidades diferentes de la seguridad psicológica, una cultura grupal que la profesora de la Harvard Business School Amy Edmondson define como “la creencia compartida por parte de miembros de un grupo de que el grupo es seguro a la hora de la asunción de riesgos interpersonales”. La seguridad psicológica sería entonces “una sensación de confianza en que el equipo no hará sentir vergüenza, no rechazará y no castigará a nadie por decir en alto lo que piensa”.</p>
+<p class="story-body-text story-content" data-para-count="227" data-total-count="19740" id="story-continues-42" tabindex="-1">Ya lo había descrito en una investigación publicada en 1999. &#8220;Un clima de equipo que se caracteriza por la confianza interpersonal y el respeto mutuo en el que las personas se sienten cómodas las unas con las otras”.</p>
+<p class="story-body-text story-content" data-para-count="735" data-total-count="20475" id="story-continues-43" tabindex="-1">Cuando Rozovsky y su equipo en Google encontraron esta definición de seguridad psicológica en trabajos académicos fue como si todo lo que sentían cobrara sentido. Un ingeniero le había dicho a los investigadores que su jefe era “directo y sin ambigüedad, lo que permitía que los demás asumieran riesgos”. Ese equipo, según los investigadores, estaba entre los que obtenía mejores resultados de la empresa. Otro, en dirección opuesta, les contó que “su jefe tenía poco control emocional” y añadió que entra en pánico por cosas pequeñas y trata de mantener el control. No me gustaría tenerlo al lado mientras conduzco, trataría de tomar el volante y nos estrellaríamos”. Ese equipo no dio buenos resultados.</p>
+<p class="story-body-text story-content" data-para-count="597" data-total-count="21072" id="story-continues-44" tabindex="-1">Pero, sobre todo, los empleados hablaron de cómo se sentían los equipos. “Tenía sentido, quizá debido a mi experiencia en Yale. He formado parte de varios equipos que me dejaron exhausta y de otros en los que el equipo me transmitía energía”, admitió Rozovsky. Su grupo de Yale hacía aguas debido a las normas –competencia por el liderazgo, tendencia a la crítica– y eso la mantenía siempre en guardia mientras que las de su equipo de casos prácticos –entusiasmo por las ideas de los demás, bromas y diversión– permitían un ambiente de relajación y cargado de energía.</p>
+<p class="story-body-text story-content" data-para-count="379" data-total-count="21451" id="story-continues-45" tabindex="-1">En el contexto del Proyecto Aristóteles, la investigación sobre la seguridad psicológica encontró ciertas normas que van con al éxito. Había comportamientos importantes, como tener claro que los equipos conocían sus objetivos o crear una cultura de interdependencia. Pero los datos señalaban que la seguridad psicológica es lo más importante para que un equipo trabaje.</p>
+<figure id="media-100000004230220" class="media photo media-100000004230220 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/02/28/magazine/28mag-teams2/28mag-teams2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-47">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/02/28/magazine/28mag-teams2/28mag-teams2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/02/28/magazine/28mag-teams2/28mag-teams2-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Illustration by James Graham"  itemprop="url" itemid="https://static01.nyt.com/images/2016/02/28/magazine/28mag-teams2/28mag-teams2-master675.jpg"/>
+		<meta itemprop="height" content="631" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Illustration by James Graham
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="165" data-total-count="21616" id="story-continues-47" tabindex="-1">Rozovsky lo expresa así: “Teníamos que conseguir que la gente creara entornos psicológicos sanos”. Pero no tenían claro cómo hacerlo sin directrices claras.</p>
+<p class="story-body-text story-content" data-para-count="488" data-total-count="22104" id="story-continues-48" tabindex="-1">Establecer esa seguridad psicológica es algo complejo y difícil de llevar a la práctica. Puedes solicitar a la gente que pida la palabra antes de hablar y que escuche a los demás. Puedes pedirle a tus empleados que sean sensibles con cómo se sienten sus colegas y que traten de darse cuenta de cuando alguien se encuentra mal. Pero el tipo de gente que trabaja en Google es a menudo el que se ha hecho ingeniero de software, sobre todo, para no tener que hablar de sus sentimientos.</p>
+<p class="story-body-text story-content" data-para-count="315" data-total-count="22419" id="story-continues-49" tabindex="-1">Rozovsky y su equipo se habían hecho una idea de cuales eran las normas más importantes. Ahora tenían que encontrar el modo de convertir la comunicación y la empatía, principios rectores del establecimiento de conexiones reales, en un algoritmo que replicar a lo largo de la organización sin mayor dificultad.</p>
+<p class="story-body-text story-content" data-para-count="440" data-total-count="22859" id="story-continues-50" tabindex="-1"><strong>A finales de 2014,</strong> Rozovsky y su equipo de expertos en números comenzaron a compartir sus hallazgos con grupos reducidos sacados de entre los 51.000 empleados de Google. Habían hecho encuestas y entrevistas personales y analizado estadísticas durante tres años. No habían descubierto aún cómo facilitar la seguridad psicológica pero esperaban que sus hallazgos dentro de la empresa lograrían que algunos empleados aportaran ideas.</p>
+<p class="story-body-text story-content" data-para-count="624" data-total-count="23483" id="story-continues-51" tabindex="-1">Un día, después de una presentación, un hombre elegante y de complexión fuerte se le acercó a Rozovsky y a sus colegas del Proyecto Aristóteles tras una presentación. Se llama Matt Sakaguchi y tenía una trayectoria inusual para ser un empleado de Google. Veinte años atrás había sido miembro de un grupo de operaciones especiales de la policía en California. Lo había dejado para vender productos electrónicos y había terminado trabajando para Google en un puesto de relativa responsabilidad que implicaba la supervisión de los ingenieros que responden a la caída de páginas web y servidores de la empresa.</p>
+<p class="story-body-text story-content" data-para-count="495" data-total-count="23978" id="story-continues-52" tabindex="-1">Sakaguchi se describió ante mí como “el hombre más afortunado de la tierra. No soy ingeniero. No estudié informática en la universidad. Todo el mundo que trabaja para mí es mucho más inteligente que yo”. Pero vaya si tiene talento. Lo tiene para gestionar equipos de trabajadores técnicos y por eso le va bien en Google. Con su mujer, que es profesora, tienen una casa en San Francisco y otra en el Valle de Sonoma. “La mayor parte de los días siento que he ganado la lotería”.</p>
+<figure id="media-100000004230221" class="media photo media-100000004230221 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/02/28/magazine/28mag-teams3/28mag-teams3-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-54">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/02/28/magazine/28mag-teams3/28mag-teams3-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/02/28/magazine/28mag-teams3/28mag-teams3-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Illustration by James Graham"  itemprop="url" itemid="https://static01.nyt.com/images/2016/02/28/magazine/28mag-teams3/28mag-teams3-master315.jpg"/>
+		<meta itemprop="height" content="1237" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Illustration by James Graham
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="484" data-total-count="24462" id="story-continues-54" tabindex="-1">Sakaguchi tenía un interés particular en el Proyecto Aristóteles porque el equipo que había supervisado en Google antes del actual no se había compenetrado demasiado bien. Recuerda que “había un ingeniero con experiencia que hablaba mucho y todo el mundo evitaba estar en desacuerdo con él. Lo más difícil era que todo el mundo le caía bien fuera del contexto del grupo, pero cada vez que se reunían sucedía algo que hacía que la cultura que compartían se torciera”.</p>
+<p class="story-body-text story-content" data-para-count="252" data-total-count="24714" id="story-continues-55" tabindex="-1">Acababa de incorporarse como responsable de un nuevo equipo y quería asegurarse de que esta vez las cosas salieran bien. Les pidió a los investigadores del Proyecto Aristóteles que le ayudaran. Le dieron una encuesta para medir las normas del grupo.</p>
+<p class="story-body-text story-content" data-para-count="303" data-total-count="25017" id="story-continues-56" tabindex="-1">Cuando Sakaguchi les pidió que participaran, se encontró con una actitud escéptica. Uno de ellos, Sean Laurent, ingeniero, lo calificó como “algo que parecía una pérdida total de tiempo. Pero Matt era nuestro nuevo jefe y le importaba ese cuestionario así que le dijimos que lo llenaríamos”.</p>
+<p class="story-body-text story-content" data-para-count="719" data-total-count="25736" id="story-continues-57" tabindex="-1">El equipo respondió a la encuesta y unas semanas más tarde llegaron los resultados. Sakaguchi se sorprendió con lo que mostraban. Creía que el equipo era fuerte y estaba unido pero los resultados descubrieron ciertas debilidades: cuando les preguntaron a los miembros del equipo si comprendían con claridad su papel y si su trabajo generaba consecuencias, los resultados fueron de regulares a malos. Esas respuestas preocuparon a Sakaguchi porque no había sentido tal descontento. Quería que todos estuvieran cómodos en sus puestos. Le pidió a su gente que se reuniera fuera la oficina y discutieran los hallazgos. Empezó pidiéndole a todo el mundo que contaran algo personal sobre sí mismos y comenzó él.</p>
+<p class="story-body-text story-content" data-para-count="91" data-total-count="25827" id="story-continues-58" tabindex="-1">“Una de las cosas que la gente no sabe de mí es que tengo cáncer en estado avanzado”.</p>
+<p class="story-body-text story-content" data-para-count="635" data-total-count="26462" id="story-continues-59" tabindex="-1">En 2001, le descubrieron un tumor en el riñón que ya se le había extendido a la columna. Había seguido creciendo y había recibido tratamiento mientras trabajaba en Google. Los médicos acababan de descubrir un punto negro en un escáner de hígado y su situación ya era muy grave. Nadie supo qué decir. Habían trabajado con él durante 10 meses. A todos les caía bien. Nadie se imaginó que lidiaba con una situación como esa. Laurent dijo que “tener a Matt allí sentado delante de nosotros diciéndonos que estaba enfermo y que no iba a mejorar, algo que todos entendimos, fue duro. Fue un momento especial. Muy duro”.</p>
+<p class="story-body-text story-content" data-para-count="703" data-total-count="27165" id="story-continues-60" tabindex="-1">Después de que habló Sakaguchi, otro miembro del equipo se puso de pie y describió sus problemas médicos. Luego otro habló de una ruptura conflictiva. El equipo pasó a centrarse en los resultados de la investigación. Les resultó más fácil hablar de lo que les molestaba, de los roces del día, después de compartir información. Estuvieron de acuerdo con ciertas normas. De ahora en adelante, Sakaguchi se esforzaría más por compartir con los miembros de su equipo cómo lo que hacían encajaba dentro de los objetivos generales de la empresa. Estuvieron de acuerdo en esforzarse más por darse cuenta cuando uno de los miembros del equipo se sentía excluido o pasaba por un mal momento.</p>
+<p class="story-body-text story-content" data-para-count="589" data-total-count="27754" id="story-continues-61" tabindex="-1">Sakaguchi compartió los detalles de su enfermedad sin que nadie se lo pidiese. No había ningún elemento dentro del ámbito del Proyecto Aristóteles que señalara que mostrar apertura con respecto a los problemas personales tenía incidencia en las normas del grupo. Pero para Sakaguchi tenía sentido que la seguridad psicológica y las emociones fueran juntas. Los comportamientos que contribuyen a conseguir la seguridad psicológica, la conversación por turnos y la empatía son parte del mismo sistema de reglas que los individuos buscamos cuando tratamos de establecer vínculos.</p>
+<p class="story-body-text story-content" data-para-count="108" data-total-count="27862" id="story-continues-62" tabindex="-1">Y esos vínculos importan tanto en el trabajo como en cualquier otra situación. Incluso más en el trabajo.</p>
+<p class="story-body-text story-content" data-para-count="296" data-total-count="28158" id="story-continues-63" tabindex="-1">Al valorar el encuentro fuera de la oficina, Laurent me dijo: “Había separado el trabajo de la vida y en realidad mi trabajo es mi vida, paso la mayor parte del tiempo trabajando, conozco a la mayor parte de mis amigos en el trabajo, si no puedo ser honesto en el trabajo no estoy viviendo”.</p>
+<p class="story-body-text story-content" data-para-count="980" data-total-count="29138" id="story-continues-64" tabindex="-1">Lo que el Proyecto Aristóteles le ha enseñado a la gente de Google es que nadie quiere tener que ponerse en “modo trabajo” cuando llega a la oficina. Nadie quiere tener que dejar su personalidad y vida interior en casa. Pero para estar en el trabajo al 100 por ciento, para sentir seguridad psicológica, necesitamos tener claro que tenemos la libertad de compartir las cosas que nos asustan sin miedo a recriminaciones. Que debemos poder hablar con nuestros compañeros de lo que resulta complicado o triste y tener conversaciones duras con colegas que nos vuelven locos. No podemos centrarnos solo en la eficacia, no. Al contrario, cuando comenzamos nuestra jornada junto a un equipo de ingenieros y después enviamos correos electrónicos al departamento de mercadotecnia y luego entramos en una conferencia telefónica necesitamos saber que todas esas personas realmente quieren escucharnos. Queremos saber que el trabajo es más que una repetición constante de tareas.</p>
+<p class="story-body-text story-content" data-para-count="134" data-total-count="29272" id="story-continues-65" tabindex="-1">Lo que tampoco quiere decir que un equipo necesite un gestor para mantenerse unido. Cualquier equipo puede convertirse en un Equipo B.</p>
+<p class="story-body-text story-content" data-para-count="411" data-total-count="29683" id="story-continues-66" tabindex="-1">La experiencia de Sakaguchi señala una lección importante de cara a la investigación de Google sobre el trabajo en equipo: al adoptar el enfoque basado en el uso de datos propio de Silicon Valley, el Proyecto Aristóteles ha potenciado que personas que no habrían estado necesariamente cómodas haciéndolo, terminen hablando más de emociones y de cómo se sentían. Por extensión de las normas del grupo.</p>
+<p class="story-body-text story-content" data-para-count="485" data-total-count="30168" id="story-continues-67" tabindex="-1">Sakaguchi me dijo que &#8220;a la gente de Google le gustan los datos&#8221;, pero evitar las conversaciones sobre sentimientos no es algo que les pase solo a ellos o a quienes trabajan en Silicon Valley, pasa en todos los puestos de trabajo. &#8220;Al introducir conceptos como empatía o sensibilidad en cuadros estadísticos y tratarlos como datos hace que sean un tema más fácil de manejar para todos. Es más fácil hablar de sentimientos si podemos señalar un número&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="665" data-total-count="30833" id="story-continues-68" tabindex="-1">Me dijo también que su cáncer avanza y puede que no le quede mucho tiempo. Su mujer le ha pedido que deje Google. Lo hará en algún momento. Pero por ahora, cree que ayudar a que su equipo salga adelante &#8220;es el trabajo más lleno de sentido que he hecho nunca&#8221;. Trata de convencerles para que piensen sobre los modos en que el trabajo y la vida se mezclan y parte de ese proceso es reconocer la importancia que puede tener el trabajo a la hora de sentirse realizado. Para él, el Proyecto Aristóteles &#8220;demuestra la importancia de un gran equipo. ¿Por qué renunciar a eso? ¿Por qué no pasar tiempo con gente que se preocupa por mí?&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="436" data-total-count="31269" id="story-continues-69" tabindex="-1"><strong>La industria tecnológica</strong> no solo es una de las de más rápido crecimiento de este sistema económico. También domina, cada vez más, la cultura mundial. Y en Silicon Valley existen varias profecías autocumplidas: todo ha cambiado, los datos están sobre todas las cosas, los ganadores de hoy lo son porque tienen la suficiente claridad de miras como para descartar la sabiduría convencional del ayer y buscar la nueva e innovadora.</p>
+<p class="story-body-text story-content" data-para-count="342" data-total-count="31611" id="story-continues-70" tabindex="-1">La paradoja, por supuesto, radica en que la recolección de datos intensiva de Google y la investigación sobre todo lo numérico les ha llevado a la misma conclusión a la que habían llegado todos los buenos jefes antes. Los mejores equipos son aquellos en los que la gente se escucha y muestra sensibilidad a las necesidades de los demás.</p>
+<p class="story-body-text story-content" data-para-count="711" data-total-count="32322" id="story-continues-71" tabindex="-1">El hecho de que todo esto no sea tan original no significa que la contribución de Google no sea valiosa. De algún modo, la &#8220;optimización de rendimiento del empleado&#8221; nos ofrece ahora un mecanismo para hablar de nuestras inseguridades, de nuestros miedos y de nuestras aspiraciones de un modo más constructivo. También nos da instrumentos para enseñar lecciones que antes les llevaba décadas aprender a los jefes. En otras palabras, Google en su carrera por construir el equipo perfecto quizá ha demostrado —sin habérselo propuesto— la utilidad de la imperfección y ha hecho lo que Silicon Valley hace mejor: crear seguridad psicológica de manera más rápida, mejor y más productiva.</p>
+<p class="story-body-text story-content" data-para-count="265" data-total-count="32587" id="story-continues-72" tabindex="-1">&#8220;Contar con datos que demuestran que merece la pena prestarle atención a estas cosas es, a menudo, el paso adecuado a dar para conseguir que presten atención. No subestimes el poder de darle a la gente una plataforma y un idioma que puedan compartir&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="327" data-total-count="32914" id="story-continues-73" tabindex="-1">El Proyecto Aristóteles nos recuerda que cuando las empresas tratan de optimizarlo todo a veces es fácil olvidar que el éxito se basa en experiencias que no pueden ser optimizadas como intercambios emocionales, conversaciones complejas o discusiones sobre quiénes queremos ser y cómo nos hacen sentir nuestros compañeros.</p>
+<p class="story-body-text story-content" data-para-count="403" data-total-count="33317" id="story-continues-74" tabindex="-1">La propia Rozovsky tuvo la experiencia a mitad de proyecto. &#8220;Estábamos en una reunión y cometí un error, luego envié una nota explicando cómo iba a arreglarlo y recibí un correo electrónico de un compañero que decía: &#8216;¡Ouch!'&#8221;, recordó. &#8220;Fue como un puñetazo al estómago. Ya me costaba haber cometido el error, eso daba en el clavo de todas mis inseguridades&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="256" data-total-count="33573" id="story-continues-75" tabindex="-1">Si esto le hubiera sucedido antes, si hubiera pasado mientras estaba en Yale, por ejemplo, en su grupo de trabajo, probablemente habría sabido cómo lidiar con esos sentimientos. Un correo no era motivo para sentir una afrenta que mereciera una respuesta.</p>
+<p class="story-body-text story-content" data-para-count="449" data-total-count="34022" id="story-continues-76" tabindex="-1">Igual, es algo que le molestó. Ahora, gracias al Proyecto Aristóteles contaba con vocabulario para explicarse a sí misma lo que sentía y por qué importaba. Tenía gráficos que le demostraban que no debía dejarlo pasar. Tecleó una respuesta rápida. &#8220;Nada como un buen &#8216;¡Ouch!&#8217; para terminar con la seguridad psicológica de la mañana&#8221;. Su colega le respondió &#8220;Solo probaba tu capacidad de adaptación&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="530" data-total-count="34552" id="story-continues-77" tabindex="-1">Rozovsky se lo tomó bien. &#8220;Él sabía que lo que otro habría visto como la respuesta equivocada era exactamente lo que yo necesitaba oír. Rebajó la tensión con una interacción de 30 segundos&#8221;. Quería que la escucharan, quería que su compañero fuera sensible a lo que sentía. &#8220;Y habíamos desarrollado toda una investigación que nos decía que lo correcto era seguir el instinto y eso fue lo que hice. Fueron los datos los que me dieron la seguridad en mí misma para hacer lo que consideraba correcto.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Charles Duhigg es periodista, ganador de un Premio Pulitzer y redactor jefe para periodismo en vivo. Es autor de "The Power of Habit" y "Smarter Faster Better: The Secrets of Productivity in Life and Business", próximo a publicarse. Este artículo es un extracto de este último libro. </p>
+
+			</div>
+
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/03/16/la-busqueda-de-google-por-el-equipo-perfecto/"
+				data-title="Reposado: La búsqueda de Google del equipo perfecto"
+				data-author="POR CHARLES DUHIGG"
+				data-media=""
+				data-description="Los equipos tienden a innovar más rápido, detectan errores antes que los individuos y encuentran soluciones más efectivas para los problemas. La compañía tecnológica se pregunta cuál es la fórmula perfecta para tener un equipo de ensueño."
+				data-publish-date="16 de marzo de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/15/la-comida-de-escritorio-esta-de-moda-y-no-esta-bien/">
+					<div class="story-body">
+						<h3 class="kicker">Economía</h3>
+
+						<h2 class="headline">
+							<span class="title">Comer en el escritorio está de moda… y no es sano</span>
+							<time class="dateline">15 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/02/28/magazine/28eating-slide-55AI/28eating-slide-55AI-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/14/no-mas-reuniones-por-favor/">
+					<div class="story-body">
+						<h3 class="kicker">Economía</h3>
+
+						<h2 class="headline">
+							<span class="title">No más reuniones, por favor</span>
+							<time class="dateline">14 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/02/28/magazine/28mag-meetings1/28mag-meetings1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":889,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

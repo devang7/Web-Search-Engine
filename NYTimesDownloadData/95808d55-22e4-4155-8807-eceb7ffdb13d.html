@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004473569"/>
+<meta name="hdl" content="Voces de la extrema derecha: por qué los europeos se alejan de los partidos tradicionales" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20160715" />
+<meta name="utime" content="20160715200045" />
+<meta name="ptime" content="20160715200045" />
+<meta name="DISPLAYDATE" content="Jul. 15, 2016" />
+<meta name="dat" content="Jul. 15, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="voces-de-la-extrema-derecha-por-que-los-europeos-se-alejan-de-los-partidos-tradicionales" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/07/15/voces-de-la-extrema-derecha-por-que-los-europeos-se-alejan-de-los-partidos-tradicionales/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Voces de la extrema derecha: por qué los europeos se alejan de los partidos tradicionales" />
+<meta property="og:description" content="La mayoría de los votantes que se vuelcan a los movimientos extremistas lo hacen por su rechazo a los inmigrantes y por desafiar a la Unión Europea. Muchos de estos argumentos, sin embargo, se contradicen con hechos reales." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/07/02/world/farright-web1/farright-web1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-07-15" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/07/15/voces-de-la-extrema-derecha-por-que-los-europeos-se-alejan-de-los-partidos-tradicionales/" />
+<meta property="twitter:title" content="Voces de la extrema derecha: por qué los europeos se alejan de los partidos tradicionales" />
+<meta property="twitter:description" content="La mayoría de los votantes que se vuelcan a los movimientos extremistas lo hacen por su rechazo a los inmigrantes y por desafiar a la Unión Europea. Muchos de estos argumentos, sin embargo, se contradicen con hechos reales." />
+<meta name="author" content="Palko Karasz" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Palko Karasz" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="europa" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="europa" />
+<meta name="id" content="100000004473569"/>
+<meta name="wordCount" content="1354"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/07/15/voces-de-la-extrema-derecha-por-que-los-europeos-se-alejan-de-los-partidos-tradicionales/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=07&amp;day=15&amp;name=voces-de-la-extrema-derecha-por-que-los-europeos-se-alejan-de-los-partidos-tradicionales">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=18804">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/07\/15\/voces-de-la-extrema-derecha-por-que-los-europeos-se-alejan-de-los-partidos-tradicionales\/"},"headline":"Voces de la extrema derecha: por qu\u00e9 los europeos se alejan de los partidos tradicionales","datePublished":"2016-07-15T20:00:45+00:00","dateModified":"2016-07-15T20:25:14+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/07\/02\/world\/farright-web1\/farright-web1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"La mayor\u00eda de los votantes que se vuelcan a los movimientos extremistas lo hacen por su rechazo a los inmigrantes y por desafiar a la Uni\u00f3n Europea. Muchos de estos argumentos, sin embargo, se contradicen con hechos reales."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/07/15/voces-de-la-extrema-derecha-por-que-los-europeos-se-alejan-de-los-partidos-tradicionales/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/07/13/world/europe/voices-from-europes-far-right.html?_r=0" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/europa" />
+<title>Voces de la extrema derecha: por qué los europeos se alejan de los partidos tradicionales &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/07/13/world/europe/voices-from-europes-far-right.html?_r=0" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/07/15/voces-de-la-extrema-derecha-por-que-los-europeos-se-alejan-de-los-partidos-tradicionales/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-18804 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Voces de la extrema derecha: por qué los europeos se alejan de los partidos tradicionales
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/07/15/voces-de-la-extrema-derecha-por-que-los-europeos-se-alejan-de-los-partidos-tradicionales/"
+					data-title="Noticias: Voces de la extrema derecha: por qué los europeos se alejan de los partidos tradicionales"
+					data-author="POR PALKO KARASZ"
+					data-media=""
+					data-description="La mayoría de los votantes que se vuelcan a los movimientos extremistas lo hacen por su rechazo a los inmigrantes y por desafiar a la Unión Europea. Muchos de estos argumentos, sin embargo, se contradicen con hechos reales."
+					data-publish-date="15 de julio de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2a4Wti2">http://nyti.ms/2a4Wti2</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/europa/">Europa</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Voces de la extrema derecha: por qué los europeos se alejan de los partidos tradicionales</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Palko Karasz</span>
+</span>
+
+					<time class="dateline" datetime="2016-07-15">15 de julio de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/07/15/voces-de-la-extrema-derecha-por-que-los-europeos-se-alejan-de-los-partidos-tradicionales/"
+							data-title="Noticias: Voces de la extrema derecha: por qué los europeos se alejan de los partidos tradicionales"
+							data-author="POR PALKO KARASZ"
+							data-media=""
+							data-description="La mayoría de los votantes que se vuelcan a los movimientos extremistas lo hacen por su rechazo a los inmigrantes y por desafiar a la Unión Europea. Muchos de estos argumentos, sin embargo, se contradicen con hechos reales."
+							data-publish-date="15 de julio de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004506422" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/07/02/world/farright-web1/farright-web1-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/07/02/world/farright-web1/farright-web1-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/07/02/world/farright-web1/farright-web1-superJumbo.jpg" data-mediaviewer-caption="“Nuestra economía no crece al mismo ritmo que el flujo interminable de inmigrantes”, escribió Mikael Jakobsen, de 24 años, estudiante de Derecho en Aarhus, Dinamarca." data-mediaviewer-credit="Michael Drost-Hansen para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/07/02/world/farright-web1/farright-web1-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">“Nuestra economía no crece al mismo ritmo que el flujo interminable de inmigrantes”, escribió Mikael Jakobsen, de 24 años, estudiante de Derecho en Aarhus, Dinamarca.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Michael Drost-Hansen para The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/07/13/world/europe/voices-from-europes-far-right.html?_r=0&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="336" data-total-count="336" id="story-continues-2" tabindex="-1">Hace algunos meses pedimos a los lectores simpatizantes de partidos de extrema derecha en Europa que nos dijeran por qué se habían alejado de los movimientos políticos tradicionales. Recibimos miles de respuestas. La mayoría de ellos mencionaban sus inquietudes frente a la inmigración y un deseo de desafiar a la Unión Europea.</p>
+<p class="story-body-text story-content" data-para-count="325" data-total-count="661" id="story-continues-3" tabindex="-1">A algunos les inquietaba ser identificados como defensores de la extrema derecha, pues argumentan que simplemente están cuestionando una política hegemónica que no refleja sus creencias o experiencias. Además, muchos de los lectores —la mayoría hombres— no quisieron dar sus nombres por miedo a ser estigmatizados.</p>
+<p class="story-body-text story-content" data-para-count="176" data-total-count="837" id="story-continues-4" tabindex="-1">Editamos estas respuestas para mayor brevedad y claridad. Debido a que varios de estos asuntos se discuten mucho en toda Europa, proporcionamos un contexto para cada respuesta.</p>
+<h4 class="story-subheading story-content">Mikael Jakobsen</h4>
+
+<p class="story-body-text story-content" data-para-count="83" data-total-count="920" id="story-continues-6" tabindex="-1"><strong>24 años, estudiante de Derecho en Aarhus, Dinamarca<br />Partido: Partido Popular Danés</strong></p>
+<p class="story-body-text story-content" data-para-count="392" data-total-count="1312" id="story-continues-7" tabindex="-1"><em>La política simbólica de “ayudar” a quienes lo necesitan, invitándolos a llegar sin importar las circunstancias ni la situación económica, no ayuda. Nuestra economía no crece al mismo ritmo que lo hace el flujo interminable de inmigrantes. Para ayudar hay que descubrir la causa del problema y resolverla. Es como comprar baldes cuando el techo gotea en lugar de arreglar el techo.</em></p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="159" data-total-count="1471" id="story-continues-8" tabindex="-1">• Dinamarca, al igual que otros países nórdicos, ha comenzado a recortar los beneficios para los inmigrantes tras el aumento de llegadas el año pasado.</p>
+<p class="story-body-text story-content" data-para-count="197" data-total-count="1668" id="story-continues-9" tabindex="-1">• El parlamento, donde el Partido Popular Danés es la segunda fuerza política, aprobó una <a href="http://www.nytimes.com/es/2016/01/29/los-refugiados-tendran-que-entregar-objetos-de-valor-y-dinero-en-dinamarca/?rref=collection%2Fsectioncollection%2Findex">ley</a> que solicita a los nuevos refugiados entregar objetos de valor para ayudar a pagar su alojamiento.</p>
+<h4 class="story-subheading story-content">Oscar Lind</h4>
+
+<p class="story-body-text story-content" data-para-count="61" data-total-count="1729" id="story-continues-11" tabindex="-1"><strong>43 años, economista, Estocolmo<br />Partido: Demócratas de Suecia</strong></p>
+<p class="story-body-text story-content" data-para-count="378" data-total-count="2107" id="story-continues-12" tabindex="-1"><em>Hay tres cosas que me han hecho pensar en votar por los Demócratas de Suecia, a pesar de que los lazos históricos del partido con la supremacía blanca me parecen repugnantes y no concuerdo con su postura anti Unión Europea y anti-OTAN: la inmigración en masa y las fronteras abiertas, la política de la identidad y la propaganda “institucional” de las dos anteriores.</em></p>
+<p class="story-body-text story-content" data-para-count="421" data-total-count="2528" id="story-continues-13" tabindex="-1"><em>Suecia ha recibido una inmigración masiva en las últimas dos décadas. En lugar de reconocer los problemas relacionados con esta realidad, durante décadas, tanto los partidos dominantes como los medios los han ignorado: los han convertido en responsabilidad del racismo sueco, los han adjudicado a la falta de servicios sociales, o han afirmado que el costo inicial de la inmigración será beneficioso a largo plazo.</em></p>
+<p class="story-body-text story-content" data-para-count="177" data-total-count="2705" id="story-continues-14" tabindex="-1"><em>¿Por qué un trabajador étnicamente sueco querría votar por partidos que consideran a los “hombres blancos” opresores y que con frecuencia denigran su etnia y su cultura?</em></p>
+<p class="story-body-text story-content" data-para-count="361" data-total-count="3066" id="story-continues-15" tabindex="-1">• La inmigración en Suecia ha aumentado a un ritmo constante durante los últimos treinta años. El año pasado se le otorgó la residencia a una cantidad de personas casi diez veces mayor a la de 1980. Aunque el crimen ha aumentado en las últimas décadas, la cantidad de delitos denunciados no ha crecido en proporción con la cantidad de inmigrantes.</p>
+<p class="story-body-text story-content" data-para-count="284" data-total-count="3350" id="story-continues-16" tabindex="-1">• La reputación de Suecia como una de las naciones que mejor recibe a los inmigrantes en Europa está siendo cuestionada. Los ataques contra los inmigrantes de Europa del este han aumentado y, con la llegada de personas de Medio Oriente, ha crecido un sentimiento antiinmigración.</p>
+<figure id="media-100000004506424" class="media photo media-100000004506424 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/07/02/world/farright-web2/farright-web2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-18">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/07/02/world/farright-web2/farright-web2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/07/02/world/farright-web2/farright-web2-superJumbo.jpg" data-mediaviewer-caption="“Only the far-right party is speaking about real problems, e.g., the two largest parties promise to solve Gypsy-related issues (their low education, their low income), but they never do anything.” — Mark Cserepes, 24, a management student in Pecs, Hungary." data-mediaviewer-credit="Akos Stiller for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/07/02/world/farright-web2/farright-web2-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">“Only the far-right party is speaking about real problems, e.g., the two largest parties promise to solve Gypsy-related issues (their low education, their low income), but they never do anything.” — Mark Cserepes, 24, a management student in Pecs, Hungary.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Akos Stiller for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<h4 class="story-subheading story-content">Mark Cserepes</h4>
+
+<p class="story-body-text story-content" data-para-count="107" data-total-count="3457" id="story-continues-19" tabindex="-1"><strong>24 años, estudiante de Administración en Pecs, Hungría<br />Partido: Jobbik, Movimiento por una Hungría Mejor</strong></p>
+<p class="story-body-text story-content" data-para-count="340" data-total-count="3797" id="story-continues-20" tabindex="-1"><em>Como adulto joven, me gustaría votar por algo fresco, con poca o ninguna conexión con el régimen anterior. Solo el partido de extrema derecha está hablando de los problemas reales; por ejemplo, los dos partidos mayoritarios prometen resolver los asuntos relacionados con los gitanos (bajos ingresos y educación), pero nunca hacen nada.</em></p>
+<p class="story-body-text story-content" data-para-count="281" data-total-count="4078" id="story-continues-21" tabindex="-1"><em>Como estudiante de maestría puedo decir que la mayoría de mis amigos, e incluso la mayoría de la gente que conozco, piensa igual que yo. Quieren apoyar algo nuevo, porque ni la Unión Cívica Húngara ni el Partido Socialista funcionan, y quisiéramos ver que el país progresa.</em></p>
+<p class="story-body-text story-content" data-para-count="176" data-total-count="4254" id="story-continues-22" tabindex="-1">• La retórica antisistema está en el centro de las políticas del movimiento Jobbik. Ganó relevancia durante las protestas callejeras violentas contra el gobierno en 2006.</p>
+<p class="story-body-text story-content" data-para-count="307" data-total-count="4561" id="story-continues-23" tabindex="-1">• Quienes apoyan a Jobbik alaban su postura frontal sobre temas como lo que el partido llama los “criminales gitanos”, de quienes dicen que son especialmente propensos a cometer delitos menores. Los estudios señalan que la pobreza y la exclusión social, no la etnia, son el origen de los crímenes.</p>
+<h4 class="story-subheading story-content">Samuel Teodosio</h4>
+
+<p class="story-body-text story-content" data-para-count="70" data-total-count="4631" id="story-continues-25" tabindex="-1"><strong>28 años, analista de negocios, Lille, Francia<br />Partido: Frente Nacional</strong></p>
+<p class="story-body-text story-content" data-para-count="552" data-total-count="5183" id="story-continues-26" tabindex="-1"><em>Me gusta Europa y tengo muchos amigos de otros países de Europa, pero esto no cambia el hecho de que yo sienta que no pertenezco a Europa, en particular a la Europa que nos quiere vender el proyecto de la Unión Europea. Pienso que el futuro de Francia está en África y en nuestros vecinos europeos más cercanos, que es algo que abraza el Frente Nacional: una Francia realmente independiente que trabaja para forjar su propio destino. Quizá no adopto todas las soluciones y propuestas del partido, pero todo comienza y termina con la soberanía.</em></p>
+<p class="story-body-text story-content" data-para-count="150" data-total-count="5333" id="story-continues-27" tabindex="-1">• Bajo el liderazgo de Marine Le Pen, el Frente Nacional se ha separado de su pasado radical y se ha esforzado por captar un electorado más amplio.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="173" data-total-count="5506" id="story-continues-28" tabindex="-1">• Después de que el Reino Unido decidiera dejar la Unión Europea, Le Pen manifestó su fuerte apoyo al <a href="https://www.nytimes.com/es/2016/06/30/marine-le-pen-la-reciente-decision-de-los-britanicos-fue-una-verdadera-muestra-de-valor/"><em>brexit</em></a> y pidió llevar a cabo referendos similares en toda Europa.</p>
+<figure id="media-100000004426502" class="media photo media-100000004426502 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/21/world/21FarRight-Greece/21FarRight-Greece-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-30">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/21/world/21FarRight-Greece/21FarRight-Greece-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/21/world/21FarRight-Greece/21FarRight-Greece-superJumbo.jpg" data-mediaviewer-caption="Supporters of the Golden Dawn party at a rally in Athens in 2015." data-mediaviewer-credit="Angelos Tzortzinis/Agence France-Presse — Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/21/world/21FarRight-Greece/21FarRight-Greece-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Supporters of the Golden Dawn party at a rally in Athens in 2015.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Angelos Tzortzinis/Agence France-Presse — Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<h4 class="story-subheading story-content">Robert Meyer</h4>
+
+<p class="story-body-text story-content" data-para-count="86" data-total-count="5592" id="story-continues-31" tabindex="-1"><strong>58 años, escritor técnico, Dieburg, Alemania<br />Partido: <a href="http://www.nytimes.com/es/2016/03/10/frauke-petry-la-nueva-cara-de-la-extrema-derecha-en-alemania/?rref=collection%2Fsectioncollection%2Findex">Alternativa para Alemania</a> (AfD)</strong></p>
+<p class="story-body-text story-content" data-para-count="581" data-total-count="6173" id="story-continues-32" tabindex="-1"><em>Al ver a 800.000 inmigrantes ilegales vagar por el país, y al ver que Alemania le permite a esta gente ignorar las leyes y hacer lo que le plazca, me di cuenta de que los países que no pueden controlar sus fronteras (o no quieren, debido a ideas ingenuas y equivocada sobre los “derechos humanos”) están condenados, a menos que las personas que sí pagan impuestos y hacen que las cosas funcionen tengan voz en el asunto. Se trata de una nueva “mayoría silenciosa” que ha sido intimidada por la prensa liberal y los políticos cobardes. Es tiempo de terminar con esto.</em></p>
+<p class="story-body-text story-content" data-para-count="137" data-total-count="6310" id="story-continues-33" tabindex="-1">• Más de un millón de migrantes han llegado a Alemania desde el año pasado, pero el gobierno enfatiza que se quedarán muchos menos.</p>
+<p class="story-body-text story-content" data-para-count="190" data-total-count="6500" id="story-continues-34" tabindex="-1">• Una gran cantidad de votantes siente que alojar a inmigrantes en sus comunidades es una carga impuesta por las autoridades, a quienes no les importan las consecuencias de esta realidad.</p>
+<h4 class="story-subheading story-content">Werner Farkas</h4>
+
+<p class="story-body-text story-content" data-para-count="95" data-total-count="6595" id="story-continues-36" tabindex="-1"><strong>36 años, supervisor de construcciones, Viena<br />Partido: Partido de la Libertad de Austria (FPÖ). </strong></p>
+<p class="story-body-text story-content" data-para-count="145" data-total-count="6740" id="story-continues-37" tabindex="-1">El candidato del FPÖ, Norbert Hofer, podría convertirse en presidente en una segunda vuelta de las elecciones que se llevará a cabo este año.</p>
+<p class="story-body-text story-content" data-para-count="280" data-total-count="7020" id="story-continues-38" tabindex="-1"><em>Voté por el FPÖ por muchas razones relacionadas con los extranjeros, aunque en la mayoría de los casos ellos no tienen la culpa. Nuestro gobierno es responsable del odio contra los extranjeros, porque muchos austriacos se sienten ciudadanos de segunda clase en su propio país.</em></p>
+<p class="story-body-text story-content" data-para-count="392" data-total-count="7412" id="story-continues-39" tabindex="-1"><em>En Austria es obligatorio que los jóvenes hagan el servicio militar. Si no has terminado tu servicio militar, es casi imposible conseguir un empleo. Así que cuando tuve que dejarlo por problemas de presión arterial, me vi obligado a solicitar asistencia social. Como no había trabajado antes, solo obtuve el mínimo: 313 euros al mes. Los refugiados en cambio reciben 700 euros mensuales.</em></p>
+<p class="story-body-text story-content" data-para-count="277" data-total-count="7689" id="story-continues-40" tabindex="-1">• El año pasado casi 90.000 personas solicitaron asilo en Austria, un país de 8,6 millones de habitantes: tres veces más que el año anterior y la cifra más grande desde 1956-1957, cuando 170.000 húngaros, que huían de las represalias soviéticas, cruzaron la frontera.</p>
+<p class="story-body-text story-content" data-para-count="258" data-total-count="7947" id="story-continues-41" tabindex="-1">• Austria brinda asistencia social a los residentes legales y a las personas con estatus de refugiado: los ayuda con hasta 837 euros (925 dólares) al mes. Quienes piden asilo y están esperando el veredicto reciben un máximo de 320 euros (354 dólares).</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/europa/" rel="tag">Europa</a>, <a href="https://www.nytimes.com/es/tag/extrema-derecha/" rel="tag">Extrema Derecha</a>, <a href="https://www.nytimes.com/es/tag/frente-nacional/" rel="tag">Frente Nacional</a>, <a href="https://www.nytimes.com/es/tag/racismo/" rel="tag">racismo</a>, <a href="https://www.nytimes.com/es/tag/union-europea/" rel="tag">Union Europea</a>, <a href="https://www.nytimes.com/es/tag/xenofobia/" rel="tag">xenofobia</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/07/15/voces-de-la-extrema-derecha-por-que-los-europeos-se-alejan-de-los-partidos-tradicionales/"
+				data-title="Noticias: Voces de la extrema derecha: por qué los europeos se alejan de los partidos tradicionales"
+				data-author="POR PALKO KARASZ"
+				data-media=""
+				data-description="La mayoría de los votantes que se vuelcan a los movimientos extremistas lo hacen por su rechazo a los inmigrantes y por desafiar a la Unión Europea. Muchos de estos argumentos, sin embargo, se contradicen con hechos reales."
+				data-publish-date="15 de julio de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/06/30/marine-le-pen-la-reciente-decision-de-los-britanicos-fue-una-verdadera-muestra-de-valor/">
+					<div class="story-body">
+						<h3 class="kicker">Europa</h3>
+
+						<h2 class="headline">
+							<span class="title">Marine Le Pen: &#8216;La reciente decisión de los británicos fue una verdadera muestra de valor&#8217;</span>
+							<time class="dateline">30 de junio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/06/28/opinion/28lepen/28lepen-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/06/25/de-trump-al-brexit-el-populismo-es-protagonista-en-europa-y-estados-unidos/">
+					<div class="story-body">
+						<h3 class="kicker">Europa</h3>
+
+						<h2 class="headline">
+							<span class="title">De Trump al ‘brexit&#8217;: el populismo es protagonista en Europa y Estados Unidos</span>
+							<time class="dateline">25 de junio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/06/25/world/25europe-web2/25europe-web2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/07/13/entrevista-el-choque-entre-nacionalismo-y-globalizacion-definira-el-siglo-xxi/">
+					<div class="story-body">
+						<h3 class="kicker">Internacional</h3>
+
+						<h2 class="headline">
+							<span class="title">Entrevista: El choque entre nacionalismo y globalización definirá el siglo XXI</span>
+							<time class="dateline">13 de julio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/07/09/world/09int-Ignatieff-web1/09int-Ignatieff-web1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/10/frauke-petry-la-nueva-cara-de-la-extrema-derecha-en-alemania/">
+					<div class="story-body">
+						<h3 class="kicker">Europa</h3>
+
+						<h2 class="headline">
+							<span class="title">Frauke Petry, la nueva cara de la extrema derecha en Alemania</span>
+							<time class="dateline">10 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/10/business/10GERMANY-web1/10GERMANY-web1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":978,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

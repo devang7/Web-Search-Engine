@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content=""/>
+<meta name="hdl" content="Un programa antidrogas para jóvenes que parece que sí funciona" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20161007" />
+<meta name="utime" content="20161007180029" />
+<meta name="ptime" content="20161007180029" />
+<meta name="DISPLAYDATE" content="Oct. 7, 2016" />
+<meta name="dat" content="Oct. 7, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="un-programa-antidrogas-para-jovenes-que-parece-que-si-funciona" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/10/07/un-programa-antidrogas-para-jovenes-que-parece-que-si-funciona/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Un programa antidrogas para jóvenes que parece que sí funciona" />
+<meta property="og:description" content="Un programa que identifica a estudiantes con alto riesgo de caer en las drogas, mediante estudios de personalidad y talleres, se ha probado con éxito en países como el Reino Unido, los Países Bajos y Canadá." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/09/28/science/28ADDICTION28-INYT/28ADDICTION28-INYT-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-10-07" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/10/07/un-programa-antidrogas-para-jovenes-que-parece-que-si-funciona/" />
+<meta property="twitter:title" content="Un programa antidrogas para jóvenes que parece que sí funciona" />
+<meta property="twitter:description" content="Un programa que identifica a estudiantes con alto riesgo de caer en las drogas, mediante estudios de personalidad y talleres, se ha probado con éxito en países como el Reino Unido, los Países Bajos y Canadá." />
+<meta name="author" content="Maia Szalavitz" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Maia Szalavitz" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="vida" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="vida" />
+<meta name="id" content=""/>
+<meta name="wordCount" content="1251"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/10/07/un-programa-antidrogas-para-jovenes-que-parece-que-si-funciona/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=10&amp;day=07&amp;name=un-programa-antidrogas-para-jovenes-que-parece-que-si-funciona">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=27228">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/10\/07\/un-programa-antidrogas-para-jovenes-que-parece-que-si-funciona\/"},"headline":"Un programa antidrogas para j\u00f3venes que parece que s\u00ed funciona","datePublished":"2016-10-07T18:00:29+00:00","dateModified":"2016-10-10T09:55:19+00:00","author":{"@type":"Person","name":"paulina.chavira"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/09\/28\/science\/28ADDICTION28-INYT\/28ADDICTION28-INYT-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Un programa que identifica a estudiantes con alto riesgo de caer en las drogas, mediante estudios de personalidad y talleres, se ha probado con \u00e9xito en pa\u00edses como el Reino Unido, los Pa\u00edses Bajos y Canad\u00e1."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/10/07/un-programa-antidrogas-para-jovenes-que-parece-que-si-funciona/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/10/04/well/family/the-4-traits-that-put-kids-at-risk-for-addiction.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/vida" />
+<title>Un programa antidrogas para jóvenes que parece que sí funciona &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/10/04/well/family/the-4-traits-that-put-kids-at-risk-for-addiction.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/10/07/un-programa-antidrogas-para-jovenes-que-parece-que-si-funciona/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-27228 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Un programa antidrogas para jóvenes que parece que sí funciona
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/10/07/un-programa-antidrogas-para-jovenes-que-parece-que-si-funciona/"
+					data-title="Noticias: Un programa antidrogas para jóvenes que parece que sí funciona"
+					data-author="POR MAIA SZALAVITZ"
+					data-media=""
+					data-description="Un programa que identifica a estudiantes con alto riesgo de caer en las drogas, mediante estudios de personalidad y talleres, se ha probado con éxito en países como el Reino Unido, los Países Bajos y Canadá."
+					data-publish-date="7 de octubre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2d9wc1N">http://nyti.ms/2d9wc1N</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/vida/">Vida</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Un programa antidrogas para jóvenes que parece que sí funciona</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Maia Szalavitz</span>
+</span>
+
+					<time class="dateline" datetime="2016-10-07">7 de octubre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/10/07/un-programa-antidrogas-para-jovenes-que-parece-que-si-funciona/"
+							data-title="Noticias: Un programa antidrogas para jóvenes que parece que sí funciona"
+							data-author="POR MAIA SZALAVITZ"
+							data-media=""
+							data-description="Un programa que identifica a estudiantes con alto riesgo de caer en las drogas, mediante estudios de personalidad y talleres, se ha probado con éxito en países como el Reino Unido, los Países Bajos y Canadá."
+							data-publish-date="7 de octubre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004671489" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/28/science/28ADDICTION28-INYT/28ADDICTION28-INYT-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/28/science/28ADDICTION28-INYT/28ADDICTION28-INYT-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/28/science/28ADDICTION28-INYT/28ADDICTION28-INYT-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Stuart Bradford"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/28/science/28ADDICTION28-INYT/28ADDICTION28-INYT-master1050.jpg"/>
+		<meta itemprop="height" content="736" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Stuart Bradford
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/10/04/well/family/the-4-traits-that-put-kids-at-risk-for-addiction.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="271" data-total-count="271" id="story-continues-2" tabindex="-1">La educación sobre las drogas es la única parte del programa de secundaria que recuerdo: tal vez por que resultó contraproducente de manera tan espectacular. Antes de cumplir la edad que hoy en día marca la ley para beber alcohol, yo ya consumía cocaína y heroína.</p>
+<p class="story-body-text story-content" data-para-count="217" data-total-count="488" id="story-continues-3" tabindex="-1">Me he recuperado de la adicción y ahora hay investigadores tratando de desarrollar programas de prevención innovadores para ayudar a los niños que están en riesgo a que tomen un camino diferente del que yo elegí.</p>
+<p class="story-body-text story-content" data-para-count="542" data-total-count="1030" id="story-continues-4" tabindex="-1">Desarrollar un programa antidrogas público que realmente funcione no ha sido fácil. Muchos de nosotros crecimos con programas contra las drogas como el <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3706520/" target=" blank">DARE</a> (Educación en la resistencia al abuso de las drogas, por su sigla en inglés) o la campaña surgida de la inspiración de Nancy Reagan, “Just Say No”. Sin embargo, la investigación muestra que esos programas y otros parecidos, que dependen de la educación y tácticas de miedo, fueron inefectivos e <a href="https://www.scientificamerican.com/article/why-just-say-no-doesnt-work/" target="_blank">hicieron muy poco</a> por detener el consumo de drogas en niños con alto riesgo.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="615" data-total-count="1645" id="story-continues-5" tabindex="-1">Ahora, un nuevo programa contra las drogas que se ha puesto a prueba en Europa, Australia y Canadá se muestra prometedor. El programa, llamado Preventure, elaborado por Patricia Conrod, profesora de psiquiatría de la Universidad de Montreal, reconoce cómo el temperamento de un niño está relacionado con su riesgo de consumir drogas, cómo esas características distintivas generan varios caminos hacia la adicción. Las primeras pruebas muestran que los estudios de personalidad pueden identificar al <a href="https://www.ncbi.nlm.nih.gov/pubmed/22974180" target="_blank">90 por ciento</a> de los niños con riesgo más alto y así es posible atenderlos antes de que causen problemas.</p>
+<p class="story-body-text story-content" data-para-count="221" data-total-count="1866" id="story-continues-6" tabindex="-1">Al reconocer que la mayoría de los adolescentes que prueben el alcohol, la cocaína, los opiodes o las metanfetaminas no se volverán adictos, es posible enfocarse en qué tiene de diferente la minoría que sí se hará.</p>
+<p class="story-body-text story-content" data-para-count="315" data-total-count="2181" id="story-continues-7" tabindex="-1">Las características que ponen a los chicos en mayor riesgo de desarrollar una adicción no son las que esperaríamos. En mi caso, yo parecía una candidata improbable para caer en una adicción. Mi desempeño académico era excelente, me portaba bien en clase y participaba en varias actividades extracurriculares.</p>
+<p class="story-body-text story-content" data-para-count="157" data-total-count="2338" id="story-continues-8" tabindex="-1">Pero sufría de soledad, ansiedad y sobrecarga sensorial. Los mismos rasgos que me hacían “dotada” para lo académico me hacían torpe con las personas.</p>
+<p class="story-body-text story-content" data-para-count="291" data-total-count="2629" id="story-continues-9" tabindex="-1">Por eso, cuando mi profesor de salud dijo que la presión de los compañeros podría empujar a alguien a consumir drogas, lo que yo escuché fue: “Las drogas te harán <em>cool</em>”. Para alguien que se sentía excluida, esto hizo que las sustancias psicoactivas fueran tremendamente atractivas.</p>
+<p class="story-body-text story-content" data-para-count="66" data-total-count="2695" id="story-continues-10" tabindex="-1">Las pruebas de personalidad de Preventure van todavía más lejos.</p>
+<p class="story-body-text story-content" data-para-count="131" data-total-count="2826" id="story-continues-11" tabindex="-1">Se enfocan en cuatro características de riesgo: búsqueda de sensaciones, impulsividad, sensibilidad a la ansiedad y desesperanza.</p>
+<p class="story-body-text story-content" data-para-count="421" data-total-count="3247" id="story-continues-12" tabindex="-1">Cabe destacar que la mayoría de los niños en riesgo pueden detectarse pronto. Por ejemplo, a mí en preescolar me diagnosticaron trastorno por déficit de atención e hiperactividad (TDAH), lo que incrementa tres veces el riesgo de desarrollar una adicción a drogas ilegales. Mi dificultad para regular mis emociones y mi alta sensibilidad atraían a los bravucones. Luego, mi aislamiento me condujo a la desesperanza.</p>
+<p class="story-body-text story-content" data-para-count="152" data-total-count="3399" id="story-continues-13" tabindex="-1">Un chico que comienza a consumir drogas por una sensación de desesperanza, como yo, por ejemplo, tiene una meta muy distinta de uno que busca emoción. </p>
+<p class="story-body-text story-content" data-para-count="448" data-total-count="3847" id="story-continues-14" tabindex="-1">Tres de los cuatro rasgos que Preventure identifica se vinculan con problemas de salud mental, un factor de riesgo crucial para desarrollar adicciones. La impulsividad, por ejemplo, es común entre las personas con TDAH, y la desesperanza a menudo es un precursor de la depresión. La sensibilidad a la ansiedad, que significa estar muy al pendiente de los signos físicos de la ansiedad y asustarse por ellos, está ligada al trastorno de pánico.</p>
+<p class="story-body-text story-content" data-para-count="244" data-total-count="4091" id="story-continues-15" tabindex="-1">Aunque la búsqueda de sensaciones no está asociada con otros diagnósticos, genera riesgo de desarrollar adicciones por la obvia razón de que a las personas que tienden a desear experiencias intensas muy seguramente les gustarán las drogas.</p>
+<p class="story-body-text story-content" data-para-count="437" data-total-count="4528" id="story-continues-16" tabindex="-1">Preventure comienza con una capacitación intensiva de dos a tres días para los docentes, a quienes se les imparte un curso relámpago de técnicas terapéuticas probadas para combatir los problemas psicológicos. La idea es prevenir que la gente con personalidad solitaria se empantane en un desorden de pensamientos que pudiera terminar en un diagnóstico o, en el caso de los buscadores de sensaciones, llevar a conductas peligrosas.</p>
+<p class="story-body-text story-content" data-para-count="379" data-total-count="4907" id="story-continues-17" tabindex="-1">Al inicio del año escolar, los alumnos de secundaria pasan por una prueba de personalidad para identificar a los excluidos. Unos meses después se ofrecen a toda la escuela, pero con cupo limitado, dos talleres de 90 minutos que se presentan como un curso de encaminar la personalidad hacia el éxito. La abrumadora mayoría de los estudiantes se inscriben, dice la Dra. Conrod.</p>
+<p class="story-body-text story-content" data-para-count="268" data-total-count="5175" id="story-continues-18" tabindex="-1">Aunque la selección, aparentemente, se hace al azar, solo aquellos con puntuaciones extremas en la prueba (que ha mostrado detectar al 90 por ciento de quienes están en riesgo) realmente asisten. A ellos los asignan al taller más enfocado en su rasgo problemático.</p>
+<p class="story-body-text story-content" data-para-count="251" data-total-count="5426" id="story-continues-19" tabindex="-1">El motivo por el que fueron seleccionados no se divulga en principio. Si los estudiantes preguntan, se les brinda información honesta; sin embargo, la mayoría no lo hace y, por lo general, notifican que los talleres les fueron pertinentes y útiles.</p>
+<p class="story-body-text story-content" data-para-count="174" data-total-count="5600" id="story-continues-20" tabindex="-1">“No se etiqueta”, explica la Dra. Conrod. Eso reduce la posibilidad de que los chicos conviertan una etiqueta como “alto riesgo” en una profecía de autocumplimiento.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="190" data-total-count="5790" id="story-continues-21" tabindex="-1">En los talleres se enseña a los alumnos técnicas conductuales cognitivas para enfrentar problemas emocionales y de comportamiento específicos, y se les anima a utilizar esas herramientas.</p>
+<p class="story-body-text story-content" data-para-count="260" data-total-count="6050" id="story-continues-22" tabindex="-1">Preventa se ha puesto a prueba en ocho estudios aleatorios en el Reino Unido, Australia, los Países Bajos y Canadá, donde se ha encontrado una reducción en la ingesta desmedida de alcohol, consumo frecuente de drogas y problemas relacionados con el alcohol.</p>
+<p class="story-body-text story-content" data-para-count="466" data-total-count="6516" id="story-continues-23" tabindex="-1">Un estudio publicado en JAMA Psychiatry en 2013 incluyó a más de 2600 chicos de 13 y 14 años de 21 escuelas en el Reino Unido, la mitad de los cuales se seleccionaron aleatoriamente para entrar al programa. En general, Preventure redujo el consumo de alcohol en las escuelas escogidas en un 29 por ciento, incluso entre quienes no asistieron a los talleres. Entre los chicos de alto riesgo que asistieron, el consumo desmedido de alcohol disminuyó 43 por ciento. </p>
+<p class="story-body-text story-content" data-para-count="375" data-total-count="6891" id="story-continues-24" tabindex="-1">La Dra. Conrod sostiene que es posible que Preventure tuviera efecto en quienes no participaron al reducir la presión ejercida por los estudiantes de alto riesgo. También sospecha que la capacitación de los maestros los hizo más empáticos con los estudiantes de alto riesgo, lo que pudo aumentar la conexión escolar, un factor que, se sabe, reduce el consumo de drogas.</p>
+<p class="story-body-text story-content" data-para-count="177" data-total-count="7068" id="story-continues-25" tabindex="-1">Algunos estudios que se realizaron en 2009 y 2013 también mostraron que Preventure disminuyó los síntomas de depresión, los ataques de pánico y el comportamiento impulsivo.</p>
+<p class="story-body-text story-content" data-para-count="225" data-total-count="7293" id="story-continues-26" tabindex="-1">Para los chicos con rasgos de personalidad que los ponen en riesgo, aprender cómo manejar las características que nos hacen distintos y a menudo difíciles podría cambiar una trayectoria que quizá terminaría en tragedia.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Maia Szalavitz is autora de "Unbroken Brain: A Revolutionary New Way of Understanding Addiction".</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/adicciones/" rel="tag">adicciones</a>, <a href="https://www.nytimes.com/es/tag/combate-a-las-drogas/" rel="tag">combate a las drogas</a>, <a href="https://www.nytimes.com/es/tag/drogas/" rel="tag">Drogas</a>, <a href="https://www.nytimes.com/es/tag/escuela/" rel="tag">escuela</a>, <a href="https://www.nytimes.com/es/tag/estudiantes/" rel="tag">estudiantes</a>, <a href="https://www.nytimes.com/es/tag/preventure/" rel="tag">Preventure</a>, <a href="https://www.nytimes.com/es/tag/secundaria/" rel="tag">secundaria</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/10/07/un-programa-antidrogas-para-jovenes-que-parece-que-si-funciona/"
+				data-title="Noticias: Un programa antidrogas para jóvenes que parece que sí funciona"
+				data-author="POR MAIA SZALAVITZ"
+				data-media=""
+				data-description="Un programa que identifica a estudiantes con alto riesgo de caer en las drogas, mediante estudios de personalidad y talleres, se ha probado con éxito en países como el Reino Unido, los Países Bajos y Canadá."
+				data-publish-date="7 de octubre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/07/01/es-posible-superar-una-adiccion/">
+					<div class="story-body">
+						<h3 class="kicker">Comentario</h3>
+
+						<h2 class="headline">
+							<span class="title">¿Es posible superar una adicción?</span>
+							<time class="dateline">1 de julio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/06/26/opinion/sunday/26szalavitz/26szalavitz-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/06/20/la-nueva-adiccion-de-los-adolescentes-el-me-gusta/">
+					<div class="story-body">
+						<h3 class="kicker">Ciencia</h3>
+
+						<h2 class="headline">
+							<span class="title">La nueva adicción de los adolescentes: el &#8216;me gusta&#8217;</span>
+							<time class="dateline">20 de junio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/06/10/science/wellfacebook/wellfacebook-thumbStandard-v3.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/10/06/de-colombia-al-reino-unido-por-que-los-referendos-no-son-tan-democraticos-como-parecen/">
+					<div class="story-body">
+						<h3 class="kicker">Análisis</h3>
+
+						<h2 class="headline">
+							<span class="title">De Colombia al Reino Unido: por qué los referendos no son tan democráticos como parecen</span>
+							<time class="dateline">6 de octubre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/10/04/world/05int-colombia/05int-colombia-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/10/05/google-presento-pixel-su-primer-celular/">
+					<div class="story-body">
+						<h3 class="kicker">Tecnología</h3>
+
+						<h2 class="headline">
+							<span class="title">Google presentó Pixel, su primer celular</span>
+							<time class="dateline">5 de octubre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/10/05/business/05GOOGLE-2/05GOOGLE-2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":798,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

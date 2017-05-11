@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004435468"/>
+<meta name="hdl" content="Ante la presión ciudadana, México se prepara para debatir una estricta ley anticorrupción" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20160529" />
+<meta name="utime" content="20160529135552" />
+<meta name="ptime" content="20160529135552" />
+<meta name="DISPLAYDATE" content="May. 29, 2016" />
+<meta name="dat" content="May. 29, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="ante-la-presion-ciudadana-mexico-se-prepara-para-debatir-una-estricta-ley-anticorrupcion" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/05/29/ante-la-presion-ciudadana-mexico-se-prepara-para-debatir-una-estricta-ley-anticorrupcion/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Ante la presión ciudadana, México se prepara para debatir una estricta ley anticorrupción" />
+<meta property="og:description" content="El lunes el congreso mexicano debatirá una iniciativa llamada &quot;3 de 3&quot;. La ley obligaría a todos los servidores públicos a presentar su declaración de intereses, su declaración patrimonial y su declaración de impuestos. " />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/05/29/universal/es/MEXICOCORRUPT/MEXICOCORRUPT-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-05-29" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/05/29/ante-la-presion-ciudadana-mexico-se-prepara-para-debatir-una-estricta-ley-anticorrupcion/" />
+<meta property="twitter:title" content="Ante la presión ciudadana, México se prepara para debatir una estricta ley anticorrupción" />
+<meta property="twitter:description" content="El lunes el congreso mexicano debatirá una iniciativa llamada &quot;3 de 3&quot;. La ley obligaría a todos los servidores públicos a presentar su declaración de intereses, su declaración patrimonial y su declaración de impuestos. " />
+<meta name="author" content="Kirk Semple" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Kirk Semple" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="mexico" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="mexico" />
+<meta name="id" content="100000004435468"/>
+<meta name="wordCount" content="1201"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/05/29/ante-la-presion-ciudadana-mexico-se-prepara-para-debatir-una-estricta-ley-anticorrupcion/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=05&amp;day=29&amp;name=ante-la-presion-ciudadana-mexico-se-prepara-para-debatir-una-estricta-ley-anticorrupcion">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=13324">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/05\/29\/ante-la-presion-ciudadana-mexico-se-prepara-para-debatir-una-estricta-ley-anticorrupcion\/"},"headline":"Ante la presi\u00f3n ciudadana, M\u00e9xico se prepara para debatir una estricta ley anticorrupci\u00f3n","datePublished":"2016-05-29T13:55:52+00:00","dateModified":"2016-07-27T18:00:49+00:00","author":{"@type":"Person","name":"Elias Lopez"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/05\/29\/universal\/es\/MEXICOCORRUPT\/MEXICOCORRUPT-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"El lunes el congreso mexicano debatir\u00e1 una iniciativa llamada \"3 de 3\". La ley obligar\u00eda a todos los servidores p\u00fablicos a presentar su declaraci\u00f3n de intereses, su declaraci\u00f3n patrimonial y su declaraci\u00f3n de impuestos. "}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/05/29/ante-la-presion-ciudadana-mexico-se-prepara-para-debatir-una-estricta-ley-anticorrupcion/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/05/29/world/americas/grass-roots-anticorruption-drive-puts-heat-on-mexican-lawmakers.html?_r=0" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="americalatina/mexico" />
+<title>Ante la presión ciudadana, México se prepara para debatir una estricta ley anticorrupción &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/05/29/world/americas/grass-roots-anticorruption-drive-puts-heat-on-mexican-lawmakers.html?_r=0" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/05/29/ante-la-presion-ciudadana-mexico-se-prepara-para-debatir-una-estricta-ley-anticorrupcion/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-13324 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				Ante la presión ciudadana, México se prepara para debatir una estricta ley anticorrupción
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/05/29/ante-la-presion-ciudadana-mexico-se-prepara-para-debatir-una-estricta-ley-anticorrupcion/"
+					data-title="América Latina: Ante la presión ciudadana, México se prepara para debatir una estricta ley anticorrupción"
+					data-author="POR KIRK SEMPLE"
+					data-media=""
+					data-description="El lunes el congreso mexicano debatirá una iniciativa llamada &quot;3 de 3&quot;. La ley obligaría a todos los servidores públicos a presentar su declaración de intereses, su declaración patrimonial y su declaración de impuestos. "
+					data-publish-date="29 de mayo de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/1U5Jdo9">http://nyti.ms/1U5Jdo9</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/mexico/">México</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Ante la presión ciudadana, México se prepara para debatir una estricta ley anticorrupción</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Kirk Semple</span>
+</span>
+
+					<time class="dateline" datetime="2016-05-29">29 de mayo de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/05/29/ante-la-presion-ciudadana-mexico-se-prepara-para-debatir-una-estricta-ley-anticorrupcion/"
+							data-title="América Latina: Ante la presión ciudadana, México se prepara para debatir una estricta ley anticorrupción"
+							data-author="POR KIRK SEMPLE"
+							data-media=""
+							data-description="El lunes el congreso mexicano debatirá una iniciativa llamada &quot;3 de 3&quot;. La ley obligaría a todos los servidores públicos a presentar su declaración de intereses, su declaración patrimonial y su declaración de impuestos. "
+							data-publish-date="29 de mayo de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004441596" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/29/universal/es/MEXICOCORRUPT/MEXICOCORRUPT-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/29/universal/es/MEXICOCORRUPT/MEXICOCORRUPT-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/29/universal/es/MEXICOCORRUPT/MEXICOCORRUPT-superJumbo.jpg" data-mediaviewer-caption="El presidente Enrique Peña Nieto firmó el año pasado una reforma constitucional que plantea la creación de un Sistema Nacional Anticorrupción. " data-mediaviewer-credit="Geert Vanden Wijngaert/Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/29/universal/es/MEXICOCORRUPT/MEXICOCORRUPT-master1050.jpg"/>
+		<meta itemprop="height" content="698" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">El presidente Enrique Peña Nieto firmó el año pasado una reforma constitucional que plantea la creación de un Sistema Nacional Anticorrupción. </span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Geert Vanden Wijngaert/Associated Press
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/05/29/world/americas/grass-roots-anticorruption-drive-puts-heat-on-mexican-lawmakers.html?_r=0&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="167" data-total-count="167" id="story-continues-2" tabindex="-1">CIUDAD DE MÉXICO — La corrupción está tan arraigada en la vida cotidiana de <a href="http://topics.nytimes.com/top/news/international/countriesandterritories/mexico/index.html?inline=nyt-geo&amp;version=meter+at+0&amp;module=meter-Links&amp;pgtype=article&amp;contentId=&amp;mediaId=&amp;referrer=&amp;priority=true&amp;action=click&amp;contentCollection=meter-links-click">México</a> que se ha consagrado en un dicho conocido: “El que no transa, no avanza”.</p>
+<p class="story-body-text story-content" data-para-count="152" data-total-count="319" id="story-continues-3" tabindex="-1">Las “mordidas”, como los mexicanos llaman a los sobornos, son el precio que hay que pagar para hacer negocios y son parte invisible del presupuesto.</p>
+<p class="story-body-text story-content" data-para-count="172" data-total-count="491" id="story-continues-4" tabindex="-1">Sin embargo, un paquete de medidas anticorrupción presentado ante el congreso podría constituir un cambio decisivo en la relación que tiene el país con la corrupción.</p>
+<p class="story-body-text story-content" data-para-count="397" data-total-count="888" id="story-continues-5" tabindex="-1">La parte más importante es una ambiciosa iniciativa, promovida por la sociedad civil, para imponer normas de transparencia a todos los empleados gubernamentales, sea cual sea su nivel. La iniciativa, llamada “3 de 3”, haría necesario que los servidores públicos presentaran declaraciones patrimoniales y de posibles conflictos de interés, además de comprobar que están pagando impuestos.</p>
+<p class="story-body-text story-content" data-para-count="243" data-total-count="1131" id="story-continues-6" tabindex="-1">De aprobarse, la iniciativa (que también obligaría a los familiares cercanos de los funcionarios públicos a revelar su patrimonio) se encontraría entre las medidas de transparencia de mayor envergadura en el mundo, aseguran sus promotores.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="180" data-total-count="1311" id="story-continues-7" tabindex="-1">“México tiene que aspirar a lo mejor”, dijo Eduardo Bohórquez, uno de los principales autores de la iniciativa de ley y director ejecutivo del grupo Transparencia Mexicana.</p>
+<p class="story-body-text story-content" data-para-count="49" data-total-count="1360" id="story-continues-8" tabindex="-1">No obstante, el paquete está en la cuerda floja.</p>
+<p class="story-body-text story-content" data-para-count="357" data-total-count="1717" id="story-continues-9" tabindex="-1">El congreso terminó su periodo ordinario de sesiones a finales de abril sin tomar medidas para votar la propuesta. Los legisladores, teniendo en cuenta que el próximo domingo 5 de junio habrá elecciones para gobernador en 12 estados, se negaron a convocar a una sesión extraordinaria para debatir el asunto y aplazaron la sesión para mediados de junio.</p>
+<p class="story-body-text story-content" data-para-count="117" data-total-count="1834" id="story-continues-10" tabindex="-1">En días recientes, sin embargo, el clamor público obligó a los legisladores a programar el debate para este lunes.</p>
+<p class="story-body-text story-content" data-para-count="309" data-total-count="2143" id="story-continues-11" tabindex="-1">La iniciativa “3 de 3” es resultado de un esfuerzo encomiable de la sociedad civil. En 2014, una reforma a la constitución mexicana permitió a los ciudadanos proponer leyes con el apoyo de por lo menos 120.000 firmas validadas. Antes de eso, solo el presidente y los congresistas podían proponer leyes.</p>
+<p class="story-body-text story-content" data-para-count="48" data-total-count="2191" id="story-continues-12" tabindex="-1">La medida logró obtener más de 630.000 firmas.</p>
+<p class="story-body-text story-content" data-para-count="218" data-total-count="2409" id="story-continues-13" tabindex="-1">También recibió el apoyo de asociaciones empresariales de gran influencia. Algunos analistas especulan que los empresarios apoyan la ley porque los sobornos que pagan las empresas tal vez hayan mermado sus ganancias.</p>
+<p class="story-body-text story-content" data-para-count="260" data-total-count="2669" id="story-continues-14" tabindex="-1">“Está claro que se trata de un acontecimiento histórico en lo que respecta a la movilización de la sociedad civil”, expresó Viridiana Ríos, becaria de investigación en el Wilson Center de Washington y columnista de Excélsior, un periódico nacional.</p>
+<p class="story-body-text story-content" data-para-count="364" data-total-count="3033" id="story-continues-15" tabindex="-1">La creciente atención a la corrupción en México refleja, en parte, un cambio en la forma en la que los sociólogos y los funcionarios gubernamentales están pensando sobre la forma ideal de abordar los problemas del país, en especial la violencia. Durante años, la principal estrategia del gobierno para combatirla fue atacar a los carteles del narcotráfico.</p>
+<p class="story-body-text story-content" data-para-count="178" data-total-count="3211" id="story-continues-16" tabindex="-1">No obstante, en años recientes la corrupción, y la impunidad que la permite, se han visto cada vez más como los principales causantes de la violencia y otros males nacionales.</p>
+<p class="story-body-text story-content" data-para-count="298" data-total-count="3509" id="story-continues-17" tabindex="-1">“La corrupción agrava o es causante directa de los peores problemas y retos que enfrenta México”, manifestó Juan E. Pardinas, director general del Instituto Mexicano para la Competitividad, un grupo de investigación que ayudó a encauzar el esfuerzo ciudadano relacionado con la iniciativa.</p>
+<p class="story-body-text story-content" data-para-count="262" data-total-count="3771" id="story-continues-18" tabindex="-1">“¿Cómo podemos resolver el problema de la violencia y la delincuencia organizada si no resolvemos el problema de la corrupción?”, añadió Pardinas. “La corrupción está debilitando la capacidad del Estado para atender los retos del país”, señaló.</p>
+<p class="story-body-text story-content" data-para-count="347" data-total-count="4118" id="story-continues-19" tabindex="-1">Según la investigación del instituto, casi todos los delitos de corrupción quedan impunes, y cuando se fincan responsabilidades, nunca se hace a los funcionarios de alto rango. De 444 casos enviados a la Procuraduría General de la República por la Auditoría Superior de la Federación entre 1998 y 2012, únicamente siete fueron consignadas.</p>
+<p class="story-body-text story-content" data-para-count="256" data-total-count="4374" id="story-continues-20" tabindex="-1">“No podemos mantener un sistema político en el que los ciudadanos cuentan con suficiente información para conocer el grado de corrupción, pero las instituciones gubernamentales son totalmente incapaces de someter los casos a proceso”, dijo Pardinas.</p>
+<p class="story-body-text story-content" data-para-count="293" data-total-count="4667" id="story-continues-21" tabindex="-1">En mayo de 2015, en medio de una investigación por denuncias de conflictos de interés que involucraban a la esposa del presidente <a href="http://topics.nytimes.com/top/reference/timestopics/people/p/enrique_pena_nieto/index.html?inline=nyt-per&amp;version=meter+at+0&amp;module=meter-Links&amp;pgtype=article&amp;contentId=&amp;mediaId=&amp;referrer=&amp;priority=true&amp;action=click&amp;contentCollection=meter-links-click">Enrique Peña Nieto</a> y a su secretario de Finanzas, el mandatario firmó una reforma constitucional que plantea la creación del Sistema Nacional Anticorrupción.</p>
+<p class="story-body-text story-content" data-para-count="287" data-total-count="4954" id="story-continues-22" tabindex="-1">La reforma incluyó el nombramiento de un fiscal anticorrupción independiente, así como la creación de un tribunal especial en materia de corrupción e infraestructura para coordinar a un puñado de funcionarios públicos que actualmente tienen la misión de combatir la corrupción.</p>
+<p class="story-body-text story-content" data-para-count="306" data-total-count="5260" id="story-continues-23" tabindex="-1">La reforma constitucional de 2015 estableció como fecha límite el 28 de mayo para la aprobación de las leyes secundarias que darían lugar al sistema anticorrupción. Los principales partidos políticos han negociado los términos de las leyes secundarias, entre ellas la iniciativa de ley “3 de 3”.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="443" data-total-count="5703" id="story-continues-24" tabindex="-1">Uno de los temas más polémicos sometidos a debate ha sido definir si las declaraciones patrimoniales deberían hacerse públicas. A muchos legisladores les preocupa que dar a conocer sus bienes personales podría convertirlos a ellos y a sus familiares en blancos para la delincuencia, por lo que están ejerciendo presión con el fin de que se apruebe un proyecto de ley por el que solo se les pediría divulgar sus bienes ante el gobierno.</p>
+<p class="story-body-text story-content" data-para-count="363" data-total-count="6066" id="story-continues-25" tabindex="-1">Sin embargo, el clamor público que pide que los legisladores aprueben un conjunto sólido de leyes anticorrupción ha sido enérgico. La Arquidiócesis Primada de México, en editoriales publicadas en el semanario Desde la Fe, ha apoyado de manera contundente las medidas y ha criticado “la parálisis en los tres primeros años” del gobierno de Peña Nieto.</p>
+<p class="story-body-text story-content" data-para-count="136" data-total-count="6202" id="story-continues-26" tabindex="-1">Mientras tanto, algunos políticos han dado a conocer voluntariamente sus tres declaraciones incluso antes de que se apruebe alguna ley.</p>
+<p class="story-body-text story-content" data-para-count="347" data-total-count="6549" id="story-continues-27" tabindex="-1">Más de 560 servidores públicos (de posiblemente decenas de miles) se han sumado a la iniciativa, por lo que han dado a conocer sus bienes y posibles conflictos de interés. Entre ellos se encuentran cerca del 13 por ciento del senado y 21 por ciento de la cámara de diputados, así como 12 gobernadores y un miembro del gabinete de Peña Nieto.</p>
+<p class="story-body-text story-content" data-para-count="247" data-total-count="6796" id="story-continues-28" tabindex="-1">Uno de esos senadores es Zoé Robledo Aburto, legislador del Partido de la Revolución Democrática, de izquierda. Robledo, representante del estado de Chiapas, es uno de los más fervientes defensores de la iniciativa de declaración patrimonial.</p>
+<p class="story-body-text story-content" data-para-count="285" data-total-count="7081" id="story-continues-29" tabindex="-1">“Los políticos tienen poca credibilidad. Hay poca confianza en las instituciones gubernamentales”, dijo en una entrevista. “En este momento de crisis, deberíamos estar enviando un mensaje contundente que pueda reconfigurar y restablecer nuestra relación con la ciudadanía”.</p>
+<p class="story-body-text story-content" data-para-count="142" data-total-count="7223" id="story-continues-30" tabindex="-1">“Tenemos que demostrar que estamos en la política por las razones correctas, no para enriquecernos ni hacer negocios”, continuó Robledo.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/3-de-3/" rel="tag">3 de 3</a>, <a href="https://www.nytimes.com/es/tag/corrupcion/" rel="tag">corrupción</a>, <a href="https://www.nytimes.com/es/tag/enrique-pena-nieto/" rel="tag">Enrique Peña Nieto</a>, <a href="https://www.nytimes.com/es/tag/mexico/" rel="tag">México</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/05/29/ante-la-presion-ciudadana-mexico-se-prepara-para-debatir-una-estricta-ley-anticorrupcion/"
+				data-title="América Latina: Ante la presión ciudadana, México se prepara para debatir una estricta ley anticorrupción"
+				data-author="POR KIRK SEMPLE"
+				data-media=""
+				data-description="El lunes el congreso mexicano debatirá una iniciativa llamada &quot;3 de 3&quot;. La ley obligaría a todos los servidores públicos a presentar su declaración de intereses, su declaración patrimonial y su declaración de impuestos. "
+				data-publish-date="29 de mayo de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/26/la-letalidad-desproporcionada-de-las-fuerzas-armadas-genera-preocupacion-en-mexico/">
+					<div class="story-body">
+						<h3 class="kicker">México</h3>
+
+						<h2 class="headline">
+							<span class="title">En México, la letalidad desproporcionada de sus fuerzas armadas genera preocupación</span>
+							<time class="dateline">26 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/05/26/world/27mexico-web/27mexico-web-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/24/una-travesia-de-cuba-a-miami-una-balsa-improvisada-algo-de-suerte-y-un-poco-de-intervencion-divina/">
+					<div class="story-body">
+						<h3 class="kicker">Cuba</h3>
+
+						<h2 class="headline">
+							<span class="title">Una travesía de Cuba a Miami: una balsa improvisada, algo de suerte y un poco de intervención divina</span>
+							<time class="dateline">24 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/05/22/us/23rafters-web1/23rafters-web2-1463845393286-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/28/frida-kahlo-y-diego-rivera-amor-y-psique-capturados-en-imagenes/">
+					<div class="story-body">
+						<h3 class="kicker">Fotografía</h3>
+
+						<h2 class="headline">
+							<span class="title">Frida Kahlo y Diego Rivera: amor y psique capturados en imágenes</span>
+							<time class="dateline">28 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/05/24/blogs/24-lens-frida-slide-X96V/24-lens-frida-slide-X96V-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/25/la-lucha-por-el-agua-en-mexico-las-granjas-que-surten-a-ee-uu-dejan-sedientos-a-los-pueblos/">
+					<div class="story-body">
+						<h3 class="kicker">México</h3>
+
+						<h2 class="headline">
+							<span class="title">La lucha por el agua en México: las granjas que surten a EE. UU. dejan sedientos a los pueblos</span>
+							<time class="dateline">25 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/05/20/world/20MEXICO-web1/20MEXICO-web1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":797,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

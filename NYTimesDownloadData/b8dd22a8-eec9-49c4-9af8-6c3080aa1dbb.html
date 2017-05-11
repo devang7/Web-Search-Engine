@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content=""/>
+<meta name="hdl" content="Coca-Cola financia a científicos que buscan explicaciones alternativas para la obesidad" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20150820" />
+<meta name="utime" content="20150820125647" />
+<meta name="ptime" content="20150820125647" />
+<meta name="DISPLAYDATE" content="Aug. 20, 2015" />
+<meta name="dat" content="Aug. 20, 2015" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="coca-cola-financia-a-cientificos-que-buscan-explicaciones-alternativas-para-la-obesidad" />
+<meta property="og:url" content="https://www.nytimes.com/es/2015/08/20/coca-cola-financia-a-cientificos-que-buscan-explicaciones-alternativas-para-la-obesidad/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Coca-Cola financia a científicos que buscan explicaciones alternativas para la obesidad" />
+<meta property="og:description" content="Expertos médicos afirman que Coca-Cola busca desviar las críticas sobre el papel que las bebidas azucaradas han jugado en las cifras de obesidad y diabetes tipo 2." />
+<meta property="og:image" content="https://static01.nyt.com/images/2015/08/14/opinion/14fri1-web/14fri1-web-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2015-08-20" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2015/08/20/coca-cola-financia-a-cientificos-que-buscan-explicaciones-alternativas-para-la-obesidad/" />
+<meta property="twitter:title" content="Coca-Cola financia a científicos que buscan explicaciones alternativas para la obesidad" />
+<meta property="twitter:description" content="Expertos médicos afirman que Coca-Cola busca desviar las críticas sobre el papel que las bebidas azucaradas han jugado en las cifras de obesidad y diabetes tipo 2." />
+<meta name="author" content="Anahad O’Connor" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Anahad O’Connor" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="salud" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="salud" />
+<meta name="id" content=""/>
+<meta name="wordCount" content="1487"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2015/08/20/coca-cola-financia-a-cientificos-que-buscan-explicaciones-alternativas-para-la-obesidad/">
+<meta name="nyt-collection:uri" content="year=2015&amp;monthnum=08&amp;day=20&amp;name=coca-cola-financia-a-cientificos-que-buscan-explicaciones-alternativas-para-la-obesidad">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=596">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2015\/08\/20\/coca-cola-financia-a-cientificos-que-buscan-explicaciones-alternativas-para-la-obesidad\/"},"headline":"Coca-Cola financia a cient\u00edficos que buscan explicaciones alternativas para la obesidad","datePublished":"2015-08-20T12:56:47+00:00","dateModified":"2016-01-23T15:59:53+00:00","author":{"@type":"Person","name":"veronica"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2015\/08\/14\/opinion\/14fri1-web\/14fri1-web-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Expertos m\u00e9dicos afirman que Coca-Cola busca desviar las cr\u00edticas sobre el papel que las bebidas azucaradas han jugado en las cifras de obesidad y diabetes tipo 2."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2015/08/20/coca-cola-financia-a-cientificos-que-buscan-explicaciones-alternativas-para-la-obesidad/" hreflang="es" />
+<link rel="alternate" href="http://well.blogs.nytimes.com/2015/08/09/coca-cola-funds-scientists-who-shift-blame-for-obesity-away-from-bad-diets/" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/salud" />
+<title>Coca-Cola financia a científicos que buscan explicaciones alternativas para la obesidad &#8211; Español</title>
+<link rel="canonical" href="http://well.blogs.nytimes.com/2015/08/09/coca-cola-funds-scientists-who-shift-blame-for-obesity-away-from-bad-diets/" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2015/08/20/coca-cola-financia-a-cientificos-que-buscan-explicaciones-alternativas-para-la-obesidad/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-596 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Coca-Cola financia a científicos que buscan explicaciones alternativas para la obesidad
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2015/08/20/coca-cola-financia-a-cientificos-que-buscan-explicaciones-alternativas-para-la-obesidad/"
+					data-title="Noticias: Coca-Cola financia a científicos que buscan explicaciones alternativas para la obesidad"
+					data-author="POR ANAHAD O’CONNOR"
+					data-media=""
+					data-description="Expertos médicos afirman que Coca-Cola busca desviar las críticas sobre el papel que las bebidas azucaradas han jugado en las cifras de obesidad y diabetes tipo 2."
+					data-publish-date="20 de agosto de 2015"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/salud/">Salud</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Coca-Cola financia a científicos que buscan explicaciones alternativas para la obesidad</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Anahad O’Connor</span>
+</span>
+
+					<time class="dateline" datetime="2015-08-20">20 de agosto de 2015</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2015/08/20/coca-cola-financia-a-cientificos-que-buscan-explicaciones-alternativas-para-la-obesidad/"
+							data-title="Noticias: Coca-Cola financia a científicos que buscan explicaciones alternativas para la obesidad"
+							data-author="POR ANAHAD O’CONNOR"
+							data-media=""
+							data-description="Expertos médicos afirman que Coca-Cola busca desviar las críticas sobre el papel que las bebidas azucaradas han jugado en las cifras de obesidad y diabetes tipo 2."
+							data-publish-date="20 de agosto de 2015"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000003852617" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/08/14/opinion/14fri1-web/14fri1-web-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/08/14/opinion/14fri1-web/14fri1-web-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/08/14/opinion/14fri1-web/14fri1-web-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Mike Blake/Reuters"  itemprop="url" itemid="https://static01.nyt.com/images/2015/08/14/opinion/14fri1-web/14fri1-web-master1050.jpg"/>
+		<meta itemprop="height" content="718" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Mike Blake/Reuters
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://well.blogs.nytimes.com/2015/08/09/coca-cola-funds-scientists-who-shift-blame-for-obesity-away-from-bad-diets/?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="247" data-total-count="247" id="story-continues-2" tabindex="-1">Coca-Cola, el principal productor mundial de bebidas azucaradas, apuesta por una nueva solución “científica” a la crisis de la obesidad: uno debe hacer más ejercicio y preocuparse menos por contar calorías para mantener un peso saludable.</p>
+<p class="story-body-text story-content" data-para-count="477" data-total-count="724" id="story-continues-3" tabindex="-1">El gigante de las bebidas se ha unido a científicos influyentes que fomentan este mensaje en revistas médicas, conferencias y a través de las redes sociales. Para ayudarles con la difusión, Coca-Cola ha brindado apoyo financiero y logístico a una nueva organización sin fines de lucro llamada Global Energy Balance Network, que promueve el mensaje de que los estadounidenses suelen obsesionarse con cuánto comen y beben y no dan suficiente importancia a hacer ejercicio.</p>
+<p class="story-body-text story-content" data-para-count="407" data-total-count="1131" id="story-continues-4" tabindex="-1">“Los medios y en la prensa científica se enfocan en ‘Oh, están comiendo demasiado, comiendo demasiado, comiendo demasiado’, y le echan la culpa a la comida rápida y a las bebidas azucaradas”, dice el vicepresidente del grupo, Steven N. Blair, un científico, en un vídeo reciente que anuncia la nueva organización. “Y prácticamente no existen pruebas convincentes de que este sea el caso”.</p>
+<figure id="media-100000003646030" class="media photo media-100000003646030 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/04/24/science/24sugar/24sugar-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-6">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/04/24/science/24sugar/24sugar-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/04/24/science/24sugar/24sugar-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Tony Cenicola/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/04/24/science/24sugar/24sugar-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tony Cenicola/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="480" data-total-count="1611" id="story-continues-6" tabindex="-1">Los expertos médicos afirman que este mensaje es engañoso y que hace parte de un esfuerzo de Coca-Cola para desviar las críticas sobre el papel que las bebidas azucaradas han jugado en las cifras de obesidad y diabetes tipo 2. Sostienen que la compañía está utilizando al nuevo grupo para convencer al público de que la actividad física puede compensar una mala dieta, a pesar de la evidencia que demuestra que el ejercicio tiene tan solo un impacto mínimo sobre el peso.</p>
+<p class="story-body-text story-content" data-para-count="339" data-total-count="1950" id="story-continues-7" tabindex="-1">Este enfrentamiento sobre la causa científica de la obesidad se da en medio de mayores esfuerzos para eliminar las bebidas azucaradas de las escuelas e impedir que las empresas dirijan su publicidad hacia los niños. En las últimas dos décadas el consumo de gaseosas por parte del estadounidense promedio ha disminuido un 25 por ciento.</p>
+<p class="story-body-text story-content" data-para-count="379" data-total-count="2329" id="story-continues-8" tabindex="-1">“Las ventas de Coca-Cola están bajando, hay un contragolpe por parte de los políticos y el público contra las gaseosas, y además, todas las ciudades grandes están intentando limitar el consumo de las mismas”, afirma Michele Simon, una abogada especialista en salud pública. “Es una respuesta directa a las pérdidas sufridas por la compañía. Están desesperados”.</p>
+<p class="story-body-text story-content" data-para-count="353" data-total-count="2682" id="story-continues-9" tabindex="-1">Coca-Cola ha hecho una inversión importante en la nueva organización. Según las respuestas a solicitudes de información permitidas por las leyes estatales, dos universidades que emplean a líderes de la Global Energy Balance Network revelaron que Coca-Cola había donado 1,5 millones de dólares para poner la organización en marcha el año pasado.</p>
+<p class="story-body-text story-content" data-para-count="466" data-total-count="3148" id="story-continues-10" tabindex="-1">Además, desde 2008, la compañía ha proporcionado cerca de 4 millones de dólares en financiación para varios proyectos de dos miembros fundadores de la organización: Blair, profesor en la Universidad de South Carolina, cuyas investigaciones a lo largo de los últimos 25 años ha constituido gran parte de la base de las directrices federales sobre actividad física, y Gregory A. Hand, decano de la Escuela de Salud Pública de la Universidad de West Virginia.</p>
+<p class="story-body-text story-content" data-para-count="433" data-total-count="3581" id="story-continues-11" tabindex="-1">Los archivos muestran que el sitio web de Global Energy Balance Network, gebn.org, está registrado a nombre de la sede de Coca-Cola en Atlanta, y la compañía también figura como administradora del sitio web. El presidente del grupo, James O. Hill, profesor de la Escuela de Medicina de la Universidad de Colorado, dijo que Coca-Cola había registrado el sitio web de la organización porque sus miembros no sabían cómo hacerlo.</p>
+<p class="story-body-text story-content" data-para-count="70" data-total-count="3651" id="story-continues-12" tabindex="-1">“Ellos no mandan la parada”, dijo. “Nosotros estamos a cargo”.</p>
+<p class="story-body-text story-content" data-para-count="362" data-total-count="4013" id="story-continues-13" tabindex="-1">El departamento de relaciones públicas de Coca-Cola rechazó varias veces las solicitudes de entrevista a su directora científica, Rhona Applebaum, quien ha difundido el nuevo grupo en Twitter. En un comunicado, la compañía dijo que contaba con una larga historia de apoyo a la investigación científica relacionada con sus bebidas y el balance energético.</p>
+<p class="story-body-text story-content" data-para-count="379" data-total-count="4392" id="story-continues-14" tabindex="-1">“Colaboramos con algunos de los mejores expertos en el campo de la nutrición y la actividad física”, leía el comunicado. “Es importante para nosotros que los investigadores con los que trabajamos compartan sus propios puntos de vista y sus hallazgos científicos, independientemente de los resultados. Somos transparentes y abiertos en cuanto a nuestra financiación”.</p>
+<p class="story-body-text story-content" data-para-count="227" data-total-count="4619" id="story-continues-15" tabindex="-1">Blair y los demás científicos afiliados al grupo sostuvieron que Coca-Cola no tenía control sobre su trabajo ni sobre su mensaje y que no veían ningún problema con el apoyo de la empresa, ya que habían sido transparentes.</p>
+<p class="story-body-text story-content" data-para-count="278" data-total-count="4897" id="story-continues-16" tabindex="-1">Sin embargo las páginas del grupo en Twitter y Facebook, que promueven la actividad física como remedio para las enfermedades crónicas y la obesidad mientras que mantienen un gran silencio sobre el papel de la comida y la dieta, no mencionan el apoyo financiero de Coca-Cola.</p>
+<p class="story-body-text story-content" data-para-count="274" data-total-count="5171" id="story-continues-17" tabindex="-1">El sitio web del grupo tampoco mencionaba el apoyo de Coca-Cola hasta que el Dr. Yoni Freedhoff, un experto en obesidad de la Universidad de Ottawa, escribió a la organización para preguntar sobre su financiación. Blair dijo fue un descuido que se corrigió rápidamente.</p>
+<p class="story-body-text story-content" data-para-count="212" data-total-count="5383" id="story-continues-18" tabindex="-1">“Apenas descubrimos que no aparecían las fuentes de financiación, tanto Coca-Cola como las demás, las publicamos de inmediato”, dijo Blair. “¿Eso nos hace totalmente corruptos en todo lo que hacemos?”</p>
+<p class="story-body-text story-content" data-para-count="333" data-total-count="5716" id="story-continues-19" tabindex="-1">Los críticos dicen que desde hace mucho tiempo, Coca-Cola presenta la epidemia de la obesidad principalmente como un problema de falta de ejercicio. “Su mensaje dice que la obesidad no se trata de los alimentos o las bebidas que estas consumiendo, sino de que no estas equilibrando esos alimentos con ejercicio”, dijo Freedhoff.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="154" data-total-count="5870" id="story-continues-20" tabindex="-1">Ahora, los defensores de la salud pública afirman que Coca-Cola va más allá al contratar a científicos respetables para que defiendan a la compañía.</p>
+<p class="story-body-text story-content" data-para-count="448" data-total-count="6318" id="story-continues-21" tabindex="-1">Hill, el presidente del grupo, es uno de los cofundadores del Registro Nacional de Control del Peso (National Weight Control Registry), un estudio a largo plazo sobre las personas que han perdido peso, y ha formado parte de comités para la Organización Mundial de la Salud y los Institutos Nacionales de la Salud. La Sociedad Americana para la Nutrición se refiere a él como “un líder de la lucha global contra la epidemia de la obesidad”.</p>
+<p class="story-body-text story-content" data-para-count="362" data-total-count="6680" id="story-continues-22" tabindex="-1">Barry M. Popkin, profesor de nutrición global en la Universidad de North Carolina en Chapel Hill, dijo que el apoyo de Coca-Cola a prominentes investigadores de la salud se asemejaba a las tácticas utilizadas por la industria del tabaco, que contrataba a expertos para convertirlos en “mercaderes de la duda” sobre los riesgos del cigarrillo para la salud.</p>
+<p class="story-body-text story-content" data-para-count="600" data-total-count="7280" id="story-continues-23" tabindex="-1">La financiación de la industria alimenticia en la investigación científica no es nada inusual. Pero los estudios sugieren que este tipo de apoyo tiende a sesgar los resultados. Un análisis reciente de los estudios sobre las bebidas, publicado en la revista PLOS Medicine, concluyó que en aquellos financiados por Coca-Cola, PepsiCo, la American Beverage Association y la industria azucarera, era cinco veces más probable a no encontrar ninguna relación entre las bebidas azucaradas y el aumento de peso que en los estudios cuyos autores declararon no tener conflictos de intereses financieros.</p>
+<p class="story-body-text story-content" data-para-count="257" data-total-count="7537" id="story-continues-24" tabindex="-1">En su página web, el grupo recomienda combinar más ejercicio con una mayor ingesta de alimentos, ya que, según Hill: “ ‘comer menos’ nunca ha sido un mensaje eficaz. El mensaje debe ser el de ‘moverse más y comer de forma más inteligente’”.</p>
+<p class="story-body-text story-content" data-para-count="256" data-total-count="7793" id="story-continues-25" tabindex="-1">Hizo énfasis en que la pérdida de peso implicaba una combinación de factores complejos y que el objetivo de su grupo no era restar importancia al papel de la dieta o retratar la obesidad como un problema causado exclusivamente por la falta de ejercicio.</p>
+<p class="story-body-text story-content" data-para-count="188" data-total-count="7981" id="story-continues-26" tabindex="-1">“Si vamos por ahí diciendo que se trata solo de la actividad física y no de la comida, entonces nos merecemos las críticas”, dijo. “Pero no creo que eso sea lo que hemos hecho”.</p>
+<p class="story-body-text story-content" data-para-count="98" data-total-count="8079" id="story-continues-27" tabindex="-1">Sin embargo en los comunicados de prensa y en su página web, el grupo ha usado un tono diferente.</p>
+<p class="story-body-text story-content" data-para-count="304" data-total-count="8383" id="story-continues-28" tabindex="-1">“Los medios de comunicación tienden a achacar la culpa de la epidemia de obesidad a nuestros malos hábitos alimentarios”, proclama un reciente comunicado de prensa. “¿Realmente tienen la culpa esas papas fritas? El Dr. Steve Blair explica que no debes creer todo lo que ves en la televisión”.</p>
+<p class="story-body-text story-content" data-para-count="274" data-total-count="8657" id="story-continues-29" tabindex="-1">Kelly D. Brownell, decano de la Facultad Sanford de Política Pública en Duke, dijo que como negocio, Coca-Cola “se centró en vender un producto con una gran cantidad de calorías, mientras que su filantropía se centra en cómo eliminar esas calorías: el ejercicio”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2015/08/20/coca-cola-financia-a-cientificos-que-buscan-explicaciones-alternativas-para-la-obesidad/"
+				data-title="Noticias: Coca-Cola financia a científicos que buscan explicaciones alternativas para la obesidad"
+				data-author="POR ANAHAD O’CONNOR"
+				data-media=""
+				data-description="Expertos médicos afirman que Coca-Cola busca desviar las críticas sobre el papel que las bebidas azucaradas han jugado en las cifras de obesidad y diabetes tipo 2."
+				data-publish-date="20 de agosto de 2015"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":697,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

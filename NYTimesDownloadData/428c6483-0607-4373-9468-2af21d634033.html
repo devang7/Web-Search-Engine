@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004562799"/>
+<meta name="hdl" content="30 canciones brasileñas esenciales para disfrutar los Juegos Olímpicos de Río" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20160805" />
+<meta name="utime" content="20160805175020" />
+<meta name="ptime" content="20160805175020" />
+<meta name="DISPLAYDATE" content="Aug. 5, 2016" />
+<meta name="dat" content="Aug. 5, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="30-canciones-brasilenas-esenciales-para-disfrutar-los-juegos-olimpicos-de-rio" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/08/05/30-canciones-brasilenas-esenciales-para-disfrutar-los-juegos-olimpicos-de-rio/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="30 canciones brasileñas esenciales para disfrutar los Juegos Olímpicos de Río" />
+<meta property="og:description" content="Los críticos de música de The New York Times ofrecen una lista de 30 canciones, recientes e históricas, de una de las culturas musicales más creativas y diversas del mundo." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/08/03/arts/03BRAZILMUSIC/03BRAZILMUSIC-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-08-05" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/08/05/30-canciones-brasilenas-esenciales-para-disfrutar-los-juegos-olimpicos-de-rio/" />
+<meta property="twitter:title" content="30 canciones brasileñas esenciales para disfrutar los Juegos Olímpicos de Río" />
+<meta property="twitter:description" content="Los críticos de música de The New York Times ofrecen una lista de 30 canciones, recientes e históricas, de una de las culturas musicales más creativas y diversas del mundo." />
+<meta name="author" content="Jon Pareles, Ben Ratliff, Jon Caramanica y Nate Chinen" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Jon Pareles, Ben Ratliff, Jon Caramanica y Nate Chinen" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="rio-2016" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="rio-2016" />
+<meta name="id" content="100000004562799"/>
+<meta name="wordCount" content="3377"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/08/05/30-canciones-brasilenas-esenciales-para-disfrutar-los-juegos-olimpicos-de-rio/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=08&amp;day=05&amp;name=30-canciones-brasilenas-esenciales-para-disfrutar-los-juegos-olimpicos-de-rio">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=21028">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/08\/05\/30-canciones-brasilenas-esenciales-para-disfrutar-los-juegos-olimpicos-de-rio\/"},"headline":"30 canciones brasile\u00f1as esenciales para disfrutar los Juegos Ol\u00edmpicos de R\u00edo","datePublished":"2016-08-05T17:50:20+00:00","dateModified":"2016-08-12T19:27:41+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/08\/03\/arts\/03BRAZILMUSIC\/03BRAZILMUSIC-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Los cr\u00edticos de m\u00fasica de The New York Times ofrecen una lista de 30 canciones, recientes e hist\u00f3ricas, de una de las culturas musicales m\u00e1s creativas y diversas del mundo."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/08/05/30-canciones-brasilenas-esenciales-para-disfrutar-los-juegos-olimpicos-de-rio/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/08/03/arts/music/brazilian-music-playlist.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="americalatina/rio2016" />
+<title>30 canciones brasileñas esenciales para disfrutar los Juegos Olímpicos de Río &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/08/03/arts/music/brazilian-music-playlist.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/08/05/30-canciones-brasilenas-esenciales-para-disfrutar-los-juegos-olimpicos-de-rio/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-21028 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				30 canciones brasileñas esenciales para disfrutar los Juegos Olímpicos de Río
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/08/05/30-canciones-brasilenas-esenciales-para-disfrutar-los-juegos-olimpicos-de-rio/"
+					data-title="América Latina: 30 canciones brasileñas esenciales para disfrutar los Juegos Olímpicos de Río"
+					data-author="POR JON PARELES, BEN RATLIFF, JON CARAMANICA Y NATE CHINEN"
+					data-media=""
+					data-description="Los críticos de música de The New York Times ofrecen una lista de 30 canciones, recientes e históricas, de una de las culturas musicales más creativas y diversas del mundo."
+					data-publish-date="5 de agosto de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2aHw5a3">http://nyti.ms/2aHw5a3</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+					<div class="kicker-logo-row">
+						<a class="kicker-logo logo-nyt_kicker-rio-2016" href="https://www.nytimes.com/es/collection/rio-2016/">Río 2016</a>
+					</div>
+			
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">30 canciones brasileñas esenciales para disfrutar los Juegos Olímpicos de Río</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Jon Pareles</span>
+</span>
+, <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Ben Ratliff</span>
+</span>
+, <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Jon Caramanica</span>
+</span>
+ y <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Nate Chinen</span>
+</span>
+
+					<time class="dateline" datetime="2016-08-05">5 de agosto de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/08/05/30-canciones-brasilenas-esenciales-para-disfrutar-los-juegos-olimpicos-de-rio/"
+							data-title="América Latina: 30 canciones brasileñas esenciales para disfrutar los Juegos Olímpicos de Río"
+							data-author="POR JON PARELES, BEN RATLIFF, JON CARAMANICA Y NATE CHINEN"
+							data-media=""
+							data-description="Los críticos de música de The New York Times ofrecen una lista de 30 canciones, recientes e históricas, de una de las culturas musicales más creativas y diversas del mundo."
+							data-publish-date="5 de agosto de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004564903" class="media photo lede layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/03/arts/03BRAZILMUSIC/03BRAZILMUSIC-blog427.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/03/arts/03BRAZILMUSIC/03BRAZILMUSIC-blog427.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/03/arts/03BRAZILMUSIC/03BRAZILMUSIC-superJumbo.jpg" data-mediaviewer-caption="Milton Nascimento en el festival Rock in Rio en 2011. Su canción “Maria, Maria” se convirtió en un himno de Brasil.
+" data-mediaviewer-credit="Vanderlei Almeida/ Agence France-Presse, vía Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/03/arts/03BRAZILMUSIC/03BRAZILMUSIC-blog427.jpg"/>
+		<meta itemprop="height" content="562" />
+		<meta itemprop="width" content="427" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Milton Nascimento en el festival Rock in Rio en 2011. Su canción “Maria, Maria” se convirtió en un himno de Brasil.
+</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Vanderlei Almeida/ Agence France-Presse, vía Getty Images
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/08/03/arts/music/brazilian-music-playlist.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="459" data-total-count="459" id="story-continues-2" tabindex="-1">La música de Brasil proyecta una apariencia relajada y seductora pero también es ingeniosa y multifacética. Con el inicio de los Juegos Olímpicos de Río de Janeiro, el acervo musical brasileño está a punto de cobrar importancia a nivel mundial por lo que no existe un mejor momento para descubrir qué tan amplio y profundo es el discurso sonoro de ese país, más allá de los estereotipos del carnaval y las aterciopeladas canciones de la bossa nova.</p>
+<p class="story-body-text story-content" data-para-count="384" data-total-count="843" id="story-continues-3" tabindex="-1">La música brasileña está ligada a tradiciones nacionales y regionales que han perdurado durante generaciones, con una mezcla de elementos indígenas, europeos y africanos en continua evolución. Al mismo tiempo, algunos brasileños describen a su cultura como antropofágica o, dicho más llanamente, caníbal: lista para engullir y digerir cualquier cosa que se le ponga enfrente.</p>
+<p class="story-body-text story-content" data-para-count="374" data-total-count="1217" id="story-continues-4" tabindex="-1">Aunque valoran sus raíces, los músicos brasileños han asimilado el jazz, el rock, el reggae, el metal, el hip-hop, la música electrónica y mucho más. Asimismo llenan las letras de sus canciones pop con una poesía de metáforas complejas. Los visitantes de Río, físicos y virtuales, podrán saborear una de las culturas musicales más creativas y diversas del mundo.</p>
+<p class="story-body-text story-content" data-para-count="195" data-total-count="1412" id="story-continues-5" tabindex="-1">A continuación, los críticos de música de The New York Times ofrecen una <a href="https://play.spotify.com/user/nytarts/playlist/2ON9EqsJmNeYY2H76923bY?play=true&amp;utm_source=open.spotify.com&amp;utm_medium=open" target="_blank">lista</a> de 30 canciones brasileñas esenciales, recientes e históricas para quienes no conocen los ritmos de ese país.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="1412" id="story-continues-6" tabindex="-1"><h4 class="story-subheading story-content">Pixinguinha “Carinhoso” (1928)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="342" data-total-count="1754" id="story-continues-7" tabindex="-1">El estilo musical ágil y elegante conocido como choro surgió en Río durante el siglo XIX, como una adaptación de tradiciones folclóricas como la habanera cubana y la mazurca polaca. El choro es una fusión de flauta, cavaquinho (un instrumento de cuerdas), guitarra y percusiones que se tocan con las manos, en un intrincado contrapunto.</p>
+<p class="story-body-text story-content" data-para-count="455" data-total-count="2209" id="story-continues-8" tabindex="-1">Guarda cierto parecido con el ragtime de Nueva Orleans por lo que Pixinguinha, quien nació en Río de Janeiro con el nombre de Alfredo da Rocha Viana Jr., podría ser considerado el Scott Joplin de Brasil. Este músico compuso muchas de las piezas más representativas del repertorio del choro, entre las que se encuentran &#8220;Carinhoso&#8221;, a la que más tarde le agregaron letra e interpretaron importantes cantantes como Orlando Silva. (Chinen)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="2209" id="story-continues-9" tabindex="-1"><h4 class="story-subheading story-content">Noel Rosa “São coisas nossas” (1932)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="507" data-total-count="2716" id="story-continues-10" tabindex="-1">Noel Rosa murió de tuberculosis en 1937, a la edad de 26 años. No obstante, durante su corta carrera en la que interactuó con la cultura musical negra de Río, este cantante y compositor blanco y de clase media pronosticó que la samba conformaría la identidad nacional del país: los héroes de sus canciones son delincuentes de poca monta para los que la samba era motivo de orgullo y fuerza vital. En esta gran canción, tomó el estilo callejero así como su “viveza”, y los codificó. (Ratliff)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="2716" id="story-continues-11" tabindex="-1"><h4 class="story-subheading story-content">Carmen Miranda “O que é que a baiana tem” (1939)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="198" data-total-count="2914" id="story-continues-12" tabindex="-1">Carmen Miranda era una cantante, bailarina y estrella de cine blanca, nacida en Portugal, que creció en Río y se apropió de la vestimenta y los movimientos de los vendedores callejeros de Bahía.</p>
+<p class="story-body-text story-content" data-para-count="346" data-total-count="3260" id="story-continues-13" tabindex="-1">En un comienzo los estilizó y después, al trabajar con directores de cine estadounidenses, los elevó hasta la exageración desenfrenada como cuando fue “la dama con el sombrero de frutas”, en <em>The Gang’s All Here</em> y otras películas. Se convirtió en un símbolo nacional de su país, lo cual no le hizo mucha gracia a algunos brasileños.</p>
+<p class="story-body-text story-content" data-para-count="237" data-total-count="3497" id="story-continues-14" tabindex="-1">Los músicos de la Tropicália la convirtieron en un genio del arte pop: “Hemos descubierto que ella era, al mismo tiempo, una caricatura y una radiografía nuestra”, escribió Caetano Veloso en un brillante ensayo publicado en 1991.</p>
+<figure id="media-100000004564797" class="media photo media-100000004564797 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/03/arts/03BRAZILMUSICJP1/03BRAZILMUSICJP1-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-16">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/03/arts/03BRAZILMUSICJP1/03BRAZILMUSICJP1-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/03/arts/03BRAZILMUSICJP1/03BRAZILMUSICJP1-superJumbo.jpg" data-mediaviewer-caption="Carmen Miranda, a singer, dancer and film star, was known as a symbol of Brazil." data-mediaviewer-credit="Hulton Archive/Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/03/arts/03BRAZILMUSICJP1/03BRAZILMUSICJP1-master675.jpg"/>
+		<meta itemprop="height" content="495" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Carmen Miranda, a singer, dancer and film star, was known as a symbol of Brazil.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Hulton Archive/Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="0" data-total-count="3497" id="story-continues-16" tabindex="-1"><h4 class="story-subheading story-content">Luiz Gonzaga “Asa Branca” (1947)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="236" data-total-count="3733" id="story-continues-17" tabindex="-1">El ritmo elegante, el constante sonido del acordeón y el triángulo imparable de &#8220;Asa Branca&#8221; (&#8220;Ala blanca”) hacen de esta melodía un baião, un baile que Gonzaga destiló de las tradiciones del noroeste de Brasil.</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="3733" id="story-continues-18" tabindex="-1"><h4 class="story-subheading story-content">João Gilberto “Chega de Saudade” (1958)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="431" data-total-count="4164" id="story-continues-19" tabindex="-1">La bossa nova tuvo sus inicios a fines de los cincuenta y durante un corto tiempo se volvió una obsesión internacional a principios de los sesenta. Se inspiró en la samba afrobrasileña, así como en elementos específicos de la cultura de la posguerra estadounidense —el <em>crooning</em>, el jazz de la Costa Oeste— y llegó a simbolizar luz y espacio, una paz interna con una gran cadencia, algo así como la antimateria del rock.</p>
+<p class="story-body-text story-content" data-para-count="304" data-total-count="4468" id="story-continues-20" tabindex="-1">Gilberto fue (y sigue siendo) una figura misteriosa que creó este estilo, aportando su ronroneo suave y carente de <em>vibrato</em>, acompañado de cambiantes acordes de guitarra. Se puede decir que en “Chega de Saudade” (&#8220;Basta de nostalgia&#8221;) definió las dimensiones de la bossa nova. (Ratliff)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="4468" id="story-continues-21" tabindex="-1"><h4 class="story-subheading story-content">Dorival Caymmi “O mar” (1959)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="363" data-total-count="4831" id="story-continues-22" tabindex="-1">Dorival Caymmi, compositor y cantante de voz profunda, construyó una iconografía introspectiva de Bahía: muchas de sus canciones como “O Mar”, perteneciente al sublime álbum <em>Caymmi e seu Violão</em>, se escribieron desde la perspectiva de los pescadores para quienes el mar representa las fuerzas de la belleza, el trabajo, la historia y el peligro. (Ratliff)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="4831" id="story-continues-23" tabindex="-1"><h4 class="story-subheading story-content">Antonio Carlos Jobim “A Felicidade” (1959)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="193" data-total-count="5024" id="story-continues-24" tabindex="-1">La suavidad de la bossa nova puede ser engañosa. El ritmo es un sutil microcosmos de las percusiones de la samba, en tanto que las melodías seductoras esconden sofisticadas armonías de jazz.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="417" data-total-count="5441" id="story-continues-25" tabindex="-1">Aparentemente, las desenfadadas letras de la bossa nova están llenas de una naturaleza muy brasileña que se resume con la palabra “saudade”, cuyo significado conjuga la añoranza, la tristeza y la nostalgia. “A Felicidade” (“La felicidad”), con letra de Vinicius de Moraes, contempla la cualidad efímera de la felicidad con frases que se elevan, para deslizarse entre caminos elegantemente cromáticos.</p>
+<p class="story-body-text story-content" data-para-count="246" data-total-count="5687" id="story-continues-26" tabindex="-1">Inicia con una de las coplas rimadas más perfectas que se hayan escrito en cualquier idioma, colocando polisílabos junto a monosílabos: “Tristeza não tem fim/ Felicidade sim”, (“la tristeza no tiene fin / la felicidad sí”). (Pareles)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="5687" id="story-continues-27" tabindex="-1"><h4 class="story-subheading story-content">Maysa “O Barquinho” (1961)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="310" data-total-count="5997" id="story-continues-28" tabindex="-1">Esta es otra grabación casi perfecta que demuestra la física del swing brasileño. En 1961, Maysa Matarazzo, una cantante de bossa nova cuya tumultuosa vida llegó a opacar su considerable talento, interpretó la canción “O Barquinho” (&#8220;El barquito&#8221;), de Roberto Menescal y Ronaldo Bôscoli.</p>
+<p class="story-body-text story-content" data-para-count="381" data-total-count="6378" id="story-continues-29" tabindex="-1">Muchos otros lo hicieron en aquella época, pues se convirtió en uno de los temas más importantes de la bossa nova. No obstante, su versión, con una sección rítmica de jazz acompañada de cuerdas melosas, arrasa con todas las demás, principalmente gracias a sus contradicciones: ella suena atrevida pero controlada, conocedora de su inexperiencia, precisa en su imprecisión.</p>
+<p class="story-body-text story-content" data-para-count="238" data-total-count="6616" id="story-continues-30" tabindex="-1">Su cadencia y entrega se imponen y triunfan; Maysa comienza a cantar las estrofas peligrosamente tarde, llenando una frase de esperanza y belleza, para después llevar la siguiente a un tono bajo con la fuerza de una percusión. (Ratliff)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="6616" id="story-continues-31" tabindex="-1"><h4 class="story-subheading story-content">Moacir Santos “Coisa nº 5 (NANÃ)” (1965)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="356" data-total-count="6972" id="story-continues-32" tabindex="-1">Moacir Santos, compositor e intérprete de varios instrumentos que murió en 2006 a los 80 años, no era conocido por su virtuosidad sino más bien por su brillante y original manera de componer y hacer arreglos musicales. Se podría decir que era como Duke Ellington en lo que respecta a estas dos actividades, pero en lo demás era totalmente brasileño.</p>
+<p class="story-body-text story-content" data-para-count="291" data-total-count="7263" id="story-continues-33" tabindex="-1">Podemos ver su estatura en la grabación de 1965 “Coisas” (“Cosas”) y su cambiante pista multipartita parecida a una marcha en “Coisa No. 5” (&#8220;Cosa No. 5&#8221;) que se grabó decenas de veces; cuando le añadieron letra, se convirtió en la canción “Nanã”. (Ratliff)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="7263" id="story-continues-34" tabindex="-1"><h4 class="story-subheading story-content">Caetano Veloso ‘Tropicália” (1968)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="234" data-total-count="7497" id="story-continues-35" tabindex="-1">Caetano Veloso y Gilberto Gil son los héroes de Tropicália, un cataclismo musical que llevó al pop brasileño a la era psicodélica, infundiendo la música con ritmos difusos de rock y llevando el modernismo literario a las letras.</p>
+<p class="story-body-text story-content" data-para-count="424" data-total-count="7921" id="story-continues-36" tabindex="-1">El ascenso de este movimiento asombró y alarmó a la dictadura militar, que en 1968 encarceló a las dos estrellas en ascenso y posteriormente los envió al exilio a Londres (donde añadieron más inglés y rock británico a su discurso). “Tropicália” se funde en una marcha de carnaval melodioso con una misteriosa orquestación, mientras su letra moldea indirectamente el manifiesto cultural de la nación. (Pareles)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="7921" id="story-continues-37" tabindex="-1"><h4 class="story-subheading story-content">Chico Buarque “Construção” (1971)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="376" data-total-count="8297" id="story-continues-38" tabindex="-1">Chico Buarque es un cantante y compositor célebre por sus sofisticadas ideas musicales, su elegante enfoque lírico —en diversos puntos críticos— y sus valientes gestos de protesta. “Construção” (&#8220;Construcción&#8221;) es la canción que le da título a un disco lanzado en 1971, durante la dictadura militar de Brasil, y que se ha convertido en un clásico.</p>
+<p class="story-body-text story-content" data-para-count="328" data-total-count="8625" id="story-continues-39" tabindex="-1">A nivel superficial, la canción narra la historia de un albañil que se cae, o tal vez salta, del edificio que construye para encontrarse con la muerte. Sin embargo, las imágenes y sutilezas cambiantes de la letra sugieren una alegoría política y con frecuencia suele decirse que la canción es una crítica velada. (Chinen)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="8625" id="story-continues-40" tabindex="-1"><h4 class="story-subheading story-content">Gilberto Gil &#8220;Expresso 2222&#8221; (1972)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="226" data-total-count="8851" id="story-continues-41" tabindex="-1">La vertiginosa rapidez de las notas de la guitarra de Gilberto Gil es perfecta para esta canción sobre un tren irreal que escribió mientras estaba en el exilio en Londres y estrenó en 1972, el año en que regresó a Brasil.</p>
+<p class="story-body-text story-content" data-para-count="242" data-total-count="9093" id="story-continues-42" tabindex="-1">El tren del que habla en la canción parte de una estación de Río de Janeiro, llamada Bonsucesso, y va a toda prisa no solo hacia el futuro, sino también hacia el más allá. De 2003 a 2008, Gil fue Ministro de Cultura de Brasil. (Pareles)</p>
+<figure id="media-100000004565044" class="media photo media-100000004565044 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/03/arts/03BRAZILMUSICJP2/03BRAZILMUSICJP2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-44">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/03/arts/03BRAZILMUSICJP2/03BRAZILMUSICJP2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/03/arts/03BRAZILMUSICJP2/03BRAZILMUSICJP2-superJumbo.jpg" data-mediaviewer-caption="Caetano Veloso, left, and Gilberto Gil had central roles in the Tropic&amp;aacute;lia movement." data-mediaviewer-credit="Byron Smith for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/03/arts/03BRAZILMUSICJP2/03BRAZILMUSICJP2-master675.jpg"/>
+		<meta itemprop="height" content="482" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Caetano Veloso, left, and Gilberto Gil had central roles in the Tropic&amp;aacute;lia movement.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Byron Smith for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="0" data-total-count="9093" id="story-continues-44" tabindex="-1"><h4 class="story-subheading story-content">Antonio Carlos Jobim &#8220;Matita Perê&#8221; (1973)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="161" data-total-count="9254" id="story-continues-45" tabindex="-1">Para mediados de los setenta, Tom Jobim estaba grabando creativos discos orquestales y esta melodía de siete minutos de duración aparece en uno de los mejores.</p>
+<p class="story-body-text story-content" data-para-count="373" data-total-count="9627" id="story-continues-46" tabindex="-1">Jobim canta lleno de confianza con su voz sin entrenamiento, que sobresale entre arreglos de varias flautas, clarinetes, la guitarra acústica, el triángulo y todo un acompañamiento de cuerdas; en esta melodía podemos encontrar pasajes de ingeniosa belleza cinematográfica, que distan mucho de la concisión pop de “La chica de Ipanema” y “Corcovado”. (Ratliff)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="9627" id="story-continues-47" tabindex="-1"><h4 class="story-subheading story-content">Cartola &#8220;O Mundo é Um Moinho&#8221; (1976)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="201" data-total-count="9828" id="story-continues-48" tabindex="-1">Las escuelas de samba de Río, que surgieron a fines de los años veinte, compiten en el carnaval previo a la cuaresma pero también actúan como grupos comunitarios en los barrios pobres de la ciudad.</p>
+<p class="story-body-text story-content" data-para-count="448" data-total-count="10276" id="story-continues-49" tabindex="-1">Mangueira es una de las más antiguas y fuertes, y entre sus fundadores se encontraba el cantante y compositor Cartola, quien alcanzó un éxito indiscutible después de los sesenta años, en la última década de su vida. “O Mundo e Um Moinho” (&#8220;El mundo es un molino&#8221;) es una dulce canción con un consejo oscuro para una joven: “Óyeme bien, amor”, versa, “el mundo es un molino/ que va a triturar tus sueños”. (Ratliff)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="10276" id="story-continues-50" tabindex="-1"><h4 class="story-subheading story-content">Jorge Ben &#8220;Xica Da Silva&#8221; (1976)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="209" data-total-count="10485" id="story-continues-51" tabindex="-1">Jorge Ben ha pasado por todas las fases posteriores a la samba, cantado en éxtasis, rasgando su guitarra hasta desvanecerse y produciendo una larga lista de grandes canciones pero ésta es una de las mejores.</p>
+<p class="story-body-text story-content" data-para-count="193" data-total-count="10678" id="story-continues-52" tabindex="-1">Cuenta la historia de una heroína popular: una esclava africana del siglo XVIII que se convirtió en amante de un contratista de minas portugués en Brasil y que logra hacerse de su propiedad.</p>
+<p class="story-body-text story-content" data-para-count="225" data-total-count="10903" id="story-continues-53" tabindex="-1">Una versión de esta canción apareció en la película homónima de Carlos Diegues; la que aparece en el disco &#8220;África Brasil&#8221; de Ben es un canto repetido en un ritmo funk lento, profundo y brasileño. (Ratliff)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="10903" id="story-continues-54" tabindex="-1"><h4 class="story-subheading story-content">Hermeto Pascoal &#8220;Slaves Mass&#8221; (1977)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="312" data-total-count="11215" id="story-continues-55" tabindex="-1">La forma en la que Hermeto Pascoal concibe la música es suficientemente amplia para incluir el jazz, la libre improvisación, las formas clásicas y populares, los cantos, los llantos, las risas y —en esta canción que da título a uno de sus más aclamados discos— los chillidos de cerdos reales. (Ratliff)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="11215" id="story-continues-56" tabindex="-1"><h4 class="story-subheading story-content">Milton Nascimento &#8220;Maria Maria&#8221; (1978)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="346" data-total-count="11561" id="story-continues-57" tabindex="-1">La pureza sobrenatural de la voz de Milton Nascimento, que puede ir desde un ardiente barítono a un angelical <em>falsetto</em>, ha profundizado el sentimiento de reverencia en sus canciones a lo largo de las décadas: reverencia a la naturaleza, a la gente común y corriente, a la tradición y la justicia. También es un gran admirador de los Beatles.</p>
+<p class="story-body-text story-content" data-para-count="297" data-total-count="11858" id="story-continues-58" tabindex="-1">“Maria, Maria”, que se lanzó en 1978, rinde tributo a la fortaleza cotidiana de las mujeres latinoamericanas. Tiene el característico tono edificante de Nascimento, además de hacer un guiño a Lennon y McCartney y un entusiasta coro que la convirtieron en un himno en todo Brasil. (Pareles)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="11858" id="story-continues-59" tabindex="-1"><h4 class="story-subheading story-content">Maria Bethânia &#8220;Mel&#8221; (1979)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="213" data-total-count="12071" id="story-continues-60" tabindex="-1">Maria Bethânia perfeccionó una especie de cabaret-pop imperioso y muy emotivo a fines de los sesenta; esta canción, con un ritmo fácil, acompañado por una <em>steel guitar</em>, apareció en un disco del mismo nombre.</p>
+<p class="story-body-text story-content" data-para-count="417" data-total-count="12488" id="story-continues-61" tabindex="-1">Su hermano Caetano Veloso y el poeta Waly Salomão son los compositores. Ella recita las palabras tremendamente poéticas y abiertamente sexuales como si cantara un himno nacional y, sin embargo, la canción no deja de ser juguetona y contagiosa. Supe que un empleado en el Tower Records de East Village solía tocar &#8220;Mel&#8221;, en la década de los ochenta, cuando quería que aumentaran las ventas. (Ratliff)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="12488" id="story-continues-62" tabindex="-1"><h4 class="story-subheading story-content">Gonzaguinha &#8220;O que é, O que é” (1982)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="167" data-total-count="12655" id="story-continues-63" tabindex="-1">Nacido en una favela de Río en 1945, Gonzaguinha adoptó la música como un derecho natural: a su padre, Luiz Gonzaga, todavía se le recuerda como el rey del baião.</p>
+<p class="story-body-text story-content" data-para-count="308" data-total-count="12963" id="story-continues-64" tabindex="-1">Gonzaguinha se abrió paso por cuenta propia en los setenta y la fuerza de sus canciones, que reflejan las esperanzas y luchas de la gente, lo llevaron al éxito. “O Que É, O Que É” es una de sus creaciones más perdurables, una de esas canciones que la mayoría de los brasileños se saben de memoria.</p>
+<p class="story-body-text story-content" data-para-count="328" data-total-count="13291" id="story-continues-65" tabindex="-1">La batería marca el ritmo, evocando el delirio tamboril del carnaval y transmitiendo un mensaje de aliento resiliente. En los versos, Gonzaguinha canta acerca del sufrimiento y lo efímero pero el coro regresa, una y otra vez, como una desafiante afirmación infantil: “Vivir/ Y no tener vergüenza/ De ser feliz”. (Chinen)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="13291" id="story-continues-66" tabindex="-1"><h4 class="story-subheading story-content">Chico Science e Nação Zumbi &#8220;Maracatu Atômico&#8221; (1994)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="305" data-total-count="13596" id="story-continues-67" tabindex="-1">En la década de los noventa, este cantante, rapero y compositor junto a su banda, Nacão Zumbi, bautizaron su música como “mangue bit”: “el bit del mangle” (en referencia a los bits de datos) o el “ritmo del mangle” en honor a los manglares de Recife, su ciudad natal asolada por la pobreza.</p>
+<p class="story-body-text story-content" data-para-count="339" data-total-count="13935" id="story-continues-68" tabindex="-1">Mezclaron ritmos tradicionales con el funk, el hard rock y el hip-hop con imperiosas preocupaciones sociales y una determinación para fusionar el pasado y el futuro. “Maracatu Atômico” (&#8220;Maracas atómicas&#8221;), de 1994, convierte el ritmo frenético de las maracas en un veloz funk que acompaña el acelerado rap de Science.</p>
+<p class="story-body-text story-content" data-para-count="127" data-total-count="14062" id="story-continues-69" tabindex="-1">Es furioso y articulado, una contraparte brasileña de bandas como Public Enemy, Rage Against the Machine y Calle 13. (Pareles)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="14062" id="story-continues-70" tabindex="-1"><h4 class="story-subheading story-content">Sepultura &#8220;Roots Bloody Roots&#8221; (1996)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="316" data-total-count="14378" id="story-continues-71" tabindex="-1">Esta banda de rock de Minas Gerais se pulió a través de diversas épocas de música extrema —thrash metal, death metal— hasta llegar a desarrollar, a finales de los noventa, un denso sonido de guitarras y batería inspirado en su propio país, más que en las tendencias universales del rock pesado. (Ratliff)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="14378" id="story-continues-72" tabindex="-1"><h4 class="story-subheading story-content">De Falla &#8220;Popozuda Rock&#8217;n&#8217;Roll&#8221; (2000)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="246" data-total-count="14624" id="story-continues-73" tabindex="-1">Este es uno de los primeros ejemplos del funk carioca, el estilo de danza brasileña que tiene una enorme deuda sonora con la bass music de Miami y el electrorap de Nueva York. Las referencias son claras: Beastie Boys y Run-DMC en sus principios.</p>
+<p class="story-body-text story-content" data-para-count="201" data-total-count="14825" id="story-continues-74" tabindex="-1">El rap es directo, las guitarras se hacen oír y el tono es exuberante. Lo más importante es que fue una representación rudimentaria del sonido de lo que ahora se conoce como baile funk. (Caramanica)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="14825" id="story-continues-75" tabindex="-1"><h4 class="story-subheading story-content">Deize Tigrona &#8220;Injecao&#8221; (2004)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="418" data-total-count="15243" id="story-continues-76" tabindex="-1">“Injeção”, una canción placenteramente obscena de una de las intérpretes más fuertes del baile funk —la música de fondo hipersexual, intensa como una ametralladora, de las fiestas nocturnas de las favelas de Brasil—; tiene la veloz extravagancia del sonido temprano de este estilo inspirado en Miami, pero con un toque de los tambores tradicionales del país, lo que la convierte en una canción sólida.</p>
+<p class="story-body-text story-content" data-para-count="247" data-total-count="15490" id="story-continues-77" tabindex="-1">En 2005, se usó como base de la canción de M.I.A. “Bucky Done Gun”, como parte de un momento en el que M.I.A., Diplo y una multitud de seguidores comenzaron a llevar el funk de las favelas a las pistas de baile de todo el mundo. (Caramanica)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="15490" id="story-continues-78" tabindex="-1"><h4 class="story-subheading story-content">Marisa Monte &#8220;Infinito Particular&#8221; (2006)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="256" data-total-count="15746" id="story-continues-79" tabindex="-1">Marisa Monte canta con una gracia insólita en “Infinito Particular”. La canción es un coqueteo cerebral: “Pero no te pierdas al entrar en mi infinito particular”, aconseja, añadiendo de manera enigmática: “Es solo misterio, no hay secreto”.</p>
+<p class="story-body-text story-content" data-para-count="213" data-total-count="15959" id="story-continues-80" tabindex="-1">Los arreglos la envuelven en una dicha amniótica: instrumentos de viento, cuerdas y percusiones que se escuchan a la distancia, mientras su clara voz flota muy cercana, acariciando cada frase sostenida. (Pareles)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="15959" id="story-continues-81" tabindex="-1"><h4 class="story-subheading story-content">Carlinhos Brown &#8220;Magalenha&#8221; (2012)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="397" data-total-count="16356" id="story-continues-82" tabindex="-1">Desde la década de los ochenta, Brown ha sido una fuerza intensa en la música brasileña: cantante, compositor, productor y organizador de comunidades. Con Timbalada, su banda de percusión, ayudó a revitalizar los sonidos de carnaval como el axé y el samba-reggae, y en una amplia y dispersa serie de discos ha encarnado la actitud brasileña de la historia musical como un continuo infinito.</p>
+<p class="story-body-text story-content" data-para-count="462" data-total-count="16818" id="story-continues-83" tabindex="-1">En 2012 volvió a grabar “Magalenha”, un éxito que escribió para Sérgio Mendes a principios de los noventa, que en esta ocasión cantó a través de un vocoder con unos cuantos instrumentos tradicionales (berimbau, agogô), así como lo que se escucha como un almacén repleto de tamborileros de carnaval y cantantes de respaldo, todo con un eco de dub-reggae. El resultado es imponente y extravagante, como su presencia en la ruta del carnaval. (Ratliff)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="16818" id="story-continues-84" tabindex="-1"><h4 class="story-subheading story-content">MC Bin Laden &#8220;Bololo Haha&#8221; (2014)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="206" data-total-count="17024" id="story-continues-85" tabindex="-1">Para 2014, el baile funk se había refinado para conservar solo sus características esenciales: es un ritmo urgente, rápido e incansable. Hacía mucho que había dejado atrás los viejos aportes de Miami.</p>
+<p class="story-body-text story-content" data-para-count="317" data-total-count="17341" id="story-continues-86" tabindex="-1">“Bololo Haha” es casi radicalmente sobria, una meditación castigadora repleta de balazos, el rugir de motocicletas, sirenas de ambulancia y el ronco ladrido de uno de sus actuales estrellas, MC Bin Laden. En el video está rodeado de niños con la mitad del cabello teñido de rubio, como su héroe. (Caramanica)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="17341" id="story-continues-87" tabindex="-1"><h4 class="story-subheading story-content">Mc Pikachu &#8220;Choque (Semana Maluca)&#8221; (2014)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="242" data-total-count="17583" id="story-continues-88" tabindex="-1">La mayoría del baile funk incluye reminiscencias de la música infantil: la forma de cantar, los elementos caricaturescos y la dulce crueldad. Esta composición que canta un niño de voz suave pero traviesa, tiene un profundo sentido social.</p>
+<p class="story-body-text story-content" data-para-count="194" data-total-count="17777" id="story-continues-89" tabindex="-1">MC Pikachu grabó casi todo el video con cámara en mano, filmándose con un estilo a lo Hype Williams y una perspectiva que hace énfasis en la locura de un niño fuera de control. (Caramanica)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="17777" id="story-continues-90" tabindex="-1"><h4 class="story-subheading story-content">Elza Soares &#8220;Mulher do Fim do Mundo&#8221; (2015)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="296" data-total-count="18073" id="story-continues-91" tabindex="-1">Elza Soares inició su carrera al final de la década de los 50 como cantante de samba con una voz grave y rasposa. Desde entonces ha grabado discos de funk, rock y hip-hop; su música es una obra maestra de la vanguardia pop que le canta a ciertas partes oscuras de la vida brasileña. (Ratliff)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="18073" id="story-continues-92" tabindex="-1"><h4 class="story-subheading story-content">Ava Rocha &#8220;Boca do Céu&#8221; (2015)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="210" data-total-count="18283" id="story-continues-93" tabindex="-1">Ava Rocha, una nueva fuerza en la música de Brasil, compone canciones elegantes y desordenadas que se conectan con los últimos cincuenta años del pop brasileño&#8230; y con los próximos cincuenta también.</p>
+<p class="story-body-text story-content" data-para-count="270" data-total-count="18553" id="story-continues-94" tabindex="-1">Su excelente disco <em>Ava Patrya Yndia Yracema</em> expande la energía creativa de la actual escena musical de Río, colocando su voz áspera y su banda flexible junto a un cuarteto de cuerdas, efectos electrónicos, baladas con guitarras acústicas y un feliz ruido. (Ratliff)</p>
+<p class="story-body-text story-content" data-para-count="0" data-total-count="18553" id="story-continues-95" tabindex="-1"><h4 class="story-subheading story-content">Trio da Paz &#8220;Sampa 67&#8221; (2016)</h4>
+<br />
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+</p>
+<p class="story-body-text story-content" data-para-count="298" data-total-count="18851" id="story-continues-96" tabindex="-1">El jazz brasileño se ha diversificado y evolucionado desde los días de apogeo de “Getz/Gilberto” en 1964. Uno de los principales ensambles de nuestra era es este colectivo, conformado por tres virtuosos: el guitarrista Romero Lubambo, el bajista Nilson Matta y el baterista Duduka Da Fonseca.</p>
+<p class="story-body-text story-content" data-para-count="310" data-total-count="19161" id="story-continues-97" tabindex="-1">Este año el grupo lanzó <em>30</em>, un disco que celebra su aniversario. El primer tema del álbum, “Sampa 67”, nos dice casi todo lo que necesitamos saber del trío; el tema está compuesto por Matta en honor a São Paulo, su ciudad natal, y es un viaje rápido y cinético, repleto de complejidades armónicas.</p>
+<p class="story-body-text story-content" data-para-count="180" data-total-count="19341" id="story-continues-98" tabindex="-1">Cada instrumentista tiene su momento de gloria en la melodía. Escuchen cómo el solo del bajo conduce a una serie de vivaces intercambios entre la guitarra y la batería. (Chinen)</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/bossa-nova/" rel="tag">bossa nova</a>, <a href="https://www.nytimes.com/es/tag/brasil/" rel="tag">Brasil</a>, <a href="https://www.nytimes.com/es/tag/gilberto-gil/" rel="tag">Gilberto Gil</a>, <a href="https://www.nytimes.com/es/tag/juegos-olimpicos-de-rio-2016/" rel="tag">Juegos Olímpicos de Río 2016</a>, <a href="https://www.nytimes.com/es/tag/sepultura/" rel="tag">Sepultura</a>, <a href="https://www.nytimes.com/es/tag/tropicalia/" rel="tag">Tropicalía</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/08/05/30-canciones-brasilenas-esenciales-para-disfrutar-los-juegos-olimpicos-de-rio/"
+				data-title="América Latina: 30 canciones brasileñas esenciales para disfrutar los Juegos Olímpicos de Río"
+				data-author="POR JON PARELES, BEN RATLIFF, JON CARAMANICA Y NATE CHINEN"
+				data-media=""
+				data-description="Los críticos de música de The New York Times ofrecen una lista de 30 canciones, recientes e históricas, de una de las culturas musicales más creativas y diversas del mundo."
+				data-publish-date="5 de agosto de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/08/05/las-olimpiadas-de-la-incertidumbre/">
+					<div class="story-body">
+						<h3 class="kicker">Río 2016</h3>
+
+						<h2 class="headline">
+							<span class="title">Las olimpiadas de la incertidumbre</span>
+							<time class="dateline">5 de agosto de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/08/04/universal/es/0804Rio2Es/0804Rio2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/08/05/el-arma-secreta-del-ejercito-de-brasil-un-repelente-de-mosquitos-milagroso/">
+					<div class="story-body">
+						<h3 class="kicker">Río 2016</h3>
+
+						<h2 class="headline">
+							<span class="title">El arma secreta del Ejército de Brasil: un repelente de mosquitos milagroso</span>
+							<time class="dateline">5 de agosto de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/08/04/sports/04repellent/04repellent-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/08/05/todos-santos-un-pueblo-de-baja-california-se-siente-amenazado-por-un-nuevo-proyecto-turistico/">
+					<div class="story-body">
+						<h3 class="kicker">México</h3>
+
+						<h2 class="headline">
+							<span class="title">Todos Santos, un pueblo de Baja California, se siente amenazado por un nuevo proyecto turístico</span>
+							<time class="dateline">5 de agosto de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/07/24/travel/24TODOSSANTOS1/24TODOSSANTOS1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/08/04/los-beatles-inspiran-beat-bugs-la-nueva-serie-animada-de-netflix/">
+					<div class="story-body">
+						<h3 class="kicker">Entretenimiento</h3>
+
+						<h2 class="headline">
+							<span class="title">Los Beatles inspiran &#8216;Beat Bugs&#8217;, la nueva serie animada de Netflix</span>
+							<time class="dateline">4 de agosto de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/08/04/universal/es/beatlesES/beatlesES-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":990,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

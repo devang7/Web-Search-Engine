@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content=""/>
+<meta name="hdl" content="Deportado: Relato de una vida interrumpida" />
+<meta name="col" content="Reposado" id="column-name" />
+<meta name="pdate" content="20160217" />
+<meta name="utime" content="20160217062052" />
+<meta name="ptime" content="20160217062052" />
+<meta name="DISPLAYDATE" content="Feb. 17, 2016" />
+<meta name="dat" content="Feb. 17, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="deportado" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/02/17/deportado/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Deportado: Relato de una vida interrumpida" />
+<meta property="og:description" content="La historia de un migrante separado, quizás para siempre, de su familia en Estados Unidos." />
+<meta property="og:image" content="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-UNGR/13deportee-slide-UNGR-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-02-17" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/02/17/deportado/" />
+<meta property="twitter:title" content="Deportado: Relato de una vida interrumpida" />
+<meta property="twitter:description" content="La historia de un migrante separado, quizás para siempre, de su familia en Estados Unidos." />
+<meta name="author" content="Luke Mogelson" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por Luke Mogelson" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="reposado" />
+<meta name="cd12" content="" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="reposado" />
+<meta name="ser" content="" />
+<meta name="id" content=""/>
+<meta name="wordCount" content="8688"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/02/17/deportado/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=02&amp;day=17&amp;name=deportado">
+<meta name="PT" content="article">
+<meta name="article:section" content="Reposado">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/10?exclude=764">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/02\/17\/deportado\/"},"headline":"Deportado: Relato de una vida interrumpida","datePublished":"2016-02-17T06:20:52+00:00","dateModified":"2016-02-17T08:32:34+00:00","author":{"@type":"Person","name":"Paula Duran"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2015\/12\/13\/magazine\/13deportee-slide-UNGR\/13deportee-slide-UNGR-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"La historia de un migrante separado, quiz\u00e1s para siempre, de su familia en Estados Unidos."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/02/17/deportado/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2015/12/13/magazine/the-deported.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="reposado" />
+<title>Deportado: Relato de una vida interrumpida &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2015/12/13/magazine/the-deported.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/02/17/deportado/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-764 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/reposado/">Reposado</a></span>
+					<span class="pipe">|</span>
+				Deportado: Relato de una vida interrumpida
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/02/17/deportado/"
+					data-title="Reposado: Deportado: Relato de una vida interrumpida"
+					data-author="POR LUKE MOGELSON"
+					data-media=""
+					data-description="La historia de un migrante separado, quizás para siempre, de su familia en Estados Unidos."
+					data-publish-date="17 de febrero de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/reposado/">Reposado</a></span>
+			
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Deportado: Relato de una vida interrumpida</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Luke Mogelson</span>
+</span>
+
+					<time class="dateline" datetime="2016-02-17">17 de febrero de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/02/17/deportado/"
+							data-title="Reposado: Deportado: Relato de una vida interrumpida"
+							data-author="POR LUKE MOGELSON"
+							data-media=""
+							data-description="La historia de un migrante separado, quizás para siempre, de su familia en Estados Unidos."
+							data-publish-date="17 de febrero de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004080257" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-UNGR/13deportee-slide-UNGR-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-UNGR/13deportee-slide-UNGR-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-UNGR/13deportee-slide-UNGR-superJumbo.jpg" data-mediaviewer-caption="Kelvin Villanueva en la casa de su tía en San Pedro Sula, Honduras." data-mediaviewer-credit="Michael Christopher Brown/Magnum, para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-UNGR/13deportee-slide-UNGR-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Kelvin Villanueva en la casa de su tía en San Pedro Sula, Honduras.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Michael Christopher Brown/Magnum, para The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2015/12/13/magazine/the-deported.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="698" data-total-count="698" id="story-continues-2" tabindex="-1">La policía detuvo a Kelvin Villanueva una noche de junio cuando estaba a punto de llegar a casa. Llevaba el foco trasero roto. Desde la camioneta podía a ver a su novia, Suelen Bueno, que, como casi todas las noches que trabajaba hasta tarde, lo esperaba tras la puerta de vidrio de su apartamento. Villanueva era el encargado de un equipo de carpinteros hondureños —todos inmigrantes indocumentados, al igual que él— que trabajaba jornadas de 12 y hasta 14 horas seguidas de construcción en Kansas City. Aunque Villanueva nunca había sido detenido en 15 años, Suelen se preocupó. La amenaza de la deportación no disminuye con el tiempo. Lo que sí aumenta es lo que tienes por perder.</p>
+<p class="story-body-text story-content" data-para-count="884" data-total-count="1582" id="story-continues-3" tabindex="-1">Antes de que Bueno llegara a la escena, Villanueva ya había sido arrestado. Lo entregaron a la agencia de autoridad migratoria (ICE, por su nombre en inglés), que lo tuvo cuatro meses dando vueltas por diferentes prisiones y centros de detención. La mayor parte del tiempo la pasó en una cárcel del estado de Misuri en la que latinos y negros se peleaban entre sí casi por rutina. Villanueva trató de encerrarse en sí mismo leyendo y dibujando. Salía poco de su litera. Llamaba a Suelen y a los niños todos los días. Se habían conocido siete años antes en una liga de fútbol para adultos cuando ella ya tenía una hija y un hijo pequeños. Juntos tuvieron una pareja más. Villanueva no hacía diferencias y trataba a los hijos de su novia como si fueran suyos. Ahora, cada vez que ellos le preguntaban cuándo estaría de vuelta, solo podía responderles: “Pronto”.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="775" data-total-count="2357" id="story-continues-4" tabindex="-1">Suelen, que tampoco tenía papeles de residencia, no podía ir a visitarlo. Pero consiguió un préstamo para pagar un abogado experto en cuestiones migratorias que formalizó una solicitud de asilo en nombre de Villanueva. Antes del juicio que decidiría su situación legal en el país, una funcionaria de asilo lo entrevistó para determinar si el miedo a regresar a Honduras por una posible persecución contra él era creíble. ¿Estaría en riesgo por su raza, religión, grupo social u opiniones políticas? La respuesta tendría mucho peso sobre la decisión del juez de suspender la deportación o autorizarla. La entrevista fue por teléfono desde la prisión y a través de un intérprete. Lo primero que le preguntó fue por qué había emigrado a Estados Unidos.</p>
+<figure id="media-100000004080254" class="media photo media-100000004080254 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-65KA/13deportee-slide-65KA-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-6">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-65KA/13deportee-slide-65KA-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-65KA/13deportee-slide-65KA-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Michael Christopher Brown/Magnum, for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-65KA/13deportee-slide-65KA-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Michael Christopher Brown/Magnum, for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="93" data-total-count="2450" id="story-continues-6" tabindex="-1">“Para vivir y trabajar”, respondió Villanueva, “porque en mi país es muy difícil”.</p>
+<p class="story-body-text story-content" data-para-count="1465" data-total-count="3915" id="story-continues-7" tabindex="-1">“Difícil” podría considerarse un eufemismo. Honduras es uno de los países más pobres y violentos de América Latina, y San Pedro Sula, de donde es Villanueva, ha sido la ciudad con más homicidios en el mundo durante cuatro años seguidos. (Solo en 2014, 1319 de sus 769.025 habitantes murieron asesinados). La mayor parte de esa carnicería está vinculada a las pandillas. En los años 80, una ola de refugiados huyeron de las guerras civiles en El Salvador, Nicaragua y Guatemala. Muchos se establecieron en Los Ángeles, donde las pandillas no dejaban de crecer. Entre los centroamericanos, dos organizaciones establecieron una rivalidad despiadada: la Mara Salvatrucha y el Barrio 18. En la década de los 90, una política de mano dura contra el crimen tuvo como consecuencia un proceso de deportación masiva de pandilleros hacia lugares que no estaban preparados para recibirlos. En países débiles y corruptos como Honduras, ambas pandillas se multiplicaron a través de una política de alianzas que no pasaba solo por la clase política y la policía, sino también por los carteles de la droga de México y América del Sur. El narcotráfico alimentó la guerra entre los pandilleros y les dio acceso a grandes cantidades de dinero y armas. En San Pedro Sula, como en tantos otros lugares por toda la región, la abundancia de recursos disponibles para el crimen y la impunidad rampante se tradujeron en más asesinatos, torturas y violaciones.</p>
+<p class="story-body-text story-content" data-para-count="840" data-total-count="4755" id="story-continues-8" tabindex="-1">Esa violencia se coló también en casa de Villanueva: su padre era alcohólico y le pegaba a su madre, quien huyó a otra ciudad y lo dejó, junto a sus tres hermanos menores, al cuidado de su abuela y sus tíos. Eran tan pobres como religiosos. Uno de los tíos era pastor en una iglesia evangélica y otro trabajaba con un grupo de jóvenes. Para contribuir a la economía familiar, Villanueva abandonó la escuela a los 12 años y comenzó a trabajar. A los 16, otro tío que vivía en Kansas City le prestó el dinero para pagar un coyote que le ayudara a cruzar la frontera de Estados Unidos. También le prometió un trabajo en una fábrica de cristal haciendo ventanas. Su familia en San Pedro Sula apoyó la decisión. Miembros del Barrio 18 habían estado presionándolo para que se les uniera. Ya lo habían golpeado por negarse.</p>
+<p class="story-body-text story-content" data-para-count="155" data-total-count="4910" id="story-continues-9" tabindex="-1">Cuando Villanueva describió el incidente durante su entrevista de petición de asilo, la funcionaria le preguntó: “¿Cómo sabes que eran de la 18?”.</p>
+<p class="story-body-text story-content" data-para-count="144" data-total-count="5054" id="story-continues-10" tabindex="-1">“Tenían tatuajes con el número en la cara y las manos”, respondió. “Las casas en las que viven están marcadas con el mismo número”.</p>
+<p class="story-body-text story-content" data-para-count="441" data-total-count="5495" id="story-continues-11" tabindex="-1">Más tarde, Villanueva describiría la tortura y asesinato de su tío, el que trabajaba con los jóvenes en la iglesia a la que iba su familia: desapareció en 2013, después de quejarse ante la policía porque el Barrio 18 estaba molestando a los chicos de su grupo; pocos días después, su cuerpo apareció en el río Chamelecón. Según los investigadores, las heridas que tenía por todo el cuerpo eran de las que provoca un picahielos.</p>
+<p class="story-body-text story-content" data-para-count="117" data-total-count="5612" id="story-continues-12" tabindex="-1">“¿Cómo sabes que la pandilla tiene conexiones con la policía?&#8221;, le preguntó también la oficial de asilo.</p>
+<p class="story-body-text story-content" data-para-count="52" data-total-count="5664" id="story-continues-13" tabindex="-1">“En mi país todo el mundo lo sabe”, respondió.</p>
+<p class="story-body-text story-content" data-para-count="216" data-total-count="5880" id="story-continues-14" tabindex="-1">“Su abogado ha presentado un artículo que explica que la policía capturó a un miembro del Barrio 18”, señaló la oficial. “Si la policía trabaja con la pandilla, ¿por qué arrestarían a sus líderes?”.</p>
+<p class="story-body-text story-content" data-para-count="136" data-total-count="6016" id="story-continues-15" tabindex="-1">“Detienen a los líderes para que la gente de las comunidades piense que hacen su trabajo. Pero en un par de semanas están libres”.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="60" data-total-count="6076" id="story-continues-16" tabindex="-1">“¿Por qué los liberan después de una o dos semanas?”.</p>
+<p class="story-body-text story-content" data-para-count="63" data-total-count="6139" id="story-continues-17" tabindex="-1">“Esa es la pregunta que se hace todo el mundo en Honduras”.</p>
+<p class="story-body-text story-content" data-para-count="57" data-total-count="6196" id="story-continues-18" tabindex="-1">“¿Hay algo más que te provoque temor en Honduras?”.</p>
+<p class="story-body-text story-content" data-para-count="30" data-total-count="6226" id="story-continues-19" tabindex="-1">“No, solo perder la vida”.</p>
+<p class="story-body-text story-content" data-para-count="454" data-total-count="6680" id="story-continues-20" tabindex="-1">Aunque la oficial pensó que Villanueva era una persona creíble, no lo consideró apto para recibir asilo. El juez estuvo de acuerdo. Lo enviaron a Luisiana, donde abordó un avión con otro centenar de hondureños. Iban esposados de pies y manos, con las cadenas pegadas a la cintura y escoltados por hombres armados. A medio camino les dieron unos sándwiches y unas galletas en envoltorios individuales. La mayoría tuvieron que abrirlos con la boca.</p>
+<figure id="media-100000004081599" class="media photo media-100000004081599 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-RUQP/13deportee-slide-RUQP-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-22">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-RUQP/13deportee-slide-RUQP-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-RUQP/13deportee-slide-RUQP-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Michael Christopher Brown/Magnum, for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-RUQP/13deportee-slide-RUQP-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Michael Christopher Brown/Magnum, for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="567" data-total-count="7247" id="story-continues-22" tabindex="-1">El aeropuerto de San Pedro Sula, a las afueras de la ciudad, recibe aviones cargados de personas como Villanueva varias veces por semana. Allí les quitan las esposas, los hacen caminar por la pista y los llevan hasta un centro de procesamiento donde les devuelven sus pertenencias. Una vez afuera, familiares y amigos esperan en la sombra a que se abran las puertas por las que los deportados van saliendo uno a uno. Los taxistas regatean los precios, los cambistas agitan fajos de lempiras para cambiarlos por dólares. La gente se emociona al hablar por teléfono.</p>
+<p class="story-body-text story-content" data-para-count="963" data-total-count="8210" id="story-continues-23" tabindex="-1">En los últimos cinco años, Estados Unidos ha deportado a más de medio millón de hondureños, guatemaltecos y salvadoreños. Muchos de ellos, como Villanueva, han tenido que despedirse de sus hijos. Aunque las autoridades migratorias dicen que seleccionan a quienes han violado la ley para deportación, la mayoría de los centroamericanos no tiene antecedentes penales. Y de los que sí los tienen, la mitad han recibido una multa de tránsito o han cometido un delito migratorio (entrar al país de manera ilegal, por ejemplo). En el aeropuerto, a la mayoría de las personas con las que me encontré las habían capturado cruzando la frontera. Esto quiere decir que en muy poco tiempo habían pasado por dos experiencias penosas: su travesía por México (durmiendo en albergues, caminando por el desierto, tratando de evitar asaltantes, secuestradores y violadores) y luego el tiempo que pasaron detenidos por las autoridades migratorias en Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="781" data-total-count="8991" id="story-continues-24" tabindex="-1">Cuando entran al centro de procesamiento, les dan café y baleadas (una especialidad hondureña a base de tortillas y frijol). El personal se dirige a ellos como “señor” y “señora”, les gastan bromas y dicen “por favor” y “gracias”. Hay voluntarios que entrevistan a los deportados. Un día me senté al lado de uno de los voluntarios: Dennis Abraham, de 30 años, un carpintero que también canta, de ojos grandes, con el pelo por los hombros y un chongo estilo samurái. De su cuello colgaba la tarjeta de una empresa que gestiona un centro de procesamiento de migrantes en Texas donde él había estado detenido dos meses antes. Cuando los recién llegados se sentaban frente a él, Abraham les sonreía, les señalaba la tarjeta y decía: “Somos iguales”.</p>
+<p class="story-body-text story-content" data-para-count="1273" data-total-count="10264" id="story-continues-25" tabindex="-1">Abraham viajó a Estados Unidos por primera vez a los 16 años con su madre, María. Se pasaron dos meses agarrados al techo del tren de mercancías que se dirige al norte. Cuando por fin atravesaban el río Bravo por una de sus partes más profundas, la corriente los separó. María consiguió llegar al otro lado. A Abraham, que apenas sabía nadar, se lo llevó la corriente. Desconcertado, se entregó a las autoridades mexicanas. De vuelta en Honduras no tenía manera de comunicarse con María y no había nadie que pudiera cuidarlo. Así que decidió ir a buscarla. Fue detenido y deportado de México siete veces. “La octava vez me hicieron esto”, dijo estirando el antebrazo que tenía una serie de cicatrices en forma de cruz. Los Zetas, uno de los carteles más importantes de México, uno de los que más secuestran y extorsionan, lo habían agarrado en el tren. No querían creer que Abraham no podía pedirle a nadie que pagara un rescate por él y lo dejaron atado en una habitación sin luz en la que lo golpearon, se mearon en él, lo cortaron con machetes, lo amenazaron con castrarlo y lo obligaron a pasar por ejecuciones falsas. Al final, lo dejaron trabajar lavando sus autos para pagar su propio rescate y durmió en la calle durante ocho meses.</p>
+<p class="story-body-text story-content" data-para-count="164" data-total-count="10428" id="story-continues-26" tabindex="-1">Eso pasó hace casi diez años. Después, Abraham llegó a Estados Unidos, encontró a su madre, se casó con una estadounidense, tuvo dos hijos y acabó deportado.</p>
+<p class="story-body-text story-content" data-para-count="128" data-total-count="10556" id="story-continues-27" tabindex="-1">Mientras mostraba fotos de sus hijos en su teléfono lo dejó claro: “No tengo opción, tengo que subirme al tren otra vez”.</p>
+<p class="story-body-text story-content" data-para-count="297" data-total-count="10853" id="story-continues-28" tabindex="-1">Fui testigo de cómo Abraham entrevistaba a media docena de deportados y decía la verdad: eran como él. A un trabajador del campo que tenía tres hijas en Estados Unidos y se dirigía al pueblo en el que vivía su madre le preguntó: “¿Hay alguien que pueda hacerte daño hacia donde vas?”.</p>
+<p class="story-body-text story-content" data-para-count="145" data-total-count="10998" id="story-continues-29" tabindex="-1">“Sí”, dijo, quitándose la gorra y frotándose la cara con las manos. “Pero tengo que asumir el riesgo, no tengo otro lugar a donde ir”.</p>
+<p class="story-body-text story-content" data-para-count="37" data-total-count="11035" id="story-continues-30" tabindex="-1">“¿Entonces tienes miedo de ir?”.</p>
+<p class="story-body-text story-content" data-para-count="10" data-total-count="11045" id="story-continues-31" tabindex="-1">“Sí”.</p>
+<p class="story-body-text story-content" data-para-count="29" data-total-count="11074" id="story-continues-32" tabindex="-1">“¿Pero vas a ir igual?”.</p>
+<p class="story-body-text story-content" data-para-count="19" data-total-count="11093" id="story-continues-33" tabindex="-1">“Por supuesto”.</p>
+<p class="story-body-text story-content" data-para-count="503" data-total-count="11596" id="story-continues-34" tabindex="-1">El campesino, como todos los que bajaron del avión, parecía agotado y desorientado. En general me dio la sensación de que los deportados no se dejaban convencer por la exhibición de decencia de los voluntarios. La desconfianza se había instalado en ellos. La transición de un lugar a otro era demasiado brusca. Algo seguía fuera de lugar. Por supuesto que ser liberados de la custodia de la autoridad migratoria de Estados Unidos los tranquilizaba, pero estar de vuelta en Honduras los espantaba.</p>
+<p class="story-body-text story-content" data-para-count="1664" data-total-count="13260" id="story-continues-35" tabindex="-1">El mismo día, más tarde, en una pulpería frente al centro de procesamiento, conocí a un hombre hecho un manojo de nervios. Se llamaba Bayron Cardona. Me contó que tanto él como su mujer, Belky, habían logrado cruzar el río Bravo, pero la patrulla fronteriza los intimidó tanto que decidieron dar media vuelta y cuando cruzaban a México los detuvieron. Acababan de terminar la universidad, tenían poco más de veinte años y un año antes habían abierto una tienda de reparación de computadoras en un edificio del padre de ella. Su colonia era territorio de la Mara Salvatrucha y los pandilleros no tardaron mucho en llegar a pedir el impuesto de guerra, una de las fuentes de ingresos más habituales de las pandillas en Honduras. En la zona, todos los negocios ya estaban pagando. La cantidad que les pedían era más de lo que podían pagar. Cuando se demoraron con la primera entrega, la MS-13 amenazó con matar a Bayron. Cardona y Belky fueron entonces a la Embajada de Estados Unidos, pidieron visas y se las negaron. Entonces avisaron a la policía. “Nuestro gran error”, como lo definió Cardona. El mismo día, después de que la pareja cerró la tienda alguien deslizó una nota bajo la persiana metálica. Una carta impresa que decía, entre otras cosas: “Si no nos pagas ese dinero va atenete a las consecuencias perro i preparando las tumbas para que entierres a tus hijas, ya sabemos donde trabaja cada una tenemos todo de ustedes. Llama a tu casa para que veas ”. Cardona y Belky lo hicieron. Vivían con el padre de Belky. Minutos antes, les dijo, dos hombres en moto habían pasado por delante disparando al frente de la casa.</p>
+<p class="story-body-text story-content" data-para-count="585" data-total-count="13845" id="story-continues-36" tabindex="-1">Pocas semanas después, la pareja se bajó de una barca en la orilla del río en Texas. Era de noche. Vieron arbustos, detrás había una carretera, después una valla y más allá una autopista. El coyote les dijo que en la valla había un hoyo por el que podrían colarse. Cardona y Belky se escondieron entre los arbustos. Camionetas de color verde y blanco iban de un lado a otro de la carretera, había policías patrullando con perros y a caballo. Un helicóptero comenzó a volar bajo. El rotor de la nave aplastaba la hierba, sus aspas giraban como cuchillas. Los descubrieron.</p>
+<p class="story-body-text story-content" data-para-count="657" data-total-count="14502" id="story-continues-37" tabindex="-1">El resto de la noche y el día siguiente, Cardona y Belky fueron testigos de cómo un migrante tras otro trataba de salir en carrera y era atrapado. A veces, mientras corrían, los perros se les enganchaban a los pantalones. No habían dormido y estaban deshidratados. Belky le dijo a Cardona que quería regresar. Tenían visas mexicanas, podrían quedarse allí o buscar otro país. Cardona llamó al coyote y le pidió que enviara una barca para recogerlos. Estaban en el agua esperando a que llegara cuando otra lancha les apuntó con una linterna. Desde la orilla un oficial a caballo galopó hasta acercarse a ellos y les dijo que se quedaran quietos.</p>
+<p class="story-body-text story-content" data-para-count="678" data-total-count="15180" id="story-continues-38" tabindex="-1">En una estación de la patrulla fronteriza en McAllen los separaron. A Cardona lo pusieron en una celda con otros hombres. Se morían de frío. Los migrantes la llaman la Hielera. Pusieron una papelera justo debajo del ventilador del techo para que capturara al menos algo del aire congelado que desprendía. A los dos días, a Cardona lo transfirieron a un centro de detención donde le dijo a uno de los oficiales que él y su mujer querían pedir asilo. El oficial le pidió el nombre de Belky. Al día siguiente, la deportaron. Una semana después, lo deportaron a él. Cuando lo conocí en el aeropuerto de San Pedro, no había visto a Belky desde el día de la detención.</p>
+<figure id="media-100000004080256" class="media photo media-100000004080256 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-3GWS/13deportee-slide-3GWS-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-40">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-3GWS/13deportee-slide-3GWS-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-3GWS/13deportee-slide-3GWS-superJumbo.jpg" data-mediaviewer-caption="Bayron and Belky Cardona owned a business near San Pedro Sula but closed it and fled after receiving death threats from the MS-13 gang." data-mediaviewer-credit="Michael Christopher Brown/Magnum, for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-3GWS/13deportee-slide-3GWS-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Bayron and Belky Cardona owned a business near San Pedro Sula but closed it and fled after receiving death threats from the MS-13 gang.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Michael Christopher Brown/Magnum, for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="850" data-total-count="16030" id="story-continues-40" tabindex="-1">Unos días más tarde, visité a la pareja en casa del padre de ella. Me encontré con Cardona en un restaurante cercano para que pudiera mostrarle a mi conductor el camino a través de su colonia. Estaba inquieto. Su suegro había pagado la mitad del impuesto de guerra que le debían a la MS-13 y le había dicho a los pandilleros que la pareja estaba en Estados Unidos. Cardona no sabía qué pasaría cuando descubrieran que estaban de vuelta. Se cambió el pelo, se dejó barba y llevaba anteojos en vez de lentes de contacto. Pasamos frente al edificio donde había estado su negocio. Había una barbería en su lugar. En su calle, un “bandera” de la pandilla, un adolescente, nos miró fijamente. La regla cuando se entra a territorio de la pandilla es que hay que bajar las ventanillas para que puedan ver quién va dentro del automóvil.</p>
+<p class="story-body-text story-content" data-para-count="713" data-total-count="16743" id="story-continues-41" tabindex="-1">Al subir las escaleras de la entrada de su casa, Cardona señaló los agujeros que la balacera había dejado en las paredes. Entró y salió con la carta con la que los habían amenazado de muerte por debajo de la puerta de la tienda. Su suegro también había encontrado un casquillo de bala, de una nueve milímetros, y probablemente todavía lo tenía guardado, me dijo. Le contesté que no hacía falta, que no necesitaba verlo. Belky salió y nos sentamos entre dos perros amarrados con cadenas que no dejaban de ladrar. A uno le salía un bulto de la frente que dolía solo con verlo. Alguien lo había golpeado con un bate o un tubo, me explicó Cardona, mientras les robaban los tanques de gas de la casa.</p>
+<p class="story-body-text story-content" data-para-count="447" data-total-count="17190" id="story-continues-42" tabindex="-1">Belky lloró varias veces mientras hablábamos. En McAllen, me dijo, también la metieron en una Hielera. Allí estuvo tres días con otras mujeres y sus niños. Hasta un bebé recién nacido con su madre, que se recuperaba de una cesárea. Les dieron mantas térmicas para combatir el frío. Todas dormían en el suelo. No había duchas y en el único baño disponible había una cámara de vigilancia. Les dan dos sándwiches al día a cada una.</p>
+<p class="story-body-text story-content" data-para-count="205" data-total-count="17395" id="story-continues-43" tabindex="-1">Belky me dijo que cuando les explicó a los guardias que quería pedir asilo, le respondieron que no tenía derecho a hacerlo, “te hacen firmar papeles en inglés y no sabemos lo que estamos firmando”.</p>
+<p class="story-body-text story-content" data-para-count="619" data-total-count="18014" id="story-continues-44" tabindex="-1">Ni Cardona ni Belky creían que estaban seguros si se quedaban en Honduras. Pero Belky, que no había salido de casa desde su llegada, una semana antes, no quería regresar a Estados Unidos. Para ella la experiencia había sido, sobre todo, profundamente humillante. Antes de despedirnos, describió cómo la metieron en una habitación en McAllen en la que varios agentes miraban una serie de pantallas que mostraban imágenes de algún lugar de la frontera. “Se reían de nosotras”, dijo resentida. “Uno de ellos se jactaba de cuánta gente había atrapado. Miran a la gente que cruza y se ríen de nosotros”.</p>
+<p class="story-body-text story-content" data-para-count="353" data-total-count="18367" id="story-continues-45" tabindex="-1">Los visité de nuevo un par de semanas más tarde. Manejábamos por su barrio y pasamos junto a un grupo de hombres que rodeaban a otro que estaba en cuclillas. Le pegaban en la cabeza con los nudillos, no demasiado fuerte, con una moderación extraña. Es el modo que tiene la pandilla, me dirían más tarde, de darle un buen aviso a uno de los suyos.</p>
+<p class="story-body-text story-content" data-para-count="69" data-total-count="18436" id="story-continues-46" tabindex="-1">Belky me contó que aún no se atrevía a poner un pie fuera de casa.</p>
+<p class="story-body-text story-content" data-para-count="287" data-total-count="18723" id="story-continues-47" tabindex="-1">Cuando lo vi en el aeropuerto, Villanueva estaba sentado en una mesa de madera en la pulpería bebiendo una Pepsi. Levantó la botella y vi que tenía un tatuaje en la mano. Un nombre: “Haley”. Llevaba una gorra azul de los Kansas City Royals. Junto a los pies, una bolsa de deporte.</p>
+<p class="story-body-text story-content" data-para-count="72" data-total-count="18795" id="story-continues-48" tabindex="-1">Después de hablar un rato le pregunté si alguien vendría a recogerlo.</p>
+<p class="story-body-text story-content" data-para-count="209" data-total-count="19004" id="story-continues-49" tabindex="-1">Villanueva rio con toda la intención. “No creo”. Pelo rizado y revuelto, poca barba y los dientes un poco separados. Quizás eso le complicaba hablar. Le propuse llevarlo a donde tuviera que ir y aceptó.</p>
+<p class="story-body-text story-content" data-para-count="474" data-total-count="19478" id="story-continues-50" tabindex="-1">En San Pedro Sula llama la atención la cercanía, casi intimidad, en la que conviven la pobreza extrema y la ostentación. A un lado del río, un centro comercial de varias plantas con valet parking, al otro, selva y casas de madera. De camino a donde vive su familia, pasamos cuadra tras cuadra de mansiones recargadas y escondidas tras muros altísimos. Sobre los muros, alambre de púas. Sobre el alambre, cables electrificados. En las puertas, hombres con armas largas.</p>
+<p class="story-body-text story-content" data-para-count="604" data-total-count="20082" id="story-continues-51" tabindex="-1">“Mira eso”, no dejaba de decirme Villanueva. Ya lo habían deportado una vez antes, en 2008 y solo estuvo en San Pedro Sula dos semanas antes de regresar a Kansas City. La ciudad ha cambiado mucho desde entonces. Comenzamos a avanzar por una calle empedrada que llevaba a una zona pobre con vegetación exuberante. Por todas partes, chabolas armadas con trozos de metal recuperados de otros lugares. Villanueva iba a quedarse con su tía Marta en una cabaña de madera en un terreno rocoso lleno de hierbas, al menos crecían algunos mangos cerca. En cuanto nos bajamos del auto, comenzó a sonreír.</p>
+<p class="story-body-text story-content" data-para-count="59" data-total-count="20141" id="story-continues-52" tabindex="-1">Lo dijo en inglés. “Se me hace bien raro estar aquí”.</p>
+<p class="story-body-text story-content" data-para-count="302" data-total-count="20443" id="story-continues-53" tabindex="-1">Regresé unos días después y me encontré a Villanueva sentado sobre una roca hablando con su hijo pequeño por el celular. “No, mi amor, no puedes venir”, le decía. “Pórtate bien, ¿ok? No pelees con tus hermanas, ¿entendido?&#8221;. Cuando colgó me dijo: “No sé cómo explicárselo”.</p>
+<p class="story-body-text story-content" data-para-count="21" data-total-count="20464" id="story-continues-54" tabindex="-1">“¿No lo saben?”.</p>
+<p class="story-body-text story-content" data-para-count="65" data-total-count="20529" id="story-continues-55" tabindex="-1">Movió la cabeza a los lados. “Piensan que estoy trabajando”.</p>
+<p class="story-body-text story-content" data-para-count="372" data-total-count="20901" id="story-continues-56" tabindex="-1">A la chabola se entra apartando una sábana que tapa la puerta. Así fue como apareció un chico con el pelo lleno de gel y una camiseta apretada. Era el hermano pequeño de Villanueva, Óscar. Lo detuvieron por conducir embriagado y lo habían deportado hace poco. Me contó que en Colorado tiene una mujer, una hija y un hijo. Que todos son ciudadanos de Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="354" data-total-count="21255" id="story-continues-57" tabindex="-1">Villanueva aparentaba tener un humor sorprendente cuando nos vimos en el aeropuerto y hasta ese día todo seguía igual. Aunque lamentaba la situación, también se reía de ella. Pero Óscar era mucho más hosco. Hablaba tan bajo que costaba oírlo y cuando le pregunté cómo lo llevaban sus hijos sin él, bajó la cabeza, susurró: “Esos niños”.</p>
+<p class="story-body-text story-content" data-para-count="7" data-total-count="21262" id="story-continues-58" tabindex="-1">Lloró.</p>
+<p class="story-body-text story-content" data-para-count="1019" data-total-count="22281" id="story-continues-59" tabindex="-1">En la chabola de Marta vivían cinco personas. La zona de cocina y la de dormir, separadas por sábanas. Por las noches, Óscar y Villanueva ponían unos colchones en el suelo. Casi nunca salían. Ninguno se acostumbraba a los peligros de la ciudad en la que habían crecido. La carnicería diaria a la que los habitantes de San Pedro Sula se han habituado aún les preocupaba a ambos hermanos, lo mismo que a cualquier estadounidense. Una mañana los invité a desayunar y nos encontramos una escena de crimen rodeada de cinta amarilla a pocas cuadras de su casa. Un cuerpo yacía bocabajo sobre una acera y otro en la calle. Podían distinguirse trozos de carne entre la sangre y alrededor de las cabezas. Los investigadores forenses de bata blanca habían colocado esas piezas amarillas de plástico con las que se señalan los casquillos que han matado a alguien. Había 47. La escena no parecía impresionarle demasiado a la poca gente que miraba. Muchos de los que pasaban por delante ni se molestaban en hacerlo.</p>
+<p class="story-body-text story-content" data-para-count="53" data-total-count="22334" id="story-continues-60" tabindex="-1">“Hacía mucho que no veía eso”, dijo Villanueva.</p>
+<p class="story-body-text story-content" data-para-count="41" data-total-count="22375" id="story-continues-61" tabindex="-1">“Bienvenido a Honduras”, dijo Óscar.</p>
+<figure id="media-100000004080259" class="media photo media-100000004080259 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-S9TP/13deportee-slide-S9TP-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-63">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-S9TP/13deportee-slide-S9TP-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-S9TP/13deportee-slide-S9TP-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Michael Christopher Brown/Magnum, for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-S9TP/13deportee-slide-S9TP-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Michael Christopher Brown/Magnum, for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="246" data-total-count="22621" id="story-continues-63" tabindex="-1">Horas más tarde los llevé de regreso a su casa. Pasamos de nuevo frente a la misma escena. La gente se había dispersado y los investigadores ya no estaban. Los cuerpos seguían allí. Nadie los había cubierto y los autos pasaban como si nada.</p>
+<p class="story-body-text story-content" data-para-count="779" data-total-count="23400" id="story-continues-64" tabindex="-1">El contraste entre la realidad de San Pedro Sula y el pequeño mundo que se había creado la familia de Villanueva me sorprendió siempre que los visité. En tres casas vivían 15 familiares. A menudo se reunían al caer la noche alrededor de un sofá viejo y unos bancos frente a la chabola de Marta. Al lado, uno de esos autobuses escolares amarillos. En las ventanas se leía “Dios bendiga Honduras” y “No te des por vencido”. Los niños jugaban a empujarse alrededor de unos cubos y unas llantas sobre antiguos cimientos agrietados, ya rodeados por la hierba. La abuela de Villanueva cocinaba baleadas o arroz y frijoles sobre unas brasas que ardían en una parrilla hecha con un trozo de cemento. Perros y gatos merodeaban pidiendo las sobras. Todos reían. Siempre.</p>
+<p class="story-body-text story-content" data-para-count="544" data-total-count="23944" id="story-continues-65" tabindex="-1">Una noche, charlando con Villanueva y Óscar, escuché un violinista tocando una pieza que no conocía (no sé nada de música clásica) pero cuya belleza me sorprendió. Villanueva me llevó más allá de donde estaba el autobús, entre árboles, hasta una casita alejada de la carretera. Vimos a su prima, de 22 años, sentada bajo una bombilla en el porche de una casa, concentrada en la interpretación. Mientras tocaba —luego me explicaría que el compositor era Mozart— sus dos hermanas pequeñas salieron de la casa, violín en mano.</p>
+<p class="story-body-text story-content" data-para-count="840" data-total-count="24784" id="story-continues-66" tabindex="-1">Una de ellas también tocaba el teclado en el grupo de la iglesia de la familia. Acabé yendo con Villanueva a uno de los servicios. Cuando terminó, otro de los primos manejó el bus para llevar a los fieles a sus casas. Estaba tan lleno que muchos tuvieron que ir de pie. Avanzábamos por esos barrios privados, fortificados, para adentrarnos después en las colonias en ruinas donde vivían los miembros de la congregación. La energía y felicidad del grupo llamaban la atención. Cada vez que alguien se bajaba, besaba y abrazaba a cada pasajero a modo de despedida. Tanta buena voluntad no parecía normal. Nos llevó un par de horas atravesar la ciudad. En esas dos horas pasamos delante de dos escenas de crimen marcadas por cinta amarilla y vimos un asalto: unos doce adolescentes le pegaban a alguien que se retorcía en el suelo.</p>
+<p class="story-body-text story-content" data-para-count="695" data-total-count="25479" id="story-continues-67" tabindex="-1">Villanueva tenía poco más que hacer que asistir a la iglesia. El momento más importante de su día, la llamada telefónica del mediodía a su novia y a los niños. Ni él ni Suelen les habían contado lo de la deportación. Brianna, que cumplió 10 años el día antes de que lo deportaran a Honduras, y Jesse, de ocho, lo llevaban mejor que sus hermanos pequeños. Haley —sí, el nombre que Villanueva lleva tatuado—, de cuatro años, estaba muy apegada a él. Lo esperaba despierta con Suelen cuando llegaba tarde del trabajo. Ahora se negaba a irse a dormir para estar despierta por si regresaba. El niño de tres años, Jordi, era introvertido. Dormía todo el día y casi no hablaba.</p>
+<p class="story-body-text story-content" data-para-count="529" data-total-count="26008" id="story-continues-68" tabindex="-1">Suelen, que había decidido quedarse en casa con los niños cuando comenzaron a vivir juntos, había vuelto a trabajar. Limpiaba un edificio siete días por semana mientras su madre cuidaba de los niños. Llegaba a casa alrededor de las 2:00 de la mañana, se levantaba a las 7:00 para prepararlos para la escuela, recogía a Haley al mediodía, les hacía la comida, iba a buscar a Brianna y Jesse a la parada de autobús a las 16:30, hacía la cena a las 18:00 y regresaba al trabajo cuando su madre llegaba a eso de las 20:00.</p>
+<p class="story-body-text story-content" data-para-count="499" data-total-count="26507" id="story-continues-69" tabindex="-1">Villanueva moría por saber si había alguna posibilidad de regresar con ellos de manera legal. Sus primeros días en Honduras parecía optimista. El abogado especialista en temas migratorios que había contratado para llevar el caso había apelado la decisión y Suelen creía que tenían posibilidades. La apelación iba a costarles 5000 dólares después de los 4750 que ya se habían gastado y los 8000 que tenían que pagar a plazos. Pero si la posibilidad era real, ya encontrarían el dinero.</p>
+<p class="story-body-text story-content" data-para-count="1097" data-total-count="27604" id="story-continues-70" tabindex="-1">Y eso significaba pedir prestado. La tarifa del abogado y los 1000 dólares gastados en teléfono mientras estuvo en la cárcel (1 dólar el minuto para hablar con los niños) habían acabado con todos sus ahorros. Para pagarle al abogado, Suelen había pedido una serie de créditos a un prestamista que le cobraba un interés del cinco por ciento semanal. El jefe de Villanueva había dejado de contestar el teléfono. A principios de año, el equipo de carpinteros hondureños había construido las cocinas de más de 100 apartamentos en Kansas City y le debían 28.000 dólares por ese trabajo. Antes de que lo detuvieran, había pensado utilizar el dinero para comprar una casa en mal estado en una subasta, arreglarla en secreto, llevarse a Suelen allí una vez que estuviera terminada y proponerle matrimonio. Ahora estaba claro que ya nunca vería ese dinero. Aunque pagó impuestos todos los años e informó a las autoridades de los salarios de sus empleados (no se investiga la situación migratoria de quien paga impuestos) no hay manera de recuperar legalmente el dinero que le deben.</p>
+<p class="story-body-text story-content" data-para-count="745" data-total-count="28349" id="story-continues-71" tabindex="-1">Cuando Villanueva me confesó la esperanza que tenía en su petición de asilo, dudé. Ya había sido deportado antes y una decisión de ese tipo difícilmente tiene marcha atrás. Con Villanueva presente llamé a su abogado en Kansas City y le pregunté cuáles eran las posibilidades, en su opinión, de que la apelación se resolviera de manera favorable. El abogado, Allan Bell, me dijo: “La respuesta directa a la pregunta es que las posibilidades son escasas. No digo entre escasas y cero. Digo escasas. Usaría la palabra &#8216;remotas&#8217;”. Le pregunté por las alternativas que le permitirían a Villanueva regresar a Estados Unidos y el abogado pidió que habláramos más tarde para que Suelen participara en la conversación.</p>
+<p class="story-body-text story-content" data-para-count="1076" data-total-count="29425" id="story-continues-72" tabindex="-1">De hecho, no hay ninguna opción. Se calcula que hay 4,5 millones de niños en Estados Unidos cuyos padres no tienen su documentación migratoria en regla. Cada año, la deportación separa a decenas de miles de padres y madres de sus hijos. En noviembre de 2014, el Presidente Obama aprobó una serie de reformas que permitirían que algunos padres de ciudadanos y residentes recibieran permisos de trabajo temporales. Texas y otros 25 estados demandaron la decisión, que calificaron de inconstitucional y un juez federal en Brownsville (uno de los lugares por donde más migrantes y solicitantes de asilo cruzan) emitió una orden contra la medida del presidente. Por ahora, los residentes en los Estados Unidos y los ciudadanos pueden pedir la residencia para sus padres a los 21 años. Para Haley, la hija mayor de Villanueva, eso significa esperar 17 años. Por si fuera poco, como ya ha sido deportado antes, se le aplican dos períodos de 10 años en los que no puede regresar. Eso le obligaría a pasar al menos dos décadas fuera del país antes de tratar de volver.</p>
+<p class="story-body-text story-content" data-para-count="1076" data-total-count="30501" id="story-continues-73" tabindex="-1">Cuando la pareja habló con Bell, el abogado pidió que yo no estuviera presente. Acepté, pero Villanueva grabó. Escuchar esa conversación perturba. El abogado le resta importancia a la apelación y propone que pidan algo denominado “visa humanitaria”, y se ofrece a manejar el proceso por 3000 dólares. Villanueva y Suelen, que comenzaban a dudar sobre gastar más dinero en un proceso largo, lo presionaron para que les explicara las posibilidades de que esa opción tuviera éxito. Bell no les da una respuesta directa. (Hablaría más tarde con otros abogados especialistas en leyes migratorias que habían trabajado con visas humanitarias —que suelen consistir en un permiso temporal para emergencias familiares— y me dijeron que no era una opción viable para Villanueva). En un punto de la conversación, tenso, Villanueva deja de usar al intérprete y le habla al abogado en inglés. “Quiero estar seguro de lo que hago porque no quiero gastar más dinero y perder más tiempo”, dice. “Quiero estar allí con mi familia. ¿Entiende? Quiero&#8230;”.</p>
+<p class="story-body-text story-content" data-para-count="83" data-total-count="30584" id="story-continues-74" tabindex="-1">“Lo sé. Es una situación terrible. No podría estar más de acuerdo contigo”.</p>
+<p class="story-body-text story-content" data-para-count="131" data-total-count="30715" id="story-continues-75" tabindex="-1">“No me digas eso”, responde Villanueva subiendo la voz. “Es terrible. Yo soy el que está en Honduras lejos de mi familia”.</p>
+<p class="story-body-text story-content" data-para-count="20" data-total-count="30735" id="story-continues-76" tabindex="-1">“Sí, sí, sí”.</p>
+<p class="story-body-text story-content" data-para-count="78" data-total-count="30813" id="story-continues-77" tabindex="-1">“Quiero las cosas claras. ¿Se puede ganar este caso o vamos a perderlo?”.</p>
+<p class="story-body-text story-content" data-para-count="397" data-total-count="31210" id="story-continues-78" tabindex="-1">“Creo que es posible…&#8221;. Bell recula, parece dar marcha atrás, pero no, regresa y dice: “Espera. Tengo que explicarte algo. Se lo voy a explicar a todos. Ninguno de ustedes sabe esto y ni siquiera estoy seguro de que les importe. Pero los Kansas City Royals están jugando el campeonato de la Liga Americana justo ahora. Y eso aquí es importante. Suelen lo sabe, ¿verdad, Suelen?”.</p>
+<p class="story-body-text story-content" data-para-count="40" data-total-count="31250" id="story-continues-79" tabindex="-1">“Sí”, responde ella tras una pausa.</p>
+<p class="story-body-text story-content" data-para-count="57" data-total-count="31307" id="story-continues-80" tabindex="-1">“Está pasando en televisión”, continúa el abogado.</p>
+<p class="story-body-text story-content" data-para-count="115" data-total-count="31422" id="story-continues-81" tabindex="-1">“No me importan los Royals ahora”, dice Villanueva en inglés. “Lo que me importa es mi caso y mi familia”.</p>
+<figure id="media-100000004081606" class="media photo media-100000004081606 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-ZKO7/13deportee-slide-ZKO7-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-83">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-ZKO7/13deportee-slide-ZKO7-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-ZKO7/13deportee-slide-ZKO7-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Michael Christopher Brown/Magnum, for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-ZKO7/13deportee-slide-ZKO7-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Michael Christopher Brown/Magnum, for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="217" data-total-count="31639" id="story-continues-83" tabindex="-1">“Estoy aquí y no he ido al partido por este caso. Regalé las entradas para poder ayudarlos. Está pasando por televisión, los Kansas City Royals contra el equipo de Houston. Pero los ayudaré, no se preocupen”.</p>
+<p class="story-body-text story-content" data-para-count="417" data-total-count="32056" id="story-continues-84" tabindex="-1">Después de la llamada me llevé a Villanueva a comer. Comió poco. Habló poco. La alegría y la capacidad de adaptación que me tenían maravillado hasta entonces, habían desaparecido. Por primera vez entendí que la diferencia entre Villanueva y su hermano Óscar no era de carácter. Quizás la única diferencia era que Óscar llevaba atrapado en Honduras, lejos de su familia, mucho más tiempo que su hermano.</p>
+<p class="story-body-text story-content" data-para-count="141" data-total-count="32197" id="story-continues-85" tabindex="-1">Cuando le pregunté qué estaba pensando, levantó la cabeza, la movió de lado a lado y respondió: “Tengo que hacer el viaje de nuevo”.</p>
+<p class="story-body-text story-content" data-para-count="1296" data-total-count="33493" id="story-continues-86" tabindex="-1">La última vez que lo hizo, en 2008, estuvo a punto de morir. Lo deportaron porque estaba en una fiesta en la que alguien tenía cocaína y se pasó un mes viajando en trenes. Cruzó el río Bravo con otros 20 migrantes y cuando llevaba dos días siguiendo a un coyote por el desierto de Texas, sintieron el sonido de una avioneta sobre ellos. Llegaron varias motos. Se dispersaron. Él se escondió tras una roca en el cauce de un arroyo y cinco horas más tarde siguió caminando. No durmió hasta la mañana siguiente. Lo despertó el calor del mediodía. No llevaba mochila ni nada para comer o beber. El coyote le había explicado que caminara siempre dejando el sol a la izquierda y la sombra a la derecha. Cuando anocheció trató de decidir dónde quedaba el norte. Cinco días después de cruzar la frontera y cuando ya llevaba tres días solo, muerto de hambre y con una sed apremiante, encontró un esqueleto pequeño, probablemente de un adolescente. Los huesos, limpios. Se le habían caído ya varios dientes. Al lado, una mochila azul. La vació. Encontró un trozo de pan podrido y dos latas. Frijoles y melocotones. Con una piedra afilada abrió un agujero pequeño en la de melocotones. Se terminó el líquido, abrió la lata y se comió los melocotones. También los frijoles.</p>
+<p class="story-body-text story-content" data-para-count="437" data-total-count="33930" id="story-continues-87" tabindex="-1">La comida le permitió caminar el resto de la tarde y parte de la noche. Pero sabía que no podría superar un día más. Rezó para que se lo encontrara una patrulla, una avioneta, un helicóptero. Avanzaba, cada vez más débil y, de repente, alcanzó a ver una ráfaga de luz. Era un camión. Vio a un hombre agachado junto al parachoques. Tenía la cara tapada y estaba soldando algo. Villanueva parpadeó. ¿Sería una alucinación?</p>
+<p class="story-body-text story-content" data-para-count="39" data-total-count="33969" id="story-continues-88" tabindex="-1">“Ayúdeme”, gritó. “Ayúdeme”.</p>
+<p class="story-body-text story-content" data-para-count="197" data-total-count="34166" id="story-continues-89" tabindex="-1">El coyote le había avisado que en esta zona de Texas, los rancheros habían llegado a disparar a migrantes por meterse en sus tierras. A Villanueva ya no le importaba eso. Quería comida y bebida.</p>
+<p class="story-body-text story-content" data-para-count="142" data-total-count="34308" id="story-continues-90" tabindex="-1">El hombre continuaba soldando. Quizás Dios no quería que el hombre escuchara. Quizás Dios había decidido que Villanueva tenía que seguir.</p>
+<p class="story-body-text story-content" data-para-count="316" data-total-count="34624" id="story-continues-91" tabindex="-1">Antes de que cayera la noche, se desmayó. Tirado en la arena, los colores del cielo no dejaban de moverse. Pensaba en el esqueleto, en sus dientes, cuando vio luces que se abrían paso a lo lejos entre la oscuridad. Se levantó y se dirigió hacia las luces. Eran camiones de carga que circulaban por una autopista.</p>
+<p class="story-body-text story-content" data-para-count="485" data-total-count="35109" id="story-continues-92" tabindex="-1">Una alambrada corría en paralelo al sentido del tráfico. Encontró una alcantarilla y se arrastró por dentro hasta que logró cruzar. Durante el resto de la noche, esperó en un chaparral. Por la mañana escuchó el ruido rítmico de algo que reconoció como un martillo hidráulico. Le dio esperanzas. Si había un martillo, había construcción. Si había construcción, había migrantes. Poco más tarde se encontró con un grupo de mexicanos trabajando en un lado de la calzada.</p>
+<p class="story-body-text story-content" data-para-count="689" data-total-count="35798" id="story-continues-93" tabindex="-1">Los mexicanos vivían al otro lado de la frontera pero tenían visas especiales que les permitían pasar cada día a trabajar. Le dieron a Villanueva parte de su almuerzo y uno de ellos le permitió usar su celular. Villanueva llamó a su primo en Kansas y este le envió 500 dólares para que se los diera a cualquiera que quisiera llevarlo a San Antonio. La mayoría de los mexicanos tenía miedo de arriesgar sus visas, pero al terminar el día, un trabajador de unos 30 años aceptó llevarlo en su camioneta a Walmart para que sacara el dinero. Su primo le había enviado 100 dólares más para calcetines y ropa interior, para unos pantalones y una camiseta. Fue al baño y se lavó.</p>
+<p class="story-body-text story-content" data-para-count="52" data-total-count="35850" id="story-continues-94" tabindex="-1">Cuando salió de la tienda, el mexicano lo esperaba.</p>
+<p class="story-body-text story-content" data-para-count="49" data-total-count="35899" id="story-continues-95" tabindex="-1">“Déjame invitarte una hamburguesa”, propuso.</p>
+<p class="story-body-text story-content" data-para-count="99" data-total-count="35998" id="story-continues-96" tabindex="-1">Lo llevó a un McDonald’s y pidió una hamburguesa. Al terminar, le pagó dos noches en un hotel.</p>
+<p class="story-body-text story-content" data-para-count="24" data-total-count="36022" id="story-continues-97" tabindex="-1">“Descansa”, le dijo.</p>
+<p class="story-body-text story-content" data-para-count="667" data-total-count="36689" id="story-continues-98" tabindex="-1">Desde entonces, llegar a Estados Unidos se ha vuelto cada vez más difícil. El verano pasado, un éxodo de migrantes centroamericanos saturó las instalaciones migratorias de Estados Unidos y el gobierno mexicano comenzó a aplicar medidas más agresivas para proteger su frontera sur. La mayoría de los migrantes eran menores no acompañados. Estados Unidos está obligado a evaluar su elegibilidad para considerarlos refugiados, pero México se limita a montarlos en un autobús y devolverlos. En lo que va de este año, el número de migrantes centroamericanos detenidos en Estados Unidos se ha reducido a la mitad, pero en México ha aumentado un 70 por ciento.</p>
+<p class="story-body-text story-content" data-para-count="562" data-total-count="37251" id="story-continues-99" tabindex="-1">En Honduras, los autobuses que llegan desde México y solo transportan adultos se detienen en un centro de procesamiento en la frontera con Guatemala. El centro está en una finca frente a la playa, decomisada a un narcotraficante en septiembre. Pasé varios días allí. Casi todas las personas con las que hablé habían sido capturadas en el sur de México, la mayoría mientras viajaban en camionetas para pasajeros, fáciles de interceptar en los retenes de carretera establecidos por la policía federal, el ejército y el instituto de migración mexicano.</p>
+<p class="story-body-text story-content" data-para-count="525" data-total-count="37776" id="story-continues-100" tabindex="-1">Los adolescentes y las familias con niños llegan a un centro diferente, cerca de una autopista, a las afueras de San Pedro Sula. Llegan niños de ocho años. Un día conocí a una madre que había dejado Honduras junto a su hija de 16 años porque un grupo de pandilleros había intentado violarla en la escuela. Otra mujer que viajaba en el mismo autobús se fue con su hijo de cuatro años después de que mataran a su hermano. Los cuatro esperaban un taxi que los regresara a las mismas colonias de las que habían huido.</p>
+<p class="story-body-text story-content" data-para-count="309" data-total-count="38085" id="story-continues-101" tabindex="-1">Si Villanueva quería ir al norte de nuevo, necesitaba volver a contactar a un coyote. Ya no se puede atravesar México sin ellos. Los que tienen buena reputación están cobrando 8000 dólares por persona desde Honduras hasta Houston. Te dan tres intentos. Si al tercero no lo has logrado, pierdes el dinero.</p>
+<p class="story-body-text story-content" data-para-count="701" data-total-count="38786" id="story-continues-102" tabindex="-1">Digamos que Villanueva logra pasar por México. Si fuera arrestado en la frontera de Estados Unidos lo podrían acusar de un delito. Entrar en el país sin documentación siempre ha sido ilegal, pero hace una década pocos fiscales presentaban cargos contra quienes lo hacían. Eso ha cambiado. Hoy, entrar ilegalmente en el país o peor aún, intentarlo más de una vez, es el delito más frecuente en las cortes federales estadounidenses. El Departamento de Justicia recibe más casos de las autoridades fronterizas que del FBI, la DEA, y la ATF (la Agencia de Alcohol, Tabaco, Armas de Fuego y Explosivos) juntas. Las penas de prisión para casos como el de Villanueva pueden llegar a los 10 años.</p>
+<p class="story-body-text story-content" data-para-count="317" data-total-count="39103" id="story-continues-103" tabindex="-1">Digamos que Villanueva logra llegar a Kansas City: se pasaría el resto de su vida en peligro. Las deportaciones previas implican una prohibición de entrada al país de 20 años y no estaría autorizado a normalizar su situación incluso mucho después de que su hija Haley tuviera la edad para pedirlo en su nombre.</p>
+<p class="story-body-text story-content" data-para-count="223" data-total-count="39326" id="story-continues-104" tabindex="-1">Cuando hablé del tema con Villanueva dijo que no le importaba. En cuanto los niños se independizaran, él y su novia regresarían a Honduras. Comprarían un terreno, construirían una casa y los visitarían en vacaciones.</p>
+<p class="story-body-text story-content" data-para-count="43" data-total-count="39369" id="story-continues-105" tabindex="-1">“Pero tengo que educarlos antes”, dijo.</p>
+<p class="story-body-text story-content" data-para-count="747" data-total-count="40116" id="story-continues-106" tabindex="-1">Una semana después de su llegada, su hermano y él fueron a visitar a su madre, Francesca, que vivía en un pueblo llamado Toyos, a unas dos horas de viaje. En 15 años solo la había visto una vez, en 2008. Ni él ni Óscar le guardan ningún rencor por haberlos abandonado cuando eran niños. Cuando crecieron, alguna vez fueron a visitarla a Toyos. Les permitía alejarse de la pandilla. Por aquel entonces, la mujer vivía en una chabola de bambú y cartón que ella misma había levantado. Vivía de lavar ropa en un río. Con el dinero que sus hijos le habían enviado desde Misuri se había construido una casa de ladrillos. Pequeña, pero con electricidad y agua corriente. Cuando llegamos, cocinaba sopa de pollo en una estufa portátil.</p>
+<p class="story-body-text story-content" data-para-count="46" data-total-count="40162" id="story-continues-107" tabindex="-1">“¡Hijo!”, gritó cuando vio a Villanueva.</p>
+<p class="story-body-text story-content" data-para-count="41" data-total-count="40203" id="story-continues-108" tabindex="-1">“Pareces más pequeña”, bromeó él.</p>
+<p class="story-body-text story-content" data-para-count="377" data-total-count="40580" id="story-continues-109" tabindex="-1">Mientras la sopa comenzaba a hervir, se sentaron juntos en una mesa y fueron pasando las fotos que él llevaba en su teléfono: Jesse en el lago en el que pescaban róbalo, Briana haciendo muñecos de nieve, Jordi y Haley en los carritos chocones. Francesca las miraba en silencio. Nunca ha ido a Estados Unido. Nunca ha visto la nieve. Nunca ha ido a un parque de atracciones.</p>
+<p class="story-body-text story-content" data-para-count="210" data-total-count="40790" id="story-continues-110" tabindex="-1">Al otro lado de la mesa, Óscar dibujaba en una tela que Francesca le había dado. Después, bordó el dibujo con hilos de colores y se lo mostró a su madre. Hojas de parra enredadas en los bordes de un rosal.</p>
+<p class="story-body-text story-content" data-para-count="31" data-total-count="40821" id="story-continues-111" tabindex="-1">“¿Está bien?”, preguntó.</p>
+<p class="story-body-text story-content" data-para-count="39" data-total-count="40860" id="story-continues-112" tabindex="-1">“Está bien”, respondió Francesca.</p>
+<p class="story-body-text story-content" data-para-count="272" data-total-count="41132" id="story-continues-113" tabindex="-1">Estuve de acuerdo y entró a su habitación, de donde salió con una pila de sobres. Cuando estuvo detenido había dibujado sobre ambas caras de cada sobre a bolígrafo. Guardaba el bolígrafo, corto y flexible, diseñado para que no pueda usarse para apuñalar a alguien.</p>
+<p class="story-body-text story-content" data-para-count="214" data-total-count="41346" id="story-continues-114" tabindex="-1">En uno de los sobres, un trozo de papel con seis versos escritos en español. Una canción que había compuesto para su hijo cuando cumplió seis años. Solo pudo cantársela por teléfono. El último verso decía:</p>
+<p class="story-body-text story-content" data-para-count="83" data-total-count="41429" id="story-continues-115" tabindex="-1">“Aunque eres joven un día entenderás por qué no estuve en tu día especial”.</p>
+<p class="story-body-text story-content" data-para-count="326" data-total-count="41755" id="story-continues-116" tabindex="-1">Antes de despedirnos, le pregunté a Francesca por una foto en la pared. Aparecían Villanueva, Óscar, su hermano Henry y su hermana Míriam abrazándose por los hombros junto a un árbol de Navidad escasamente decorado. La había tomado su tío en 2004, el único año que los cuatro hermanos coincidieron en Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="294" data-total-count="42049" id="story-continues-117" tabindex="-1">Reconocí la misma fotografía un par de semanas más tarde en la casa del padre de Villanueva, Javier. Vivía a pocas cuadras pero tuvo poco que ver con su familia. No iba a la iglesia ni compartía su fervor evangélico. Villanueva solo lo había visitado una vez desde su regreso a Honduras.</p>
+<p class="story-body-text story-content" data-para-count="560" data-total-count="42609" id="story-continues-118" tabindex="-1">La casa de Javier, apiñada con muchas otras sobre la orilla de un río, era un poco más grande, un poco mejor que la chabola de Marta. Con un baño con drenaje y una televisión. Cuando llegamos, estaba viendo una película de James Bond doblada al español. Delgado, en pantalón corto y camiseta, con bigote y el mismo pelo, negro y rizado, que su hijo. Se sentó en una mesa desordenada sobre la que corrían varios ratones blancos que parecían multiplicarse. Había también una caja con un agujero en la tapa de donde entraban y salían con dificultad.</p>
+<figure id="media-100000004081605" class="media photo media-100000004081605 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-UCLD/13deportee-slide-UCLD-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-120">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-UCLD/13deportee-slide-UCLD-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-UCLD/13deportee-slide-UCLD-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Michael Christopher Brown/Magnum, for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/13/magazine/13deportee-slide-UCLD/13deportee-slide-UCLD-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Michael Christopher Brown/Magnum, for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="78" data-total-count="42687" id="story-continues-120" tabindex="-1">“Todavía tienes los ratones”, dijo Villanueva con una cierta incomodidad.</p>
+<p class="story-body-text story-content" data-para-count="42" data-total-count="42729" id="story-continues-121" tabindex="-1">“Queremos venderlos”, explicó Javier.</p>
+<p class="story-body-text story-content" data-para-count="36" data-total-count="42765" id="story-continues-122" tabindex="-1">“¿Y por qué no lo haces?&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="42" data-total-count="42807" id="story-continues-123" tabindex="-1">“Lo intentamos pero nadie los quiere”.</p>
+<p class="story-body-text story-content" data-para-count="269" data-total-count="43076" id="story-continues-124" tabindex="-1">La novia de Javier nos sirvió unos vasos de Pepsi y arroz con leche. Tres niños, hermanastros de Villanueva, llegaron a saludar. Los saludó educadamente, con cierta frialdad. Les pregunté sus edades y la mujer dijo que uno de ellos cumplía 10 años ese mismo día.</p>
+<p class="story-body-text story-content" data-para-count="115" data-total-count="43191" id="story-continues-125" tabindex="-1">“¿Es su cumpleaños?”, preguntó Javier sorprendido antes de reírse. “¡Y su padre ni siquiera lo sabe!”.</p>
+<p class="story-body-text story-content" data-para-count="369" data-total-count="43560" id="story-continues-126" tabindex="-1">Javier le ofreció un cigarillo a su hijo. Fueron a fumarlo juntos a la calle. Era la primera vez que lo veía fumar. Cuando regresaron hablaban de construcción. Javier coloca azulejos y su hijo le explicaba algunos de los proyectos en los que había trabajado en Kansas City. Le enseñó fotos en el teléfono del trabajo que hizo en los apartamentos de River Market.</p>
+<p class="story-body-text story-content" data-para-count="21" data-total-count="43581" id="story-continues-127" tabindex="-1">Javier no respondió.</p>
+<p class="story-body-text story-content" data-para-count="110" data-total-count="43691" id="story-continues-128" tabindex="-1">“¿Sabes dónde puedo conseguir unos tablones para dejárselos a la tía Marta?”, le preguntó Villanueva.</p>
+<p class="story-body-text story-content" data-para-count="13" data-total-count="43704" id="story-continues-129" tabindex="-1">“No sé”.</p>
+<p class="story-body-text story-content" data-para-count="72" data-total-count="43776" id="story-continues-130" tabindex="-1">“¿Sabes cuánto cuesta aquí media pulgada de madera en láminas?”.</p>
+<p class="story-body-text story-content" data-para-count="180" data-total-count="43956" id="story-continues-131" tabindex="-1">“No sé. Yo también necesito”, respondió Javier. “Para un baño, pero no tengo dinero”. Se impuso entonces un silencio que dejó claro que Villanueva no iba a contribuir.</p>
+<p class="story-body-text story-content" data-para-count="39" data-total-count="43995" id="story-continues-132" tabindex="-1">“Lo haré de cartón”, dijo Javier.</p>
+<p class="story-body-text story-content" data-para-count="166" data-total-count="44161" id="story-continues-133" tabindex="-1">Villanueva se levantó y se preparó para irse. Le estrechó la mano a su padre. Javier no preguntó cuánto tiempo se quedaría en la ciudad o si volverían a verse.</p>
+<p class="story-body-text story-content" data-para-count="721" data-total-count="44882" id="story-continues-134" tabindex="-1">Sobre todo, lo que enamoró a Suelen fue cómo se portaba Villanueva con Jesse y Brianna. Cuando los conoció en un partido de fútbol, se le veía tan enamorado de los niños como de ella. Fue él quien, poco después de que empezaran a salir, se dio cuenta de que a Jesse le pasaba algo. El niño tenía tres años y hablaba poco. Suelen quería creer que solo iba un poco lento, que algunos niños se desarrollan más despacio, que no pasaba nada. Villanueva insistió en que fuera a ver a un médico y éste descubrió que el niño oía mal. Le consiguieron implantes y comenzaron a llevarlo a terapias de lenguaje. Su forma de ser cambió inmediatamente. Se convirtió en un niño locuaz, sociable y buen estudiante.</p>
+<p class="story-body-text story-content" data-para-count="455" data-total-count="45337" id="story-continues-135" tabindex="-1">“Jesse y Brianna no saben que no es su padre biológico”, me contó Suelen cuando nos conocimos en Kansas City, una semana después de que yo regresara de Honduras. Estábamos sentados en la sala de su apartamento, sus hijos estaban en la escuela, y Haley y Jordi dormían apoyados sobre su regazo. “No podemos mantener el secreto para siempre. Solo quiero esperar a que sean un poco más mayores. Me da miedo decírselos porque lo quieren mucho”.</p>
+<p class="story-body-text story-content" data-para-count="346" data-total-count="45683" id="story-continues-136" tabindex="-1">Luego hablamos del otro secreto que guardaban. Suelen no le había contado a ninguno de los niños que a Villanueva lo habían deportado. “No sé cómo explicárselos. Me parece muy difícil”, decía. “Nunca se habían separado de él antes. No sé qué decirles, les digo una y otra vez que está fuera por trabajo, que volverá pronto”.</p>
+<p class="story-body-text story-content" data-para-count="160" data-total-count="45843" id="story-continues-137" tabindex="-1">Un poco más tarde, mientras acariciaba el pelo de Haley, contó que “ella es la que peor lo está pasando. No puede dormir por las noches si él no está”.</p>
+<p class="story-body-text story-content" data-para-count="813" data-total-count="46656" id="story-continues-138" tabindex="-1">Suelen ganaba 1000 dólares al mes limpiando una oficina siete noches por semana. La quinta parte del dinero se iba en pagarle al prestamista que le dio el dinero para pagar el abogado. El prestamista podía quedarse con su auto si no pagaba. ¿Cómo llevaría a Haley y a Jordi a la escuela? Lo más valioso que poseían eran las herramientas de trabajo que Villanueva había ido comprando poco a poco. Una sierra de mesa o media docena de pistolas de tornillos. Villanueva le había explicado que las herramientas eran una inversión, que los hacía menos dependientes a él y a sus empleados de los contratistas gringos. Poco después de la detención, el contratista para el que trabajaba Villanueva y que le debía 28.000 dólares se presentó en el apartamento y se llevó todo el equipo. Dijo que era suyo.</p>
+<p class="story-body-text story-content" data-para-count="149" data-total-count="46805" id="story-continues-139" tabindex="-1">A las 16:30, despertó a Haley y Jordi y los cuatro caminamos para ir a buscar a Brianna y Jesse al lugar donde los dejaba el autobús de la escuela.</p>
+<p class="story-body-text story-content" data-para-count="143" data-total-count="46948" id="story-continues-140" tabindex="-1">Lo que vi fue a un niño sonriente, con audífonos, que corría por la acera, y a una niña con lentes que le seguía con una funda de violín.</p>
+<p class="story-body-text story-content" data-para-count="67" data-total-count="47015" id="story-continues-141" tabindex="-1">“Tú debes ser Brianna”, dije cuando llegaron a nuestra altura.</p>
+<p class="story-body-text story-content" data-para-count="73" data-total-count="47088" id="story-continues-142" tabindex="-1">“¿Por qué sabe nuestros nombres?”, le preguntó Brianna a su madre.</p>
+<p class="story-body-text story-content" data-para-count="40" data-total-count="47128" id="story-continues-143" tabindex="-1">“Es amigo de tu papá”, dijo Suelen.</p>
+<p class="story-body-text story-content" data-para-count="15" data-total-count="47143" id="story-continues-144" tabindex="-1">“¡Papá!”.</p>
+<p class="story-body-text story-content" data-para-count="217" data-total-count="47360" id="story-continues-145" tabindex="-1">Brianna me miró de nuevo y pude ver cómo formulaba la pregunta. Me preparé para ese momento. ¿Dónde está? ¿Qué le ha pasado? ¿Cuándo regresa a casa? Creo que lo pensó mejor y seguimos caminando en silencio.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/02/17/deportado/"
+				data-title="Reposado: Deportado: Relato de una vida interrumpida"
+				data-author="POR LUKE MOGELSON"
+				data-media=""
+				data-description="La historia de un migrante separado, quizás para siempre, de su familia en Estados Unidos."
+				data-publish-date="17 de febrero de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":625,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

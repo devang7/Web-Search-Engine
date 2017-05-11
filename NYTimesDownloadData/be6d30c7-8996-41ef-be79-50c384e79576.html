@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004186595"/>
+<meta name="hdl" content="Si te encuentras a Jeremy Wilson, no le creas nada" />
+<meta name="col" content="Reposado" id="column-name" />
+<meta name="pdate" content="20160220" />
+<meta name="utime" content="20160220120013" />
+<meta name="ptime" content="20160220120013" />
+<meta name="DISPLAYDATE" content="Feb. 20, 2016" />
+<meta name="dat" content="Feb. 20, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="si-te-encuentras-a-jeremy-wilson-no-le-creas-nada" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/02/20/si-te-encuentras-a-jeremy-wilson-no-le-creas-nada/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Si te encuentras a Jeremy Wilson, no le creas nada" />
+<meta property="og:description" content="La mayoría de nosotros de verdad quiere creer en las personas. Y muchos, como Jeremy Wilson, se aprovechan. " />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/02/07/nyregion/07CONMAN-COMBO/07CONMAN-COMBO-videoSixteenByNine768-v3.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-02-20" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/02/20/si-te-encuentras-a-jeremy-wilson-no-le-creas-nada/" />
+<meta property="twitter:title" content="Si te encuentras a Jeremy Wilson, no le creas nada" />
+<meta property="twitter:description" content="La mayoría de nosotros de verdad quiere creer en las personas. Y muchos, como Jeremy Wilson, se aprovechan. " />
+<meta name="author" content="James C. McKinley Jr. y Rick Rojas" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por James C. McKinley Jr. y Rick Rojas" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="reposado" />
+<meta name="cd12" content="estados-unidos" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="reposado" />
+<meta name="ser" content="estados-unidos" />
+<meta name="id" content="100000004186595"/>
+<meta name="wordCount" content="3452"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/02/20/si-te-encuentras-a-jeremy-wilson-no-le-creas-nada/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=02&amp;day=20&amp;name=si-te-encuentras-a-jeremy-wilson-no-le-creas-nada">
+<meta name="PT" content="article">
+<meta name="article:section" content="Reposado">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/10?exclude=2703">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/02\/20\/si-te-encuentras-a-jeremy-wilson-no-le-creas-nada\/"},"headline":"Si te encuentras a Jeremy Wilson, no le creas nada","datePublished":"2016-02-20T12:00:13+00:00","dateModified":"2016-02-19T09:16:02+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/02\/07\/nyregion\/07CONMAN-COMBO\/07CONMAN-COMBO-videoSixteenByNine768-v3.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"La mayor\u00eda de nosotros de verdad quiere creer en las personas. Y muchos, como Jeremy Wilson, se aprovechan. "}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/02/20/si-te-encuentras-a-jeremy-wilson-no-le-creas-nada/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/02/07/nyregion/jeremy-wilson-a-compulsive-con-man.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="reposado/estadosunidos" />
+<title>Si te encuentras a Jeremy Wilson, no le creas nada &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/02/07/nyregion/jeremy-wilson-a-compulsive-con-man.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/02/20/si-te-encuentras-a-jeremy-wilson-no-le-creas-nada/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-2703 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/reposado/">Reposado</a></span>
+					<span class="pipe">|</span>
+				Si te encuentras a Jeremy Wilson, no le creas nada
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/02/20/si-te-encuentras-a-jeremy-wilson-no-le-creas-nada/"
+					data-title="Reposado: Si te encuentras a Jeremy Wilson, no le creas nada"
+					data-author="POR JAMES C. MCKINLEY JR. Y RICK ROJAS"
+					data-media=""
+					data-description="La mayoría de nosotros de verdad quiere creer en las personas. Y muchos, como Jeremy Wilson, se aprovechan. "
+					data-publish-date="20 de febrero de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/reposado/">Reposado</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/estados-unidos/">Estados Unidos</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Si te encuentras a Jeremy Wilson, no le creas nada</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">James C. McKinley Jr.</span>
+</span>
+ y <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Rick Rojas</span>
+</span>
+
+					<time class="dateline" datetime="2016-02-20">20 de febrero de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/02/20/si-te-encuentras-a-jeremy-wilson-no-le-creas-nada/"
+							data-title="Reposado: Si te encuentras a Jeremy Wilson, no le creas nada"
+							data-author="POR JAMES C. MCKINLEY JR. Y RICK ROJAS"
+							data-media=""
+							data-description="La mayoría de nosotros de verdad quiere creer en las personas. Y muchos, como Jeremy Wilson, se aprovechan. "
+							data-publish-date="20 de febrero de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004188345" class="media photo lede layout-large-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/02/07/nyregion/07CONMAN-COMBO/07CONMAN-COMBO-master1050-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/02/07/nyregion/07CONMAN-COMBO/07CONMAN-COMBO-master1050-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/02/07/nyregion/07CONMAN-COMBO/07CONMAN-COMBO-superJumbo-v2.jpg" data-mediaviewer-caption="The inmate Jeremy Wilson during an interview Jan. 29 at Rikers Island. “There is so much misinformation about me,” Mr. Wilson said, “no one can say with absolute certainty who I am.”" data-mediaviewer-credit="Nicole Bengiveno/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/02/07/nyregion/07CONMAN-COMBO/07CONMAN-COMBO-master1050-v2.jpg"/>
+		<meta itemprop="height" content="591" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The inmate Jeremy Wilson during an interview Jan. 29 at Rikers Island. “There is so much misinformation about me,” Mr. Wilson said, “no one can say with absolute certainty who I am.”</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Nicole Bengiveno/The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/02/07/nyregion/jeremy-wilson-a-compulsive-con-man.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="372" data-total-count="372" id="story-continues-2" tabindex="-1">Llegó a la estación de policía de Chelsea, en Manhattan, el 4 de enero. Llevaba puesta una sudadera de Harvard, una gorra de las que homenajean a los heridos en combate y chapas de militar colgadas del cuello. Dijo llamarse Jeremiah Asimov-Beckingham, que era veterano de la guerra de Afganistán herido en combate y ahora trabajaba como ejecutivo de una línea aérea.</p>
+<p class="story-body-text story-content" data-para-count="42" data-total-count="414" id="story-continues-3" tabindex="-1">También que había ido a recoger su auto.</p>
+<p class="story-body-text story-content" data-para-count="380" data-total-count="794" id="story-continues-4" tabindex="-1">Le habían confiscado su BMW, creía, porque servía como prueba en un crimen del que no sabía nada. Pero todo era un montaje. La policía andaba detrás de un hombre sospechoso por falsificar cheques y por robar 70.000 dólares y el BMW en Cambridge, Massachussets. Habían seguido el vehículo hasta un garaje en Manhattan. Esposaron a Asimov-Beckingham y lo acusaron de hurto.</p>
+<p class="story-body-text story-content" data-para-count="545" data-total-count="1339" id="story-continues-5" tabindex="-1">Los investigadores no tardaron mucho en darse cuenta de que el detenido no se llamaba Asimov-Beckingham, nunca había resultado herido en combate y ni siquiera había sido militar. Los detectives de la policía de Nueva York y los agentes de Homeland Security habían encontrado un certificado de nacimiento de Indiana en su expediente migratorio que señalaba que había nacido en Indianápolis en julio de 1973. Se llama <a href="http://www.nytimes.com/2016/01/07/nyregion/man-accused-of-impersonating-a-war-hero-has-a-history-of-forgery.html">Jeremy Wilson</a>. Era el documento más antiguo de su expediente así que la acusación fue contra la persona con ese nombre.</p>
+<figure id="media-100000004188235" class="media photo media-100000004188235 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/02/07/nyregion/conman-web2/conman-web2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-7">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/02/07/nyregion/conman-web2/conman-web2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/02/07/nyregion/conman-web2/conman-web2-superJumbo.jpg" data-mediaviewer-caption="Brian Clark, Mr. Wilson’s cousin. “He’s a proper villain,” Mr. Clark said. “He’s just got flair.”" data-mediaviewer-credit="Philip Scott Andrews/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/02/07/nyregion/conman-web2/conman-web2-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Brian Clark, Mr. Wilson’s cousin. “He’s a proper villain,” Mr. Clark said. “He’s just got flair.”</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Philip Scott Andrews/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="412" data-total-count="1751" id="story-continues-7" tabindex="-1">Aun así, su identidad seguía siendo un misterio. Había robado números de seguridad social durante 25 años, había inventado identidades y dejado atrás una maraña de documentos falsos que no hacían más que confundirlo todo. Seis semanas antes había salido de una prisión federal en New Hampshire tras cumplir una condena de seis años por robo de identidad. Se había hecho llamar Jeremy Clark-Erskine.</p>
+<p class="story-body-text story-content" data-para-count="281" data-total-count="2032" id="story-continues-8" tabindex="-1">Tenía más de 27 alias en cinco estados diferentes. Su certificado de nacimiento había sido modificado varias veces. Hasta su ciudadanía estaba bajo sospecha. Lo habían deportado más de una vez como inmigrante ilegal. Espera juicio en el penal de la isla Rikers en Nueva York.</p>
+<p class="story-body-text story-content" data-para-count="156" data-total-count="2188" id="story-continues-9" tabindex="-1">Fue allí donde el mes pasado, durante una entrevista, dijo: “Hay mucha información errónea sobre mí, nadie puede decir a ciencia cierta quién soy”.</p>
+<p class="story-body-text story-content" data-para-count="390" data-total-count="2578" id="story-continues-10" tabindex="-1">Para complicar la situación aún más, Wilson, de 42 años, se hacía llamar Jeremy Keenan y decía ser el hijo de <a href="http://www.nytimes.com/2008/05/23/world/europe/23keenan.html">Brian Keenan,</a> un conocido dirigente del Ejército Republicano Irlandés (IRA), que dirigió la campaña de atentados bomba en el Reino Unido en los años setenta y posteriormente jugó un papel importante en el proceso de paz de Irlanda del Norte. (Keenan murió en 2008).</p>
+<p class="story-body-text story-content" data-para-count="480" data-total-count="3058" id="story-continues-11" tabindex="-1">Wilson, que habla con un leve acento, dice que puede demostrarlo e insinuó que él mismo fue miembro activo del IRA en los noventa. Sea cual sea el parentesco, Wilson es un impostor profesional, un sofisticado falsificador. Aunque el fraude se esté convirtiendo en un delito cada vez más invisible en el mundo digital, Wilson se mantiene fiel a una tradición, quizá pasada de moda: la de quien roba cheques y crea identidades falsas utilizando desde documentos hasta acentos.</p>
+<p class="story-body-text story-content" data-para-count="525" data-total-count="3583" id="story-continues-12" tabindex="-1">Ha pretendido ser desde un DJ escocés a un espía formado en Cambridge. De oficial de las fuerzas especiales a profesor de MIT. Ha pasado por ejecutivo de Microsoft, British Airways y Apple, siempre con formación militar. Quiso que creyeran que era un soldado que pedía asilo en Canadá para escapar de ataques antisemitas en Estados Unidos. Pasó una temporada larga hablando con un acento irlandés tan perfeccionado que su compañero de celda en la cárcel de Indiana estaba convencido de que era un mafioso de Irlanda.</p>
+<p class="story-body-text story-content" data-para-count="222" data-total-count="3805" id="story-continues-13" tabindex="-1">Brian A. Clark es su primo y fue una de sus víctimas. Hasta él, que vio cómo Wilson le robaba la identidad en los años noventa, opina que “quieras o no, se merece cierto reconocimiento. Es malo. Pero con talento”.</p>
+<p class="story-body-text story-content" data-para-count="200" data-total-count="4005" id="story-continues-14" tabindex="-1">Las hazañas de Wilson —si es que podemos llamarlo así— se han comparado con las de Frank Abagnale Jr., el brillante estafador en cuya vida se basa la película de 2002 “<a href="http://www.imdb.com/title/tt0264464/?ref_=nv_sr_1">Catch Me if You Can</a>”.</p>
+<p class="story-body-text story-content" data-para-count="528" data-total-count="4533" id="story-continues-15" tabindex="-1">Su perfil es el de un estafador que disfruta tanto de engañar como de beneficiarse de sus engaños, que elabora personajes ficticios e infla su propio ego. O al menos así lo cree Louis B. Schlesinger, profesor de psicología forense en el John Jay College of Criminal Justice. En el caso de delincuentes como Wilson no suele haber empatía con las víctimas. “El reloj es suyo, es solo que está en la muñeca de otra persona”, en palabras de Schlesinger. “Ven el mundo de una manera muy diferente a como lo ves tú”.</p>
+<figure id="media-100000004188236" class="media photo media-100000004188236 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/02/07/nyregion/conman-web3/conman-web3-master315-v3.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-17">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/02/07/nyregion/conman-web3/conman-web3-master315-v3.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/02/07/nyregion/conman-web3/conman-web3-superJumbo-v3.jpg" data-mediaviewer-caption="Michael Lafferty, one of Mr. Wilson’s victims. Shortly after the two met, Mr. Lafferty reported to the police that Mr. Wilson had taken his credit card numbers, his Social Security number and a birth certificate." data-mediaviewer-credit="Philip Scott Andrews for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/02/07/nyregion/conman-web3/conman-web3-master315-v3.jpg"/>
+		<meta itemprop="height" content="434" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Michael Lafferty, one of Mr. Wilson’s victims. Shortly after the two met, Mr. Lafferty reported to the police that Mr. Wilson had taken his credit card numbers, his Social Security number and a birth certificate.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Philip Scott Andrews for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="306" data-total-count="4839" id="story-continues-17" tabindex="-1">Quienes han sufrido de sus engaños dicen que tiene una capacidad increíble de envolver a los demás hasta que confían en él, aunque el instinto de la víctima sepa que algo no va bien. Cuenta mentiras elaboradas y las sostiene con documentos falsos, cheques, cartas, pasaportes o sentencias judiciales.</p>
+<p class="story-body-text story-content" data-para-count="384" data-total-count="5223" id="story-continues-18" tabindex="-1">Una de sus víctimas, Miryam Weisberg, recuerda que la convenció de que era un soldado originario de Boston que regresaba tras varias temporadas en Afganistán. Le contó con detalles historias de su vida diaria en campamentos militares e incluso experiencias de combate. “Daba más detalles que cualquier persona que conozca que haya pasado por el ejército”, explicó Weisberg.</p>
+<p class="story-body-text story-content" data-para-count="189" data-total-count="5412" id="story-continues-19" tabindex="-1">Salieron juntos a principios de 2006, justo después de que él escapara de la cárcel. La relación terminó cuando él le robó el auto y las tarjetas de crédito antes de huir a Canadá.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="338" data-total-count="5750" id="story-continues-20" tabindex="-1">Pocos meses después fue encarcelado en Edmonton, en la provincia de Alberta, después de que lo sorprendieran robando pasaportes en un hostal. Contactó a Larry Derkach, director de Jewish Family Services en la ciudad, y se hizo pasar por un soldado judío que había sufrido graves ataques antisemitas en el ejército de Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="516" data-total-count="6266" id="story-continues-21" tabindex="-1">Derkach aseguró que “la historia sonaba exagerada desde el principio, pero tiene el don de la palabra. Había tal aluvión de detalles que parecía el relato de una persona creíble en una situación extraña”. Se metió tanto en el tema que dejó al soldado quedarse en su casa, algo que Derkach ha hecho en raras ocasiones. En tres semanas, Wilson ya había conseguido tarjetas de crédito nuevas a su nombre a partir de la cuenta de Derkach. Se fue de la ciudad dejando más de 17.000 dólares en deudas.</p>
+<p class="story-body-text story-content" data-para-count="308" data-total-count="6574" id="story-continues-22" tabindex="-1">Casi diez años después, Derkach aún reconoce estar sorprendido por la inteligencia de Wilson. Recuerda que mientras trabajaban juntos en su solicitud de refugio, Wilson memorizó rápidamente un documento jurídico complicado y podía citar párrafos enteros de memoria. “Creo que es un genio”, dice.</p>
+<figure id="media-100000004188239" class="media photo media-100000004188239 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/02/05/nyregion/conman-web4/conman-web4-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-24">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/02/05/nyregion/conman-web4/conman-web4-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/02/05/nyregion/conman-web4/conman-web4-superJumbo.jpg" data-mediaviewer-caption="Reid Reimers, a theater teacher, met Mr. Wilson in Missoula, Mont., when he was going by the name Angus Jocko Ferguson. He claimed that he had studied at Cambridge in England, and he was well-versed in Shakespeare." data-mediaviewer-credit="Lido Vizzutti for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/02/05/nyregion/conman-web4/conman-web4-master315.jpg"/>
+		<meta itemprop="height" content="472" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Reid Reimers, a theater teacher, met Mr. Wilson in Missoula, Mont., when he was going by the name Angus Jocko Ferguson. He claimed that he had studied at Cambridge in England, and he was well-versed in Shakespeare.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Lido Vizzutti for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="283" data-total-count="6857" id="story-continues-24" tabindex="-1">La doble vida de Jeremy empezó pronto. Su familia en Indiana explica que hizo su primera estafa mientras estudiaba con los jesuitas en Indianápolis. Iba a clase en silla de ruedas para ganarse la simpatía de sus compañeros y así poder robarles. Lo expulsaron y perdió su beca.</p>
+<p class="story-body-text story-content" data-para-count="360" data-total-count="7217" id="story-continues-25" tabindex="-1">Creció en un hogar sin demasiados lujos donde la figura del padre no estaba siempre presente, según recuerdan otros miembros de su familia. Su padre, Lonnie Wilson, y su madre, Patricia Clark, se separaron cuando era pequeño. Su madre se casó de nuevo con John Erskine, encargado de un hotel. Se separaron en varias ocasiones; no fue una relación estable.</p>
+<p class="story-body-text story-content" data-para-count="384" data-total-count="7601" id="story-continues-26" tabindex="-1">Poco después de terminar la secundaria, su abuelo se lo llevó para tratar de enderezarlo. No dejaba de tener problemas con la ley. Ya lo habían detenido por robar un auto y una ballesta. Se fugó con las tarjetas de crédito de su abuelo y destruyó el auto en Colorado. Su tío, el doctor Charles Clark, dijo que desde aquello se convirtió en <em>persona non grata</em> para la familia.</p>
+<p class="story-body-text story-content" data-para-count="263" data-total-count="7864" id="story-continues-27" tabindex="-1">Se descubriría que no solo se había llevado el auto. Se había llevado el número de seguridad social de su primo, Brian Clark, y había asumido su identidad. Sacó una licencia de conducir y varias tarjetas de crédito. Hasta cobró un cheque de 2000 dólares.</p>
+<p class="story-body-text story-content" data-para-count="174" data-total-count="8038" id="story-continues-28" tabindex="-1">“Es un estafador y sabe qué preguntas son las que la gente no hace&#8221;, dijo su primo Brian. &#8220;Una de las personas más inteligentes que he conocido en mi vida”.</p>
+<p class="story-body-text story-content" data-para-count="454" data-total-count="8492" id="story-continues-29" tabindex="-1">En vista del número de veces que ha sido detenido, es difícil considerar que su carrera sea un éxito. A mediados de los años noventa estuvo en prisión en Ohio y en Pensilvania por falsificación y robo. Las autoridades migratorias lo detuvieron durante varios meses en 1999 y en 2000 después de que intentara entrar al estado de Washington desde Columbia Británica y encontraran en su coche dos pasaportes falsos, uno irlandés y uno canadiense.</p>
+<p class="story-body-text story-content" data-para-count="290" data-total-count="8782" id="story-continues-30" tabindex="-1">En 2001 lo sentenciaron a ocho años de cárcel en Indiana después de que pagara 7.400 dólares en bares de <em>strippers</em> y hoteles con una tarjeta obtenida con una identidad ficticia. Pretendía ser Duncan C. McDonald, ejecutivo de Microsoft, según figura en el expediente judicial del caso.</p>
+<p class="story-body-text story-content" data-para-count="230" data-total-count="9012" id="story-continues-31" tabindex="-1">En 2006 escapó de un programa de trabajo para presos en Indiana y se fue a Canadá. Solo para que lo volvieran a capturar en mayo de 2007 cuando trataba de regresar a Estados Unidos para visitar a su madre en el lecho de muerte.</p>
+<p class="story-body-text story-content" data-para-count="354" data-total-count="9366" id="story-continues-32" tabindex="-1">Fue puesto en libertad por un breve espacio de tiempo un año más tarde y detenido de nuevo en agosto de 2008 cuando se registró en un hotel de lujo en Indianápolis. Consiguió que el cobro lo hicieran a la cuenta corporativa de Eli Lilly, que obtuvo al convencer al departamento de contabilidad de la empresa de que le dieran los datos por teléfono.</p>
+<figure id="media-100000004188242" class="media photo media-100000004188242 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/02/05/nyregion/conman-web5/conman-web5-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-34">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/02/05/nyregion/conman-web5/conman-web5-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/02/05/nyregion/conman-web5/conman-web5-superJumbo.jpg" data-mediaviewer-caption="Mr. Wilson as a child in a family portrait with his mother, Patricia Clark, and her second husband, John Erskine." data-mediaviewer-credit="via Charles M. Clark, Jr."  itemprop="url" itemid="https://static01.nyt.com/images/2016/02/05/nyregion/conman-web5/conman-web5-master315.jpg"/>
+		<meta itemprop="height" content="487" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Mr. Wilson as a child in a family portrait with his mother, Patricia Clark, and her second husband, John Erskine.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			via Charles M. Clark, Jr.
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="321" data-total-count="9687" id="story-continues-34" tabindex="-1">De nuevo en prisión, Wilson pasaba el tiempo haciendo planchas sobre los nudillos y leyendo novelas de crimen y periódicos. Su compañero de celda Uriah Goins recuerda que mostraba bastante interés en los obituarios y en los anuncios de fallecimiento. Los separaba y los archivaba. Decía que “buscaba parientes”.</p>
+<p class="story-body-text story-content" data-para-count="428" data-total-count="10115" id="story-continues-35" tabindex="-1">Hasta dentro de la cárcel jugaba un papel. Hablaba todo el tiempo con acento irlandés y contaba historias de su servicio en el ejército. “Es como un actor. Definitivamente, un actor”, recuerda Goins, DJ, promotor de conciertos y la persona que lo recogió y ayudó a encontrar un lugar donde vivir cuando salió en libertad. Le presento a un amigo suyo, Michael Lafferty, que tenía una habitación de sobra en su casa.</p>
+<p class="story-body-text story-content" data-para-count="236" data-total-count="10351" id="story-continues-36" tabindex="-1">Lafferty lo recuerda como un hombre de apariencia bien educada, que había estudiado en el Massachusetts Institute of Technology, había tenido una mala racha y tenía un hijo con cáncer terminal que quería ver la Gran Muralla china.</p>
+<p class="story-body-text story-content" data-para-count="365" data-total-count="10716" id="story-continues-37" tabindex="-1">Tres semanas más tarde, Lafferty fue a la policía a denunciar que Wilson había huido con los números de sus tarjetas de crédito, su número de seguridad social y su certificado de nacimiento. Se fue a Chicago. Y no huyó solo, sino con una mujer de 19 años llamada Angela K. Stamm, a la que había conocido a través de un portal de internet llamado OK Cupid.</p>
+<p class="story-body-text story-content" data-para-count="393" data-total-count="11109" id="story-continues-38" tabindex="-1">Angela dijo que había creído que Wilson era un soldado británico, recién licenciado, llamado Finn Keenan, que corría el riesgo de ser deportado. Estuvieron un mes en Chicago, donde Wilson trabajó de mesero. Luego Wilson dijo que el gobierno lo había localizado y condujeron en dirección al oeste hasta Missoula, en Montana, donde comenzó a utilizar el nombre de Angus Jocko Ferguson.</p>
+<p class="story-body-text story-content" data-para-count="576" data-total-count="11685" id="story-continues-39" tabindex="-1">Encontraron dónde quedarse gracias a un profesor de teatro llamado Reid Reimers. Conectó con él y sus amigos gracias a su afición común por el teatro. Pretendía haber estudiado en Cambridge, en el Reino Unido, y parecía saber mucho de Shakespeare. Al poco tiempo hacía de presentador de eventos y se había sumado a los ensayos. Reimers recuerda que “era —y esto es algo que ya ha dejado de sorprendernos— un intérprete bastante bueno. Lo que encariñaba más es que era una especie de <em>nerd</em> inocente de risa tonta. No es que fuera encantador o sofisticado”.</p>
+<figure id="media-100000004188243" class="media photo media-100000004188243 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/02/07/nyregion/conman-web6/conman-web6-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-41">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/02/07/nyregion/conman-web6/conman-web6-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/02/07/nyregion/conman-web6/conman-web6-superJumbo-v2.jpg" data-mediaviewer-caption="Mr. Wilson at his arraignment last month. He is now at Rikers Island, awaiting trial." data-mediaviewer-credit="Chang W. Lee/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/02/07/nyregion/conman-web6/conman-web6-master675-v2.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Mr. Wilson at his arraignment last month. He is now at Rikers Island, awaiting trial.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Chang W. Lee/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="515" data-total-count="12200" id="story-continues-41" tabindex="-1">Reimers y Stamm, que ahora usa el apellido Venado, recuerdan que a veces Wilson desaparecía durante días y regresaba con bolsas de lona llenas de equipo militar y soltaba indirectas acerca de misiones secretas de comando. Lo que le mantenía ocupado en realidad era la creación, otra vez, de una nueva identidad. Ya tenía una licencia de conducir con su nuevo alias. Había intercambiado el número de seguridad social de Lafferty por el de Angus Ferguson al falsificar una orden judicial emitida en Chicago.</p>
+<p class="story-body-text story-content" data-para-count="410" data-total-count="12610" id="story-continues-42" tabindex="-1">También había visitado Fort Harrison, un campo de entrenamiento de la guardia nacional de Montana a finales de agosto y había intentado conseguir una identificación militar y un chaleco antibalas diciéndoles a los encargados del lugar que era capitán de un grupo de operaciones especiales en misión secreta. Una de las personas con las que habló sospechó de él y llamó al FBI, que lanzó una alerta.</p>
+<p class="story-body-text story-content" data-para-count="433" data-total-count="13043" id="story-continues-43" tabindex="-1">Poco después fue detenido cuando trataba de entrar en la base aérea de Malmstrom, cerca de Great Falls. Uno de los vigilantes descubrió que el coche en el que se desplazaba era robado. Cuando los agentes del FBI lo interrogaron en la cárcel del condado, Wilson se apegó al personaje. El agente especial Ernesto L. Negron recuerda que “se soltó todo el rollo de que formaba parte del quinto grupo de las fuerzas especiales”.</p>
+<p class="story-body-text story-content" data-para-count="471" data-total-count="13514" id="story-continues-44" tabindex="-1">Negron se dio cuenta de que los parches que llevaba no estaban en los lugares correctos y de que no recordaba el nombre de su superior. Antes de que le diera tiempo a comprobar las huellas dactilares en una base de datos, Wilson ya había convencido a Reimers para que pagara la fianza y lo llevara de vuelta a Missoula. Hizo las maletas y desapareció a toda velocidad. Apenas una hora antes de que llegaran a detenerlo, según recuerda quien era entonces su compañera.</p>
+<p class="story-body-text story-content" data-para-count="205" data-total-count="13719" id="story-continues-45" tabindex="-1">“Fue directo y dijo: &#8216;No soy miembro del ejército y tengo irme’”, en palabras de Venado. “Aluciné y no sabía qué hacer. Me pidió que fuera con él. Dije que no. Ya no confiaba en él”.</p>
+<p class="story-body-text story-content" data-para-count="595" data-total-count="14314" id="story-continues-46" tabindex="-1">Alquiló un Mustang convertible y manejó hasta Los Ángeles. Allí, según su expediente judicial, comenzó a hacerse pasar por un DJ y productor de videos escocés que utilizaba el extraño nombre de Angus Jocko Ferguson-Abramovitch. También dijo que era veterano del ejército y trabajaba para Apple. Convenció a un dentista de Beverly Hills de que lo tratara por 28.000 dólares. Lo arrestaron de nuevo en enero de 2010 porque el Mustang tuvo que ser remolcado y alguien llamó a la policía de Culver City, en California, para alertar de que el coche estaba en una lista de autos robados.</p>
+<p class="story-body-text story-content" data-para-count="546" data-total-count="14860" id="story-continues-47" tabindex="-1">En Nueva York se le acusa de falsificación y posesión de objetos robados. También hay cargos contra él en Cambridge, donde la policía dice que abrió una cuenta bancaria con un nombre y documentos falsos –licencia de conducir, tarjeta de seguridad social y licencia militar– antes de depositar cheques por 70.000 dólares con fondos de una compañía de diseño local. Recogió un cheque de un buzón e imprimió copias con el mismo número de cuenta. Usó el dinero para pagar el primero de los plazos de un BMW y se fugó a Nueva York.</p>
+<p class="story-body-text story-content" data-para-count="478" data-total-count="15338" id="story-continues-48" tabindex="-1">Hace poco, una mañana, Wilson entró en una capilla en el penal de la isla de Rikers. Iba vestido con el uniforme caqui de los presos, tenía la cabeza rapada y algo de barba, pelirroja. Está fuerte. Aparenta menos de los 42 años que tiene. Lleva tatuajes de motivos celtas. En la parte de atrás de la cabeza hay una cicatriz de la que culpa a una bala de goma. Saluda a quien le visita con una sonrisa que desconcierta. Su hablar es educado. El acento irlandés va y viene.</p>
+<p class="story-body-text story-content" data-para-count="200" data-total-count="15538" id="story-continues-49" tabindex="-1">Cuando se le pregunta cómo engañó a sus víctimas responde: “La gente no solo tiene tendencia a creerle a otras personas, sino a querer creerles y eso es lo que está mal. Me aprovecho de eso”.</p>
+<figure id="media-100000004188244" class="media photo media-100000004188244 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/02/05/nyregion/conman-web7/conman-web7-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-51">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/02/05/nyregion/conman-web7/conman-web7-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/02/05/nyregion/conman-web7/conman-web7-superJumbo-v2.jpg" data-mediaviewer-caption="Items seized from Mr. Wilson’s apartment. He has spent 25 years fabricating new aliases, leaving behind a thicket of confusing and falsified records." data-mediaviewer-credit="N.Y.P.D."  itemprop="url" itemid="https://static01.nyt.com/images/2016/02/05/nyregion/conman-web7/conman-web7-master675-v2.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Items seized from Mr. Wilson’s apartment. He has spent 25 years fabricating new aliases, leaving behind a thicket of confusing and falsified records.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			N.Y.P.D.
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="414" data-total-count="15952" id="story-continues-51" tabindex="-1">Habló con franqueza sobre sus delitos del pasado pero no de aquellos de los que se le acusa ahora. No tiene remordimientos por timar bancos o a empresas de tarjetas de crédito. Sí los tiene por la gente que le ofreció su amistad. Todas las amistades de su vida se basaban en mentiras y medias verdades, y todas terminaron en una huida en la que se llevaba la información personal de sus amigos en el bolsillo.</p>
+<p class="story-body-text story-content" data-para-count="133" data-total-count="16085" id="story-continues-52" tabindex="-1">“Esa es la parte mala de todo lo que he hecho. Me relaciono con gente que no se merece la traición de la que va a ser víctima”.</p>
+<p class="story-body-text story-content" data-para-count="370" data-total-count="16455" id="story-continues-53" tabindex="-1">Aceptó dar una entrevista porque dice que se ha pasado toda su vida tratando de ocultar su identidad y quería, dice, revelar quién era en realidad. Dijo que no era hijo de Lonnie Wilson, el encargado de una tienda de ropa para hombres con el que su madre se casó sino de Keenan, el líder del IRA con el que su madre tuvo una relación en Irlanda del Norte, en 1972.</p>
+<p class="story-body-text story-content" data-para-count="210" data-total-count="16665" id="story-continues-54" tabindex="-1">No es la primera vez que cuenta esa historia. La primera vez que lo hizo fue en 2011 cuando le pidió a un juez desde la prisión que declarara que no era ciudadano de Estados Unidos. Quería que lo deportaran.</p>
+<p class="story-body-text story-content" data-para-count="296" data-total-count="16961" id="story-continues-55" tabindex="-1">El año siguiente trató de convencer a su propia hermana Mary Katharine Rybak. Cuando lo visitó en prisión le mostró una carta validada por un notario, que supuestamente había escrito su madre y en la que decía que él era el hijo de Keenan. Ella se dio cuenta de que la firma no era real.</p>
+<p class="story-body-text story-content" data-para-count="89" data-total-count="17050" id="story-continues-56" tabindex="-1">Rybak cree que Wilson “no sabe dónde termina la mentira y dónde empieza la verdad”.</p>
+<p class="story-body-text story-content" data-para-count="546" data-total-count="17596" id="story-continues-57" tabindex="-1">Stephen Ure trabaja como abogado especializado en inmigración en San Diego y dice que Wilson lo contrató en busca de ayuda para que lo enviaran a Gran Bretaña. En 2012 recibió unas muestras de ADN por mensajería que, según unos documentos que las acompañaban, pertenecían a Keenan, a Wilson y su madre. El abogado hizo que un laboratorio de California las analizara y los resultados demostraron sin lugar a dudas que Keenan era el padre de Wilson. “Si la historia no es cierta, ha trabajado duro para que lo parezca”, dijo el abogado.</p>
+<p class="story-body-text story-content" data-para-count="391" data-total-count="17987" id="story-continues-58" tabindex="-1">Pero como sucede con todo en el mundo de Wilson, se puede dudar del origen de las muestras. Los documentos dicen que las tomó una empresa británica, DNA Worldwide Group Ltd., y que se las entregó a las autoridades del Royal Bank of Scotland para que las guardaran. La empresa dijo que no guardaba ninguna prueba de que eso hubiera sucedido. Sus representantes no reconocen los documentos.</p>
+<p class="story-body-text story-content" data-para-count="261" data-total-count="18248" id="story-continues-59" tabindex="-1">Wilson dice que mantuvo una relación a distancia con Keenan e incluso participó en actividades del IRA entre 1993 y 1999. Pero no dio más detalles. Durante ese periodo entraba y salía de prisión en Ohio y Pensilvania. No pasó más de 12 meses en libertad.</p>
+<p class="story-body-text story-content" data-para-count="117" data-total-count="18365" id="story-continues-60" tabindex="-1">Argumenta que los motivos para hacer pública la identidad de su padre tienen poco que ver con sus problemas legales.</p>
+<p class="story-body-text story-content" data-para-count="309" data-total-count="18674" id="story-continues-61" tabindex="-1">“Quiero irme a casa, quiero ir a Irlanda. Si alguien va a odiarme, que sea por algo cierto. Estoy cansado de sentir que tengo que mentirle a cada ser humano que me encuentro sobre lo que he hecho y quién soy. La verdad es peor que las mentiras. Lo que he hecho es peor que las mentiras que he dicho&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="178" data-total-count="18852" id="story-continues-62" tabindex="-1">Se tapó la cara y los ojos con las manos. En los dedos lleva tatuada con tinta verde una frase en gaélico: “Mair Fior”. Dice que significa, “mantente fiel a la verdad”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Susan C. Beachy colaboró en la investigación de este reportaje.</p>
+
+			</div>
+
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/02/20/si-te-encuentras-a-jeremy-wilson-no-le-creas-nada/"
+				data-title="Reposado: Si te encuentras a Jeremy Wilson, no le creas nada"
+				data-author="POR JAMES C. MCKINLEY JR. Y RICK ROJAS"
+				data-media=""
+				data-description="La mayoría de nosotros de verdad quiere creer en las personas. Y muchos, como Jeremy Wilson, se aprovechan. "
+				data-publish-date="20 de febrero de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":781,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

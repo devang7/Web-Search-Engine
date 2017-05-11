@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004426966"/>
+<meta name="hdl" content="¿A cuál estrella del rock recordarán los historiadores del futuro?" />
+<meta name="col" content="Cultura" id="column-name" />
+<meta name="pdate" content="20160624" />
+<meta name="utime" content="20160624200003" />
+<meta name="ptime" content="20160624200003" />
+<meta name="DISPLAYDATE" content="Jun. 24, 2016" />
+<meta name="dat" content="Jun. 24, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="a-cual-estrella-del-rock-recordaran-los-historiadores-del-futuro" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/06/24/a-cual-estrella-del-rock-recordaran-los-historiadores-del-futuro/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="¿A cuál estrella del rock recordarán los historiadores del futuro?" />
+<meta property="og:description" content="El género musical más importante del siglo XX algún día será olvidado. Probablemente la gente aprenderá del rock a través de un personaje… ¿pero quién podría ser?" />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/06/11/universal/es/chuckES/chuckES-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-06-24" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/06/24/a-cual-estrella-del-rock-recordaran-los-historiadores-del-futuro/" />
+<meta property="twitter:title" content="¿A cuál estrella del rock recordarán los historiadores del futuro?" />
+<meta property="twitter:description" content="El género musical más importante del siglo XX algún día será olvidado. Probablemente la gente aprenderá del rock a través de un personaje… ¿pero quién podría ser?" />
+<meta name="author" content="Chuck Klosterman" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por Chuck Klosterman" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="cultura" />
+<meta name="cd12" content="musica" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="cultura" />
+<meta name="ser" content="musica" />
+<meta name="id" content="100000004426966"/>
+<meta name="wordCount" content="2519"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/06/24/a-cual-estrella-del-rock-recordaran-los-historiadores-del-futuro/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=06&amp;day=24&amp;name=a-cual-estrella-del-rock-recordaran-los-historiadores-del-futuro">
+<meta name="PT" content="article">
+<meta name="article:section" content="Cultura">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/6?exclude=15032">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/06\/24\/a-cual-estrella-del-rock-recordaran-los-historiadores-del-futuro\/"},"headline":"\u00bfA cu\u00e1l estrella del rock recordar\u00e1n los historiadores del futuro?","datePublished":"2016-06-24T20:00:03+00:00","dateModified":"2016-11-17T13:44:44+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/06\/11\/universal\/es\/chuckES\/chuckES-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"El g\u00e9nero musical m\u00e1s importante del siglo XX alg\u00fan d\u00eda ser\u00e1 olvidado. Probablemente la gente aprender\u00e1 del rock a trav\u00e9s de un personaje\u2026 \u00bfpero qui\u00e9n podr\u00eda ser?"}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/06/24/a-cual-estrella-del-rock-recordaran-los-historiadores-del-futuro/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/05/29/magazine/which-rock-star-will-historians-of-the-future-remember.html?_r=1" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="cultura/musica" />
+<title>¿A cuál estrella del rock recordarán los historiadores del futuro? &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/05/29/magazine/which-rock-star-will-historians-of-the-future-remember.html?_r=1" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/06/24/a-cual-estrella-del-rock-recordaran-los-historiadores-del-futuro/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+		<script src="https://a1.nyt.com/assets/article/latest/js/article/common/layout.js"></script>
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-15032 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+					<span class="pipe">|</span>
+				¿A cuál estrella del rock recordarán los historiadores del futuro?
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/06/24/a-cual-estrella-del-rock-recordaran-los-historiadores-del-futuro/"
+					data-title="Cultura: ¿A cuál estrella del rock recordarán los historiadores del futuro?"
+					data-author="POR CHUCK KLOSTERMAN"
+					data-media=""
+					data-description="El género musical más importante del siglo XX algún día será olvidado. Probablemente la gente aprenderá del rock a través de un personaje… ¿pero quién podría ser?"
+					data-publish-date="24 de junio de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+	
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main has-full-bleed-image-lede">
+	<header id="story-header" class="story-header">
+			<figure id="media-100000004464892" class="media cover photo layout-horizontal-full-bleed" data-bleed-style="full-bleed" itemid="https://static01.nyt.com/images/2016/06/11/universal/es/chuckES/chuckES-articleLarge.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="presentation">
+				<span class="visually-hidden"></span>
+				<div class="image">
+					<img
+						src="https://static01.nyt.com/images/2016/06/11/universal/es/chuckES/chuckES-articleLarge.jpg"
+						alt="Chuck Berry celebró su cumpleaños 60 con un concierto en el Fox Theatre de Saint Louis, el 17 de octubre de 1986.  En esta imagen recibe las felicitaciones de Keith Richards. "
+						data-jumbosrc="https://static01.nyt.com/images/2016/06/11/universal/es/chuckES/chuckES-jumbo.jpg"
+						data-superjumbosrc="https://static01.nyt.com/images/2016/06/11/universal/es/chuckES/chuckES-superJumbo.jpg"
+						id="media-image-100000004464892"
+					>
+				</div>
+				<figcaption id="media-caption-100000004464892" class="caption" itemprop="caption description">
+					<span class="caption-text">Chuck Berry celebró su cumpleaños 60 con un concierto en el Fox Theatre de Saint Louis, el 17 de octubre de 1986.  En esta imagen recibe las felicitaciones de Keith Richards. </span>
+
+					<span class="credit" itemprop="copyrightHolder">
+						<span class="visually-hidden">crédito</span>
+						Jeff Roberson/Associated Press
+					</span>
+				</figcaption>
+				<meta itemprop="height" content="416">
+				<meta itemprop="width" content="600">
+			</figure>
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/musica/">Música</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">¿A cuál estrella del rock recordarán los historiadores del futuro?</h1>
+				<p itemprop="headline" id="story-deck" class="deck">El género musical más importante del siglo XX algún día será olvidado. Probablemente la gente aprenderá del rock a través de un personaje… ¿pero quién podría ser?</p>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Chuck Klosterman</span>
+</span>
+
+					<time class="dateline" datetime="2016-06-24">24 de junio de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/06/24/a-cual-estrella-del-rock-recordaran-los-historiadores-del-futuro/"
+							data-title="Cultura: ¿A cuál estrella del rock recordarán los historiadores del futuro?"
+							data-author="POR CHUCK KLOSTERMAN"
+							data-media=""
+							data-description="El género musical más importante del siglo XX algún día será olvidado. Probablemente la gente aprenderá del rock a través de un personaje… ¿pero quién podría ser?"
+							data-publish-date="24 de junio de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+			<script>
+				if (window.magnum && window.magnum.responsiveImages && window.magnum.responsiveImages.setCoverImage) {
+					window.magnum.responsiveImages.setCoverImage('100000004464892','full-bleed',416,600,0,0,0,0);
+				}
+			</script>
+
+			
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/05/29/magazine/which-rock-star-will-historians-of-the-future-remember.html?_r=1&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="121" data-total-count="121" id="story-continues-1" tabindex="-1">Llamar a alguien el “mejor” en su área tiende a reflejar más sobre quien lo dice que la persona que es mencionada.</p>
+<p class="story-body-text story-content" data-para-count="357" data-total-count="478" id="story-continues-2" tabindex="-1">Pero aplicar eso a la música rock es más difícil. Casi cualquier cosa puede etiquetarse como “rock”: Metallica, Mannheim Steamroller, un corte de pelo o un silenciador para autos. Si eres un exitoso contador con un jacuzzi, muchos clientes dirán que eres la “estrella de rock de la contaduría” cuando les describan tus servicios a otros amigos.</p>
+<p class="story-body-text story-content" data-para-count="228" data-total-count="706" id="story-continues-3" tabindex="-1">La música que definió la primera mitad del siglo XX fue el jazz; la que definió la segunda mitad del siglo XX fue el rock, pero con una ideología y saturación mucho más penetrante. Solo la televisión supera su influencia.</p>
+<p class="story-body-text story-content" data-para-count="298" data-total-count="1004" id="story-continues-4" tabindex="-1">El valor simbólico del rock se basa en el conflicto: surgió de la invención del adolescente en la época posterior a la Segunda Guerra Mundial; el género funcionó como banda sonora de un periodo de 25 años, cuando el espacio entre generaciones fue totalmente real y extraordinariamente vasto.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="350" data-total-count="1354" id="story-continues-5" tabindex="-1">Esa disonancia le dio a la música rock una importancia distintiva y no musical durante mucho tiempo pero ese periodo se acabó. El rock —o por lo menos la versión metafórica de sus himnos y el Hard Rock Café— se ha vuelto más accesible socialmente pero menos esencial en esa misma sociedad, aprisionado por sus propias limitaciones formales.</p>
+<figure id="media-100000004428414" class="media photo media-100000004428414 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/29/magazine/29rocknroll-1/29rocknroll-1-master315-v3.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-7">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/29/magazine/29rocknroll-1/29rocknroll-1-master315-v3.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/29/magazine/29rocknroll-1/29rocknroll-1-superJumbo-v3.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Illustration by Sagmeister &amp; Walsh"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/29/magazine/29rocknroll-1/29rocknroll-1-master315-v3.jpg"/>
+		<meta itemprop="height" content="382" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Illustration by Sagmeister &amp; Walsh
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="464" data-total-count="1818" id="story-continues-7" tabindex="-1">Su recesión cultural se entrelaza con su absorción social. Como resultado, lo que nos queda es un género musical orientado a los jóvenes que, primero, no tiene importancia simbólica y además carece de potencial creativo y no tiene relación específica con los jóvenes. Ha completado su trayectoria histórica. Eso significa que terminará por existir sobre todo como una actividad académica. Será necesario enseñarle a la gente a sentirlo y entenderlo.</p>
+<p class="story-body-text story-content" data-para-count="313" data-total-count="2131" id="story-continues-8" tabindex="-1">Me imagino un salón de clases en 300 años, en el que un profesor dirige un aula llena de estudiantes. Estos alumnos se relacionan con la música rock de manera tan fluida como lo harían con la música de Mesopotamia: es un estilo que han aprendido a reconocer, pero apenas (y solo porque han tomado esa clase).</p>
+<p class="story-body-text story-content" data-para-count="346" data-total-count="2477" id="story-continues-9" tabindex="-1">Nadie en el salón puede nombrar más de dos canciones de rock, excepto el profesor. Él explica la estructura sónica del rock, sus orígenes, la manera en que funcionó como moneda cultural y cómo moldeó y definió a tres generaciones de una superpotencia mundial. Para estos estudiantes del futuro, esa sola imagen define lo que era el rock.</p>
+<figure id="media-100000004005385" class="media photo media-100000004005385 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/11/08/arts/08BEATLES1/1108BEATLES1-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-11">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/11/08/arts/08BEATLES1/1108BEATLES1-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/11/08/arts/08BEATLES1/1108BEATLES1-superJumbo.jpg" data-mediaviewer-caption="The Beatles filming “Hello, Goodbye” in 1967." data-mediaviewer-credit="Apple Corps Ltd."  itemprop="url" itemid="https://static01.nyt.com/images/2015/11/08/arts/08BEATLES1/1108BEATLES1-master675.jpg"/>
+		<meta itemprop="height" content="461" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The Beatles filming “Hello, Goodbye” in 1967.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Apple Corps Ltd.
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="22" data-total-count="2499" id="story-continues-11" tabindex="-1">¿Cuál es esa imagen?</p>
+<p class="story-body-text story-content" data-para-count="463" data-total-count="2962" id="story-continues-12" tabindex="-1">En efecto, hay una respuesta a esta hipótesis que resulta inmediata y sensata: los Beatles. La lógica apunta a su dominio. Fueron la banda más popular en el mundo durante el periodo en el que estuvieron activos y ahora, cinco décadas después, solo son un poco menos populares. Los Beatles definieron el concepto de lo que debía ser un “grupo de rock”, y sus sucesores se modelaron (consciente o inconscientemente) según el patrón que ellos encarnaron.</p>
+<p class="story-body-text story-content" data-para-count="343" data-total-count="3305" id="story-continues-13" tabindex="-1">Su presentación de 1964 en “The Ed Sullivan Show” se cita con tanta regularidad como el génesis de otras bandas que podría argumentarse que ellos inventaron la cultura de los setenta, una década en la que ya no estaban juntos. Se puede decir que los Beatles lo inventaron todo, incluyendo la misma noción del rompimiento de una banda.</p>
+<p class="story-body-text story-content" data-para-count="354" data-total-count="3659" id="story-continues-14" tabindex="-1">Aún hay cosas de los Beatles que no pueden explicarse, casi hasta el punto de lo sobrenatural: la manera en que su música resuena con los niños pequeños, por ejemplo, o la manera en que resonaba con Charles Manson. Es imposible imaginar que habrá otro grupo de rock en el que la mitad de sus integrantes sufran intentos de asesinato no relacionados.</p>
+<p class="story-body-text story-content" data-para-count="344" data-total-count="4003" id="story-continues-15" tabindex="-1">En la cultura occidental, casi todo se entiende mediante el proceso narrativo, a menudo en detrimento de la realidad. Cuando relatamos la historia, tendemos a usar la experiencia de vida de una persona —el “viaje” de un “héroe” particular, según la jerga del mitólogo Joseph Campbell— como un prisma para entender todo lo demás.</p>
+<p class="story-body-text story-content" data-para-count="312" data-total-count="4315" id="story-continues-16" tabindex="-1">Esa inclinación afecta a los Beatles como banda, pero hace que surjan dos personajes más: Elvis Presley y Bob Dylan. Los Beatles son el grupo más significativo, pero Elvis y Dylan son los individuos sobresalientes, tan eminentes que no es necesario mencionar el apellido de Elvis ni el primer nombre de Dylan.</p>
+<p class="story-body-text story-content" data-para-count="80" data-total-count="4395" id="story-continues-17" tabindex="-1">Aun así, ninguno de los dos es una manifestación ideal del rock como concepto.</p>
+<figure id="media-100000003235325" class="media photo media-100000003235325 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2014/11/15/arts/14artsbeat-elvis2/14artsbeat-elvis2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-19">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2014/11/15/arts/14artsbeat-elvis2/14artsbeat-elvis2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2014/11/15/arts/14artsbeat-elvis2/14artsbeat-elvis2-superJumbo.jpg" data-mediaviewer-caption="Elvis Presley at Madison Square Garden in 1972." data-mediaviewer-credit="Larry Morris/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2014/11/15/arts/14artsbeat-elvis2/14artsbeat-elvis2-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Elvis Presley at Madison Square Garden in 1972.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Larry Morris/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="429" data-total-count="4824" id="story-continues-19" tabindex="-1">Se ha dicho que Presley inventó el rock and roll, pero en realidad armó una forma de “prerock” primordial que apenas se parece a la estética post “Rubber Soul” que llegó para definir qué es este tipo de música. También salió de la cultura del rock relativamente temprano; para 1973 ya estaba fuera del juego en términos prácticos. Por el contrario, la carrera de Dylan se extiende por toda la historia del rock.</p>
+<p class="story-body-text story-content" data-para-count="419" data-total-count="5243" id="story-continues-20" tabindex="-1">Sin embargo, jamás hizo un álbum que “roqueara” de una manera convencional (el disco en vivo “Hard Rain” es tal vez el más cercano a eso). Aun así, son personalidades del rock. Ambos son integrales para el corazón del género e influyeron en todo lo que hemos podido entender sobre él (incluyendo a los Beatles, un grupo que no habría existido sin Elvis y no habría buscado la introspección sin Dylan).</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="427" data-total-count="5670" id="story-continues-21" tabindex="-1">En 300 años, la idea de representar la “música rock” mediante una combinación de Elvis y Dylan sería equitativa y extrañamente precisa. Pero el paso del tiempo hace que esto sea cada vez más difícil. Siempre es más fácil que una cultura retenga una historia en vez de dos, y las historias de Presley y Dylan apenas se tocan (se supone que se encontraron una sola vez, en una habitación de un hotel en Las Vegas).</p>
+<p class="story-body-text story-content" data-para-count="470" data-total-count="6140" id="story-continues-22" tabindex="-1">Mientras escribo esta oración, la estructura social de Elvis y Dylan se siente similar, quizá idéntica. Pero es completamente posible que uno de ellos se olvide conforme el tiempo avance. Y si eso pasa, la consecuencia será enorme. Si concedemos que el “viaje del héroe” es la historia de facto con la que entenderemos la historia, las diferencias entre estos dos héroes alterarían de manera profunda la descripción de qué se supone que era la música rock.</p>
+<p class="story-body-text story-content" data-para-count="374" data-total-count="6514" id="story-continues-23" tabindex="-1">Si Elvis (sin Dylan) es la definición del rock, entonces el rock se recuerda como el mundo del espectáculo. Como Frank Sinatra, Elvis no escribía canciones; interpretaba las que otras personas escribían (y, al igual que Sinatra, lo hacía de manera estupenda). Pero quitarle a la ecuación del rock el protagonismo de la composición de canciones la altera radicalmente.</p>
+<p class="story-body-text story-content" data-para-count="345" data-total-count="6859" id="story-continues-24" tabindex="-1">El rock se convierte en un arte performativo donde el significado de una canción importa menos que la persona que lo canta. Se vuelve música de personalidad y las cualidades dominantes del personaje de Presley —su sexualidad, su masculinidad, su carisma incluso después de muerto— se convierten en los significantes de lo que era el rock.</p>
+<figure id="media-100000003296004" class="media photo media-100000003296004 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2014/12/10/business/10nytnow-dylan3/10nytnow-dylan3-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-26">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2014/12/10/business/10nytnow-dylan3/10nytnow-dylan3-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2014/12/10/business/10nytnow-dylan3/10nytnow-dylan3-superJumbo-v2.jpg" data-mediaviewer-caption="Bob Dylan in 1966." data-mediaviewer-credit="Jerry Schatzberg/Columbia Records, via PR Newswire"  itemprop="url" itemid="https://static01.nyt.com/images/2014/12/10/business/10nytnow-dylan3/10nytnow-dylan3-master675-v2.jpg"/>
+		<meta itemprop="height" content="623" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Bob Dylan in 1966.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Jerry Schatzberg/Columbia Records, via PR Newswire
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="542" data-total-count="7401" id="story-continues-26" tabindex="-1">Pero si Dylan (sin Elvis) se convierte en la definición del rock, todo se revierte. La autenticidad lírica se vuelve todo; el rock se califica como un arte intelectual, entrelazado a la tradición folclórica. Se recordaría como algo mucho más político de lo que en realidad fue, y significativamente más político que el mismo Dylan. El hecho de que Dylan no tenga una voz convencionalmente “buena” para cantar constituye una prueba retrospectiva de que las audiencias del rock daban prioridad a la sustancia por encima del estilo.</p>
+<p class="story-body-text story-content" data-para-count="91" data-total-count="7492" id="story-continues-27" tabindex="-1">Estas son las dos mejores versiones de este proceso potencial. Y ambas tienen sus defectos.</p>
+<p class="story-body-text story-content" data-para-count="385" data-total-count="7877" id="story-continues-28" tabindex="-1">Desde luego, hay otra forma de considerar cómo se desarrollarán las cosas, y podría parecerse más a la forma en que se construyen las historias reales. Estoy creando una realidad binaria en la que Elvis y Dylan comienzan la carrera hacia la posteridad como iguales, solo para que uno de los corredores caiga y desaparezca. El que queda “gana” por defecto (y quizá eso ocurre).</p>
+<p class="story-body-text story-content" data-para-count="520" data-total-count="8397" id="story-continues-29" tabindex="-1">Pero podría funcionar a la inversa. Una situación más plausible es que las personas del futuro decidirán caprichosamente cómo quieren recordar el rock. Si la memoria construida es una caricatura de un concierto de rock plagado de melenudos, la respuesta probablemente sea Elvis; si se trata de una aparición poco realista y alegre de la hagiografía punk, la respuesta probablemente es Dylan. Pero ambas conclusiones nos dirigen a la misma pregunta recalcitrante: ¿qué nos hace recordar las cosas que recordamos?</p>
+<p class="story-body-text story-content" data-para-count="647" data-total-count="9044" id="story-continues-30" tabindex="-1">“Hay una parte de mi cerebro que tiende a buscar la justicia; esa zona cree —o necesita creer— que la espuma sube a la superficie, y la mejor obra perdura mediante la virtud de su calidad”, argumenta la periodista de música Amanda Petrusich, autora de “Do Not Sell at Any Price”, un vistazo al mundo obsesivo de los coleccionistas de discos de 78 r.p.m. “Esa música se vuelve emblemática porque es la más efectiva. Cuando pienso en el rock y quién podría sobrevivir, de inmediato pienso en los Rolling Stones. Son una banda que suena como todos hemos decidido que debe sonar el rock: desatado y salvaje. Además, son buenos”.</p>
+<p class="story-body-text story-content" data-para-count="382" data-total-count="9426" id="story-continues-31" tabindex="-1">Eso es verdad. Los Rolling Stones son buenos, incluso cuando lanzan discos como “Bridges to Babylon”. Han sobrevivido a cada banda que alguna vez compitió contra ellos, con ventas de sus álbumes que superan a la actual población brasileña. Desde un punto de vista de credibilidad, los Rolling Stones están más allá de la crítica, sin importar cómo eligen promocionarse.</p>
+<p class="story-body-text story-content" data-para-count="654" data-total-count="10080" id="story-continues-32" tabindex="-1">El nombre de la revista más importante que cubre la música rock se inspiró en su mera existencia. Los integrantes del grupo han enfrentado arrestos en varios continentes, han estado al frente del concierto más desastroso en la historia de California (en el Altamont Speedway<b>)</b> y se nombraron a sí mismos (sorprendentemente sin que se les rebatiera mucho) “la banda de rock and roll más grandiosa del mundo” desde 1969. Si retomamos la premisa de que la memoria colectiva del rock debería encajar con el artista que representó de manera más precisa lo que la música rock de verdad era, entonces los Rolling Stones son una respuesta sólida.</p>
+<figure id="media-100000004428432" class="media photo media-100000004428432 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/29/magazine/29rocknroll-2/29rocknroll-2-master315-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-34">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/29/magazine/29rocknroll-2/29rocknroll-2-master315-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/29/magazine/29rocknroll-2/29rocknroll-2-superJumbo-v2.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Illustration by Sagmeister &amp; Walsh"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/29/magazine/29rocknroll-2/29rocknroll-2-master315-v2.jpg"/>
+		<meta itemprop="height" content="379" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Illustration by Sagmeister &amp; Walsh
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="31" data-total-count="10111" id="story-continues-34" tabindex="-1">Pero no son la respuesta final.</p>
+<p class="story-body-text story-content" data-para-count="578" data-total-count="10689" id="story-continues-35" tabindex="-1">En la misión Voyager I, la NASA envió una nave al espacio profundo en 1977. Aún está allá afuera, escapó para siempre de la gravedad de la Tierra. Ningún objeto hecho por el hombre ha viajado más lejos; cruzó la órbita de Plutón en 1989 y actualmente flota por el vacío interestelar. La esperanza era que la nave fuese descubierta por extraterrestres inteligentes, así que la NASA incluyó un álbum recopilatorio hecho de oro, junto con un bosquejo rudimentario de cómo tocarlo con una aguja. Un equipo dirigido por Carl Sagan seleccionó el contenido del álbum.</p>
+<p class="story-body-text story-content" data-para-count="493" data-total-count="11182" id="story-continues-36" tabindex="-1">En caso de que los alienígenas reproduzcan la grabación, se supone que esta reflejará la diversidad y la genialidad de la vida terrícola. Esto, como es obvio, presupone muchas esperanzas descabelladas: que la nave sea encontrada de alguna manera, que los alienígenas que la encuentren sean vagamente humanos, que estos alienígenas vagamente humanos sean capaces de percibir estímulos tanto visuales como sónicos y que estos alienígenas no estén escuchando aún cartuchos de 8 pistas.</p>
+<p class="story-body-text story-content" data-para-count="351" data-total-count="11533" id="story-continues-37" tabindex="-1">Pero sí garantizó que una canción de rock existirá aunque el sol de pronto se trague la Tierra: “Johnny B. Goode”, de Chuck Berry. Los promotores de incluir la canción fueron Ann Druyan (quien más tarde se convirtió en la esposa de Sagan) y Timothy Ferris, un escritor de ciencia y amigo de Sagan que colaboraba en la revista Rolling Stone.</p>
+<p class="story-body-text story-content" data-para-count="337" data-total-count="11870" id="story-continues-38" tabindex="-1">“Johnny B. Goode”, es la única canción de rock en el disco del Voyager, aunque se consideraron algunas otras canciones. “Here Comes the Sun” fue otra opción, y los cuatro integrantes de los Beatles querían que la incluyeran, pero ninguno poseía los derechos de autor de la canción, así que se eliminó por razones legales.</p>
+<p class="story-body-text story-content" data-para-count="539" data-total-count="12409" id="story-continues-39" tabindex="-1">Que esto pasara en 1977 también fue relevante para la selección de la canción. “Johnny B. Goode” tenía 19 años en ese entonces, lo cual la hizo parecer distinguida, casi prehistórica. Sospecho que la principal razón para elegirla es que pareció sensato hacerlo. Pero fue más que sensato. Fue, ya sea accidental o intencionadamente, el mejor artista que la NASA pudo elegir. Chuck Berry bien podría convertirse en el músico que la sociedad elija cuando los nietos de nuestros nietos estudien la música rock en retrospectiva.</p>
+<figure id="media-100000004381018" class="media photo media-100000004381018 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/08/arts/03OLDCHELLA/03OLDCHELLA-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-41">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/08/arts/03OLDCHELLA/03OLDCHELLA-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/08/arts/03OLDCHELLA/03OLDCHELLA-superJumbo.jpg" data-mediaviewer-caption="Mick Jagger, left, and Keith Richards, of the Rolling Stones, are among those planning for Desert Trip in October." data-mediaviewer-credit="Facundo Arrizabalaga/European Pressphoto Agency"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/08/arts/03OLDCHELLA/03OLDCHELLA-master675.jpg"/>
+		<meta itemprop="height" content="483" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Mick Jagger, left, and Keith Richards, of the Rolling Stones, are among those planning for Desert Trip in October.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Facundo Arrizabalaga/European Pressphoto Agency
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="385" data-total-count="12794" id="story-continues-41" tabindex="-1">Supongamos que todos los componentes del rock se disuelven y dejan atrás un residuo difuso que lo categoriza como una colección de tropos memorables. Si eso ocurre, los historiadores reconstituirán el género como un rompecabezas. Mirarán estos tropos como una categoría e intentarán decidir quién se ajusta mejor a ella. Esa categoría hipotética está hecha para Chuck Berry.</p>
+<p class="story-body-text story-content" data-para-count="115" data-total-count="12909" id="story-continues-42" tabindex="-1">La música rock es simple, directa y se basa en el ritmo. Berry creó música simple, directa y basada en el ritmo.</p>
+<p class="story-body-text story-content" data-para-count="187" data-total-count="13096" id="story-continues-43" tabindex="-1">El rock es música negra que los blancos hicieron comercial, en especial músicos blancos de Inglaterra. Berry es un hombre negro que influyó directamente en Keith Richards y Jimmy Page.</p>
+<p class="story-body-text story-content" data-para-count="179" data-total-count="13275" id="story-continues-44" tabindex="-1">A la música rock le preocupa el sexo. Berry fue un adicto al sexo cuya única canción en escalar los rankings estadounidenses hasta el número 1 se trataba de jugar con su pene.</p>
+<p class="story-body-text story-content" data-para-count="90" data-total-count="13365" id="story-continues-45" tabindex="-1">La música rock es anárquica. Berry fue encaarcelado dos veces antes de cumplir 40 años.</p>
+<p class="story-body-text story-content" data-para-count="322" data-total-count="13687" id="story-continues-46" tabindex="-1">El rock está relacionado con el mito y la leyenda (tanto así que el declive de la prominencia del rock coincide con el ascenso de internet y la destrucción de la narrativa anecdótica). Berry es el tema de muchas leyendas urbanas, varias de las cuales podrían ser verdad y que a menudo incluyen vulgaridad y violencia.</p>
+<p class="story-body-text story-content" data-para-count="125" data-total-count="13812" id="story-continues-47" tabindex="-1">“Si intentaras darle al rock and roll otro nombre”, dice la frase célebre de John Lennon, “podría ser Chuck Berry”.</p>
+<p class="story-body-text story-content" data-para-count="208" data-total-count="14020" id="story-continues-48" tabindex="-1">El personaje de Berry es la síntesis más pura de cómo entendemos qué es la música rock. Las canciones que hizo son esenciales, pero secundarias a quién era él y por qué las hizo. Él es la idea misma.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Chuck Klosterman es escritor y periodista.</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/bob-dylan/" rel="tag">Bob Dylan</a>, <a href="https://www.nytimes.com/es/tag/chuck-berry/" rel="tag">Chuck Berry</a>, <a href="https://www.nytimes.com/es/tag/elvis-presley/" rel="tag">Elvis Presley</a>, <a href="https://www.nytimes.com/es/tag/the-beatles/" rel="tag">The Beatles</a>, <a href="https://www.nytimes.com/es/tag/the-rolling-stones/" rel="tag">The Rolling Stones</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/06/24/a-cual-estrella-del-rock-recordaran-los-historiadores-del-futuro/"
+				data-title="Cultura: ¿A cuál estrella del rock recordarán los historiadores del futuro?"
+				data-author="POR CHUCK KLOSTERMAN"
+				data-media=""
+				data-description="El género musical más importante del siglo XX algún día será olvidado. Probablemente la gente aprenderá del rock a través de un personaje… ¿pero quién podría ser?"
+				data-publish-date="24 de junio de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/02/24/elton-john-sigue-tocando-y-hablando-con-paso-triunfal/">
+					<div class="story-body">
+						<h3 class="kicker">Música</h3>
+
+						<h2 class="headline">
+							<span class="title">Casi 50 años de carrera y Elton John aún &#8216;rockea&#8217;</span>
+							<time class="dateline">24 de febrero de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/01/31/arts/31SIR-ELTON/31SIR-ELTON-thumbStandard-v4.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/06/06/led-zeppelin-defendera-stairway-to-heaven-en-tribunales-por-acusaciones-de-plagio/">
+					<div class="story-body">
+						<h3 class="kicker">Música</h3>
+
+						<h2 class="headline">
+							<span class="title">Led Zeppelin defenderá &#8216;Stairway to Heaven&#8217; en tribunales por acusaciones de plagio</span>
+							<time class="dateline">6 de junio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/06/04/business/03COPYRIGHT/03COPYRIGHT-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/04/tom-petty-y-otros-musicos-recuerdan-la-noche-en-que-la-guitarra-de-prince-se-robo-el-espectaculo/">
+					<div class="story-body">
+						<h3 class="kicker">Música</h3>
+
+						<h2 class="headline">
+							<span class="title">Tom Petty y otros músicos recuerdan la noche en que la guitarra de Prince se robó el espectáculo</span>
+							<time class="dateline">4 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/28/arts/28princeguitar/28princeguitar-thumbStandard-v3.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/31/criminales-o-victimas-una-familia-rusa-que-escapo-de-moscu-ahora-esta-detenida-en-guatemala/">
+					<div class="story-body">
+						<h3 class="kicker">Guatemala</h3>
+
+						<h2 class="headline">
+							<span class="title">Para una familia rusa, Guatemala no fue el refugio que esperaban</span>
+							<time class="dateline">31 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/05/31/world/31GUATEMALA-WEB1/31GUATEMALA-WEB1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+			
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":745,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

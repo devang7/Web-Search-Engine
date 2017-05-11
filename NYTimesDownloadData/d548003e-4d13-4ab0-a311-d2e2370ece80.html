@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000003895854"/>
+<meta name="hdl" content="Jennifer Lawrence dice adiós a ‘Hunger Games’ y reflexiona sobre cómo la ha cambiado la fama" />
+<meta name="col" content="Cultura" id="column-name" />
+<meta name="pdate" content="20150916" />
+<meta name="utime" content="20150916133456" />
+<meta name="ptime" content="20150916133456" />
+<meta name="DISPLAYDATE" content="Sep. 16, 2015" />
+<meta name="dat" content="Sep. 16, 2015" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="jennifer-lawrence-dice-adios-a-hunger-games-y-reflexiona-sobre-como-la-ha-cambiado-la-fama" />
+<meta property="og:url" content="https://www.nytimes.com/es/2015/09/16/jennifer-lawrence-dice-adios-a-hunger-games-y-reflexiona-sobre-como-la-ha-cambiado-la-fama/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Jennifer Lawrence dice adiós a ‘Hunger Games’ y reflexiona sobre cómo la ha cambiado la fama" />
+<meta property="og:description" content="“En algún momento me di cuenta de que puedo vivir esta vida a mi manera, que hay maneras de ser parte de Hollywood sin ser alguien distinta a mí misma.”
+" />
+<meta property="og:image" content="https://static01.nyt.com/images/2015/09/13/arts/13LAWRENCE1-copy/13LAWRENCE1-videoSixteenByNine768-v2.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2015-09-16" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2015/09/16/jennifer-lawrence-dice-adios-a-hunger-games-y-reflexiona-sobre-como-la-ha-cambiado-la-fama/" />
+<meta property="twitter:title" content="Jennifer Lawrence dice adiós a ‘Hunger Games’ y reflexiona sobre cómo la ha cambiado la fama" />
+<meta property="twitter:description" content="“En algún momento me di cuenta de que puedo vivir esta vida a mi manera, que hay maneras de ser parte de Hollywood sin ser alguien distinta a mí misma.”
+" />
+<meta name="author" content="Brook Barnes" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por Brook Barnes" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="cultura" />
+<meta name="cd12" content="cine" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="cultura" />
+<meta name="ser" content="cine" />
+<meta name="id" content="100000003895854"/>
+<meta name="wordCount" content="1775"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2015/09/16/jennifer-lawrence-dice-adios-a-hunger-games-y-reflexiona-sobre-como-la-ha-cambiado-la-fama/">
+<meta name="nyt-collection:uri" content="year=2015&amp;monthnum=09&amp;day=16&amp;name=jennifer-lawrence-dice-adios-a-hunger-games-y-reflexiona-sobre-como-la-ha-cambiado-la-fama">
+<meta name="PT" content="article">
+<meta name="article:section" content="Cultura">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/6?exclude=166">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2015\/09\/16\/jennifer-lawrence-dice-adios-a-hunger-games-y-reflexiona-sobre-como-la-ha-cambiado-la-fama\/"},"headline":"Jennifer Lawrence dice adi\u00f3s a \u2018Hunger Games\u2019 y reflexiona sobre c\u00f3mo la ha cambiado la fama","datePublished":"2015-09-16T13:34:56+00:00","dateModified":"2016-02-05T14:55:30+00:00","author":{"@type":"Person","name":"anh"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2015\/09\/13\/arts\/13LAWRENCE1-copy\/13LAWRENCE1-videoSixteenByNine768-v2.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"\u201cEn alg\u00fan momento me di cuenta de que puedo vivir esta vida a mi manera, que hay maneras de ser parte de Hollywood sin ser alguien distinta a m\u00ed misma.\u201d\r\n"}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2015/09/16/jennifer-lawrence-dice-adios-a-hunger-games-y-reflexiona-sobre-como-la-ha-cambiado-la-fama/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2015/09/13/movies/jennifer-lawrence-has-no-appetite-for-playing-fame-games.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="cultura/cine" />
+<title>Jennifer Lawrence dice adiós a ‘Hunger Games’ y reflexiona sobre cómo la ha cambiado la fama &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2015/09/13/movies/jennifer-lawrence-has-no-appetite-for-playing-fame-games.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2015/09/16/jennifer-lawrence-dice-adios-a-hunger-games-y-reflexiona-sobre-como-la-ha-cambiado-la-fama/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-166 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+					<span class="pipe">|</span>
+				Jennifer Lawrence dice adiós a ‘Hunger Games’ y reflexiona sobre cómo la ha cambiado la fama
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2015/09/16/jennifer-lawrence-dice-adios-a-hunger-games-y-reflexiona-sobre-como-la-ha-cambiado-la-fama/"
+					data-title="Cultura: Jennifer Lawrence dice adiós a ‘Hunger Games’ y reflexiona sobre cómo la ha cambiado la fama"
+					data-author="POR BROOK BARNES"
+					data-media=""
+					data-description="“En algún momento me di cuenta de que puedo vivir esta vida a mi manera, que hay maneras de ser parte de Hollywood sin ser alguien distinta a mí misma.”
+"
+					data-publish-date="16 de septiembre de 2015"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/cine/">Cine</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Jennifer Lawrence dice adiós a ‘Hunger Games’ y reflexiona sobre cómo la ha cambiado la fama</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Brook Barnes</span>
+</span>
+
+					<time class="dateline" datetime="2015-09-16">16 de septiembre de 2015</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2015/09/16/jennifer-lawrence-dice-adios-a-hunger-games-y-reflexiona-sobre-como-la-ha-cambiado-la-fama/"
+							data-title="Cultura: Jennifer Lawrence dice adiós a ‘Hunger Games’ y reflexiona sobre cómo la ha cambiado la fama"
+							data-author="POR BROOK BARNES"
+							data-media=""
+							data-description="“En algún momento me di cuenta de que puedo vivir esta vida a mi manera, que hay maneras de ser parte de Hollywood sin ser alguien distinta a mí misma.”
+"
+							data-publish-date="16 de septiembre de 2015"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000003915634" class="media photo lede layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/09/13/arts/13LAWRENCE1-copy/13LAWRENCE1-blog427-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/09/13/arts/13LAWRENCE1-copy/13LAWRENCE1-blog427-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/09/13/arts/13LAWRENCE1-copy/13LAWRENCE1-superJumbo-v2.jpg" data-mediaviewer-caption="&quot;Me da algo de paz pensar que soy una suerte de avatar cuando aparezco en público&quot;, dice Jennifer Lawrence. &quot;Ustedes se pueden quedar con el avatar, y yo me quedo con la versión real&quot;." data-mediaviewer-credit="Jason Merritt/Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2015/09/13/arts/13LAWRENCE1-copy/13LAWRENCE1-blog427-v2.jpg"/>
+		<meta itemprop="height" content="538" />
+		<meta itemprop="width" content="427" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">&quot;Me da algo de paz pensar que soy una suerte de avatar cuando aparezco en público&quot;, dice Jennifer Lawrence. &quot;Ustedes se pueden quedar con el avatar, y yo me quedo con la versión real&quot;.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Jason Merritt/Getty Images
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2015/09/13/movies/jennifer-lawrence-has-no-appetite-for-playing-fame-games.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="44" data-total-count="44" id="story-continues-2" tabindex="-1">LOS ÁNGELES — “Imagino que me ahogo”.</p>
+<p class="story-body-text story-content" data-para-count="361" data-total-count="405" id="story-continues-3" tabindex="-1">Jennifer Lawrence tragó con dificultad y continuó. “Imagino que me ahogo. Por fuera parece que la estuviera pasando estupendo, y así es, en cierto sentido. Ahí estaba yo — la, la, la — una chica de Kentucky, y el viejo Hollywood me había descubierto. Pero por dentro estaba aterrada. En un instante —¡Bam! — todos me escuchan, todos me miran”.</p>
+<p class="story-body-text story-content" data-para-count="583" data-total-count="988" id="story-continues-4" tabindex="-1">A sus 25 años, Lawrence intentaba recordar a su versión aún más jóven, aquella mujer en el 2011, cuando apenas empezaba la campaña promocional para la primera película de “Los juegos del hambre” (“The Hunger Games”). La atención que recibió no era del todo nueva; ya había ido a los Óscares, nominada como mejor actriz por la película independiente “Winter’s Bone”. Pero esa experiencia no fue nada en comparación con el escrutinio que vendría tras aceptar el papel de Katniss Everdeen, la combatiente rebelde, protagonista de “Los juegos del hambre”.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="263" data-total-count="1251" id="story-continues-5" tabindex="-1">¿Y ahora?, ¿Qué opina Jennifer Lawrence de sí misma cuando se prepara para despedirse de Katniss? Lionsgate estrenará “Sinsajo Parte 2” (“Mockingjay Part 2”), la cuarta y última película de la saga (al menos por ahora), el próximo 20 de noviembre.</p>
+<p class="story-body-text story-content" data-para-count="355" data-total-count="1606" id="story-continues-6" tabindex="-1">Conocimos su respuesta – así como su sensación de ser demasiado joven para interpretar los papeles de David O. Russell, y sin embargo hacerlos, y hasta más detalles sobre la amistad con sus compañeros de reparto en “The Hunger Games” – el mes pasado cuando nos sentamos a hablar durante una hora, en una suite del Four Seasons de Los Ángeles.</p>
+<p class="story-body-text story-content" data-para-count="485" data-total-count="2091" id="story-continues-7" tabindex="-1">Llegó a la entrevista con un look impecable para la sesión de fotos (tacones negros y una minifalda blanca con cremalleras a los lados) y tomó el control. Dio un firme apretón de manos y exclamó: “¿Podemos apagar el aire acondicionado, por favor?, empecemos”. Pero no pasó mucho tiempo antes de que subiera los pies al sillón y destapara caramelos entre carcajadas, dejando al descubierto su lado divertido y chismoso. Estos son algunos fragmentos de nuestra conversación:</p>
+<figure id="media-100000003915638" class="media photo media-100000003915638 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/09/13/arts/13LAWRENCE5-copy/13LAWRENCE5-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-9">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/09/13/arts/13LAWRENCE5-copy/13LAWRENCE5-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/09/13/arts/13LAWRENCE5-copy/13LAWRENCE5-superJumbo.jpg" data-mediaviewer-caption="Lionsgate estrenará “Sinsajo Parte 2” (“Mockingjay Part 2”), la cuarta y última película de la saga (al menos por ahora), el próximo 20 de noviembre." data-mediaviewer-credit="Murray Close/Lionsgate"  itemprop="url" itemid="https://static01.nyt.com/images/2015/09/13/arts/13LAWRENCE5-copy/13LAWRENCE5-master675.jpg"/>
+		<meta itemprop="height" content="444" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Lionsgate estrenará “Sinsajo Parte 2” (“Mockingjay Part 2”), la cuarta y última película de la saga (al menos por ahora), el próximo 20 de noviembre.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Murray Close/Lionsgate
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="183" data-total-count="2274" id="story-continues-9" tabindex="-1"><strong>A estas alturas, a Katniss ya le ha pasado de todo. Ha tenido que cazar niños en contra de su voluntad. Y ese gato del infierno [Buttercup] la ha atormentado en más de una ocasión.</strong></p>
+<p class="story-body-text story-content" data-para-count="113" data-total-count="2387" id="story-continues-10" tabindex="-1">Si Katniss estaba asustada en la última película, en la siguiente está casi paralizada. Le ha tocado muy duro.</p>
+<p class="story-body-text story-content" data-para-count="272" data-total-count="2659" id="story-continues-11" tabindex="-1"><strong>¿Se te puede describir de la misma forma? En los últimos años, también has pasado por muchas cosas. Te robaron unas fotos privadas y las publicaron en línea. Expusieron tu sueldo por “American Hustle” como parte del ciberataque a Sony. Te caíste en los Óscares.</strong></p>
+<p class="story-body-text story-content" data-para-count="77" data-total-count="2736" id="story-continues-12" tabindex="-1">¿Hay algo más que me avergüence y se te haya pasado mencionar?, (se ríe).</p>
+<p class="story-body-text story-content" data-para-count="96" data-total-count="2832" id="story-continues-13" tabindex="-1"><strong>Perdón. ¿Cómo has cambiado en lo personal desde la primera entrega de “The Hunger Games”?</strong></p>
+<p class="story-body-text story-content" data-para-count="390" data-total-count="3222" id="story-continues-14" tabindex="-1">Ya no siento que me estoy dejando llevar. Siento que tengo más control. Estoy más tranquila. Sé que no tiene sentido sentirse ansiosa todo el día, así que intento evitarlo. Todavía estoy asustada, pero por cosas distintas. Ahora me preocupo por&#8230; (se queda callada e, incómoda, cambia de posición en el sillón). Bueno, contrólate, Jennifer. Esto no es una sesión de terapia.</p>
+<p class="story-body-text story-content" data-para-count="39" data-total-count="3261" id="story-continues-15" tabindex="-1"><strong>Sí, es una terapia. Pero de otro tipo.<br /></strong></p>
+<p class="story-body-text story-content" data-para-count="375" data-total-count="3636" id="story-continues-16" tabindex="-1">¿Quieres saber cómo he cambiado? Ahora me da mucho miedo decir cualquier cosa. Puedo ver todas las formas en que las personas pueden malinterpretarme, y no quiero que suene como que me estoy quejando. “Ay, mírala, ahora es tan engreída. Uy, se volvió insensible”. Probablemente me pasa por googlearme a mí misma. Si dependiera de mí, no hablaría. Sólo actuaría.</p>
+<p class="story-body-text story-content" data-para-count="60" data-total-count="3696" id="story-continues-17" tabindex="-1"><strong>¿Te googleas? Debes prometer nunca, nunca volverlo a hacer.</strong></p>
+<p class="story-body-text story-content" data-para-count="163" data-total-count="3859" id="story-continues-18" tabindex="-1">Intenta tener 22 años, tener el periodo y mantenerte lejos de Google. Una vez googleé ‘Jennifer Lawrence fea’, (se ríe). ¿Sueno como si fuera insoportable?</p>
+<p class="story-body-text story-content" data-para-count="45" data-total-count="3904" id="story-continues-19" tabindex="-1"><strong>Para nada. Suena a que eres una persona real.</strong></p>
+<p class="story-body-text story-content" data-para-count="459" data-total-count="4363" id="story-continues-20" tabindex="-1">No puedo pensar en una manera más inútil de pasar mi tiempo que preocuparme por eso. ¿Por qué me importa lo que piense la gente? Pero sí me importa. No puedo fingir lo contrario. Me causa mucha inseguridad. El mundo emite una opinión sobre ti sin siquiera conocerte. Esa preocupación no debería molestarme, pero así es. Me molesta (bebe un sorbo de agua). Voy a irme de aquí y pensaré, “Ay, Dios, ¿por qué no pude ser más relajada y segura?”</p>
+<figure id="media-100000003915636" class="media photo media-100000003915636 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/09/13/arts/13LAWRENCE2-copy/13LAWRENCE2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-22">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/09/13/arts/13LAWRENCE2-copy/13LAWRENCE2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/09/13/arts/13LAWRENCE2-copy/13LAWRENCE2-superJumbo.jpg" data-mediaviewer-caption="Lawrence con Elizabeth Banks en &quot;Los juegos del hambre&quot;." data-mediaviewer-credit="Murray Close/Lionsgate"  itemprop="url" itemid="https://static01.nyt.com/images/2015/09/13/arts/13LAWRENCE2-copy/13LAWRENCE2-master675.jpg"/>
+		<meta itemprop="height" content="444" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Lawrence con Elizabeth Banks en &quot;Los juegos del hambre&quot;.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Murray Close/Lionsgate
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="28" data-total-count="4391" id="story-continues-22" tabindex="-1"><strong>¿Cómo manejas la ansiedad?</strong></p>
+<p class="story-body-text story-content" data-para-count="36" data-total-count="4427" id="story-continues-23" tabindex="-1">Tengo una receta médica, (se ríe).</p>
+<p class="story-body-text story-content" data-para-count="12" data-total-count="4439" id="story-continues-24" tabindex="-1"><strong>¡Somos dos!</strong></p>
+<p class="story-body-text story-content" data-para-count="386" data-total-count="4825" id="story-continues-25" tabindex="-1">Me da algo de paz pensar que soy una suerte de avatar cuando aparezco en público. Ustedes se pueden quedar con el avatar, y yo me quedo con la versión real. Sólo trato de reconocer que el escrutinio es estresante, y que a cualquiera le parecería estresante. Así que intento restarle importancia. Trato de ser yo misma para concentrarme en lo importante, como recoger caca de perro.</p>
+<p class="story-body-text story-content" data-para-count="15" data-total-count="4840" id="story-continues-26" tabindex="-1"><strong>¿Recoger qué?</strong></p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="202" data-total-count="5042" id="story-continues-27" tabindex="-1">Tengo una perrita y nos acabamos de mudar a una casa nueva. Ella piensa que el pasillo de las habitaciones para huéspedes es un terreno perdido al que nunca voy, y que puede usarlo como baño personal.</p>
+<p class="story-body-text story-content" data-para-count="46" data-total-count="5088" id="story-continues-28" tabindex="-1"><strong>¿Cómo se volvieron amigas tú y Amy Schumer?</strong></p>
+<p class="story-body-text story-content" data-para-count="395" data-total-count="5483" id="story-continues-29" tabindex="-1">Le envié un correo después de que vi “Trainwreck” y le dije: “No sé por dónde empezar. Supongo que sólo debería decirlo: Estoy enamorada de ti”. Empezamos a mandarnos correos, y después pasamos a los mensajes de texto. De hecho, hay algo que me muero por contarles, pero no estoy segura si puedo. Déjame mandarle un mensaje a mi publicista para preguntarle (teclea en su iPhone).</p>
+<p class="story-body-text story-content" data-para-count="206" data-total-count="5689" id="story-continues-30" tabindex="-1">Dice que sí puedo contarte: ¡Amy y yo estamos escribiendo una película! Vamos a interpretar a un par de hermanas, y ya casi acabamos de escribirla. Nos nació hacerlo, ya hemos escrito como 100 páginas.</p>
+<p class="story-body-text story-content" data-para-count="44" data-total-count="5733" id="story-continues-31" tabindex="-1"><strong>¡Qué noticia! ¿Nos cuentas más detalles?</strong></p>
+<p class="story-body-text story-content" data-para-count="247" data-total-count="5980" id="story-continues-32" tabindex="-1">Creativamente, Amy y yo somos una para la otra. Tenemos diferentes gustos. Ha sido la experiencia más divertida de mi vida. Empezamos el día hablando por teléfono, riéndonos. Y luego nos mandamos páginas de internet. Y nos morimos de la risa.</p>
+<p class="story-body-text story-content" data-para-count="290" data-total-count="6270" id="story-continues-33" tabindex="-1">Nada más déjame mandarle un mensaje a Amy para decirle que ya te lo dije. (Teclea. Recibe una respuesta al instante). Le escribí, “Acabo de contarle a The New York Times. ¿Está bien?”. Y Amy respondió: “¿Les dijiste que eres gay? ¡Por supuesto! ¡Qué emoción!”, (se ríe).</p>
+<p class="story-body-text story-content" data-para-count="228" data-total-count="6498" id="story-continues-34" tabindex="-1"><strong>Hace un par de años, dijiste en una entrevista ─ ¿Ves?, tus palabras te persiguen ─ que te sientes menos agobiada por la fama si te quedas en casa, así que te estabas quedando mucho ahí. Pero parece que ya no es el caso.</strong></p>
+<p class="story-body-text story-content" data-para-count="267" data-total-count="6765" id="story-continues-35" tabindex="-1">En algún momento me di cuenta de que puedo vivir esta vida a mi manera, que hay maneras de ser parte de Hollywood sin ser alguien distinta a mi misma. Por ejemplo, no tengo que ir a Chateau Marmont para celebrar mi cumpleaños. Simplemente lo puedo hacer en mi casa.</p>
+<p class="story-body-text story-content" data-para-count="77" data-total-count="6842" id="story-continues-36" tabindex="-1"><strong>¿Algún aspecto de ser superestrella se ha vuelto más fácil con el tiempo?</strong></p>
+<p class="story-body-text story-content" data-para-count="456" data-total-count="7298" id="story-continues-37" tabindex="-1">Tengo más confianza en mi misma, y eso hace que las cosas sean más fáciles. Al principio usas ropa que no quieres ponerte o dices algo que no querías decir porque te da miedo tener tu propia voz o ser grosera. Y después empiezas a sentirte como un títere. Ahora sólo hablo claro: “No, ya sé cómo se me ve el cabello cuando me peinas así, y no me gusta. No, no lo vamos a probar. Ya lo he probado”. Pero las cosas son más difíciles también.</p>
+<p class="story-body-text story-content" data-para-count="8" data-total-count="7306" id="story-continues-38" tabindex="-1"><strong>¿Cómo?</strong></p>
+<p class="story-body-text story-content" data-para-count="340" data-total-count="7646" id="story-continues-39" tabindex="-1">Puedo hacer que aprueben un proyecto para una película, y cientos de personas dedican años de su vida a algo que de otra manera podría no suceder. ¿Eso significa que es una buena idea? No puedo ser la única con una opinión aquí. De verdad me da miedo que suene a queja, porque no me estoy quejando, para nada. Sólo estoy explicando.</p>
+<figure class="promo media video embedded layout-large-horizontal" data-videoid="100000003803859" data-media-action="modal" data-autoplay="" data-embedded="" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-41">Continue reading the main story</a>	<span class="visually-hidden">Video</span>
+	<figcaption class="caption">
+		<h4 class="headline">Trailer: ‘Joy’</h4>
+		<div class="caption-video">
+			<div class="summary-credit">
+				<p class="summary">In a story spanning four generations, Joy grows from innocent young girl to family matriarch and head of a business dynasty.</p>
+				<span class="credit video-credit" itemprop="copyrightHolder">
+					By Fox 2000 Pictures
+					<span class="visually-hidden">Publish Date </span>on July 16, 2015.
+				</span>
+				<span class="credit photo-credit" itemprop="copyrightHolder">
+					Photo by Internet Video Archive.
+				</span>
+				<a class="video-link" href="https://www.nytimes.com/video/movies/100000003803859/joy.html">Watch in Times Video &#187;</a>
+			</div>
+			<div class="sharetools-video-container">
+				<div id="sharetools-video-tools-100000003803859" class="sharetools sharetools-video-tools">
+					<ul>
+						<li class="sharetool embed-sharetool">
+							<a href="javascript:;" data-share="embed" data-modal-title="">
+								<i class="icon sprite-icon"></i>
+								<span class="sharetool-text ">Embed</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div id="sharetools-video-inline-100000003803859"
+					class="sharetools sharetools-video-inline"
+					data-shares="facebook|,twitter|"
+					data-url="https://www.nytimes.com/video/movies/100000003803859/joy.html"
+					data-title="Trailer: ‘Joy’"
+					data-description="In a story spanning four generations, Joy grows from innocent young girl to family matriarch and head of a business dynasty."
+					data-content-type="video">
+				</div>
+			</div>
+		</div>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="189" data-total-count="7835" id="story-continues-41" tabindex="-1"><strong>¿Cómo eliges tus películas? Después de la siguiente entrega de “The Hunger Games” viene “Joy”, con David O. Russell dirigiéndote de nuevo, y después un filme sobre el espacio.</strong></p>
+<p class="story-body-text story-content" data-para-count="211" data-total-count="8046" id="story-continues-42" tabindex="-1">Leo los guiones. Contrato a gente para que me dé su opinión y la escucho. Pero, a fin de cuentas, la apuesta es parte de tu arte. Hago las cosas que me provocan una reacción, y trato de no pensarlo demasiado.</p>
+<p class="story-body-text story-content" data-para-count="127" data-total-count="8173" id="story-continues-43" tabindex="-1"><strong>¿No lo piensas demasiado de la misma forma en que no te gusta ensayar las escenas, hasta el cansancio, antes de llegar al set?</strong></p>
+<p class="story-body-text story-content" data-para-count="179" data-total-count="8352" id="story-continues-44" tabindex="-1">Me encanta que hayas llevado esa característica a un nivel intelectual y me hayas halagado, pero en realidad es pura flojera. Memorizo mis líneas mientras me peinan y maquillan.</p>
+<p class="story-body-text story-content" data-para-count="102" data-total-count="8454" id="story-continues-45" tabindex="-1"><strong>En la película tienes dos hijos, ¿cierto?, ¿te sientes con la edad suficiente para interpretar eso?</strong></p>
+<p class="story-body-text story-content" data-para-count="290" data-total-count="8744" id="story-continues-46" tabindex="-1">David tiene visiones. Se la pasa en su propio mundo, hermoso y maravilloso. Ese tipo de preguntas bobas no le importan. Tampoco tenía la edad para interpretar el papel de “American Hustle”. Y también era demasiado joven para “Silver Linings (Playbook)”. Por eso casi no me lo dan.</p>
+<p class="story-body-text story-content" data-para-count="162" data-total-count="8906" id="story-continues-47" tabindex="-1"><strong>¿Qué es lo que más vas a extrañar de “The Hunger Games”?, ¿A tus compañeros? Sé que eres muy cercana a Josh Hutcherson y Liam Hemsworth, en particular.</strong></p>
+<p class="story-body-text story-content" data-para-count="276" data-total-count="9182" id="story-continues-48" tabindex="-1">El último día fue muy emotivo, y no podíamos parar de abrazarnos. Nos dio un poco de pánico que ese algo estaba llegando a su fin. Y luego, una semana después, estábamos pasando el rato en casa de Liam. Pensamos, “Ah, bueno, entonces ahora podemos ser sólo amigos”.</p>
+<p class="story-body-text story-content" data-para-count="441" data-total-count="9623" id="story-continues-49" tabindex="-1">Después de ver que, en realidad, nada cambió entre los tres (cuatro si incluimos a Woody Harrelson, pero él vive en Hawaii; así que es más difícil) estuvimos bien. Por ejemplo, ayer Woody me mandó un mensaje y me dijo que soñó conmigo. Yo le dije, “¿Estuve fantástica?”. Y luego Josh me llamó y me dijo que había soñado con Woody. Y después una amiga vino a mi casa y me dijo que había tenido un sueño erótico con Liam.</p>
+<p class="story-body-text story-content" data-para-count="54" data-total-count="9677" id="story-continues-50" tabindex="-1">Yo no soñé con nadie, pero siempre queda esta noche.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2015/09/16/jennifer-lawrence-dice-adios-a-hunger-games-y-reflexiona-sobre-como-la-ha-cambiado-la-fama/"
+				data-title="Cultura: Jennifer Lawrence dice adiós a ‘Hunger Games’ y reflexiona sobre cómo la ha cambiado la fama"
+				data-author="POR BROOK BARNES"
+				data-media=""
+				data-description="“En algún momento me di cuenta de que puedo vivir esta vida a mi manera, que hay maneras de ser parte de Hollywood sin ser alguien distinta a mí misma.”
+"
+				data-publish-date="16 de septiembre de 2015"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":939,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

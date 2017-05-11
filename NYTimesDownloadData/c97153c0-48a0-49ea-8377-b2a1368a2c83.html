@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004901638"/>
+<meta name="hdl" content="¿Qué hacer con Trump? He ahí el dilema que enfrentan muchos líderes mundiales" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20170131" />
+<meta name="utime" content="20170131170044" />
+<meta name="ptime" content="20170131170044" />
+<meta name="DISPLAYDATE" content="Jan. 31, 2017" />
+<meta name="dat" content="Jan. 31, 2017" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="que-hacer-con-trump-he-ahi-el-dilema-que-enfrentan-muchos-lideres-mundiales" />
+<meta property="og:url" content="https://www.nytimes.com/es/2017/01/31/que-hacer-con-trump-he-ahi-el-dilema-que-enfrentan-muchos-lideres-mundiales/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="¿Qué hacer con Trump? He ahí el dilema que enfrentan muchos líderes mundiales" />
+<meta property="og:description" content="Los mandatarios de países como México, el Reino Unido o Japón enfrentan una situación en la que no pueden salir ganando: responder abiertamente a Trump y poner en peligro la relación, o quedarse callados y recibir críticas en casa. " />
+<meta property="og:image" content="https://static01.nyt.com/images/2017/01/31/world/31Burned1/31Burned1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2017-01-31" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2017/01/31/que-hacer-con-trump-he-ahi-el-dilema-que-enfrentan-muchos-lideres-mundiales/" />
+<meta property="twitter:title" content="¿Qué hacer con Trump? He ahí el dilema que enfrentan muchos líderes mundiales" />
+<meta property="twitter:description" content="Los mandatarios de países como México, el Reino Unido o Japón enfrentan una situación en la que no pueden salir ganando: responder abiertamente a Trump y poner en peligro la relación, o quedarse callados y recibir críticas en casa. " />
+<meta name="author" content="Steven Erlanger" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Steven Erlanger" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="estados-unidos" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="estados-unidos" />
+<meta name="id" content="100000004901638"/>
+<meta name="wordCount" content="1622"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2017/01/31/que-hacer-con-trump-he-ahi-el-dilema-que-enfrentan-muchos-lideres-mundiales/">
+<meta name="nyt-collection:uri" content="year=2017&amp;monthnum=01&amp;day=31&amp;name=que-hacer-con-trump-he-ahi-el-dilema-que-enfrentan-muchos-lideres-mundiales">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=34501">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2017\/01\/31\/que-hacer-con-trump-he-ahi-el-dilema-que-enfrentan-muchos-lideres-mundiales\/"},"headline":"\u00bfQu\u00e9 hacer con Trump? He ah\u00ed el dilema que enfrentan muchos l\u00edderes mundiales","datePublished":"2017-01-31T17:00:44+00:00","dateModified":"2017-01-31T13:52:45+00:00","author":{"@type":"Person","name":"marina.franco"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2017\/01\/31\/world\/31Burned1\/31Burned1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Los mandatarios de pa\u00edses como M\u00e9xico, el Reino Unido o Jap\u00f3n enfrentan una situaci\u00f3n en la que no pueden salir ganando: responder abiertamente a Trump y poner en peligro la relaci\u00f3n, o quedarse callados y recibir cr\u00edticas en casa. "}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2017/01/31/que-hacer-con-trump-he-ahi-el-dilema-que-enfrentan-muchos-lideres-mundiales/" hreflang="es" />
+<link rel="alternate" href="https://www.nytimes.com/2017/01/30/world/europe/donald-trump-us-alllies.html?mcid=nyt-es&amp;#038;subid=article" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/estadosunidos" />
+<title>¿Qué hacer con Trump? He ahí el dilema que enfrentan muchos líderes mundiales &#8211; Español</title>
+<link rel="canonical" href="https://www.nytimes.com/2017/01/30/world/europe/donald-trump-us-alllies.html?mcid=nyt-es&#038;subid=article" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2017/01/31/que-hacer-con-trump-he-ahi-el-dilema-que-enfrentan-muchos-lideres-mundiales/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-34501 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				¿Qué hacer con Trump? He ahí el dilema que enfrentan muchos líderes mundiales
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2017/01/31/que-hacer-con-trump-he-ahi-el-dilema-que-enfrentan-muchos-lideres-mundiales/"
+					data-title="Noticias: ¿Qué hacer con Trump? He ahí el dilema que enfrentan muchos líderes mundiales"
+					data-author="POR STEVEN ERLANGER"
+					data-media=""
+					data-description="Los mandatarios de países como México, el Reino Unido o Japón enfrentan una situación en la que no pueden salir ganando: responder abiertamente a Trump y poner en peligro la relación, o quedarse callados y recibir críticas en casa. "
+					data-publish-date="31 de enero de 2017"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2koUc5a">http://nyti.ms/2koUc5a</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/estados-unidos/">Estados Unidos</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">¿Qué hacer con Trump? He ahí el dilema que enfrentan muchos líderes mundiales</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Steven Erlanger</span>
+</span>
+
+					<time class="dateline" datetime="2017-01-31">31 de enero de 2017</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2017/01/31/que-hacer-con-trump-he-ahi-el-dilema-que-enfrentan-muchos-lideres-mundiales/"
+							data-title="Noticias: ¿Qué hacer con Trump? He ahí el dilema que enfrentan muchos líderes mundiales"
+							data-author="POR STEVEN ERLANGER"
+							data-media=""
+							data-description="Los mandatarios de países como México, el Reino Unido o Japón enfrentan una situación en la que no pueden salir ganando: responder abiertamente a Trump y poner en peligro la relación, o quedarse callados y recibir críticas en casa. "
+							data-publish-date="31 de enero de 2017"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004901824" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/01/31/world/31Burned1/31Burned1-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/01/31/world/31Burned1/31Burned1-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/01/31/world/31Burned1/31Burned1-superJumbo.jpg" data-mediaviewer-caption="El presidente Trump con la primera ministra británica Theresa May en la Casa Blanca" data-mediaviewer-credit="Stephen Crowley/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/01/31/world/31Burned1/31Burned1-master1050.jpg"/>
+		<meta itemprop="height" content="697" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">El presidente Trump con la primera ministra británica Theresa May en la Casa Blanca</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Stephen Crowley/The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="https://www.nytimes.com/2017/01/30/world/europe/donald-trump-us-alllies.html?mcid=nyt-es&#038;subid=article&#038;ref=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="30" data-total-count="30" id="story-continues-2" tabindex="-1">LONDRES – Todo iba muy bien.</p>
+<p class="story-body-text story-content" data-para-count="351" data-total-count="381" id="story-continues-3" tabindex="-1">La primera ministra del Reino Unido, Theresa May, acababa de despegar de Washington el viernes en la noche después de una primera reunión tensa pero exitosa con el presidente Donald Trump y había tomado un vuelo de diez horas a Ankara, Turquía, para su siguiente encuentro con el cada vez más autocrático presidente turco, <a href="https://www.nytimes.com/es/tag/recep-tayyip-erdogan/" target="_blank">Recep Tayyip Erdogan</a>.</p>
+<p class="story-body-text story-content" data-para-count="323" data-total-count="704" id="story-continues-4" tabindex="-1">Sin embargo, para cuando aterrizó en Turquía, Trump había firmado la <a href="https://www.nytimes.com/es/2017/01/29/editorial-la-prohibicion-de-donald-trump-a-los-musulmanes-es-cobarde-y-peligrosa/" target="_blank">orden ejecutiva</a> para detener la entrada a Estados Unidos de todos los refugiados sirios y la mayoría de los ciudadanos de siete países predominantemente musulmanes, incluyendo a personas con doble nacionalidad. May comenzaba a sentir el contragolpe.</p>
+<p class="story-body-text story-content" data-para-count="526" data-total-count="1230" id="story-continues-5" tabindex="-1">Después de haber calificado la orden ejecutiva como un asunto de Estados Unidos, explotaron las críticas incluso entre los miembros de su partido en el parlamento. Un exdiplomático británico la acusó de adoptar una política de apaciguamiento, como la de Neville Chamberlain con Hitler. El lunes en la noche se reunieron manifestantes afuera de Downing Street, y más de 1,5 millones de firmas recolectadas en una <a href="https://petition.parliament.uk/petitions/171928" target="_blank">solicitud por internet</a> exigían que May cancelara su invitación a Trump para visitar a la Reina Isabel II.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="372" data-total-count="1602" id="story-continues-6" tabindex="-1">Tanto los aliados como los enemigos consideran que una relación estrecha con cualquier presidente de Estados Unidos es vital, pero en particular países con una relación aún más cercana, como el Reino Unido, <a href="https://www.nytimes.com/es/2017/01/30/canada-refrenda-su-compromiso-con-musulmanes-y-refugiados-tras-el-ataque-a-una-mezquita-en-quebec/" target="_blank">Canadá</a>, <a href="https://www.nytimes.com/es/2017/01/23/trump-salida-estados-unidos-tpp-acuerdo-transpacifico/" target="_blank">Japón</a> y <a href="https://www.nytimes.com/es/2017/01/29/la-firme-resistencia-de-mexico/" target="_blank">México</a>. Sin embargo, como polilla alrededor de una luz, los líderes de esos países están descubriendo que hacerlo es acercarse al peligro.</p>
+<p class="story-body-text story-content" data-para-count="466" data-total-count="2068" id="story-continues-7" tabindex="-1">Aunque May es la más reciente líder en recibir críticas por su tratamiento a Trump, los líderes de esos otros tres aliados cercanos también han sentido el escozor del enojo público poco después de lo que parecían llamadas telefónicas o encuentros amistosos. Enfrentan una situación en la que no pueden salir ganando, ya sea que critiquen abiertamente al líder de Estados Unidos o se aguanten los golpes y se arriesguen a ser duramente criticados en casa.</p>
+<p class="story-body-text story-content" data-para-count="321" data-total-count="2389" id="story-continues-8" tabindex="-1">El peligro de ser amable con Trump no debería sorprender a los aliados de Estados Unidos. Además de haber hecho campaña a partir de una plataforma de <a href="https://www.nytimes.com/es/2017/01/20/el-discurso-inaugural-completo-de-donald-trump-con-analisis-y-comentarios/" target="_blank">“Estados Unidos primero”</a>, ha argumentado con frecuencia que varios países amigos han estado engañando a Estados Unidos en cuanto a comercio, seguridad y finanzas.</p>
+<p class="story-body-text story-content" data-para-count="121" data-total-count="2510" id="story-continues-9" tabindex="-1">Aun cuando ha sido cordial en entornos públicos con los líderes de esas naciones aliadas, los ha atacado poco después.</p>
+<p class="story-body-text story-content" data-para-count="369" data-total-count="2879" id="story-continues-10" tabindex="-1">“Trump no valora las relaciones. Valora la fuerza y la victoria”, dijo Jeremy Shapiro, el director de investigación del Consejo Europeo de Relaciones Exteriores (European Council on Foreign Relations) y antiguo funcionario sénior del Departamento de Estado. “Si corres a la Casa Blanca a ofrecer una débil mano amiga, estás garantizando que te explotarán”.</p>
+<p class="story-body-text story-content" data-para-count="402" data-total-count="3281" id="story-continues-11" tabindex="-1">Aunque la orden ejecutiva de Trump claramente no se dirigía al Reino Unido, la firmó solo unas cuantas horas después de la partida de May. “Puedes pararte frente a su puerta y darle la mano&#8221;, dijo Shapiro, &#8220;pero eso no significa que una horas más tarde, cuando esté firmando una orden, vaya a pensar en cómo te afecta a ti, a tus políticas o a tus ciudadanos”, comentó Shapiro.</p>
+<figure class="interactive interactive-embedded limit-small layout-small d-pullquote-wrapper">
+	<section class="d-pullquote">
+		<p>“Trump no valora las relaciones. Valora la fuerza y ganar. Si corres a la Casa Blanca a ofrecer una débil mano amiga, estás garantizando que te explotarán”.</p>
+		<cite>Jeremy Shapiro, director de investigación del Consejo Europeo de Relaciones Exteriores</cite>
+	</section>
+</figure>
+<link href="https://static01.nyt.com/newsgraphics/2015/02/10/mag-pullquote-redesign/assets/style.css" type="text/css" rel="stylesheet">
+
+<p class="story-body-text story-content" data-para-count="229" data-total-count="3510" id="story-continues-13" tabindex="-1">En una manifestación afuera de Downing Street ese mismo viernes, la gente exigía que May cancelara la visita de Estado y decía que, aunque las relaciones con Washington eran importantes tenían que ser más fríos con Trump.</p>
+<p class="story-body-text story-content" data-para-count="430" data-total-count="3940" id="story-continues-14" tabindex="-1">Amber Curtis, de 21 años, una estudiante de cine que es mitad británica y mitad iraní, dijo que le preocupaban sus familiares y amigos en Estados Unidos. “Si él viene después de esa prohibición se estaría mandando un mensaje erróneo”, dijo Curtis con respecto a Trump. “No diría que no quiero que haya relaciones, pero no puede venir aquí con esos términos de la prohibición. Los términos deben renegociarse”.</p>
+<p class="story-body-text story-content" data-para-count="275" data-total-count="4215" id="story-continues-15" tabindex="-1">Negma Yamin, de 50 años, una profesora proveniente de Pakistán, estaba llorando. “Estoy tan triste como musulmana; odio la persecución”, dijo. “No se puede negociar con una persona así. ¿Qué hará él con la gente? Está dividiendo a Estados Unidos y al mundo”.</p>
+<p class="story-body-text story-content" data-para-count="127" data-total-count="4342" id="story-continues-16" tabindex="-1">El lunes, Downing Street reiteró que la invitación sigue en pie. Sin embargo, ¿quién puede prever cómo reaccionará Trump?</p>
+<p class="story-body-text story-content" data-para-count="486" data-total-count="4828" id="story-continues-17" tabindex="-1">El presidente de México, Enrique Peña Nieto, experimentó algo similar al episodio con May… dos veces. El año pasado, en nombre de la conciliación y el diálogo, <a href="https://www.nytimes.com/es/2016/08/31/tras-un-ano-de-burlarse-de-mexico-donald-trump-visita-hoy-el-pais/" target="_blank">invitó a Trump a México</a>. Fue una decisión algo cuestionable, dado el desprecio de Trump por México y sus promesas de renegociar el <a href="https://www.nytimes.com/es/2017/01/25/ante-las-amenazas-de-trump-mexico-considera-lo-impensable-dejar-el-tlcan/" target="_blank">Tratado de Libre Comercio de América del Norte</a>, elevar los aranceles, deportar a millones de mexicanos y construir (o terminar) un muro fronterizo y mandarle la factura a su vecino.</p>
+<p class="story-body-text story-content" data-para-count="278" data-total-count="5106" id="story-continues-18" tabindex="-1">En México la visita fue vista como una humillación nacional. Fortaleció la imagen de Trump y debilitó a Peña Nieto, en especial cuando Trump, en un discurso sobre la política migratoria que dio <a href="https://www.nytimes.com/es/2016/09/06/texto-completo-del-discurso-sobre-inmigracion-que-trump-pronuncio-el-31-de-agosto/" target="_blank">en Phoenix</a> pocas horas después, insistió en que México pagaría el muro.</p>
+<p class="story-body-text story-content" data-para-count="382" data-total-count="5488" id="story-continues-19" tabindex="-1">Después de la victoria de Trump, Peña Nieto volvió a apostarle al diálogo, aparentemente con la intención de influenciar al nuevo presidente y moderar lo que muchos esperaban fuera solo retórica electoral. Pero, justo antes de que ambos líderes se reunieran en Washington, Trump emitió órdenes ejecutivas para empezar la <a href="https://www.nytimes.com/es/2017/01/26/el-presidente-mexicano-enrique-pena-nieto-cancela-su-visita-a-washington/" target="_blank">construcción del muro</a> y restringir la migración.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="158" data-total-count="5646" id="story-continues-20" tabindex="-1">Peña Nieto canceló la reunión, pero solo después de que Trump amenazó –en Twitter– con hacerlo primero si México no acordaba pagar el presunto muro.</p>
+<p class="story-body-text story-content" data-para-count="121" data-total-count="5767" id="story-continues-21" tabindex="-1">Aunque el presidente mexicano no acudió a Washington, <a href="https://www.nytimes.com/es/2017/01/27/trump-y-pena-nieto-acuerdan-no-hablar-mas-sobre-el-muro-fronterizo-en-publico/" target="_blank">habló por teléfono</a> con Trump durante una hora el día siguiente.</p>
+<p class="story-body-text story-content" data-para-count="177" data-total-count="5944" id="story-continues-22" tabindex="-1">&#8220;No es victoria ni derrota&#8221;, dijo Fernando Dworak, analista en Ciudad de México. &#8220;Es el sonido de la campana antes de otro <em>round</em> en una pelea de boxeo&#8221;.</p>
+<figure id="media-100000004901826" class="media photo media-100000004901826 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/01/31/world/31Burned2/31Burned2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-24">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/01/31/world/31Burned2/31Burned2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/01/31/world/31Burned2/31Burned2-superJumbo.jpg" data-mediaviewer-caption="Prime Minister Justin Trudeau of Canada moved swiftly to make contact with officials in the Trump administration and promoted ministers with experience in the United States." data-mediaviewer-credit="Chris Bolin/Reuters"  itemprop="url" itemid="https://static01.nyt.com/images/2017/01/31/world/31Burned2/31Burned2-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Prime Minister Justin Trudeau of Canada moved swiftly to make contact with officials in the Trump administration and promoted ministers with experience in the United States.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Chris Bolin/Reuters
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="343" data-total-count="6287" id="story-continues-24" tabindex="-1">El primer ministro de Japón Shinzo Abe tiene el mérito de estar entre los primeros en experimentar el escozor de las acciones de Trump. En una reunión celebrada en Nueva York en noviembre, Abe solicitó a Trump, entonces el presidente electo, que no abandonara un importante pacto comercial, el Acuerdo de Asociación Transpacífica, o TPP.</p>
+<p class="story-body-text story-content" data-para-count="376" data-total-count="6663" id="story-continues-25" tabindex="-1">Una de las primeras acciones de Trump como presidente fue <a href="https://www.nytimes.com/es/2017/01/23/trump-salida-estados-unidos-tpp-acuerdo-transpacifico/" target="_blank">salirse del acuerdo</a>, que muchos consideraron una victoria para China, aunque el pacto ya había sido bloqueado en el senado. Trump ha cuestionado desde hace tiempo el compromiso financiero y militar con la seguridad de Japón, y ha criticado a la constructora de autos Toyota por sus planes de producción en México.</p>
+<p class="story-body-text story-content" data-para-count="378" data-total-count="7041" id="story-continues-26" tabindex="-1">Un editorial en el Mainichi Shimbun, un periódico de centro-derecha de Japón, preguntaba por qué Abe no estaba tomando una postura más fuerte ante Trump: “Es difícil entender por qué el primer ministro está defendiendo a un presidente que destruyó el acuerdo comercial, establecido después de casi seis años de arduas negociaciones, en su cuarto día en el cargo”.</p>
+<p class="story-body-text story-content" data-para-count="159" data-total-count="7200" id="story-continues-27" tabindex="-1">Dados los posibles riesgos, Abe ha preferido evitar una crítica abierta hacia Trump y una reunión está programada en Washington para principios de febrero.</p>
+<p class="story-body-text story-content" data-para-count="363" data-total-count="7563" id="story-continues-28" tabindex="-1">En Canadá, el primer ministro <a href="https://www.nytimes.com/es/tag/justin-trudeau/" target="_blank">Justin Trudeau</a> también ha tenido sus momentos con Trump. Como dijo una vez el padre de Trudeau, el antiguo premier Pierre Trudeau, la cercanía con Estados Unidos “de alguna manera se parece a dormir con un elefante; sin importar cuán amigable o moderada sea la bestia, a uno le afecta cada uno de sus sacudidas y gruñidos”.</p>
+<p class="story-body-text story-content" data-para-count="217" data-total-count="7780" id="story-continues-29" tabindex="-1">Así que en lugar de provocar una pelea, Trudeau se ha movido sutilmente para establecer contacto con funcionarios del nuevo gobierno y renovó su gabinete para promover a ministros con experiencia con Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="220" data-total-count="8000" id="story-continues-30" tabindex="-1">Trump dio pie de inmediato a problemas con el líder canadiense con su aprobación para el oleoducto Keystone XL, lo que puso a Trudeau en una posición incómoda entre los ambientalistas y los productores de petróleo.</p>
+<p class="story-body-text story-content" data-para-count="138" data-total-count="8138" id="story-continues-31" tabindex="-1">Si Trump se mete con Canadá en asuntos comerciales, como parece probable, se espera que Trudeau no se quede callado y exprese críticas.</p>
+<p class="story-body-text story-content" data-para-count="424" data-total-count="8562" id="story-continues-32" tabindex="-1">Sin embargo, hasta ahora ha evadido criticar públicamente al presidente de Estados Unidos, una reticencia que quizá ayudó durante el fin de semana, después de la orden ejecutiva de Trump sobre la inmigración. En pocos instantes, Canadá fue capaz de obtener una aclaración de la Casa Blanca de que esta directiva no afectaría el tránsito de ciudadanos canadienses y personas con doble nacionalidad a Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="330" data-total-count="8892" id="story-continues-33" tabindex="-1">Después de su torpe respuesta inicial, el Reino Unido obtuvo esencialmente la misma aclaración 15 horas después, lo que Londres celebró como resultado de su relación especial con Trump. Aunque es posible que el Reino Unido haya influido, la Casa Blanca ya estaba limitando las interpretaciones iniciales a la orden ejecutiva.</p>
+<p class="story-body-text story-content" data-para-count="145" data-total-count="9037" id="story-continues-34" tabindex="-1">De todas formas, la “relación especial” nunca ha sido una igualitaria, así que aún hay un cierto grado de humillación en esta situación.</p>
+<p class="story-body-text story-content" data-para-count="232" data-total-count="9269" id="story-continues-35" tabindex="-1">Este sentimiento se puede leer en un mensaje de Twitter publicado por el usuario <a href="https://twitter.com/Locke1689/status/826011324270444544" target="_blank">@Locke1689</a>, un “conservador progresista” confeso: “Un desaire a la única superpotencia del mundo sería una burda autolesión diplomática”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Kirk Semple colaboró desde Ciudad de México; Ian Austen desde Ottawa; Motoko Rich desde Tokio e Iliana Magra desde Londres.</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/aliados/" rel="tag">Aliados</a>, <a href="https://www.nytimes.com/es/tag/donald-trump/" rel="tag">Donald Trump</a>, <a href="https://www.nytimes.com/es/tag/enrique-pena-nieto/" rel="tag">Enrique Peña Nieto</a>, <a href="https://www.nytimes.com/es/tag/estados-unidos/" rel="tag">Estados Unidos</a>, <a href="https://www.nytimes.com/es/tag/justin-trudeau/" rel="tag">Justin Trudeau</a>, <a href="https://www.nytimes.com/es/tag/relacion-mexico-estados-unidos/" rel="tag">Relación México-Estados Unidos</a>, <a href="https://www.nytimes.com/es/tag/shinzo-abe/" rel="tag">Shinzo Abe</a>, <a href="https://www.nytimes.com/es/tag/theresa-may/" rel="tag">Theresa May</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2017/01/31/que-hacer-con-trump-he-ahi-el-dilema-que-enfrentan-muchos-lideres-mundiales/"
+				data-title="Noticias: ¿Qué hacer con Trump? He ahí el dilema que enfrentan muchos líderes mundiales"
+				data-author="POR STEVEN ERLANGER"
+				data-media=""
+				data-description="Los mandatarios de países como México, el Reino Unido o Japón enfrentan una situación en la que no pueden salir ganando: responder abiertamente a Trump y poner en peligro la relación, o quedarse callados y recibir críticas en casa. "
+				data-publish-date="31 de enero de 2017"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/27/arrinconado-enrique-pena-nieto-responde-al-golpe-de-donald-trump/">
+					<div class="story-body">
+						<h3 class="kicker">México</h3>
+
+						<h2 class="headline">
+							<span class="title">Arrinconado, Enrique Peña Nieto responde al golpe de Donald Trump</span>
+							<time class="dateline">27 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/01/27/us/PENANIETO/PENANIETO-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/30/sean-spicer-secretario-de-prensa-de-trump-este-trabajo-no-es-para-hacer-amigos/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">Sean Spicer, secretario de Prensa de Trump: &#8216;Este trabajo no es para hacer amigos&#8217;</span>
+							<time class="dateline">30 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/01/30/business/30SPICER/30SPICER-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/30/a-quien-apunta-nicolas-maduro/">
+					<div class="story-body">
+						<h3 class="kicker">Comentario</h3>
+
+						<h2 class="headline">
+							<span class="title">¿A quién apunta Nicolás Maduro?</span>
+							<time class="dateline">30 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/02/03/universal/es/30barrera-ES/30barrera-ES-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/30/canada-refrenda-su-compromiso-con-musulmanes-y-refugiados-tras-el-ataque-a-una-mezquita-en-quebec/">
+					<div class="story-body">
+						<h3 class="kicker">Canadá</h3>
+
+						<h2 class="headline">
+							<span class="title">Canadá refrenda su compromiso con musulmanes y refugiados tras el ataque a una mezquita en Quebec</span>
+							<time class="dateline">30 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/01/31/universal/es/30quebecES2/30quebecES2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":847,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

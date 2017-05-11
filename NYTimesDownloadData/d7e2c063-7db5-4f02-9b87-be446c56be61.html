@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004435613"/>
+<meta name="hdl" content="Lo que la historia nos enseña sobre los muros fronterizos" />
+<meta name="col" content="Reposado" id="column-name" />
+<meta name="pdate" content="20160601" />
+<meta name="utime" content="20160601110735" />
+<meta name="ptime" content="20160601110735" />
+<meta name="DISPLAYDATE" content="Jun. 1, 2016" />
+<meta name="dat" content="Jun. 1, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="lo-que-la-historia-nos-ensena-sobre-los-muros-fronterizos" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/06/01/lo-que-la-historia-nos-ensena-sobre-los-muros-fronterizos/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Lo que la historia nos enseña sobre los muros fronterizos" />
+<meta property="og:description" content="Tal vez Donald Trump quiera tomar nota: la historia de la humanidad está plagada de ejemplos de ingeniería frustrados por completos aficionados que no pierden de vista su objetivo." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Wall-1/26UP-Wall-1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-06-01" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/06/01/lo-que-la-historia-nos-ensena-sobre-los-muros-fronterizos/" />
+<meta property="twitter:title" content="Lo que la historia nos enseña sobre los muros fronterizos" />
+<meta property="twitter:description" content="Tal vez Donald Trump quiera tomar nota: la historia de la humanidad está plagada de ejemplos de ingeniería frustrados por completos aficionados que no pierden de vista su objetivo." />
+<meta name="author" content="Darcy Eveleigh" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por Darcy Eveleigh" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="reposado" />
+<meta name="cd12" content="the-upshot" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="reposado" />
+<meta name="ser" content="the-upshot" />
+<meta name="id" content="100000004435613"/>
+<meta name="wordCount" content="807"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/06/01/lo-que-la-historia-nos-ensena-sobre-los-muros-fronterizos/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=06&amp;day=01&amp;name=lo-que-la-historia-nos-ensena-sobre-los-muros-fronterizos">
+<meta name="PT" content="article">
+<meta name="article:section" content="Reposado">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/10?exclude=13559">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/06\/01\/lo-que-la-historia-nos-ensena-sobre-los-muros-fronterizos\/"},"headline":"Lo que la historia nos ense\u00f1a sobre los muros fronterizos","datePublished":"2016-06-01T11:07:35+00:00","dateModified":"2016-10-26T13:29:23+00:00","author":{"@type":"Person","name":"paulina.chavira"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/05\/26\/upshot\/26UP-Wall-1\/26UP-Wall-1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Tal vez Donald Trump quiera tomar nota: la historia de la humanidad est\u00e1 plagada de ejemplos de ingenier\u00eda frustrados por completos aficionados que no pierden de vista su objetivo."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/06/01/lo-que-la-historia-nos-ensena-sobre-los-muros-fronterizos/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/05/28/upshot/what-history-teaches-us-about-walls.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="reposado/theupshot" />
+<title>Lo que la historia nos enseña sobre los muros fronterizos &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/05/28/upshot/what-history-teaches-us-about-walls.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/06/01/lo-que-la-historia-nos-ensena-sobre-los-muros-fronterizos/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+		<script src="https://a1.nyt.com/assets/article/latest/js/article/common/layout.js"></script>
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-13559 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard intl-masthead-theme-light" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/reposado/">Reposado</a></span>
+					<span class="pipe">|</span>
+				Lo que la historia nos enseña sobre los muros fronterizos
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/06/01/lo-que-la-historia-nos-ensena-sobre-los-muros-fronterizos/"
+					data-title="Reposado: Lo que la historia nos enseña sobre los muros fronterizos"
+					data-author="POR DARCY EVELEIGH"
+					data-media=""
+					data-description="Tal vez Donald Trump quiera tomar nota: la historia de la humanidad está plagada de ejemplos de ingeniería frustrados por completos aficionados que no pierden de vista su objetivo."
+					data-publish-date="1 de junio de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/1XgF7An">http://nyti.ms/1XgF7An</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+	
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main has-full-bleed-image-lede">
+	<header id="story-header" class="story-header">
+			<figure id="media-100000004435521" class="media cover photo layout-horizontal-full-bleed" data-bleed-style="full-bleed" itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Wall-1/26UP-Wall-1-articleLarge.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="presentation">
+				<span class="visually-hidden"></span>
+				<div class="image">
+					<img
+						src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Wall-1/26UP-Wall-1-articleLarge.jpg"
+						alt="La ciudad palestina de Rafah vista desde un orificio en un muro que divide a Egipto y la Franja de Gaza. Desde 2013 Egipto ha mantenido cerrado casi todo el tiempo el cruce de Rafah, el único punto de entrada a Gaza, debido a disputas con Hamás, el grupo militante islámico que controla Gaza. "
+						data-jumbosrc="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Wall-1/26UP-Wall-1-jumbo.jpg"
+						data-superjumbosrc="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Wall-1/26UP-Wall-1-superJumbo.jpg"
+						id="media-image-100000004435521"
+					>
+				</div>
+				<figcaption id="media-caption-100000004435521" class="caption" itemprop="caption description">
+					<span class="caption-text">La ciudad palestina de Rafah vista desde un orificio en un muro que divide a Egipto y la Franja de Gaza. Desde 2013 Egipto ha mantenido cerrado casi todo el tiempo el cruce de Rafah, el único punto de entrada a Gaza, debido a disputas con Hamás, el grupo militante islámico que controla Gaza. </span>
+
+					<span class="credit" itemprop="copyrightHolder">
+						<span class="visually-hidden">crédito</span>
+						Barkay Wolfson
+					</span>
+				</figcaption>
+				<meta itemprop="height" content="401">
+				<meta itemprop="width" content="600">
+			</figure>
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/reposado/">Reposado</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/the-upshot/">The Upshot</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Lo que la historia nos enseña sobre los muros fronterizos</h1>
+				<p itemprop="headline" id="story-deck" class="deck">Tal vez Donald Trump quiera tomar nota: la historia de la humanidad está plagada de ejemplos de ingeniería frustrados por completos aficionados que no pierden de vista su objetivo.</p>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Darcy Eveleigh</span>
+</span>
+
+					<time class="dateline" datetime="2016-06-01">1 de junio de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/06/01/lo-que-la-historia-nos-ensena-sobre-los-muros-fronterizos/"
+							data-title="Reposado: Lo que la historia nos enseña sobre los muros fronterizos"
+							data-author="POR DARCY EVELEIGH"
+							data-media=""
+							data-description="Tal vez Donald Trump quiera tomar nota: la historia de la humanidad está plagada de ejemplos de ingeniería frustrados por completos aficionados que no pierden de vista su objetivo."
+							data-publish-date="1 de junio de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+			<script>
+				if (window.magnum && window.magnum.responsiveImages && window.magnum.responsiveImages.setCoverImage) {
+					window.magnum.responsiveImages.setCoverImage('100000004435521','full-bleed',401,600,0,0,0,0);
+				}
+			</script>
+
+			
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/05/28/upshot/what-history-teaches-us-about-walls.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="116" data-total-count="116" id="story-continues-1" tabindex="-1">La historia ha olvidado si Adriano, Qin Shi Huang o Nikita Khrushchev alguna vez dijeron: “Construiré un muro”.</p>
+<p class="story-body-text story-content" data-para-count="287" data-total-count="403" id="story-continues-2" tabindex="-1">Pero eso fue lo que hicieron y ¿qué pasó después? La historia de los muros y las murallas, que impiden el acceso o la salida, también es la historia de aquellos que se las ingeniaron para atravesarlos, ya fuera con ayuda de escaleras o túneles. Algunos, incluso, fueron derribados.</p>
+<p class="story-body-text story-content" data-para-count="486" data-total-count="889" id="story-continues-3" tabindex="-1">El ejemplo clásico es la Gran Muralla China. A pesar de su imponencia y sorprendente durabilidad, no logró impedir el paso a varias tribus nómadas del norte. La historia está plagada de ejemplos de ingeniería frustrados por completos aficionados que no perdieron de vista su objetivo. No obstante, Donald Trump ha prometido construir un muro en la frontera entre Estados Unidos y México, que describe como algo grande, hermoso, alto y fuerte. Y que además, dice, pagará México.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="63" data-total-count="952" id="story-continues-4" tabindex="-1">A continuación, te ofrecemos otra perspectiva sobre los muros:</p>
+<h4 class="story-subheading story-content">La Gran Muralla China</h4>
+
+<figure id="media-100000004435550" class="media photo media-100000004435550 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Wall-2/26UP-Wall-2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-7">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Wall-2/26UP-Wall-2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Wall-2/26UP-Wall-2-superJumbo.jpg" data-mediaviewer-caption="A section of the Great Wall of China near Beijing. The wall, actually a series of fortifications, was built and rebuilt over the centuries to keep out invaders from the north. They got around it anyway." data-mediaviewer-credit="Kevin Frayer/Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Wall-2/26UP-Wall-2-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A section of the Great Wall of China near Beijing. The wall, actually a series of fortifications, was built and rebuilt over the centuries to keep out invaders from the north. They got around it anyway.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Kevin Frayer/Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="169" data-total-count="1121" id="story-continues-7" tabindex="-1">La muralla (o más bien un conjunto de fortificaciones) se construyó y reconstruyó para evitar la invasión de tribus del norte, que, no obstante, acabaron por entrar.</p>
+<h4 class="story-subheading story-content">El Muro de Berlín</h4>
+
+<figure id="media-100000004435553" class="media photo media-100000004435553 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/26/upshot/26up-walls-3/26up-walls-3-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-10">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/26/upshot/26up-walls-3/26up-walls-3-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/26/upshot/26up-walls-3/26up-walls-3-superJumbo-v2.jpg" data-mediaviewer-caption="Increasing the height on a section of the Berlin Wall on Oct. 9, 1961. The Communist East Germans built it to stem mass migrations into West Berlin. The wall accomplished that goal, but it also became an &lt;a href=&quot;http://timesmachine.nytimes.com/timesmachine/1961/10/07/97252340.html?pageNumber=1&quot;&gt;enduring symbol&lt;/a&gt; of the Cold War as people risked their lives to flee over and under it. Germans tore it down in 1989." data-mediaviewer-credit="Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/26/upshot/26up-walls-3/26up-walls-3-master675-v2.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Increasing the height on a section of the Berlin Wall on Oct. 9, 1961. The Communist East Germans built it to stem mass migrations into West Berlin. The wall accomplished that goal, but it also became an &lt;a href=&quot;http://timesmachine.nytimes.com/timesmachine/1961/10/07/97252340.html?pageNumber=1&quot;&gt;enduring symbol&lt;/a&gt; of the Cold War as people risked their lives to flee over and under it. Germans tore it down in 1989.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="360" data-total-count="1481" id="story-continues-10" tabindex="-1">Los alemanes comunistas del este construyeron el muro para detener las migraciones multitudinarias a Berlín Occidental. El muro logró ese acometido, pero también se convirtió en un símbolo perdurable de la Guerra Fría, dado que la gente arriesgaba la vida para cruzarlo, ya fuera escalándolo o con ayuda de túneles. Los alemanes lo derrumbaron en 1989.</p>
+<h4 class="story-subheading story-content">Marruecos y Melilla</h4>
+
+<figure id="media-100000004435555" class="media photo media-100000004435555 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Walls-5/26UP-Walls-5-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-13">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Walls-5/26UP-Walls-5-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Walls-5/26UP-Walls-5-superJumbo-v2.jpg" data-mediaviewer-caption="Migrants in 2014 scaling a fence — one of a series of three — between Morocco and the Spanish enclave of &lt;a href=&quot;http://www.nytimes.com/2014/11/25/world/at-spanish-enclave-a-debate-over-what-makes-a-border.html&quot;&gt;Melilla&lt;/a&gt;. It is one of the few land borders between Europe and Africa. The situation in Melilla highlights the desperation of migrants seeking a way in and the lengths to which Spain goes in trying to keep them out." data-mediaviewer-credit="Santi Palacios/Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Walls-5/26UP-Walls-5-master675-v2.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Migrants in 2014 scaling a fence — one of a series of three — between Morocco and the Spanish enclave of &lt;a href=&quot;http://www.nytimes.com/2014/11/25/world/at-spanish-enclave-a-debate-over-what-makes-a-border.html&quot;&gt;Melilla&lt;/a&gt;. It is one of the few land borders between Europe and Africa. The situation in Melilla highlights the desperation of migrants seeking a way in and the lengths to which Spain goes in trying to keep them out.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Santi Palacios/Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="230" data-total-count="1711" id="story-continues-13" tabindex="-1">Esta es una de las pocas fronteras terrestres entre Europa y África. La situación en Melilla enfatiza la desesperación de los inmigrantes que buscan la forma de entrar, así como los esfuerzos de España por tratar de evitarlo.</p>
+<h4 class="story-subheading story-content">Jerusalén</h4>
+
+<figure id="media-100000004435564" class="media photo media-100000004435564 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/26/upshot/26up-walls-6/26up-walls-6-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-16">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/26/upshot/26up-walls-6/26up-walls-6-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/26/upshot/26up-walls-6/26up-walls-6-superJumbo.jpg" data-mediaviewer-caption="An aerial view of the barrier around the Palestinian Shuafat Refugee Camp, just outside Jerusalem. Israel says the network of steel and concrete walls, along with fences and barbed wire, is needed for security; the Palestinians view it as a land grab that undermines their promised state." data-mediaviewer-credit="Abir Sultan/European Pressphoto Agency"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/26/upshot/26up-walls-6/26up-walls-6-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">An aerial view of the barrier around the Palestinian Shuafat Refugee Camp, just outside Jerusalem. Israel says the network of steel and concrete walls, along with fences and barbed wire, is needed for security; the Palestinians view it as a land grab that undermines their promised state.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Abir Sultan/European Pressphoto Agency
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="212" data-total-count="1923" id="story-continues-16" tabindex="-1">Israel afirma que la red de muros de acero y concreto, así como las cercas y el alambre de púas son necesarios por seguridad. Para los palestinos, implica el despojo de tierras que debilita su Estado prometido.</p>
+<h4 class="story-subheading story-content">El Muro de Adriano</h4>
+
+<figure id="media-100000004438779" class="media photo media-100000004438779 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/27/upshot/26UP-Walls-New-Haridens/26UP-Walls-New-Haridens-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-19">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/27/upshot/26UP-Walls-New-Haridens/26UP-Walls-New-Haridens-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/27/upshot/26UP-Walls-New-Haridens/26UP-Walls-New-Haridens-superJumbo.jpg" data-mediaviewer-caption="Hadrian’s Wall, in northern England, which the Romans began around 120 A.D., marked the northwestern frontier of their empire. Invaders were never a real threat. Today, &lt;a href=&quot;http://www.english-heritage.org.uk/visit/places/hadrians-wall/history/&quot;&gt;tourists&lt;/a&gt; can walk the entire length of it coast to coast." data-mediaviewer-credit="DeAgostini/Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/27/upshot/26UP-Walls-New-Haridens/26UP-Walls-New-Haridens-master675.jpg"/>
+		<meta itemprop="height" content="444" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Hadrian’s Wall, in northern England, which the Romans began around 120 A.D., marked the northwestern frontier of their empire. Invaders were never a real threat. Today, &lt;a href=&quot;http://www.english-heritage.org.uk/visit/places/hadrians-wall/history/&quot;&gt;tourists&lt;/a&gt; can walk the entire length of it coast to coast.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			DeAgostini/Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="233" data-total-count="2156" id="story-continues-19" tabindex="-1">Los romanos comenzaron a construir este muro cerca del año 120 d. C. para marcar la frontera noroeste de su imperio. Los invasores nunca fueron una amenaza real. Hoy, los turistas pueden recorrer toda su extensión de costa a costa.</p>
+<h4 class="story-subheading story-content">México-Estados Unidos</h4>
+
+<figure id="media-100000004435624" class="media photo media-100000004435624 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Walls-9/26UP-Walls-9-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-22">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Walls-9/26UP-Walls-9-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Walls-9/26UP-Walls-9-superJumbo.jpg" data-mediaviewer-caption="A part of the current U.S.-Mexico border fence in the desert between Yuma, Ariz., and Calexico, Calif. Mexican drug cartels have built tunnels beneath it. The area is heavily patrolled, but immigrants have found ways over and through it." data-mediaviewer-credit="David McNew/Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Walls-9/26UP-Walls-9-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A part of the current U.S.-Mexico border fence in the desert between Yuma, Ariz., and Calexico, Calif. Mexican drug cartels have built tunnels beneath it. The area is heavily patrolled, but immigrants have found ways over and through it.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			David McNew/Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="229" data-total-count="2385" id="story-continues-22" tabindex="-1">Los carteles mexicanos de la droga han construido túneles subterráneos que atraviesan el muro. El área está fuertemente vigilada por la Patrulla Fronteriza. Los migrantes aun así encuentran formas de pasar de un lado a otro.</p>
+<h4 class="story-subheading story-content">El Kremlin en Moscú</h4>
+
+<figure id="media-100000004438778" class="media photo media-100000004438778 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/27/upshot/26UP-Walls-New-Kremlin/26UP-Walls-New-Kremlin-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-25">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/27/upshot/26UP-Walls-New-Kremlin/26UP-Walls-New-Kremlin-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/27/upshot/26UP-Walls-New-Kremlin/26UP-Walls-New-Kremlin-superJumbo-v2.jpg" data-mediaviewer-caption="A guard outside the walls of the &lt;a href=&quot;http://www.encyclopedia.com/topic/kremlin.aspx&quot;&gt;Kremlin&lt;/a&gt;, the central and oldest part of Moscow. The current walls date from the end of the 1400s, replacing earlier ones. The Kremlin was overrun by foreign forces on several occasions." data-mediaviewer-credit="Misha Japaridze/Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/27/upshot/26UP-Walls-New-Kremlin/26UP-Walls-New-Kremlin-master675-v2.jpg"/>
+		<meta itemprop="height" content="449" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A guard outside the walls of the &lt;a href=&quot;http://www.encyclopedia.com/topic/kremlin.aspx&quot;&gt;Kremlin&lt;/a&gt;, the central and oldest part of Moscow. The current walls date from the end of the 1400s, replacing earlier ones. The Kremlin was overrun by foreign forces on several occasions.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Misha Japaridze/Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="175" data-total-count="2560" id="story-continues-25" tabindex="-1">Las paredes actuales del Kremlin son de finales de 1400 y se erigieron para remplazar a las anteriores. El Kremlin fue derrocado por fuerzas extranjeras en diversas ocasiones.</p>
+<h4 class="story-subheading story-content">La Santa Sede</h4>
+
+<figure id="media-100000004435626" class="media photo media-100000004435626 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Walls-11/26UP-Walls-11-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-28">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Walls-11/26UP-Walls-11-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Walls-11/26UP-Walls-11-superJumbo.jpg" data-mediaviewer-caption="Tourists next to the Vatican City wall in Rome in 2013. Some of its walls were built in the ninth century by Pope Leo IV in an effort to protect it from attacks by pirates and other marauders. Currently, the walls &lt;a href=&quot;http://www.nytimes.com/2016/02/20/world/europe/in-defense-of-trump-some-point-wrongly-to-vatican-walls.html&quot;&gt;don’t entirely enclose&lt;/a&gt; the city. Anybody can walk into St. Peter’s Square." data-mediaviewer-credit="Dan Kitwood/Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-Walls-11/26UP-Walls-11-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Tourists next to the Vatican City wall in Rome in 2013. Some of its walls were built in the ninth century by Pope Leo IV in an effort to protect it from attacks by pirates and other marauders. Currently, the walls &lt;a href=&quot;http://www.nytimes.com/2016/02/20/world/europe/in-defense-of-trump-some-point-wrongly-to-vatican-walls.html&quot;&gt;don’t entirely enclose&lt;/a&gt; the city. Anybody can walk into St. Peter’s Square.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Dan Kitwood/Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="271" data-total-count="2831" id="story-continues-28" tabindex="-1">El papa León IV construyó algunas de sus paredes en el siglo IX en un esfuerzo por proteger a la ciudad de ataques de piratas y otros saqueadores. En la actualidad, las paredes no rodean la ciudad por completo. Cualquiera puede entrar caminando a la Plaza de San Pedro.</p>
+<h4 class="story-subheading story-content">Dos Coreas</h4>
+
+<figure id="media-100000004435628" class="media photo media-100000004435628 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-13/26UP-walls-13-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-31">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-13/26UP-walls-13-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-13/26UP-walls-13-superJumbo.jpg" data-mediaviewer-caption="A tourist looks through a wire fence decorated with ribbons written with messages wishing for the reunification of the two Koreas at the Imjingak Pavilion in South Korea. The heavily fortified border has effectively kept the two peoples separated for more than 60 years, although the South Koreans have occasionally found North Korean-built tunnels beneath it." data-mediaviewer-credit="Lee Jin-man/Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-13/26UP-walls-13-master675.jpg"/>
+		<meta itemprop="height" content="448" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A tourist looks through a wire fence decorated with ribbons written with messages wishing for the reunification of the two Koreas at the Imjingak Pavilion in South Korea. The heavily fortified border has effectively kept the two peoples separated for more than 60 years, although the South Koreans have occasionally found North Korean-built tunnels beneath it.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Lee Jin-man/Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="214" data-total-count="3045" id="story-continues-31" tabindex="-1">La frontera, resguardada con esmero, ha logrado mantener a los dos pueblos separados durante más de 60 años, aunque los surcoreanos algunas veces han encontrado túneles subterráneos construidos por norcoreanos.</p>
+<h4 class="story-subheading story-content">Indios en Rumania</h4>
+
+<figure id="media-100000004436381" class="media photo media-100000004436381 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-SUB-Wall-12/26UP-SUB-Wall-12-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-34">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-SUB-Wall-12/26UP-SUB-Wall-12-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-SUB-Wall-12/26UP-SUB-Wall-12-superJumbo-v2.jpg" data-mediaviewer-caption="Workers finishing a concrete wall built around apartments housing Roma families in Baia Mare, Romania, in 2011. The walls, erected by the mayor of the town, created an &lt;a href=&quot;http://lens.blogs.nytimes.com/2012/11/05/breaking-through-walls-of-bias/&quot;&gt;enclosed ghetto&lt;/a&gt;. The Roma, originally from India, have faced oppression and violence for centuries in Europe." data-mediaviewer-credit="Daniel Mihailescu/Agence France-Presse — Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-SUB-Wall-12/26UP-SUB-Wall-12-master675-v2.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Workers finishing a concrete wall built around apartments housing Roma families in Baia Mare, Romania, in 2011. The walls, erected by the mayor of the town, created an &lt;a href=&quot;http://lens.blogs.nytimes.com/2012/11/05/breaking-through-walls-of-bias/&quot;&gt;enclosed ghetto&lt;/a&gt;. The Roma, originally from India, have faced oppression and violence for centuries in Europe.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Daniel Mihailescu/Agence France-Presse — Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="298" data-total-count="3343" id="story-continues-34" tabindex="-1">Un conjunto de departamentos que albergan a familias de romaníes en Baia Mare, Rumania, está rodeado por un muro de concreto. Las paredes, erigidas por el alcalde de la ciudad, cercaron un gueto. Los romaníes, originarios de la India, han padecido opresión y violencia en Europa durante siglos.</p>
+<h4 class="story-subheading story-content">El Gueto de Varsovia</h4>
+
+<figure id="media-100000004435631" class="media photo media-100000004435631 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-15/26UP-walls-15-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-37">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-15/26UP-walls-15-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-15/26UP-walls-15-superJumbo-v2.jpg" data-mediaviewer-caption="The Warsaw Ghetto in 1940, the year of its construction. The Nazis herded and confined more than 400,000 Jews into a small area of the city; disease and starvation were rampant. In 1942, there were mass deportations to death camps. In the course of an uprising in 1943, the Germans leveled it." data-mediaviewer-credit="Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-15/26UP-walls-15-master675-v2.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The Warsaw Ghetto in 1940, the year of its construction. The Nazis herded and confined more than 400,000 Jews into a small area of the city; disease and starvation were rampant. In 1942, there were mass deportations to death camps. In the course of an uprising in 1943, the Germans leveled it.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="269" data-total-count="3612" id="story-continues-37" tabindex="-1">Los nazis apiñaron y confinaron a más de 400.000 judíos en una pequeña área de la ciudad, donde proliferaron la enfermedad y el hambre. En 1942, hubo deportaciones masivas a campos de exterminio. Durante un levantamiento en 1943, los alemanes derribaron este muro.</p>
+<h4 class="story-subheading story-content">India-Bangladesh</h4>
+
+<figure id="media-100000004435636" class="media photo media-100000004435636 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-18/26UP-walls-18-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-40">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-18/26UP-walls-18-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-18/26UP-walls-18-superJumbo.jpg" data-mediaviewer-caption="Indian Border Security Force soldiers patrolling the India-Bangladesh border in 2006. The fence &lt;a href=&quot;http://search.proquest.com/docview/122094755/2E7820AED2E843DAPQ/2?accountid=47149&quot;&gt;was built&lt;/a&gt; by India to stem the flow of illegal crossings by Bangladeshis." data-mediaviewer-credit="Ramakanta Dey/Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-18/26UP-walls-18-master675.jpg"/>
+		<meta itemprop="height" content="449" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Indian Border Security Force soldiers patrolling the India-Bangladesh border in 2006. The fence &lt;a href=&quot;http://search.proquest.com/docview/122094755/2E7820AED2E843DAPQ/2?accountid=47149&quot;&gt;was built&lt;/a&gt; by India to stem the flow of illegal crossings by Bangladeshis.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Ramakanta Dey/Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="206" data-total-count="3818" id="story-continues-40" tabindex="-1">Soldados de las Fuerzas Armadas de Seguridad de la Frontera India patrullan la frontera entre la India y Bangladesh. La India construyó esta cerca para detener el flujo de cruces ilegales de bangladesíes.</p>
+<h4 class="story-subheading story-content">Chipre</h4>
+
+<figure id="media-100000004438243" class="media photo media-100000004438243 embedded layout-large-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/27/upshot/26UP-Cyprus-combo/26UP-Cyprus-combo-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-43">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/27/upshot/26UP-Cyprus-combo/26UP-Cyprus-combo-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/27/upshot/26UP-Cyprus-combo/26UP-Cyprus-combo-superJumbo.jpg" data-mediaviewer-caption="On the left, a wall on Ledra Street in Nicosia, Cyprus, in 2005 and the same street in 2013. The wall between the Greek- and Turkish-controlled parts of the city came down in 2007, but despite recent efforts at a resolution, Cyprus remains &lt;a href=&quot;http://www.nytimes.com/aponline/2016/05/24/world/europe/ap-eu-cyprus-peace-talks.html&quot;&gt;split&lt;/a&gt;, as it has been since 1974." data-mediaviewer-credit="Left: Jihan Ammar/Agence France-Presse — Getty Images. Right: Petros Karadjias/Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/27/upshot/26UP-Cyprus-combo/26UP-Cyprus-combo-master675.jpg"/>
+		<meta itemprop="height" content="204" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">On the left, a wall on Ledra Street in Nicosia, Cyprus, in 2005 and the same street in 2013. The wall between the Greek- and Turkish-controlled parts of the city came down in 2007, but despite recent efforts at a resolution, Cyprus remains &lt;a href=&quot;http://www.nytimes.com/aponline/2016/05/24/world/europe/ap-eu-cyprus-peace-talks.html&quot;&gt;split&lt;/a&gt;, as it has been since 1974.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Left: Jihan Ammar/Agence France-Presse — Getty Images. Right: Petros Karadjias/Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="202" data-total-count="4020" id="story-continues-43" tabindex="-1">El muro entre las partes de la ciudad controladas por Grecia y Turquía se derribó en 2007, pero a pesar de los esfuerzos recientes para llegar a un acuerdo, Chipre continúa dividida, como desde 1974.</p>
+<h4 class="story-subheading story-content">La religión los separa</h4>
+
+<figure id="media-100000004435638" class="media photo media-100000004435638 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-20/26UP-walls-20-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-46">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-20/26UP-walls-20-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-20/26UP-walls-20-superJumbo-v2.jpg" data-mediaviewer-caption="Walls between Protestant and Roman Catholic areas of Belfast in Northern Ireland. The &lt;a href=&quot;http://search.proquest.com/docview/118624584/589F4337E85B4D8CPQ/2?accountid=47149&quot;&gt;fences&lt;/a&gt; were built in 1969 in an effort to maintain peace. It didn’t work. Today, with violence abated, parts of the city have become a thriving tourist hub, with trendy shops and restaurants. The walls remain, but open each day under the watchful eyes of the police." data-mediaviewer-credit="Peter Kemp/Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-20/26UP-walls-20-master675-v2.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Walls between Protestant and Roman Catholic areas of Belfast in Northern Ireland. The &lt;a href=&quot;http://search.proquest.com/docview/118624584/589F4337E85B4D8CPQ/2?accountid=47149&quot;&gt;fences&lt;/a&gt; were built in 1969 in an effort to maintain peace. It didn’t work. Today, with violence abated, parts of the city have become a thriving tourist hub, with trendy shops and restaurants. The walls remain, but open each day under the watchful eyes of the police.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Peter Kemp/Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="375" data-total-count="4395" id="story-continues-46" tabindex="-1">Los muros en Belfast, Irlanda del Norte, se construyeron en 1969 en un intento por mantener la paz, pero no se logró. Hoy, una vez abatida la violencia, hay partes de la ciudad que se han convertido en un próspero centro turístico, con tiendas de moda y restaurantes. Los muros continúan en su sitio, pero se abren todos los días bajo la mirada vigilante de la policía.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<h4 class="story-subheading story-content">Muros de arena</h4>
+
+<figure id="media-100000004435641" class="media photo media-100000004435641 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-21/26UP-walls-21-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-49">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-21/26UP-walls-21-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-21/26UP-walls-21-superJumbo.jpg" data-mediaviewer-caption="A competitor in the Paris-Dakar rally passing over a sand wall at the border between Mauritania and Morocco in 2001. Morocco &lt;a href=&quot;http://search.proquest.com/docview/122406584/944EA3E20E034DA3PQ/10?accountid=47149&quot;&gt;built the wall &lt;/a&gt;in the early 1980s to keep out the Polisario Front guerrillas, who sought to make the western Sahara an independent nation. &lt;a href=&quot;http://www.dakar.com/index_DAKus.html&quot;&gt;The Dakar&lt;/a&gt;, as it’s called, has taken place in South America since 2009 because of security concerns in Mauritania." data-mediaviewer-credit="Patrick Hertzog/Agence France-Presse — Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/26/upshot/26UP-walls-21/26UP-walls-21-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A competitor in the Paris-Dakar rally passing over a sand wall at the border between Mauritania and Morocco in 2001. Morocco &lt;a href=&quot;http://search.proquest.com/docview/122406584/944EA3E20E034DA3PQ/10?accountid=47149&quot;&gt;built the wall &lt;/a&gt;in the early 1980s to keep out the Polisario Front guerrillas, who sought to make the western Sahara an independent nation. &lt;a href=&quot;http://www.dakar.com/index_DAKus.html&quot;&gt;The Dakar&lt;/a&gt;, as it’s called, has taken place in South America since 2009 because of security concerns in Mauritania.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Patrick Hertzog/Agence France-Presse — Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="314" data-total-count="4709" id="story-continues-49" tabindex="-1">Marruecos construyó el muro de arena a principios de los años ochenta para impedir el acceso a los guerrilleros del Frente Polisario, quienes buscaban la independencia del Sahara occidental. El Rally Dakar, como se llamaba, se ha celebrado en Sudamérica desde 2009 debido a problemas de seguridad en Mauritania.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/corea-del-norte/" rel="tag">Corea del Norte</a>, <a href="https://www.nytimes.com/es/tag/corea-del-sur/" rel="tag">corea del sur</a>, <a href="https://www.nytimes.com/es/tag/frontera/" rel="tag">frontera</a>, <a href="https://www.nytimes.com/es/tag/irlanda-de-norte/" rel="tag">Irlanda de Norte</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/06/01/lo-que-la-historia-nos-ensena-sobre-los-muros-fronterizos/"
+				data-title="Reposado: Lo que la historia nos enseña sobre los muros fronterizos"
+				data-author="POR DARCY EVELEIGH"
+				data-media=""
+				data-description="Tal vez Donald Trump quiera tomar nota: la historia de la humanidad está plagada de ejemplos de ingeniería frustrados por completos aficionados que no pierden de vista su objetivo."
+				data-publish-date="1 de junio de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+			
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-transparent-ffffff' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-transparent-ffffff', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":842,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

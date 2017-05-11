@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-jumbo-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-jumbo-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-jumbo-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-jumbo-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004641945"/>
+<meta name="hdl" content="Lo que Nueva York puede aprender de Barcelona" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20161004" />
+<meta name="utime" content="20161004090438" />
+<meta name="ptime" content="20161004090438" />
+<meta name="DISPLAYDATE" content="Oct. 4, 2016" />
+<meta name="dat" content="Oct. 4, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="lo-que-nueva-york-puede-aprender-de-barcelona" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/10/04/lo-que-nueva-york-puede-aprender-de-barcelona/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Lo que Nueva York puede aprender de Barcelona" />
+<meta property="og:description" content="La ciudad española de nuevo está a la vanguardia en el urbanismo y desde septiembre se inició el sistema de supermanzanas con el que se limita el tránsito, se reduce la contaminación y se hace un mejor uso del espacio público." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/09/20/nyregion/20SUPERBLOCKS3/20SUPERBLOCKS3-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-10-04" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/10/04/lo-que-nueva-york-puede-aprender-de-barcelona/" />
+<meta property="twitter:title" content="Lo que Nueva York puede aprender de Barcelona" />
+<meta property="twitter:description" content="La ciudad española de nuevo está a la vanguardia en el urbanismo y desde septiembre se inició el sistema de supermanzanas con el que se limita el tránsito, se reduce la contaminación y se hace un mejor uso del espacio público." />
+<meta name="author" content="Winnie Hu" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Winnie Hu" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="arquitectura" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="arquitectura" />
+<meta name="id" content="100000004641945"/>
+<meta name="wordCount" content="2336"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/10/04/lo-que-nueva-york-puede-aprender-de-barcelona/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=10&amp;day=04&amp;name=lo-que-nueva-york-puede-aprender-de-barcelona">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=27043">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/10\/04\/lo-que-nueva-york-puede-aprender-de-barcelona\/"},"headline":"Lo que Nueva York puede aprender de Barcelona","datePublished":"2016-10-04T09:04:38+00:00","dateModified":"2016-10-04T09:44:04+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/09\/20\/nyregion\/20SUPERBLOCKS3\/20SUPERBLOCKS3-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"La ciudad espa\u00f1ola de nuevo est\u00e1 a la vanguardia en el urbanismo y desde septiembre se inici\u00f3 el sistema de supermanzanas con el que se limita el tr\u00e1nsito, se reduce la contaminaci\u00f3n y se hace un mejor uso del espacio p\u00fablico."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/10/04/lo-que-nueva-york-puede-aprender-de-barcelona/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/10/02/nyregion/what-new-york-can-learn-from-barcelonas-superblocks.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/arquitectura" />
+<title>Lo que Nueva York puede aprender de Barcelona &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/10/02/nyregion/what-new-york-can-learn-from-barcelonas-superblocks.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/10/04/lo-que-nueva-york-puede-aprender-de-barcelona/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-27043 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Lo que Nueva York puede aprender de Barcelona
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/10/04/lo-que-nueva-york-puede-aprender-de-barcelona/"
+					data-title="Noticias: Lo que Nueva York puede aprender de Barcelona"
+					data-author="POR WINNIE HU"
+					data-media=""
+					data-description="La ciudad española de nuevo está a la vanguardia en el urbanismo y desde septiembre se inició el sistema de supermanzanas con el que se limita el tránsito, se reduce la contaminación y se hace un mejor uso del espacio público."
+					data-publish-date="4 de octubre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2d0drOc">http://nyti.ms/2d0drOc</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/arquitectura/">Arquitectura</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Lo que Nueva York puede aprender de Barcelona</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Winnie Hu</span>
+</span>
+
+					<time class="dateline" datetime="2016-10-04">4 de octubre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/10/04/lo-que-nueva-york-puede-aprender-de-barcelona/"
+							data-title="Noticias: Lo que Nueva York puede aprender de Barcelona"
+							data-author="POR WINNIE HU"
+							data-media=""
+							data-description="La ciudad española de nuevo está a la vanguardia en el urbanismo y desde septiembre se inició el sistema de supermanzanas con el que se limita el tránsito, se reduce la contaminación y se hace un mejor uso del espacio público."
+							data-publish-date="4 de octubre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004657249" class="media photo lede layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/20/nyregion/20SUPERBLOCKS3/20SUPERBLOCKS3-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/20/nyregion/20SUPERBLOCKS3/20SUPERBLOCKS3-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/20/nyregion/20SUPERBLOCKS3/20SUPERBLOCKS3-superJumbo.jpg" data-mediaviewer-caption="Streets in the El Born neighborhood of Barcelona used to be open to vehicles now mostly serve pedestrians." data-mediaviewer-credit="Daniel Etter for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/20/nyregion/20SUPERBLOCKS3/20SUPERBLOCKS3-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Streets in the El Born neighborhood of Barcelona used to be open to vehicles now mostly serve pedestrians.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Daniel Etter for The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/10/02/nyregion/what-new-york-can-learn-from-barcelonas-superblocks.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="146" data-total-count="146" id="story-continues-2" tabindex="-1">BARCELONA — Imagina que las calles fueran para pasear y los cruces para jugar, y que los autos casi nunca tuvieran permitido circular por ellas. </p>
+<p class="story-body-text story-content" data-para-count="527" data-total-count="673" id="story-continues-3" tabindex="-1">Aunque suena como el sueño de los peatones y la pesadilla de los conductores, se está volviendo una realidad en la segunda ciudad más grande de España, una metrópolis densamente poblada con 1,6 millones de habitantes en el Mediterráneo. Desde que los Juegos Olímpicos de 1992 hicieron que la atención del mundo convergiera en la ciudad, este próspero centro de turismo, cultura y negocios —más moderno y libre que Madrid— ha visto cómo se eleva su popularidad en paralelo a la congestión de sus calles y aceras. </p>
+<p class="story-body-text story-content" data-para-count="294" data-total-count="967" id="story-continues-4" tabindex="-1">Así que mediante una iniciativa que ha atraído la atención internacional y representa una remodelación transformadora de su paisaje urbano, Barcelona ha decidido que muchas de sus calles y cruces atascados de autos, casi no los tendrán. En vez de eso, se convertirán en calles peatonales.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="330" data-total-count="1297" id="story-continues-5" tabindex="-1">A partir de septiembre, las autoridades de la ciudad comenzaron a crear el sistema de las <a href="http://www.bcnecologia.net/es/modelo-conceptual/supermanzana" target="_blank">supermanzanas</a> en toda la ciudad, que limitarán ampliamente los autos para reducir el tráfico y la contaminación del aire, utilizarán el espacio público de manera más efectiva y básicamente harán que los barrios sean más agradables.</p>
+<p class="story-body-text story-content" data-para-count="240" data-total-count="1537" id="story-continues-6" tabindex="-1">“Nos gusta decir que se trata de ‘recuperar las calles para la gente’”, dijo Janet Sanz Cid, alcaldesa adjunta de la ciudad. “La gente de Barcelona quiere utilizar las calles, pero no puede hacerlo porque los coches las ocupan”.</p>
+<figure id="media-100000004677836" class="media photo media-100000004677836 embedded layout-large-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/10/02/nyregion/02jpSUPERBLOCKS2sub/02jpSUPERBLOCKS2sub-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-8">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/10/02/nyregion/02jpSUPERBLOCKS2sub/02jpSUPERBLOCKS2sub-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/10/02/nyregion/02jpSUPERBLOCKS2sub/02jpSUPERBLOCKS2sub-superJumbo.jpg" data-mediaviewer-caption="An intersection in El Poblenou, a section of Barcelona, that was transformed into a playground with a soccer field and sandbox." data-mediaviewer-credit="Confederaci&amp;oacute;n de Talleres de Proyectos de Arquitectura (Confederation of Workshops of Architecture Projects)"  itemprop="url" itemid="https://static01.nyt.com/images/2016/10/02/nyregion/02jpSUPERBLOCKS2sub/02jpSUPERBLOCKS2sub-master675.jpg"/>
+		<meta itemprop="height" content="373" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">An intersection in El Poblenou, a section of Barcelona, that was transformed into a playground with a soccer field and sandbox.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Confederaci&amp;oacute;n de Talleres de Proyectos de Arquitectura (Confederation of Workshops of Architecture Projects)
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="398" data-total-count="1935" id="story-continues-8" tabindex="-1">Según el proyecto, las supermanzanas se sobrepondrán en la traza urbana actual; cada uno se compondrá de hasta nueve manzanas contiguas. Dentro de cada supermanzana, las calles e intersecciones estarán en su mayor parte cerradas al tránsito y se utilizarán como espacios comunes: plazas, áreas de juego y jardines. Sanz dijo que se espera diseñar por lo menos cinco supermanzanas para 2018.</p>
+<p class="story-body-text story-content" data-para-count="379" data-total-count="2314" id="story-continues-9" tabindex="-1">El sistema de supermanzanas de Barcelona —llamado <em>superilles</em> en catalán— iría más allá de las plazas peatonales que han surgido en las calles de Nueva York. Mientras que esos lugares le han dado más espacio a los peatones en tramos concurridos, las supermanzanas representan un acercamiento más radical. Desafía la noción de que las calles les pertenecen a los autos.</p>
+<p class="story-body-text story-content" data-para-count="309" data-total-count="2623" id="story-continues-10" tabindex="-1">La estrategia ha puesto a Barcelona, una ciudad conocida por su equipo de fútbol y la arquitectura Gaudí, en la vanguardia de los experimentos de transporte urbano y ha atraído el interés de funcionarios de transporte, planeadores urbanos y defensores en muchas otras ciudades paralizadas por el tráfico. </p>
+<p class="story-body-text story-content" data-para-count="505" data-total-count="3128" id="story-continues-11" tabindex="-1">Claire Weisz, una diseñadora urbana de WXY, el despacho de Manhattan que rediseñó las calles que rodean el Astor Place, dijo que el proyecto de supermanzanas de Barcelona podría aplicarse en Nueva York para redefinir las calles como espacios públicos. “La gran mayoría de la gente que vive en nuestros vecindarios no tiene autos”, dijo Weisz. “Sin embargo, son principalmente utilizadas por autos, y tenemos una enorme necesidad de lugares seguros para caminar y transportarse en bicicleta”.</p>
+<p class="story-body-text story-content" data-para-count="315" data-total-count="3443" id="story-continues-12" tabindex="-1">El proyecto de Barcelona redirigirá los autos y vehículos comerciales a calles a lo largo del perímetro de cada supermanzana, aunque los habitantes de la ciudad aún podrán conducir sus autos a velocidades limitadas y estacionarse en áreas designadas. Se permitirán entregas en horarios con menos congestión.</p>
+<p class="story-body-text story-content" data-para-count="290" data-total-count="3733" id="story-continues-13" tabindex="-1">Sin embargo, como lo han reconocido funcionarios de Barcelona, introducir las manzanas no será tan sencillo como simplemente cambiar las reglas. Para que se acepte de manera generalizada, el proyecto requerirá un cambio cultural en la manera en que las personas ven y utilizan las calles.</p>
+<p class="story-body-text story-content" data-para-count="620" data-total-count="4353" id="story-continues-14" tabindex="-1">La primera de las nuevas supermanzanas fue recibida con reacciones encontradas cuando se develó hace poco en El Poblenou, una antigua zona industrial que se ha desarrollado con viviendas de bajos ingresos y oficinas para empresas tecnológicas. Aunque muchos de sus habitantes se dan cuenta de los beneficios de la supermanzana, algunos se quejan de que no les dieron suficiente tiempo o una explicación antes de que se pusiera en marcha. Los negocios también han expresado su preocupación acerca de que pudiera interferir con su trabajo, entre otras cosas, al restringir cuándo pueden cargar y descargar productos.</p>
+<p class="story-body-text story-content" data-para-count="299" data-total-count="4652" id="story-continues-15" tabindex="-1">Para inaugurar la supermanzana, profesores de arquitectura y estudiantes han trabajado con asociaciones de vecinos y negocios para proponer usos alternativos del espacio público. Con llantas y materiales reciclados, un cruce se transformó en un área de juego con un campo de fútbol y un arenero.</p>
+<figure id="media-100000004680440" class="media photo media-100000004680440 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/10/02/nyregion/02SUPERBLOCKSweb/02SUPERBLOCKSweb-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-17">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/10/02/nyregion/02SUPERBLOCKSweb/02SUPERBLOCKSweb-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/10/02/nyregion/02SUPERBLOCKSweb/02SUPERBLOCKSweb-superJumbo.jpg" data-mediaviewer-caption="The plan for a superblock in the El Poblenou district." data-mediaviewer-credit="Daniel Etter for The New York Times/Asier Eguilaz"  itemprop="url" itemid="https://static01.nyt.com/images/2016/10/02/nyregion/02SUPERBLOCKSweb/02SUPERBLOCKSweb-master675.jpg"/>
+		<meta itemprop="height" content="448" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The plan for a superblock in the El Poblenou district.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Daniel Etter for The New York Times/Asier Eguilaz
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="258" data-total-count="4910" id="story-continues-17" tabindex="-1">Marta Louro, de 40 años, una profesora que vive al lado de un cruce, dijo que la supermanzana haría más seguras las calles y reduciría la contaminación. “Le da prioridad al peatón”, dijo. “Creo que es muy importante que la gente tenga espacio”.</p>
+<p class="story-body-text story-content" data-para-count="359" data-total-count="5269" id="story-continues-18" tabindex="-1">Sin embargo, otros han expresado su preocupación porque tendrán que caminar más para llegar a la parada de autobús, o será más difícil utilizar sus coches y encontrar espacios de aparcamiento. “No es una mala idea”, dijo Oriol Sánchez, de 25 años, un camarero que conduce para llegar al trabajo. “Pero en mi caso es un problema para mi auto”.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="233" data-total-count="5502" id="story-continues-19" tabindex="-1">Visitación Soria, de 78 años, dijo que no todos aceptarían la supermanzana. “A las personas les gustan sus coches”, dijo. “La gente ya está diciendo que tienen problemas para encontrar aparcamiento, y esto lo empeorará”.</p>
+<p class="story-body-text story-content" data-para-count="526" data-total-count="6028" id="story-continues-20" tabindex="-1">Sin importar los méritos, el debate acerca de cómo debería lucir un paisaje urbano moderno, cómo debería funcionar y a quién debería servir se ha hecho cada vez más clamoroso en todo el mundo. En Nueva York, cuya población se encuentra en un récord máximo de 8,5 millones de residentes, los conflictos entre peatones, ciclistas y motociclistas han puesto el foco en los tramos concurridos. Los funcionarios de transporte han tomado medidas recientemente para expandir el sobrecargado paseo en el Puente de Brooklyn.</p>
+<figure id="media-100000004677544" class="media photo media-100000004677544 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/10/02/nyregion/02SUPERBLOCKS2/02SUPERBLOCKS2-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-22">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/10/02/nyregion/02SUPERBLOCKS2/02SUPERBLOCKS2-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/10/02/nyregion/02SUPERBLOCKS2/02SUPERBLOCKS2-superJumbo-v2.jpg" data-mediaviewer-caption="New York City tried a one-day &amp;ldquo;Shared Streets&amp;rdquo; experiment in August that promoted recreational use of a 60-block swath of Lower Manhattan." data-mediaviewer-credit="George Etheredge/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/10/02/nyregion/02SUPERBLOCKS2/02SUPERBLOCKS2-master675-v2.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">New York City tried a one-day &amp;ldquo;Shared Streets&amp;rdquo; experiment in August that promoted recreational use of a 60-block swath of Lower Manhattan.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			George Etheredge/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="450" data-total-count="6478" id="story-continues-22" tabindex="-1">Polly Trottenberg, el comisionado de transporte de la ciudad, dijo que se había peatonalizado el 53 por ciento de las plazas en Times Square y otras partes de la ciudad, desde 2007, y que otras 20 plazas estaban en construcción. En total, estas plazas conformarán 11 hectáreas, aproximadamente el equivalente a 20 campos de fútbol, dijo Trottenberg. “Lo que les hemos quitado a los coches no es una cantidad insignificante de espacio”, dijo.</p>
+<p class="story-body-text story-content" data-para-count="507" data-total-count="6985" id="story-continues-23" tabindex="-1">Trottenberg dijo que estaba familiarizado con el proyecto de supermanzanas en Barcelona y consideraría aplicar el concepto en Nueva York aunque no el nombre. En los círculos de planeación urbana, el término “supermanzana” se ha utilizado para referirse a los enormes proyectos de vivienda pública en ciudades estadounidenses. “Efectivamente, estamos formalizando cosas que se acercan a ese concepto”, dijo. “Hay muchos modelos distintos, y no hay uno que sea adecuado para todos los casos”.</p>
+<p class="story-body-text story-content" data-para-count="558" data-total-count="7543" id="story-continues-24" tabindex="-1">La ciudad hizo una prueba de “Calles compartidas” durante un día en agosto y promovió el uso recreacional de un área de 60 manzanas en el Bajo Manhattan. El límite de velocidad se redujo a 8 kilómetros por hora, y se animó a las personas a que tomaran las calles junto con los coches. El propósito del programa era convertirse en otra iniciativa, “Summer Streets” (Calles veraniegas), en la que no se permitió el paso de vehículos en una sección del sur de Park Avenue, la calle 72 y toda la calle Lafayette durante tres sábados de agosto.</p>
+<p class="story-body-text story-content" data-para-count="311" data-total-count="7854" id="story-continues-25" tabindex="-1">Cientos de personas participaron, aunque no todas congeniaron. Los peatones dijeron que la velocidad reducida no se hacía cumplir de manera estricta, mientras que los conductores se quejaron de que no les daban suficientes advertencias y se la pasaron tocando el claxon a las personas que estaban en su camino.</p>
+<figure id="media-100000004677602" class="media photo media-100000004677602 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/10/02/nyregion/02jpSPERBLOCKS6/02jpSPERBLOCKS6-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-27">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/10/02/nyregion/02jpSPERBLOCKS6/02jpSPERBLOCKS6-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/10/02/nyregion/02jpSPERBLOCKS6/02jpSPERBLOCKS6-superJumbo.jpg" data-mediaviewer-caption="Janet Sanz Cid, a deputy mayor of Barcelona, described the superblocks program as &amp;ldquo;winning back the streets for the people.&amp;rdquo;" data-mediaviewer-credit="Daniel Etter for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/10/02/nyregion/02jpSPERBLOCKS6/02jpSPERBLOCKS6-master315.jpg"/>
+		<meta itemprop="height" content="358" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Janet Sanz Cid, a deputy mayor of Barcelona, described the superblocks program as &amp;ldquo;winning back the streets for the people.&amp;rdquo;</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Daniel Etter for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="266" data-total-count="8120" id="story-continues-27" tabindex="-1">Aun así, Paul Steely White, el director ejecutivo de la organización sin fines de lucro Transportation Alternatives, dijo: “Le da a la gente una probada de cómo podrían ser sus vidas si ese espacio se reasignara a la gente en vez de solo a los automóviles”.</p>
+<p class="story-body-text story-content" data-para-count="357" data-total-count="8477" id="story-continues-28" tabindex="-1">En semanas recientes, la organización le ha pedido a la ciudad que reconfigure la Calle 14 en Manhattan como una “vía de la gente” para acomodar a más peatones y ciclistas cuando una sección del metro L se cierre por reparaciones. La propuesta limitaría el tránsito vehicular, añadiría carriles de autobuses y bicicletas y ampliaría las aceras. </p>
+<p class="story-body-text story-content" data-para-count="233" data-total-count="8710" id="story-continues-29" tabindex="-1">Trottenberg dijo que se trataba de una “idea interesante”, y señaló que la ciudad está trabajando con la Autoridad de Transporte Metropolitano, que opera los autobuses y líneas de metro de la ciudad, para considerar opciones.</p>
+<p class="story-body-text story-content" data-para-count="331" data-total-count="9041" id="story-continues-30" tabindex="-1">En Barcelona, la supermanzana no es una idea nueva. El primero se introdujo en 1993 cerca de una iglesia histórica, la Basílica de Santa María del Mar, en el Born, en el centro de la ciudad. Dos supermanzanas más se presentaron en 2005 en Gràcia, un vecindario al norte de la ciudad conocido por sus plazas y calles estrechas.</p>
+<p class="story-body-text story-content" data-para-count="566" data-total-count="9607" id="story-continues-31" tabindex="-1">Sin embargo, los superbloques no se convirtieron en prioridad hasta que Ada Colau, una activista por el derecho a la vivienda, fue elegida alcaldesa el año pasado. Sanz Cid, la alcaldesa adjunta, dijo que en vez de concentrarse en los grandes desarrollos comerciales que tenían prioridad bajo las otras políticas de planeamiento urbano, la administración actual estaba interesada en “intervenciones precisas, concretas” para beneficiar directamente a los residentes locales. “Queremos reconsiderar los vecindarios y repensar la planeación urbana”, dijo.</p>
+<p class="story-body-text story-content" data-para-count="343" data-total-count="9950" id="story-continues-32" tabindex="-1">Las supermanzanas son parte de un programa integral para mejorar las redes de transporte de la ciudad y reducir el impacto ambiental, dijo Sanz Cid. El programa, llamado <a href="http://www.bcnecologia.net/es/proyectos/plan-de-movilidad-urbana-sostenible-de-barcelona-2013-2018" target="_blank">Plan de Movilidad Sostenible Urbana</a>, incluye aumentar el servicio de autobuses, extender las líneas de tren a los suburbios y triplicar el número de carriles de ciclistas.</p>
+<p class="story-body-text story-content" data-para-count="446" data-total-count="10396" id="story-continues-33" tabindex="-1">Josep Mateu, presidente del Real Automóvil Club de Cataluña, que tiene cerca de un millón de miembros, ha pedido más debate en torno al proyecto de supermanzanas. Lo describió como un plan bien intencionado y dijo que la decisión de la ciudad de probarlo en El Poblenou era bienvenida; se trata de un área con menos tráfico en Barcelona. Sin embargo, añadió: “no podemos olvidar que el proyecto tiene otros efectos menos positivos”.</p>
+<figure id="media-100000004677841" class="media photo media-100000004677841 embedded layout-large-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/10/02/nyregion/02jpSUPERBLOCK1sub/02jpSUPERBLOCK1sub-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-35">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/10/02/nyregion/02jpSUPERBLOCK1sub/02jpSUPERBLOCK1sub-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/10/02/nyregion/02jpSUPERBLOCK1sub/02jpSUPERBLOCK1sub-superJumbo.jpg" data-mediaviewer-caption="Pedestrians stroll through the neighborhood of El Born." data-mediaviewer-credit="Daniel Etter for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/10/02/nyregion/02jpSUPERBLOCK1sub/02jpSUPERBLOCK1sub-master675.jpg"/>
+		<meta itemprop="height" content="421" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Pedestrians stroll through the neighborhood of El Born.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Daniel Etter for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="523" data-total-count="10919" id="story-continues-35" tabindex="-1">Mateu dijo que si se aplicaban los super en toda la ciudad, se limitaría significativamente la capacidad de circular para los vehículos sin reducir el número actual de autos al mismo nivel. “Habría un aumento considerable de congestión, lo cual genera más contaminación”, dijo. “Es verdad que hay áreas que perderán tránsito vehicular, pero también es cierto que este tránsito terminará por trasladarse a otras rutas y distritos, lo cual provocará una fuerte división entre ganar calles y perderlas”.</p>
+<p class="story-body-text story-content" data-para-count="457" data-total-count="11376" id="story-continues-36" tabindex="-1">También señaló las dificultades que algunos residentes podrían tener para obtener acceso al transporte público, la pérdida de espacios de estacionamiento que podría crear el programa y los efectos negativos que podría tener en los negocios. “También deberíamos tomar en cuenta que el proyecto de superbloques no parece ser una prioridad” para los residentes de Barcelona, dijo, y sugirió que problemas como el desempleo eran más importantes.</p>
+<p class="story-body-text story-content" data-para-count="541" data-total-count="11917" id="story-continues-37" tabindex="-1">Salvador Rueda, el director de la <a href="http://www.bcnecologia.net/en" target="_blank">Agencia Urbana de Ecología</a>, que diseñó el modelo de supermanzanas, dijo que la lección que se aprendió con proyectos anteriores de supermanzanas era que la oposición inicial daba lugar a la aceptación, en parte debido a un consenso creciente en torno a los beneficios. Nadie ha interpuesto una demanda para que una ciudad elimine una supermanzana, dijo Rueda. “Ahora sabemos que el problema principal es la resistencia al cambio que ocurre al comienzo de la implementación de las supermanzanas”.</p>
+<p class="story-body-text story-content" data-para-count="475" data-total-count="12392" id="story-continues-38" tabindex="-1">En Gràcia, donde más de dos tercios de las calles se convirtieron en espacios públicos, el tránsito vehicular se ha reducido de 95.889 a 81.514 viajes anualmente después de que se establecieron las supermanzanas. La vida urbana está prosperando: los peatones ahora hacen 201.843 viajes anualmente a través de Gràcia, un aumento del 10 por ciento desde que se implementaron las supermanzanas. Los ciclistas hacen 10.143 viajes anualmente, un aumento del 30 por ciento.</p>
+<figure id="media-100000004682518" class="media photo media-100000004682518 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/21/universal/es/00calatino6-copyES/00calatino6-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-40">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/21/universal/es/00calatino6-copyES/00calatino6-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/21/universal/es/00calatino6-copyES/00calatino6-superJumbo.jpg" data-mediaviewer-caption="Ray Franco gets a haircut from Kevin Leija at American Barber Shop on Calle Cuatro in downtown Santa Ana, Calif." data-mediaviewer-credit="Andrew Cullen for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/21/universal/es/00calatino6-copyES/00calatino6-master675.jpg"/>
+		<meta itemprop="height" content="449" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Ray Franco gets a haircut from Kevin Leija at American Barber Shop on Calle Cuatro in downtown Santa Ana, Calif.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrew Cullen for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="326" data-total-count="12718" id="story-continues-40" tabindex="-1">La transformación ha sido aun más significativa en el Born, que en los noventa se había vuelto tan precario que muchas personas lo evitaban. “Era muy difícil caminar ahí porque solían estacionar los coches sobre las aceras”, recordó Isabel Ruiz, de 53 años, quien desde hace mucho tiempo ha sido vecina del barrio.</p>
+<p class="story-body-text story-content" data-para-count="353" data-total-count="13071" id="story-continues-41" tabindex="-1">Hace poco, Jaime Battle e Iñaki Baquero, profesores de arquitectura en la Universidad Internacional de Cataluña, caminaron a lo largo de las calles empedradas del Born señalando los cambios que el superbloque había producido. Había palmeras y bancos en medio de las calles. En vez de camiones, un sistema neumático subterráneo recogía la basura.</p>
+<p class="story-body-text story-content" data-para-count="440" data-total-count="13511" id="story-continues-42" tabindex="-1">No había bordillos ni aceras, solo un carril que Battle llamó una “plataforma común” para conductores y peatones para que nadie se sintiera con más derechos de utilizarla. El carril también obligó a los conductores, cuando se les permitía usar las calles, a que manejaran con cuidado. Donde los escaparates antes estaban vacíos, ahora los clientes entraban y salían de restaurantes, vinaterías, salones de belleza y boutiques.</p>
+<p class="story-body-text story-content" data-para-count="181" data-total-count="13692" id="story-continues-43" tabindex="-1">“Solía estar lleno de autos y ahora ya no lo está”, dijo Batlle. “Imagina que eso suceda con el resto de la ciudad. Ese es el tipo de ciudad que queremos en todas partes”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Isaac Sastre Boquet contribuyó al reportaje.</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/barcelona/" rel="tag">Barcelona</a>, <a href="https://www.nytimes.com/es/tag/gobierno-municipal/" rel="tag">gobierno municipal</a>, <a href="https://www.nytimes.com/es/tag/supermanzanas/" rel="tag">supermanzanas</a>, <a href="https://www.nytimes.com/es/tag/urbanismo/" rel="tag">urbanismo</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/10/04/lo-que-nueva-york-puede-aprender-de-barcelona/"
+				data-title="Noticias: Lo que Nueva York puede aprender de Barcelona"
+				data-author="POR WINNIE HU"
+				data-media=""
+				data-description="La ciudad española de nuevo está a la vanguardia en el urbanismo y desde septiembre se inició el sistema de supermanzanas con el que se limita el tránsito, se reduce la contaminación y se hace un mejor uso del espacio público."
+				data-publish-date="4 de octubre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/06/24/las-elecciones-del-domingo-en-espana-pondran-fin-al-bipartidismo/">
+					<div class="story-body">
+						<h3 class="kicker">Europa</h3>
+
+						<h2 class="headline">
+							<span class="title">Cualquiera que sea el resultado, las elecciones en España sacudirán el sistema bipartidista</span>
+							<time class="dateline">24 de junio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/06/24/world/24spain-web1/24spain-web1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/13/los-catalanes-protestan-por-la-perdida-de-su-identidad-en-francia/">
+					<div class="story-body">
+						<h3 class="kicker">Europa</h3>
+
+						<h2 class="headline">
+							<span class="title">Los catalanes protestan por la pérdida de su identidad en Francia</span>
+							<time class="dateline">13 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/09/09/world/09Perpignan-web1/09Perpignan-web1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/06/29/el-reves-a-podemos-en-espana/">
+					<div class="story-body">
+						<h3 class="kicker">Europa</h3>
+
+						<h2 class="headline">
+							<span class="title">El revés a Podemos en España</span>
+							<time class="dateline">29 de junio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/06/30/universal/es/podemosES/podemosES-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/20/las-politicas-de-transporte-marchan-en-retroceso-en-ciudad-de-mexico/">
+					<div class="story-body">
+						<h3 class="kicker">Comentario</h3>
+
+						<h2 class="headline">
+							<span class="title">En Ciudad de México, ¿de quién es la calle?</span>
+							<time class="dateline">20 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/09/20/universal/es/20MartinezES/20MartinezES-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":1013,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

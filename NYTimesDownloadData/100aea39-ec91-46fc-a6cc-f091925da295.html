@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004530460"/>
+<meta name="hdl" content="El muro de Trump no detendrá a los narcotraficantes ni a los migrantes, dicen los rancheros" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20160728" />
+<meta name="utime" content="20160728205826" />
+<meta name="ptime" content="20160728205826" />
+<meta name="DISPLAYDATE" content="Jul. 28, 2016" />
+<meta name="dat" content="Jul. 28, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="el-muro-de-trump-no-detendra-a-los-narcotraficantes-ni-a-los-migrantes-dicen-los-rancheros" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/07/28/el-muro-de-trump-no-detendra-a-los-narcotraficantes-ni-a-los-migrantes-dicen-los-rancheros/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="El muro de Trump no detendrá a los narcotraficantes ni a los migrantes, dicen los rancheros" />
+<meta property="og:description" content="Los rancheros estadounidenses que viven cerca de la frontera mexicana suelen ver narcotraficantes y a veces encuentran cuerpos en sus propiedades, pero dicen que la solución propuesta por Donald Trump es &quot;absurda&quot; y &quot;estúpida&quot;." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/07/18/us/thislandwalltestimage/thislandwalltestimage-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-07-28" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/07/28/el-muro-de-trump-no-detendra-a-los-narcotraficantes-ni-a-los-migrantes-dicen-los-rancheros/" />
+<meta property="twitter:title" content="El muro de Trump no detendrá a los narcotraficantes ni a los migrantes, dicen los rancheros" />
+<meta property="twitter:description" content="Los rancheros estadounidenses que viven cerca de la frontera mexicana suelen ver narcotraficantes y a veces encuentran cuerpos en sus propiedades, pero dicen que la solución propuesta por Donald Trump es &quot;absurda&quot; y &quot;estúpida&quot;." />
+<meta name="author" content="Dan Barry" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Dan Barry" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="elecciones-ee-uu" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="elecciones-ee-uu" />
+<meta name="id" content="100000004530460"/>
+<meta name="wordCount" content="1918"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/07/28/el-muro-de-trump-no-detendra-a-los-narcotraficantes-ni-a-los-migrantes-dicen-los-rancheros/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=07&amp;day=28&amp;name=el-muro-de-trump-no-detendra-a-los-narcotraficantes-ni-a-los-migrantes-dicen-los-rancheros">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=20097">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/07\/28\/el-muro-de-trump-no-detendra-a-los-narcotraficantes-ni-a-los-migrantes-dicen-los-rancheros\/"},"headline":"El muro de Trump no detendr\u00e1 a los narcotraficantes ni a los migrantes, dicen los rancheros","datePublished":"2016-07-28T20:58:26+00:00","dateModified":"2017-01-11T16:13:24+00:00","author":{"@type":"Person","name":"Budasoff"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/07\/18\/us\/thislandwalltestimage\/thislandwalltestimage-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Los rancheros estadounidenses que viven cerca de la frontera mexicana suelen ver narcotraficantes y a veces encuentran cuerpos en sus propiedades, pero dicen que la soluci\u00f3n propuesta por Donald Trump es \"absurda\" y \"est\u00fapida\"."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/07/28/el-muro-de-trump-no-detendra-a-los-narcotraficantes-ni-a-los-migrantes-dicen-los-rancheros/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/07/24/us/donald-trump-wall-immigration-ranchers.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/eleccioneseeuu" />
+<title>El muro de Trump no detendrá a los narcotraficantes ni a los migrantes, dicen los rancheros &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/07/24/us/donald-trump-wall-immigration-ranchers.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/07/28/el-muro-de-trump-no-detendra-a-los-narcotraficantes-ni-a-los-migrantes-dicen-los-rancheros/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-20097 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				El muro de Trump no detendrá a los narcotraficantes ni a los migrantes, dicen los rancheros
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/07/28/el-muro-de-trump-no-detendra-a-los-narcotraficantes-ni-a-los-migrantes-dicen-los-rancheros/"
+					data-title="Noticias: El muro de Trump no detendrá a los narcotraficantes ni a los migrantes, dicen los rancheros"
+					data-author="POR DAN BARRY"
+					data-media=""
+					data-description="Los rancheros estadounidenses que viven cerca de la frontera mexicana suelen ver narcotraficantes y a veces encuentran cuerpos en sus propiedades, pero dicen que la solución propuesta por Donald Trump es &quot;absurda&quot; y &quot;estúpida&quot;."
+					data-publish-date="28 de julio de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2ayK84P">http://nyti.ms/2ayK84P</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/collection/elecciones-ee-uu/">Elecciones EE. UU.</a></span>
+			
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">El muro de Trump no detendrá a los narcotraficantes ni a los migrantes, dicen los rancheros</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Dan Barry</span>
+</span>
+
+					<time class="dateline" datetime="2016-07-28">28 de julio de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/07/28/el-muro-de-trump-no-detendra-a-los-narcotraficantes-ni-a-los-migrantes-dicen-los-rancheros/"
+							data-title="Noticias: El muro de Trump no detendrá a los narcotraficantes ni a los migrantes, dicen los rancheros"
+							data-author="POR DAN BARRY"
+							data-media=""
+							data-description="Los rancheros estadounidenses que viven cerca de la frontera mexicana suelen ver narcotraficantes y a veces encuentran cuerpos en sus propiedades, pero dicen que la solución propuesta por Donald Trump es &quot;absurda&quot; y &quot;estúpida&quot;."
+							data-publish-date="28 de julio de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004537352" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/07/18/us/thislandwalltestimage/thislandwalltestimage-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/07/18/us/thislandwalltestimage/thislandwalltestimage-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/07/18/us/thislandwalltestimage/thislandwalltestimage-superJumbo.gif" data-mediaviewer-caption="The fencing along the border with Mexico, some of which runs along John Ladd’s property in Naco, Ariz. Still, smugglers and migrants regularly cross his land." data-mediaviewer-credit="Todd Heisler/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/07/18/us/thislandwalltestimage/thislandwalltestimage-master1050.jpg"/>
+		<meta itemprop="height" content="691" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The fencing along the border with Mexico, some of which runs along John Ladd’s property in Naco, Ariz. Still, smugglers and migrants regularly cross his land.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Todd Heisler/The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/07/24/us/donald-trump-wall-immigration-ranchers.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="457" data-total-count="457" id="story-continues-2" tabindex="-1">NACO, Arizona — John Ladd tiene dos camionetas viejas que usa para recorrer su rancho, que se extiende unos 16 kilómetros a lo largo de la frontera con México. Una de ellas es una Chevy roja donde hace poco llevó el cuerpo de un migrante que cruzaba la frontera y había muerto en su propiedad. La otra camioneta, una Dodge azul con mejores amortiguadores, es la que ahora va manejando al lado de un camino de tierra en un pueblo llamado Naco.</p>
+<p class="story-body-text story-content" data-para-count="324" data-total-count="781" id="story-continues-3" tabindex="-1">A su derecha el ganado deambula entre los árboles y el pasto del rancho familiar de seis mil hectáreas. A su izquierda, un conjunto combinado de fragmentos de vallas enganchadas: esta de tres metros de alto, esta otra de cinco, aquella es una malla de metal, la de acá una reja vertical, y así sección tras sección.</p>
+<p class="story-body-text story-content" data-para-count="431" data-total-count="1212" id="story-continues-4" tabindex="-1">Ladd, de 61 años, luce y actúa como se espera que lo haga un ranchero: tiene bigote ancho, es notablemente bizco y actúa sin rodeos, todo debajo de un sombrero vaquero teñido por el sudor. Ladd señala hacia el oeste para mostrar los lugares en los que el alambrado ha sido cortado en el pasado. En los últimos cuatro años, más de 50 vehículos han cruzado por los cortes en el alambrado a través de su propiedad, dice.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="204" data-total-count="1416" id="story-continues-5" tabindex="-1">¿Cuál es el protocolo cuando se encuentra a narcotraficantes armados que cruzan su propiedad? “Te estacionas y dices: ‘Adiós’”, respondió Ladd. “No te pones en su camino porque te matan”.</p>
+<p class="story-body-text story-content" data-para-count="213" data-total-count="1629" id="story-continues-6" tabindex="-1">Esto es parte del día a día a lo largo de la frontera sur, donde los límites nacionales son borrosos a causa de la oferta y la demanda de algo que Estados Unidos sigue deseando: drogas y mano de obra barata.</p>
+<p class="story-body-text story-content" data-para-count="584" data-total-count="2213" id="story-continues-7" tabindex="-1">Pero ¿será que la Gran Muralla de Trump, la propuesta del candidato republicano a la presidencia, es la solución a los problemas de rancheros como Ladd? Si esparcir polvo mágico sobre la tierra seca pudiera hacer desaparecer todos los obstáculos, empezando por los miles de millones de dólares que costaría, ¿podría cumplir su propósito esta muralla de concreto construida con la estética Trump (“hermosa”, con “una hermosa puerta enorme”) y con medidas que cambian todo el tiempo (¡7 metros de alto! ¡¡10 metros de alto!! ¡¡¡16 metros de alto!!!)?</p>
+<p class="story-body-text story-content" data-para-count="205" data-total-count="2418" id="story-continues-8" tabindex="-1">La respuesta que se escucha una y otra vez por parte de Ladd y otros rancheros de la frontera es un fatigoso no. “¿El muro?”, se pregunta Larry Dietrich, un ranchero local. “Bueno, es absurdo”.</p>
+<p class="story-body-text story-content" data-para-count="467" data-total-count="2885" id="story-continues-9" tabindex="-1">¿Y si esta hermosa muralla —y “muralla” es el término usado en la plataforma del Partido Republicano— tuviera unos cimientos los suficientemente profundos como para desalentar la excavación de túneles? ¿Y si los hermosos páneles de concreto estuvieran diseñados para impedir que los treparan o los atravesaran? ¿Y si se extendieran por cientos de kilómetros y su belleza se viera interrumpida solo por terreno accidentado, virtualmente infranqueable?</p>
+<p class="story-body-text story-content" data-para-count="38" data-total-count="2923" id="story-continues-10" tabindex="-1">“No va a funcionar”, asegura Ladd.</p>
+<p class="story-body-text story-content" data-para-count="268" data-total-count="3191" id="story-continues-11" tabindex="-1">Ed Ashurst, un hombre de 65 años que administra un terreno a unos 30 kilómetros de la frontera, es más categórico, pero necesita aclarar algo antes. “Seré directo contigo”, dijo con el ceño fruncido. “Si Hillary Clinton es elegida, me mudo a Australia”.</p>
+<p class="story-body-text story-content" data-para-count="293" data-total-count="3484" id="story-continues-12" tabindex="-1">El tiempo dirá si el ranchero de Arizona se verá forzado a mudarse a tierras australianas, pero su evaluación del plan de Trump es igual de contundente: “Decir que vas a construir un muro de Brownsville a San Diego es lo más estúpido que he escuchado, y no va a cambiar nada”, dijo.</p>
+<figure id="media-100000004547850" class="media photo media-100000004547850 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/07/24/us/24LAND8/24LAND8-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-14">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/07/24/us/24LAND8/24LAND8-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/07/24/us/24LAND8/24LAND8-superJumbo.jpg" data-mediaviewer-caption="Ed Ashurst, 65, a rancher who manages land about 20 miles from the border, pointing out an area in Texas he says is full of border-crossing activity." data-mediaviewer-credit="Todd Heisler/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/07/24/us/24LAND8/24LAND8-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Ed Ashurst, 65, a rancher who manages land about 20 miles from the border, pointing out an area in Texas he says is full of border-crossing activity.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Todd Heisler/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="217" data-total-count="3701" id="story-continues-14" tabindex="-1">La solución que prefieren los rancheros está determinada por el fatalismo y la creencia de que nada cambiará: los gobiernos son gobiernos y los carteles siempre van un paso adelante, entonces para qué molestarse.</p>
+<p class="story-body-text story-content" data-para-count="339" data-total-count="4040" id="story-continues-15" tabindex="-1">Pero aquí vamos: se necesitan patrullajes intensivos a lo largo de toda la frontera para que funcione cualquier alambrado o muro; de otro modo, quienes están decididos a cruzar siempre encontrarán la manera de hacerlo. No obstante, dicen los rancheros, si tienes tropas no necesitarás nada tan hermoso como la Gran Muralla de Trump.</p>
+<p class="story-body-text story-content" data-para-count="170" data-total-count="4210" id="story-continues-16" tabindex="-1">Desde lejos, es fácil ignorar a los rancheros de la frontera por ser alarmistas de derecha, cuyas quejas revelan pequeños indicios de racismo. Muy fácil, de hecho.</p>
+<p class="story-body-text story-content" data-para-count="376" data-total-count="4586" id="story-continues-17" tabindex="-1">Los rancheros dirán que vieron personas con mochilas caminando por su propiedad la semana pasada, anoche, esta mañana. Algunos afirmarán que se vieron obligados a sostener acuerdos de entrada con carteles de drogas, siempre y cuando los intrusos se mantengan alejados de sus casas. Los perros ladran, las luces con detectores de movimiento titilan, las cosas desaparecen.</p>
+<p class="story-body-text story-content" data-para-count="147" data-total-count="4733" id="story-continues-18" tabindex="-1">El desconcierto es parte de la vida diaria, dice Ashurst, y después nos pregunta a mi colega y a mí en dónde vivimos. Nueva York, respondemos.</p>
+<p class="story-body-text story-content" data-para-count="290" data-total-count="5023" id="story-continues-19" tabindex="-1">Muy bonito, afirma Ashurst, aún con el entrecejo fruncido. “Pero ¿te gustaría?”, pregunta refiriéndose al ir y venir de extraños, algunos armados, que pasan por su puerta. “¿Crees que eres más importante que un pobre hombre que tuvo la mala suerte de vivir en la frontera?”.</p>
+<figure id="media-100000004547854" class="media photo media-100000004547854 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/07/23/us/24LAND12/24LAND12-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-21">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/07/23/us/24LAND12/24LAND12-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/07/23/us/24LAND12/24LAND12-superJumbo.jpg" data-mediaviewer-caption="Mr. Ashurst has a brief assessment of Mr. Trump’s plan to secure the border. “To say you’re going to build a wall from Brownsville to San Diego?” he says. “That is the most idiotic thing I’ve ever heard. And it’s not going to change anything.”" data-mediaviewer-credit="Todd Heisler/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/07/23/us/24LAND12/24LAND12-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Mr. Ashurst has a brief assessment of Mr. Trump’s plan to secure the border. “To say you’re going to build a wall from Brownsville to San Diego?” he says. “That is the most idiotic thing I’ve ever heard. And it’s not going to change anything.”</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Todd Heisler/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="331" data-total-count="5354" id="story-continues-21" tabindex="-1">Lo cierto es que el número total de migrantes ha ido en picada los últimos 15 años, aproximadamente. Aquí, en lo que la Patrulla Fronteriza clasifica como el sector de Tucson, cerca de 23.000 kilómetros cuadrados con 420 kilómetros de frontera, hubo 63.397 arrestos en 2015, en contraste con una cifra 10 veces mayor en 2001.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="261" data-total-count="5615" id="story-continues-22" tabindex="-1">Paul Beeson, el jefe de la patrulla en el sector de Tucson, atribuye esta disminución a un aumento en el número de oficiales y de equipo táctico, una mejoría en la economía mexicana y a la valla que se levantó a lo largo de la frontera hace una década.</p>
+<p class="story-body-text story-content" data-para-count="125" data-total-count="5740" id="story-continues-23" tabindex="-1">Sin embargo, Ladd y otros rancheros aseguran que ha habido un cambio inquietante: menos migrantes pero más narcotraficantes.</p>
+<p class="story-body-text story-content" data-para-count="357" data-total-count="6097" id="story-continues-24" tabindex="-1">Beeson es consciente de este cambio y del desafío de enfrentar a un adversario con servicios de inteligencia similares y capacidad de vigilancia. “Ellos no necesitan trasladar su mercancía hoy”, dijo, refiriéndose a los carteles. “La pueden trasladar mañana. Se pueden sentar a observar y lo hacen. Nos vigilan. Nos observan observándolos”.</p>
+<p class="story-body-text story-content" data-para-count="346" data-total-count="6443" id="story-continues-25" tabindex="-1">Sin embargo, asegura que la Patrulla Fronteriza sigue fortaleciendo su “infraestructura táctica” con cámaras de alta resolución, por ejemplo, y el uso de drones. “Es inaceptable para nosotros que compañeros a lo largo de la frontera deban experimentar este tipo de actividad”, dijo Beeson. “Estamos haciendo todo lo que podemos”.</p>
+<figure id="media-100000004546679" class="media photo media-100000004546679 embedded layout-large-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/07/24/us/jp24LAND7/jp24LAND7-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-27">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/07/24/us/jp24LAND7/jp24LAND7-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/07/24/us/jp24LAND7/jp24LAND7-superJumbo.jpg" data-mediaviewer-caption="A Border Patrol surveillance tower on Mr. Ladd’s ranch. “It isn’t going to work,” he said of Mr. Trump’s plan." data-mediaviewer-credit="Todd Heisler/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/07/24/us/jp24LAND7/jp24LAND7-master675.jpg"/>
+		<meta itemprop="height" content="369" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A Border Patrol surveillance tower on Mr. Ladd’s ranch. “It isn’t going to work,” he said of Mr. Trump’s plan.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Todd Heisler/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="613" data-total-count="7056" id="story-continues-27" tabindex="-1">Aún así, resulta revelador que Ladd nunca acostumbraba a llevar una pistola o un teléfono celular. Esto cambió hace seis años cuando su amigo Robert Krentz Jr., conocido por ayudar a las personas sin importar su nacionalidad, fue asesinado a balazos en el rancho de su familia después de haber dicho por radio a su hermano que se había encontrado con otro migrante en apuros. Esta muerte sin resolver causó protestas a nivel nacional y motivó una legislación estatal que busca acabar con la inmigración ilegal. También provocó que la esposa de Ladd le pidiera que llevara un celular y una Glock.</p>
+<p class="story-body-text story-content" data-para-count="48" data-total-count="7104" id="story-continues-28" tabindex="-1">Pero, en serio, ¿de qué va a ayudar una Glock?</p>
+<p class="story-body-text story-content" data-para-count="367" data-total-count="7471" id="story-continues-29" tabindex="-1">A unos 1600 kilómetros al noreste de Naco, en un lugar de Nuevo México llamado Animas, se reunieron hace poco algunos habitantes para tomar té helado y hablar sobre la situación. Los Elbrock —Tricia y Ed— marcaron el tono de la conversación al narrar cómo unos narcotraficantes habían secuestrado a uno de sus ayudantes en el rancho hacía algunos meses.</p>
+<p class="story-body-text story-content" data-para-count="320" data-total-count="7791" id="story-continues-30" tabindex="-1">Según los Elbrock, los narcotraficantes amenazaron con matar a su familia, cargaron su camioneta con paquetes de marihuana y se llevaron al hombre junto con la droga por unos 120 kilómetros, al pueblo de Willcox, Arizona. Después lo amarraron y lo abandonaron, y lo mismo hicieron con la camioneta el día siguiente.</p>
+<p class="story-body-text story-content" data-para-count="174" data-total-count="7965" id="story-continues-31" tabindex="-1">Un portavoz del FBI en Alburquerque declaró que el secuestro seguía bajo investigación. En cuanto al ayudante, la señora Elbrock comentó que “está en tratamiento”.</p>
+<p class="story-body-text story-content" data-para-count="444" data-total-count="8409" id="story-continues-32" tabindex="-1">El miedo, la frustración y la sensación de haber sido abandonado pueden ser agotadores. “Nada parece funcionar, porque seguimos comprando lo que traen para vender”, dijo Crystal Foreman Brown, de 62 años, artista y anfitriona de la charla con té helado. “Pero el tema del muro de Trump al menos saca a flote que <em>hay</em> un problema; es inconcebible que las autoridades en Washington actúen como si fuéramos unos tontos histéricos”.</p>
+<p class="story-body-text story-content" data-para-count="378" data-total-count="8787" id="story-continues-33" tabindex="-1">De vuelta en Naco, Ladd continúa su viaje polvoriento entre México y su rancho, a lo largo de un camino de 18 metros llamado Roosevelt Easement. Su familia ha vivido en Naco durante más de un siglo: desde antes de que fuera Naco, de hecho. Algunos dicen que el nombre viene de una combinación de las últimas dos letras de Arizona y de México, aunque Ladd no está seguro.</p>
+<p class="story-body-text story-content" data-para-count="342" data-total-count="9129" id="story-continues-34" tabindex="-1">Naco es un lugar somnoliento que no parece beneficiarse mucho de su condición como la puerta de entrada autorizada a México. Además de la calma, hay una colección de barracas abandonadas, construidas hace cien años por tropas estadounidenses que perseguían a Pancho Villa después de que atacara el pueblo de Columbus en Nuevo México.</p>
+<p class="story-body-text story-content" data-para-count="25" data-total-count="9154" id="story-continues-35" tabindex="-1">Nunca lograron atraparlo.</p>
+<p class="story-body-text story-content" data-para-count="454" data-total-count="9608" id="story-continues-36" tabindex="-1">Ladd asegura que su familia ha financiado la ciudadanía de tres mexicanos; sin embargo, ha habido más penas que alegrías en la frontera. Con el paso de los años, dice, han encontrado los cuerpos de 14 personas que intentaban llegar a algún otro lugar en la propiedad de Ladd. El último fue en septiembre. Un grupo de seis quedó atrapado en una inundación; cinco fueron rescatados, pero el cuerpo del sexto fue encontrado varios días después.</p>
+<p class="story-body-text story-content" data-para-count="326" data-total-count="9934" id="story-continues-37" tabindex="-1">Ladd esperó a las autoridades pero estaba oscureciendo. Así que se llevó el cuerpo del hombre en su camioneta roja, por la Ruta 92, a una funeraria que tomó la custodia del cadáver. El ranchero recuerda el suceso de la misma forma mesurada en que señala cómo lo inusual se ha convertido en lo usual en la frontera.</p>
+<p class="story-body-text story-content" data-para-count="169" data-total-count="10103" id="story-continues-38" tabindex="-1">A lo largo del camino lleno de baches Ladd señala a su izquierda y comenta, refiriéndose a los carteles: “Aquí es donde derribaron el muro para cruzar camiones”.</p>
+<p class="story-body-text story-content" data-para-count="264" data-total-count="10367" id="story-continues-39" tabindex="-1">Es como un guía de un museo de arte local que ha memorizado la historia de las exhibiciones permanentes: comenta los diseños de la valla cambiante y señala la insignia que algunas unidades militares instalaron en nombre del Departamento de Seguridad Nacional.</p>
+<p class="story-body-text story-content" data-para-count="227" data-total-count="10594" id="story-continues-40" tabindex="-1">De pronto la camioneta se detiene: “Bueno, mira allí”, dice Ladd, señalando a su derecha. “Me cortaron la valla”. La habían recortado de nuevo, y Dios sabe cuántas veces se han perdido sus vacas a causa de eso.</p>
+<p class="story-body-text story-content" data-para-count="337" data-total-count="10931" id="story-continues-41" tabindex="-1">El ranchero se puso unos guantes blancos de trabajo sobre sus manos ásperas y buscó un rollo de soga de color azul para empacar heno. Enseguida cosió lo que habían cortado mientras las nubes de lluvia color cobrizo se movían hacia el este desde las montañas Huachuca, y el viento silbaba a través de la abertura en la valla.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/el-muro-de-donald-trump/" rel="tag">El muro de Donald Trump</a>, <a href="https://www.nytimes.com/es/tag/migrantes/" rel="tag">migrantes</a>, <a href="https://www.nytimes.com/es/tag/narcotraficantes/" rel="tag">narcotraficantes</a>, <a href="https://www.nytimes.com/es/tag/rancheros/" rel="tag">Rancheros</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/07/28/el-muro-de-trump-no-detendra-a-los-narcotraficantes-ni-a-los-migrantes-dicen-los-rancheros/"
+				data-title="Noticias: El muro de Trump no detendrá a los narcotraficantes ni a los migrantes, dicen los rancheros"
+				data-author="POR DAN BARRY"
+				data-media=""
+				data-description="Los rancheros estadounidenses que viven cerca de la frontera mexicana suelen ver narcotraficantes y a veces encuentran cuerpos en sus propiedades, pero dicen que la solución propuesta por Donald Trump es &quot;absurda&quot; y &quot;estúpida&quot;."
+				data-publish-date="28 de julio de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/08/construir-un-muro-y-retener-las-remesas-como-propone-trump-seria-mal-negocio-para-estados-unidos/">
+					<div class="story-body">
+						<h3 class="kicker">Comentario</h3>
+
+						<h2 class="headline">
+							<span class="title">Construir un muro y retener las remesas, como propone Trump, es un mal negocio para Estados Unidos</span>
+							<time class="dateline">8 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/07/opinion/07olneyWeb/07olneyWeb-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/07/12/dos-artistas-juegan-a-construir-el-muro-de-trump-y-mandan-la-factura-a-mexico/">
+					<div class="story-body">
+						<h3 class="kicker">Elecciones EE. UU.</h3>
+
+						<h2 class="headline">
+							<span class="title">Dos artistas juegan a construir el muro de Trump, y mandan la factura a México</span>
+							<time class="dateline">12 de julio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/07/09/arts/09TRUMPWALL/09TRUMPWALL-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/12/una-deuda-pendiente-con-mis-padres-migrantes/">
+					<div class="story-body">
+						<h3 class="kicker">Fotografía</h3>
+
+						<h2 class="headline">
+							<span class="title">Una deuda pendiente con mis padres migrantes</span>
+							<time class="dateline">12 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/05/11/blogs/11-lens-iaritza-slide-XWGR/11-lens-iaritza-slide-XWGR-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/18/la-familia-pinto-y-millones-de-inmigrantes-esperan-que-la-corte-suprema-de-estados-unidos-les-cambie-la-vida/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">La familia Pinto y millones de inmigrantes esperan que la Corte Suprema de Estados Unidos les cambie la vida</span>
+							<time class="dateline">18 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/17/us/17family-web01/17family-web01-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":853,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

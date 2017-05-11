@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004484514"/>
+<meta name="hdl" content="El nuevo Canal de Panamá: lo barato sale caro" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20160624" />
+<meta name="utime" content="20160624150047" />
+<meta name="ptime" content="20160624150047" />
+<meta name="DISPLAYDATE" content="Jun. 24, 2016" />
+<meta name="dat" content="Jun. 24, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="el-nuevo-canal-de-panama-lo-barato-sale-caro" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/06/24/el-nuevo-canal-de-panama-lo-barato-sale-caro/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="El nuevo Canal de Panamá: lo barato sale caro" />
+<meta property="og:description" content="Para que el nuevo canal sea exitoso necesita suficiente agua, concreto duradero y esclusas con capacidad para recibir a embarcaciones más grandes. Una investigación de The New York Times revela que el nuevo proyecto no cumple con esas características." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/06/16/world/00CANAL-slide-PFAM/00CANAL-slide-PFAM-videoSixteenByNine768-v2.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-06-24" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/06/24/el-nuevo-canal-de-panama-lo-barato-sale-caro/" />
+<meta property="twitter:title" content="El nuevo Canal de Panamá: lo barato sale caro" />
+<meta property="twitter:description" content="Para que el nuevo canal sea exitoso necesita suficiente agua, concreto duradero y esclusas con capacidad para recibir a embarcaciones más grandes. Una investigación de The New York Times revela que el nuevo proyecto no cumple con esas características." />
+<meta name="author" content="Walt Bogdanich, Jacqueline Williams y Ana Graciela Méndez" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Walt Bogdanich, Jacqueline Williams y Ana Graciela Méndez" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="panama" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="panama" />
+<meta name="id" content="100000004484514"/>
+<meta name="wordCount" content="5368"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/06/24/el-nuevo-canal-de-panama-lo-barato-sale-caro/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=06&amp;day=24&amp;name=el-nuevo-canal-de-panama-lo-barato-sale-caro">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=16412">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/06\/24\/el-nuevo-canal-de-panama-lo-barato-sale-caro\/"},"headline":"El nuevo Canal de Panam\u00e1: lo barato sale caro","datePublished":"2016-06-24T15:00:47+00:00","dateModified":"2016-07-27T17:51:37+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/06\/16\/world\/00CANAL-slide-PFAM\/00CANAL-slide-PFAM-videoSixteenByNine768-v2.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Para que el nuevo canal sea exitoso necesita suficiente agua, concreto duradero y esclusas con capacidad para recibir a embarcaciones m\u00e1s grandes. Una investigaci\u00f3n de The New York Times revela que el nuevo proyecto no cumple con esas caracter\u00edsticas."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/06/24/el-nuevo-canal-de-panama-lo-barato-sale-caro/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/interactive/2016/06/22/world/americas/panama-canal.html?_r=0" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="americalatina/panama" />
+<title>El nuevo Canal de Panamá: lo barato sale caro &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/interactive/2016/06/22/world/americas/panama-canal.html?_r=0" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/06/24/el-nuevo-canal-de-panama-lo-barato-sale-caro/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+		<script src="https://a1.nyt.com/assets/article/latest/js/article/common/layout.js"></script>
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-16412 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				El nuevo Canal de Panamá: lo barato sale caro
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/06/24/el-nuevo-canal-de-panama-lo-barato-sale-caro/"
+					data-title="América Latina: El nuevo Canal de Panamá: lo barato sale caro"
+					data-author="POR WALT BOGDANICH, JACQUELINE WILLIAMS Y ANA GRACIELA MéNDEZ"
+					data-media=""
+					data-description="Para que el nuevo canal sea exitoso necesita suficiente agua, concreto duradero y esclusas con capacidad para recibir a embarcaciones más grandes. Una investigación de The New York Times revela que el nuevo proyecto no cumple con esas características."
+					data-publish-date="24 de junio de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/292ERR9">http://nyti.ms/292ERR9</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+	
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main has-full-bleed-image-lede">
+	<header id="story-header" class="story-header">
+			<figure id="media-100000004476411" class="media cover photo layout-horizontal-full-bleed" data-bleed-style="full-bleed" itemid="https://static01.nyt.com/images/2016/06/16/world/00CANAL-slide-PFAM/00CANAL-slide-PFAM-articleLarge.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="presentation">
+				<span class="visually-hidden"></span>
+				<div class="image">
+					<img
+						src="https://static01.nyt.com/images/2016/06/16/world/00CANAL-slide-PFAM/00CANAL-slide-PFAM-articleLarge.jpg"
+						alt="El Baroque Valletta se convirtió el 9 de junio en el primer barco carguero en usar las nuevas  esclusas del Canal de Panamá."
+						data-jumbosrc="https://static01.nyt.com/images/2016/06/16/world/00CANAL-slide-PFAM/00CANAL-slide-PFAM-jumbo.jpg"
+						data-superjumbosrc="https://static01.nyt.com/images/2016/06/16/world/00CANAL-slide-PFAM/00CANAL-slide-PFAM-superJumbo.jpg"
+						id="media-image-100000004476411"
+					>
+				</div>
+				<figcaption id="media-caption-100000004476411" class="caption" itemprop="caption description">
+					<span class="caption-text">El Baroque Valletta se convirtió el 9 de junio en el primer barco carguero en usar las nuevas  esclusas del Canal de Panamá.</span>
+
+					<span class="credit" itemprop="copyrightHolder">
+						<span class="visually-hidden">crédito</span>
+						Rodrigo Arangua/Agence France-Presse — Getty Images
+					</span>
+				</figcaption>
+				<meta itemprop="height" content="399">
+				<meta itemprop="width" content="600">
+			</figure>
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/panama/">Panamá</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">El nuevo Canal de Panamá: lo barato sale caro</h1>
+				<p itemprop="headline" id="story-deck" class="deck">Para que el nuevo canal sea exitoso necesita suficiente agua, concreto duradero y esclusas con capacidad para recibir a embarcaciones más grandes. Una investigación de The New York Times revela que el nuevo proyecto no cumple con esas características.</p>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Walt Bogdanich</span>
+</span>
+, <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Jacqueline Williams</span>
+</span>
+ y <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Ana Graciela Méndez</span>
+</span>
+
+					<time class="dateline" datetime="2016-06-24">24 de junio de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/06/24/el-nuevo-canal-de-panama-lo-barato-sale-caro/"
+							data-title="América Latina: El nuevo Canal de Panamá: lo barato sale caro"
+							data-author="POR WALT BOGDANICH, JACQUELINE WILLIAMS Y ANA GRACIELA MéNDEZ"
+							data-media=""
+							data-description="Para que el nuevo canal sea exitoso necesita suficiente agua, concreto duradero y esclusas con capacidad para recibir a embarcaciones más grandes. Una investigación de The New York Times revela que el nuevo proyecto no cumple con esas características."
+							data-publish-date="24 de junio de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+			<script>
+				if (window.magnum && window.magnum.responsiveImages && window.magnum.responsiveImages.setCoverImage) {
+					window.magnum.responsiveImages.setCoverImage('100000004476411','full-bleed',399,600,0,0,0,0);
+				}
+			</script>
+
+			
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/interactive/2016/06/22/world/americas/panama-canal.html?_r=0&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="48" data-total-count="48" id="story-continues-1" tabindex="-1">El 8 de julio de 2009 la champaña se desbordó.</p>
+<p class="story-body-text story-content" data-para-count="320" data-total-count="368" id="story-continues-2" tabindex="-1">Tras dos años de intensa competencia, un consorcio dirigido por una empresa española al borde de la bancarrota supo que su oferta de 3,1 mil millones de dólares, más baja que la de cualquier otra empresa, había ganado la licitación internacional para construir un nuevo complejo de esclusas en el Canal de Panamá.</p>
+<p class="story-body-text story-content" data-para-count="296" data-total-count="664" id="story-continues-3" tabindex="-1">Los inesperados ganadores celebraron su victoria en La Vitrola, un exclusivo restaurante al este del centro de la Ciudad de Panamá. En cuestión de días, los ejecutivos del consorcio conformado por cuatro países, Grupo Unidos por el Canal, volaron a Europa para comenzar a planear el proyecto.</p>
+<p class="story-body-text story-content" data-para-count="336" data-total-count="1000" id="story-continues-4" tabindex="-1">Esa vez no hubo champaña. Rápidamente surgieron disputas sobre cómo dividir las responsabilidades. Parecía que algunos ejecutivos no habían entendido que tenían poco dinero para completar un proyecto completo en una fecha límite muy cercana y un equipo multicultural cuyos miembros no siempre veían las cosas de la misma manera.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="263" data-total-count="1263" id="story-continues-5" tabindex="-1">Muy pronto las discusiones internas desembocaron en problemas más grandes. Hubo pausas en la obra, concreto poroso, el riesgo de terremotos y por lo menos 3,4 mil millones de dólares en costos adicionales: más que el presupuesto aprobado para todo el proyecto.</p>
+<p class="story-body-text story-content" data-para-count="253" data-total-count="1516" id="story-continues-6" tabindex="-1">Siete años después, y con casi dos años de retraso, por fin las esclusas están listas para recibir a la nueva generación de embarcaciones gigantescas que transportan una gran cantidad de los cargamentos del mundo pero no caben en el canal original.</p>
+<p class="story-body-text story-content" data-para-count="298" data-total-count="1814" id="story-continues-7" tabindex="-1">Para celebrar la ocasión, Panamá ha invitado a 70 jefes de Estado para que el domingo observen cómo un buque chino se convierte en la primera embarcación comercial que intenta cruzar el pasaje desde el océano Atlántico hasta el Pacífico a través de las nuevas esclusas que son más grandes.</p>
+<p class="story-body-text story-content" data-para-count="418" data-total-count="2232" id="story-continues-8" tabindex="-1">Durante más de 100 años, el canal ha sido una arteria vital que alimenta la economía mundial, una prueba de la ingeniería estadounidense y una de las obras públicas insignia del siglo XX. Las nuevas esclusas, que Panamá construyó sin la ayuda de otros gobiernos, son presentadas como una manera de asegurar que el canal seguirá siendo una vía vital en el hiperglobalizado siglo XXI como lo fue en el anterior.</p>
+<p class="story-body-text story-content" data-para-count="325" data-total-count="2557" id="story-continues-9" tabindex="-1">Sin embargo, cuando los discursos y las celebraciones terminen, un hecho inevitable permanecerá: el futuro a largo plazo del canal es poco claro en el mejor de los casos; su seguridad, la calidad de su construcción y su viabilidad económica están en duda, según los hallazgos de una investigación de The New York Times.</p>
+<p class="story-body-text story-content" data-para-count="404" data-total-count="2961" id="story-continues-10" tabindex="-1">En términos simples, para que tenga éxito, el nuevo canal necesita suficiente agua, concreto duradero y esclusas que tengan la capacidad para recibir a embarcaciones más grandes. Según decenas de entrevistas con obreros del canal, contratistas, expertos marítimos y diplomáticos, así como una revisión de registros internos y públicos, el nuevo proyecto no cumple con esas tres características.</p>
+<p class="story-body-text story-content" data-para-count="500" data-total-count="3461" id="story-continues-11" tabindex="-1">La licitación baja en costos que resultó victoriosa (mil millones de dólares menos que el competidor más cercano) hizo que “un megaproyecto técnicamente complejo” se volviera precario desde el inicio, de acuerdo con un análisis confidencial que comisionó la aseguradora del canal. “Hay poco espacio en el presupuesto para cometer errores o ineficiencias significativas”, escribieron los analistas de Hill International en 2010, y agregaron: “Esta es una situación de alto riesgo”.</p>
+<p class="story-body-text story-content" data-para-count="301" data-total-count="3762" id="story-continues-12" tabindex="-1">Entre los riesgos más grandes está el concreto que recubre los muros de las seis esclusas descomunales que abren el camino entre los océanos.<br />El verano pasado el agua comenzó a atravesar el concreto que se suponía debía durar 100 años pero no pudo aguantar a que llegara la primera embarcación.</p>
+<p class="story-body-text story-content" data-para-count="253" data-total-count="4015" id="story-continues-13" tabindex="-1">Los analistas de Hill han advertido que el presupuesto del consorcio para el concreto fue 71 por ciento más bajo que el del siguiente licitador menos costoso. El presupuesto también destinó 25 por ciento menos para el acero que refuerza ese concreto.</p>
+<p class="story-body-text story-content" data-para-count="286" data-total-count="4301" id="story-continues-14" tabindex="-1">También está el diseño de las esclusas. Los capitanes de remolcadores dicen que no pueden guiar con seguridad las embarcaciones más grandes porque las esclusas son demasiado pequeñas, con muy poco margen para el error, en especial en condiciones de vientos y corrientes engañosas.</p>
+<p class="story-body-text story-content" data-para-count="285" data-total-count="4586" id="story-continues-15" tabindex="-1">Tan solo un mes antes de la inauguración programada y diez años después de que comenzaran los planes para las nuevas esclusas, una delegación de trabajadores del canal pagó su propio viaje a Europa en busca de un mejor método para trasladar las embarcaciones a través del canal.</p>
+<figure id="media-100000004489404" class="media photo media-100000004489404 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/06/24/universal/es/canal1ES/canal1ES-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-17">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/06/24/universal/es/canal1ES/canal1ES-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/06/24/universal/es/canal1ES/canal1ES-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Fred R. Conrad for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/06/24/universal/es/canal1ES/canal1ES-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Fred R. Conrad for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="341" data-total-count="4927" id="story-continues-17" tabindex="-1">Los remolcadores son un problema, en especial los 14 nuevos botes comprados para las esclusas expandidas. Para maniobrar con seguridad deben controlarse con precisión, pero de acuerdo con los capitanes son tan inestables que se operan mejor yendo en reversa, algo que no puede hacerse mientras se remolcan embarcaciones a través del canal.</p>
+<p class="story-body-text story-content" data-para-count="389" data-total-count="5316" id="story-continues-18" tabindex="-1">“Los remolcadores españoles son simplemente terribles”, dijo Iván de la Guardia, secretario general del sindicato de capitanes de remolcadores. Documentos confidenciales obtenidos por el Times muestran que las autoridades del canal compraron los remolcadores por 158 millones de dólares a una empresa que después representó el hijo de Jorge L. Quijano, el administrador del canal.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="176" data-total-count="5492" id="story-continues-19" tabindex="-1">Las nuevas esclusas están ahí por una razón: para que las enormes embarcaciones neopanamax puedan trasladar cantidades mucho más grandes de cargamentos a través del canal.</p>
+<p class="story-body-text story-content" data-para-count="371" data-total-count="5863" id="story-continues-20" tabindex="-1">Para poder hacerlo, la vía marítima debe permanecer con una profundidad suficiente para que pueda evitar que las embarcaciones totalmente cargadas toquen fondo. No obstante, los funcionarios del canal rechazaron las advertencias de que necesitaban nuevas fuentes de agua y durante una sequía reciente los transportistas tuvieron que hacer más ligeros sus cargamentos.</p>
+<p class="story-body-text story-content" data-para-count="291" data-total-count="6154" id="story-continues-21" tabindex="-1">Los funcionarios le habían asegurado al país que no había de qué preocuparse. Cuando Quijano se dio cuenta de que Panamá necesitaba otra fuente de agua regañó a los panameños por utilizar demasiada agua de grifo, la cual proviene del mismo lago de agua dulce que suministra al canal.</p>
+<p class="story-body-text story-content" data-para-count="285" data-total-count="6439" id="story-continues-22" tabindex="-1">Si el canal no funciona como se prometió las consecuencias tendrán un amplio alcance. A los campesinos estadounidenses de granos y soya, así como a los productores de gas natural licuado, por ejemplo, les podría parecer más difícil vender su mercancía a los clientes asiáticos.</p>
+<p class="story-body-text story-content" data-para-count="271" data-total-count="6710" id="story-continues-23" tabindex="-1">Los fabricantes asiáticos podrían abandonar los puertos deficientes en la Costa Este de Estados Unidos y preferir los de la Oeste. O ellos, y en última instancia los consumidores, deberán cubrir el costo adicional de tomar el camino largo a través del Canal de Suez.</p>
+<p class="story-body-text story-content" data-para-count="162" data-total-count="6872" id="story-continues-24" tabindex="-1">Al mismo tiempo, el éxito del canal podría verse afectado por fuerzas externas: principalmente, la desaceleración en el comercio mundial, en especial de China.</p>
+<p class="story-body-text story-content" data-para-count="338" data-total-count="7210" id="story-continues-25" tabindex="-1">En el centro de esta historia se encuentra la Autoridad del Canal de Panamá (ACP), que supervisó el diseño de las nuevas esclusas y eligió al licitante ganador. En un país pequeño, dominado por una élite de fortunas heredadas y donde la sangre vital es el canal, la autoridad es un centro de poder, un gobierno dentro del gobierno.</p>
+<p class="story-body-text story-content" data-para-count="176" data-total-count="7386" id="story-continues-26" tabindex="-1">Esa institución dice que, aunque cualquier proyecto complejo y de gran magnitud está destinado a enfrentar problemas inesperados, las nuevas esclusas son seguras y adecuadas.</p>
+<p class="story-body-text story-content" data-para-count="270" data-total-count="7656" id="story-continues-27" tabindex="-1">“Podemos tener opiniones distintas acerca de un punto u otro”, señaló Roberto Roy, presidente de la junta directiva de la ACP. “Lo único en lo que no podemos diferir es en que el canal es un proyecto que traerá una cantidad enorme de beneficios al público”.</p>
+<p class="story-body-text story-content" data-para-count="236" data-total-count="7892" id="story-continues-28" tabindex="-1">En una declaración, el director ejecutivo del Grupo Unidos por el Canal, Giuseppe Quarta, dijo que las pruebas habían demostrado “la habilidad técnica del grupo al proporcionar un proyecto de alta calidad y totalmente funcional”.</p>
+<p class="story-body-text story-content" data-para-count="284" data-total-count="8176" id="story-continues-29" tabindex="-1">Un canal sin problemas proyectaría una mejor imagen de ese país avergonzado por los escándalos gubernamentales y <a href="https://www.nytimes.com/es/2016/04/04/los-panama-papers-revelan-como-algunos-poderosos-de-todo-el-mundo-ocultan-sus-fortunas/" target="_blank">los Papeles de Panamá</a> que llenaron de oprobio a un <a href="https://www.nytimes.com/es/2016/04/07/la-historia-de-mossack-fonseca-la-firma-de-abogados-que-dio-origen-a-los-panama-papers/" target="_blank">despacho jurídico local</a> por establecer cuentas secretas en el extranjero para clientes adinerados de todo el mundo.</p>
+<p class="story-body-text story-content" data-para-count="272" data-total-count="8448" id="story-continues-30" tabindex="-1">Incluso los residentes que en privado critican la gestión del canal se rehúsan a expresarse por miedo a parecer antipatrióticos. Eldon Gath, un geólogo que radica en Estados Unidos, descubrió rápidamente lo delicado que era el tema del canal para algunos panameños.</p>
+<p class="story-body-text story-content" data-para-count="235" data-total-count="8683" id="story-continues-31" tabindex="-1">Gath recuerda cómo, después de que preparó un informe para las autoridades en el que señalaba el riesgo de terremotos debido a fallas debajo del canal, el presidente de Panamá en ese entonces, Ricardo Martinelli, salió al ataque.</p>
+<p class="story-body-text story-content" data-para-count="91" data-total-count="8774" id="story-continues-32" tabindex="-1">“El presidente Martinelli nos dijo que habíamos insultado a la república”, dijo Gath.</p>
+<h4 class="story-subheading story-content">Lo viejo y lo nuevo: ‘Panamá en luto por la justicia’</h4>
+
+<p class="story-body-text story-content" data-para-count="276" data-total-count="9050" id="story-continues-34" tabindex="-1">A lo largo de décadas, el canal hizo que Panamá fuera un sitio clave en el tablero del ajedrez económico: un gran centro de operaciones bancarias, comercio y aerolíneas, sin mencionar que también fue una zona de tránsito para el tráfico de drogas y el lavado de dinero.</p>
+<p class="story-body-text story-content" data-para-count="178" data-total-count="9228" id="story-continues-35" tabindex="-1">Después ocurrió el ascenso económico de China que trajo consigo una nueva era. Las embarcaciones se hicieron más grandes. Entre más cargamentos llevaran, menor era el costo.</p>
+<p class="story-body-text story-content" data-para-count="265" data-total-count="9493" id="story-continues-36" tabindex="-1">Para el año 2000, las naves que se construían no podían pasar por el canal. Temiendo que su vía navegable pudiera terminar siendo como el canal de Erie, que por mucho tiempo ha sido obsoleto, las autoridades del canal se dispusieron a construir uno más grande.</p>
+<p class="story-body-text story-content" data-para-count="298" data-total-count="9791" id="story-continues-37" tabindex="-1">Además de eso, justo cuando estaba a punto de solicitar ofertas, las autoridades recibieron algunas noticias aterradoras en noviembre de 2007. Jonathan Harris, un geólogo que trabajaba para el gobierno de Panamá, informó que el riesgo sísmico era mucho mayor de lo que se creyó anteriormente.</p>
+<p class="story-body-text story-content" data-para-count="374" data-total-count="10165" id="story-continues-38" tabindex="-1">Según su evaluación, el área es vulnerable a terremotos de hasta 8 grados de magnitud, de acuerdo con un cable diplomático publicado por WikiLeaks. El riesgo es tan serio, advirtió Harris, que su empresa de consultoría “prohíbe que cualquiera de sus empleados que trabajan en Panamá vivan más arriba del primer piso en cualquier edificio”, según dice el cable.</p>
+<p class="story-body-text story-content" data-para-count="181" data-total-count="10346" id="story-continues-39" tabindex="-1">Al mes siguiente, la embajada estadounidense escuchó advertencias similares por parte de Gath. Según lo que dijo, el riesgo de terremotos en Panamá era igual al de San Francisco.</p>
+<figure id="media-100000004489567" class="media photo media-100000004489567 embedded layout-large-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/06/24/universal/es/canal4ES/canal4ES-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-41">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/06/24/universal/es/canal4ES/canal4ES-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/06/24/universal/es/canal4ES/canal4ES-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Arnulfo Franco/Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/06/24/universal/es/canal4ES/canal4ES-master675.jpg"/>
+		<meta itemprop="height" content="415" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Arnulfo Franco/Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="451" data-total-count="10797" id="story-continues-41" tabindex="-1">Aun así tres consorcios —incluyendo uno dirigido por Bechtel, una empresa estadounidense con reputación internacional de realizar proyectos grandes y complicados— buscaron realizar el proyecto. El más débil financieramente fue dirigido por una compañía española, Sacyr Vallehermoso. Funcionarios estadounidenses dijeron en un cable que la compañía estaba “casi en bancarrota” y “técnicamente en bancarrota” en otra comunicación.</p>
+<p class="story-body-text story-content" data-para-count="430" data-total-count="11227" id="story-continues-42" tabindex="-1">Sacyr incluyó a una empresa panameña propiedad de la familia del administrador del canal en ese entonces, Alberto Alemán Zubieta. La compañía se llama Constructora Urbana (en la que Alemán previamente tuvo acciones), y ya había hecho negocios de millones de dólares con el canal. Los otros dos miembros fueron Impregilo, un gran contratista italiano, y Jan De Nul, una empresa belga que se especializa en dragar y excavar.</p>
+<p class="story-body-text story-content" data-para-count="368" data-total-count="11595" id="story-continues-43" tabindex="-1">En marzo de 2009, después de 15 meses de negociaciones contenciosas, los consorcios presentaron sus licitaciones selladas ante un auditorio abarrotado, con el presidente y los cuerpos diplomáticos como testigos. Para aumentar el drama, una caravana depositó los sobres en una bóveda en el Banco Nacional para resguardarlos. El que tuviera el mejor precio ganaría.</p>
+<p class="story-body-text story-content" data-para-count="172" data-total-count="11767" id="story-continues-44" tabindex="-1">Ese julio, mientras todo el país observaba por televisión, las licitaciones se abrieron y el resultado fue sorprendente: el menos favorito, el grupo Sacyr, había ganado.</p>
+<p class="story-body-text story-content" data-para-count="222" data-total-count="11989" id="story-continues-45" tabindex="-1">Bechtel y los diplomáticos estadounidense no lo podían creer. Sacyr ni siquiera podría “colocar el concreto” con esa cantidad, le dijo a la embajada un representante de Bechtel, de acuerdo con un cable diplomático.</p>
+<h4 class="story-subheading story-content">Un diseño cuestionable: ‘Creo que pasará algo terrible’</h4>
+
+<p class="story-body-text story-content" data-para-count="351" data-total-count="12340" id="story-continues-47" tabindex="-1">Karen Smits llegó a Panamá el día que el grupo Sacyr ganó el contrato. Tenía 27 años y había crecido en una granja en Holanda. Su cabello rubio y ojos azules le permitieron destacar entre el grupo de trabajadores de la construcción pero pocas personas sabían quién era o por qué se estaba paseando por sus comedores, pasillos y en el campo.</p>
+<p class="story-body-text story-content" data-para-count="254" data-total-count="12594" id="story-continues-48" tabindex="-1">“La alta dirección de las empresas europeas no había estado involucrada en la etapa final del delicado proceso”, le dijo un funcionario del consorcio a Smits, y agregó que cuando les dijeron la cifra de la licitación ganadora, no podían creerlo.</p>
+<p class="story-body-text story-content" data-para-count="319" data-total-count="12913" id="story-continues-49" tabindex="-1">Carlos Fábrega, un funcionario sénior de la compañía panameña del consorcio, Constructora Urbana, asistió a algunas de las primeras reuniones en Europa. “Todos tenían sus propios problemas”, dijo Fábrega en una entrevista. “Cuatro socios. Diferentes culturas. Diferentes maneras de abordar un proyecto”.</p>
+<p class="story-body-text story-content" data-para-count="441" data-total-count="13354" id="story-continues-50" tabindex="-1">Algunos funcionarios dijeron que la colaboración era como estar atrapado en una guerra o un matrimonio arreglado. Un gerente belga le dijo a Smits que le habían dado la instrucción de “deshacerse de sus habilidades anglosajonas de gestión, porque eran demasiado organizadas y estructuradas para operar en esa empresa”. El gerente prometió cambiar inmediatamente y, con una sonrisa, ordenó unas cuantas copas de vino en el almuerzo.</p>
+<p class="story-body-text story-content" data-para-count="312" data-total-count="13666" id="story-continues-51" tabindex="-1">Las preocupaciones en torno a los costos rápidamente escalaron hasta convertirse en discusiones acaloradas acerca de quién haría qué y por cuánto dinero. “Es difícil ser flexible si no tienes un presupuesto para ajustar algunas cosas, y sabes que el proyecto nunca saldrá como se planeó”, dijo Smits.</p>
+<p class="story-body-text story-content" data-para-count="230" data-total-count="13896" id="story-continues-52" tabindex="-1">Este cambio le preocupó a De la Guardia, el robusto secretario general de la Unión de Capitanes y Oficiales de Cubierta del Canal de Panamá, quien una tarde de diciembre de 2015, expresó: “No creemos que vaya a funcionar”.</p>
+<p class="story-body-text story-content" data-para-count="259" data-total-count="14155" id="story-continues-53" tabindex="-1">Su opinión tiene peso. De la Guardia es nativo de Panamá, se graduó en la United States Merchant Marine Academy y pasó 20 años a cargo de remolcadores en el canal. “Creemos que será un verdadero desastre”, dijo. “Creo que pasará algo terrible”.</p>
+<p class="story-body-text story-content" data-para-count="340" data-total-count="14495" id="story-continues-54" tabindex="-1">Su preocupación se origina a partir de la decisión de las autoridades de dejar de utilizar locomotoras para guiar a las embarcaciones. Ahora los remolcadores empujarán y jalarán los buques que midan más de 270 metros de largo y con cargas de hasta 13.000 contenedores, casi tres veces más que las viejas embarcaciones, más pequeñas.</p>
+<p class="story-body-text story-content" data-para-count="396" data-total-count="14891" id="story-continues-55" tabindex="-1">Un estudio de viabilidad realizado en 2003 por las autoridades del canal concluyó que “para que el sistema de remolcadores funcione de manera segura y eficiente”, las esclusas debían ser 100 metros más largas y 12 metros más anchas que las grandes embarcaciones que pasaban por ahí. Según ese estándar, las nuevas esclusas debían haber tenido 465 metros de largo y 60 metros de ancho.</p>
+<p class="story-body-text story-content" data-para-count="167" data-total-count="15058" id="story-continues-56" tabindex="-1">Según los capitanes, el tamaño actual deja poco o nada de espacio para maniobrar con los remolcadores en cualquiera de los extremos en caso de que surja un problema.</p>
+<p class="story-body-text story-content" data-para-count="294" data-total-count="15352" id="story-continues-57" tabindex="-1">“La masa de una embarcación, de 122.000 toneladas, va a pasarme por encima”, dijo Manuel Ceballos Loaiza, un capitán. Con una superficie tan grande expuesta a los vientos, el cargamento apilado actúa como una vela, lo cual hace más difícil el reto que deben enfrentar los remolcadores.</p>
+<p class="story-body-text story-content" data-para-count="280" data-total-count="15632" id="story-continues-58" tabindex="-1">“Estamos a cinco meses de la inauguración, y no sé qué voy a hacer”, dijo Ceballos en diciembre. “No me han entrenado. No han hablado de los procedimientos. Hemos estado preguntándoles”. Cinco meses después, los capitanes dijeron que muy pocas cosas habían cambiado.</p>
+<h4 class="story-subheading story-content">‘Lo barato sale caro’: Cientos de millones en costos adicionales</h4>
+
+<p class="story-body-text story-content" data-para-count="456" data-total-count="16088" id="story-continues-60" tabindex="-1">Hacer concreto no es una hazaña menor. El concreto sólido, de una calidad que dure 100 años y soporte los efectos corrosivos del agua salada en las esclusas, requiere cemento —una mezcla pastosa de varios químicos— además de arena, rocas y agua. Cuando hay muy poco cemento, la mezcla se hace demasiado porosa y difícil de poner. Cuando hay demasiado cemento, será fácil colocarlo de manera fluida pero también será susceptible a las grietas.</p>
+<p class="story-body-text story-content" data-para-count="237" data-total-count="16325" id="story-continues-61" tabindex="-1">Se construyeron plantas de fabricación de concreto en ambos extremos del canal pero las materias primas, conocidas como conglomerado, se excavaron del lado del Pacífico. Sin embargo, el conglomerado no era el adecuado para el concreto.</p>
+<p class="story-body-text story-content" data-para-count="414" data-total-count="16739" id="story-continues-62" tabindex="-1">Bechtel, el licitador que perdió, ya lo había sospechado. “Había un gran problema con el concreto”, dijo Paul Gibbs, quien dirigió la iniciativa de Bechtel para licitar. “Nos dimos cuenta de que el conglomerado en el extremo de las esclusas que da al Pacífico no tenía suficiente integridad para hacer concreto”. Así que Bechtel planeó importar el conglomerado. Era caro pero necesario, dijo Gibbs.</p>
+<p class="story-body-text story-content" data-para-count="171" data-total-count="16910" id="story-continues-63" tabindex="-1">Al principio, el consorcio ganador también se percató de que la calidad de la roca era más deficiente de lo esperado, pero hizo ajustes. Después vino un estancamiento.</p>
+<p class="story-body-text story-content" data-para-count="409" data-total-count="17319" id="story-continues-64" tabindex="-1">Los funcionarios del consorcio dijeron que habían esperado a que las autoridades del canal aprobaran su mezcla de concreto. Los funcionarios acusaron al consorcio de rehusarse a verter el concreto. Alemán, quien administró el canal antes que Quijano, le dijo al diario local La Prensa: “Intentaron demostrar que no podían hacerlo, a tal punto que les dijimos que ya no hablaríamos más del concreto”.</p>
+<p class="story-body-text story-content" data-para-count="288" data-total-count="17607" id="story-continues-65" tabindex="-1">Cuando el consorcio finalmente lo vertió, los funcionarios del canal criticaron su gestión del concreto incluyendo “el recubrimiento con concreto o la falta de recubrimiento sobre el acero de refuerzo estructural y la repetida falta de protección del concreto durante las lluvias”.</p>
+<p class="story-body-text story-content" data-para-count="279" data-total-count="17886" id="story-continues-66" tabindex="-1">Al final, el consorcio buscó obtener 463 millones de dólares por parte de las autoridades para cubrir sus pérdidas por las largas demoras y la calidad deficiente del basalto. Un pánel de árbitros se puso del lado del consorcio y les otorgó más de 230 millones de dólares.</p>
+<p class="story-body-text story-content" data-para-count="199" data-total-count="18085" id="story-continues-67" tabindex="-1">Las preocupaciones en torno al concreto aparecerían en las renuncias de dos empleados prominentes del consorcio. Uno fue Anthony de Vos, un geólogo que trabajaba con la compañía belga Jan De Nul.</p>
+<p class="story-body-text story-content" data-para-count="305" data-total-count="18390" id="story-continues-68" tabindex="-1">En julio de 2013, De Vos anunció su salida del proyecto en un correo electrónico que envió a sus colegas; dijo que estaba feliz de ser libre y no tener que lidiar con “administradores que se comportan como dictadores”. Destacó “muchas decisiones erróneas” que tenían que ver con el concreto.</p>
+<p class="story-body-text story-content" data-para-count="212" data-total-count="18602" id="story-continues-69" tabindex="-1">“Es una gran lástima para Jan De Nul que hayamos terminado en un desastre semejante, pero el daño es irreversible”, escribió De Vos. Rechazó dar más detalles cuando nos comunicamos con él por teléfono.</p>
+<p class="story-body-text story-content" data-para-count="277" data-total-count="18879" id="story-continues-70" tabindex="-1">Johnson Spratt, un administrador de excavaciones en el lado del Pacífico, dijo que él también había renunciado, en parte, a causa de las preocupaciones por el concreto. Cuando le pedimos que nos diera más detalles, Spratt citó el viejo refrán: “Lo barato sale caro”.</p>
+<h4 class="story-subheading story-content">‘No es que no fuéramos a hacerlo público’</h4>
+
+<p class="story-body-text story-content" data-para-count="198" data-total-count="19077" id="story-continues-72" tabindex="-1">Para febrero de 2014, la hostilidad fue tal que el consorcio simplemente dejó de trabajar y citó “la indisposición repetida de los clientes para actuar bajo el espíritu de la colaboración”.</p>
+<p class="story-body-text story-content" data-para-count="200" data-total-count="19277" id="story-continues-73" tabindex="-1">El trabajo finalmente se reanudó pero cuando Quarta, el nuevo director del Grupo Unidos por el Canal, llegó a Panamá a principios de 2015 encontró “una moral muy baja” y una crisis financiera.</p>
+<p class="story-body-text story-content" data-para-count="157" data-total-count="19434" id="story-continues-74" tabindex="-1">“No se puede confiar en los proveedores. Les pides materiales y no vienen”, dijo Quarta. “Se vive cheque a cheque, así que es muy difícil planear”.</p>
+<p class="story-body-text story-content" data-para-count="129" data-total-count="19563" id="story-continues-75" tabindex="-1">Dijo que había reunido a sus trabajadores y reanudado el proyecto que, para fines del año pasado, ya estaba cerca de finalizar.</p>
+<p class="story-body-text story-content" data-para-count="324" data-total-count="19887" id="story-continues-76" tabindex="-1">Después, repentinamente, durante las pruebas de agua en el canal, ocurrió un desastre de relaciones públicas. Se tomaron fotografías y videos que mostraban cómo el agua se filtraba a través del concreto en una de las esclusas del Pacífico… las mismas esclusas que están cerca de las zonas de riesgo por terremotos.</p>
+
+<figure id="" class="interactive interactive-embedded bullet-list interactive-iframe">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-78">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+			<h2 class="interactive-headline">Filtraciones en una de las nuevas esclusas de Cocolí en el Canal de Panamá</h2>
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/EbnQs-qMqsM?enablejsapi=1&origin=http://www.nytimes.com" frameborder="0" allowfullscreen></iframe>
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="262" data-total-count="20149" id="story-continues-78" tabindex="-1">El problema se había mantenido en secreto durante más de una semana. Pero las imágenes, publicadas de manera anónima el 23 de agosto por parte de un trabajador del canal, parecían confirmar lo que todos se temían. No se trataba de una filtración pequeña.</p>
+<p class="story-body-text story-content" data-para-count="300" data-total-count="20449" id="story-continues-79" tabindex="-1">El agua salía a chorros desde las grietas que se extendían casi por todo el ancho de la esclusa, de acuerdo con Ilya Espino de Marotta, la vicepresidenta ejecutiva de ingeniería de la Autoridad del Canal de Panamá. La fisura ocurrió en un bloque de concreto que separa las cámaras baja y media.</p>
+<p class="story-body-text story-content" data-para-count="471" data-total-count="20920" id="story-continues-80" tabindex="-1">Para los funcionarios el retraso de la revelación solo hizo más grande el bochorno. Cuando un legislador les preguntó si habían tratado de esconder la filtración, Quijano solo reconoció que le había tomado demasiado tiempo informárselo al público. “No es que no fuéramos a hacerlo público, porque todo lo hacemos público”, dijo, y explicó que había estado esperando a que el consorcio determinara si el problema era el diseño o la calidad del concreto.</p>
+<p class="story-body-text story-content" data-para-count="97" data-total-count="21017" id="story-continues-81" tabindex="-1">“Estamos tratando de conseguir que nos den una respuesta, y no nos han dado nada”, se quejó.</p>
+<p class="story-body-text story-content" data-para-count="348" data-total-count="21365" id="story-continues-82" tabindex="-1">Algunos días más tarde, surgió un consenso: el problema fue el diseño, no el concreto. Marotta dijo en una entrevista que la filtración solo había ocurrido porque el concreto había estado sujeto a presión extrema cuando una de las cámaras estaba vacía y la siguiente llena. Durante las operaciones normales, ambas cámaras tendrían agua.</p>
+<p class="story-body-text story-content" data-para-count="371" data-total-count="21736" id="story-continues-83" tabindex="-1">Para arreglar el problema las autoridades tenían dos opciones: destrozar el concreto y volver a construirlo —un remedio costoso que provocaría más retrasos— o hacer perforaciones e introducir barras de acero de refuerzo estructural. Se tomó la decisión de reforzar. Marotta dijo que ya habían hecho refuerzos en las áreas afectadas, pero no fueron suficientes.</p>
+<p class="story-body-text story-content" data-para-count="198" data-total-count="21934" id="story-continues-84" tabindex="-1">Sin embargo, quedaba una duda: si esa cámara sufría filtraciones, ¿qué está pasando con las otras? En efecto, una filtración más pequeña se encontró poco después en el lado del Atlántico.</p>
+<p class="story-body-text story-content" data-para-count="357" data-total-count="22291" id="story-continues-85" tabindex="-1">“Los ingenieros estructurales que trabajan en el canal, quienes no quisieron dar sus nombres por miedo a ser perseguidos, han señalado que esas esclusas necesitaban derrumbarse y reconstruirse”, dijo Zulay Rodríguez, abogada y presidenta de un subcomité legislativo creado para investigar posibles irregularidades dentro de las autoridades del canal.</p>
+<p class="story-body-text story-content" data-para-count="218" data-total-count="22509" id="story-continues-86" tabindex="-1">Humberto Reynolds, un experto en concreto, no estuvo involucrado en la investigación de las filtraciones, pero ha monitoreado la situación. “La obra ni siquiera se ha inaugurado y ya está siendo reparada”, dijo.</p>
+<p class="story-body-text story-content" data-para-count="341" data-total-count="22850" id="story-continues-87" tabindex="-1">Reynolds, quien votó en contra del proyecto del canal, dijo que creía que los problemas se habían originado a partir de la mezcla incorrecta de ingredientes del concreto y malas prácticas al verterlo. Dijo que la obra estaba llena de “anomalías intolerables” y criticó lo que, dijo, fue un método de prueba y error al arreglarlas.</p>
+<p class="story-body-text story-content" data-para-count="161" data-total-count="23011" id="story-continues-88" tabindex="-1">Los funcionarios dijeron que todos los problemas se habían solucionado apropiadamente. “Estamos seguros de que el concreto durará 100 años”, dijo Quijano.</p>
+<figure id="media-100000004489509" class="media photo media-100000004489509 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/06/24/universal/es/canal3ES/canal3ES-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-90">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/06/24/universal/es/canal3ES/canal3ES-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/06/24/universal/es/canal3ES/canal3ES-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Fred R. Conrad for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/06/24/universal/es/canal3ES/canal3ES-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Fred R. Conrad for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<h4 class="story-subheading story-content">En busca de agua: &#8216;El registro más bajo para esta época del año&#8217;</h4>
+
+<p class="story-body-text story-content" data-para-count="465" data-total-count="23476" id="story-continues-91" tabindex="-1">En las buenas temporadas de lluvia el lago Gatún está a 26 metros sobre el nivel del mar. Desde su costa se puede ver el océano Atlántico que se extiende hasta unirse con el horizonte. Sin Gatún, Panamá apenas sería una nota al pie en la historia. Sin Gatún, no habría Canal de Panamá ni 10.000 empleados trabajarían ahí; tampoco existirían los recursos que llegan hasta el tesoro nacional ni la audaz línea del horizonte que significa dinero y poder.</p>
+<p class="story-body-text story-content" data-para-count="228" data-total-count="23704" id="story-continues-92" tabindex="-1">Gatún alguna vez fue el lago artificial más grande del mundo; allí flotan las embarcaciones que cruzan el canal y gracias a él se llenan los vasos de agua de muchos, si no es que de la mayoría, de los residentes de Panamá.</p>
+<p class="story-body-text story-content" data-para-count="168" data-total-count="23872" id="story-continues-93" tabindex="-1">Esa es la razón por la que el 17 de febrero de este año, el mundo comercial prestó toda su atención a una advertencia de que Gatún no estaba en buenas condiciones.</p>
+<p class="story-body-text story-content" data-para-count="370" data-total-count="24242" id="story-continues-94" tabindex="-1">“El nivel actual del lago Gatún es de 25 metros, la cifra más baja registrada para esta época del año”, decía el aviso titulado &#8216;ADVISORY TO SHIPPING No. A-05-2016&#8217;. La escorrentía de la línea divisoria del canal, señaló, fue la segunda peor en la historia. El año pasado las precipitaciones estuvieron un 36 por ciento por debajo de lo normal.</p>
+<p class="story-body-text story-content" data-para-count="252" data-total-count="24494" id="story-continues-95" tabindex="-1">Un mes más tarde, las autoridades instruyeron a los transportistas para que aligeraran sus cargas y, así, las embarcaciones no tocaran fondo. Una semana y media más tarde, les dijeron que las aligeraran un poco más. Diez días más tarde, aun más.</p>
+<p class="story-body-text story-content" data-para-count="350" data-total-count="24844" id="story-continues-96" tabindex="-1">Las restricciones de carga no son nuevas pero estas llegaron después de que se hicieran excavaciones en Gatún para recolectar más agua para las nuevas esclusas. Cuando se abran, Gatún tendrá que suministrar casi el doble de agua para las esclusas viejas y nuevas combinadas. Quijano rechazó responder preguntas sobre la disponibilidad del agua.</p>
+<p class="story-body-text story-content" data-para-count="192" data-total-count="25036" id="story-continues-97" tabindex="-1">“Vamos a tener algunos problemas del lado que está seco”, dijo Jorge Espinosa, un exadministrador de la unidad de recursos acuíferos de la ACP. “El Niño afectó demasiado al canal”.</p>
+<p class="story-body-text story-content" data-para-count="228" data-total-count="25264" id="story-continues-98" tabindex="-1">En 1999, Alemán, el primer administrador del canal, había ayudado a que se aprobara una ley que le daba a la Autoridad del Canal de Panamá el control sobre la vertiente oeste, donde las presas podían crear una nueva reserva.</p>
+<p class="story-body-text story-content" data-para-count="347" data-total-count="25611" id="story-continues-99" tabindex="-1">La gente de escasos recursos que fue desplazada por el proyecto no estaba contenta y protestaron con la ayuda de una grupo activista católico. Era moralmente incorrecto —escribió el obispo local, Carlos María Arizen, en una carta al presidente de Panamá— destruir las tradiciones y estilo de vida de los campesinos para favorecer al canal.</p>
+<p class="story-body-text story-content" data-para-count="361" data-total-count="25972" id="story-continues-100" tabindex="-1">El gobierno retrocedió. Bajo presión, la iglesia designó a un nuevo obispo y despidió al líder del grupo activista, Héctor Endara Hill, después de 20 años de trabajo comunitario. Otro líder de las protestas, Francisco Aperador, a quien la iglesia había enviado a Panamá para trabajar con la población indígena, fue expulsado del país, dijo Endara.</p>
+<p class="story-body-text story-content" data-para-count="206" data-total-count="26178" id="story-continues-101" tabindex="-1">El ingeniero en jefe del canal, Tomás Drohan Ruiz, fue obligado a renunciar en el año 2000 después de criticar el plan de la vertiente, dijo Endara. Drohan rechazó hacer comentarios para este artículo.</p>
+<p class="story-body-text story-content" data-para-count="248" data-total-count="26426" id="story-continues-102" tabindex="-1">Pero por temor a perder el referendo nacional en torno a la expansión del canal, la legislación dio un revés en el año 2006 y anuló la ley. Las autoridades del canal cambiaron de postura también y dijeron que no necesitaban una nueva reserva.</p>
+<p class="story-body-text story-content" data-para-count="356" data-total-count="26782" id="story-continues-103" tabindex="-1">“Si el nuevo sistema termina funcionando”, dijo Ariel Rodríguez, un biólogo que anteriormente estaba en la Universidad de Panamá, “descubrirán en el año siguiente que están en crisis, que no hay agua, que las embarcaciones no pueden pasar porque no hay agua. ¿Qué va a decir la gente? ‘Tráigannos agua de donde sea, al costo que sea’”.</p>
+<h4 class="story-subheading story-content">Epílogo: ‘Estamos resueltos a que esto funcione’</h4>
+
+<p class="story-body-text story-content" data-para-count="344" data-total-count="27126" id="story-continues-105" tabindex="-1">La mañana del 9 de junio las ruedas de apoyo se retiraron mientras la Baroque Valletta, la primera embarcación que entraba a las tres esclusas del lado del Atlántico iniciaba su recorrido. Con la inauguración oficial tan solo hace dos semanas, los funcionarios querían estar seguros de que sus esclusas funcionaban como se había planeado.</p>
+<p class="story-body-text story-content" data-para-count="197" data-total-count="27323" id="story-continues-106" tabindex="-1">El miembro italiano del consorcio, que ahora se llama Salini Impregilo, había invitado a periodistas extranjeros para que volaran hasta allá y lo vieran, pero las autoridades tenían otras ideas.</p>
+<p class="story-body-text story-content" data-para-count="164" data-total-count="27487" id="story-continues-107" tabindex="-1">“Me dijeron que no quieren que los periodistas vean”, dijo Fabio Dal Boni, un vocero de Impregilo. “Dije que era una locura. Están totalmente equivocados”.</p>
+<p class="story-body-text story-content" data-para-count="231" data-total-count="27718" id="story-continues-108" tabindex="-1">Impregilo le dijo a las autoridades que el cruce no seguiría siendo un secreto porque cientos de trabajadores del canal estarían viendo, con celulares en mano, tomando fotos. Los funcionarios cedieron y los periodistas acudieron.</p>
+<p class="story-body-text story-content" data-para-count="330" data-total-count="28048" id="story-continues-109" tabindex="-1">Bajo un cielo soleado, se hizo historia y el Baroque pasó a través de las tres esclusas antes de anclar en lago Gatún. En la delantera estaba un bote que resultaba familiar, el Cerro Santiago. Un segundo remolcador español iba atrás. Los aplausos en la costa fueron recibidos con el estallido de la bocina de la embarcación.</p>
+<p class="story-body-text story-content" data-para-count="339" data-total-count="28387" id="story-continues-110" tabindex="-1">En realidad el nivel de dificultad para el paso del Baroque fue muy bajo. La embarcación pasó con facilidad en la esclusa de 426 metros porque tan solo tiene 255 metros de largo, aproximadamente dos tercios de la longitud de las embarcaciones más grandes. Además, no se vio afectado por el viento, pues no tenía contenedores apilados.</p>
+<figure id="media-100000004489469" class="media photo media-100000004489469 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/06/24/universal/es/canal2ES/canal2ES-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-112">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/06/24/universal/es/canal2ES/canal2ES-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/06/24/universal/es/canal2ES/canal2ES-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Fred R. Conrad for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/06/24/universal/es/canal2ES/canal2ES-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Fred R. Conrad for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="182" data-total-count="28569" id="story-continues-112" tabindex="-1">Jan Kop, el administrador del proyecto de Jan De Nul (el miembro belga del consorcio), observó la procesión cuidadosa y lenta. “Hemos visto que funciona”, dijo con una sonrisa.</p>
+<p class="story-body-text story-content" data-para-count="201" data-total-count="28770" id="story-continues-113" tabindex="-1">Cuando se le preguntó acerca de la inauguración retrasada, Kop dijo que no era inusual para un proyecto de ese tamaño, pero añadió: “Sí, habría sido mejor si no hubiéramos tenido retrasos”.</p>
+<p class="story-body-text story-content" data-para-count="394" data-total-count="29164" id="story-continues-114" tabindex="-1">Gerry Wang, el director ejecutivo de Seaspan Corporation, una empresa que alquila grandes embarcaciones, dijo que no haber inaugurado a tiempo fue “terrible”, ya que los buques se habían construido para aprovechar las esclusas más grandes. “Algunas de esas embarcaciones se entregaron hace dos o tres años”, afirmó Wang. “Aún no han podido atravesar el nuevo Canal de Panamá”.</p>
+<p class="story-body-text story-content" data-para-count="293" data-total-count="29457" id="story-continues-115" tabindex="-1">El plan de las autoridades de mover cerca de 12 embarcaciones neopanamax al día parece irreal… por lo menos en estos momentos, según los transportistas, dado que muchos puertos de la Costa Este de Estados Unidos aún están preparando la infraestructura para acomodar a los grandes buques.</p>
+<p class="story-body-text story-content" data-para-count="202" data-total-count="29659" id="story-continues-116" tabindex="-1">Los transportistas tampoco están seguros. “La situación del Canal de Panamá ha sido muy turbia desde hace mucho tiempo”, dijo Wang. “No saben si el nuevo puede con las grandes embarcaciones”.</p>
+<p class="story-body-text story-content" data-para-count="265" data-total-count="29924" id="story-continues-117" tabindex="-1">Hace poco, Kop le dijo a una organización noticiosa holandesa De Volkskrant que las autoridades tenían una actitud muy rígida. “Navegamos seis años contracorriente”, dijo. “Aún hay pocas probabilidades de que sobrevivamos esto sin sufrir daño alguno”.</p>
+<p class="story-body-text story-content" data-para-count="265" data-total-count="30189" id="story-continues-118" tabindex="-1">Mientras que no han ocurrido acusaciones comprobadas de corrupción en la expansión del canal, la imagen de los funcionarios no ha mejorado con el hecho de que la mayoría de los miembros del consejo fueron designados por Martinelli, el expresidente desacreditado.</p>
+<p class="story-body-text story-content" data-para-count="112" data-total-count="30301" id="story-continues-119" tabindex="-1">Martinelli está esperando esas investigaciones en Miami. Puede que se haya ido, pero no está fuera de alcance.</p>
+<p class="story-body-text story-content" data-para-count="209" data-total-count="30510" id="story-continues-120" tabindex="-1">Este mes le envió un mensaje burlón por Twitter a Roy, el presidente del consejo del canal y a Varela, quien ahora es el presidente de Panamá: “No he recibido una invitación a la expansión del canal”.</p>
+<p class="story-body-text story-content" data-para-count="318" data-total-count="30828" id="story-continues-121" tabindex="-1">Es posible que el canal funcione como se pretende: que el agua se obtenga, que el concreto dure, que las grandes embarcaciones lleguen y que los panameños celebren su logro histórico. Desde luego, esa es la esperanza, aun entre quienes en privado o en público han expresado su preocupación por el futuro del canal.</p>
+<p class="story-body-text story-content" data-para-count="220" data-total-count="31048" id="story-continues-122" tabindex="-1">Londor A. Rankin, líder de la Unión de Prácticos del Canal de Panamá, dijo que le había dicho a Quijano: “Estamos resueltos a hacer que esto funcione. Tenemos un pacto con el país para hacer que esto funcione”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Walt Bogdanich y Ana Graciela Méndez desde Panamá, y Jacqueline Williams desde Nueva York.</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/bechtel/" rel="tag">Bechtel</a>, <a href="https://www.nytimes.com/es/tag/canal-de-panama/" rel="tag">Canal de Panamá</a>, <a href="https://www.nytimes.com/es/tag/lago-gatun/" rel="tag">Lago Gatún</a>, <a href="https://www.nytimes.com/es/tag/panama/" rel="tag">Panama</a>, <a href="https://www.nytimes.com/es/tag/ricardo-martinelli/" rel="tag">Ricardo Martinelli</a>, <a href="https://www.nytimes.com/es/tag/sacyr/" rel="tag">Sacyr</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/06/24/el-nuevo-canal-de-panama-lo-barato-sale-caro/"
+				data-title="América Latina: El nuevo Canal de Panamá: lo barato sale caro"
+				data-author="POR WALT BOGDANICH, JACQUELINE WILLIAMS Y ANA GRACIELA MéNDEZ"
+				data-media=""
+				data-description="Para que el nuevo canal sea exitoso necesita suficiente agua, concreto duradero y esclusas con capacidad para recibir a embarcaciones más grandes. Una investigación de The New York Times revela que el nuevo proyecto no cumple con esas características."
+				data-publish-date="24 de junio de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/06/01/a-falta-de-reformas-los-panama-papers-podrian-provocar-mas-filtraciones/">
+					<div class="story-body">
+						<h3 class="kicker">Análisis</h3>
+
+						<h2 class="headline">
+							<span class="title">A falta de reformas, los ‘Panama Papers’ podrían provocar más filtraciones</span>
+							<time class="dateline">1 de junio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/05/27/world/27Panama-web1/27Panama-web1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/09/con-la-frase-panamaesmasquepapeles-panamenos-defienden-a-su-pais/">
+					<div class="story-body">
+						<h3 class="kicker">Panamá</h3>
+
+						<h2 class="headline">
+							<span class="title">Con la frase #PanamáEsMásQuePapeles, los panameños defienden a su país</span>
+							<time class="dateline">9 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/05/04/world/05panama-web/05panama-web-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/06/cambiara-algo-tras-las-revelaciones-de-los-panama-papers/">
+					<div class="story-body">
+						<h3 class="kicker">Editorial</h3>
+
+						<h2 class="headline">
+							<span class="title">¿Cambiará algo tras las revelaciones de los &#8216;Panama Papers&#8217;?</span>
+							<time class="dateline">6 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/06/opinion/06wed1/06wed1-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/06/22/el-hombre-que-mantiene-vivo-el-legado-de-los-musicos/">
+					<div class="story-body">
+						<h3 class="kicker">Música</h3>
+
+						<h2 class="headline">
+							<span class="title">El hombre que mantiene vivo el legado de los músicos</span>
+							<time class="dateline">22 de junio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/06/19/arts/0619DEATHAGENT1/0619DEATHAGENT1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+			
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":905,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004110231"/>
+<meta name="hdl" content="¿Amigo fiel o parásito? Científicos indagan sobre los orígenes del perro" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20160202" />
+<meta name="utime" content="20160202135302" />
+<meta name="ptime" content="20160202135302" />
+<meta name="DISPLAYDATE" content="Feb. 2, 2016" />
+<meta name="dat" content="Feb. 2, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="de-donde-vienen-los-perros" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/02/02/de-donde-vienen-los-perros/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="¿Amigo fiel o parásito? Científicos indagan sobre los orígenes del perro" />
+<meta property="og:description" content="Muchos investigadores consideran que hay muchas más posibilidades de que, en efecto, los perros se hayan inventado a sí mismos." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/01/19/science/19DOGSCOVER1/19DOGSCOVER1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-02-02" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/02/02/de-donde-vienen-los-perros/" />
+<meta property="twitter:title" content="¿Amigo fiel o parásito? Científicos indagan sobre los orígenes del perro" />
+<meta property="twitter:description" content="Muchos investigadores consideran que hay muchas más posibilidades de que, en efecto, los perros se hayan inventado a sí mismos." />
+<meta name="author" content="James Gorman" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por James Gorman" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="ciencia" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="ciencia" />
+<meta name="id" content="100000004110231"/>
+<meta name="wordCount" content="3018"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/02/02/de-donde-vienen-los-perros/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=02&amp;day=02&amp;name=de-donde-vienen-los-perros">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=2165">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/02\/02\/de-donde-vienen-los-perros\/"},"headline":"\u00bfAmigo fiel o par\u00e1sito? Cient\u00edficos indagan sobre los or\u00edgenes del perro","datePublished":"2016-02-02T13:53:02+00:00","dateModified":"2016-02-04T13:24:37+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/01\/19\/science\/19DOGSCOVER1\/19DOGSCOVER1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Muchos investigadores consideran que hay muchas m\u00e1s posibilidades de que, en efecto, los perros se hayan inventado a s\u00ed mismos."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/02/02/de-donde-vienen-los-perros/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/01/19/science/the-big-search-to-find-out-where-dogs-come-from.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/ciencia" />
+<title>¿Amigo fiel o parásito? Científicos indagan sobre los orígenes del perro &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/01/19/science/the-big-search-to-find-out-where-dogs-come-from.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/02/02/de-donde-vienen-los-perros/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-2165 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				¿Amigo fiel o parásito? Científicos indagan sobre los orígenes del perro
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/02/02/de-donde-vienen-los-perros/"
+					data-title="Noticias: ¿Amigo fiel o parásito? Científicos indagan sobre los orígenes del perro"
+					data-author="POR JAMES GORMAN"
+					data-media=""
+					data-description="Muchos investigadores consideran que hay muchas más posibilidades de que, en efecto, los perros se hayan inventado a sí mismos."
+					data-publish-date="2 de febrero de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/ciencia/">Ciencia</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">¿Amigo fiel o parásito? Científicos indagan sobre los orígenes del perro</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">James Gorman</span>
+</span>
+
+					<time class="dateline" datetime="2016-02-02">2 de febrero de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/02/02/de-donde-vienen-los-perros/"
+							data-title="Noticias: ¿Amigo fiel o parásito? Científicos indagan sobre los orígenes del perro"
+							data-author="POR JAMES GORMAN"
+							data-media=""
+							data-description="Muchos investigadores consideran que hay muchas más posibilidades de que, en efecto, los perros se hayan inventado a sí mismos."
+							data-publish-date="2 de febrero de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004147507" class="media photo lede layout-large-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/19/science/19DOGSCOVER1/19DOGSCOVER1-master1050-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/19/science/19DOGSCOVER1/19DOGSCOVER1-master1050-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/19/science/19DOGSCOVER1/19DOGSCOVER1-superJumbo-v2.jpg" data-mediaviewer-caption="Un cráneo canino en el Royal Belgian Institute of Natural Sciences. Los científicos todavía debaten acerca del lugar y del momento exactos en que se originó el vínculo entre humanos y canes. " data-mediaviewer-credit="Andrew Testa para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/19/science/19DOGSCOVER1/19DOGSCOVER1-master1050-v2.jpg"/>
+		<meta itemprop="height" content="590" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Un cráneo canino en el Royal Belgian Institute of Natural Sciences. Los científicos todavía debaten acerca del lugar y del momento exactos en que se originó el vínculo entre humanos y canes. </span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrew Testa para The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/01/19/science/the-big-search-to-find-out-where-dogs-come-from.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="268" data-total-count="268" id="story-continues-2" tabindex="-1">OXFORD, Inglaterra — Antes de que los seres humanos ordeñaran vacas, pastorearan cabras o criaran cerdos, antes de que inventaran la agricultura o la escritura, antes de que tuvieran hogares permanentes y, por supuesto, antes de que tuvieran gatos, tuvieron perros.</p>
+<p class="story-body-text story-content" data-para-count="400" data-total-count="668" id="story-continues-3" tabindex="-1">O los perros tuvieron a los humanos, dependiendo del lugar desde el que se mire la dinámica entre humanos y canes. Pero algunos científicos todavía debaten acerca del lugar y el momento exactos en que se originó ese vínculo. La <a href="http://topics.nytimes.com/top/reference/timestopics/organizations/o/oxford_university/index.html?inline=nyt-org" target="_blank">Universidad de Oxford</a> dirige un nuevo estudio de gran amplitud que cuenta con colaboradores en todo el mundo y del que se espera que pronto ofrezca algunas respuestas.</p>
+<p class="story-body-text story-content" data-para-count="730" data-total-count="1398" id="story-continues-4" tabindex="-1">Los científicos han propuesto diversas opciones sobre los orígenes de los perros. Para empezar, los investigadores están de acuerdo en que evolucionaron a partir de los antiguos lobos. Alguna vez existió entre los científicos la teoría de que un cazador-recolector visionario capturó un lobo cachorro de su madriguera y comenzó a criar lobos cada vez más mansos, así marcó los primeros pasos del largo camino que ha desembocado en las correas y los collares antipulgas. Por supuesto, esta explicación es demasiado simple pero, en esencia, la idea es que las personas se dedicaron a criar lobos para convertirlos en perros. Igual que ahora crían perros para que sean pequeños o grandes, o para ser pastores de ovejas.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="258" data-total-count="1656" id="story-continues-5" tabindex="-1">La opinión científica prevalente es que esa historia no resiste. Es difícil domesticar un lobo, aunque sea cachorro, así que muchos investigadores consideran que hay muchas más posibilidades de que, en efecto, los perros se hayan inventado a sí mismos.</p>
+<p class="story-body-text story-content" data-para-count="469" data-total-count="2125" id="story-continues-6" tabindex="-1">Imaginemos una manada de lobos antiguos poco tímidos cerca de un grupo de cazadores nómadas. Los lobos consumían los restos de las presas de los cazadores. Evolucionaron cerca de los asentamientos humanos y se volvieron cada vez más mansos, además de producir una descendencia abundante porque era relativamente fácil conseguir comida. Llegado el momento, el lobo se convirtió en ese pillo que no para de mover la cola y ahora llamamos el mejor amigo del hombre.</p>
+<p class="story-body-text story-content" data-para-count="556" data-total-count="2681" id="story-continues-7" tabindex="-1">Algunos investigadores cuestionan que los perros experimenten sentimientos como amor y lealtad. Se preguntan si el comportamiento de los perros se explica como una evolución de su propio instinto. Es más fácil sobrevivir como un parásito que tener que cazar alces. Raymond Coppinger, profesor emérito de biología en Hampshire College, subrayó en su conocido libro “<a href="http://www.press.uchicago.edu/ucp/books/book/chicago/D/bo3644841.html">Dogs</a>”, publicado en 2001, que “mejor amigo” no es una “definición ecológica”. Escribió que “el perro doméstico quizá evolucionó para convertirse en un parásito”.</p>
+<p class="story-body-text story-content" data-para-count="364" data-total-count="3045" id="story-continues-8" tabindex="-1">Los investigadores también señalan que de los mil millones de perros que se calcula hay en el mundo, solo una cuarta parte son mascotas. La gran mayoría de los perros corren con toda libertad por los pueblos, encuentran comida entre la basura, esperan que alguien les regale algo y, además, ocasionan decenas de miles de muertes humanas cada año por la rabia.</p>
+<p class="story-body-text story-content" data-para-count="64" data-total-count="3109" id="story-continues-9" tabindex="-1">Suelen ser amistosos, pero no necesariamente los mejores amigos.</p>
+<p class="story-body-text story-content" data-para-count="360" data-total-count="3469" id="story-continues-10" tabindex="-1">Los perros modernos son muy diferentes de los lobos modernos. Comen sin problemas enfrente de las personas, los lobos no. Sus cráneos son más anchos y sus hocicos más cortos. No viven en manada cuando están solos. Algunos científicos se burlan de las estrategias de entrenamiento canino que requieren que el humano se comporte como el líder de la manada.</p>
+<p class="story-body-text story-content" data-para-count="525" data-total-count="3994" id="story-continues-11" tabindex="-1">Los lobos forman parejas estables y los papás lobo ayudan con los pequeños mientras que los perros son totalmente promiscuos y a los machos no les importa su descendencia. Sin embargo, es fácil que perros y lobos se crucen y algunos científicos ni siquiera están convencidos de que sean especies distintas. Este escepticismo es una muestra del debate científico sobre cómo debe definirse una especie o en qué medida la categoría es un hecho de la naturaleza y no una línea arbitraria que pintamos los seres humanos.</p>
+<figure id="media-100000004147509" class="media photo media-100000004147509 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/19/science/19DOGSCOVER2/19DOGSCOVER1-1452889976942-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-13">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/19/science/19DOGSCOVER2/19DOGSCOVER1-1452889976942-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/19/science/19DOGSCOVER2/19DOGSCOVER1-1452889976942-superJumbo.jpg" data-mediaviewer-caption="Greger Larson, a biologist in the archeology department at the University of Oxford, hopes a large database of ancient DNA will help determine where and when the domestication of dogs occurred." data-mediaviewer-credit="Andrew Testa for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/19/science/19DOGSCOVER2/19DOGSCOVER1-1452889976942-master675.jpg"/>
+		<meta itemprop="height" content="423" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Greger Larson, a biologist in the archeology department at the University of Oxford, hopes a large database of ancient DNA will help determine where and when the domestication of dogs occurred.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrew Testa for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="18" data-total-count="4012" id="story-continues-13" tabindex="-1"><strong>Rastrear el origen</strong></p>
+<p class="story-body-text story-content" data-para-count="481" data-total-count="4493" id="story-continues-14" tabindex="-1">Si las divisiones actuales entre las especies son turbias, en el pasado hay mucha más oscuridad. Existe un consenso generalizado entre los científicos sobre las pruebas de que los perros se domesticaron hace unos 15.000 años. Hace 14.000 años, la gente ya enterraba perros, algunas veces junto a seres humanos. Pero algunos biólogos sugieren, a partir de pruebas de ADN y la forma de cráneos antiguos, que los humanos comenzaron a domesticar perros hace más de 30.000 años.</p>
+<p class="story-body-text story-content" data-para-count="304" data-total-count="4797" id="story-continues-15" tabindex="-1">En cuanto al lugar en que ocurrió este proceso, algunos investigadores que estudian el ADN de perros y lobos (en su mayoría de fuentes modernas, aunque sí se tienen fuentes antiguas) han sostenido en años recientes que los perros se originaron en el este de Asia, Mongolia, Siberia, Europa y África.</p>
+<p class="story-body-text story-content" data-para-count="466" data-total-count="5263" id="story-continues-16" tabindex="-1">Uno de los motivos por los que existen diferentes teorías, según Greger Larson, biólogo del departamento de Arqueología de la Universidad de Oxford, es porque la genética de los perros es un enredo. En una entrevista realizada en su oficina en noviembre, enfatizó que la mayoría de las razas de perros se inventaron en el siglo XIX, en lo que él llama “el torbellino de mezclas por el loco frenesí de la cría de perros en la época victoriana europea”.</p>
+<p class="story-body-text story-content" data-para-count="247" data-total-count="5510" id="story-continues-17" tabindex="-1">Esas mezclas, además de la reproducción aleatoria de los propios perros y el cruce con lobos en diferentes momentos de los últimos 15.000 años crearon un “caldo” en la genética de los perros que hace difícil identificar sus ingredientes.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="522" data-total-count="6032" id="story-continues-18" tabindex="-1">Larson está convencido de que para encontrar la receta es necesario crear una gran base de datos sobre ADN antiguo y combinarla con los datos de la genética canina moderna. Junto con su colega, Keith Dobney, de la Universidad de Aberdeen, convenció a los investigadores más influyentes para que se unieran a <a href="http://www.palaeobarn.com/deciphering-dog-domestication-through-combined-ancient-dna-and-geometric-morphometric-approach">un proyecto amplio</a>, con financiamiento de unos 2,5 millones de dólares del <a href="http://www.nerc.ac.uk/">Natural Environment Research Council de Inglaterra</a> y el <a href="https://erc.europa.eu/">European Research Council</a>, cuyo objetivo es analizar huesos antiguos y su ADN.</p>
+<p class="story-body-text story-content" data-para-count="260" data-total-count="6292" id="story-continues-19" tabindex="-1">Robert Wayne, especialista en biología evolutiva de UCLA que estudia el origen de los perros y es parte de la investigación, indicó que “prácticamente todas las personas que trabajan en el área de genética canina están participando en ese proyecto”.</p>
+<p class="story-body-text story-content" data-para-count="115" data-total-count="6407" id="story-continues-20" tabindex="-1">Para Wayne eso ya supone un triunfo. “Casi todos los grupos tienen una hipótesis diferente acerca del origen”.</p>
+<p class="story-body-text story-content" data-para-count="360" data-total-count="6767" id="story-continues-21" tabindex="-1">Pero Larson convenció a todos de una idea sencilla: cuantos más datos tengan, mientras más cooperen entre sí, mejores serán las respuestas. Su personalidad ha sido un factor esencial para promover el trabajo en equipo, dijo Wayne, quien describió a Larson como “muy desenvuelto y sociable”. Añadió que, además, “ha logrado involucrar a todos”.</p>
+<p class="story-body-text story-content" data-para-count="526" data-total-count="7293" id="story-continues-22" tabindex="-1">Los científicos de museos y universidades que participan en este proyecto han dado acceso a sus colecciones. Así que Larson y su equipo de Oxford han viajado por todo el mundo para recopilar datos, tomar muestras diminutas de huesos y medidas de dientes, mandíbulas y algunas veces cráneos casi completos de perros, lobos y cánidos antiguos y recientes. Casi ha concluido la fase de recopilación, según Larson, que espera tener al final el ADN de unas 1500 muestras, y fotografías y medidas detalladas de varios miles.</p>
+<p class="story-body-text story-content" data-para-count="110" data-total-count="7403" id="story-continues-23" tabindex="-1">Este año comenzarán a publicarse artículos científicos sobre este trabajo en Oxford y otras instituciones.</p>
+<p class="story-body-text story-content" data-para-count="145" data-total-count="7548" id="story-continues-24" tabindex="-1">Larson apuesta por que el proyecto podrá determinar si el proceso de domesticación ocurrió hace unos 15.000 o 30.000 años, y en qué región.</p>
+<p class="story-body-text story-content" data-para-count="482" data-total-count="8030" id="story-continues-25" tabindex="-1">No será la fecha, ubicación geosatelital o nombre del cazador antiguo que quisieran algunos amantes de los perros. Pero será un logro importante en el mundo de la ciencia canina y un punto de referencia en el análisis de ADN antiguo para mostrar evolución, migraciones y descendencia. Lo hará de la misma manera de la que estudios del ADN de homínidos antiguos han mostrado la forma en que los humanos de la antigüedad poblaron el globo y se mezclaron con los neandertales.</p>
+<p class="story-body-text story-content" data-para-count="152" data-total-count="8182" id="story-continues-26" tabindex="-1">Pero ¿por qué es importante saber cómo fueron domesticados los perros más allá del interés, o casi obsesión, de muchas personas por sus mascotas?</p>
+<p class="story-body-text story-content" data-para-count="66" data-total-count="8248" id="story-continues-27" tabindex="-1">Porque el nacimiento de los perros puede haber sido un parteaguas.</p>
+<p class="story-body-text story-content" data-para-count="201" data-total-count="8449" id="story-continues-28" tabindex="-1">“Quizá la domesticación del perro dispara de alguna forma un cambio en la forma en que los seres humanos se relacionan e interactúan con su ambiente”, agregó. “No creo que sea disparatado”.</p>
+<p class="story-body-text story-content" data-para-count="25" data-total-count="8474" id="story-continues-29" tabindex="-1"><strong>Curiosidad y disposición</strong></p>
+<p class="story-body-text story-content" data-para-count="384" data-total-count="8858" id="story-continues-30" tabindex="-1">Es normal para Larson tratar con puntos de vista que varían mucho. Es estadounidense, pero hace poco se convirtió también en ciudadano británico. Sus padres son estadounidenses y visitaba Estados Unidos con regularidad cuando era niño, pero nació en Baréin y creció en Turquía y Japón, donde sus padres trabajaron como maestros de escuela en bases militares estadounidenses.</p>
+<p class="story-body-text story-content" data-para-count="614" data-total-count="9472" id="story-continues-31" tabindex="-1">Se graduó en Claremont McKenna College en California y recibió su título de doctorado de Oxford. Entre la preparatoria y la universidad pasó un año buscando el cauce de un antiguo río en Turkmenistán y otros dos años estableciendo una empresa de consultoría ambiental en Azerbaiyán. En sus años universitarios mostró interés por la ciencia y cursó estudios ambientales, de economía y política, pero no había decidido qué camino profesional tomar. Su carrera se desarrolló a partir de su intensa curiosidad, su habilidad para hacer amigos y su total disposición para aprovechar cada oportunidad.</p>
+<p class="story-body-text story-content" data-para-count="62" data-total-count="9534" id="story-continues-32" tabindex="-1">En una ocasión logró unirse a una excavación arqueológica.</p>
+<p class="story-body-text story-content" data-para-count="269" data-total-count="9803" id="story-continues-33" tabindex="-1">Estaba en Ashgabat, Turkmenistán, y un hombre que le había ayudado a rentar un viejo vehículo soviético para explorar el desierto le comentó que iban a llegar unos occidentales para una excavación. Se las ingenió para conseguir un lugar en uno de los vehículos.</p>
+<p class="story-body-text story-content" data-para-count="68" data-total-count="9871" id="story-continues-34" tabindex="-1">“Creo que todos pensaron que iba con alguien más”, dijo Larson.</p>
+<p class="story-body-text story-content" data-para-count="182" data-total-count="10053" id="story-continues-35" tabindex="-1">Para cuando el grupo se detuvo a descansar y alguien le preguntó quién era, era demasiado tarde para preguntar si en realidad debía estar ahí. “Fui todo un intruso”, aclaró.</p>
+<p class="story-body-text story-content" data-para-count="600" data-total-count="10653" id="story-continues-36" tabindex="-1">Pero podía mover tierra y hablar ruso, y contaba con algunas habilidades adquiridas en la universidad —como los juegos al beber— muy valoradas por las noches. Según relata, tuvo suerte porque los investigadores que iban a la excavación eran “personalidades importantes en la arqueología neolítica británica”. Entre ellos estaba Chris Gosden, el director del departamento de Arqueología Europea en Oxford que más tarde lo invitó a cursar una maestría de un año en la facultad de Arqueología de Oxford. Eso lo condujo al programa de doctorado después de trabajar en Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="282" data-total-count="10935" id="story-continues-37" tabindex="-1">La idea del proyecto actual surgió porque se hartó de no encontrar pruebas sobre ADN antiguo en los artículos relacionados con el origen de los perros. Se comunicó en 2011 con el Dr. Dobney, de la Universidad de Aberdeen, y sentenció: “Vamos a concentrarnos en los perros”.</p>
+<p class="story-body-text story-content" data-para-count="401" data-total-count="11336" id="story-continues-38" tabindex="-1">Después de recibir los fondos de Inglaterra, organizó junto con Dobney una conferencia en Aberdeen, Escocia. Reunió a todos los investigadores especializados en el origen de los perros que pudo. Argumentó ante el grupo que, a pesar de que tenían diferentes puntos de vista, a todos les interesaba contar con los mejores datos posibles, independientemente de las conclusiones a las que condujeran.</p>
+<p class="story-body-text story-content" data-para-count="103" data-total-count="11439" id="story-continues-39" tabindex="-1">“Si tenemos que mordernos la lengua, pues nos la morderemos”, reconoció. “Así es la ciencia”.</p>
+<p class="story-body-text story-content" data-para-count="26" data-total-count="11465" id="story-continues-40" tabindex="-1"><strong>Un cráneo de 32.000 años</strong></p>
+<p class="story-body-text story-content" data-para-count="510" data-total-count="11975" id="story-continues-41" tabindex="-1">Mietje Germonpré, paleontóloga del <a href="https://www.naturalsciences.be/">Royal Belgian Institute of Natural Sciences</a>, está entre los científicos que participan en el proyecto de los perros. Está entre los muchos autores de un <a href="http://science.sciencemag.org/content/342/6160/871">artículo publicado en 2013 en Science</a> que identificaron el cráneo de uno de los primeros perros, de unos 32.000 años de antigüedad, recuperado en una cueva belga en Goyet. Wayne, que trabaja en UCLA, fue autor sénior de ese artículo y Olaf Thalmann, de la Universidad de Turku en Finlandia, fue el primer autor.</p>
+<p class="story-body-text story-content" data-para-count="311" data-total-count="12286" id="story-continues-42" tabindex="-1">En el proyecto sobre perros de Larson suele suceder que, aunque él estuvo en desacuerdo con la mayoría de los hallazgos del artículo —pues sostiene que no había evidencia suficiente para decir que el cráneo de Goyet era un perro—, todos los autores del artículo trabajan en el proyecto grande con él.</p>
+<p class="story-body-text story-content" data-para-count="232" data-total-count="12518" id="story-continues-43" tabindex="-1">En noviembre, en Bruselas, y con el valioso fósil en las manos, Germonpré señaló que el cráneo antiguo era ancho, con dientes apiñonados y hocico corto. Y que todas estas características le indican que no se trata de un lobo.</p>
+<p class="story-body-text story-content" data-para-count="48" data-total-count="12566" id="story-continues-44" tabindex="-1">“A mí me parece que es un perro”, señaló.</p>
+<figure id="media-100000004147511" class="media photo media-100000004147511 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/19/science/19DOGSJP2/19DOGSJP2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-46">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/19/science/19DOGSJP2/19DOGSJP2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/19/science/19DOGSJP2/19DOGSJP2-superJumbo.jpg" data-mediaviewer-caption="Jawbone and teeth fragments housed at the Oxford Museum of Natural History." data-mediaviewer-credit="Andrew Testa for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/19/science/19DOGSJP2/19DOGSJP2-master675.jpg"/>
+		<meta itemprop="height" content="424" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Jawbone and teeth fragments housed at the Oxford Museum of Natural History.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrew Testa for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="167" data-total-count="12733" id="story-continues-46" tabindex="-1">Estudios del ADN mitocondrial, que se transmite solo a través de las hembras, también indicaron que el cráneo no pertenecía a un lobo, según el artículo de 2013.</p>
+<p class="story-body-text story-content" data-para-count="188" data-total-count="12921" id="story-continues-47" tabindex="-1">Germonpré cree que los humanos domesticaron a los perros tiempo antes de que muriera este ejemplar y se inclina a pensar que los humanos los criaron deliberadamente a partir de los lobos.</p>
+<p class="story-body-text story-content" data-para-count="338" data-total-count="13259" id="story-continues-48" tabindex="-1">Tiene otra prueba: la reconstrucción del cráneo de un cánido de unos 30.000 años de antigüedad que se encontró cerca de Predmostí, en la República Checa, con un hueso en la boca. Sostiene que el hueso es parte de la prueba de que se enterró a este animal con cuidado. “Creemos que se colocó ahí deliberadamente”, concluyó.</p>
+<p class="story-body-text story-content" data-para-count="277" data-total-count="13536" id="story-continues-49" tabindex="-1">Pero reconoce que estas afirmaciones son controvertidas y está dispuesta, al igual que el resto de las personas involucradas en la ciencia canina, a tomar el riesgo de dañar los fósiles, si haciéndolo es posible obtener más información del ADN mitocondrial y del nuclear.</p>
+<p class="story-body-text story-content" data-para-count="300" data-total-count="13836" id="story-continues-50" tabindex="-1">Para reducir ese riesgo al mínimo, dialogó con Ardern Hulme-Beaman, investigador posdoctoral en el equipo de Oxford, para decidir juntos dónde cortar. Se acercaba el final de meses de viajes a Rusia, Turquía, Estados Unidos y toda Europa para tomar muestras de cráneos y mandíbulas de cánidos.</p>
+<p class="story-body-text story-content" data-para-count="471" data-total-count="14307" id="story-continues-51" tabindex="-1">Junto con Allowyn Evin, que ahora trabaja para el <a href="http://www.cnrs.fr/accueil.php" target="_blank">Centro Nacional de Investigación Científica</a> en Montpellier, Francia, también tomó muchas fotografías de cada mandíbula y cráneo para aplicar morfometría geométrica. Con el software se procesan fotografías detalladas de todos los ángulos y se recrea un modelo en tercera dimensión que puede dar mucha más información acerca de la forma de un hueso que las habituales medidas bidimensionales de largo y ancho.</p>
+<p class="story-body-text story-content" data-para-count="439" data-total-count="14746" id="story-continues-52" tabindex="-1">Germonpré y Hulme-Beaman convinieron en cortar sobre un punto en el interior del cráneo. En el laboratorio, Hulme-Beaman utilizó un pequeño taladro eléctrico con una navaja de corte para retirar una porción del tamaño de un pedazo de nuez picada. Se desprendió un olor acre a quemado, lo cual indicó que el material orgánico estaba intacto dentro del hueso; eso es una buena señal en cuanto a las posibilidades de recuperar ADN.</p>
+<p class="story-body-text story-content" data-para-count="472" data-total-count="15218" id="story-continues-53" tabindex="-1">De regreso en Oxford, los investigadores intentarán utilizar las técnicas más actuales para obtener la mayor cantidad posible de ADN de la muestra. No hay un fragmento de código que diga “lobo” o “perro”, al igual que no hay una sola característica del cráneo que defina una categoría. Lo que intentan establecer los genetistas es cuán diferente es el ADN de un animal con respecto a otro. Al añadir ADN antiguo se tienen muchos más puntos de referencia.</p>
+<p class="story-body-text story-content" data-para-count="431" data-total-count="15649" id="story-continues-54" tabindex="-1">Larson espera poder identificar en algunos lobos antiguos una sección de ADN que se haya transmitido a descendientes más parecidos a los perros y, por último, a los perros modernos. También espera poder identificar cambios en los cráneos o mandíbulas de esos lobos que muestren modificaciones hacia formas más parecidas a los perros, y que eso ayude a establecer un periodo más estrecho para el origen de la domesticación.</p>
+<p class="story-body-text story-content" data-para-count="320" data-total-count="15969" id="story-continues-55" tabindex="-1">La suposición usual sobre los animales domésticos es que el proceso de domesticación y crianza ocurrió de una sola vez. Pero no necesariamente ocurrió así. Larson y Dobney demostraron que a los cerdos se les domesticó en dos ocasiones, una en Anatolia y una en China. Puede haber ocurrido lo mismo con los perros.</p>
+<p class="story-body-text story-content" data-para-count="17" data-total-count="15986" id="story-continues-56" tabindex="-1"><strong>Solo el principio</strong></p>
+<p class="story-body-text story-content" data-para-count="222" data-total-count="16208" id="story-continues-57" tabindex="-1">Aunque casi terminaron la recolección de huesos antiguos, Larson todavía se encuentra en negociaciones con investigadores chinos para obtener muestras de esa parte del mundo. Son necesarias. Tiene esperanzas de lograrlo.</p>
+<p class="story-body-text story-content" data-para-count="318" data-total-count="16526" id="story-continues-58" tabindex="-1">Si todo sale bien, declaró Larson, el proyecto publicará un artículo muy importante en el que todos los participantes describirán sus hallazgos generales. Y en los siguientes dos años todos los investigadores seguirán utilizando los datos comunes para continuar con la publicación de sus hallazgos individuales.</p>
+<p class="story-body-text story-content" data-para-count="208" data-total-count="16734" id="story-continues-59" tabindex="-1">No es la única iniciativa en marcha. Wayne, en UCLA, explicó que se estaba formando un grupo en China con el objetivo de secuenciar 10.000 genomas de perros. Tanto él como Larson forman parte de ese grupo.</p>
+<p class="story-body-text story-content" data-para-count="167" data-total-count="16901" id="story-continues-60" tabindex="-1">Larson está emocionado por la cantidad de datos recabados. Todavía no está listo para hablar acerca de las conclusiones de esos datos o cuán significativas serán.</p>
+<p class="story-body-text story-content" data-para-count="304" data-total-count="17205" id="story-continues-61" tabindex="-1">Pero está cada vez más seguro de que encontrarán lo que quieren y que tendrán más posibilidades de responder la espinosa pregunta de en qué momento y en qué lugar el poder despedazador de la mandíbula del lobo dio paso por primera vez a la persuasiva fuerza del toque de la nariz fría del perro.</p>
+<p class="story-body-text story-content" data-para-count="60" data-total-count="17265" id="story-continues-62" tabindex="-1">“Estoy empezando a creerme mi propio cuento”, concluyó.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/02/02/de-donde-vienen-los-perros/"
+				data-title="Noticias: ¿Amigo fiel o parásito? Científicos indagan sobre los orígenes del perro"
+				data-author="POR JAMES GORMAN"
+				data-media=""
+				data-description="Muchos investigadores consideran que hay muchas más posibilidades de que, en efecto, los perros se hayan inventado a sí mismos."
+				data-publish-date="2 de febrero de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":622,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

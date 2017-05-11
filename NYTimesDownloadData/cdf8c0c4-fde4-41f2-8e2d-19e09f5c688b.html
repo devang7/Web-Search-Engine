@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004308808"/>
+<meta name="hdl" content="Las consecuencias ocultas de un accidente nuclear en España causado por Estados Unidos" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20160621" />
+<meta name="utime" content="20160621132546" />
+<meta name="ptime" content="20160621132546" />
+<meta name="DISPLAYDATE" content="Jun. 21, 2016" />
+<meta name="dat" content="Jun. 21, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="las-consecuencias-ocultas-de-un-accidente-nuclear-en-espana-causado-por-estados-unidos" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/06/21/las-consecuencias-ocultas-de-un-accidente-nuclear-en-espana-causado-por-estados-unidos/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Las consecuencias ocultas de un accidente nuclear en España causado por Estados Unidos" />
+<meta property="og:description" content="Una investigación de The New York Times revela cómo las autoridades militares de EE. UU.  minimizaron los daños a la salud que causó el choque de un avión con cuatro bombas de hidrógeno en una localidad andaluza en 1966." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM9-copy/13PLUTONIUM9-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-06-21" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/06/21/las-consecuencias-ocultas-de-un-accidente-nuclear-en-espana-causado-por-estados-unidos/" />
+<meta property="twitter:title" content="Las consecuencias ocultas de un accidente nuclear en España causado por Estados Unidos" />
+<meta property="twitter:description" content="Una investigación de The New York Times revela cómo las autoridades militares de EE. UU.  minimizaron los daños a la salud que causó el choque de un avión con cuatro bombas de hidrógeno en una localidad andaluza en 1966." />
+<meta name="author" content="Dave Philips" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Dave Philips" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="europa" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="europa" />
+<meta name="id" content="100000004308808"/>
+<meta name="wordCount" content="5109"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/06/21/las-consecuencias-ocultas-de-un-accidente-nuclear-en-espana-causado-por-estados-unidos/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=06&amp;day=21&amp;name=las-consecuencias-ocultas-de-un-accidente-nuclear-en-espana-causado-por-estados-unidos">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=15223">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/06\/21\/las-consecuencias-ocultas-de-un-accidente-nuclear-en-espana-causado-por-estados-unidos\/"},"headline":"Las consecuencias ocultas de un accidente nuclear en Espa\u00f1a causado por Estados Unidos","datePublished":"2016-06-21T13:25:46+00:00","dateModified":"2016-06-21T13:58:55+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/06\/09\/universal\/es\/13PLUTONIUM9-copy\/13PLUTONIUM9-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Una investigaci\u00f3n de The New York Times revela c\u00f3mo las autoridades militares de EE. UU.  minimizaron los da\u00f1os a la salud que caus\u00f3 el choque de un avi\u00f3n con cuatro bombas de hidr\u00f3geno en una localidad andaluza en 1966."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/06/21/las-consecuencias-ocultas-de-un-accidente-nuclear-en-espana-causado-por-estados-unidos/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/06/20/us/decades-later-sickness-among-airmen-after-a-hydrogen-bomb-accident.html?action=click&amp;#038;contentCollection=Europe&amp;#038;module=RelatedCoverage&amp;#038;region=Marginalia&amp;#038;pgtype=article" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/europa" />
+<title>Las consecuencias ocultas de un accidente nuclear en España causado por Estados Unidos &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/06/20/us/decades-later-sickness-among-airmen-after-a-hydrogen-bomb-accident.html?action=click&#038;contentCollection=Europe&#038;module=RelatedCoverage&#038;region=Marginalia&#038;pgtype=article" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/06/21/las-consecuencias-ocultas-de-un-accidente-nuclear-en-espana-causado-por-estados-unidos/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-15223 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Las consecuencias ocultas de un accidente nuclear en España causado por Estados Unidos
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/06/21/las-consecuencias-ocultas-de-un-accidente-nuclear-en-espana-causado-por-estados-unidos/"
+					data-title="Noticias: Las consecuencias ocultas de un accidente nuclear en España causado por Estados Unidos"
+					data-author="POR DAVE PHILIPS"
+					data-media=""
+					data-description="Una investigación de The New York Times revela cómo las autoridades militares de EE. UU.  minimizaron los daños a la salud que causó el choque de un avión con cuatro bombas de hidrógeno en una localidad andaluza en 1966."
+					data-publish-date="21 de junio de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/28Mfc29">http://nyti.ms/28Mfc29</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/europa/">Europa</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Las consecuencias ocultas de un accidente nuclear en España causado por Estados Unidos</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Dave Philips</span>
+</span>
+
+					<time class="dateline" datetime="2016-06-21">21 de junio de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/06/21/las-consecuencias-ocultas-de-un-accidente-nuclear-en-espana-causado-por-estados-unidos/"
+							data-title="Noticias: Las consecuencias ocultas de un accidente nuclear en España causado por Estados Unidos"
+							data-author="POR DAVE PHILIPS"
+							data-media=""
+							data-description="Una investigación de The New York Times revela cómo las autoridades militares de EE. UU.  minimizaron los daños a la salud que causó el choque de un avión con cuatro bombas de hidrógeno en una localidad andaluza en 1966."
+							data-publish-date="21 de junio de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004471062" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM9-copy/13PLUTONIUM9-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM9-copy/13PLUTONIUM9-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM9-copy/13PLUTONIUM9-superJumbo.jpg" data-mediaviewer-caption="John H. Garman era miembro de la Fuerza Aérea cuando, en 1966, un bombardero B-52 durante una misión de patrullaje habitual durante la Guerra Fría, chocó con un avión de carga sobre la costa española y dejó caer cuatro bombas sobre Palomares. " data-mediaviewer-credit="Raymond McCrea Jones para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM9-copy/13PLUTONIUM9-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">John H. Garman era miembro de la Fuerza Aérea cuando, en 1966, un bombardero B-52 durante una misión de patrullaje habitual durante la Guerra Fría, chocó con un avión de carga sobre la costa española y dejó caer cuatro bombas sobre Palomares. </span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Raymond McCrea Jones para The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/06/20/us/decades-later-sickness-among-airmen-after-a-hydrogen-bomb-accident.html?action=click&#038;contentCollection=Europe&#038;module=RelatedCoverage&#038;region=Marginalia&#038;pgtype=article&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="309" data-total-count="309" id="story-continues-2" tabindex="-1">Sonaron las alarmas en las bases de la Fuerza Aérea estadounidense en España y los oficiales pidieron a todos los soldados que pudieron reunir que se subieran a unos autobuses. Tenían una misión secreta. Eran cocineros, responsables de almacén e incluso miembros de la banda musical de una base cercana.</p>
+<p class="story-body-text story-content" data-para-count="288" data-total-count="597" id="story-continues-3" tabindex="-1">Sucedió una noche de invierno de 1966. Un bombardero B-52 cargado de armamento que participaba en una misión habitual en plena Guerra Fría había chocado con un avión cisterna sobre la costa española. Perdió cuatro bombas de hidrógeno que cayeron sobre un pueblo llamado Palomares.</p>
+<p class="story-body-text story-content" data-para-count="306" data-total-count="903" id="story-continues-4" tabindex="-1">Fue uno de los accidentes nucleares más importantes de la historia y quisieron limpiar su rastro rápido y en silencio. Cuando los hombres que se subían a los autobuses escucharon que iban a limpiar material radiactivo la única información adicional que recibieron fue un &#8220;no se preocupen&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="268" data-total-count="1171" id="story-continues-5" tabindex="-1">Frank Thompson, que entonces tenía 22 años y tocaba el trombón, pasó días limpiando tierra contaminada. No tenía ropa especial que lo protegiera de la radiactividad. &#8220;Nos dijeron que era seguro e imagino que fuimos suficientemente tontos para creer&#8221;.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="482" data-total-count="1653" id="story-continues-6" tabindex="-1">Thompson, que ahora tiene 72 y sufre cáncer de pulmón, hígado y riñón, paga 2200 dólares al mes por un tratamiento que saldría gratis en un hospital de veteranos si la Fuerza Aérea reconociera que fue víctima de la radiación. Pero durante medio siglo, la institución ha mantenido que en el lugar donde cayeron las bombas no hubo contaminación. Sostiene que la posibilidad de contaminarse fue mínima y que los 1600 soldados que trabajaron en el lugar estaban protegidos.</p>
+<p class="story-body-text story-content" data-para-count="208" data-total-count="1861" id="story-continues-7" tabindex="-1">Pero después de entrevistas con docenas de hombres como Thompson, y con detalles que nunca antes habían sido publicados de informes que acaban de ser desclasificados, la historia puede ser escrita de nuevo.</p>
+<p class="story-body-text story-content" data-para-count="468" data-total-count="2329" id="story-continues-8" tabindex="-1">La radiación cerca de las bombas llegó a niveles tan altos que superaba la capacidad de los medidores de radiactividad militares. Los soldados se pasaron meses moviendo tierra tóxica tan solo con palas y lo único que llevaban puesto eran sus uniformes de algodón. Cuando las pruebas hechas durante el proceso de limpieza mostraron que los hombres estaban contaminados por el plutonio, la Fuerza Aérea descalificó los resultados por &#8220;poco realistas&#8221;.</p>
+<figure id="media-100000004471110" class="media photo media-100000004471110 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM12-copy/13PLUTONIUM12-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-10">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM12-copy/13PLUTONIUM12-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM12-copy/13PLUTONIUM12-superJumbo.jpg" data-mediaviewer-caption="Arthur Kindler, at right in center photo, was among those Air Force personnel responding to the crash." data-mediaviewer-credit="Raymond McCrea Jones for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM12-copy/13PLUTONIUM12-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Arthur Kindler, at right in center photo, was among those Air Force personnel responding to the crash.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Raymond McCrea Jones for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="249" data-total-count="2578" id="story-continues-10" tabindex="-1">En las décadas siguientes, la Fuerza Aérea ha mantenido las pruebas de radiación fuera de los historiales médicos de los soldados y no ha aceptado repetir los exámenes incluso cuando la propia fuerza aérea realizó estudios que lo aconsejaban.</p>
+<p class="story-body-text story-content" data-para-count="505" data-total-count="3083" id="story-continues-11" tabindex="-1">Muchos de aquellos soldados ahora dicen que sufren los efectos de la contaminación por plutonio. De 40 veteranos que trabajaron tras el accidente y que The New York Times pudo ubicar, 21 tuvieron cáncer. Nueve murieron. Es imposible relacionar el cáncer de un individuo con una fuente de radiación específica. Y no se ha hecho ningún estudio que determine si la prevalencia de la enfermedad es alta. La única prueba con la que cuentan son las anécdotas de los hombres a los que vieron marchitarse.</p>
+<p class="story-body-text story-content" data-para-count="226" data-total-count="3309" id="story-continues-12" tabindex="-1">“John Young, muerto de cáncer&#8230; Dudley Easton, cáncer&#8230; Furmanksi, cáncer”, dijo Larry Slone, de 76 años, durante una entrevista en la que luchaba contra los temblores provocados por un desorden neurológico.</p>
+<p class="story-body-text story-content" data-para-count="320" data-total-count="3629" id="story-continues-13" tabindex="-1">En el lugar del accidente, recuerda Slone, le dieron una bolsa de plástico y le dijeron que recogiera fragmentos radiactivos con las manos. &#8220;Vinieron un par de veces con un contador Geiger y se salía de la escala por arriba&#8221;, dijo. &#8220;Pero ni anotaron mi nombre ni me dieron ningún seguimiento&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="564" data-total-count="4193" id="story-continues-14" tabindex="-1">El seguimiento de Palomares, el pueblo español donde cayeron las bombas también ha sido aleatorio según los documentos ahora desclasificados. Estados Unidos prometió pagar la sanidad de sus habitantes pero sus transferencias fueron escasas. Los científicos españoles utilizaban muchas veces equipamiento obsoleto o inservible y no tenían los recursos suficientes para el seguimiento de casos entre los que se incluían los niños con leucemia. Aún hoy, las zonas valladas todavía están contaminadas y se sabe poco de su impacto a largo plazo en la salud.</p>
+<p class="story-body-text story-content" data-para-count="398" data-total-count="4591" id="story-continues-15" tabindex="-1">Muchos de los estadounidenses que limpiaron las bombas aún intentan que se reconozca su derecho a recibir cobertura sanitaria y una compensación por discapacidad del Departamento de Asuntos de los Veteranos, pero esa oficina trabaja con la información que proporciona la Fuerza Aérea y como en sus archivos no figuran heridos en Palomares, el departamento rechaza las peticiones una y otra vez.</p>
+<p class="story-body-text story-content" data-para-count="401" data-total-count="4992" id="story-continues-16" tabindex="-1">La Fuerza Aérea niega que alguno de los 500 veteranos que limpiaron un accidente similar en Thule, Groenlandia, en 1969, sufriera algún daño. Esos veteranos trataron de demandar al Departamento de Defensa en 1995, pero se desestimó la causa porque la ley federal protege al Ejército de demandas por negligencia presentadas por soldados. Todos los demandantes han muerto de cáncer desde entonces.</p>
+<p class="story-body-text story-content" data-para-count="379" data-total-count="5371" id="story-continues-17" tabindex="-1">En un comunicado, el Servicio Médico de la Fuerza Aérea dijo que recientemente usó técnicas modernas para reevaluar el riesgo por radiación de los veteranos que limpiaron Palomares y &#8220;no se observaron efectos agudos y graves en la salud, y que el riesgo a largo plazo de presentar una alta incidencia a sufrir cáncer en los huesos, hígado y pulmones era bajo&#8221;.</p>
+<figure id="media-100000004471108" class="media photo media-100000004471108 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM4-copy/13PLUTONIUM4-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-19">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM4-copy/13PLUTONIUM4-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM4-copy/13PLUTONIUM4-superJumbo.jpg" data-mediaviewer-caption="United States Air Force personnel working on cleanup and recovery were often fed local produce from Palomares." data-mediaviewer-credit="Kit Talbot"  itemprop="url" itemid="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM4-copy/13PLUTONIUM4-master675.jpg"/>
+		<meta itemprop="height" content="472" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">United States Air Force personnel working on cleanup and recovery were often fed local produce from Palomares.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Kit Talbot
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="553" data-total-count="5924" id="story-continues-19" tabindex="-1">Las consecuencias tóxicas de la guerra suelen ser muy difíciles de cuantificar. El daño no se mide fácilmente y es imposible conectarlo con problemas posteriores. En reconocimiento de ese problema, el Congreso de Estados Unidos ha aprobado algunas leyes que dan automáticamente derechos a algunos veteranos que han estado expuestos a químicos en ciertas circunstancias como la aspersión del agente naranja en Vietnam o las pruebas atómicas en el desierto de Nevada, entre otras. Pero no existe ninguna ley similar para los soldados de Palomares.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="419" data-total-count="6343" id="story-continues-20" tabindex="-1">Si los hombres pudieran probar que resultaron afectados por la radiación tendrían todos los costos sanitarios cubiertos y conseguirían un pensión modesta por discapacidad, pero demostrar que participaron en una misión secreta para limpiar de componentes tóxicos el lugar hace décadas parece escurridizo. Cada vez que lo intentan, la Fuerza Aérea dice que no sufrieron daño alguno y niega cualquier posibilidad.</p>
+<p class="story-body-text story-content" data-para-count="390" data-total-count="6733" id="story-continues-21" tabindex="-1">“Primero negaron que yo hubiera estado allí siquiera, después negaron que hubiera radiación”, dijo Ron Howell, de 71 años, al que acaban de extirpar un tumor cerebral. “Presento una reclamación y la rechazan, presento una apelación y la rechazan. Ya no puedo hacer más”. Suspira y continúa. “Dentro de poco todos habremos muerto y habrán logrado encubrir todo aquello”.</p>
+<h4 class="story-subheading story-content">El día que cayeron las bombas</h4>
+
+<p class="story-body-text story-content" data-para-count="169" data-total-count="6902" id="story-continues-23" tabindex="-1">Un policía militar de 23 años llamado John Garman llegó en helicóptero al lugar del accidente pocas horas después de que cayeran las bombas, el 17 de enero de 1966.</p>
+<p class="story-body-text story-content" data-para-count="232" data-total-count="7134" id="story-continues-24" tabindex="-1">“Aquello era el caos”, dijo Gharman, que ahora tiene 74 años, durante una entrevista en su casa, en Pahrump, Nevada. “Había escombros por todas partes, gran parte del bombardero había terminado en el patio de la escuela”.</p>
+<p class="story-body-text story-content" data-para-count="288" data-total-count="7422" id="story-continues-25" tabindex="-1">Fue uno de los primeros en llegar a la escena y se sumó a media docena de personas que buscaban las armas nucleares perdidas. Una de ellas acabó intacta en un banco de arena cerca de la playa. Otra cayó en el mar, donde la encontraron sin daños tras dos meses de búsqueda frenética.</p>
+<p class="story-body-text story-content" data-para-count="221" data-total-count="7643" id="story-continues-26" tabindex="-1">Las otras dos se golpearon con fuerza y explotaron, con lo que dejaron cráteres del tamaño de una casa a ambos lados del pueblo, según un informe secreto de la Comisión de Energía Atómica que ha sido desclasificado.</p>
+<p class="story-body-text story-content" data-para-count="238" data-total-count="7881" id="story-continues-27" tabindex="-1">Las bombas llevaban mecanismos de seguridad que impidieron la reacción nuclear pero los explosivos que rodeaban el núcleo atómico de los dispositivos extendieron una fina capa de plutonio sobre el campo, cubierto de tomates ya maduros.</p>
+<p class="story-body-text story-content" data-para-count="332" data-total-count="8213" id="story-continues-28" tabindex="-1">Varios habitantes del pueblo llevaron a Garman a los cráteres de las bombas, cubiertos de plutonio. Miraban hacia abajo, hacia la chatarra y no sabían qué hacer. “No teníamos detectores de radiación así que no teníamos ni idea de si corríamos peligro&#8221;, dijo. “Nos limitamos a quedarnos ahí, mirando el agujero”.</p>
+<p class="story-body-text story-content" data-para-count="216" data-total-count="8429" id="story-continues-29" tabindex="-1">Los científicos de la Comisión de Energía Atómica llegaron pronto y se llevaron la ropa de Garman porque estaba contaminada, pero le dijeron que no le pasaría nada. Doce años después tuvo cáncer en la vejiga.</p>
+<figure id="media-100000004471112" class="media photo media-100000004471112 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM14a-copy/13PLUTONIUM14-1465431083227-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-31">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM14a-copy/13PLUTONIUM14-1465431083227-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM14a-copy/13PLUTONIUM14-1465431083227-superJumbo.jpg" data-mediaviewer-caption="Nolan F. Watson, also among those at the crash site, had problems with painful joints, kidney stones and localized skin cancer. In 2002, he was diagnosed with kidney cancer. In 2010, more cancer showed up in his remaining kidney. Recent abnormal blood tests suggested leukemia." data-mediaviewer-credit="Raymond McCrea Jones for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM14a-copy/13PLUTONIUM14-1465431083227-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Nolan F. Watson, also among those at the crash site, had problems with painful joints, kidney stones and localized skin cancer. In 2002, he was diagnosed with kidney cancer. In 2010, more cancer showed up in his remaining kidney. Recent abnormal blood tests suggested leukemia.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Raymond McCrea Jones for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="725" data-total-count="9154" id="story-continues-31" tabindex="-1">El plutonio no emite el tipo de radiación penetrante que suele asociarse con las explosiones nucleares y que tiene consecuencias inmediatas sobre la salud, como quemaduras. Lanza partículas alfa que se desplazan poco y no penetran la piel. Los científicos creen que fuera del cuerpo no hacen demasiado daño, pero en caso de ser absorbidas por el cuerpo, normalmente por inhalar polvo, lanzan una especie de lluvia continua de partículas radiactivas cientos de veces por minuto. Un microgramo —una millonésima de gramo en el cuerpo— es considerada potencialmente dañina. Según los informes de la Comisión de Energía Atómica desclasificados, las bombas de Palomares soltaron más de 3000 millones de microgramos.</p>
+<p class="story-body-text story-content" data-para-count="402" data-total-count="9556" id="story-continues-32" tabindex="-1">El día después del accidente, llegaron de bases estadounidenses autobuses cargados de soldados que llevaban equipos para detectar radiación. William Jackson, entonces un joven teniente de la Fuerza Aérea, ayudó con algunas de las primeras pruebas cerca de los cráteres, usando un contador manual de partículas alfa, con una capacidad de medición de hasta dos millones de partículas por minuto.</p>
+<p class="story-body-text story-content" data-para-count="185" data-total-count="9741" id="story-continues-33" tabindex="-1">“Casi todos los lugares hacia los que apuntamos el contador marcaban la lectura más alta posible, pero nos dijeron que ese tipo de radiación no penetraba la piel, que era seguro”.</p>
+<p class="story-body-text story-content" data-para-count="484" data-total-count="10225" id="story-continues-34" tabindex="-1">El Pentágono se centró en encontrar la bomba perdida en el mar e ignoró en gran medida el peligro del plutonio suelto, de acuerdo con el personal de la Fuerza Aérea que estuvo ahí. Los soldados recorrieron innecesariamente campos de tomate altamente contaminados sin ninguna protección. En los primeros días, muchos fueron a mirar las bombas destrozadas “Una vez fui a ver qué hacían los soldados y los vi con las piernas en el cráter, sentados, comiendo”, dijo Jackson.</p>
+<p class="story-body-text story-content" data-para-count="446" data-total-count="10671" id="story-continues-35" tabindex="-1">La noticia del accidente fue portada en los diarios de Europa y Estados Unidos. Las autoridades españolas y estadounidenses trataron de cubrir el accidente de inmediato y minimizar el riesgo peligroso. Sellaron el pueblo y negaron que hubiera armas nucleares en el accidente. Cuando un reportero estadounidense vio hombres con trajes de protección blancos, un responsable de prensa del Ejército le dijo: “Son miembros de la unidad postal”.</p>
+<p class="story-body-text story-content" data-para-count="225" data-total-count="10896" id="story-continues-36" tabindex="-1">Un mes después, cuando la existencia de las bombas se había filtrado, Estados Unidos dijo que se había &#8220;fracturado&#8221; una bomba, no dos. Y que solo había soltado una “pequeña cantidad de radiación inocua”.</p>
+<p class="story-body-text story-content" data-para-count="231" data-total-count="11127" id="story-continues-37" tabindex="-1">Hoy, esas dos bombas serían calificadas como bombas sucias y se evacuaría a las personas que estuvieran cerca. En aquella época, para minimizar lo sucedido, la Fuerza Aérea dejó que los habitantes del pueblo se quedaran allí.</p>
+<p class="story-body-text story-content" data-para-count="262" data-total-count="11389" id="story-continues-38" tabindex="-1">El ministro de Información de España, Manuel Fraga Iribarne, y el embajador de Estados Unidos, Angier Biddle Duke, fueron a bañarse a una playa cercana para mostrar que el lugar era seguro. Duke dijo a los periodistas: “Si esto es radiación, me encanta”.</p>
+<figure id="media-100000004471099" class="media photo media-100000004471099 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/06/10/universal/es/13palomares17-copy/13palomares17-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-40">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/06/10/universal/es/13palomares17-copy/13palomares17-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/06/10/universal/es/13palomares17-copy/13palomares17-superJumbo.jpg" data-mediaviewer-caption="The debris of a crashed American plane in January 1966 in Palomares, Spain." data-mediaviewer-credit="Kit Talbot"  itemprop="url" itemid="https://static01.nyt.com/images/2016/06/10/universal/es/13palomares17-copy/13palomares17-master675.jpg"/>
+		<meta itemprop="height" content="457" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The debris of a crashed American plane in January 1966 in Palomares, Spain.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Kit Talbot
+		</span>
+	</figcaption>
+</figure>
+
+<h4 class="story-subheading story-content">Una limpieza a toda prisa</h4>
+
+<p class="story-body-text story-content" data-para-count="126" data-total-count="11515" id="story-continues-41" tabindex="-1">Temiendo que las bombas dañasen la industria turística, España insistió en que todo debía quedar limpio antes del verano.</p>
+<p class="story-body-text story-content" data-para-count="261" data-total-count="11776" id="story-continues-42" tabindex="-1">En cuestión de días, los soldados limpiaban los campos de tomates con machetes. Los científicos que supervisaban la operación ya sabían que lo más peligroso era el polvo de uranio y aún así, trituraron y quemaron los restos de tomate al lado del pueblo.</p>
+<p class="story-body-text story-content" data-para-count="322" data-total-count="12098" id="story-continues-43" tabindex="-1">A algunos de los soldados que hacían el trabajo en el que se respiraba más polvo, se les proporcionaron trajes protectores y mascarillas de papel, pero un informe de la Agencia de Defensa Nuclear dijo después que dudaba que “el uso de mascarillas quirúrgicas sirviera de algo más que de barrera psicológica&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="501" data-total-count="12599" id="story-continues-44" tabindex="-1">“Si te ayuda psicológicamente llevar una, puedes tener el privilegio de llevarla”, dijo uno de los asesores científicos, el doctor Wright Langham en una reunión secreta con otros colegas cuando todo había terminado. Sobre la seguridad de la limpieza, Langham —conocido por su participación en experimentos en los que pacientes de hospitales fueron inyectados con plutonio— dijo: “La mayor parte del tiempo, era muy difícil seguir los requisitos de los manuales de seguridad médica”.</p>
+<p class="story-body-text story-content" data-para-count="251" data-total-count="12850" id="story-continues-45" tabindex="-1">La Fuerza Aérea compró toneladas de tomates contaminados que los españoles se negaron a comer. Para mostrar que no era peligrosos, se los dieron a sus soldados. El riesgo de comer plutonio es menor que el de inhalarlo, pero aún así, no es seguro.</p>
+<p class="story-body-text story-content" data-para-count="127" data-total-count="12977" id="story-continues-46" tabindex="-1">“Desayuno, comida y cena. Comimos hasta hartarnos”, dijo Wayne Hugart, de 74 años. “Y nos decían que no pasaba nada”.</p>
+<p class="story-body-text story-content" data-para-count="316" data-total-count="13293" id="story-continues-47" tabindex="-1">La Fuerza Aérea cortó más de dos millones y medio de metros cuadrados del cultivo y araron la tierra contaminada. Se llevaron 5300 barriles de tierra de las zonas más radiactivas cerca de los cráteres y los cargaron en barcos para enterrarlos en una zona de almacenamiento de basura nuclear en Carolina del Sur.</p>
+<p class="story-body-text story-content" data-para-count="156" data-total-count="13449" id="story-continues-48" tabindex="-1">Las autoridades de ambos países aseguraron a los habitantes de Palomares que no tenían nada que temer. Acostumbrados a vivir en dictadura, no protestaron.</p>
+<p class="story-body-text story-content" data-para-count="190" data-total-count="13639" id="story-continues-49" tabindex="-1">“Aunque algunos hubieran querido saber más, Franco mandaba y todo el mundo tenía demasiado miedo como para hacer preguntas”, dijo Antonio Latorre, un poblador que ahora tiene 78 años.</p>
+<p class="story-body-text story-content" data-para-count="323" data-total-count="13962" id="story-continues-50" tabindex="-1">Para garantizar que los habitantes de Palomares estaban seguros, la Fuerza Aérea envió a soldados jóvenes con detectores de radiación portátiles. Peter Ricard tenía 20 años. Era cocinero, sin formación para utilizar el equipo. Recuerda que le dijeron que escaneara todo lo que pidieran pero con el detector apagado.</p>
+<p class="story-body-text story-content" data-para-count="267" data-total-count="14229" id="story-continues-51" tabindex="-1">“Teníamos que simular que medíamos para no causar problemas con la población local”, dijo durante una entrevista. “Aún pienso mucho en eso. No era demasiado listo en aquella época. Te decían que lo hicieras y solo respondías &#8216;Sí, señor&#8217;”.</p>
+<figure id="media-100000004471101" class="media photo media-100000004471101 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM6-copy/13PLUTONIUM6-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-53">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM6-copy/13PLUTONIUM6-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM6-copy/13PLUTONIUM6-superJumbo.jpg" data-mediaviewer-caption="Victor B. Skaar, now 79, worked with the testing team at the crash site. “Did we follow protocol?” he said. “Hell, no. We had neither the time nor the equipment.”" data-mediaviewer-credit="Raymond McCrea Jones for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM6-copy/13PLUTONIUM6-master315.jpg"/>
+		<meta itemprop="height" content="473" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Victor B. Skaar, now 79, worked with the testing team at the crash site. “Did we follow protocol?” he said. “Hell, no. We had neither the time nor the equipment.”</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Raymond McCrea Jones for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<h4 class="story-subheading story-content">Análisis descartados</h4>
+
+<p class="story-body-text story-content" data-para-count="253" data-total-count="14482" id="story-continues-54" tabindex="-1">Durante el proceso de limpieza, un equipo médico reunió más de 1500 muestras de orina del personal que hizo la limpieza para calcular la cantidad de plutonio que absorbían. Cuanto mayor fuera el nivel que había en las muestras, mayor era el riesgo.</p>
+<p class="story-body-text story-content" data-para-count="444" data-total-count="14926" id="story-continues-55" tabindex="-1">Esos análisis siguen siendo el resultado más interesante de aquella limpieza. Dicen que 10 hombres absorbieron más de lo considerado seguro y que el resto, hasta 1500, salieron sanos. Todavía hoy esos exámenes son los que le sirven a la Fuerza Aérea para decir que los soldados nunca resultaron afectados por la radiación. Pero quienes hicieron esos análisis dicen que servían de poco a la hora de determinar quién se había expuesto.</p>
+<p class="story-body-text story-content" data-para-count="378" data-total-count="15304" id="story-continues-56" tabindex="-1">“¿Seguimos un protocolo? Por supuesto que no. No teníamos ni el tiempo ni el equipo necesario”, dijo Victor Skaar, quien ahora tiene 79 años y trabajó en el equipo que hizo las pruebas. La manera de determinar el nivel de contaminación era recoger la orina de 12 horas. Pero solo recogió una de la mayoría de los soldados e, incluso, la de muchos nunca fue analizada.</p>
+<p class="story-body-text story-content" data-para-count="472" data-total-count="15776" id="story-continues-57" tabindex="-1">Skaar envió muestras al jefe de análisis de radiación de la Fuerza Aérea, el doctor Lawrence Odland, que descubrió valores altos, pero decidió que esas cifras no eran peligrosas para la salud y se debían al plutonio suelto por el campo que había contaminado las manos de los hombres, su ropa y lo que les rodeaba. El médico descartó 1000 muestras, 67 por ciento, entre las que se encontraban todas las tomadas los primeros días, cuando la exposición era mayor.</p>
+<p class="story-body-text story-content" data-para-count="157" data-total-count="15933" id="story-continues-58" tabindex="-1">Ahora de 94 años, y con una mansión victoriana en Hillsboro, Ohio, Odland tiene una foto del accidente de Groenlandia en su casa. Y cuestiona cómo actuó.</p>
+<p class="story-body-text story-content" data-para-count="178" data-total-count="16111" id="story-continues-59" tabindex="-1">“No teníamos manera de saber qué venía de la contaminación y qué era producto de la inhalación. ¿Se acababa el mundo o estaba todo bien? Tuve que tomar una decisión”.</p>
+<p class="story-body-text story-content" data-para-count="296" data-total-count="16407" id="story-continues-60" tabindex="-1">Dice que nunca tuvo resultados precisos para cientos de hombres que pudieron haber estado contaminados. Además, se dio cuenta rápidamente de que el plutonio en los pulmones no tenía por qué aparecer en los análisis de orina y que aún con pruebas limpias, un hombre podía estar contaminado.</p>
+<p class="story-body-text story-content" data-para-count="189" data-total-count="16596" id="story-continues-61" tabindex="-1">“Es triste, por supuesto. Es triste, pero ¿qué puedes hacer? El plutonio no se expulsa, el cáncer no se cura. Lo único que puedes hacer es agachar la cabeza y decir que lo sientes”.</p>
+<h4 class="story-subheading story-content">Sin seguimiento alguno</h4>
+
+<p class="story-body-text story-content" data-para-count="375" data-total-count="16971" id="story-continues-63" tabindex="-1">Convencido de que las muestras de orina no estaban bien, Odland intentó convencer a la Fuerza Aérea para que siguiera a esos hombres durante toda su vida y registrara los datos resultantes. Expertos de la Fuerza Aérea, la Armada, el Departamento de Asuntos de los Veteranos y la Comisión de Energía Atómica se reunieron para poner eso en marcha después de la limpieza.</p>
+<p class="story-body-text story-content" data-para-count="156" data-total-count="17127" id="story-continues-64" tabindex="-1">Un general de la Fuerza Aérea dijo que ese seguimiento era “esencial” y que seguir a esos hombres hasta la tumba arrojaría “datos muy necesarios”.</p>
+<p class="story-body-text story-content" data-para-count="296" data-total-count="17423" id="story-continues-65" tabindex="-1">Quienes lo organizaron propusieron que se omitiera informar a los soldados sobre su exposición a la radiación y dejar los detalles de los resultados fuera de sus historiales médicos, según las minutas de la reunión. Pensaron que informarles “prepararía el camino para acciones legales”.</p>
+<p class="story-body-text story-content" data-para-count="110" data-total-count="17533" id="story-continues-66" tabindex="-1">El plan era que Odland y su equipo siguieran a los hombres, pero en cuestión de meses se toparon con un muro.</p>
+<p class="story-body-text story-content" data-para-count="231" data-total-count="17764" id="story-continues-67" tabindex="-1">“No tiene apoyo del Departamento de Defensa para ir tras los que quedan o mantener un registro real debido a la política del &#8216;perro dormido&#8217;”, se lee en un memorando de la Comisión de la Energía Atómica de 1967.</p>
+<p class="story-body-text story-content" data-para-count="311" data-total-count="18075" id="story-continues-68" tabindex="-1">“¿Qué significa la política del perro dormido? Dejar el asunto en paz. Dejar que muriera. No estaba de acuerdo. Por supuesto que no”, dijo Odland. “Todo el mundo había decidido que teníamos que cuidar a estos chicos y de repente llegó una orden de arriba que dijo que nos deshiciéramos del tema”.</p>
+<p class="story-body-text story-content" data-para-count="195" data-total-count="18270" id="story-continues-69" tabindex="-1">Odland no sabe quién dio la orden para detener el seguimiento, pero como en la reunión incluyeron a todas las agencias y al departamento de los veteranos, la orden tuvo que venir de muy arriba.</p>
+<p class="story-body-text story-content" data-para-count="100" data-total-count="18370" id="story-continues-70" tabindex="-1">La Fuerza Aérea desmanteló el programa en 1968. El grupo “permanente” solo se reunió una vez.</p>
+<figure id="media-100000004471102" class="media photo media-100000004471102 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM2-copy/13PLUTONIUM2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-72">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM2-copy/13PLUTONIUM2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM2-copy/13PLUTONIUM2-superJumbo.jpg" data-mediaviewer-caption="Air Force personnel wearing masks and gloves working in the fields where three of the bombs were found." data-mediaviewer-credit="U.S. Air Force"  itemprop="url" itemid="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM2-copy/13PLUTONIUM2-master675.jpg"/>
+		<meta itemprop="height" content="440" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Air Force personnel wearing masks and gloves working in the fields where three of the bombs were found.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			U.S. Air Force
+		</span>
+	</figcaption>
+</figure>
+
+<h4 class="story-subheading story-content">Tras la limpieza, la enfermedad</h4>
+
+<p class="story-body-text story-content" data-para-count="399" data-total-count="18769" id="story-continues-73" tabindex="-1">Los soldados comenzaron a sentirse mal poco después de terminar de limpiar. Hombres sanos de 20 años caían redondos por dolor en las articulaciones, en la espalda y por debilidad. Los médicos les decían que era artritis. Un policía militar tenía una sinusitis tan fuerte que se golpeaba la cabeza contra el suelo para que algo le distrajese del dolor. Los médicos le dijeron que era alergia.</p>
+<p class="story-body-text story-content" data-para-count="181" data-total-count="18950" id="story-continues-74" tabindex="-1">Algunos hombres comenzaron a tener erupciones. Un miembro de la Fuerza Aérea, Noris Paul, tuvo quistes tan graves que en 1967 estuvo seis meses hospitalizado y se volvió estéril.</p>
+<p class="story-body-text story-content" data-para-count="49" data-total-count="18999" id="story-continues-75" tabindex="-1">“Nadie supo explicarme qué me pasaba”, dijo.</p>
+<p class="story-body-text story-content" data-para-count="422" data-total-count="19421" id="story-continues-76" tabindex="-1">Arthur Kindler, uno de los soldados que estaba encargado de comestibles, llegó a estar tan cubierto de plutonio los días siguientes a las explosiones, que le hicieron bañarse en el mar y se llevaron su ropa. Tuvo cáncer de testículos cuatro años después del accidente y una extraña infección pulmonar estuvo a punto de terminar con su vida. Desde entonces ha tenido cáncer en los ganglios linfáticos tres veces.</p>
+<p class="story-body-text story-content" data-para-count="314" data-total-count="19735" id="story-continues-77" tabindex="-1">&#8220;Me llevó mucho tiempo comenzar a darme cuenta de que esto tenía que ver con la limpieza de las bombas&#8221;, dijo Kindler, que ahora tiene 74 años y vive en Tucson, Arizona. &#8220;Tienes que comprender que nos dijeron que era seguro. Éramos jóvenes, confiábamos. ¿Por qué iban a mentirnos?&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="156" data-total-count="19891" id="story-continues-78" tabindex="-1">Kindler pidió ayuda dos veces al Departamento de Asuntos de los Veteranos. &#8220;La negaron&#8221;, explicó. &#8220;Eventualmente tiré la toalla&#8221;.</p>
+<h4 class="story-subheading story-content">El seguimiento español</h4>
+
+<p class="story-body-text story-content" data-para-count="514" data-total-count="20405" id="story-continues-80" tabindex="-1">Estados Unidos prometió pagar el seguimiento del estado de salud del pueblo, pero por décadas solo costeó el 15 por ciento y España pagaría el resto, de acuerdo con un resumen desclasificado del Departamento de Energía. Las estaciones de monitoreo de aire se quedaron sin mantenimiento y el equipo habitualmente era viejo y poco confiable. A principios de los setenta, un investigador de la Comisión de Energía Atómica señaló que el monitoreo que hacían los españoles consistía en un solo estudiante.</p>
+<p class="story-body-text story-content" data-para-count="409" data-total-count="20814" id="story-continues-81" tabindex="-1">Se supo que dos niños que murieron de leucemia nunca fueron analizados. Los científicos españoles que estudiaban el estado de la población le dijeron a sus contrapartes en Estados Unidos, en un memorando fechado en 1976, que debido a los casos de leucemia, Palomares &#8220;necesitaba algún tipo se seguimiento médico de la población para identificar enfermedades y muertes&#8221;. Pero nunca sucedió.</p>
+<p class="story-body-text story-content" data-para-count="481" data-total-count="21295" id="story-continues-82" tabindex="-1">A finales de los noventa, después de que España presionara durante años, Estados Unidos aceptó incrementar la financiación. Se hicieron investigaciones en el pueblo que encontraron cifras altas de contaminación que no habían sido detectadas, incluyendo zonas en las que la radiación multiplicaba por 20 el nivel permitido en zonas no habitadas. En 2004, el gobierno español levantó vallas alrededor de las zonas contaminadas cerca de los cráteres que dejaron las bombas.</p>
+<p class="story-body-text story-content" data-para-count="442" data-total-count="21737" id="story-continues-83" tabindex="-1">Desde entonces, España ha pedido a Estados Unidos que termine de limpiar el lugar. Debido a que el monitoreo no fue constante, no está claro el impacto sobre la salud. Un pequeño estudio sobre la mortalidad realizado en 2005 encontró que la incidencia del cáncer había aumentado en el pueblo. Pero su autor, Pedro Antonio Martínez Pinilla, advirtió que el resultado podría deberse al margen de error y pidió que se investigara más.</p>
+<p class="story-body-text story-content" data-para-count="322" data-total-count="22059" id="story-continues-84" tabindex="-1">Por aquella época, en el Departamento de Energía, el científico Terry Hamilton propuso otro estudio en el que señalaba que las técnicas de seguimiento utilizadas por España presentaban problemas. &#8220;Está claro que no entendían correctamente el consumo de plutonio&#8221;. El departamento rechazó su petición.</p>
+<p class="story-body-text story-content" data-para-count="391" data-total-count="22450" id="story-continues-85" tabindex="-1">Las autoridades españolas dicen que el miedo puede haberse exagerado. Yolanda Benito, que dirige el departamento de medio ambiente de la Agencia de Energía nuclear Española, Ciemat, dice que no hay muestras de un incremento del cáncer en Palomares. &#8220;Desde un punto de vista científico, no hay nada que nos permita trazar una relación entre el cáncer y el accidente&#8221;, dijo.</p>
+<p class="story-body-text story-content" data-para-count="256" data-total-count="22706" id="story-continues-86" tabindex="-1">Cerca de una quinta parte del plutonio que se derramó en 1966 todavía contamina la zona. Después de años de presión, en 2015 Estados Unidos acordó con España retirar el plutonio que queda, pero no hay calendario ni plan aprobado para que eso suceda.</p>
+<figure id="media-100000004471620" class="media photo media-100000004471620 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM10-copy/13PLUTONIUM10-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-88">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM10-copy/13PLUTONIUM10-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM10-copy/13PLUTONIUM10-superJumbo.jpg" data-mediaviewer-caption="Mr. Kindler, who had been so covered in plutonium while searching the tomato fields a few days after the crash that the Air Force made him wash off in the ocean and took his clothes, got testicular cancer and a rare lung infection that nearly killed him four years after the crash." data-mediaviewer-credit="Raymond McCrea Jones for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/06/09/universal/es/13PLUTONIUM10-copy/13PLUTONIUM10-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Mr. Kindler, who had been so covered in plutonium while searching the tomato fields a few days after the crash that the Air Force made him wash off in the ocean and took his clothes, got testicular cancer and a rare lung infection that nearly killed him four years after the crash.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Raymond McCrea Jones for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<h4 class="story-subheading story-content">Voy a decir lo que tengo que decir</h4>
+
+<p class="story-body-text story-content" data-para-count="236" data-total-count="22942" id="story-continues-89" tabindex="-1">Un mañana lluviosa, hace poco tiempo, Nona Watson, profesora jubilada en Buckhead, Georgia, le abrió la puerta de un centro de salud para veteranos a su marido, Nolan Watson. Cojeaba y temblaba. Sus manos no podían asirse al bastón.</p>
+<p class="story-body-text story-content" data-para-count="612" data-total-count="23554" id="story-continues-90" tabindex="-1">Watson durmió en el polvo a pocos metros de uno de los cráteres el día después de la explosión. Tenía 22 años y cuidaba a los perros. Un año después tenía dolores de cabeza que le impedían ver y las caderas tan rígidas que apenas podía caminar. Entonces pidió ayuda al Departamento de Asuntos de los Veteranos. Lo rechazaron. Durante años tuvo dolores en las articulaciones, piedras en el riñón y cáncer en la piel. En 2002 le diagnosticaron cáncer de riñón. En 2010 el cáncer apareció de nuevo en el otro riñón. Unos exámenes de sangre recientes sugirieron que también tiene leucemia.</p>
+<p class="story-body-text story-content" data-para-count="112" data-total-count="23666" id="story-continues-91" tabindex="-1">&#8220;Arruinó mi vida. Era joven, estaba en forma. Pero desde entonces no he dejado de tener problemas&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="362" data-total-count="24028" id="story-continues-92" tabindex="-1">Watson, hoy de 73 años, presentó una queja que fue denegada y ahora se encuentra en proceso de apelación. Otros veteranos de Palomares ya le han dicho que es una pérdida de tiempo. Solo un veterano, que ellos sepan, ha conseguido que se reconozca que fue afectado por la radiación y le llevó 10 años. Al final ya estaba carcomido por cáncer de estómago.</p>
+<p class="story-body-text story-content" data-para-count="91" data-total-count="24119" id="story-continues-93" tabindex="-1">De todas formas Watson quería dar su testimonio personal sobre la exposición al plutonio.</p>
+<p class="story-body-text story-content" data-para-count="385" data-total-count="24504" id="story-continues-94" tabindex="-1">En la sala de espera comenzó a sangrar por la nariz. Hace algunos años, después de que denegaran su primera queja, su mujer comenzó a recopilar documentos oficiales viejos, con la esperanza de encontrar algo que probase que la Fuerza Aérea encubría lo sucedido en Palomares. Quizás, se dijo, podría encontrar pruebas suficientes como para que las autoridades lo reconsideraran.</p>
+<p class="story-body-text story-content" data-para-count="294" data-total-count="24798" id="story-continues-95" tabindex="-1">Halló informes de más de 40 años de antigüedad que confirmaban las historias de los hombres: altos niveles de radioactividad y pocas medidas de seguridad. Pero el hallazgo más incómodo fue un estudio realizado en 2001 que evaluaba de nuevo la contaminación en los veteranos de Palomares.</p>
+<p class="story-body-text story-content" data-para-count="151" data-total-count="24949" id="story-continues-96" tabindex="-1">El estudio encontró que los exámenes de orina antiguos estaban tan mal hechos que no &#8220;eran útiles&#8221; y la Fuerza Aérea debía repetirlos.</p>
+<p class="story-body-text story-content" data-para-count="442" data-total-count="25391" id="story-continues-97" tabindex="-1">La señora Watson sabía que esos exámenes no se habían repetido y llamó al Servicio Médico de la Fuerza Aérea para preguntar el motivo. No consiguió ninguna respuesta clara y le pidió a su congresista de aquel momento, un republicano llamado Paul Broun, que enviara una carta a la Fuerza Aérea. El congresista tampoco logró una respuesta satisfactoria y aprobó una norma que exigía que la Fuerza Aérea le respondiese al congreso.</p>
+<p class="story-body-text story-content" data-para-count="507" data-total-count="25898" id="story-continues-98" tabindex="-1">En 2013, la Fuerza Aérea envió la respuesta que se exigía en una carta al Comité de las Fuerzas Armadas del Congreso. Para consternación de la señora Watson, se limitaba a hacer eco de la respuesta que ya habían recibido tanto ella como el congresista: los nuevos exámenes recomendados en 2001 ya &#8220;no eran necesarios&#8221; porque las tropas habían tenido equipamiento para su protección y los exámenes de orina originales mostraban que casi nadie había estado expuesto a la radiactividad.</p>
+<p class="story-body-text story-content" data-para-count="132" data-total-count="26030" id="story-continues-99" tabindex="-1">Documentos desclasificados y testimonios de testigos cuestionan seriamente la exactitud del informe de la Fuerza Aérea al congreso.</p>
+<p class="story-body-text story-content" data-para-count="129" data-total-count="26159" id="story-continues-100" tabindex="-1">Después de enviar la carta, el servicio médico de la Fuerza Aérea retiró de su página web el informe de 2001, sin dar aviso.</p>
+<p class="story-body-text story-content" data-para-count="194" data-total-count="26353" id="story-continues-101" tabindex="-1">En una entrevista en su casa, la señora Watson dijo: &#8220;Comencé a adentrarme en esto pensando que se trataba solo de un error. Pero después descubrí que trataban de encubrir algo&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="365" data-total-count="26718" id="story-continues-102" tabindex="-1">El coronel Kirk Philips, que supervisa el programa de radiación del Servicio Médico de la Fuerza Aérea, dijo en una entrevista reciente que la Fuerza Aérea ha tratado de hacer lo mejor con los veteranos de Palomares. Retiró el informe porque no quería alimentar las expectativas de los veteranos y temía que los lectores lo encontraran &#8220;confuso&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="200" data-total-count="26918" id="story-continues-103" tabindex="-1">&#8220;Tenemos un gran número de veteranos que creemos que nunca estuvieron expuestos&#8221;, dijo. También que los niveles de radiación en Palomares fueron bajos y que los hombres iban protegidos.</p>
+<p class="story-body-text story-content" data-para-count="247" data-total-count="27165" id="story-continues-104" tabindex="-1">Repetir los exámenes con técnicas más modernas y precisas, como se sugería en el informe de 2011, podría revelar niveles de radiactividad incluso menores, y tendría como consecuencia que los veteranos recibieran una compensación menor aún.</p>
+<p class="story-body-text story-content" data-para-count="85" data-total-count="27250" id="story-continues-105" tabindex="-1">&#8220;Creemos que repetir las pruebas sería un error. Podría perjudicarles&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="283" data-total-count="27533" id="story-continues-106" tabindex="-1">Para ayudar a los veteranos, dijo, la Fuerza Aérea dejó de usar los exámenes de orina antiguos en 2013 y dio a todos los soldados que limpiaron el lugar una dosis de radiación más alta de la hallada en los resultados originales para &#8220;darles el beneficio de la duda&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="325" data-total-count="27858" id="story-continues-107" tabindex="-1">Recibieron una dosis de 0,31 rem, la unidad que mide la absorción en radiología. Demasiado pequeña para que tengan derecho a recibir atención sanitaria del sistema de salud de los veteranos. A los veteranos que limpiaron el accidente de Groenlandia, similar al de Palomares, les fue asignada una dosis de radiación cero.</p>
+<p class="story-body-text story-content" data-para-count="340" data-total-count="28198" id="story-continues-108" tabindex="-1">La señora Watson, que ha estudiado a detalle los informes y resultados de los exámenes realizados en Palomares, dijo que los análisis del aire no reflejaban lo que absorbieron aquellos que trabajaron cerca de los cráteres. &#8220;Hasta donde sé, no se basa en nada y no servirá. Una se pregunta por qué se tomaron la molestia&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="410" data-total-count="28608" id="story-continues-109" tabindex="-1">Mientras esperaba junto a su marido, explicó cómo esperaba que su apelación fuera rechazada. Dijera lo que dijera en su testimonio no tenía pruebas y el departamento de veteranos se remitiría a los exámenes de orina para decir que nadie había sido afectado. Al soldado nunca le habían hecho un examen de orina y ahora era imposible porque el cáncer ya se había llevado gran parte de sus dos riñones.</p>
+<p class="story-body-text story-content" data-para-count="142" data-total-count="28750" id="story-continues-110" tabindex="-1">Si la apelación llegara a tener éxito. Watson tendría cubiertos sus costos sanitarios y conseguiría una pequeña pensión por incapacidad.</p>
+<p class="story-body-text story-content" data-para-count="111" data-total-count="28861" id="story-continues-111" tabindex="-1">&#8220;Pero no lo hago por eso&#8221;, dijo mientras se limpiaba la nariz. &#8220;No lo hago por dinero&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="254" data-total-count="29115" id="story-continues-112" tabindex="-1">No cree que vaya a vivir los suficiente para conseguir mucho. Sobre todo, quiere que se aclare lo ocurrido. Quiere decirle a la Fuerza Aérea que tanto él como los hombres junto a los que sirvió, importan lo suficiente como para saber la verdad&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="85" data-total-count="29200" id="story-continues-113" tabindex="-1">&#8220;Voy a decir lo que tengo que decir. Saben que todo esto es una mentira&#8221;.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Raphael Minder contribuyó desde Palomares, España. </p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/accidente-de-palomares/" rel="tag">accidente de Palomares</a>, <a href="https://www.nytimes.com/es/tag/bombas-atomicas/" rel="tag">bombas atómicas</a>, <a href="https://www.nytimes.com/es/tag/cancer/" rel="tag">cáncer</a>, <a href="https://www.nytimes.com/es/tag/espana/" rel="tag">España</a>, <a href="https://www.nytimes.com/es/tag/fuerza-aerea-de-estados-unidos/" rel="tag">Fuerza aérea de Estados Unidos</a>, <a href="https://www.nytimes.com/es/tag/palomares/" rel="tag">Palomares</a>, <a href="https://www.nytimes.com/es/tag/plutonio/" rel="tag">plutonio</a>, <a href="https://www.nytimes.com/es/tag/radiactividad/" rel="tag">radiactividad</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/06/21/las-consecuencias-ocultas-de-un-accidente-nuclear-en-espana-causado-por-estados-unidos/"
+				data-title="Noticias: Las consecuencias ocultas de un accidente nuclear en España causado por Estados Unidos"
+				data-author="POR DAVE PHILIPS"
+				data-media=""
+				data-description="Una investigación de The New York Times revela cómo las autoridades militares de EE. UU.  minimizaron los daños a la salud que causó el choque de un avión con cuatro bombas de hidrógeno en una localidad andaluza en 1966."
+				data-publish-date="21 de junio de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/13/debemos-temer-un-desastre-nuclear-provocado-por-un-atentado-terrorista/">
+					<div class="story-body">
+						<h3 class="kicker">Comentario</h3>
+
+						<h2 class="headline">
+							<span class="title">¿Debemos temer un desastre nuclear provocado por un atentado terrorista?</span>
+							<time class="dateline">13 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/05/opinion/05allison/05allison-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/01/belgica-teme-que-sus-plantas-nucleares-sean-vulnerables/">
+					<div class="story-body">
+						<h3 class="kicker">Europa</h3>
+
+						<h2 class="headline">
+							<span class="title">Bélgica teme que sus plantas nucleares sean vulnerables</span>
+							<time class="dateline">1 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/26/world/JP-NUKES/JP-NUKES-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":933,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

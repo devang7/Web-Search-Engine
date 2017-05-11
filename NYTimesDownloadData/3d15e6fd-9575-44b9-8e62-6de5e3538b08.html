@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004493652"/>
+<meta name="hdl" content="Guatemala encuentra la justicia en sus huesos" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20160710" />
+<meta name="utime" content="20160710140005" />
+<meta name="ptime" content="20160710140005" />
+<meta name="DISPLAYDATE" content="Jul. 10, 2016" />
+<meta name="dat" content="Jul. 10, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="los-secretos-de-los-huesos-de-guatemala" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/07/10/los-secretos-de-los-huesos-de-guatemala/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Guatemala encuentra la justicia en sus huesos" />
+<meta property="og:description" content="El antropólogo forense Fredy Peccerelli ha pasado dos décadas exhumando a las víctimas de la guerra civil en Guatemala. Ahora su trabajo podría ayudar a que los asesinos enfrenten la justicia." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala1/03mag-03guatemala-t_CA0-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-07-10" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/07/10/los-secretos-de-los-huesos-de-guatemala/" />
+<meta property="twitter:title" content="Guatemala encuentra la justicia en sus huesos" />
+<meta property="twitter:description" content="El antropólogo forense Fredy Peccerelli ha pasado dos décadas exhumando a las víctimas de la guerra civil en Guatemala. Ahora su trabajo podría ayudar a que los asesinos enfrenten la justicia." />
+<meta name="author" content="Maggie Jones" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Maggie Jones" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="guatemala" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="guatemala" />
+<meta name="id" content="100000004493652"/>
+<meta name="wordCount" content="6801"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/07/10/los-secretos-de-los-huesos-de-guatemala/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=07&amp;day=10&amp;name=los-secretos-de-los-huesos-de-guatemala">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=17809">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/07\/10\/los-secretos-de-los-huesos-de-guatemala\/"},"headline":"Guatemala encuentra la justicia en sus huesos","datePublished":"2016-07-10T14:00:05+00:00","dateModified":"2016-07-27T17:48:48+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/07\/03\/magazine\/03guatemala1\/03mag-03guatemala-t_CA0-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"El antrop\u00f3logo forense Fredy Peccerelli ha pasado dos d\u00e9cadas exhumando a las v\u00edctimas de la guerra civil en Guatemala. Ahora su trabajo podr\u00eda ayudar a que los asesinos enfrenten la justicia."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/07/10/los-secretos-de-los-huesos-de-guatemala/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/07/03/magazine/the-secrets-in-guatemalas-bones.html?hpw&amp;#038;rref=magazine&amp;#038;action=click&amp;#038;pgtype=Homepage&amp;#038;module=well-region&amp;#038;region=bottom-well&amp;#038;WT.nav=bottom-well&amp;#038;_r=0" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="americalatina/guatemala" />
+<title>Guatemala encuentra la justicia en sus huesos &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/07/03/magazine/the-secrets-in-guatemalas-bones.html?hpw&#038;rref=magazine&#038;action=click&#038;pgtype=Homepage&#038;module=well-region&#038;region=bottom-well&#038;WT.nav=bottom-well&#038;_r=0" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/07/10/los-secretos-de-los-huesos-de-guatemala/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+		<script src="https://a1.nyt.com/assets/article/latest/js/article/common/layout.js"></script>
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-17809 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				Guatemala encuentra la justicia en sus huesos
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/07/10/los-secretos-de-los-huesos-de-guatemala/"
+					data-title="América Latina: Guatemala encuentra la justicia en sus huesos"
+					data-author="POR MAGGIE JONES"
+					data-media=""
+					data-description="El antropólogo forense Fredy Peccerelli ha pasado dos décadas exhumando a las víctimas de la guerra civil en Guatemala. Ahora su trabajo podría ayudar a que los asesinos enfrenten la justicia."
+					data-publish-date="10 de julio de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/29HLAjK">http://nyti.ms/29HLAjK</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+	
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main has-full-bleed-image-lede">
+	<header id="story-header" class="story-header">
+			<figure id="media-100000004493649" class="media cover photo layout-horizontal-full-bleed" data-bleed-style="full-bleed" itemid="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala1/03mag-03guatemala-t_CA0-articleLarge.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="presentation">
+				<span class="visually-hidden"></span>
+				<div class="image">
+					<img
+						src="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala1/03mag-03guatemala-t_CA0-articleLarge.jpg"
+						alt="Una fosa en una antigua instalación militar de El Quiché, Guatemala "
+						data-jumbosrc="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala1/03mag-03guatemala-t_CA0-jumbo.jpg"
+						data-superjumbosrc="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala1/03mag-03guatemala-t_CA0-superJumbo.jpg"
+						id="media-image-100000004493649"
+					>
+				</div>
+				<figcaption id="media-caption-100000004493649" class="caption" itemprop="caption description">
+					<span class="caption-text">Una fosa en una antigua instalación militar de El Quiché, Guatemala </span>
+
+					<span class="credit" itemprop="copyrightHolder">
+						<span class="visually-hidden">crédito</span>
+						Antonio Bolfo para The New York Times
+
+					</span>
+				</figcaption>
+				<meta itemprop="height" content="400">
+				<meta itemprop="width" content="600">
+			</figure>
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/guatemala/">Guatemala</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Guatemala encuentra la justicia en sus huesos</h1>
+				<p itemprop="headline" id="story-deck" class="deck">El antropólogo forense Fredy Peccerelli ha pasado dos décadas exhumando a las víctimas de la guerra civil en Guatemala. Ahora su trabajo podría ayudar a que los asesinos enfrenten la justicia.</p>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Maggie Jones</span>
+</span>
+
+					<time class="dateline" datetime="2016-07-10">10 de julio de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/07/10/los-secretos-de-los-huesos-de-guatemala/"
+							data-title="América Latina: Guatemala encuentra la justicia en sus huesos"
+							data-author="POR MAGGIE JONES"
+							data-media=""
+							data-description="El antropólogo forense Fredy Peccerelli ha pasado dos décadas exhumando a las víctimas de la guerra civil en Guatemala. Ahora su trabajo podría ayudar a que los asesinos enfrenten la justicia."
+							data-publish-date="10 de julio de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+			<script>
+				if (window.magnum && window.magnum.responsiveImages && window.magnum.responsiveImages.setCoverImage) {
+					window.magnum.responsiveImages.setCoverImage('100000004493649','full-bleed',400,600,0,0,0,0);
+				}
+			</script>
+
+			
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/07/03/magazine/the-secrets-in-guatemalas-bones.html?hpw&#038;rref=magazine&#038;action=click&#038;pgtype=Homepage&#038;module=well-region&#038;region=bottom-well&#038;WT_nav=bottom-well&#038;_r=0&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="183" data-total-count="183" id="story-continues-1" tabindex="-1">Una tarde de 1994, durante su último año universitario, Fredy Peccerelli asistió a una conferencia de antropología en Atlanta y miró fijamente al hombre que estaba en el estrado. </p>
+<p class="story-body-text story-content" data-para-count="297" data-total-count="480" id="story-continues-2" tabindex="-1">Peccerelli ya había visto a Clyde Snow, el renombrado investigador de osamentas, pero solo en los libros de texto. Snow, quien tenía unos 60 años, se recargaba sobre el atril y hablaba con su simpático acento texano sobre cráneos con ojos vendados y cuerpos abandonados en fosas clandestinas. </p>
+<p class="story-body-text story-content" data-para-count="203" data-total-count="683" id="story-continues-3" tabindex="-1">Llevaba puesta su vestimenta usual, un saco irlandés de <em>tweed</em>, botas vaqueras y un sombrero de fieltro. En su vida profesional como antropólogo forense, Snow había viajado por muchas partes del mundo. </p>
+<p class="story-body-text story-content" data-para-count="221" data-total-count="904" id="story-continues-4" tabindex="-1">Su trabajo había ayudado a identificar al criminal nazi Josef Mengele, a las víctimas del asesino serial John Wayne Gacy y a miembros del Séptimo Regimiento de Caballería que cayó con George Custer en Little Bighorn. </p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="187" data-total-count="1091" id="story-continues-5" tabindex="-1">También había fundado un movimiento pujante en Argentina, Chile y Guatemala que capacitaba a equipos locales para exhumar a las víctimas de las “guerras sucias” de América Latina. </p>
+<p class="story-body-text story-content" data-para-count="243" data-total-count="1334" id="story-continues-6" tabindex="-1">En la conferencia, Snow cautivó a Peccerelli y al resto de la sala con historias sobre sus aventuras en Kurdistán, a caballo, en busca de lo perdido. “Resplandecía”, me contó Peccerelli. “Parecía un personaje salido de un sueño”.</p>
+<p class="story-body-text story-content" data-para-count="221" data-total-count="1555" id="story-continues-7" tabindex="-1">La colega de Snow, Karen Ramey Burns, también dio una charla ese día. Era acerca de una exhumación reciente en Guatemala, el país que la familia de Peccerelli había abandonado 14 años antes, durante la guerra civil. </p>
+<p class="story-body-text story-content" data-para-count="361" data-total-count="1916" id="story-continues-8" tabindex="-1">La primera diapositiva en la presentación de Burns mostraba el interior de una fosa de un sitio en el que se perpetró una masacre militar. Varios antropólogos forenses, todos capacitados por Burns y Snow y ninguno mucho mayor que Peccerelli, usaban pinceles y palillos para retirar el polvo incrustado en las cuencas de los ojos, los cráneos y los fémures.</p>
+<p class="story-body-text story-content" data-para-count="148" data-total-count="2064" id="story-continues-9" tabindex="-1">Ese fue, dijo más tarde Peccerelli, su “momento de iluminación”. Se inscribió en una clase en la ciudad de Guatemala para el siguiente enero. </p>
+<p class="story-body-text story-content" data-para-count="269" data-total-count="2333" id="story-continues-10" tabindex="-1">Durante tres semanas, Burns y los miembros del equipo forense le enseñaron a Peccerelli de qué manera los huesos pueden revelar las evidencias del asesinato: la marca de un machete, por ejemplo, o la incisión a lo largo de una vértebra que indica un cuello cortado. </p>
+<p class="story-body-text story-content" data-para-count="185" data-total-count="2518" id="story-continues-11" tabindex="-1">Al final, el equipo le ofreció un trabajo de 250 dólares al mes. Peccerelli voló de regreso a Nueva York y condujo su camioneta desde Brooklyn a Guatemala. Planeaba quedarse un año.</p>
+<p class="story-body-text story-content" data-para-count="186" data-total-count="2704" id="story-continues-12" tabindex="-1">Ahora, más de dos décadas después, Peccerelli dirige uno de los laboratorios de antropología forense más sofisticados del mundo en uno de los países más desolados de esta región. </p>
+<p class="story-body-text story-content" data-para-count="176" data-total-count="2880" id="story-continues-13" tabindex="-1">Él y su equipo han descubierto más de 10.000 cuerpos en pueblos, pozos, debajo de las baldosas de iglesias o en fosas con huesos de 24 metros de profundidad en un cementerio. </p>
+<p class="story-body-text story-content" data-para-count="186" data-total-count="3066" id="story-continues-14" tabindex="-1">Su objetivo es precisar las causas de muerte, identificar los cuerpos y entregarle los restos a las familias que han estado buscando a sus madres, padres, hijos e hijas durante décadas. </p>
+<p class="story-body-text story-content" data-para-count="512" data-total-count="3578" id="story-continues-15" tabindex="-1">“Tuvimos la oportunidad de darle voz a los muertos de una manera en la que nadie más pudo”, me contó Peccerelli. “No es lo mismo cuando alguien dice: ‘Escuché un disparo’ o ‘Los vi dispararle’, que cuando tomas un cráneo y ves la entrada de la herida de bala. Si sabes cómo interpretar esa evidencia, esto constituye la verdad, una verdad que puede usarse en los tribunales. Y, en la sociedad, sirve para enseñar, para darles paz a las personas, para devolverle los cuerpos a las familias”.</p>
+<p class="story-body-text story-content" data-para-count="516" data-total-count="4094" id="story-continues-16" tabindex="-1">Este año, el trabajo de Peccerelli se ha convertido en el centro de un caso legal sin precedentes. El 7 de junio, un juez determinó que ocho de los antiguos líderes militares de Guatemala comparecerán por las masacres, torturas y desapariciones que ordenaron o ayudaron a orquestar en una base militar en la ciudad de Cobán entre 1981 y 1987 (los fiscales también esperan presentar cargos contra otros oficiales militares, un legislador y ocho fugitivos, algunos de los cuales quizá estén en Estados Unidos). </p>
+<p class="story-body-text story-content" data-para-count="382" data-total-count="4476" id="story-continues-17" tabindex="-1">A diferencia de la mayoría de los juicios de guerra en Guatemala, los acusados no son soldados de infantería, sino oficiales de alto rango, más de los que alguna vez hayan sido procesados al mismo tiempo. “Nunca ha habido algo como esto en Guatemala”, declaró Jo-Marie Burt, profesora de Ciencias Políticas en la Universidad George Mason y experta en justicia transicional.</p>
+<p class="story-body-text story-content" data-para-count="387" data-total-count="4863" id="story-continues-18" tabindex="-1">El peso de la evidencia yace en las exhumaciones que Peccerelli y su equipo, la Fundación de Antropología Forense de Guatemala, conocida como FAFG, realizaron en la antigua base militar donde descubrieron 84 fosas y 565 cadáveres. Como Snow solía decirle a Peccerelli: los huesos son excelentes testigos. “Aunque hablan en voz baja, nunca mienten y nunca olvidan”, afirmaba Snow.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="172" data-total-count="5035" id="story-continues-19" tabindex="-1">La familia de Fredy Peccerelli huyó de Guatemala en 1980, cuando él tenía 9 años, ya que la guerra civil entre los militares y las guerrillas de izquierda se propagaba. </p>
+<p class="story-body-text story-content" data-para-count="402" data-total-count="5437" id="story-continues-20" tabindex="-1">Durante ese tiempo, grupos paramilitares —que eran escuadrones de la muerte con nombres como Ojo por Ojo y Mano Blanca— atravesaban la ciudad de Guatemala en jeeps y furgonetas blancas sin placas, y secuestraban a las personas en las esquinas de las calles, en sus trabajos o en sus casas a mitad de la noche. A menudo había cuerpos mutilados abandonados al lado del camino o colgados de árboles. </p>
+<p class="story-body-text story-content" data-para-count="218" data-total-count="5655" id="story-continues-21" tabindex="-1">El Ejército tenía como objetivo a los dirigentes de izquierda, sacerdotes católicos y monjas, maestros, estudiantes universitarios, sindicalistas, indígenas mayas o cualquiera que pareciera afiliado a la izquierda.</p>
+<p class="story-body-text story-content" data-para-count="291" data-total-count="5946" id="story-continues-22" tabindex="-1">En agosto de ese año, el padre de Peccerelli recibió una amenaza de muerte por correo. Quizá el Ejército se fijó en Fredy padre, quien era presidente de la Federación de Levantamiento de Pesas de Guatemala, porque había viajado a la URSS comunista, como delegado del equipo olímpico. </p>
+<p class="story-body-text story-content" data-para-count="353" data-total-count="6299" id="story-continues-23" tabindex="-1">O quizá fue porque seis años antes había sido estudiante de Derecho en la Universidad de San Carlos, la cual estaba al frente de la organización comunitaria y de la oposición al Ejército. Su padre no estaba especialmente involucrado en la política, pero no se necesitaba mucho para que el Ejército amenazara o “desapareciera” a las personas.</p>
+<p class="story-body-text story-content" data-para-count="408" data-total-count="6707" id="story-continues-24" tabindex="-1">El joven Fredy inmediatamente se mudó con sus hermanos y sus padres a la casa de su bisabuela. Después de que su padre voló a la ciudad de Nueva York para buscar un apartamento, recibieron una carta dirigida a su madre, María que decía: “Sabemos que Fredy se fue. El día que ponga un pie en Guatemala es hombre muerto”. Para el Día de Acción de Gracias, toda la familia se había mudado al Bronx.</p>
+<p class="story-body-text story-content" data-para-count="203" data-total-count="6910" id="story-continues-25" tabindex="-1">Fredy era un niño precavido y de cara redonda que se esforzó por hablar inglés. Quería ver a sus abuelos y extrañaba jugar canicas en las calles polvorientas. Sus padres también sentían nostalgia. </p>
+<p class="story-body-text story-content" data-para-count="279" data-total-count="7189" id="story-continues-26" tabindex="-1">Los Peccerelli se esforzaron por mantenerse al tanto de las noticias en Guatemala. La prensa fue censurada, el servicio telefónico era terrible e, incluso cuando mejoró, los guatemaltecos eran muy cautelosos con lo que decían. Las orejas del Ejército estaban en todas partes.</p>
+<figure id="media-100000004493651" class="media photo media-100000004493651 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala2/03mag-03guatemala-t_CA2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-28">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala2/03mag-03guatemala-t_CA2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala2/03mag-03guatemala-t_CA2-superJumbo.jpg" data-mediaviewer-caption="Fredy Peccerelli (left) and Daniel Jiménez, a staff anthropologist, at a Guatemalan Forensic Anthropology Foundation lab in Guatemala City." data-mediaviewer-credit="Antonio Bolfo for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala2/03mag-03guatemala-t_CA2-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Fredy Peccerelli (left) and Daniel Jiménez, a staff anthropologist, at a Guatemalan Forensic Anthropology Foundation lab in Guatemala City.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Antonio Bolfo for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="184" data-total-count="7373" id="story-continues-28" tabindex="-1">Para cuando estaba en la preparatoria en Brooklyn, Peccerelli casi no pensaba en Guatemala. Se había vuelto aficionado a los Yankees, jugaba béisbol y era un nadador muy competitivo. </p>
+<p class="story-body-text story-content" data-para-count="365" data-total-count="7738" id="story-continues-29" tabindex="-1">Sin embargo, durante su último año en la Universidad de Brooklyn, tomó un curso de estudios interculturales en el que leyó el libro <em>Me llamo Rigoberta Menchú y así me nació la conciencia</em>. El padre de la activista maya fue asesinado mientras tenía tomado un edificio en protesta por la ocupación militar en 1980; su madre fue torturada, violada y asesinada.</p>
+<p class="story-body-text story-content" data-para-count="198" data-total-count="7936" id="story-continues-30" tabindex="-1">Como la mayoría de los niños de clase media de Guatemala, Peccerelli sabía poco acerca de los mayas, quienes suelen vivir en las zonas montañosas remotas y han sufrido siglos de discriminación. </p>
+<p class="story-body-text story-content" data-para-count="326" data-total-count="8262" id="story-continues-31" tabindex="-1">No obstante, las descripciones de Menchú de la <a href="https://www.nytimes.com/es/2013/05/10/efrain-rios-montt-dictador-de-guatemala-en-los-80-es-declarado-culpable-de-genocidio-contra-los-mayas/" target="_blank">cultura maya y las atrocidades que sufrieron</a> hicieron que Peccerelli quisiera regresar a aprender más. “Tenía estos sueños ingenuos sobre convertirme en el Indiana Jones de Mesoamérica”, me confesó en una de nuestras muchas conversaciones durante los últimos 18 meses.</p>
+<p class="story-body-text story-content" data-para-count="219" data-total-count="8481" id="story-continues-32" tabindex="-1">La ingenuidad, sin embargo, chocó contra la realidad guatemalteca cuando volvió para comenzar su carrera en antropología forense. Realizó su primera exhumación en las profundidades de la región tropical de Ixcán. </p>
+<p class="story-body-text story-content" data-para-count="252" data-total-count="8733" id="story-continues-33" tabindex="-1">Cinco hombres y cinco mujeres, todos de unos 20 años, viajaron 12 horas por caminos pedregosos y polvorientos que deshacían los neumáticos, caminaron otras dos horas y pasaron media hora con el agua a la altura del pecho al atravesar el río Xalbal. </p>
+<p class="story-body-text story-content" data-para-count="350" data-total-count="9083" id="story-continues-34" tabindex="-1">Después caminaron durante tres horas por la selva hasta la aldea Cuarto Pueblo. De todo el grupo, cuyos miembros venían de Alemania, Brasil, Estados Unidos y Guatemala, Peccerelli era quien tenía menos experiencia. Se había graduado en Antropología y había tomado una clase de Osteología, así como la clase de tres semanas de Ciencia Forense. </p>
+<p class="story-body-text story-content" data-para-count="256" data-total-count="9339" id="story-continues-35" tabindex="-1">Sin embargo, por lo demás, tenía el entrenamiento de un <em>boy-scout</em> de Brooklyn. Llevaba una mochila con 23 kilos de herramientas, incluidos sus zapatos de goma impermeables. Llevó sus pantalones Patagonia nuevos y 200 dólares en libros sobre senderismo. </p>
+<p class="story-body-text story-content" data-para-count="301" data-total-count="9640" id="story-continues-36" tabindex="-1">“Comencé haciendo el máximo esfuerzo y me fui de bruces”, me relató. También era una fuente de asombro constante en el río local, donde unos 15 niños lo rodeaban mientras se bañaba, tocaban su rostro y le picaban los brazos. “Nunca habían visto a alguien tan gordo”, cuenta Peccerelli.</p>
+<p class="story-body-text story-content" data-para-count="206" data-total-count="9846" id="story-continues-37" tabindex="-1">Una organización de derechos legales de Guatemala le había pedido al grupo que encontrara a los muertos y entrevistara a los sobrevivientes de una masacre sucedida en Cuarto Pueblo el 14 de marzo de 1982. </p>
+<p class="story-body-text story-content" data-para-count="285" data-total-count="10131" id="story-continues-38" tabindex="-1">Fue el mismo mes en que Efraín Ríos Montt, un general del ejército, tomó el poder en Guatemala y desató lo que se convirtió en la campaña de tierra quemada más brutal de la guerra sucia, en la que durante el siguiente año y medio decenas de miles de civiles fueron asesinados.</p>
+<p class="story-body-text story-content" data-para-count="242" data-total-count="10373" id="story-continues-39" tabindex="-1">La mañana de los asesinatos de Cuarto Pueblo, cerca de 400 soldados rodearon el mercado, la clínica y la escuela. Era domingo y los soldados no permitieron que los feligreses salieran de la iglesia; después le prendieron fuego al edificio. </p>
+<p class="story-body-text story-content" data-para-count="249" data-total-count="10622" id="story-continues-40" tabindex="-1">Los sobrevivientes dijeron a Peccerelli que los soldados machetearon a los hombres y mujeres que intentaban escapar y otras fueron capturadas y violadas en grupo. Señalaron un pilar de concreto contra el cual los militares estrellaron a los bebés. </p>
+<p class="story-body-text story-content" data-para-count="319" data-total-count="10941" id="story-continues-41" tabindex="-1">Finalmente, después de ordenar a los hombres del lugar que cavaran zanjas, los soldados arrojaron adentro madera y cuerpos, y los rociaron con gasolina. La aldea completa y unos 350 cuerpos ardieron durante días. Esa primera noche, el aire estaba lleno de “humo y olor a carne quemada”, informó un sobreviviente.</p>
+<p class="story-body-text story-content" data-para-count="228" data-total-count="11169" id="story-continues-42" tabindex="-1">Escuchar a las familias revivir estos horrores devastó a Peccerelli. En la noche durmió en una tienda a unos cuantos metros del pilar y soñó con estanques de sangre. También contrajo fiebre por dengue, malaria y giardiasis. </p>
+<p class="story-body-text story-content" data-para-count="277" data-total-count="11446" id="story-continues-43" tabindex="-1">Con todo, afirmó: “Nunca había conocido a personas que hubieran logrado sobrevivir y siguieran conservando la humanidad para recibirnos y confiar en nosotros”. No sabía cuánto tiempo se quedaría en Guatemala, solo deseaba entender más sobre la guerra y sus víctimas.</p>
+<p class="story-body-text story-content" data-para-count="165" data-total-count="11611" id="story-continues-44" tabindex="-1">Luego de dos meses el equipo llevó 40 sacos de café llenos de dientes y fragmentos óseos al laboratorio en la ciudad de Guatemala para hacer el análisis forense. </p>
+<p class="story-body-text story-content" data-para-count="412" data-total-count="12023" id="story-continues-45" tabindex="-1">Los antropólogos no podían determinar cuántas personas habían sido asesinadas, mucho menos su identidad. “Solo pudimos probar que sucedió”, sostiene Peccerelli. “Y que los restos eran humanos”. Un año más tarde, devolvieron los restos a Cuarto Pueblo, donde las familias realizaron un funeral masivo y enterraron 12 ataúdes de huesos carbonizados dentro de una tumba de concreto color azul cielo.</p>
+<p class="story-body-text story-content" data-para-count="324" data-total-count="12347" id="story-continues-46" tabindex="-1">Con el paso del tiempo, Peccerelli y su equipo empezaron a entender cuántas masacres como Cuarto Pueblo habían sucedido y cuánto trabajo quedaba por delante. Un informe de 1999 del comisionado de las Naciones Unidas estimó que al menos 200.000 personas fueron asesinadas o “desaparecidas” y la mayoría fueron mayas. </p>
+<p class="story-body-text story-content" data-para-count="155" data-total-count="12502" id="story-continues-47" tabindex="-1">El Ejército y los grupos paramilitares fueron responsables del 93 por ciento de los abusos a los derechos humanos, incluidos los “actos de genocidio”. </p>
+<p class="story-body-text story-content" data-para-count="273" data-total-count="12775" id="story-continues-48" tabindex="-1">El informe también señala el papel de Estados Unidos: la CIA montó un golpe de Estado en 1954 para deponer al presidente Jacobo Árbenz de Guatemala después de que su política de reforma agraria afectó a la poderosa United Fruit Company, propiedad de estadounidenses. </p>
+<p class="story-body-text story-content" data-para-count="235" data-total-count="13010" id="story-continues-49" tabindex="-1">Estados Unidos estableció al primero de una larga línea de dictadores militares y, de manera intermitente durante las siguientes cuatro décadas, le proporcionó dinero, armas, apoyo con inteligencia y entrenamiento contrainsurgente. </p>
+<p class="story-body-text story-content" data-para-count="154" data-total-count="13164" id="story-continues-50" tabindex="-1">Cuando la guerra terminó en 1996, el Ejército había cometido 626 masacres en contra de los mayas. Cuarto Pueblo solo fue un microcosmos de esa matanza.</p>
+<p class="story-body-text story-content" data-para-count="312" data-total-count="13476" id="story-continues-51" tabindex="-1">La antigua base militar de Cobán está a seis horas al norte de la ciudad de Guatemala, en la zona montañosa. En la actualidad es conocida como Creompaz y la Organización de las Naciones Unidas entrena a sus fuerzas de paz en esa localidad. En la reja metálica de enfrente, hay soldados apostados con rifles. </p>
+<p class="story-body-text story-content" data-para-count="294" data-total-count="13770" id="story-continues-52" tabindex="-1">Un estrecho camino lleva por un puente y asciende por una montaña hasta el edificio principal. Desde la década de 1970 hasta la de 1990, el Ejército dirigió las operaciones de inteligencia desde este complejo, así como las prisiones y las instalaciones para tortura, explican los fiscales.</p>
+<p class="story-body-text story-content" data-para-count="462" data-total-count="14232" id="story-continues-53" tabindex="-1">Se ha prohibido a los arqueólogos que excaven en la mayoría de las bases militares. El Ejército rechazó hablar de cualquier exhumación y se rehusó a entregar documentos importantes de la guerra. Luego, en el año 2000, una organización llamada Famdegua, dedicada a encontrar a los desaparecidos de la guerra, entrevistó a dos testigos (actualmente incluidos en un programa de protección a testigos) que vieron que llevaban a civiles a la base de Cobán. </p>
+<p class="story-body-text story-content" data-para-count="210" data-total-count="14442" id="story-continues-54" tabindex="-1">Al principio las autoridades locales no aprobaban la petición del grupo para encontrar los cuerpos, pero más de una década después, en 2012, un juez emitió una orden de búsqueda y la exhumación comenzó.</p>
+<p class="story-body-text story-content" data-para-count="155" data-total-count="14597" id="story-continues-55" tabindex="-1">Para entonces, Peccerelli había pasado de los trastabillones con su primera exhumación a, cinco años después, dirigir una organización de 44 personas. </p>
+<p class="story-body-text story-content" data-para-count="385" data-total-count="14982" id="story-continues-56" tabindex="-1">Su fluidez en inglés le permitió interactuar fácilmente con los expertos forenses estadounidenses y los proveedores de fondos internacionales. Sin embargo, como Snow —quien se convirtió en un amigo cercano de Peccerelli y su mentor, y que a menudo volaba a Guatemala para dar consultoría y trabajar con el equipo—, combinaba ideas ambiciosas con la intrepidez de un forastero.</p>
+<p class="story-body-text story-content" data-para-count="276" data-total-count="15258" id="story-continues-57" tabindex="-1">Durante años, el equipo se había concentrado en los casos de “contexto cerrado”, matanzas que habían ocurrido en aldeas donde los testigos podían ayudar a identificar los cuerpos mediante trabajo dental, fracturas que tuvieron de niños o una pieza distintiva de ropa. </p>
+<p class="story-body-text story-content" data-para-count="162" data-total-count="15420" id="story-continues-58" tabindex="-1">No obstante, sin un laboratorio de ADN, era casi imposible identificar a la mayoría de los 40.000 desaparecidos, como los que encontraron en las bases militares. </p>
+<p class="story-body-text story-content" data-para-count="474" data-total-count="15894" id="story-continues-59" tabindex="-1">¿Cómo podrían los antropólogos vincular los huesos que hacía 30 años se estaban desintegrando en el suelo con las familias mayas, muchas de ellas analfabetas, reacias a confiar en extraños y dispersas por las montañas? Después de haber pasado una década preparando un laboratorio, capacitando un equipo y verificando resultados, el laboratorio de Peccerelli produjo su primera coincidencia genética en 2010, dos años antes del inicio de la exhumación en Cobán.</p>
+<p class="story-body-text story-content" data-para-count="215" data-total-count="16109" id="story-continues-60" tabindex="-1">Desde la primera vez que los arqueólogos llegaron a la base, en enero de 2012, trabajaron siete días a la semana hasta diciembre de 2013, y descubrieron en ese lugar más brutalidad de la que jamás habían visto. </p>
+<p class="story-body-text story-content" data-para-count="226" data-total-count="16335" id="story-continues-61" tabindex="-1">Una fosa contenía 64 hombres y niños, empujados atropelladamente a una muerte silenciosa: cráneos bocabajo hechos pedazos; una maraña de pantalones y piernas torcidas, algunas con cuerdas gruesas rodeándoles los tobillos. </p>
+<p class="story-body-text story-content" data-para-count="189" data-total-count="16524" id="story-continues-62" tabindex="-1">Apenas a unos metros de distancia, en otra fosa, yacían 41 mujeres con 22 infantes menores de 4 años. El trabajo era delicado: los cráneos podían fracturarse. La tierra estaba movediza. </p>
+<p class="story-body-text story-content" data-para-count="331" data-total-count="16855" id="story-continues-63" tabindex="-1">Si se quita la tierra de manera muy brusca, se traga los huesos entre sus pliegues y los mezcla con otros cuerpos. Un paso en falso puede llevarse un resto de una venda en los ojos, un pedazo de cuerda, un fragmento de cráneo con un agujero de bala, la bala misma: la evidencia criminal que se necesita para procesar a un asesino.</p>
+<figure id="media-100000004498371" class="media photo media-100000004498371 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala6/03guatemala6-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-65">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala6/03guatemala6-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala6/03guatemala6-superJumbo-v2.jpg" data-mediaviewer-caption="An unidentified body at Xolosinay, a former military installation in San Juan Cotzal, El Quiché, Guatemala." data-mediaviewer-credit="Antonio Bolfo for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala6/03guatemala6-master675-v2.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">An unidentified body at Xolosinay, a former military installation in San Juan Cotzal, El Quiché, Guatemala.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Antonio Bolfo for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="197" data-total-count="17052" id="story-continues-65" tabindex="-1">Los arqueólogos guardaron en cajas cada grupo de restos y los llevaron al laboratorio antropológico de FAFG en la ciudad de Guatemala, donde un asistente taladraba una pequeña muestra de fémur. </p>
+<p class="story-body-text story-content" data-para-count="233" data-total-count="17285" id="story-continues-66" tabindex="-1">Después la muestra era enviada al laboratorio de ADN de la habitación nueve de FAFG, el cual está protegido con puertas antibalas y dos guardias armados al frente. Podían pasar meses antes de que una muestra produjera resultados. </p>
+<p class="story-body-text story-content" data-para-count="279" data-total-count="17564" id="story-continues-67" tabindex="-1">Un técnico molía cada hueso hasta hacerlo polvo tipo flúor, después añadía enzimas y otros químicos para extraer y aislar hebras de ADN. A continuación, una máquina creaba miles de copias de los segmentos de ADN y otro técnico los examinaba con un analizador genético. </p>
+<p class="story-body-text story-content" data-para-count="190" data-total-count="17754" id="story-continues-68" tabindex="-1">Finalmente, las copias eran comparadas con muestras de ADN en la base de datos del laboratorio (ahora existen 13.000), cada una proporcionada por una persona que busca a algún desaparecido.</p>
+<p class="story-body-text story-content" data-para-count="143" data-total-count="17897" id="story-continues-69" tabindex="-1">El resto de los huesos permanecía en el laboratorio de antropología principal, en una modesta casa de dos pisos en un vecindario residencial. </p>
+<p class="story-body-text story-content" data-para-count="348" data-total-count="18245" id="story-continues-70" tabindex="-1">Allí, unas 2400 cajas del tamaño de minibares son almacenadas en grupos de tres, cuatro y cinco, unas sobre otras. Están colocadas en líneas por todo el segundo piso y partes del laboratorio. Cada una está identificada con el lugar donde se descubrieron los huesos (Estrella Polar, Santa Avelina, San Juan Cotzal, Cobán) y un número de caso.</p>
+<p class="story-body-text story-content" data-para-count="314" data-total-count="18559" id="story-continues-71" tabindex="-1">El día que lo visité, dos antropólogos asistentes limpiaban los huesos con cepillos de dientes y agua. Cerca de ellos, un cráneo estaba sobre una charola de plástico con una venda verde militar atada alrededor de la cuenca de los ojos. Otra charola contenía más de 50 fragmentos de un cráneo hecho añicos. </p>
+<p class="story-body-text story-content" data-para-count="384" data-total-count="18943" id="story-continues-72" tabindex="-1">En la mitad trasera de la habitación, docenas de esqueletos habían sido cuidadosamente reconstruidos, hueso por hueso, y yacían encima de 30 mesas plegables de plástico cubiertas con tela azul. Algunos de los cuerpos tenían sus 206 huesos y 32 dientes. Los huesos de los dedos de los pies y las manos se desintegraban; los huesos se combinaban y descomponían uno encima de otro. </p>
+<p class="story-body-text story-content" data-para-count="303" data-total-count="19246" id="story-continues-73" tabindex="-1">Para un antropólogo el objetivo siempre es descubrir una historia. ¿Qué edad tenía la persona cuando murió? (Uno de los huesos pélvicos no se fusiona completamente hasta los 20 o 23 años; las clavículas hasta los 25. Todos los huesos comienzan a mostrar signos de deterioro a inicios de los 30). </p>
+<p class="story-body-text story-content" data-para-count="414" data-total-count="19660" id="story-continues-74" tabindex="-1">¿Era hombre o mujer? (Los hombres tienen cráneos más gruesos y pesados; las mujeres tienen pelvis más anchas). ¿Cuál fue la causa de muerte: una bala? (Los rayos X pueden revelar una bala y posiblemente heridas de entrada). ¿Un hacha en la garganta? (Los cortes pueden alcanzar la parte de atrás de la vértebra). ¿Un machetazo en la cabeza? (Ciertas fracturas indican traumatismo por fuerza contundente).</p>
+<p class="story-body-text story-content" data-para-count="220" data-total-count="19880" id="story-continues-75" tabindex="-1">En una mesa están los restos de una víctima de Cobán. Fue descubierto en la Fosa 63 con otros 25 hombres y mujeres, todos estos cuerpos tienen vendas en los ojos o las manos atadas. En otra mesa estaba un adolescente. </p>
+<p class="story-body-text story-content" data-para-count="268" data-total-count="20148" id="story-continues-76" tabindex="-1">Junto a él, el esqueleto reconstruido de un niño pequeño, o lo que queda de este: partes de un cráneo del tamaño de un puño aproximadamente, la mayoría de las vértebras, un hueso de la pierna y una pizca de costillas, ninguna más grande que una pequeña rama.</p>
+<p class="story-body-text story-content" data-para-count="204" data-total-count="20352" id="story-continues-77" tabindex="-1">La ciudad de Guatemala es una de las ciudades más peligrosas en el mundo, devastada por la droga y la violencia entre pandillas, mucho de ello como consecuencia directa de la guerra sucia y sus secuelas. </p>
+<p class="story-body-text story-content" data-para-count="144" data-total-count="20496" id="story-continues-78" tabindex="-1">Al amparo del acuerdo de paz de 1996 que puso fin al conflicto, ni el Ejército ni las guerrillas rindieron cuentas por los crímenes de guerra. </p>
+<p class="story-body-text story-content" data-para-count="306" data-total-count="20802" id="story-continues-79" tabindex="-1">En su lugar muchos de los comandantes, oficiales de policía, detectives y escuadrones de la muerte simplemente intercambiaron un tipo de poder por otro y se convirtieron en cabecillas del lavado de dinero, la trata de blancas y la extorsión, así como del tráfico de drogas que ha devastado a Guatemala. </p>
+<p class="story-body-text story-content" data-para-count="269" data-total-count="21071" id="story-continues-80" tabindex="-1">Si uno se detiene en una luz roja en la ciudad de Guatemala, un par de hombres montados en motocicleta pueden empuñar un arma y quitarle el celular, la cartera o la vida. En algunas áreas, el linchamiento por parte de vigilantes remplaza a la fuerza policiaca formal. </p>
+<p class="story-body-text story-content" data-para-count="258" data-total-count="21329" id="story-continues-81" tabindex="-1">Por el mismo costo de unos kilos de café se pueden comprar los servicios de un asesino a sueldo, la mayoría de los cuales se sale con la suya. Alrededor del 70 por ciento de los asesinatos en ciudad de Guatemala queda impune, de acuerdo con cifras de 2012.</p>
+<p class="story-body-text story-content" data-para-count="220" data-total-count="21549" id="story-continues-82" tabindex="-1">Durante décadas, abogados, jueces, periodistas y defensores de derechos humanos que han intentado revelar el pasado oculto de Guatemala han sido intimidados y, de manera frecuente, secuestrados, torturados y asesinados. </p>
+<p class="story-body-text story-content" data-para-count="310" data-total-count="21859" id="story-continues-83" tabindex="-1">Las amenazas de muerte para Peccerelli y su equipo comenzaron en 2001, cuando un colega antropólogo y otra organización recibieron una carta que enlistaba a 11 objetivos, incluidos Peccerelli y otros miembros de FAFG. “Durante 10 años hemos sabido quiénes son y los hemos dejado”, se leía en la carta. </p>
+<p class="story-body-text story-content" data-para-count="295" data-total-count="22154" id="story-continues-84" tabindex="-1">“Ahora es momento de ajustar cuentas”. En un par de ocasiones en el campo, algunos lugareños (presumiblemente simpatizantes militares o antiguos colaboradores) han intimidado a los arqueólogos arrojándoles piedras, blandiendo machetes y botes con gasolina, amenazando con quemarlos vivos. </p>
+<p class="story-body-text story-content" data-para-count="435" data-total-count="22589" id="story-continues-85" tabindex="-1">En 2006, la Corte Interamericana de Derechos Humanos le ordenó al gobierno de Guatemala que protegiera a Peccerelli y sus colegas. Tiene un vehículo todoterreno a prueba de balas y guardaespaldas que lo custodian. Ellos acompañaban a sus hijos a la escuela y a casa de sus amigos hasta hace dos años, cuando Peccerelli envío a su hija que tenía 17 años a la universidad y a su hijo de 16 a un internado, ambos en Estados Unidos.</p>
+<figure id="media-100000004498370" class="media photo media-100000004498370 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala5/03guatemala5-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-87">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala5/03guatemala5-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala5/03guatemala5-superJumbo-v2.jpg" data-mediaviewer-caption="F.A.F.G. delivering the remains of Roberto Xol to his family." data-mediaviewer-credit="Antonio Bolfo for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala5/03guatemala5-master675-v2.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">F.A.F.G. delivering the remains of Roberto Xol to his family.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Antonio Bolfo for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="385" data-total-count="22974" id="story-continues-87" tabindex="-1">No sorprende que la intimidación aumente durante los juicios de guerra en Guatemala. Cuando se procesó a Ríos Montt en 2013 por genocidio en contra de los mayas ixil, fue la primera vez que un ex jefe de Estado enfrentaba este tipo de cargos en los tribunales de su propio país y tanto Peccerelli como su equipo estuvieron entre las docenas de testigos y expertos que testificaron. </p>
+<p class="story-body-text story-content" data-para-count="422" data-total-count="23396" id="story-continues-88" tabindex="-1">La élite conservadora y los antiguos oficiales del Ejército escribieron artículos de opinión en periódicos que denunciaban el juicio. Oponentes anónimos del juicio también distribuyeron una circular de seis páginas titulada &#8220;Los rostros de la infamia&#8221;, la cual mostraba fotos de Peccerelli y la fiscal general <a href="https://www.nytimes.com/es/2016/04/27/los-informes-sobre-ayotzinapa-son-un-mapa-para-alejar-a-mexico-de-la-impunidad/" target="_blank">Claudia Paz y Paz</a>, quien llevaba el caso, entre otros, etiquetándolos como “traidores”.</p>
+<p class="story-body-text story-content" data-para-count="186" data-total-count="23582" id="story-continues-89" tabindex="-1">Aunque Ríos Montt fue declarado culpable, el veredicto se anuló 10 días después en una decisión dividida por la Corte de Constitucionalidad. Un nuevo juicio comenzó esta primavera. </p>
+<p class="story-body-text story-content" data-para-count="228" data-total-count="23810" id="story-continues-90" tabindex="-1">En febrero, unas semanas después de que la fiscal general Thelma Aldana anunció arrestos en el caso Cobán, Peccerelli me comentó: “Sabía que recaería sobre mí. En Guatemala, encuentras la verdad y matas al mensajero”. </p>
+<p class="story-body-text story-content" data-para-count="265" data-total-count="24075" id="story-continues-91" tabindex="-1">Íbamos en un tren de Nueva York a Washington. Peccerelli había ido a Estados Unidos a hablar con los partidarios de abrir una oficina estadounidense, con el objetivo de recaudar dinero y también contactar a guatemaltecos que aún tienen familiares desaparecidos. </p>
+<p class="story-body-text story-content" data-para-count="208" data-total-count="24283" id="story-continues-92" tabindex="-1">Ante el inminente juicio, el viaje se centró en sesiones de estrategia con abogados y dirigentes de organismos sin fines de lucro acerca de cómo proteger mejor a los miembros de FAFG y las pruebas del caso.</p>
+<p class="story-body-text story-content" data-para-count="208" data-total-count="24491" id="story-continues-93" tabindex="-1">En los periódicos y las redes sociales, las organizaciones de derecha vinculadas con antiguos miembros del Ejército han acusado a Peccerelli de ser un científico fraudulento e “hijo de un guerrillero”. </p>
+<p class="story-body-text story-content" data-para-count="275" data-total-count="24766" id="story-continues-94" tabindex="-1">Un abogado militar, cuyo padre fue comandante en Cobán y quien fue raptado por las guerrillas durante la guerra, ha presentado una demanda en contra de Peccerelli y sus colegas, en la que los acusa de obstruir la justicia y aceptar sobornos, así como de abuso de autoridad. </p>
+<p class="story-body-text story-content" data-para-count="241" data-total-count="25007" id="story-continues-95" tabindex="-1">Hace varios meses, alguien de la oficina del fiscal filtró a FAFG un correo electrónico que advertía que exmiembros del Ejército supuestamente estaban buscando sicarios para matar a alguien de la oficina del fiscal y de la organización. </p>
+<p class="story-body-text story-content" data-para-count="167" data-total-count="25174" id="story-continues-96" tabindex="-1">Desde entonces Peccerelli le ha pedido a su equipo que varíe sus horas de trabajo y sus rutas a casa, y que eliminen cualquier información personal de sus celulares. </p>
+<p class="story-body-text story-content" data-para-count="284" data-total-count="25458" id="story-continues-97" tabindex="-1">Su prometida, Jessika Osorio (Peccerelli y la madre de sus hijos están separados desde hace años), quien también es jefa del equipo de investigación de FAFG, ahora se rehúsa a dejar la casa sin el guardaespaldas de Peccerelli. Incluso Peccerelli, usualmente sereno, luce agotado. </p>
+<p class="story-body-text story-content" data-para-count="223" data-total-count="25681" id="story-continues-98" tabindex="-1">“Esto me ha cambiado”, afirmó recientemente. “Me gusta mucho exhumar; me gusta decirle a las familias que hemos encontrado a sus seres queridos. Pero esa parte de la justicia ha significado muchas cosas dolorosas”.</p>
+<p class="story-body-text story-content" data-para-count="349" data-total-count="26030" id="story-continues-99" tabindex="-1">Estas tácticas no solo buscan intimidar, sino también desviar el tiempo y el dinero del trabajo que hacen. Hasta ahora, Peccerelli ha tenido que recortar su equipo de colaboradores de 150 a 63; los fondos han caído a 1,9 millones de dólares este año de un máximo de 3,5 millones en 2013, cuando la USAID estaba entre los simpatizantes de FAFG. </p>
+<p class="story-body-text story-content" data-para-count="181" data-total-count="26211" id="story-continues-100" tabindex="-1">Los Países Bajos, el contribuyente más grande, cerraron su embajada en Guatemala hace un par de años debido a asuntos presupuestarios por lo que le retiraron el apoyo financiero. </p>
+<p class="story-body-text story-content" data-para-count="157" data-total-count="26368" id="story-continues-101" tabindex="-1">Aunque el Departamento de Estado de Estados Unidos proporciona cierta cantidad de recursos, muchos expertos en Guatemala creen que ese país debe hacer más. </p>
+<p class="story-body-text story-content" data-para-count="373" data-total-count="26741" id="story-continues-102" tabindex="-1">“Cientos de millones de dólares en ayuda por parte de Estados Unidos se destinaron al Ejército guatemalteco durante décadas”, señala Kate Doyle, directora del Proyecto de Documentación sobre Guatemala en el Archivo de Seguridad Nacional. “Lo menos que podría hacer Estados Unidos es apoyar los esfuerzos de FAFG para subsanar parte del daño a las víctimas”.</p>
+<p class="story-body-text story-content" data-para-count="451" data-total-count="27192" id="story-continues-103" tabindex="-1">Sin embargo, en la década pasada, el país se ha encaminado lentamente hacia el progreso legal. Las últimas dos fiscales generales han procesado enérgicamente los crímenes de guerra y la corrupción, ayudadas por un tratado en el 2006 entre los gobiernos de Estados Unidos y Guatemala que creó la Comisión Internacional contra la Impunidad en Guatemala, financiada en parte por Estados Unidos, para ayudar a enmendar el dañado sistema judicial. </p>
+<p class="story-body-text story-content" data-para-count="384" data-total-count="27576" id="story-continues-104" tabindex="-1">La primavera pasada, decenas de miles de guatemaltecos comenzaron a protestar en demanda de la renuncia y el enjuiciamiento del presidente Otto Pérez Molina, quien además también es otro comandante de guerra, por su participación en una gran conspiración de fraude, así como para denunciar a otros funcionarios corruptos del gobierno (Pérez Molina dimitió y ha sido imputado). </p>
+<p class="story-body-text story-content" data-para-count="157" data-total-count="27733" id="story-continues-105" tabindex="-1">En un país que por mucho tiempo ha sido definido por el terror, este ha sido “el primer paso hacia una verdadera Primavera Guatemalteca”, declara Doyle.</p>
+<figure id="media-100000004498368" class="media photo media-100000004498368 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala4/03guatemala4-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-107">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala4/03guatemala4-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala4/03guatemala4-superJumbo.jpg" data-mediaviewer-caption="Fredy Peccerelli (lower left) with family and friends of Roberto Xol, standing over Xol’s remains." data-mediaviewer-credit="Antonio Bolfo for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala4/03guatemala4-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Fredy Peccerelli (lower left) with family and friends of Roberto Xol, standing over Xol’s remains.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Antonio Bolfo for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="209" data-total-count="27942" id="story-continues-107" tabindex="-1">No obstante, la derecha de Guatemala conserva un gran poder. Algunos de los observadores están preocupados de que, debido a los intereses en el caso Cobán, las amenazas en contra de la FAFG se intensifiquen. </p>
+<p class="story-body-text story-content" data-para-count="408" data-total-count="28350" id="story-continues-108" tabindex="-1">Con los años, cansados de las intimidaciones, un puñado de abogados, jueces y defensores de los derechos humanos han dejado Guatemala. Peccerelli continúa resistiendo. “Es un hombre que llegó a la mayoría de edad en Estados Unidos y tenía todas las posibilidades de hacer lo que quisiera”, dice Jo-Marie Burt, la experta en justicia de transición. “Pudo haberse marchado en cualquier momento”.</p>
+<p class="story-body-text story-content" data-para-count="358" data-total-count="28708" id="story-continues-109" tabindex="-1">Hace poco le pregunté a Peccerelli si había contemplado regresar a Estados Unidos. “Pienso en irme de aquí todos los días”, me respondió. “Pero no voy a tirar a la basura 21 años de trabajo. Poca gente tuvo la suerte de subirse en un avión e irse durante la guerra. Estoy retribuyendo esa oportunidad. Quiero estar aquí y contar la historia”.</p>
+<p class="story-body-text story-content" data-para-count="223" data-total-count="28931" id="story-continues-110" tabindex="-1">En los primeros meses de la exhumación de Cobán en 2012, Delfina Xol viajó en autobús durante dos horas desde su pueblo, Campur, en la región montañosa de Alta Verapaz, hacia Cobán, con su cuñada y una de sus hijas. </p>
+<p class="story-body-text story-content" data-para-count="344" data-total-count="29275" id="story-continues-111" tabindex="-1">Delfina había escuchado los anuncios en la radio que se transmitieron en dos de las lenguas indígenas más importantes del área, poqomchi’ y q’eqchi’, en los que se decía que la FAFG estaba ubicada en una iglesia católica cercana, tomando pruebas de ADN y entrevistando a todos los que tuvieran parientes desaparecidos en la región.</p>
+<p class="story-body-text story-content" data-para-count="444" data-total-count="29719" id="story-continues-112" tabindex="-1">Habían pasado más de dos décadas desde que su esposo, Roberto, había desaparecido del pueblo donde creció y donde Delfina y él se enamoraron de adolescentes. Tenían cuatro hijas juntos y Delfina estaba embarazada de la quinta cuando él se esfumó. Roberto tenía una pequeña tienda y ayudaba a construir una escuela local. Era extrovertido y un padre amoroso al que le gustaba llevar a sus hijas al río y jugar fútbol con sus amigos.</p>
+<p class="story-body-text story-content" data-para-count="224" data-total-count="29943" id="story-continues-113" tabindex="-1">El 13 de julio de 1988, Roberto Xol despertó a las 5 de la mañana, no desayunó y se vistió con la ropa que su hija de 11 años, Filomena, había elegido para él: jeans, una camiseta de Coca Cola y una camisa de botones. </p>
+<p class="story-body-text story-content" data-para-count="336" data-total-count="30279" id="story-continues-114" tabindex="-1">Iba camino a la parada de autobús para conseguir suministros para su tienda cuando un hombre que usaba lentes oscuros y manejaba un auto blanco lo detuvo en la calle. El auto, contó un testigo después, parecía un jeep. Tenía las ventanas polarizadas y no traía placas. El conductor le hizo una seña a Roberto para que se subiera.</p>
+<p class="story-body-text story-content" data-para-count="368" data-total-count="30647" id="story-continues-115" tabindex="-1">Esa tarde, su hija más pequeña corría de ida y vuelta a la parada de autobús esperando a que su padre regresara, mientras Filomena atendía la tienda. Al caer la noche, Delfina temió lo peor: sabía lo que le había pasado a los hombres de su pueblo. El primo de Roberto había desaparecido, y lo mismo había pasado con al menos otros 40 hombres de la comunidad.</p>
+<p class="story-body-text story-content" data-para-count="305" data-total-count="30952" id="story-continues-116" tabindex="-1">Cuando no volvió después de un par de días, Delfina reunió a las niñas y viajaron en autobús a la base militar en Cobán. ¿Lo habrían arrestado? ¿Forzado a prestar servicio? Un soldado en la puerta de enfrente no le dio información, sino solo una advertencia: “No regreses o morirás aquí”. </p>
+<p class="story-body-text story-content" data-para-count="312" data-total-count="31264" id="story-continues-117" tabindex="-1">Visitó morgues, cárceles y hospitales. Sin su ingreso, la familia (alguna vez pudiente para los estándares locales) pronto perdió todo. Delfina tuvo que vender la tienda, la casa y las herramientas de construcción de Roberto, una por una. Cosechó maíz y recolectó granos de café, pero no fue suficiente. </p>
+<p class="story-body-text story-content" data-para-count="198" data-total-count="31462" id="story-continues-118" tabindex="-1">No pudo pagar los libros y los uniformes que necesitaba para que sus hijas fueran a la escuela. Mendigaron en la calle. Hubo tiempos en los que, durante semanas, la familia solo vivía de tortillas.</p>
+<p class="story-body-text story-content" data-para-count="393" data-total-count="31855" id="story-continues-119" tabindex="-1">Por años, Delfina tuvo la esperanza de que Roberto regresara. Nunca se volvió a casar. A menudo soñaba con él. Quizá estaba vivo, refugiado en México, como algunos otros que escaparon de la guerra civil guatemalteca, o tenía amnesia y pronto recuperaría la memoria. Corrían rumores en las zonas montañosas acerca de una gran casa donde los militares encarcelaban a los desaparecidos.</p>
+<p class="story-body-text story-content" data-para-count="332" data-total-count="32187" id="story-continues-120" tabindex="-1">En la iglesia de Cobán, un investigador le preguntó a Delfina si Roberto tenía alguna seña distintiva que pudiera ayudar a identificarlo, como trabajo dental o fracturas. Después tomó muestras con hisopos del interior de las mejillas de una de las hijas de Roberto, así como de su hermana, y las envío al laboratorio de ADN.</p>
+<p class="story-body-text story-content" data-para-count="265" data-total-count="32452" id="story-continues-121" tabindex="-1">Un año después, dos investigadores de FAFG, Freddy Muñoz y Diane Manuela Xiloj Cuin, llegaron a Campur con noticias para la familia: el laboratorio tenía una posible coincidencia, dijeron. Pero necesitaban muestras de las otras hijas antes de poder confirmarlo. </p>
+<p class="story-body-text story-content" data-para-count="210" data-total-count="32662" id="story-continues-122" tabindex="-1">Algunos meses pasaron; el laboratorio tenía mucho trabajo atrasado con los casos. Entonces, un día de julio de 2014, Muñoz y Xiloj Cuin comunicaron a la familia que regresaban a Campur con más información. </p>
+<p class="story-body-text story-content" data-para-count="268" data-total-count="32930" id="story-continues-123" tabindex="-1">Filomena caminó tres horas desde su pueblo, al cual no hay acceso en auto ni tiene servicio de teléfono celular, para reunirse con su madre y sus hermanas. Reunidas en la sala de la más joven de las hijas, Xiloj Cuin les explicó cómo funcionaba el proceso de ADN. </p>
+<p class="story-body-text story-content" data-para-count="229" data-total-count="33159" id="story-continues-124" tabindex="-1">Después, Muñoz les dijo que FAFG había podido encontrar coincidencias entre el ADN de las hijas y un esqueleto encontrado en la fosa 45, conocido como el caso No. 1433-XLV-1, uno de los más de 560 cuerpos exhumados en Cobán.</p>
+<p class="story-body-text story-content" data-para-count="384" data-total-count="33543" id="story-continues-125" tabindex="-1">Para ese momento Delfina y todas sus hijas estaban llorando. Roberto no había escapado para iniciar una nueva familia. No se había ido a México. Había sido secuestrado por el Ejército, posiblemente torturado. Fue asesinado y tirado a un hoyo en la tierra en una base a tan solo cinco kilómetros de distancia. Permaneció allí, solo en la tierra fría, durante más de 20 años.</p>
+<p class="story-body-text story-content" data-para-count="289" data-total-count="33832" id="story-continues-126" tabindex="-1">Cuatro meses más tarde, Peccerelli partió de la ciudad de Guatemala a Campur para el funeral de Roberto Xol. Mientras amanecía, manejaba por la región montañosa; el aire olía a rocío y al humo de madera de las fogatas con las que se cocinaba. La neblina se aferraba a las montañas. </p>
+<p class="story-body-text story-content" data-para-count="539" data-total-count="34371" id="story-continues-127" tabindex="-1">Durante varias horas cruzó por extensiones de terreno con casas de un piso, hechas de adobe, concreto o madera, muchas con techos de latón, sin tubería ni electricidad. Camionetas llenas de hombres, mujeres y niños —una versión del transporte público en las montañas— compartían los angostos y polvorientos caminos con las mujeres que se dirigían a los mercados, así como con los hombres y niños que bajaban de las montañas, jorobados por la pila de madera que llevaba a cuestas, casi tan grande como sus pequeños cuerpos.</p>
+<figure id="media-100000004493650" class="media photo media-100000004493650 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala3/03mag-03guatemala-t_CA1-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-129">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala3/03mag-03guatemala-t_CA1-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala3/03mag-03guatemala-t_CA1-superJumbo.jpg" data-mediaviewer-caption="Family members and friends, including Delfina Xol (right) and Mayra Arely (center), grieving over the clothes of Roberto Xol. His remains were identified and delivered to them by Peccerelli’s team." data-mediaviewer-credit="Antonio Bolfo for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/07/03/magazine/03guatemala3/03mag-03guatemala-t_CA1-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Family members and friends, including Delfina Xol (right) and Mayra Arely (center), grieving over the clothes of Roberto Xol. His remains were identified and delivered to them by Peccerelli’s team.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Antonio Bolfo for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="278" data-total-count="34649" id="story-continues-129" tabindex="-1">Para cuando Peccerelli llegó a Campur, Freddy Muñoz ya estaba allí; llevaba una gran caja de cartón que sacó de su camioneta. La caja tenía la etiqueta 1433-XLV-1. “¡Nos traen a mi abuelo!”, gritaron algunos de los 14 nietos de Roberto. “¡Ahí viene el abuelo!”.</p>
+<p class="story-body-text story-content" data-para-count="342" data-total-count="34991" id="story-continues-130" tabindex="-1">Más o menos cien personas se arremolinaban en el terreno lodoso y otras 75 empujaban para entrar al interior de la casa de concreto de dos habitaciones de la segunda hija de Roberto, que no tiene más de 120 metros cuadrados de construcción, y que comparte con sus tres hijos y Delfina. El humo y el olor a incienso llenaron la habitación. </p>
+<p class="story-body-text story-content" data-para-count="285" data-total-count="35276" id="story-continues-131" tabindex="-1">Colocaron un cubo de agua debajo del ataúd para llamar a los espíritus. Del lado derecho había una vasija envuelta en una tela maya. Del otro lado, había un cepillo de dientes nuevo, pasta de dientes, jabón y un peine, las cosas que Roberto necesitaría en su viaje al otro mundo.</p>
+<p class="story-body-text story-content" data-para-count="314" data-total-count="35590" id="story-continues-132" tabindex="-1">A la cabeza del ataúd, Delfina y sus cuatro hijas se juntaron, todas ellas de menos de 1,5 metros de altura, con el cabello negro recogido en chongos o colas de caballo, vestidas con faldas y huipiles bordados con flores. Una de las hijas de Roberto, Mayra Arely, tenía cuatro años cuando su padre desapareció. </p>
+<p class="story-body-text story-content" data-para-count="302" data-total-count="35892" id="story-continues-133" tabindex="-1">Tuvo que dejar la escuela a los 10; se casó a los 14 y hasta hace poco trabajaba limpiando casas. Solo la bebé de la familia, Norma, ahora de 27, madre y maestra —de quien Delfina estaba embarazada cuando su esposo desapareció— terminó la escuela, gracias a la generosidad de algunos parientes.</p>
+<p class="story-body-text story-content" data-para-count="307" data-total-count="36199" id="story-continues-134" tabindex="-1">Cuando Peccerelli abrió el ataúd, Muñoz sacó una camisa de botones blanca y pantalones negros que la familia trajo para Roberto. Entonces, parados en cada extremo del ataúd, Peccerelli y Muñoz trabajaron en silencio y rápidamente; sacaron los huesos de las bolsas de papel para reconstruir el cuerpo. </p>
+<p class="story-body-text story-content" data-para-count="338" data-total-count="36537" id="story-continues-135" tabindex="-1">Muñoz deslizó los huesos de los fémures y la pelvis en los pantalones y colocó los huesos de los pies debajo, mientras Peccerelli alineaba las vértebras dentro de la camisa. Después, reconstruyó la caja torácica de Roberto y sus brazos antes de colocar los huesos de las manos afuera de los bolsillos de los pantalones de Roberto. </p>
+<p class="story-body-text story-content" data-para-count="359" data-total-count="36896" id="story-continues-136" tabindex="-1">Peccerelli sudaba por el calor que irradiaban el techo de latón y la multitud alrededor del ataúd. Sus ojos lloraban por el humo del incienso. Si ponía alguna costilla fuera de orden, nadie lo sabría, pero a él le importaba. Este era el momento de los funerales cuando Peccerelli se sentía sensible, pero juró que nunca lloraría frente a las familias. </p>
+<p class="story-body-text story-content" data-para-count="207" data-total-count="37103" id="story-continues-137" tabindex="-1">Después de toda la exhumación y el análisis forense, finalmente sucedía esto: la despedida familiar de una persona desaparecida durante mucho tiempo y un conjunto de huesos que se habían vuelto humanos.</p>
+<p class="story-body-text story-content" data-para-count="287" data-total-count="37390" id="story-continues-138" tabindex="-1">Después de poner todos los huesos en el sitio correcto, Peccerelli colocó con delicadeza el cráneo sobre la almohada de satín en el ataúd; no quedaba señal de los pómulos anchos de Roberto. Ni pizca de sus ojos carbón, ni del rostro bien parecido que dicen que rompía corazones. </p>
+<p class="story-body-text story-content" data-para-count="159" data-total-count="37549" id="story-continues-139" tabindex="-1">La única cosa que recordaba a Delfina que ese era su esposo eran las dos coronas de oro en sus dientes, el resultado de una pelea en un bar hace mucho tiempo.</p>
+<p class="story-body-text story-content" data-para-count="350" data-total-count="37899" id="story-continues-140" tabindex="-1">Antes de que Peccerelli cerrara el ataúd, quedaba una última cosa por hacer. De una bolsa de plástico colocada sobre una mesa frente al ataúd, Muñoz sacó un pantalón, una camiseta de Coca Cola, una camisa a rayas de botones y un par de zapatos, la ropa que Roberto usaba el día que desapareció, ahora llena del polvo de más de dos décadas. </p>
+<p class="story-body-text story-content" data-para-count="164" data-total-count="38063" id="story-continues-141" tabindex="-1">Mayra Arely la reconoció inmediatamente: el último atuendo que su hermana escogió para su padre, la ropa que su hermana había descrito al detalle durante años. </p>
+<p class="story-body-text story-content" data-para-count="329" data-total-count="38392" id="story-continues-142" tabindex="-1">Se agachó enfrente de la ropa, el rostro hundido en los restos de su padre. “Papá, papá”, gritaba mientras la habitación permanecía en silencio, “regresaste, regresaste”. Algunos momentos después, Filomena también lloraba. Al igual que Delfina, agachaba la cabeza y tenía un rebozo negro alrededor de sus hombros.</p>
+<p class="story-body-text story-content" data-para-count="119" data-total-count="38511" id="story-continues-143" tabindex="-1">Después de unos minutos, Muñoz tomó la ropa y la colocó dentro del ataúd. Luego él y Peccerelli cerraron la tapa.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Maggie Jones es colaboradora de la revista de la Universidad de Pittsburgh, donde también es profesora adjunta. Su último artículo trató sobre por qué toda una generación de adoptados estaba regresando a Corea del Sur.</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/dictadura-militar/" rel="tag">Dictadura militar</a>, <a href="https://www.nytimes.com/es/tag/efrain-rios-montt/" rel="tag">Efraín Ríos Montt</a>, <a href="https://www.nytimes.com/es/tag/fredy-peccerelli/" rel="tag">Fredy Peccerelli</a>, <a href="https://www.nytimes.com/es/tag/genocidio/" rel="tag">genocidio</a>, <a href="https://www.nytimes.com/es/tag/guatemala/" rel="tag">Guatemala</a>, <a href="https://www.nytimes.com/es/tag/investigaciones-forenses/" rel="tag">investigaciones forenses</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/07/10/los-secretos-de-los-huesos-de-guatemala/"
+				data-title="América Latina: Guatemala encuentra la justicia en sus huesos"
+				data-author="POR MAGGIE JONES"
+				data-media=""
+				data-description="El antropólogo forense Fredy Peccerelli ha pasado dos décadas exhumando a las víctimas de la guerra civil en Guatemala. Ahora su trabajo podría ayudar a que los asesinos enfrenten la justicia."
+				data-publish-date="10 de julio de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/06/14/la-cruzada-contra-la-corrupcion-en-guatemala-es-un-ejemplo-para-la-region/">
+					<div class="story-body">
+						<h3 class="kicker">Editorial</h3>
+
+						<h2 class="headline">
+							<span class="title">La cruzada contra la corrupción en Guatemala es un ejemplo para la región</span>
+							<time class="dateline">14 de junio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/06/12/opinion/12sun2web/12sun2web-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/05/un-grupo-de-mujeres-en-guatemala-se-enfrenta-a-una-empresa-minera-canadiense/">
+					<div class="story-body">
+						<h3 class="kicker">Guatemala</h3>
+
+						<h2 class="headline">
+							<span class="title">Un grupo de mujeres en Guatemala se enfrenta a una empresa minera canadiense</span>
+							<time class="dateline">5 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/01/world/02guatemala-web3/02guatemala-web3-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/07/07/sin-este-lago-adonde-iremos-los-nuevos-refugiados-climaticos-de-bolivia/">
+					<div class="story-body">
+						<h3 class="kicker">Bolivia</h3>
+
+						<h2 class="headline">
+							<span class="title">&#8216;Sin este lago, ¿adónde iremos?&#8217;: Los nuevos refugiados climáticos de Bolivia</span>
+							<time class="dateline">7 de julio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/06/29/world/americas/00BOLIVIA15/00BOLIVIA-slide-1AK2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/07/07/el-sushi-es-sano-y-la-granola-expertos-y-consumidores-opinan/">
+					<div class="story-body">
+						<h3 class="kicker">The Upshot</h3>
+
+						<h2 class="headline">
+							<span class="title">¿El sushi es sano? ¿Y la granola? Expertos y consumidores no se ponen de acuerdo</span>
+							<time class="dateline">7 de julio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/07/08/universal/es/sushiES/sushiES-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+			
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":1088,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

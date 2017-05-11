@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004089971"/>
+<meta name="hdl" content="¿Europa podría sobrevivir a otro 2015?" />
+<meta name="col" content="Reposado" id="column-name" />
+<meta name="pdate" content="20151222" />
+<meta name="utime" content="20151222132055" />
+<meta name="ptime" content="20151222132055" />
+<meta name="DISPLAYDATE" content="Dec. 22, 2015" />
+<meta name="dat" content="Dec. 22, 2015" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="europa-podria-sobrevivir-a-otro-2015" />
+<meta property="og:url" content="https://www.nytimes.com/es/2015/12/22/europa-podria-sobrevivir-a-otro-2015/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="¿Europa podría sobrevivir a otro 2015?" />
+<meta property="og:description" content="Presiones internas y externas agobian a una Europa paralizada por la burocracia y aferrada a sus propias contradicciones.
+" />
+<meta property="og:image" content="https://static01.nyt.com/images/2015/12/20/magazine/20europe1-copy/20europe1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2015-12-22" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2015/12/22/europa-podria-sobrevivir-a-otro-2015/" />
+<meta property="twitter:title" content="¿Europa podría sobrevivir a otro 2015?" />
+<meta property="twitter:description" content="Presiones internas y externas agobian a una Europa paralizada por la burocracia y aferrada a sus propias contradicciones.
+" />
+<meta name="author" content="Jim Yardley" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por Jim Yardley" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="reposado" />
+<meta name="cd12" content="cronica" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="reposado" />
+<meta name="ser" content="cronica" />
+<meta name="id" content="100000004089971"/>
+<meta name="wordCount" content="7107"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2015/12/22/europa-podria-sobrevivir-a-otro-2015/">
+<meta name="nyt-collection:uri" content="year=2015&amp;monthnum=12&amp;day=22&amp;name=europa-podria-sobrevivir-a-otro-2015">
+<meta name="PT" content="article">
+<meta name="article:section" content="Reposado">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/10?exclude=620">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2015\/12\/22\/europa-podria-sobrevivir-a-otro-2015\/"},"headline":"\u00bfEuropa podr\u00eda sobrevivir a otro 2015?","datePublished":"2015-12-22T13:20:55+00:00","dateModified":"2016-01-24T23:12:39+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2015\/12\/20\/magazine\/20europe1-copy\/20europe1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Presiones internas y externas agobian a una Europa paralizada por la burocracia y aferrada a sus propias contradicciones.\r\n"}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2015/12/22/europa-podria-sobrevivir-a-otro-2015/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2015/12/20/magazine/has-europe-reached-the-breaking-point.html?ref=topics" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="reposado/cronica" />
+<title>¿Europa podría sobrevivir a otro 2015? &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2015/12/20/magazine/has-europe-reached-the-breaking-point.html?ref=topics" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2015/12/22/europa-podria-sobrevivir-a-otro-2015/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-620 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/reposado/">Reposado</a></span>
+					<span class="pipe">|</span>
+				¿Europa podría sobrevivir a otro 2015?
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2015/12/22/europa-podria-sobrevivir-a-otro-2015/"
+					data-title="Reposado: ¿Europa podría sobrevivir a otro 2015?"
+					data-author="POR JIM YARDLEY"
+					data-media=""
+					data-description="Presiones internas y externas agobian a una Europa paralizada por la burocracia y aferrada a sus propias contradicciones.
+"
+					data-publish-date="22 de diciembre de 2015"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/reposado/">Reposado</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/cronica/">Crónica</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">¿Europa podría sobrevivir a otro 2015?</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Jim Yardley</span>
+</span>
+
+					<time class="dateline" datetime="2015-12-22">22 de diciembre de 2015</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2015/12/22/europa-podria-sobrevivir-a-otro-2015/"
+							data-title="Reposado: ¿Europa podría sobrevivir a otro 2015?"
+							data-author="POR JIM YARDLEY"
+							data-media=""
+							data-description="Presiones internas y externas agobian a una Europa paralizada por la burocracia y aferrada a sus propias contradicciones.
+"
+							data-publish-date="22 de diciembre de 2015"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004106415" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/20/magazine/20europe1-copy/20europe1-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/20/magazine/20europe1-copy/20europe1-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/20/magazine/20europe1-copy/20europe1-superJumbo.jpg" data-mediaviewer-caption="Migrantes de Siria, Iraq y Afganistán haciendo fila para recibir alimentos en Grecia." data-mediaviewer-credit="Tomas Munita para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/20/magazine/20europe1-copy/20europe1-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Migrantes de Siria, Iraq y Afganistán haciendo fila para recibir alimentos en Grecia.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tomas Munita para The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2015/12/20/magazine/has-europe-reached-the-breaking-point.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="477" data-total-count="477" id="story-continues-2" tabindex="-1">Hace unas semanas visité la cerca, de malla metálica y alambre de púas, que ha convertido a Hungría en símbolo de la ansiedad europea. Con más de 160 kilómetros de longitud, la construyeron rápidamente este verano cuando comenzó el flujo de refugiados por el país, en su camino hacia Austria y Alemania. Establecieron varios puestos de policía y de soldados a lo largo del camino, a menos de 1 km de distancia entre sí, y casi en todos ellos revisaron mi pasaporte.</p>
+<p class="story-body-text story-content" data-para-count="390" data-total-count="867" id="story-continues-3" tabindex="-1">Parecían aburridos, quizá porque el flujo de refugiados y migrantes se ha reducido mucho. La cerca aisló casi por completo a Hungría, lo que hizo muy feliz a Laszlo Toroczkai, de 37 años, alcalde de Asotthalom, una población agrícola que se encuentra en la frontera de Hungría con Serbia. Toroczkai es una nueva estrella ultranacionalista en la política europea de extrema derecha.</p>
+<p class="story-body-text story-content" data-para-count="640" data-total-count="1507" id="story-continues-4" tabindex="-1">Antes de que el gobierno de Hungría comenzara a construir la cerca, Toroczkai había dicho, durante meses, que algo debía hacerse para detener a los refugiados. Una vez erigida la cerca, publicó un <a href="https://www.youtube.com/watch?v=fgJRjy2Xc0c" target="_blank">video en YouTube</a> con su versión de “Harry el sucio”. Con un rostro serio y vestido de negro, Toroczkai advierte a los inmigrantes ilegales que no se acerquen a su pueblo. El video muestra imágenes de guardias húngaros con caras largas, patrullando la frontera a caballo y en motocicletas. También incluye un mapa que muestra a los inmigrantes que se dirigen a Alemania cómo pueden evitar Hungría, pasando por Croacia y Eslovenia.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="133" data-total-count="1640" id="story-continues-5" tabindex="-1">“Hungría no es una buena elección”, afirma Toroczkai mientras mira fijamente a la cámara. “Asotthalom es la peor opción”.</p>
+<figure id="media-100000004106418" class="media photo media-100000004106418 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/20/magazine/20europe9-copy/20europe9-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-7">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/20/magazine/20europe9-copy/20europe9-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/20/magazine/20europe9-copy/20europe9-superJumbo.jpg" data-mediaviewer-caption="La Place de la République en Paris." data-mediaviewer-credit="Tomas Munita para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/20/magazine/20europe9-copy/20europe9-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">La Place de la République en Paris.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tomas Munita para The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="619" data-total-count="2259" id="story-continues-7" tabindex="-1">Puede parecer raro que una cerca de malla metálica represente una amenaza para la Unión Europea; pero uno de los logros particulares de la Europa moderna es la apertura de sus fronteras internas. El tratado que lo hizo posible, conocido como el Acuerdo de Schengen, comenzó en 1995 y creció hasta incluir a 26 países de la Unión Europea y sus alrededores. El acuerdo se convirtió de inmediato en un poderoso símbolo, tanto de los ideales como de los beneficios reales, de la integración europea. Las élites creyeron que la unidad garantizaría paz y prosperidad y que disiparía los demonios del nacionalismo.</p>
+<p class="story-body-text story-content" data-para-count="700" data-total-count="2959" id="story-continues-8" tabindex="-1">Con el tiempo, la Unión Europea construyó una economía rica y diversa, y ejerció influencia global por la fuerza de su escala y el “soft power” de sus valores liberales y democráticos, una superpotencia occidental que no era belicosa ni tenía la actitud insensible “laissez-faire” de Estados Unidos. Los derechos de los trabajadores eran respetados y se extendió el estado de bienestar. Las fronteras abiertas también unieron a los países miembros en otros aspectos más sutiles: los italianos podían ir a esquiar a Austria sin pasaporte, o nadar en la Costa Azul como si Europa fuera un solo país. La clase trabajadora podía trasladarse de Bruselas a París sin ningún problema.</p>
+<p class="story-body-text story-content" data-para-count="566" data-total-count="3525" id="story-continues-9" tabindex="-1">La cerca se erigió al sur de Hungría, a lo largo de su frontera externa con Serbia y Croacia, dos países que no pertenecen al acuerdo Schengen. Sin embargo, disparó una reacción en cadena que sacudió a los políticos europeos hasta lo más profundo, pues las distinciones entre fronteras internas y externas se volvieron borrosas. En primer lugar, llevó a la creación de más barreras. Ni Eslovenia (que es un país Schengen) ni Croacia estaban preparados para el repentino flujo de inmigrantes y refugiados desesperados que fueron desviados a su territorio.</p>
+<p class="story-body-text story-content" data-para-count="779" data-total-count="4304" id="story-continues-10" tabindex="-1">Rápidamente, Eslovenia construyó su propia cerca en la frontera con Croacia. Más adelante, Austria comenzó a construir otra cerca en su frontera con Eslovenia y estableció más controles fronterizos, al igual que otros países. El Primer Ministro Viktor Orban de Hungría argumentó que estaba defendiendo el área Schengen, mientras que otros líderes señalaron que el propósito de estas nuevas barreras era ofrecer una ruta organizada hacia el norte para los refugiados. Sin embargo, la rápida proliferación de cercas en una región definida por el movimiento libre entre sus territorios, fue una clara señal de que se habían desplomado las fronteras externas del área Schengen, y que los valores fundamentales del sistema se encontraban bajo una presión terrible.</p>
+<p class="story-body-text story-content" data-para-count="554" data-total-count="4858" id="story-continues-11" tabindex="-1">Cuando visité, la pregunta en Hungría y otros países miembros era si se estaba desbaratando la Unión Europea. En un periodo de 11 meses, París sufrió dos ataques terroristas, lo que provocó gran incertidumbre por la seguridad de Europa e incitó actitudes xenofóbicas contra los musulmanes. La extrema derecha de Europa se fortaleció, incluido el Frente Nacional de Francia. La Canciller Angela Merkel de Alemania, indiscutible líder de Europa, enfrentó problemas políticos. Grecia todavía estaba envuelta en profundos problemas financieros.</p>
+<p class="story-body-text story-content" data-para-count="340" data-total-count="5198" id="story-continues-12" tabindex="-1">Se avecinaba una crisis demográfica por la rápida tasa de envejecimiento de muchos países europeos. Además, en la periferia del territorio europeo, Vladimir Putin involucraba a Rusia en conflictos en Siria y Ucrania. Y como si fuera poco, el Reino Unido estaba contemplando la posibilidad de separarse de la unión de manera definitiva.</p>
+<p class="story-body-text story-content" data-para-count="620" data-total-count="5818" id="story-continues-13" tabindex="-1">Se suponía que la Unión Europea debía ser una superpotencia económica, pero después de siete años, aun trata de recuperarse de la crisis económica global. En los mejores casos, el crecimiento económico es lento (y nada uniforme, pues existe una división entre el próspero norte y el sur, con inmensas deudas). Después de hacer ajustes por la inflación, el producto interno bruto de los 19 países que comparten el euro fue menor en 2014 que en 2007. El desempleo generalizado y la escasez de oportunidades afectan a toda una generación de jóvenes europeos, en especial en España, Italia, Francia y Grecia.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="598" data-total-count="6416" id="story-continues-14" tabindex="-1">Los malestares económicos tienen consecuencias en todas las esferas: los jóvenes no se casan por falta de oportunidades económicas. Los países europeos más pobres sufren por fugas de cerebros, pues muchos de los mejores profesionales y universitarios se mudan al extranjero. Muchísimos doctores griegos, por ejemplo, ahora trabajan en Alemania, mientras que el sistema de salud griego se encuentra en crisis. Incluso Toroczkai, que se resiste a los inmigrantes, me comentó que demasiados jóvenes húngaros se ven obligados a abandonar el país e ir a ciudades como Londres a buscar trabajo.</p>
+<p class="story-body-text story-content" data-para-count="771" data-total-count="7187" id="story-continues-15" tabindex="-1">Los inmigrantes solo acentúan la paradoja europea: mientras muchos de sus propios jóvenes se hunden en el pesimismo, el área se convierte en un rayo de esperanza para quienes llegan al territorio, muchos de ellos refugiados sirios que han vivido el horror de la guerra civil. Muchos son jóvenes y educados; a primera vista parecerían ideales para una región en la que la población envejece. Pero los inmigrantes musulmanes representan un reto para los ideales europeos de tolerancia, en especial en un año de ataques terroristas, cuando los líderes políticos de extrema derecha y conservadores como Orban advierten que la seguridad de Europa y los “valores cristianos” están bajo amenaza, lo que hace evidente cuán frágil se ha vuelto el sistema europeo.</p>
+<p class="story-body-text story-content" data-para-count="868" data-total-count="8055" id="story-continues-16" tabindex="-1">Actualmente compuesta por 28 estados miembro, desde Alemania, el gigante industrial, hasta Malta, el pequeño archipiélago, la Unión Europea es una máquina burocrática defectuosa que busca alcanzar un sueño utópico, la visión posterior a la Segunda Guerra Mundial de que una Europa unificada sería una Europa pacífica y próspera. El nacionalismo y el extremismo condujeron a Hitler y al Holocausto y antes, siglos de guerras. Se suponía que la Nueva Europa haría imposibles las guerras y crearía armonía. La realidad nunca logró materializar estas ambiciones, pero se dieron logros considerables: el mercado único más grande del mundo, las fronteras abiertas de los países Schengen, el euro, y un avanzado marco social y legal que ha convertido a la Unión Europea en líder en materia de protección ambiental, energía renovable y derechos humanos.</p>
+<p class="story-body-text story-content" data-para-count="713" data-total-count="8768" id="story-continues-17" tabindex="-1">La Europa moderna se construyó de manera gradual, a partir de un acuerdo industrial que suscribieron a principios de la década de los 50 seis países, encabezados por Francia y Alemania. Después, se firmó el Tratado de Roma en 1957, por el cual se creó la Comunidad Económica Europea, precursor de la Unión Europea, que agrupó solamente a Bélgica, Francia, Italia, Luxemburgo, Holanda y Alemania Occidental. El Tratado de Maastricht, en 1992, delineó los requisitos y calendarios para establecer la moneda común. Luego, mediante otros tratados, se sumaron gradualmente otros estados, como los países Bálticos y partes de Europa Oriental en 2004 y 2007, en un triunfo definitivo sobre la Guerra Fría.</p>
+<p class="story-body-text story-content" data-para-count="693" data-total-count="9461" id="story-continues-18" tabindex="-1">Pero llegó la crisis económica de 2008, seguida por las incontenibles repercusiones de la Primavera Árabe, y la agresión de una Rusia revanchista. El estilo político de Europa, de colaboración y consulta, comenzó a confundirse con indecisión. La insuficiencia y debilidad de las instituciones de la Unión Europea quedaron en evidencia. Las prioridades de Washington estaban en otras regiones, y los líderes europeos perfeccionaron el arte de la improvisación, con la esperanza de que la economía europea en su conjunto reviviera pronto y ofreciera mejores prospectos políticos. Pero el 2015 resultó todo lo contrario, pues fue el año que llevó a Europa al borde del precipicio.</p>
+<figure id="media-100000004106422" class="media photo media-100000004106422 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/20/magazine/20europe2-copy/20europe2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-20">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/20/magazine/20europe2-copy/20europe2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/20/magazine/20europe2-copy/20europe2-superJumbo.jpg" data-mediaviewer-caption="Khalil Merroun, de la mezquita Évry-Courcouronnes cerca de París." data-mediaviewer-credit="Tomas Munita para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/20/magazine/20europe2-copy/20europe2-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Khalil Merroun, de la mezquita Évry-Courcouronnes cerca de París.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tomas Munita para The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="458" data-total-count="9919" id="story-continues-20" tabindex="-1">Todo comenzó el 7 de enero, con los <a href="http://www.nytimes.com/2015/01/08/world/europe/charlie-hebdo-paris-shooting.html" target="_blank">primeros ataques terroristas en París</a>, cuando dos hermanos franco-argelinos abrieron fuego con armas automáticas dentro de las oficinas de la revista de sátira Charlie Hebdo. Más tarde, otro hombre armado, un delincuente convertido al Islamismo, mató a un oficial de policía e irrumpió en una tienda kosher. En total, 17 personas fueron asesinadas. Pero la atención rápidamente se desvió hacia el sur, a Grecia.</p>
+<p class="story-body-text story-content" data-para-count="612" data-total-count="10531" id="story-continues-21" tabindex="-1">El 25 de enero, los griegos sacudieron a Europa al elegir como primer ministro a un político de izquierda radical, Alexis Tsipras, que se hizo famoso por no usar corbatas. De sólo 40 años, Tsipras había prometido acabar con la austeridad económica, la política de la Unión Europea para lograr crecimiento económico mediante una reducción en el déficit nacional a través de mayores impuestos, recortes al gasto y reformas estructurales. Pero la deuda de Grecia había aumentado, el desempleo superaba el 20 por ciento y la economía se había contraído en un 25 por ciento en los últimos cinco años.</p>
+<p class="story-body-text story-content" data-para-count="667" data-total-count="11198" id="story-continues-22" tabindex="-1">En febrero, Tsipras y <a href="http://www.nytimes.com/2015/05/24/magazine/a-finance-minister-fit-for-a-greek-tragedy.html" target="_blank">su extravagante ministro de Finanzas, Yanis Varoufakis</a>, recorrieron las capitales europeas para intentar que los acreedores de Grecia cambiaran los términos de los préstamos que habían mantenido a flote a su país. Alemania, Finlandia y otros países consideraron que Grecia era malagradecida, pues se oponía a las duras reformas necesarias para revertir décadas de malos gobiernos. A finales de junio, todo estalló. Al no lograr obtener más dinero, Tsipras sorprendió con un llamado a un referendo nacional para que los griegos decidieran si querían aceptar la última oferta de los acreedores. <a href="http://www.nytimes.com/2015/07/06/world/europe/greek-referendum-debt-crisis-vote.html" target="_blank">Los electores votaron “no”</a>, en vano.</p>
+<p class="story-body-text story-content" data-para-count="590" data-total-count="11788" id="story-continues-23" tabindex="-1">En efecto, Grecia no cumplió el pago de un préstamo del F.M.I. pues el gobierno empezó a quedarse sin dinero. Tsipras cerró los bancos y estableció controles de capital, hasta que finalmente se rindió en julio. Suscribió un nuevo acuerdo de rescate con sus acreedores, que incluyeron el mismo tipo de medidas de austeridad que había resistido por meses. En agosto, renunció; pero fue reelecto en septiembre, aunque ahora su trabajo, en parte, era cumplir con los términos del nuevo acuerdo. La austeridad había prevalecido, aunque cada vez menos personas pensaran que funcionaba.</p>
+<p class="story-body-text story-content" data-para-count="649" data-total-count="12437" id="story-continues-24" tabindex="-1">La crisis griega fue un problema interno de Europa, encerrada en sí misma, aferrada a sus propias contradicciones. Pero para el verano y principios del otoño, las contradicciones externas de Europa se hicieron todavía más agudas. Dos pilares de la política exterior del continente comenzaron a tambalearse, la relación con Rusia y la estabilidad en la periferia de Europa. Ucrania estaba en crisis y se encontraba en el medio de un enfrentamiento entre la Unión Europea y Putin. Manejar al líder ruso se complicó aun más cuando Rusia comenzó a bombardear a Siria, lo que agravó una crisis de refugiados que ya dominaba la agenda europea.</p>
+<p class="story-body-text story-content" data-para-count="646" data-total-count="13083" id="story-continues-25" tabindex="-1">Para la mitad del verano, los refugiados sirios descubrieron un atajo a través de Lesbos, la isla griega. De enero a octubre, según la agencia de seguridad fronteriza de Europa, 1,2 millones de inmigrantes ingresaron de manera ilegal a la Unión Europea, cifra que se cuadruplicó frente al año anterior. Muchos llegaron en botes inflables o lanchas raquíticas. Los europeos podrían haber interpretado este hecho como afirmación de su excepcionalidad, al ver que sirios, afganos, eritreos, gambios y otros escapaban de la guerra y la pobreza para ir tras el sueño europeo. Pero Europa se mostró abrumada y temerosa, y no estaba preparada.</p>
+<p class="story-body-text story-content" data-para-count="877" data-total-count="13960" id="story-continues-26" tabindex="-1">Sin embargo, <a href="http://www.nytimes.com/2015/09/06/world/europe/migrant-crisis-austria-hungary-germany.html" target="_blank">Angela Merkel le dio la bienvenida a Alemania a todos los sirios</a>, y abrió las puertas a un millón de personas este año, aunque para hacerlo debió suspender las reglas de la Unión Europea. La dinámica de poder de Europa cambió en un instante. Alemania está acostumbrada a dominar la agenda, pero muchos países se rehusaron a aceptar que los funcionarios europeos de Bruselas establecieran incluso cuotas modestas de refugiados. Aumentó el apoyo a la extrema derecha en algunos países, y los líderes conservadores fueron cada vez más audaces. Orban, el primer ministro de Hungría, se autonombró el protector de Europa. Incluso en Alemania, hubo quienes incendiaron centros de refugiados, mientras que extremistas de extrema derecha en Dresden organizaron manifestaciones. En toda Europa, las actitudes en contra de musulmanes e inmigrantes aumentaron.</p>
+<p class="story-body-text story-content" data-para-count="697" data-total-count="14657" id="story-continues-27" tabindex="-1">Un día gris en noviembre me reuní con Khalil Merroun, rector de la Gran Mezquita de Évry-Courcouronnes, una de las mezquitas más grandes de Francia, ubicada en un suburbio de París. Merroun, de 69 años, barrigón y muy jovial, es un líder del Islam. Es uno de los fundadores del Consejo Francés del Culto Musulmán, organismo cuasi-gubernamental encargado de regular las actividades de los musulmanes. Su amigo Manuel Valls, que ahora es el primer ministro de Francia, le otorgó la Legión de Honor, la condecoración más importante del país, y escribió el prólogo del libro de Merroun titulado “Français et musulman : est-ce possible?” (Francés y musulmán, ¿esto es posible?)</p>
+<p class="story-body-text story-content" data-para-count="462" data-total-count="15119" id="story-continues-28" tabindex="-1">Merroun se quitó el albornoz blanco para ponerse el saco del traje, y sonrió mientras tomaba asiento. Acababa de terminar las oraciones del viernes a la hora del almuerzo. “Cinco mil personas”, dijo, mientras veía a través de la ventana de su oficina a la multitud de creyentes musulmanes que abandonaban la sala de oración. Afuera de su oficina, dos guardaespaldas en trajes negros, asignados por funcionarios franceses, estaban sentados en el pasillo.</p>
+<p class="story-body-text story-content" data-para-count="464" data-total-count="15583" id="story-continues-29" tabindex="-1">El personal de seguridad cuidaba a Merroun desde los ataques de enero en París, que tuvieron un impacto profundo en Francia. Quedaron expuestas fallas en la seguridad francesa y en sus servicios de inteligencia. Surgieron debates sobre el secularismo francés y la libertad de expresión. Se agravó la desconfianza entre los musulmanes franceses. En respuesta, Merroun y otros líderes religiosos celebraron reuniones interreligiosas para promover la tolerancia.</p>
+<figure id="media-100000004106424" class="media photo media-100000004106424 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/20/magazine/20europe3-copy/20mag-20europe-t_CA1-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-31">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/20/magazine/20europe3-copy/20mag-20europe-t_CA1-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/20/magazine/20europe3-copy/20mag-20europe-t_CA1-superJumbo.jpg" data-mediaviewer-caption="Soldados en la Grand Place, la plaza central de Bruselas." data-mediaviewer-credit="Tomas Munita para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/20/magazine/20europe3-copy/20mag-20europe-t_CA1-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Soldados en la Grand Place, la plaza central de Bruselas.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tomas Munita para The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="181" data-total-count="15764" id="story-continues-31" tabindex="-1">Merroun se inclinó hacia adelante en su silla. El terrorismo “no es yihad”, afirmó. El yihad de cada uno se trata de mejorar como persona y tratar de tener mayor comprensión.</p>
+<p class="story-body-text story-content" data-para-count="450" data-total-count="16214" id="story-continues-32" tabindex="-1">“Hoy, hiciste un gran yihad al venir a verme”, indicó. “Me llamaste, tomaste el metro, y aunque estaba lloviendo viniste por una causa noble, para informar a la gente. Yo también realicé un esfuerzo, un yihad: te escuché, te recibí e intenté transmitir un mensaje para informar mejor a las personas, para intentar acabar con ideas erróneas y compartir nuestro mensaje verdadero a miles de kilómetros de distancia, con Estados Unidos”.</p>
+<p class="story-body-text story-content" data-para-count="309" data-total-count="16523" id="story-continues-33" tabindex="-1">Merroun no negó que exista veneno en contra de los musulmanes o los refugiados, y por eso le asignaron el personal de seguridad, pero piensa que el malestar tiene sus raíces en frustraciones más profundas, como la falta de empleo. “Hasta ahora, todo se ha mantenido relativamente estable”, puntualizó.</p>
+<p class="story-body-text story-content" data-para-count="289" data-total-count="16812" id="story-continues-34" tabindex="-1">Nuestra entrevista concluyó poco después de las dos de la tarde. Tomé el tren de regreso a París con un colega. Esa noche, menos de ocho horas después, tres grupos de terroristas suicidas y <a href="http://www.nytimes.com/interactive/2015/11/13/world/europe/paris-shooting-attacks.html" target="_blank">otros islamistas radicales armados hasta los dientes atacaron París y mataron a 130 personas</a>.</p>
+<p class="story-body-text story-content" data-para-count="411" data-total-count="17223" id="story-continues-35" tabindex="-1">Para entender por qué la Unión Europea se desmorona, hay que ver cómo funciona realmente, y esto ocurre en Bruselas. Hace poco, por la calle Montoyer, una de las principales calles donde se encuentran despachos legales y grupos de interés que representan a las instituciones europeas, hablé con Emily O’Reilly, de 58 años, originaria de Irlanda, quien ostenta el cargo de ombudsman de la Unión Europea.</p>
+<p class="story-body-text story-content" data-para-count="748" data-total-count="17971" id="story-continues-36" tabindex="-1">Esa misma mañana, el Primer Ministro David Cameron del Reino Unido había <a href="http://www.nytimes.com/2015/11/11/world/europe/cameron-britain-eu-membership.html" target="_blank">anunciado qué hacía falta para que su país se mantuviera en el bloque europeo</a>. En las elecciones generales británicas de mayo, Cameron intentó aplacar a las facciones antieuropeas con la promesa de realizar un referendo para decidir si el Reino Unido debía seguir en la Unión Europea. Aún no se ha anunciado fecha para la votación, aunque ocurrirá en algún momento antes de terminar el 2017, y todavía es muy pronto para saber que decidirán los electores. Pero la posibilidad de que Gran Bretaña abandone la unión ya atormenta a Bruselas, en especial porque el enojo público con la dirigencia europea también ha aumentado en Francia, e incluso en Alemania.</p>
+<p class="story-body-text story-content" data-para-count="119" data-total-count="18090" id="story-continues-37" tabindex="-1">“Quieren más Bretaña y menos Europa”, expresó O’Reilly, para sintetizar la esencia de la rebelión británica.</p>
+<figure id="media-100000004106427" class="media photo media-100000004106427 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/20/magazine/20europe4-copy/20europe4-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-39">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/20/magazine/20europe4-copy/20europe4-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/20/magazine/20europe4-copy/20europe4-superJumbo.jpg" data-mediaviewer-caption="Honrando a las víctimas de los ataques terroristas de noviembre en París." data-mediaviewer-credit="Tomas Munita para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/20/magazine/20europe4-copy/20europe4-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Honrando a las víctimas de los ataques terroristas de noviembre en París.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tomas Munita para The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="630" data-total-count="18720" id="story-continues-39" tabindex="-1">El trabajo de O’Reilly consiste en clarificar dudas sobre el sistema europeo y remediar la percepción generalizada de que no existe responsabilidad burocrática. No es una tarea sencilla, dada la magnitud y confusión sobre las facultades de la Unión Europea. Hace poco intentó, sin éxito, explicarle a su esposo las diferencias entre el Consejo Europeo, el Consejo de la Unión Europea (al que algunas veces se denomina Consejo de Ministros) y el Consejo de Europa. Le comenté que yo estaba tratando de entender el sistema. “Si lo logras, regresa”, pidió. “Si lo compartes con nosotros, puedes hacer una fortuna”.</p>
+<p class="story-body-text story-content" data-para-count="403" data-total-count="19123" id="story-continues-40" tabindex="-1">Algunos críticos suelen usar la palabra “Bruselas” para referirse al proyecto europeo en su conjunto, y por eso se habla de “la burbuja de Bruselas”. Hay una estructura institucional básica, con cierto grado de equilibrio de poderes. La Comisión Europea es, en general, el equivalente al poder ejecutivo. También existe el poder legislativo que se forma por elección, el Parlamento Europeo.</p>
+<p class="story-body-text story-content" data-para-count="599" data-total-count="19722" id="story-continues-41" tabindex="-1">El tercer poder, el Consejo Europeo, está formado por los líderes electos de los 28 estados miembro (y comparte instalaciones con el Consejo de la Unión Europea, un foro en el que los ministros nacionales dialogan sobre las diferentes políticas compartidas). Debajo de esos poderes principales existe un verdadero laberinto burocrático. Los procesos legislativos y de gobierno pueden ser tan fluidos que resultan imprecisos, y son deliberadamente opacos, por lo que es muy fácil cuestionar la credibilidad de la dirigencia europea. Gran parte de los ciudadanos ni siquiera sabe cómo funciona.</p>
+<p class="story-body-text story-content" data-para-count="266" data-total-count="19988" id="story-continues-42" tabindex="-1">La Unión Europea no cuenta con nada parecido a la Constitución de Estados Unidos, pues es el producto de una serie de tratados que ratificaron los miembros. Si bien estos tratados han impulsado a Europa hacia una mayor integración, todavía falta mucho por hacer.</p>
+<p class="story-body-text story-content" data-para-count="455" data-total-count="20443" id="story-continues-43" tabindex="-1">Las instituciones de la Unión Europea cuentan con amplias facultades regulatorias sobre temas tan diversos como el roaming de datos, normas ambientales, acuerdos comerciales o leyes para combatir a los monopolios. Pero esas facultades no se distribuyen de manera equitativa. La Comisión Europea, por ejemplo, debe exigir el cumplimiento de los tratados del bloque, pero algunas veces actúa con prudencia con estados importantes como Francia y Alemania.</p>
+<p class="story-body-text story-content" data-para-count="656" data-total-count="21099" id="story-continues-44" tabindex="-1">En conjunto, las instituciones no cuentan con el poder estructural para tomar medidas colectivas para enfrentar problemas imprevistos y de grandes dimensiones como la crisis griega, la oleada de inmigrantes o el tema de Ucrania. Los líderes nacionales muchas veces se ven obligados a tomar decisiones en reuniones maratónicas de emergencia en el Consejo Europeo, e incluso en esos casos, sólo se logran avances graduales. Se trata de la receta perfecta para la desconfianza pública: un sistema de reguladores entrometidos cuyos tentáculos pueden llegar hasta la vida íntima, incluso cuando los líderes parecen indecisos al enfrentar crisis genuinas.</p>
+<p class="story-body-text story-content" data-para-count="476" data-total-count="21575" id="story-continues-45" tabindex="-1">Como el sistema está incompleto, muchas veces hay que optar por soluciones temporales. O’Reilly me explicó un elemento del sistema de poder compartido que se ha desarrollado en Bruselas con un término propio del sector: “diálogo tripartito”. Los diálogos tripartitos son reuniones informales, que con frecuencia se celebran con poca transparencia, de legisladores del Parlamento Europeo, representantes de gobiernos nacionales y burócratas de la Comisión Europea.</p>
+<p class="story-body-text story-content" data-para-count="453" data-total-count="22028" id="story-continues-46" tabindex="-1">Juntos inventan leyes que más tarde someten a votación en el Parlamento Europeo y otras instituciones de la Unión Europea. Se trata de política secreta, al estilo Bruselas. O’Reilly, quien investiga esta práctica, expresó que muchas personas consideran que los diálogos tripartitos ayudan a evitar la burocracia y obtener resultados, pero también generan preguntas sobre la transparencia y la falta de pesos y contrapesos de las instituciones.</p>
+<p class="story-body-text story-content" data-para-count="579" data-total-count="22607" id="story-continues-47" tabindex="-1">Muchos expertos en Europa piensan que este estilo descontrolado y opaco de gobierno afecta la credibilidad de un experimento europeo que se creó como modelo de democracia. Afirman que la solución es obvia: que todos los miembros ratifiquen un nuevo tratado para consolidar la autoridad política y financiera de Bruselas y mejorar fallas del sistema. O, en otras palabras, el tipo de disolución de la soberanía nacional que actualmente alimenta la rabia populista de la extrema derecha en Europa. Pero en realidad, casi nadie cree que un nuevo tratado pueda aprobarse pronto.</p>
+<p class="story-body-text story-content" data-para-count="314" data-total-count="22921" id="story-continues-48" tabindex="-1">Cinco días después de los ataques en París, me reuní con Laszlo Toroczkai en su oficina de Asotthalom. Me dijo que respeta el Islam, aunque le parece inadecuado para Europa. “Mi tercera hija está por nacer”, compartió. “No voy a criar a mi hija para que forme parte del harem de un hombre musulmán”.</p>
+<p class="story-body-text story-content" data-para-count="776" data-total-count="23697" id="story-continues-49" tabindex="-1">Es el tipo de comentario abiertamente fanático que se ha hecho común en Hungría y en otras partes de Europa (y que tampoco es tan raro en Estados Unidos). Muchos húngaros se burlaron de su video en contra de los inmigrantes ilegales, pero la percepción de Toroczkai mejoró entre la extrema derecha europea. En noviembre recibió una invitación para dar un discurso como parte de las celebraciones por el Día de la Independencia de Polonia en Varsovia, donde miles de seguidores de extrema derecha ondearon banderas y desplegaron pancartas con mensajes como “Alto a la Islamización”. Toroczkai me dijo que los ataques de París habían demostrado que estaba en lo correcto, pues dos de los autores supuestamente atravesaron Grecia haciéndose pasar por refugiados.</p>
+<p class="story-body-text story-content" data-para-count="349" data-total-count="24046" id="story-continues-50" tabindex="-1">Si bien la crisis de inmigrantes ya había expuesto fallas en el sistema Schengen, este segundo ataque en París amenazó con demolerlo. Algunos sospechosos habían viajado entre Europa y Siria. Otros, al parecer, se desplazaron libremente entre Bruselas y París. Las fronteras abiertas ahora quieren decir que Europa está más expuesta al terror.</p>
+<figure id="media-100000004106431" class="media photo media-100000004106431 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/20/magazine/20europe5-copy/20mag-20europe-t_CA0-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-52">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/20/magazine/20europe5-copy/20mag-20europe-t_CA0-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/20/magazine/20europe5-copy/20mag-20europe-t_CA0-superJumbo.jpg" data-mediaviewer-caption="Un oficial de policía húngaro patrulla la frontera con Serbia, donde se erigió una cerca para evitar el flujo de inmigrantes." data-mediaviewer-credit="Tomas Munita para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/20/magazine/20europe5-copy/20mag-20europe-t_CA0-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Un oficial de policía húngaro patrulla la frontera con Serbia, donde se erigió una cerca para evitar el flujo de inmigrantes.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tomas Munita para The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="248" data-total-count="24294" id="story-continues-52" tabindex="-1">“El movimiento de inmigrantes sólo atraerá conflictos sangrientos”, indicó Toroczkai. “Los políticos europeos tendrán que escuchar a la opinión pública, que se radicaliza por toda Europa como resultado de esta crisis de inmigrantes”.</p>
+<p class="story-body-text story-content" data-para-count="717" data-total-count="25011" id="story-continues-53" tabindex="-1">Sobre todo, la crisis, al igual que la cerca en Hungría, subrayó el hecho de que la eliminación de las fronteras realmente no eliminó las divisiones entre países con distintos idiomas, costumbres e historias. La expansión de la Unión Europea, que ocurrió en 2004 para incluir partes de Europa Oriental, causó una profunda ansiedad económica en Francia y contribuyó a que fracasaran los esfuerzos franceses de 2005 para aprobar la Constitución de la Unión Europea. Sus oponentes usaron la expresión “plomero polaco” para simbolizar la mano de obra barata extranjera que amenazaba a la clase trabajadora francesa. Ahora, la llegada de inmigrantes representa de nuevo un reto para los ideales europeos.</p>
+<p class="story-body-text story-content" data-para-count="941" data-total-count="25952" id="story-continues-54" tabindex="-1">Europa no suele ser considerado como un continente de inmigrantes. Cuando países como Francia y Alemania Occidental contrataron trabajadores de Argelia y Turquía en la década de los 60 para tener mano de obra que les hacía falta, la expectativa generalizada era que la mayoría de esos trabajadores regresarían a su lugar de origen. Para cualquier persona que se sube al metro de París, es evidente que la capital francesa es uno de los lugares más diversos del mundo; sin embargo, no ha sido fácil para Francia absorber a esa población, o incluso a los franceses musulmanes de segunda y tercera generación. Ha resultado difícil equilibrar el Islam con el secularismo francés. En Alemania, el Islam se maneja a través de canales diplomáticos; muchos imanes provienen de un ministerio religioso del gobierno turco. Francia tiene un arreglo similar con Marruecos, Argelia y otros países con población mayoritaria de musulmanes.</p>
+<p class="story-body-text story-content" data-para-count="357" data-total-count="26309" id="story-continues-55" tabindex="-1">Merkel ha sido la principal defensora de la apertura europea, pero ha pagado un precio político. Los partidos de extrema derecha avanzaron rápidamente en las encuestas mientras ella perdió apoyo, y sus colegas conservadores le hicieron duras críticas (<a href="http://www.nytimes.com/2015/09/14/world/europe/germany-emergency-measures-european-migrant-crisis.html" target="_blank">Alemania terminó por anunciar restricciones en las fronteras a los migrantes</a> que llegaran al país).</p>
+<p class="story-body-text story-content" data-para-count="628" data-total-count="26937" id="story-continues-56" tabindex="-1">El 2 de noviembre viajé a Darmstadt, al sur de Alemania, para observar a Merkel en una reunión con cientos de cuadros de su partido, Unión Demócrata Cristiana. Muchos voluntarios alemanes habían brindado ayuda a los inmigrantes, pero aquí muchos estaban preocupados. A un ingeniero de sistemas le preocupaba que los inmigrantes se convirtieran en una carga adicional, justo cuando temía que Alemania estaba perdiendo sus ventajas competitivas. Otro hombre lamentaba que Alemania estaba perdiendo sus valores cristianos. Otros se quejaban de que no hubiera suficiente empleo o advertían que los pueblos estaban abrumados.</p>
+<p class="story-body-text story-content" data-para-count="512" data-total-count="27449" id="story-continues-57" tabindex="-1">Merkel escuchó los comentarios, tomó nota con mucha atención, y después ofreció casi la misma respuesta a todos: sí podemos hacerlo, repitió una y otra vez. Alemania debe poner el ejemplo. Vamos a estar bien. Todos aplaudieron, pero el ánimo general era sombrío. Todavía no parecía haber un plan. Después, acorralé a un ingeniero, Martin Spruch, quien le había dicho a Merkel que el resto de Europa había abandonado a Alemania en el tema de los refugiados. “No podemos hacerlo solos”, me dijo.</p>
+<p class="story-body-text story-content" data-para-count="691" data-total-count="28140" id="story-continues-58" tabindex="-1">Desde los ataques de París, el Presidente François Hollande de Francia ha respetado el compromiso del país de recibir un número modesto de refugiados. Pero ha establecido controles fronterizos y ha advertido que Europa debe asegurar sus fronteras externas, pues existe el riesgo de que los países miembros opten por sellar sus fronteras. Agregó que esto equivaldría a “desmantelar a la Unión Europea”. A principios de diciembre, Marine Le Pen, líder del Frente Nacional en Francia, logró victorias importantes en las elecciones regionales, y ahora es posible que la extrema derecha tenga alguna posibilidad de alcanzar la presidencia en 2017, algo impensable unos años atrás.</p>
+<figure id="media-100000004106434" class="media photo media-100000004106434 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/20/magazine/20europe6-copy/20europe6-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-60">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/20/magazine/20europe6-copy/20europe6-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/20/magazine/20europe6-copy/20europe6-superJumbo.jpg" data-mediaviewer-caption="La sede de la Comisión Europea en Bruselas." data-mediaviewer-credit="Tomas Munita para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/20/magazine/20europe6-copy/20europe6-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">La sede de la Comisión Europea en Bruselas.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tomas Munita para The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="548" data-total-count="28688" id="story-continues-60" tabindex="-1">El día que visité la cerca en Hungría, vi una camioneta negra estacionada frente al ayuntamiento en Asotthalom. Adentro, se encontraba una pequeña delegación de políticos de Bélgica, encabezados por Filip Dewinter, el líder del partido de extrema derecha Vlaams Belang. Bélgica estaba con los pelos de punta, pues investigadores descubrieron que algunos de los sospechosos de organizar los ataques de París vivían a sólo unos kilómetros del Parlamento Europeo. Por varios días, la policía tomó la ciudad en busca de los sospechosos.</p>
+<p class="story-body-text story-content" data-para-count="577" data-total-count="29265" id="story-continues-61" tabindex="-1">Dewinter, cuyo partido en cierta ocasión ganó mala reputación por utilizar una foto de su hija adolescente en bikini con un niqab como parte de una campaña de “Mujeres en contra de la islamización”, estaba en Hungría en una “misión” para recopilar información sobre la cerca y grabar videos. Su partido había tenido resultados muy malos en las últimas elecciones de Bélgica, pero pensaba que la combinación de la crisis de inmigrantes y la conexión de Bélgica con los ataques de París le resultaba beneficiosa. Creía que la cerca era una excelente idea.</p>
+<p class="story-body-text story-content" data-para-count="647" data-total-count="29912" id="story-continues-62" tabindex="-1">Ocho días después de los ataques de París, caminaba por Maidan, la plaza central de Kiev y el corazón simbólico de Ucrania. Ahí estalló la revolución de Ucrania dos años antes, cuando la gente se lanzó a las calles, furiosa porque el Presidente Viktor Yanukovych no cumplió una promesa. Había decidido no firmar un “acuerdo de asociación” política y económica con Europa y aliarse con Rusia. Imágenes de las manifestaciones, que se extendieron a otras ciudades, le dieron la vuelta al mundo y mostraron a multitudes de jóvenes ucranianos que ondeaban banderas de la Unión Europea, desesperados por formar parte del Occidente.</p>
+<p class="story-body-text story-content" data-para-count="621" data-total-count="30533" id="story-continues-63" tabindex="-1">Ese día era el aniversario. Dos años antes, y también ese día, estaba lloviendo; pero todo lo demás se sentía diferente. Ucrania había soportado dos años de guerra, colapso económico y agitación política, con un saldo de miles de muertos y más de un millón de desplazados. Europa estaba ante una nueva Guerra Fría y había entendido el costo de subestimar a Rusia. Ucrania nunca debió ser un problema para Europa; de hecho, debería haber sido todo lo contrario, una oportunidad para ampliar la órbita europea y estabilizar la periferia, en sus propios términos y gracias a la fortaleza de su <em>soft power</em>.</p>
+<p class="story-body-text story-content" data-para-count="769" data-total-count="31302" id="story-continues-64" tabindex="-1">Por siglos, el poder político en Europa era sinónimo de armamento y guerras (además de la influencia del Vaticano, debido al papel a veces beligerante de los papas anteriores). Pero la Unión Europea ha sido un organismo relativamente pacifista, en especial cuando Francia y Alemania se opusieron a la invasión de Iraq por parte de Estados Unidos bajo el gobierno de George W. Bush. El Reino Unido y Francia todavía son potencias militares, y la marina italiana sigue activa en el Mediterráneo, pero la Unión Europea ha tratado de ejercer influencia global por su fuerza económica y sus valores democráticos. Los líderes pensaron que el intercambio comercial y los vínculos estrechos serían suficiente para mantener la estabilidad en las fronteras europeas.</p>
+<p class="story-body-text story-content" data-para-count="611" data-total-count="31913" id="story-continues-65" tabindex="-1">Ucrania acabó con esa idea. Primero, Putin destruyó la sensación de seguridad de Europa después de que las manifestaciones de Maidan se volvieron violentas. La policía atacó; muchos manifestantes murieron. Bajo presión, Yanukovych huyó a Rusia. <a href="http://www.nytimes.com/2014/03/19/world/europe/ukraine.html" target="_blank">Putin respondió con la toma de Crimea</a>, la península ucraniana donde Rusia rentaba un puerto para su flota del Mar Negro. Luego, separatistas que apoyaban a Rusia, con el apoyo de fuerzas rusas, llevaron la guerra a otra escala en el este industrial de Ucrania, donde continúan los asesinatos esporádicos a pesar de que se impuso un frágil cese al fuego.</p>
+<p class="story-body-text story-content" data-para-count="640" data-total-count="32553" id="story-continues-66" tabindex="-1">En medio de todo esto, Ucrania eligió a un gobierno de coalición que suscribió el convenio de asociación con la Unión Europea y se comprometió a hacer reformas. El gobierno de Ucrania también se encuentra en negociaciones para poder entrar sin visa a los países de la Unión Europea. Ése sería un éxito tangible y sería evidencia de que existen lazos más estrechos, pero esas conversaciones se han complicado por la preocupación europea frente a la seguridad de las fronteras tras los ataques de París. El gobierno también busca cumplir demandas europeas para poder firmar un acuerdo de libre comercio con la Unión Europea.</p>
+<p class="story-body-text story-content" data-para-count="591" data-total-count="33144" id="story-continues-67" tabindex="-1">Pero los reformistas ucranianos quieren más participación, más dinero y un mayor compromiso por parte de Europa, incluso un camino claro para convertirse en miembro de la Unión Europea en el futuro, pues intentan reconstruir un país que todavía cojea por la corrupción y el dominio de intereses oligárquicos, un país dividido étnicamente y aun sumido en enfrentamientos con Rusia. Su argumento es que Ucrania nunca podrá ser seguro o democrático sin Europa, y que Europa nunca estará segura ni cumplirá sus ideales si Ucrania no se convierte en un país democrático y estable.</p>
+<figure id="media-100000004106436" class="media photo media-100000004106436 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/20/magazine/20europe7-copy/20europe7-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-69">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/20/magazine/20europe7-copy/20europe7-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/20/magazine/20europe7-copy/20europe7-superJumbo.jpg" data-mediaviewer-caption="Inmigrantes afganos en una antigua escuela a las afueras de Bünde, Alemania, que ahora funciona como centro para refugiados." data-mediaviewer-credit="Tomas Munita para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/20/magazine/20europe7-copy/20europe7-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Inmigrantes afganos en una antigua escuela a las afueras de Bünde, Alemania, que ahora funciona como centro para refugiados.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tomas Munita para The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="146" data-total-count="33290" id="story-continues-69" tabindex="-1">“Ucrania necesita esto”, enfatizó Ostap Semerak, legislador a favor de las reformas. “Y la Unión Europea también necesita este éxito.”</p>
+<p class="story-body-text story-content" data-para-count="741" data-total-count="34031" id="story-continues-70" tabindex="-1">Pero Europa es cada vez más ambivalente. Desde hace mucho tiempo, Rusia, y no Ucrania, ha sido la mayor preocupación. Bajo el liderazgo de los alemanes, Europa intentó establecer una política exterior con raíces en la creencia de que la interdependencia económica con Rusia garantizaría la estabilidad política, como había ocurrido entre enemigos mortales como Francia y Alemania. Rusia vendía gas natural a Europa. Europa vendía maquinaria y artículos de lujo a Rusia. Mientras tanto, fue inevitable que Europa Oriental se convirtiera en un espacio de competencia geopolítica, pues los miembros nuevos, como Lituania y Polonia, consideraban que la integración de Ucrania era, en cierta medida, una prioridad para la seguridad.</p>
+<p class="story-body-text story-content" data-para-count="421" data-total-count="34452" id="story-continues-71" tabindex="-1">Las crisis internas de Europa ahora dominan la agenda, y algunos líderes están muy interesados en normalizar relaciones con Rusia. Merkel y Hollande quieren garantizar un convenio de paz duradero entre Rusia y Ucrania, pero las prioridades de Europa ahora son Siria, los refugiados y el terrorismo. Hollande está tratando de conformar una coalición para combatir al Estado Islámico, que bien podría incluir a Rusia.</p>
+<p class="story-body-text story-content" data-para-count="576" data-total-count="35028" id="story-continues-72" tabindex="-1">Merkel viajó a Estambul para estrechar lazos con el Presidente Recep Tayyip Erdogan de Turquía, a pesar de haber criticado sus impulsos autoritarios, y en noviembre, la Unión Europea acordó pagar tres mil millones de euros a Turquía para tratar de detener el flujo de inmigrantes a través de la frontera turca. Incluso se volvieron a celebrar conversaciones para discutir la solicitud de Turquía para ingresar a la Unión Europea, estancada desde hace tiempo. Europa hizo a un lado la diplomacia y el <em>soft power</em> y optó por una <em>realpolitik</em> apurada, incluso desesperada.</p>
+<p class="story-body-text story-content" data-para-count="566" data-total-count="35594" id="story-continues-73" tabindex="-1">Visité a unos cuantos analistas y reformadores en Kiev durante el fin de semana del aniversario de Maidan, y encontré que las repentinas propuestas de Europa a Rusia no habían pasado desapercibidas. Había varias hipótesis circulando: la desesperación de Europa por aplastar a los terroristas podría llevar a un acuerdo para asegurar la ayuda de Putin (pues sus fuerzas armadas también actúan en Siria), y el acuerdo podría dar fin a las sanciones económicas impuestas a Rusia por su agresión en Ucrania o incluir concesiones en las conversaciones de paz.</p>
+<p class="story-body-text story-content" data-para-count="449" data-total-count="36043" id="story-continues-74" tabindex="-1">En el aniversario en Maidan, las personas caminaron lentamente bajo la lluvia, deteniéndose frente a diferentes homenajes en memoria de lo sucedido. Dos adolescentes se cubrían con un paraguas y lloraban junto a varias filas de fotografías de las personas que perdieron la vida. “En gran medida, a Europa no le importa lo que sucede en Ucrania”, declaró Anne Levchuk, de 17 años. “En realidad no pueden sentir lo que nosotros sentimos”.</p>
+<p class="story-body-text story-content" data-para-count="387" data-total-count="36430" id="story-continues-75" tabindex="-1">La principal incertidumbre sobre el futuro de Europa es cuándo volverá la prosperidad. ¿El panorama cambiará pronto? ¿O será que Europa se encuentra en medio de un debilitamiento profundo, similar a la década perdida de Japón? El Banco Central Europeo intenta ser el salvador, pues no deja de bombear dinero al sistema financiero, pero la interrogante es si podrá lograrlo solo.</p>
+<p class="story-body-text story-content" data-para-count="458" data-total-count="36888" id="story-continues-76" tabindex="-1">Los países europeos alguna vez lograron tener economías sólidas y generosas políticas de seguridad social, en especial cuando la socialdemocracia se convirtió en la corriente política principal en Europa. Esa fórmula colapsó con la crisis económica de 2008, aunque incluso hoy en día, tantos años después, Europa tiene opiniones divididas en cuanto a los culpables: los excesos del estado de bienestar, o décadas de gobiernos corruptos, o ambos.</p>
+<p class="story-body-text story-content" data-para-count="411" data-total-count="37299" id="story-continues-77" tabindex="-1">La izquierda de Europa defendió el antiguo modelo socialista, incluso cuando el consenso en Berlín y Bruselas desde hacía mucho se había desplazado hacia políticas “neoliberales” y pro-mercado. Grecia se convirtió en terreno de batalla para diferentes visiones económicas, pero también en un espacio para demostrar cómo Europa responde a un país en quiebra, con un legado de corrupción política.</p>
+<p class="story-body-text story-content" data-para-count="435" data-total-count="37734" id="story-continues-78" tabindex="-1">Diez días después de los ataques de París, viajé a Grecia para visitar a Alexis Tsipras. Acomodó los dos sillones de su oficina, para aprovechar la luz que entraba por la ventana, y me invitó a tomar asiento. Tsipras vestía un blazer y pantalón khaki, todavía sin usar corbata, y todavía siendo primer ministro. Parecía cansado, incluso un poco desolado, con la mirada baja. ¿Será que todo un país puede parecer exhausto?</p>
+<figure id="media-100000004106437" class="media photo media-100000004106437 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/12/20/magazine/20europe8-copy/20mag-20europe-t_CA2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-80">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/12/20/magazine/20europe8-copy/20mag-20europe-t_CA2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/12/20/magazine/20europe8-copy/20mag-20europe-t_CA2-superJumbo.jpg" data-mediaviewer-caption="Un memorial para los muertos en las manifestaciones de Kiev, Ucrania." data-mediaviewer-credit="Tomas Munita para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/12/20/magazine/20europe8-copy/20mag-20europe-t_CA2-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Un memorial para los muertos en las manifestaciones de Kiev, Ucrania.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tomas Munita para The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="114" data-total-count="37848" id="story-continues-80" tabindex="-1">“Creo que no es tan fácil cambiar a Europa si estás solo”, mencionó Tsipras, en un inglés bien practicado.</p>
+<p class="story-body-text story-content" data-para-count="430" data-total-count="38278" id="story-continues-81" tabindex="-1">Tsipras sufrió una derrota, pero todavía está convencido de tener la razón. La crisis del euro no está resuelta. Europa tiene una moneda común, pero no un sistema financiero común. La deuda griega es insostenible. La “receta”, como se refiere a la austeridad, ha demostrado no ser la respuesta adecuada a los problemas. Se pregunta por qué la economía de Estados Unidos se recuperó con más rapidez que la de Europa.</p>
+<p class="story-body-text story-content" data-para-count="659" data-total-count="38937" id="story-continues-82" tabindex="-1">Todavía afirma que el consenso de Berlín y Bruselas es una economía impuesta por los acreedores, aunque desafíe la lógica y no pueda producir crecimiento real. Muchos economistas están de acuerdo. Pero los críticos de Tsipras sostienen que no planteó alternativas reales, sino clientelismo griego al estilo antiguo. Manejó mal su enfrentamiento con Berlín y Bruselas (ellos también). Y ahora su trabajo es aplicar una medicina que considera equivocada, con la esperanza de que su país no reviente antes de que logre hacerlo más atractivo a la inversión privada para tratar de recuperarse y “tomar de nuevo las riendas de nuestra soberanía”.</p>
+<p class="story-body-text story-content" data-para-count="123" data-total-count="39060" id="story-continues-83" tabindex="-1">“Nos dimos cuenta que no existe otra forma”, señaló. “Nuestros socios europeos y Alemania fueron muy, muy duros”.</p>
+<p class="story-body-text story-content" data-para-count="730" data-total-count="39790" id="story-continues-84" tabindex="-1">La crisis griega nunca se redujo a los problemas del país; también se trataba de las ecuaciones de poder en Europa y la volatilidad de los mercados financieros. Renegociar la deuda de Grecia y hacer concesiones reales podría haber abierto la puerta a renegociaciones con países deudores como Italia, Portugal y España. Incluso los países Bálticos y los de Europa Oriental sentían más rabia que piedad por Grecia, sobretodo por los elevados estándares de vida de ese país. Una crisis con raíces económicas se negoció en el ámbito político, con toques moralistas (griegos perezosos contra alemanes malvados) e intereses nacionales. La moneda común, que tenía como propósito unir a las naciones, hizo lo contrario.</p>
+<p class="story-body-text story-content" data-para-count="425" data-total-count="40215" id="story-continues-85" tabindex="-1">Tal vez nunca fue realista imaginarse a los Estados Unidos de Europa. Pero la posibilidad de un continente más débil debería alarmar a Washington; Europa y Estados Unidos son socios comerciales, tienen lazos militares por la OTAN y están comprometidos con la democracia. Muchos burócratas y funcionarios europeos se aferran a la idea de que las crisis siempre han fortalecido a Europa y han impulsado mayor integración.</p>
+<p class="story-body-text story-content" data-para-count="518" data-total-count="40733" id="story-continues-86" tabindex="-1">Pero el optimismo que ayudó a detener las guerras y generar prosperidad va desapareciendo. Ahora, el reto de la Unión Europea es poder ofrecer una vida mejor y más segura a un grupo mayor y más diverso de ciudadanos. ¿Será que la Unión Europea ha alcanzado los límites prácticos del ideal de una unión cada vez más sólida? Lo que ahora une a Europa quizá es el temor: el temor a lo desconocido, a lo que podría suceder si Grecia se ve obligada a dejar la eurozona, o si el Reino Unido decide abandonarla.</p>
+<p class="story-body-text story-content" data-para-count="639" data-total-count="41372" id="story-continues-87" tabindex="-1">Tsipras todavía se considera partidario de pertenecer a Europa, como la mayoría de los griegos, y se animó por el fortalecimiento de los partidos de izquierda en Portugal y España. “Grecia ya no está sola”, puntualizó. Pero describió a Bruselas como “el reino de la burocracia”, donde “falta democracia, pues las decisiones más importantes se toman a puertas cerradas”. Tal vez sonó como la respuesta resentida de alguien que intentó derribar la puerta del palacio sin conseguirlo. Pero fue lo que escuché en todos los lugares que visité. De hecho, en pocas palabras, Tsipras pareció sintetizar el momento Europeo.</p>
+<p class="story-body-text story-content" data-para-count="56" data-total-count="41428" id="story-continues-88" tabindex="-1">“Soy muy, muy escéptico ante el futuro”, concluyó.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2015/12/22/europa-podria-sobrevivir-a-otro-2015/"
+				data-title="Reposado: ¿Europa podría sobrevivir a otro 2015?"
+				data-author="POR JIM YARDLEY"
+				data-media=""
+				data-description="Presiones internas y externas agobian a una Europa paralizada por la burocracia y aferrada a sus propias contradicciones.
+"
+				data-publish-date="22 de diciembre de 2015"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":895,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content=""/>
+<meta name="hdl" content="Perros sin dueño alrededor del mundo" />
+<meta name="col" content="Reposado" id="column-name" />
+<meta name="pdate" content="20160514" />
+<meta name="utime" content="20160514090007" />
+<meta name="ptime" content="20160514090007" />
+<meta name="DISPLAYDATE" content="May. 14, 2016" />
+<meta name="dat" content="May. 14, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="perros-sin-dueno-alrededor-del-mundo" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/05/14/perros-sin-dueno-alrededor-del-mundo/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Perros sin dueño alrededor del mundo" />
+<meta property="og:description" content="Pedimos a los lectores de The New York Times en varios continentes que compartieran sus experiencias con perros callejeros. Estos son los canes que dejaron una fuerte impresión en ellos y en nosotros también." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/04/15/science/dogs-listy02/dogs-listy02-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-05-14" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/05/14/perros-sin-dueno-alrededor-del-mundo/" />
+<meta property="twitter:title" content="Perros sin dueño alrededor del mundo" />
+<meta property="twitter:description" content="Pedimos a los lectores de The New York Times en varios continentes que compartieran sus experiencias con perros callejeros. Estos son los canes que dejaron una fuerte impresión en ellos y en nosotros también." />
+<meta name="author" content="Michael Roston y Dulce Ramos" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por Michael Roston y Dulce Ramos" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="reposado" />
+<meta name="cd12" content="ciencia" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="reposado" />
+<meta name="ser" content="ciencia" />
+<meta name="id" content=""/>
+<meta name="wordCount" content="2443"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/05/14/perros-sin-dueno-alrededor-del-mundo/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=05&amp;day=14&amp;name=perros-sin-dueno-alrededor-del-mundo">
+<meta name="PT" content="article">
+<meta name="article:section" content="Reposado">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/10?exclude=10522">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/05\/14\/perros-sin-dueno-alrededor-del-mundo\/"},"headline":"Perros sin due\u00f1o alrededor del mundo","datePublished":"2016-05-14T09:00:07+00:00","dateModified":"2016-05-13T09:43:56+00:00","author":{"@type":"Person","name":"dulce.ramos"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/04\/15\/science\/dogs-listy02\/dogs-listy02-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Pedimos a los lectores de The New York Times en varios continentes que compartieran sus experiencias con perros callejeros. Estos son los canes que dejaron una fuerte impresi\u00f3n en ellos y en nosotros tambi\u00e9n."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/05/14/perros-sin-dueno-alrededor-del-mundo/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/interactive/2016/04/15/science/street-dogs-village-dogs-stray-dogs.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="reposado/ciencia" />
+<title>Perros sin dueño alrededor del mundo &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/interactive/2016/04/15/science/street-dogs-village-dogs-stray-dogs.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/05/14/perros-sin-dueno-alrededor-del-mundo/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-10522 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/reposado/">Reposado</a></span>
+					<span class="pipe">|</span>
+				Perros sin dueño alrededor del mundo
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/05/14/perros-sin-dueno-alrededor-del-mundo/"
+					data-title="Reposado: Perros sin dueño alrededor del mundo"
+					data-author="POR MICHAEL ROSTON Y DULCE RAMOS"
+					data-media=""
+					data-description="Pedimos a los lectores de The New York Times en varios continentes que compartieran sus experiencias con perros callejeros. Estos son los canes que dejaron una fuerte impresión en ellos y en nosotros también."
+					data-publish-date="14 de mayo de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/1qkeoE7">http://nyti.ms/1qkeoE7</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/reposado/">Reposado</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/ciencia/">Ciencia</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Perros sin dueño alrededor del mundo</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Michael Roston</span>
+</span>
+ y <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Dulce Ramos</span>
+</span>
+
+					<time class="dateline" datetime="2016-05-14">14 de mayo de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/05/14/perros-sin-dueno-alrededor-del-mundo/"
+							data-title="Reposado: Perros sin dueño alrededor del mundo"
+							data-author="POR MICHAEL ROSTON Y DULCE RAMOS"
+							data-media=""
+							data-description="Pedimos a los lectores de The New York Times en varios continentes que compartieran sus experiencias con perros callejeros. Estos son los canes que dejaron una fuerte impresión en ellos y en nosotros también."
+							data-publish-date="14 de mayo de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/interactive/2016/04/15/science/street-dogs-village-dogs-stray-dogs.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="208" data-total-count="208" id="story-continues-1" tabindex="-1">Piensa en todos los perros que hay en el mundo: labradores, caniches y labradoodles; huskies, westies y dogos de Burdeos; pitbulls, spaniels y esos encantadores perros mestizos que van a la guardería canina.</p>
+<p class="story-body-text story-content" data-para-count="94" data-total-count="302" id="story-continues-2" tabindex="-1">Si sumas a todos los perros mascota del mundo obtendrás una cifra aproximada de 250 millones.</p>
+<p class="story-body-text story-content" data-para-count="364" data-total-count="666" id="story-continues-3" tabindex="-1">Pero se estima que hay cerca de mil millones de perros en la Tierra. Los otros 750 millones no tienen collar antipulgas. Y por supuesto que no tienen dueños humanos que los lleven a pasear o levanten sus heces. Se llaman perros de pueblo, perros callejeros y perros de cría libre, entre otros nombres, y habitan los basureros y vecindarios de casi todo el mundo.</p>
+<p class="story-body-text story-content" data-para-count="61" data-total-count="727" id="story-continues-4" tabindex="-1">Pero eso no quiere decir que mantengan distancia de la gente.</p>
+<p class="story-body-text story-content" data-para-count="307" data-total-count="1034" id="story-continues-5" tabindex="-1">Pedimos a los lectores de The New York Times en varios continentes que compartieran sus experiencias con esos perros. Algunos fueron rescatados; a otros, como apariciones, nunca más se les volvió a ver. Todos dejaron una fuerte impresión en quienes nos compartieron sus historias, y en nosotros también.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<h4 class="story-subheading story-content">La India</h4>
+<figure id="media-100000004329810" class="media photo media-100000004329810 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy02/dogs-listy02-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-8">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy02/dogs-listy02-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy02/dogs-listy02-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy02/dogs-listy02-master675.jpg"/>
+		<meta itemprop="height" content="506" />
+		<meta itemprop="width" content="675" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="14" data-total-count="1048" id="story-continues-8" tabindex="-1"><strong>Un vecino más</strong></p>
+<p class="story-body-text story-content" data-para-count="99" data-total-count="1147" id="story-continues-9" tabindex="-1">Como en cualquier ciudad de la India, en la mía, los perros callejeros son residentes importantes.</p>
+<p class="story-body-text story-content" data-para-count="559" data-total-count="1706" id="story-continues-10" tabindex="-1">Mi hermano pequeño trajo una vez a la casa dos cachorritos callejeros a quienes llamamos Jimmy y Tomy. Tommy murió joven de rabia, pero Jimmy sobrevivió. Tenía un pelaje negro brillante y un carácter adorable. Cada día, cuando yo regresaba del colegio, corría hacia mí moviendo la cola y saltando de alegría. Era amor puro. Se volvió parte de nuestra vida y parte de nuestras familias vecinas también. Iba a comer con un vecino, tomaba la siesta en el porche de otro y cenaba en su propia casa (la nuestra). Vivió una vida de perro cuasicallejero. </p>
+<p class="story-body-text story-content" data-para-count="184" data-total-count="1890" id="story-continues-11" tabindex="-1">Por desgracia, también murió de rabia unos años después, y nos dejó con el corazón destrozado. Estos cachorritos callejeros están creciendo y serán los futuros Tommys y Jimmys.</p>
+<p class="story-body-text story-content" data-para-count="17" data-total-count="1907" id="story-continues-12" tabindex="-1"><em>—Soma Chowdhury</em></p>
+<p class="story-body-text story-content" data-para-count="44" data-total-count="1951" id="story-continues-13" tabindex="-1"><strong>El perro callejero más consentido del mundo</strong></p>
+<figure id="media-100000004329816" class="media photo media-100000004329816 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy03/dogs-listy03-superJumbo.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-15">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy03/dogs-listy03-superJumbo.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy03/dogs-listy03-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy03/dogs-listy03-superJumbo.jpg"/>
+		<meta itemprop="height" content="300" />
+		<meta itemprop="width" content="300" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="773" data-total-count="2724" id="story-continues-15" tabindex="-1">Vivía en la India y en el vecindario tenía la reputación de cuidar a los perros callejeros. Un día, un amigo se encontró a una cachorra de dos semanas que había sido abandonada por su madre y estaba gravemente infectada con larvas. Tomé a la cachorra pensando que no lograría pasar la noche, con la intención de llevarla al veterinario por la mañana. El médico terminó dando un buen pronóstico, así que decidí acogerla hasta que le encontrara una familia. Las semanas se convirtieron en meses y no le había buscado con dedicación un nuevo hogar. Ya casi son tres años. Recibió documentos de viaje oficiales de la India e hizo el viaje de Mumbai a Chicago conmigo. Es la perra callejera más consentida del mundo. Incluso me hice un tatuaje con su imagen.</p>
+<p class="story-body-text story-content" data-para-count="14" data-total-count="2738" id="story-continues-16" tabindex="-1"><em>—Lauren Dean</em></p>
+<figure id="media-100000004329829" class="media photo media-100000004329829 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy04/dogs-listy04-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-18">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy04/dogs-listy04-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy04/dogs-listy04-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy04/dogs-listy04-master675.jpg"/>
+		<meta itemprop="height" content="506" />
+		<meta itemprop="width" content="675" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="30" data-total-count="2768" id="story-continues-18" tabindex="-1"><strong>Siempre hay un perro callejero</strong></p>
+<p class="story-body-text story-content" data-para-count="809" data-total-count="3577" id="story-continues-19" tabindex="-1">He pasado casi un año y medio en la India en varios momentos de mi vida. Cada vez hay un perro callejero. Durante un verano, en Delhi hubo uno llamado, de cariño, Bura Bhai, que se tumbaba afuera de la casa de la familia que me acogía y lloraba cuando te veía. Lo alimentaban los habitantes de la colonia. Había un montón de arena afuera de la casa y él se ponía cómodo encima de ella (como un pequeño rey). Recuerdo que una vez un hombre se detuvo y, mientras el perro lloraba, le preguntó amablemente en hindi: “Kya takleef hai?” (¿Qué te pasa?). Me emocionó escuchar que la gente hablaba con él puesto que amo a los perros y estaba aprendiendo hindi. Años después, cuando viví en Jaipur, conocí otro perro adorable que saltaba cuando me dirigía a casa y me acompañaba en el camino.</p>
+<p class="story-body-text story-content" data-para-count="18" data-total-count="3595" id="story-continues-20" tabindex="-1"><em>—Tali Datskovsky</em></p>
+<h4 class="story-subheading story-content">Tayikistán</h4>
+<figure id="media-100000004329886" class="media photo media-100000004329886 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy06/dogs-listy06-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-23">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy06/dogs-listy06-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy06/dogs-listy06-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy06/dogs-listy06-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="23" data-total-count="3618" id="story-continues-23" tabindex="-1"><strong>Prohibidos los rescates</strong></p>
+<p class="story-body-text story-content" data-para-count="369" data-total-count="3987" id="story-continues-24" tabindex="-1">Antes de que llegáramos, estaba firme. Sin importar cuántos animales tristes y abandonados viéramos, de ninguna manera iba a rescatar a alguno. Soy, probablemente, el mayor amante de los animales que conocerán jamás, así que llegar a esa conclusión fue difícil para mí. Teníamos tres mascotas sanas y jóvenes y no podía ponerlas en peligro de ninguna forma. </p>
+<p class="story-body-text story-content" data-para-count="306" data-total-count="4293" id="story-continues-25" tabindex="-1">Pero entonces Soya vagabundeó por el patio correcto en el momento correcto. Llovía. Estaba lloviendo y estaba oscuro. Llegamos a la casa de un amigo y ahí estaba. Una pequeña cachorrita negra en la lluvia. Había seguido a la gente hasta el patio y se sentó ahí, temblando y con apariencia miserable. </p>
+<p class="story-body-text story-content" data-para-count="207" data-total-count="4500" id="story-continues-26" tabindex="-1">No requirió de mucha persuasión. Al final de la noche estaba en nuestra casa. Para el fin de semana ya tenía nombre: Soya, que significa ‘sombra’ en tayiko. Ella es nuestra perra callejera permanente. </p>
+<p class="story-body-text story-content" data-para-count="18" data-total-count="4518" id="story-continues-27" tabindex="-1"><em>—Kristen Crocker</em></p>
+<h4 class="story-subheading story-content">Venezuela</h4>
+<figure id="media-100000004329893" class="media photo media-100000004329893 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy07/dogs-listy07-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-30">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy07/dogs-listy07-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy07/dogs-listy07-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy07/dogs-listy07-master675.jpg"/>
+		<meta itemprop="height" content="506" />
+		<meta itemprop="width" content="675" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="29" data-total-count="4547" id="story-continues-30" tabindex="-1"><strong>El perro más feliz del mundo</strong></p>
+<p class="story-body-text story-content" data-para-count="796" data-total-count="5343" id="story-continues-31" tabindex="-1">Conocí al perro más feliz del mundo: vive en la playa y no tiene dueño. Mi novia y yo le pusimos Lobito, pero al tiempo nos enteramos de que los moradores de Camurí, en la costa de La Guaira, le llaman Guasa. Debe tener sangre de pastor alemán, por su apariencia e inteligencia. Los visitantes de la playa y quiene alquilan los toldos le brindan sobras de comida, y nosotros cada fin de semana le llevamos alimento. Desde que lo conocimos se hizo mejor amigo de nuestra dálmata rubia Blondie y cada vez que nos acercamos a su hogar –una casa pobre frente al mar– corre a besarnos. A diferencia de otros perros solitarios y callejeros, Guasa o Lobito luce muy sano y feliz. Una vez pensamos traerlo con nosotros a la ciudad y adoptarlo. Pero quitarle el mar sería como quitarle el aire.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="17" data-total-count="5360" id="story-continues-32" tabindex="-1"><em>—Daniel Garrido</em></p>
+<figure id="media-100000004329905" class="media photo media-100000004329905 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy10/dogs-listy10-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-34">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy10/dogs-listy10-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy10/dogs-listy10-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy10/dogs-listy10-master315.jpg"/>
+		<meta itemprop="height" content="403" />
+		<meta itemprop="width" content="315" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="15" data-total-count="5375" id="story-continues-34" tabindex="-1"><strong>Amante del arte</strong></p>
+<p class="story-body-text story-content" data-para-count="222" data-total-count="5597" id="story-continues-35" tabindex="-1">Este es un perro muy culto, le gusta el arte. Vive en la Galería de Arte Nacional de Caracas, Venezuela, y es cuidado por los guardias del museo. Al llegar a la galería lo puedes ver en la entrada dándote la bienvenida. </p>
+<p class="story-body-text story-content" data-para-count="56" data-total-count="5653" id="story-continues-36" tabindex="-1">Es un perro muy tranquilo, sociable y querido por todos. </p>
+<p class="story-body-text story-content" data-para-count="84" data-total-count="5737" id="story-continues-37" tabindex="-1">Por curioso que parezca, casi cada museo en Caracas tiene su propio perro callejero.</p>
+<p class="story-body-text story-content" data-para-count="17" data-total-count="5754" id="story-continues-38" tabindex="-1"><em>—Sandra Santini</em></p>
+<h4 class="story-subheading story-content">México</h4>
+<figure id="media-100000004329879" class="media photo media-100000004329879 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy05/dogs-listy05-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-41">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy05/dogs-listy05-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy05/dogs-listy05-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy05/dogs-listy05-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="24" data-total-count="5778" id="story-continues-41" tabindex="-1"><strong>Un guía muy recomendado</strong></p>
+<p class="story-body-text story-content" data-para-count="770" data-total-count="6548" id="story-continues-42" tabindex="-1">Mi novio y yo visitamos las pirámides de Teotihuacán, cerca de Ciudad de México. En camino a la más alta –la Pirámide del Sol– vimos un perrito negro dormitando en los escalones. Me detuve rápidamente a rascar su cabeza antes de que continuáramos. Cuando alcanzamos la cima y admiramos la vista impresionante, nos dimos cuenta de que el perro se había vuelto nuestra sombra. Nos siguió hasta la cima, se sentó cuando descansamos y bajó con nosotros. Para nuestro asombro, el perro nos guio entonces hacia la siguiente pirámide –la Pirámide de la Luna–. Cuando nos deteníamos, él se detenía. Cuando girábamos, el giraba. Cuando llegamos a la cima de la segunda pirámide sabíamos que debíamos tomarle una foto a nuestro peludo guía turístico. </p>
+<p class="story-body-text story-content" data-para-count="17" data-total-count="6565" id="story-continues-43" tabindex="-1"><em>—Carla Schaffer</em></p>
+<h4 class="story-subheading story-content">Sudáfrica</h4>
+<figure id="media-100000004329911" class="media photo media-100000004329911 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy11/dogs-listy11-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-46">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy11/dogs-listy11-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy11/dogs-listy11-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy11/dogs-listy11-master675.jpg"/>
+		<meta itemprop="height" content="675" />
+		<meta itemprop="width" content="675" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="18" data-total-count="6583" id="story-continues-46" tabindex="-1"><strong>Perro, playa y sol</strong></p>
+<p class="story-body-text story-content" data-para-count="500" data-total-count="7083" id="story-continues-47" tabindex="-1">Perro vivía en Llandudno, Ciudad del Cabo. El tipo de ciudad donde nadie quiere nada. Menos un perro grande y apestoso como Perro. Perro era una especie de labrador y, a juzgar por su lento andar, quizá tenía diez años multiplicados por siete. Cuando estés en Playa Llandudno, lo verás de pícnic en pícnic, buscando un bocado. Nunca da afecto a cambio y parece totalmente ajeno al toque de unas manos. Perro es sordo a las estridencias de los niños jugando y le es indiferente oler traseros.</p>
+<p class="story-body-text story-content" data-para-count="278" data-total-count="7361" id="story-continues-48" tabindex="-1">Solo parece ver los atardeceres. Por horas, Perro mira atentamente el camino del sol hacia las olas. Mira al cielo cambiar de azul a naranja, a rosa, a morado, a negro. Entonces se arrastra hacia una colina para esconderse entre las enormes casas, para volver al día siguiente.</p>
+<p class="story-body-text story-content" data-para-count="14" data-total-count="7375" id="story-continues-49" tabindex="-1"><em>—Leon Jacobs</em></p>
+<h4 class="story-subheading story-content">Tailandia</h4>
+<figure id="media-100000004329939" class="media photo media-100000004329939 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy13/dogs-listy13-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-52">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy13/dogs-listy13-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy13/dogs-listy13-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy13/dogs-listy13-master315.jpg"/>
+		<meta itemprop="height" content="420" />
+		<meta itemprop="width" content="315" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="29" data-total-count="7404" id="story-continues-52" tabindex="-1"><strong>Hacia donde van los cachorros</strong></p>
+<p class="story-body-text story-content" data-para-count="411" data-total-count="7815" id="story-continues-53" tabindex="-1">A finales de noviembre, un perro del vecindario parió una camada de siete cachorros bajo un árbol en mi patio. Su madre parió a una camada en el patio de al lado y su hermana, a otra a la vuelta de la esquina. A los pocos días, los cachorros empezaron a desaparecer por muerte, negligencia o porque se los llevaron a otra parte. La perra de mi patio cuidó de los cachorros que quedaban de las tres camadas. </p>
+<p class="story-body-text story-content" data-para-count="301" data-total-count="8116" id="story-continues-54" tabindex="-1">Cuando los cachorros comenzaron a explorar y se volvieron una molestia, mi casera los puso en una bolsa y los llevó al lado de un templo budista a la vuelta de la esquina y no a un área donde los monjes podrían notarlos y atenderlos. Hay una fuerte rivalidad entre los perros de los monjes y estos. </p>
+<p class="story-body-text story-content" data-para-count="178" data-total-count="8294" id="story-continues-55" tabindex="-1">Algunos fueron adoptados, pero la mayoría han muerto: han sido atropellados, muerto de hambre o han resultado heridos en peleas. Los perros que quedan deben hurgar en la basura.</p>
+<p class="story-body-text story-content" data-para-count="15" data-total-count="8309" id="story-continues-56" tabindex="-1"><em>—Rich Ambuske</em></p>
+<figure id="media-100000004329807" class="media photo media-100000004329807 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy01/dogs-listy01-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-58">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy01/dogs-listy01-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy01/dogs-listy01-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy01/dogs-listy01-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="41" data-total-count="8350" id="story-continues-58" tabindex="-1"><strong>Un nombre sencillo para una vida sencilla</strong></p>
+<p class="story-body-text story-content" data-para-count="234" data-total-count="8584" id="story-continues-59" tabindex="-1">Me dijeron que no me encariñara con ninguno de los perros en el laboratorio en el que viviría por un mes y medio. “Si no aparecen, seguramente será porque una familia tenía hambre”, dijo mi mentor y traductor, muy indiferente. </p>
+<p class="story-body-text story-content" data-para-count="427" data-total-count="9011" id="story-continues-60" tabindex="-1">Por supuesto que, al ser una amante de los perros, ignoré su consejo y el perro, al que cariñosamente llamé Perro, empezó a vivir en mi pórtico por las noches después de vagar por los bosques y montañas del norte de Tailandia durante el día. No he sabido qué fue de este can tenaz, pero me gusta imaginar que aún está vagando por el bosque, atemorizando a quienes lo quieren cocinar, y siendo un perro libre y feliz.</p>
+<p class="story-body-text story-content" data-para-count="14" data-total-count="9025" id="story-continues-61" tabindex="-1"><em>–Becca Aceto</em></p>
+<h4 class="story-subheading story-content">Argentina</h4>
+<figure id="media-100000004329897" class="media photo media-100000004329897 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy08/dogs-listy08-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-64">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy08/dogs-listy08-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy08/dogs-listy08-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy08/dogs-listy08-master675.jpg"/>
+		<meta itemprop="height" content="506" />
+		<meta itemprop="width" content="675" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="38" data-total-count="9063" id="story-continues-64" tabindex="-1"><strong>‘Si me esperás, te llevo conmigo’</strong></p>
+<p class="story-body-text story-content" data-para-count="727" data-total-count="9790" id="story-continues-65" tabindex="-1">Un domingo estaba jugando pádel y se acercó un perro, que huía de los guardias de seguridad que no quería su permanencia en el club. Al ver el gran parecido con un perro que yo tuve por 17 años, le dije: “Manti (el nombre del perro fallecido), si me esperás, termino de jugar y te llevo conmigo&#8221;. El can, que hoy se llama Benji, por su similitud con el perro taquillero, se sentó junto a mi bolso de paletas y esperó a que terminara el partido. Por su condición de callejero, lo que más me costó fue subirlo al auto ese día para transportarlo a casa y que no saliera corriendo ante la primera reja abierta. Hoy camina suelto por la calle, con la panza llena y el pelo suave. Confiado. Alegre. Me hace feliz.</p>
+<p class="story-body-text story-content" data-para-count="27" data-total-count="9817" id="story-continues-66" tabindex="-1"><em>–Elena María Barrandeguy</em></p>
+<h4 class="story-subheading story-content">Turquía</h4>
+<figure id="media-100000004329930" class="media photo media-100000004329930 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy12/dogs-listy12-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-69">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy12/dogs-listy12-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy12/dogs-listy12-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy12/dogs-listy12-master315.jpg"/>
+		<meta itemprop="height" content="472" />
+		<meta itemprop="width" content="315" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="34" data-total-count="9851" id="story-continues-69" tabindex="-1"><strong>Una ciudad que cuida de sus perros</strong></p>
+<p class="story-body-text story-content" data-para-count="488" data-total-count="10339" id="story-continues-70" tabindex="-1">Tenemos muchos perros callejeros. En el parque del vecindario viven unos 20 y otros en el sitio de taxis, donde los conductores les han construido refugios. La municipalidad los vacuna de manera rutinaria, los identifica y pone puestos de reciclaje en toda la ciudad en donde, a cambio de botellas vacías, se dispensa comida para perros. Generalmente los vecinos se hacen cargo de ellos. Incluso hay un grupo de Facebook donde podemos conocer lo último sobre nuestros perros del barrio.</p>
+<p class="story-body-text story-content" data-para-count="301" data-total-count="10640" id="story-continues-71" tabindex="-1">Nuestra mejor amiga es Sofi. Nos sigue por varias horas cuando caminamos por la ciudad. Espera paciente si nos detenemos a almorzar o por un café. Si nos la topamos en el camino al trabajo, camina con nosotros a la estación del metro. No la alimentamos. Es solo una relación de afecto y compañía.</p>
+<p class="story-body-text story-content" data-para-count="20" data-total-count="10660" id="story-continues-72" tabindex="-1"><em>–Chiaki Yamamamoto</em></p>
+<h4 class="story-subheading story-content">Uganda</h4>
+<figure id="media-100000004329945" class="media photo media-100000004329945 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy14/dogs-listy14-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-75">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy14/dogs-listy14-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy14/dogs-listy14-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy14/dogs-listy14-master675.jpg"/>
+		<meta itemprop="height" content="675" />
+		<meta itemprop="width" content="675" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="31" data-total-count="10691" id="story-continues-75" tabindex="-1"><strong>La lección que me dio un perro</strong></p>
+<p class="story-body-text story-content" data-para-count="398" data-total-count="11089" id="story-continues-76" tabindex="-1">Al visitar la hermosa Uganda, me hice amigo de un perro callejero en Kisoro. Cuando llegué al lago, corrió hacia mi. Con su ladrido me llamó a seguirlo. Caminaba y de vez en cuando se paraba y miraba hacia atrás para ver si lo seguía. Repetía la operación, así que lo seguí. Se detuvo en un muelle a la vuelta de la esquina. Ahí me quedé y él se quedó a mi lado mordiendo mis agujetas.</p>
+<p class="story-body-text story-content" data-para-count="554" data-total-count="11643" id="story-continues-77" tabindex="-1">Durante el viaje aprendí que la actitud hacia los perros en Uganda es diferente. Los habitantes desdeñan a los perros, pues los consideran una peste que mata a los pollos. Debido a que los pollos son parte indispensable de la dieta, esa visión se justifica. Como un occidental que creció con la idea de que los perros son la mascota perfecta para una familia, conocer este aspecto de la cultura ugandesa me cambió la perspectiva. Tener recursos en una familia para criar perros es un lujo que, aquellos que los tienen, no deberían dar por sentado. </p>
+<p class="story-body-text story-content" data-para-count="12" data-total-count="11655" id="story-continues-78" tabindex="-1"><em>–Kelly Hsu</em></p>
+<h4 class="story-subheading story-content">Macedonia</h4>
+<figure id="media-100000004335899" class="media photo media-100000004335899 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/17/science/dogs-listy18/dogs-listy18-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-81">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/17/science/dogs-listy18/dogs-listy18-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/17/science/dogs-listy18/dogs-listy18-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/17/science/dogs-listy18/dogs-listy18-master675.jpg"/>
+		<meta itemprop="height" content="506" />
+		<meta itemprop="width" content="675" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="26" data-total-count="11681" id="story-continues-81" tabindex="-1"><strong>Al basurero por las noches</strong></p>
+<p class="story-body-text story-content" data-para-count="408" data-total-count="12089" id="story-continues-82" tabindex="-1">Todo comenzó con Annie. Me enamoré de ella al llegar a una pequeña ciudad en Macedonia, donde comencé un periodo de dos años como voluntaria de los Cuerpos de Paz. Había muchos perros callejeros. Algunos eran cautelosos. La mayoría estaban sucios, flacos y tenían cicatrices de peleas o cojeaban por algún accidente. Pero ella vino directo a mí, puso sus patas en mis hombros y me empezó a hablar. </p>
+<p class="story-body-text story-content" data-para-count="106" data-total-count="12195" id="story-continues-83" tabindex="-1">La llamé Annie y empecé a alimentarla. Me seguía en mis caminatas y, por la noche, volvía al basurero. </p>
+<p class="story-body-text story-content" data-para-count="59" data-total-count="12254" id="story-continues-84" tabindex="-1">Entonces llegó otro perro. Joe. Luego otro cachorro negro.</p>
+<p class="story-body-text story-content" data-para-count="222" data-total-count="12476" id="story-continues-85" tabindex="-1">Annie tuvo trece cachorros y casi muere. Solo uno de los perritos vivió más de dos meses. Todos los días yo alimentaba a cinco perros y a los gatos que aparecieran. Todos comían juntos. Lo único que querían era amor.</p>
+<p class="story-body-text story-content" data-para-count="16" data-total-count="12492" id="story-continues-86" tabindex="-1"><em>—Margery Rubin</em></p>
+<h4 class="story-subheading story-content">Chile</h4>
+<figure id="media-100000004330042" class="media photo media-100000004330042 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy17/dogs-listy17-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-89">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy17/dogs-listy17-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/15/science/dogs-listy17/dogs-listy17-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/15/science/dogs-listy17/dogs-listy17-master315.jpg"/>
+		<meta itemprop="height" content="560" />
+		<meta itemprop="width" content="315" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="24" data-total-count="12516" id="story-continues-89" tabindex="-1"><strong>Compañía lejos de casa</strong></p>
+<p class="story-body-text story-content" data-para-count="546" data-total-count="13062" id="story-continues-90" tabindex="-1">El Guatón. Recuerdo la primera vez que lo vi, hace dos años: llovía y la calle Álvarez, donde se encuentra la entrada al metro, parecía un pantano. Allí estaba, con carita feliz y moviendo la cola. Parecía una bola de lodo y pelos. Su imagen se hizo familiar, cotidiana, en mi silencio de emigrante. Me ha acompañado con sus ladridos roncos o con su mirada triste. Él está en la calle; yo, en un país extraño. Somos extranjeros en nuestra soledad y creo que ambos echamos de menos el pasado: él la casa donde vivió; yo, a Venezuela.</p>
+<p class="story-body-text story-content" data-para-count="31" data-total-count="13093" id="story-continues-91" tabindex="-1"><em>—Daniuska González González</em></p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/animales/" rel="tag">animales</a>, <a href="https://www.nytimes.com/es/tag/perros/" rel="tag">perros</a>, <a href="https://www.nytimes.com/es/tag/perros-callejeros/" rel="tag">perros callejeros</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/05/14/perros-sin-dueno-alrededor-del-mundo/"
+				data-title="Reposado: Perros sin dueño alrededor del mundo"
+				data-author="POR MICHAEL ROSTON Y DULCE RAMOS"
+				data-media=""
+				data-description="Pedimos a los lectores de The New York Times en varios continentes que compartieran sus experiencias con perros callejeros. Estos son los canes que dejaron una fuerte impresión en ellos y en nosotros también."
+				data-publish-date="14 de mayo de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/08/el-poder-terapeutico-de-los-perros/">
+					<div class="story-body">
+						<h3 class="kicker">Salud</h3>
+
+						<h2 class="headline">
+							<span class="title">El poder terapéutico de los perros</span>
+							<time class="dateline">8 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/02/27/science/brody/brody-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/02/02/de-donde-vienen-los-perros/">
+					<div class="story-body">
+						<h3 class="kicker">Ciencia</h3>
+
+						<h2 class="headline">
+							<span class="title">¿Amigo fiel o parásito? Científicos indagan sobre los orígenes del perro</span>
+							<time class="dateline">2 de febrero de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/01/19/science/19DOGSCOVER1/19DOGSCOVER1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":719,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

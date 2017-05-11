@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-jumbo-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-jumbo-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-jumbo-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-jumbo-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004657023"/>
+<meta name="hdl" content="La CIDH exige una investigación sobre el abuso sexual que sufrió un grupo de mujeres en Atenco en 2006" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20160922" />
+<meta name="utime" content="20160922053144" />
+<meta name="ptime" content="20160922053144" />
+<meta name="DISPLAYDATE" content="Sep. 22, 2016" />
+<meta name="dat" content="Sep. 22, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="comision-interamericana-derechos-humanos-atenco-abusos-pena-nieto-mexico" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/09/22/comision-interamericana-derechos-humanos-atenco-abusos-pena-nieto-mexico/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="La CIDH exige una investigación sobre el abuso sexual que sufrió un grupo de mujeres en Atenco en 2006" />
+<meta property="og:description" content="La semana pasada la Comisión Interamericana de Derechos Humanos entregó un informe a la Corte Interamericana sobre las brutales violaciones que sufrieron 11 mujeres en 2006, cuando el entonces gobernador del Estado de México, Enrique Peña Nieto, ordenó reprimir a quienes participaban en una manifestación." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/09/22/universal/es/23MEXICO-WEB1-copyES/23MEXICO-WEB1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-09-22" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/09/22/comision-interamericana-derechos-humanos-atenco-abusos-pena-nieto-mexico/" />
+<meta property="twitter:title" content="La CIDH exige una investigación sobre el abuso sexual que sufrió un grupo de mujeres en Atenco en 2006" />
+<meta property="twitter:description" content="La semana pasada la Comisión Interamericana de Derechos Humanos entregó un informe a la Corte Interamericana sobre las brutales violaciones que sufrieron 11 mujeres en 2006, cuando el entonces gobernador del Estado de México, Enrique Peña Nieto, ordenó reprimir a quienes participaban en una manifestación." />
+<meta name="author" content="Azam Ahmed" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Azam Ahmed" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="mexico" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="mexico" />
+<meta name="id" content="100000004657023"/>
+<meta name="wordCount" content="2139"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/09/22/comision-interamericana-derechos-humanos-atenco-abusos-pena-nieto-mexico/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=09&amp;day=22&amp;name=comision-interamericana-derechos-humanos-atenco-abusos-pena-nieto-mexico">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=25942">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/09\/22\/comision-interamericana-derechos-humanos-atenco-abusos-pena-nieto-mexico\/"},"headline":"La CIDH exige una investigaci\u00f3n sobre el abuso sexual que sufri\u00f3 un grupo de mujeres en Atenco en 2006","datePublished":"2016-09-22T05:31:44+00:00","dateModified":"2016-09-22T06:33:46+00:00","author":{"@type":"Person","name":"Budasoff"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/09\/22\/universal\/es\/23MEXICO-WEB1-copyES\/23MEXICO-WEB1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"La semana pasada la Comisi\u00f3n Interamericana de Derechos Humanos entreg\u00f3 un informe a la Corte Interamericana sobre las brutales violaciones que sufrieron 11 mujeres en 2006, cuando el entonces gobernador del Estado de M\u00e9xico, Enrique Pe\u00f1a Nieto, orden\u00f3 reprimir a quienes participaban en una manifestaci\u00f3n."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/09/22/comision-interamericana-derechos-humanos-atenco-abusos-pena-nieto-mexico/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/09/23/world/americas/enrique-pena-nieto-commission-human-rights-investigate-rape.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/mexico" />
+<title>La CIDH exige una investigación sobre el abuso sexual que sufrió un grupo de mujeres en Atenco en 2006 &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/09/23/world/americas/enrique-pena-nieto-commission-human-rights-investigate-rape.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/09/22/comision-interamericana-derechos-humanos-atenco-abusos-pena-nieto-mexico/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-25942 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				La CIDH exige una investigación sobre el abuso sexual que sufrió un grupo de mujeres en Atenco en 2006
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/09/22/comision-interamericana-derechos-humanos-atenco-abusos-pena-nieto-mexico/"
+					data-title="Noticias: La CIDH exige una investigación sobre el abuso sexual que sufrió un grupo de mujeres en Atenco en 2006"
+					data-author="POR AZAM AHMED"
+					data-media=""
+					data-description="La semana pasada la Comisión Interamericana de Derechos Humanos entregó un informe a la Corte Interamericana sobre las brutales violaciones que sufrieron 11 mujeres en 2006, cuando el entonces gobernador del Estado de México, Enrique Peña Nieto, ordenó reprimir a quienes participaban en una manifestación."
+					data-publish-date="22 de septiembre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2cNlOiR">http://nyti.ms/2cNlOiR</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/mexico/">México</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">La CIDH exige una investigación sobre el abuso sexual que sufrió un grupo de mujeres en Atenco en 2006</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Azam Ahmed</span>
+</span>
+
+					<time class="dateline" datetime="2016-09-22">22 de septiembre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/09/22/comision-interamericana-derechos-humanos-atenco-abusos-pena-nieto-mexico/"
+							data-title="Noticias: La CIDH exige una investigación sobre el abuso sexual que sufrió un grupo de mujeres en Atenco en 2006"
+							data-author="POR AZAM AHMED"
+							data-media=""
+							data-description="La semana pasada la Comisión Interamericana de Derechos Humanos entregó un informe a la Corte Interamericana sobre las brutales violaciones que sufrieron 11 mujeres en 2006, cuando el entonces gobernador del Estado de México, Enrique Peña Nieto, ordenó reprimir a quienes participaban en una manifestación."
+							data-publish-date="22 de septiembre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004662996" class="media photo lede layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/22/universal/es/23MEXICO-WEB1-copyES/23MEXICO-WEB1-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/22/universal/es/23MEXICO-WEB1-copyES/23MEXICO-WEB1-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/22/universal/es/23MEXICO-WEB1-copyES/23MEXICO-WEB1-superJumbo.jpg" data-mediaviewer-caption="President Enrique Peña Nieto, center, of Mexico, on Sept. 16 during his nation’s Independence Day parade. Mr. Peña Nieto’s order of a crackdown on protests a decade ago while he was governor of the State of Mexico is under scrutiny." data-mediaviewer-credit="Mario Guzman/European Pressphoto Agency"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/22/universal/es/23MEXICO-WEB1-copyES/23MEXICO-WEB1-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">President Enrique Peña Nieto, center, of Mexico, on Sept. 16 during his nation’s Independence Day parade. Mr. Peña Nieto’s order of a crackdown on protests a decade ago while he was governor of the State of Mexico is under scrutiny.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Mario Guzman/European Pressphoto Agency
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/09/23/world/americas/enrique-pena-nieto-commission-human-rights-investigate-rape.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="355" data-total-count="355" id="story-continues-2" tabindex="-1">CIUDAD DE MÉXICO — Funcionarios internacionales de derechos humanos están exigiendo una investigación sobre el brutal ataque sexual que sufrieron 11 mujeres mexicanas hace más de una década, una indagación que podría apuntar al presidente Enrique Peña Nieto, quien entonces era el gobernador del Estado de México, donde ocurrieron los abusos.</p>
+<p class="story-body-text story-content" data-para-count="511" data-total-count="866" id="story-continues-3" tabindex="-1">La petición es parte de un análisis de varios años por parte de la Comisión Interamericana de Derechos Humanos en torno a abusos masivos cometidos cuando, en 2006, Peña Nieto ordenó reprimir a manifestantes en el poblado de San Salvador Atenco, donde habían tomado la plaza principal. Durante los operativos, en los que murieron dos personas, la policía detuvo a más de cuarenta mujeres de manera violenta; también las metieron en autobuses y las enviaron a la cárcel a varias horas de distancia.</p>
+<p class="story-body-text story-content" data-para-count="527" data-total-count="1393" id="story-continues-4" tabindex="-1">Once mujeres llevaron el caso, con la asistencia legal del <a href="http://www.centroprodh.org.mx/">Centro Prodh</a>, a la comisión interamericana, la cual halló que la policía las torturó sexualmente. Las mujeres —comerciantes, estudiantes y activistas— fueron violadas, golpeadas, penetradas con objetos de metal, robadas y humilladas.  A una mujer la forzaron a practicarle sexo oral a varios policías. Después del encarcelamiento, pasaron días antes de que a las mujeres les realizaran los exámenes médicos apropiados, según los hallazgos del reporte.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="175" data-total-count="1568" id="story-continues-5" tabindex="-1">“No lo he superado ni tantito”, dijo una de las mujeres, Patricia Romero Hernández, llorando. “Es algo que me acecha y no se sobrevive a algo así. Se queda contigo”.</p>
+<p class="story-body-text story-content" data-para-count="412" data-total-count="1980" id="story-continues-6" tabindex="-1">La oficina del presidente ha dicho por su parte que la CIDH no responsabilizó a Peña Nieto ni lo ha nombrado explícitamente como un objetivo de la investigación. Más allá de eso, sostienen, los casos judiciales investigados en México por la Suprema Corte de Justicia de la Nación y la Comisión Nacional de los Derechos Humanos nunca lo han hecho responsable de las agresiones sexuales a las mujeres.</p>
+<p class="story-body-text story-content" data-para-count="328" data-total-count="2308" id="story-continues-7" tabindex="-1">&#8220;Sería impreciso confundir una orden para el uso legítimo de la fuerza con la decisión de ciertas personas de abusar su autoridad&#8221;, dijo Roberto Campa, el subsecretario de derechos humanos de la Secretaría de Gobernación. &#8220;Nadie puede decir que hubo una orden para permitir el abuso de la fuerza&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="548" data-total-count="2856" id="story-continues-8" tabindex="-1">Sin embargo, la comisión interamericana encontró que los esfuerzos de México para investigar los abusos fueron insuficientes. En cambio ha exigido una investigación mucho más exhaustiva para determinar la responsabilidad en toda la cadena de mando, lo que podría situar a Peña Nieto en la mira de una investigación como el gobernador que ordenó la represión. También pidió que se tomaran medidas disciplinarias o incluso penales contra las autoridades estatales que contribuyeron a obstaculizar el acceso a la justicia para las mujeres.</p>
+<p class="story-body-text story-content" data-para-count="348" data-total-count="3204" id="story-continues-9" tabindex="-1">La comisión entregó la semana pasada su informe a la Corte Interamericana, un tribunal independiente con autoridad legal en México. Si la corte está de acuerdo con el dictamen de la comisión, puede ordenarle a México que extienda su indagación sobre el caso, un requisito que podría obligar al Estado a investigar a su propio presidente.</p>
+<p class="story-body-text story-content" data-para-count="535" data-total-count="3739" id="story-continues-10" tabindex="-1">La comisión sugiere que el gobierno estatal a cargo de Peña Nieto quiso minimizar e incluso ocultar el suceso. Quizá el ejemplo más espeluznante sea la decisión del gobierno de perseguir a las víctimas: en vez de ir tras los policías que habían cometido las torturas sexuales, el Estado inicialmente procesó a las mujeres. Cinco fueron encarceladas durante un año o más, por cargos como atacar a un policía. Una mujer que fue violada varias veces pasó dos años en prisión por cargos falsos, determinó la comisión.</p>
+<p class="story-body-text story-content" data-para-count="378" data-total-count="4117" id="story-continues-11" tabindex="-1">Días después del incidente, el estado negó las acusaciones de las mujeres, y básicamente las llamó mentirosas. Peña Nieto le dijo a un periódico local en ese entonces que esa es una táctica conocida de grupos radicales: hacer que las mujeres acusen a los policías de violencia sexual para desacreditar al gobierno. Otros en su gobierno hicieron declaraciones similares.</p>
+<p class="story-body-text story-content" data-para-count="317" data-total-count="4434" id="story-continues-12" tabindex="-1">Desde entonces, aunque el gobierno ha reconocido a regañadientes la veracidad de las acusaciones ni una sola persona ha sido condenada por ningún crimen relacionado con los ataques en Atenco. Más recientemente, cinco médicos a quienes se les acusó de ignorar pruebas de abuso sexual fueron declarados inocentes.</p>
+<p class="story-body-text story-content" data-para-count="261" data-total-count="4695" id="story-continues-13" tabindex="-1">El caso es un ejemplo de los obstáculos que las víctimas deben superar para conseguir justicia en México. Las mujeres sufrieron más de 10 años de amenazas, intimidación y trauma psicológico. Vieron cómo los hombres que las atacaron salieron de prisión.</p>
+<p class="story-body-text story-content" data-para-count="261" data-total-count="4956" id="story-continues-14" tabindex="-1">Sin embargo, las mujeres se rehusaron a abandonar el caso y lo llevaron a nivel internacional, pues lo convirtieron en un símbolo del fracaso del Estado de derecho en México, así como de la impunidad generalizada que durante tanto tiempo ha plagado el país.</p>
+<p class="story-body-text story-content" data-para-count="557" data-total-count="5513" id="story-continues-15" tabindex="-1">El caso ya se ha presentado a la corte, a pesar de varios intentos por parte del gobierno mexicano para retrasarlo y frustrarlo; es una rara oportunidad de rendición de cuentas en un país donde solo un pequeño porcentaje de los crímenes se resuelven. Las mujeres se rehusaron a poner fin al caso durante años, y rechazaron promesas de viviendas gratis y becas. En las <a href="https://www.nytimes.com/es/2016/09/22/me-quitaron-la-mitad-de-mi-vida-el-dolor-de-las-mujeres-de-atenco-diez-anos-despues/" target="_blank">entrevistas</a> que The New York Times mantuvo con las 11 víctimas surgió un deseo fundamental: que se reconociera públicamente lo que les sucedió y los responsables de los hechos.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="558" data-total-count="6071" id="story-continues-16" tabindex="-1">Para Peña Nieto, la petición por parte de la comisión de derechos humanos de iniciar una investigación que llegue hasta lo alto de la jerarquía es un golpe más a una presidencia bajo asedio. Los escándalos de corrupción y violencia ya han acabado con sus índices de aprobación, los más bajos de un presidente mexicano en un cuarto de siglo. Su invitación a Donald Trump, el candidato republicano denostado en México a causa de sus declaraciones contra los inmigrantes mexicanos, hundió a la administración todavía más en la controversia.</p>
+<p class="story-body-text story-content" data-para-count="485" data-total-count="6556" id="story-continues-17" tabindex="-1">Aunque no es probable que su gobierno vaya a llevar a cabo una investigación en torno a su papel en las redadas o en un potencial encubrimiento de los hechos, la amonestación de un organismo internacional es un gran aprieto para él. También es un recordatorio de innumerables casos que siguen sin resolverse en el país, incluyendo la desaparición de 43 estudiantes hace dos años, una investigación que funcionarios internacionales sostienen que fue socavada por el gobierno.</p>
+<figure id="media-100000004663025" class="media photo media-100000004663025 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/22/universal/es/atenco-ES/atenco-ES-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-19">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/22/universal/es/atenco-ES/atenco-ES-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/22/universal/es/atenco-ES/atenco-ES-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/22/universal/es/atenco-ES/atenco-ES-master1050.jpg"/>
+		<meta itemprop="height" content="748" />
+		<meta itemprop="width" content="1050" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="420" data-total-count="6976" id="story-continues-19" tabindex="-1">El trauma residual de los ataques ha marcado a cada mujer de manera distinta. A algunas, la familia y los amigos las ayudaron recuperarse, aunque no por completo, y seguir adelante con sus vidas. Algunas encontraron maneras de conectar su lucha con una iniciativa más amplia para luchar por la justicia y los derechos en México. Otras no hallaron ese consuelo, pues el paso del tiempo resultó ser una cura inútil.</p>
+<p class="story-body-text story-content" data-para-count="73" data-total-count="7049" id="story-continues-20" tabindex="-1">Sobrevivir significó quedarse calladas, incluso ante sus seres queridos.</p>
+<p class="story-body-text story-content" data-para-count="329" data-total-count="7378" id="story-continues-21" tabindex="-1">“Nunca pude decirle a mi hijo y a mi padre sobre el hecho de que me habían violado, no uno sino varios policías, porque se habrían vuelto locos”, dijo Romero, quien por primera vez ha decidido revelar a sus seres queridos lo que le sucedió. “No quise infligirles aun más dolor. Ya habíamos sufrido lo suficiente”.</p>
+<p class="story-body-text story-content" data-para-count="317" data-total-count="7695" id="story-continues-22" tabindex="-1">Los ataques, la persecución, el encarcelamiento y la estigmatización causada por la violencia sexual definieron los siguientes diez años para las víctimas de Atenco. En las entrevistas describieron sus vidas como partidas en dos: las mujeres que eran antes del incidente, y en quiénes se convirtieron después.</p>
+<p class="story-body-text story-content" data-para-count="505" data-total-count="8200" id="story-continues-23" tabindex="-1">Las que eran estudiantes cuando sucedió, se salieron de la universidad y jamás regresaron. Todas han tenido problemas en la intimidad. Hay madres que vieron cómo sus hijos las abandonaban, frustrados y temerosos por su campaña interminable para encontrar justicia. Hay padres que les dieron la espalda a las hijas, avergonzados por el abuso y la lucha pública que le siguió. Algunas de sus parejas también se alejaron, incapaces de adaptarse al trauma de una sobreviviente de un abuso sexual.</p>
+<p class="story-body-text story-content" data-para-count="411" data-total-count="8611" id="story-continues-24" tabindex="-1">“Tomé la decisión consciente de sobrevivir, para estar viva y bien hoy, de sentirme bonita de nuevo, de amarme y verme en el espejo y reconocer a la persona que veo”, dijo Patricia Torres Linares, de 33 años, quien abandonó su carrera en ciencias políticas después del ataque. “Me quitaron mi forma de ser, de amar y de sentir. Antes era amable y cariñosa; después me volví fría y distante”.</p>
+<p class="story-body-text story-content" data-para-count="276" data-total-count="8887" id="story-continues-25" tabindex="-1">Para algunas, una sensación de vergüenza, incluso de responsabilidad por lo que sucedió, empañó sus relaciones con otras personas y su propio sentido de identidad. La supervivencia se volvió su forma de medir el éxito, un progreso tangible con el cual marcar los días.</p>
+<p class="story-body-text story-content" data-para-count="369" data-total-count="9256" id="story-continues-26" tabindex="-1">“Duele saber que la Claudia de antes de Atenco se ha ido”, dijo Claudia Hernández Martínez, de 33 años, quien también dejó de estudiar en la Universidad Nacional Autónoma de México después del ataque. “Ahora tengo miedo todo el tiempo. Me asusta todo. Me asusta salir a las calles, expresar mis propias ideas, que la gente sepa qué sucedió en Atenco”.</p>
+<p class="story-body-text story-content" data-para-count="106" data-total-count="9362" id="story-continues-27" tabindex="-1">“Al final de estos 10 años, me pregunto: &#8216;¿Qué he hecho todo este tiempo?&#8217;”, continuó.</p>
+<p class="story-body-text story-content" data-para-count="33" data-total-count="9395" id="story-continues-28" tabindex="-1">Hizo una pausa, mirando el suelo.</p>
+<p class="story-body-text story-content" data-para-count="203" data-total-count="9598" id="story-continues-29" tabindex="-1">“Supongo que solo sobreviví”, dijo, secándose las lágrimas. “Y creo que es comprensible. Es comprensible que haya llorado, que pensé en suicidarme, que lloré tanto y que ahora esté aquí”.</p>
+<p class="story-body-text story-content" data-para-count="123" data-total-count="9721" id="story-continues-30" tabindex="-1">Los ataques coincidieron con el inicio de un periodo desafiante en la historia mexicana: la guerra contra el narcotráfico.</p>
+<p class="story-body-text story-content" data-para-count="233" data-total-count="9954" id="story-continues-31" tabindex="-1">Desde 2006, más de 150.000 personas han sido asesinadas y otras 27.000 han desaparecido sin dejar rastro. La violencia es causada por los carteles, que tienen una enorme influencia en el país, y que el gobierno lucha por disminuir.</p>
+<p class="story-body-text story-content" data-para-count="183" data-total-count="10137" id="story-continues-32" tabindex="-1">Sin embargo, el caso de Atenco no tiene las complejidades que acompañan la violencia entre grupos armados. Y aun así la justicia, incluso en su forma más básica, ha sido elusiva.</p>
+<p class="story-body-text story-content" data-para-count="264" data-total-count="10401" id="story-continues-33" tabindex="-1">Más de veinte individuos a quienes se les había acusado de abuso de autoridad durante el operativo fueron absueltos en el juicio o en la apelación, incluyendo a un oficial al que se le había culpado de obligar a una de las víctimas a practicarle sexo oral.</p>
+<p class="story-body-text story-content" data-para-count="286" data-total-count="10687" id="story-continues-34" tabindex="-1">“Esa ha sido la parte más difícil y exasperante de todo este proceso”, dijo otra de las mujeres, Ana María Velasco Rodríguez, de 43 años. “Estaba llena de ira, pensando que no pasaba nada, incluso después de encontrar al culpable, pueden salir de la cárcel como si nada”.</p>
+<p class="story-body-text story-content" data-para-count="631" data-total-count="11318" id="story-continues-35" tabindex="-1">En años recientes, gracias a que la comisión interamericana está llevando el caso, el gobierno ha renovado sus esfuerzos por perseguir a quienes participaron en estos crímenes. Pero los funcionarios han perseguido a oficiales de bajo rango, pues no han podido o se han negado a investigar a quienes tienen una mayor jerarquía. La persona con más autoridad a quien se ha acusado a la fecha es el comandante de la policía que supervisó el uso de los autobuses —donde ocurrió el abuso— para transportar a las mujeres a prisión, aunque un juez recientemente dijo no tener suficientes pruebas para solicitar su arresto.</p>
+<p class="story-body-text story-content" data-para-count="355" data-total-count="11673" id="story-continues-36" tabindex="-1">Mientras el gobierno argumenta que ha ido tras los responsables, después de años de estancamiento, la comisión encontró que sus esfuerzos llegaban tarde y eran inadecuados. Treinta y cuatro funcionarios de bajo rango estaban en juicio en agosto, atravesando un proceso impredecible y lento en la corte, que no ha podido tranquilizar a las víctimas.</p>
+<p class="story-body-text story-content" data-para-count="226" data-total-count="11899" id="story-continues-37" tabindex="-1">Este abril, casi exactamente 10 años después de los sucesos de Atenco, Peña Nieto visitó el municipio. Los medios locales cubrieron el evento, donde Peña Nieto pronunció un discurso ante una multitud de mujeres y niños.</p>
+<p class="story-body-text story-content" data-para-count="118" data-total-count="12017" id="story-continues-38" tabindex="-1">Ni el presidente ni los informes locales mencionaron una sola vez las manifestaciones, las muertes o las violaciones.</p>
+<p class="story-body-text story-content" data-para-count="183" data-total-count="12200" id="story-continues-39" tabindex="-1">En vez de eso, la visita y su cobertura se concentraron en el Día del Niño y en la nueva iniciativa del presidente para llevar la educación preescolar a todos los niños del país.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Paulina Villegas colaboró con este reportaje.</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/atenco/" rel="tag">Atenco</a>, <a href="https://www.nytimes.com/es/tag/comision-interamericana-de-derechos-humanos/" rel="tag">Comisión Interamericana de Derechos Humanos</a>, <a href="https://www.nytimes.com/es/tag/enrique-pena-nieto/" rel="tag">Enrique Peña Nieto</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/09/22/comision-interamericana-derechos-humanos-atenco-abusos-pena-nieto-mexico/"
+				data-title="Noticias: La CIDH exige una investigación sobre el abuso sexual que sufrió un grupo de mujeres en Atenco en 2006"
+				data-author="POR AZAM AHMED"
+				data-media=""
+				data-description="La semana pasada la Comisión Interamericana de Derechos Humanos entregó un informe a la Corte Interamericana sobre las brutales violaciones que sufrieron 11 mujeres en 2006, cuando el entonces gobernador del Estado de México, Enrique Peña Nieto, ordenó reprimir a quienes participaban en una manifestación."
+				data-publish-date="22 de septiembre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/22/me-quitaron-la-mitad-de-mi-vida-el-dolor-de-las-mujeres-de-atenco-diez-anos-despues/">
+					<div class="story-body">
+						<h3 class="kicker">México</h3>
+
+						<h2 class="headline">
+							<span class="title">&#8216;Me quitaron la mitad de mi vida&#8217;: el dolor de las mujeres de Atenco, diez años después</span>
+							<time class="dateline">22 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/09/22/universal/es/22mujeresES/22mujeresES-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":748,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

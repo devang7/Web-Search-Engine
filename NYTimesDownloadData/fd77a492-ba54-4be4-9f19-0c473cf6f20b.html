@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000003223919"/>
+<meta name="hdl" content="La voz de las ejecutivas" />
+<meta name="col" content="Reposado" id="column-name" />
+<meta name="pdate" content="20160318" />
+<meta name="utime" content="20160318170029" />
+<meta name="ptime" content="20160318170029" />
+<meta name="DISPLAYDATE" content="Mar. 18, 2016" />
+<meta name="dat" content="Mar. 18, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="la-voz-de-las-ejecutivas" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/03/18/la-voz-de-las-ejecutivas/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="La voz de las ejecutivas" />
+<meta property="og:description" content="Cuatro mujeres en puestos directivos describen cómo exponen sus puntos de vista y garantizan ser escuchadas." />
+<meta property="og:image" content="https://static01.nyt.com/images/2014/11/16/business/16cornerwomen-promo/16cornerwomen-promo-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-03-18" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/03/18/la-voz-de-las-ejecutivas/" />
+<meta property="twitter:title" content="La voz de las ejecutivas" />
+<meta property="twitter:description" content="Cuatro mujeres en puestos directivos describen cómo exponen sus puntos de vista y garantizan ser escuchadas." />
+<meta name="author" content="Adam Bryant" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por Adam Bryant" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="reposado" />
+<meta name="cd12" content="economia" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="reposado" />
+<meta name="ser" content="economia" />
+<meta name="id" content="100000003223919"/>
+<meta name="wordCount" content="2894"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/03/18/la-voz-de-las-ejecutivas/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=03&amp;day=18&amp;name=la-voz-de-las-ejecutivas">
+<meta name="PT" content="article">
+<meta name="article:section" content="Reposado">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/10?exclude=6440">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/03\/18\/la-voz-de-las-ejecutivas\/"},"headline":"La voz de las ejecutivas","datePublished":"2016-03-18T17:00:29+00:00","dateModified":"2016-03-19T19:27:08+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2014\/11\/16\/business\/16cornerwomen-promo\/16cornerwomen-promo-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Cuatro mujeres en puestos directivos describen c\u00f3mo exponen sus puntos de vista y garantizan ser escuchadas."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/03/18/la-voz-de-las-ejecutivas/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/interactive/2014/11/16/business/corner-office-women-executives-owning-their-voice.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="reposado/economia" />
+<title>La voz de las ejecutivas &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/interactive/2014/11/16/business/corner-office-women-executives-owning-their-voice.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/03/18/la-voz-de-las-ejecutivas/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-6440 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/reposado/">Reposado</a></span>
+					<span class="pipe">|</span>
+				La voz de las ejecutivas
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/03/18/la-voz-de-las-ejecutivas/"
+					data-title="Reposado: La voz de las ejecutivas"
+					data-author="POR ADAM BRYANT"
+					data-media=""
+					data-description="Cuatro mujeres en puestos directivos describen cómo exponen sus puntos de vista y garantizan ser escuchadas."
+					data-publish-date="18 de marzo de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/reposado/">Reposado</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/economia/">Economía</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">La voz de las ejecutivas</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Adam Bryant</span>
+</span>
+
+					<time class="dateline" datetime="2016-03-18">18 de marzo de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/03/18/la-voz-de-las-ejecutivas/"
+							data-title="Reposado: La voz de las ejecutivas"
+							data-author="POR ADAM BRYANT"
+							data-media=""
+							data-description="Cuatro mujeres en puestos directivos describen cómo exponen sus puntos de vista y garantizan ser escuchadas."
+							data-publish-date="18 de marzo de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000003232925" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2014/11/16/business/16cornerwomen-promo/16cornerwomen-promo-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2014/11/16/business/16cornerwomen-promo/16cornerwomen-promo-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2014/11/16/business/16cornerwomen-promo/16cornerwomen-promo-superJumbo.jpg" data-mediaviewer-caption="Clockwise from top left, Dara Richardson-Heron, C.E.O. of the Y.W.C.A. USA; Sharon Napier, C.E.O. of Partners + Napier; Jenny Ming, C.E.O. of Charlotte Russe; and Jody Greenstone Miller, C.E.O. of the Business Talent Group." data-mediaviewer-credit="Clockwise from top left, Daniel Rosenbaum for The New York Times; Fred R. Conrad/The New York Times; Jim Wilson/The New York Times; Emily Berl for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2014/11/16/business/16cornerwomen-promo/16cornerwomen-promo-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Clockwise from top left, Dara Richardson-Heron, C.E.O. of the Y.W.C.A. USA; Sharon Napier, C.E.O. of Partners + Napier; Jenny Ming, C.E.O. of Charlotte Russe; and Jody Greenstone Miller, C.E.O. of the Business Talent Group.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Clockwise from top left, Daniel Rosenbaum for The New York Times; Fred R. Conrad/The New York Times; Jim Wilson/The New York Times; Emily Berl for The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/interactive/2014/11/16/business/corner-office-women-executives-owning-their-voice.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="61" data-total-count="61" id="story-continues-2" tabindex="-1"><em>Este artículo fue publicado originalmente en noviembre 2014.</em></p>
+<p class="story-body-text story-content" data-para-count="272" data-total-count="333" id="story-continues-3" tabindex="-1">¿Qué significa que una mujer tenga voz y voto en las reuniones? ¿Cómo pueden sobreponerse a las percepciones generalizadas, especialmente cuando se les juzga con más dureza que a los hombres? Cuando se habla de mujeres y liderazgo, ¿se habla en realidad sobre poder?</p>
+<p class="story-body-text story-content" data-para-count="224" data-total-count="557" id="story-continues-4" tabindex="-1">Esos son solo algunos de los temas que emergen durante las entrevistas con cuatro ejecutivas, conversaciones sobre cuáles son los retos a los que se enfrentan en el mundo laboral y qué consejos ofrecerían a otras mujeres.</p>
+<p class="story-body-text story-content" data-para-count="304" data-total-count="861" id="story-continues-5" tabindex="-1">Me he sentado con más de 125 mujeres para debatir sobre liderazgo, pero he evitado vincularlo con el género. No porque lo considerase un tabú, sino porque desde el comienzo mi objetivo era entrevistar a líderes que también fueran mujeres, más que entrevistarlas como &#8220;mujeres líderes&#8221;.</p>
+<figure id="media-100000003228812" class="media photo media-100000003228812 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2014/11/13/business/executive-women-dara-richardson-thumbnail/executive-women-dara-richardson-portrait-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-7">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2014/11/13/business/executive-women-dara-richardson-thumbnail/executive-women-dara-richardson-portrait-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2014/11/13/business/executive-women-dara-richardson-thumbnail/executive-women-dara-richardson-portrait-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Daniel Rosenbaum for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2014/11/13/business/executive-women-dara-richardson-thumbnail/executive-women-dara-richardson-portrait-master675.jpg"/>
+		<meta itemprop="height" content="674" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Daniel Rosenbaum for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="87" data-total-count="948" id="story-continues-7" tabindex="-1"><strong>Dara Richardson-Heron, doctora en medicina<br />Directora ejecutiva de YWCA en Estados Unidos </strong></p>
+<p class="story-body-text story-content" data-para-count="354" data-total-count="1302" id="story-continues-8" tabindex="-1">Trayectoria: Directora ejecutiva en Nueva York de Susan G. Komen, una fundación que investiga el cáncer de mama. Antes fue jefa médica de United Cerebral Palsy, una organización que trabaja por las personas con discapacidad. Ejerció varios puestos de responsabilidad en Consolidated Edison, una de las mayores empresas de energía de Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="111" data-total-count="1413" id="story-continues-9" tabindex="-1"><strong>P. ¿Con qué viento en contra te has encontrado a lo largo de tu carrera? ¿También ha habido viento a favor?</strong></p>
+<p class="story-body-text story-content" data-para-count="509" data-total-count="1922" id="story-continues-10" tabindex="-1"><strong>R.</strong> El viento que me impulsó fueron mis padres. Desde que puedo recordar nos dijeron que nunca sintiéramos que la raza o el género nos limitaban. Desde ahí he mirado el mundo. Cuando te encuentras con viento de cara que te frena, ya tienes cómo evitarlo. El primer recuerdo que tengo en ese sentido sucedió en medio de una evaluación de desempeño. Iba muy bien, pero el encargado dijo que tenía que decirme algo: que era tan elegante en mi vestir que hacía que otras personas se sintieran incómodas.</p>
+<p class="story-body-text story-content" data-para-count="274" data-total-count="2196" id="story-continues-11" tabindex="-1">Me indigné. Podía dejarlo pasar o decidir que era inaceptable. Le dije: &#8220;Desde este momento, quiero que me juzgues solo por mi desempeño y no por mi apariencia&#8221;. Se lo dije con respeto y claridad, pero se sorprendió. No volvió a cruzar la línea nunca más.</p>
+<p class="story-body-text story-content" data-para-count="41" data-total-count="2237" id="story-continues-12" tabindex="-1"><strong>P.</strong> ¿Otros ejemplos de viento en contra?</p>
+<p class="story-body-text story-content" data-para-count="394" data-total-count="2631" id="story-continues-13" tabindex="-1"><strong>R.</strong> Cualquier líder quiere tener su propio consejo asesor, la gente a la que llamas para saber si pierdes contacto con la realidad o vas en la dirección correcta. Pero cuando yo he sido la líder me he dado cuenta de que la gente me da consejos que no he pedido. &#8220;Deberías decir esto, deberías hacer aquello&#8221;. No creo que se sientan tan cómodos haciendo lo mismo con hombres.</p>
+<p class="story-body-text story-content" data-para-count="29" data-total-count="2660" id="story-continues-14" tabindex="-1"><strong>P.</strong> ¿Por qué crees que pasa?</p>
+<p class="story-body-text story-content" data-para-count="372" data-total-count="3032" id="story-continues-15" tabindex="-1"><strong>R.</strong> No me gusta generalizar, pero mucha gente cree que las mujeres son más accesibles. Otro fenómeno que he visto es la microgestión de tono paternalista. Hay hombres que  sienten que te pueden poner en un cargo de liderazgo y después decirte exactamente qué tienes que hacer. Y eso no funciona conmigo. Si yo lidero, dime cuál es el objetivo y veré cómo llegar.</p>
+<p class="story-body-text story-content" data-para-count="46" data-total-count="3078" id="story-continues-16" tabindex="-1"><strong>P.</strong> ¿Qué consejos darías a mujeres jóvenes?</p>
+<p class="story-body-text story-content" data-para-count="377" data-total-count="3455" id="story-continues-17" tabindex="-1"><strong>R.</strong> A veces las mujeres confunden &#8220;palabras&#8221; con “voz”; por ejemplo, sienten que con estar sentadas a una mesa y decir algo es suficiente. Pero es importante que sepan que tener voz significa tener una lista de éxitos y logros, que si la gente te escucha es porque tienes algo que decir, porque lo que dices es valioso. Usa tu voz, pero de manera estratégica.</p>
+<p class="story-body-text story-content" data-para-count="467" data-total-count="3922" id="story-continues-18" tabindex="-1">Otro consejo es que tienes que expresarte. Tienes que ser capaz de mirarte en el espejo y decir: &#8220;Estos son mis valores. Esto es quien quiero ser y lo que quiero dejar detrás de mí&#8221;. Muchas mujeres permiten que las cosas pasen porque les preocupa que si toman una posición clara puede sacarlas de circulación. Pero si no lo haces, te sacarás de circulación personalmente porque no podrás mirarte en el espejo y decir &#8220;Esta soy yo&#8221;.</p>
+<figure id="media-100000003228801" class="media photo media-100000003228801 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2014/11/13/business/executive-women-sharon-napier-portrait-copy/executive-women-sharon-napier-portrait-copy-superJumbo.png" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-20">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2014/11/13/business/executive-women-sharon-napier-portrait-copy/executive-women-sharon-napier-portrait-copy-superJumbo.png" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2014/11/13/business/executive-women-sharon-napier-portrait-copy/executive-women-sharon-napier-portrait-copy-superJumbo.png" data-mediaviewer-caption="" data-mediaviewer-credit="Daniel Rosenbaum for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2014/11/13/business/executive-women-sharon-napier-portrait-copy/executive-women-sharon-napier-portrait-copy-superJumbo.png"/>
+		<meta itemprop="height" content="648" />
+		<meta itemprop="width" content="647" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Daniel Rosenbaum for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="76" data-total-count="3998" id="story-continues-20" tabindex="-1"><strong>Sharon Napier<br />Directora ejecutiva de Partners + Napier, agencia de publicidad </strong></p>
+<p class="story-body-text story-content" data-para-count="360" data-total-count="4358" id="story-continues-21" tabindex="-1">Trayectoria: Dirigió la compra de la oficina de Rochester del Wolf Group, una empresa de comunicaciones, y le cambió el nombre a Partners + Napier. Desde entonces, la agencia se ha expandido a San Francisco y Nueva York, y fue adquirida por Project WorldWide. Ese año, Napier se sumó al equipo de liderazgo estratégico de la sociedad tenedora de acciones.</p>
+<p class="story-body-text story-content" data-para-count="69" data-total-count="4427" id="story-continues-22" tabindex="-1"><strong>P.</strong> ¿En qué momentos te has sentido tratada diferente por ser mujer?</p>
+<p class="story-body-text story-content" data-para-count="184" data-total-count="4611" id="story-continues-23" tabindex="-1"><strong>R.</strong> Crecí en una familia italiana. Mi padre tenía una empresa y todos hablábamos de trabajo todo el tiempo. Teníamos debates intensos, pero cuando terminaba la cena, todo terminaba.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="461" data-total-count="5072" id="story-continues-24" tabindex="-1">Si tenemos un debate en el trabajo, es porque realmente quiero conocer la opinión de todos los que están sentados a la mesa. Una vez que se ha tomado la decisión, ya está. Sigamos. Nunca me lo tomo personal, no tiene que ver conmigo. Alguna vez he oído a alguien decir: &#8220;Uy, Sharon ha sido dura conmigo&#8221; y pienso: &#8220;¿En serio? Solo estaba conversando. Si yo fuera hombre, ¿diría lo mismo?&#8221;. Creo que a las mujeres nos juzgan más.</p>
+<p class="story-body-text story-content" data-para-count="21" data-total-count="5093" id="story-continues-25" tabindex="-1"><strong>P.</strong> ¿En qué sentido?</p>
+<p class="story-body-text story-content" data-para-count="305" data-total-count="5398" id="story-continues-26" tabindex="-1"><strong> R.</strong> Lo que llevas puesto, tu peso, tu pelo. Se supone que seas de esta o aquella manera. Al principio comienzas editándote. Debería alisarme el pelo, debería llevar un traje oscuro y parecer más seria. Pero luego llegas a un punto en el que comienzas a decirte: &#8220;Es mejor que sea yo misma&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="358" data-total-count="5756" id="story-continues-27" tabindex="-1">A menudo las mujeres minimizamos nuestros éxitos y no reclamamos lo que nos corresponde. Creo que las mujeres buscamos encajar. Era deportista en la secundaria y la universidad; dicen que las chicas quieren ser parte del equipo y no están tan interesadas en hacerse ver mientras que los chicos pretenden ser estrellas y te lo harán saber todo el tiempo.</p>
+<p class="story-body-text story-content" data-para-count="276" data-total-count="6032" id="story-continues-28" tabindex="-1">Como líder, tienes que sentirte cómoda con tu propio éxito. Creo que la humildad es algo positivo pero también es importante reconocerse a una misma. Las mujeres deberían elevar su voz. Deberíamos poder decir en un par de frases quiénes somos, que hemos hecho y seguir.</p>
+<p class="story-body-text story-content" data-para-count="26" data-total-count="6058" id="story-continues-29" tabindex="-1"><strong>P.</strong> ¿Alguna otra lección?</p>
+<p class="story-body-text story-content" data-para-count="160" data-total-count="6218" id="story-continues-30" tabindex="-1"><strong>R.</strong> Puede que las mujeres sean más colaborativas que los hombres, y podemos enseñarles mucho, pero creo que los hombres también tienen mucho que enseñarnos.</p>
+<p class="story-body-text story-content" data-para-count="64" data-total-count="6282" id="story-continues-31" tabindex="-1"><strong>P.</strong> ¿Qué consejo de carrera le darías a mujeres más jóvenes?</p>
+<p class="story-body-text story-content" data-para-count="109" data-total-count="6391" id="story-continues-32" tabindex="-1"><strong>R.</strong> No te limites a sentarte y pensar en cosas para susurrárselas a alguien. Atrévete y comparte tus ideas.</p>
+<p class="story-body-text story-content" data-para-count="459" data-total-count="6850" id="story-continues-33" tabindex="-1">Otra cosa sobre la que pienso es que vengo de una familia inmigrante, crecí en un lugar pequeño y fui a una universidad pequeña. Fundé la empresa en Rochester (Nueva York) y durante mucho tiempo sentí complejo de inferioridad. No pasé por una Ivy League. No crecí en Nueva York. No trabajé para ninguna empresa grande. Luego me di cuenta de que todo eso es lo que soy. Tienes que asumir tu pasado y usarlo a tu favor para hacer avanzar tu carrera.</p>
+<p class="story-body-text story-content" data-para-count="111" data-total-count="6961" id="story-continues-34" tabindex="-1"><strong>P.</strong> Si estuvieras hablando para una audiencia de mujeres que estudian un MBA, ¿qué otros consejos les darías?</p>
+<p class="story-body-text story-content" data-para-count="226" data-total-count="7187" id="story-continues-35" tabindex="-1"><strong>R.</strong> La primera es construir tus aptitudes y desarrollar tu talento, puede que un día seas jefa, pero necesitas tener esas aptitudes de todos modos. En el mundo de hoy es: &#8220;¿Qué puedo hacer? ¿Cómo puedo agregar valor?</p>
+<p class="story-body-text story-content" data-para-count="105" data-total-count="7292" id="story-continues-36" tabindex="-1">Segundo, no estés nunca en un puesto en el que no te entregas. Si estás en algo, entrégate totalmente.</p>
+<p class="story-body-text story-content" data-para-count="328" data-total-count="7620" id="story-continues-37" tabindex="-1">Por último, hay poco de suerte en lo que hacemos. Algunas cosas suceden y deberías disfrutar de esos momentos. Probablemente sea porque estás haciendo un montón de cosas bien. No creas que es solo por suerte y te subestimes. Las mujeres hablan mucho de suerte y se hacen menos. Tenemos algún tipo de síndrome del impostor.</p>
+<figure id="media-100000003228805" class="media photo media-100000003228805 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2014/11/13/business/executive-women-jody-greenstone-thumbnail/executive-women-jody-greenstone-portrait-master675.png" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-39">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2014/11/13/business/executive-women-jody-greenstone-thumbnail/executive-women-jody-greenstone-portrait-master675.png" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2014/11/13/business/executive-women-jody-greenstone-thumbnail/executive-women-jody-greenstone-portrait-superJumbo.png" data-mediaviewer-caption="" data-mediaviewer-credit="Daniel Rosenbaum for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2014/11/13/business/executive-women-jody-greenstone-thumbnail/executive-women-jody-greenstone-portrait-master675.png"/>
+		<meta itemprop="height" content="675" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Daniel Rosenbaum for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="106" data-total-count="7726" id="story-continues-39" tabindex="-1"><strong>Jody Greenstone Miller<br />Directora ejecutiva de Business Talent Group, que busca proyectos para profesionales</strong></p>
+<p class="story-body-text story-content" data-para-count="302" data-total-count="8028" id="story-continues-40" tabindex="-1">Trayectoria: presidenta en funciones y jefa de operaciones de Americast, una empresa de televisión. Segunda de a bordo de David Gergen cuando era consejero del Presidente Bill Clinton. Banquera de inversiones en Lehman Brothers, consejera de Richard W. Riley cuando era gobernador de Carolina del Sur.</p>
+<p class="story-body-text story-content" data-para-count="62" data-total-count="8090" id="story-continues-41" tabindex="-1"><strong>P.</strong> ¿Qué apoyos has encontrado, por ser mujer, en tu carrera?</p>
+<p class="story-body-text story-content" data-para-count="737" data-total-count="8827" id="story-continues-42" tabindex="-1"><strong>R.</strong> Si me preguntas solo por lo que ha impactado en mi carrera, ser mujer no estaría en la lista. No lo veo así. No creo que sea sano que el debate gire sobre el modo en que las mujeres y los hombres lideran, por dos motivos. Uno es que creo que hay muchos tipos diferentes de lideresas y muchos tipos de líderes. No hay diferencia en función del género… También qué más da, digamos que es cierto: decidamos que las mujeres son manzanas y los hombres son peras. Aún así tienes que buscar tu manera de conseguir el éxito. Quejarte por las diferencias o identificarlas no será constructivo. Siento que hemos caído en una especie de complejo industrial de &#8220;mujeres criticando mujeres bajo la apariencia de ayuda&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="429" data-total-count="9256" id="story-continues-43" tabindex="-1">Se han escrito cientos de libros y artículos sobre los motivos por los que las mujeres no tienen éxito, hasta el punto en que creo que las mujeres, especialmente las jóvenes, quizás ni siquiera creen que tienen un problema, se miran y dicen: &#8220;Quizás tenemos un problema&#8221;. Las profesionales están bajo un microscopio. Si hiciera lo mismo con los hombres, habría un montón de cosas que les impiden tener éxito.</p>
+<p class="story-body-text story-content" data-para-count="303" data-total-count="9559" id="story-continues-44" tabindex="-1">Siento que la situación no es sana. Incluso si tenemos que decir que es cierto que la gente no está demasiado contenta con las mujeres que tienen éxito, ¿qué puede hacerse al respecto? Hay que navegarlo. No vas a decirte: &#8220;No puedo tener éxito&#8221;, porque ni es cierto ni es constructivo.</p>
+<p class="story-body-text story-content" data-para-count="202" data-total-count="9761" id="story-continues-45" tabindex="-1">Creo también que muchos factores que la gente señala como responsables de que las mujeres no avancen son solo síntomas de que no haya más mujeres en puestos de liderazgo y no la causa que lo motiva.</p>
+<p class="story-body-text story-content" data-para-count="493" data-total-count="10254" id="story-continues-46" tabindex="-1">El otro comentario que haría es que el aire arriba es más pesado. A medida que progresas es más competitivo. La gente utilizará todo lo que esté en sus manos para imponerse sobre ti. Los instrumentos contra las mujeres se basan en la percepción de su vulnerabilidad. Pienso en eso, especialmente, cuando hablan de los trabajos de mayor responsabilidad. Es por el poder y no por el género. La táctica por la que la gente se enfrenta puede ser el género, pero la pelea es por el poder.</p>
+<p class="story-body-text story-content" data-para-count="31" data-total-count="10285" id="story-continues-47" tabindex="-1"><strong>P.</strong> ¿Ejemplos que hayas vivido?</p>
+<p class="story-body-text story-content" data-para-count="565" data-total-count="10850" id="story-continues-48" tabindex="-1"><strong>R.</strong> Cuando trabajé en la Casa Blanca entraba en reuniones y recibía novatadas. Me sentaba a una mesa, decía algo y la gente hablaba sobre mí como si no hubiera dicho nada. Era un juego. Llamé a mi mentor, Dick Riley, con quien había trabajado en Carolina del Sur cuando era gobernador y le dije: &#8220;Esto es duro, la gente es desagradable, incluso asquerosa&#8221;, y me respondió: &#8220;¿Qué esperabas, estás en la Casa Blanca, es el centro de poder del universo, es un nido de serpientes&#8221;. Fue como una epifanía, no es siempre sobre ser mujer.</p>
+<p class="story-body-text story-content" data-para-count="30" data-total-count="10880" id="story-continues-49" tabindex="-1"><strong>P.</strong> ¿Alguna otra observación?</p>
+<p class="story-body-text story-content" data-para-count="268" data-total-count="11148" id="story-continues-50" tabindex="-1"><strong>R.</strong> Cuando eres mujer, especialmente joven y en el mundo de los negocios, y estás rodeada de muchos hombres se te subestima. Tienes que elegir: o dejas claro por qué estás sentada a la mesa o esperas al momento adecuado para hacer tus comentarios y probar tu valía.</p>
+<p class="story-body-text story-content" data-para-count="255" data-total-count="11403" id="story-continues-51" tabindex="-1">No creo que los hombres sientan ese tipo de presión. [A nosotras] no se nos da el beneficio de la duda, no hay amortiguador a cuando se valora nuestra contribución, así que hay que ser un poco más estratégica y lista sobre lo que se dice y lo que no.</p>
+<p class="story-body-text story-content" data-para-count="359" data-total-count="11762" id="story-continues-52" tabindex="-1">A veces es incluso una ventaja que los hombres infravaloren a las mujeres. Estaba negociando un contrato importante una vez y el hombre que tenía enfrente no tenía ni idea de que soy abogada. Al final conseguí parte de lo que quería porque él no estaba alerta. Hay veces que es mejor que te subestimen, no es el fin del mundo aunque pueda ser frustrante.</p>
+<p class="story-body-text story-content" data-para-count="89" data-total-count="11851" id="story-continues-53" tabindex="-1"><strong>P.</strong> ¿No es esa dinámica la razón por la que no hay más mujeres en puestos directivos?</p>
+<p class="story-body-text story-content" data-para-count="455" data-total-count="12306" id="story-continues-54" tabindex="-1"><strong>R.</strong> Sí, es una razón. Y creo que tanto las mujeres como los hombres pueden ser proactivos al ayudar a las mujeres a sentirse cómodas para exigirse más. Los hombres necesitan entender que las mujeres pueden adaptarse a nuevos roles, pero mi punto de vista sobre el motivo por el que no hay más mujeres en los puestos de responsabilidad tiene más que ver con los caminos que existen hacia la jerarquía, que con, digamos, aptitudes de tipo más blando.</p>
+<figure id="media-100000003228814" class="media photo media-100000003228814 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2014/11/13/business/executive-women-jenny-ming-thumbnail/executive-women-jenny-ming-thumbnail-master675-v3.png" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-56">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2014/11/13/business/executive-women-jenny-ming-thumbnail/executive-women-jenny-ming-thumbnail-master675-v3.png" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2014/11/13/business/executive-women-jenny-ming-thumbnail/executive-women-jenny-ming-thumbnail-superJumbo-v4.png" data-mediaviewer-caption="" data-mediaviewer-credit="Daniel Rosenbaum for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2014/11/13/business/executive-women-jenny-ming-thumbnail/executive-women-jenny-ming-thumbnail-master675-v3.png"/>
+		<meta itemprop="height" content="675" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Daniel Rosenbaum for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="68" data-total-count="12374" id="story-continues-56" tabindex="-1"><strong>Jenny Ming<br />Directora ejecutiva de Charlotte Russe, una cadena de ropa </strong></p>
+<p class="story-body-text story-content" data-para-count="265" data-total-count="12639" id="story-continues-57" tabindex="-1">Trayectoria: Desempeñó varios puestos en Gap Inc., entre ellos, miembro del equipo ejecutivo que lanzó la marca Old Navy, de la que fue presidenta durante siete años. Fue asesora especial del consejo de Barney&#8217;s en Nueva York y directora de Levi Strauss.</p>
+<p class="story-body-text story-content" data-para-count="49" data-total-count="12688" id="story-continues-58" tabindex="-1"><strong>P.</strong> ¿Alguna lección sobre ser mujer y liderazgo?</p>
+<p class="story-body-text story-content" data-para-count="879" data-total-count="13567" id="story-continues-59" tabindex="-1"><strong>R.</strong> Hubo dos puntos de inflexión en mi carrera. Uno, a los 23, cuando me encargaba del departamento de ropa de cama en un Mervyn. El director de la tienda me dijo: &#8220;Eres demasiado agradable, dejas que la gente pase sobre ti&#8221;. Cuando alguien te dice eso, te etiquetan y te dicen que no tienes madera de líder. Así que me di cuenta pronto de que necesitas dejarle claro a la gente lo que quieres, pero no decirles qué deben hacer. La segunda, cuando era responsable de producto. Compraba bien, pero alguien ascendió sobre mí. Me sorprendió porque nadie me preguntó si me interesaba el puesto. Cuando me aproximé al encargado y le comenté me dijo que &#8220;no sabía que era tan ambiciosa&#8221;. Tenía tres hijos pequeños y dijo: &#8220;Tienes hijos&#8221;. Le respondí: &#8220;No puedes asumir que por tener hijos no quiero ascender&#8221;. Se disculpó.</p>
+<p class="story-body-text story-content" data-para-count="516" data-total-count="14083" id="story-continues-60" tabindex="-1">Lo que aprendí es que no puedes asumir que la gente sabe lo que piensas o lo que quieres. Tienes que decirlo. Así que he tenido este tipo de conversaciones con gente que trabaja para mí. Todo el mundo maneja los tiempos de manera diferente. Quiero estar segura de que sé lo que piensa la gente que trabaja conmigo. ¿Qué quieren hacer? Es bueno tener ese tipo de relación. También es mejor tener las conversaciones a mediados de año y no durante el periodo de evaluación porque de ese modo son más libres.</p>
+<p class="story-body-text story-content" data-para-count="657" data-total-count="14740" id="story-continues-61" tabindex="-1">Nunca planeé, y ahora me doy cuenta de que ha habido veces en las que he esperado demasiado. Cuando terminé de estudiar quería ser responsable de compras. Lo fui con 27 años. No pensé más allá. No me presioné pensando que si no era vicepresidenta a los 32 estaría molesta. Para muchas mujeres –entre las que me incluyo– sucede que estamos en una situación demasiado cómoda y tenemos que estar haciendo un trabajo antes de que nos lo den para sentir que nos merecemos el título. Queremos hacerlo bien y eso va de respeto. La paciencia me ha funcionado porque llegó un momento en que estaba lista para ser presidenta de Old Navy y lo quería.</p>
+<p class="story-body-text story-content" data-para-count="55" data-total-count="14795" id="story-continues-62" tabindex="-1"><strong>P.</strong> ¿Algún consejo para las jóvenes sobre el trabajo?</p>
+<p class="story-body-text story-content" data-para-count="351" data-total-count="15146" id="story-continues-63" tabindex="-1"><strong>R.</strong> A veces, cuando eres la única mujer en una reunión, o hay pocas en el grupo, sientes que tienes que decir algo. Hay mujeres que sienten que deben hacerse sentir en la reunión. Pero escuchar es igual de importante porque obtienes más de la reunión. A veces esperas para hablar. No escuchas. Tienes que encontrar balance entre escuchar y hablar.</p>
+<p class="story-body-text story-content" data-para-count="364" data-total-count="15510" id="story-continues-64" tabindex="-1">Yo escucho mejor de lo que hablo. Recuerdo que estaba en una conferencia y que era la única mujer. Era mi primera vez allí. Me sentía intimidada. Estuve escuchando todo el tiempo y no decía nada y al final me pidieron que dijera algo. En ese tipo de situaciones debo recordarme: &#8220;Jenny te han invitado porque es evidente que tienes algo que decir&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="139" data-total-count="15649" id="story-continues-65" tabindex="-1">Todavía me siento intimidada y comparto eso con mi equipo porque soy bastante abierta. Puedes mostrar que eres vulnerable, humana, normal.</p>
+<p class="story-body-text story-content" data-para-count="21" data-total-count="15670" id="story-continues-66" tabindex="-1"><strong>P.</strong> ¿Otras historias?</p>
+<p class="story-body-text story-content" data-para-count="368" data-total-count="16038" id="story-continues-67" tabindex="-1"><strong>R.</strong> Trabajo en capitales privados y es una profesión que tiende a ser más masculina. Alguien me dijo, poco después de hacer cambios importantes en mi nueva responsabilidad: &#8220;No estábamos seguros de que pudieras tomar las decisiones difíciles&#8221;. Lo miré y le dije: &#8220;No podría estar donde estoy si no pudiera tomar una decisión complicada&#8221;.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/03/18/la-voz-de-las-ejecutivas/"
+				data-title="Reposado: La voz de las ejecutivas"
+				data-author="POR ADAM BRYANT"
+				data-media=""
+				data-description="Cuatro mujeres en puestos directivos describen cómo exponen sus puntos de vista y garantizan ser escuchadas."
+				data-publish-date="18 de marzo de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":804,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

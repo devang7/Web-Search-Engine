@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class=" no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class=" no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class=" no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class=" no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="page">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">
+<meta name="nyt-collection:uri" content="pagename=terminos-y-condiciones-del-servicio">
+<meta name="PT" content="page">
+<meta name="article:section" content="terminos-y-condiciones-del-servicio">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/?exclude=12">
+<meta name="dfp-ad-unit-path" content="" />
+<title>Términos y condiciones del servicio &#8211; Español</title>
+<link rel="canonical" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="page-template-default page page-id-12" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Términos y condiciones del servicio
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+	
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+<article class="story theme-main">
+	<header class="story-header">
+		<div class="story-meta ">
+			<h1 itemprop="headline" id="story-heading" class="story-heading">Términos y condiciones del servicio</h1>
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body">
+		<p class="story-body-text story-content" data-para-count="42" data-total-count="42" id="story-continues-1" tabindex="-1">Última actualización: 9 de enero de 2014</p>
+<p class="story-body-text story-content" data-para-count="15" data-total-count="57" id="story-continues-2" tabindex="-1"><a href="http://www.nytimes.com/content/help/rights/terms/terms-of-service.html">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="262" data-total-count="319" id="story-continues-3" tabindex="-1">Esta página describe los términos y condiciones que rigen su uso de algunos productos digitales de New York Times, incluyendo NYTimes.com y las aplicaciones móviles ofrecidas por The New York Company y algunas de sus subsidiarias (“NYT” o “nosotros”).</p>
+<ul class="story-body-text story-content">
+<li><a href="#1.reglasgeneralesydefiniciones">REGLAS GENERALES Y DEFINICIONES</a></li>
+<li><a href="#2.contenidodelosservicios">CONTENIDO DE NYTIMES.COM</a></li>
+<li><a href="#3.contenidogeneradoporelusuario:publicacionesincluyendocomentariosopinionesdellectorymás">CONTENIDO GENERADO POR EL USUARIO: PUBLICACIONES INCLUYENDO COMENTARIOS, OPINIONES DEL LECTOR Y MÁS</a></li>
+<li><a href="#4.accesoydisponibilidaddelosserviciosyvínculos">ACCESO Y DISPONIBILIDAD DE LOS SERVICIOS Y VÍNCULOS</a></li>
+<li><a href="#5.declaracionesygarantías">DECLARACIONES Y GARANTÍAS</a></li>
+<li><a href="#6.registroyseguridad">REGISTRO Y SEGURIDAD</a></li>
+<li><a href="#7.cuotasypagos">CUOTAS Y PAGOS</a></li>
+<li><a href="#8.comunicacionesentrenytysususuarios">COMUNICACIONES ENTRE NYTIMES.COM Y SUS MIEMBROS</a></li>
+<li><a href="#9.licenciasdesoftware">LICENCIAS DE SOFTWARE</a></li>
+<li><a href="#10.terminación">TERMINACIÓN</a></li>
+<li><a href="#11.generales">GENERALES</a></li>
+</ul>
+<hr />
+<p class="story-body-text story-content" data-para-count="34" data-total-count="353" id="story-continues-4" tabindex="-1"><strong id="1.reglasgeneralesydefiniciones">1. REGLAS GENERALES Y DEFINICIONES</strong></p>
+<p class="story-body-text story-content" data-para-count="472" data-total-count="825" id="story-continues-5" tabindex="-1">1.1 Si decide utilizar el sitio de NYTimes.com (el “Sitio”), los sitios y aplicaciones móviles de NYT, cualquier componente de este sitio, incluyendo de manera enunciativa, más no limitativa, RSS, API, software y otras descargas (de manera colectiva, los “Servicios NYT”), usted estará aceptando cumplir todos los términos y condiciones de estos Términos y Condiciones del Servicio que celebran usted y The New York Times Company (“NYT” o “nosotros”).</p>
+<p class="story-body-text story-content" data-para-count="412" data-total-count="1237" id="story-continues-6" tabindex="-1">1.2 Nosotros podremos cambiar, añadir o eliminar partes de estos Términos y Condiciones del Servicio en cualquier momento, y tales modificaciones entrarán en vigor de manera inmediata a partir de su publicación. Usted tendrá la responsabilidad de revisar estos Términos y Condiciones del Servicio antes de cada uso del Sitio, y si continúa utilizándolo, entonces usted está de acuerdo con tales cambios.</p>
+<p class="story-body-text story-content" data-para-count="464" data-total-count="1701" id="story-continues-7" tabindex="-1">1.3 SI ALGUNA DE ESTAS REGLAS O CUALQUIER CAMBIO FUTURO SON INACEPTABLES PARA USTED, USTED PUEDE CANCELAR SU MEMBRESÍA ENVIÁNDONOS UN CORREO ELECTRÓNICO A: cancel@nytimes.com (CONSULTE LA SECCIÓN 10.1 RESPECTO A LA TERMINACIÓN DEL SERVICIO). SI USTED CONTINÚA UTILIZANDO LOS SERVICIOS AHORA O DESPUÉS DE QUE SE HAYA PUBLICADO CUALQUIER AVISO DE CAMBIOS A ESTAS REGLAS DE OPERACIÓN, USTED ESTARÁ INDICANDO QUE ACEPTA TALES REGLAS, CAMBIOS O MODIFICACIONES.</p>
+<p class="story-body-text story-content" data-para-count="385" data-total-count="2086" id="story-continues-8" tabindex="-1">1.4 Nosotros podremos cambiar, suspender o discontinuar cualquier aspecto de los Servicios en cualquier momento, incluyendo la disponibilidad de cualquier característica, base de datos o contenido del Servicio. También podremos imponer límites a ciertos elementos y servicios o restringir su acceso a partes o a todos los Servicios sin previo aviso ni responsabilidad para nosotros.</p>
+<hr />
+<p class="story-body-text story-content" data-para-count="29" data-total-count="2115" id="story-continues-9" tabindex="-1"><strong id="2.contenidodelosservicios">2. CONTENIDO DE LOS SERVICIOS</strong></p>
+<p class="story-body-text story-content" data-para-count="703" data-total-count="2818" id="story-continues-10" tabindex="-1">2.1 Los contenidos de los Servicios, incluyendo el Sitio, están diseñados para su uso personal, no comercial. Todos los materiales publicados en los Servicios (incluyendo de manera enunciativa, más no limitativa, los artículos de noticias, fotografías, imágenes, ilustraciones, archivos de audio y video, también conocidos como el “Contenido”) están protegidos por derechos de autor, y son propiedad o están controlados por The New York Times Company o la parte acreditada como el proveedor del Contenido. Usted deberá acatar todos los avisos adicionales de derechos de autor, información o restricciones que formen parte de cualquier Contenido al que tenga acceso a través del Servicio.</p>
+<p class="story-body-text story-content" data-para-count="545" data-total-count="3363" id="story-continues-11" tabindex="-1">2.2 Los Servicios y Contenidos están protegidos por los derechos de autor de conformidad con las leyes estadounidenses e internacionales de derechos de autor. Usted no podrá modificar, publicar, transmitir, participar en transferencia o venta, reproducir (salvo lo previsto en la Sección 2.3 de los presentes Términos y Condiciones del Servicio), crear trabajos noticiosos, distribuir, ejecutar, desplegar ni de ninguna otra manera explotar ninguno de los Contenidos o Servicios (incluyendo el software) de manera parcial ni en su totalidad.</p>
+<p class="story-body-text story-content" data-para-count="585" data-total-count="3948" id="story-continues-12" tabindex="-1">2.3 Usted podrá descargar o copiar el Contenido y otros rubros descargables que se despliegan en los Servicios únicamente para su uso personal, en el entendido de que usted incluirá todos los avisos de derechos de autor y otras advertencias contenidas en los mismos. Queda expresamente prohibido copiar o almacenar cualquier Contenido con otro fin que no sea su uso personal sin previa autorización por escrito del Departamento de Derechos y Permisos de The New York Times o el titular de los derechos de autor identificado en el aviso de derecho de autor incluido en el Contenido.</p>
+<p class="story-body-text story-content" data-para-count="347" data-total-count="4295" id="story-continues-13" tabindex="-1">2.4 El Contenido de los Servicios es propiedad o cuenta con licencia a favor de NYT. Associated Press y Reuters proporcionan ciertos Contenidos y no serán responsables por ningún retraso, imprecisión, error u omisión en dicho Contenido, ni en la transmisión o entrega de todo o parte del mismo, ni por los daños que pudiesen surgir por ello.</p>
+<hr />
+<p class="story-body-text story-content" data-para-count="103" data-total-count="4398" id="story-continues-14" tabindex="-1"><strong id="3.contenidogeneradoporelusuario:publicacionesincluyendocomentariosopinionesdellectorymás">3. CONTENIDO GENERADO POR EL USUARIO: PUBLICACIONES INCLUYENDO COMENTARIOS, OPINIONES DEL LECTOR Y MÁS</strong></p>
+<p class="story-body-text story-content" data-para-count="187" data-total-count="4585" id="story-continues-15" tabindex="-1">3.1 Usted no cargará ni distribuirá ni publicará de otra manera en los Servicios ningún material injurioso, difamatorio, obsceno, pornográfico, abusivo o ilegal de alguna otra forma.</p>
+<p class="story-body-text story-content" data-para-count="234" data-total-count="4819" id="story-continues-16" tabindex="-1">Sea cortés. Usted acuerda que no amenazará ni será abusivo verbalmente con ningún otro Miembro, no utilizará lenguaje difamatorio ni perturbará discusiones de manera deliberada con mensajes repetitivos, sin sentido o “spam”.</p>
+<p class="story-body-text story-content" data-para-count="465" data-total-count="5284" id="story-continues-17" tabindex="-1">Utilice lenguaje respetuoso. Como en cualquier comunidad, la conversación en línea florece sólo cuando los Miembros se sienten seguros y bienvenidos. Usted acuerda que no utilizará lenguaje que abuse o discrimine por motivos de raza, religión, nacionalidad, género, preferencia sexual, edad, región, discapacidad, etc. El discurso de odio de cualquier tipo es fundamento para la suspensión inmediata y permanente del acceso a todos o parte de los Servicios.</p>
+<p class="story-body-text story-content" data-para-count="403" data-total-count="5687" id="story-continues-18" tabindex="-1">Debata, pero no ataque. En una comunidad llena de opiniones y preferencias, la gente siempre está en desacuerdo. NYT fomenta las discusiones activas y acoge el debate acalorado en los Servicios, pero los ataques personales son una violación directa a estos Términos y Condiciones del Servicio y son el fundamento para la suspensión inmediata y permanente del acceso a todos o parte de los Servicios.</p>
+<p class="story-body-text story-content" data-para-count="264" data-total-count="5951" id="story-continues-19" tabindex="-1">3.2 Los Servicios se utilizarán únicamente de manera no comercial. Usted no distribuirá ni publicará en ninguna otra forma ningún material que contenga alguna petición de fondos, publicidad u ofrecimiento de bienes o servicios sin aprobación expresa de NYT.</p>
+<p class="story-body-text story-content" data-para-count="827" data-total-count="6778" id="story-continues-20" tabindex="-1">3.3 Usted reconoce que cualquier publicación que usted haga en los Servicios (es decir, contenido generado por el usuario, incluyendo de manera enunciativa, más no limitativa: comentarios, mensajes en foros, reseñas, textos, videos, audio, fotografías, así como códigos y aplicaciones informáticos) (cada uno de ellos, una “Publicación”) podrá ser editada, eliminada, modificada, publicada, transmitida o desplegada por The New York Times Company y usted renuncia a cualquier derecho que usted pudiese tener por el hecho de que tal material haya sido alterado o cambiado de una manera que no le resulte aceptable. Las publicaciones hechas en los Servicios también podrán incluirse en nuestros avisos de actualizaciones de páginas web, API y ponerse a disposición para volver a ser publicadas en otros formatos.</p>
+<p class="story-body-text story-content" data-para-count="872" data-total-count="7650" id="story-continues-21" tabindex="-1">3.4 Usted concede a NYT una licencia por tiempo indefinido, no exclusiva, a nivel mundial, sin regalías y sujeta a sublicencia sobre todas las Publicaciones, lo cual incluye, sin límite, el derecho de que NYT o cualquier tercero que designe, pueda utilizar, copiar, transmitir, resumir, publicar, distribuir, desplegar de manera pública, ejecutar en público, crear obras derivadas, albergue, liste, almacene, etiquete, codifique, modifique y adapte (incluyendo, entre otros, el derecho de adaptar para tecnologías de transferencia continua, descarga, transmisión, móviles, digitales, miniatura, escaneo o de otro tipo) en cualquier forma o medio conocido ahora o desarrollado en el futuro, cualquier Publicación que usted haga en los Servicios o cualquier otro sitio web propiedad de NYT, incluyendo cualquier Publicación en los Servicios a través de un tercero.</p>
+<p class="story-body-text story-content" data-para-count="452" data-total-count="8102" id="story-continues-22" tabindex="-1">3.5 Usted es el único responsable del contenido de sus Publicaciones. Sin embargo, como NYT no revisa y no puede revisar cada Publicación y no es responsable del contenido de tales mensajes, NYT se reserva el derecho de eliminar, mover o editar las Publicaciones que, a su entera discrecionalidad, considere abusivas, difamatorias, obscenas, que violen las leyes de derechos de autor o marcas registradas o que de alguna otra forma sean inadmisibles.</p>
+<p class="story-body-text story-content" data-para-count="159" data-total-count="8261" id="story-continues-23" tabindex="-1">3.6 Al hacer una Publicación, usted consiente su despliegue y publicación en el Sitio y en los Servicios y para usos promocionales en línea y sin conexión.</p>
+<p class="story-body-text story-content" data-para-count="219" data-total-count="8480" id="story-continues-24" tabindex="-1">3.7 No será posible que alguien involucrado o afiliado a la producción de una obra reseñada por NYTimes.com o en alguna otra parte de los Servicios publique una Reseña de Lector de tal obra o las obras competidoras.</p>
+<hr />
+<p class="story-body-text story-content" data-para-count="55" data-total-count="8535" id="story-continues-25" tabindex="-1"><strong id="4.accesoydisponibilidaddelosserviciosyvínculos">4. ACCESO Y DISPONIBILIDAD DE LOS SERVICIOS Y VÍNCULOS</strong></p>
+<p class="story-body-text story-content" data-para-count="321" data-total-count="8856" id="story-continues-26" tabindex="-1"><span style="font-weight: 400;">4.1 Los Servicios contienen vínculos a otros sitios relacionados de internet, recursos y publicistas. Como no somos responsables de la disponibilidad de tales recursos externos o sus contenidos, usted deberá enviar sus preguntas respecto a cualquier vínculo externo al administrador del sitio o webmaster de tal sitio.</span></p>
+<hr />
+<p class="story-body-text story-content" data-para-count="29" data-total-count="8885" id="story-continues-27" tabindex="-1"><strong id="5.declaracionesygarantías">5. DECLARACIONES Y GARANTÍAS</strong></p>
+<p class="story-body-text story-content" data-para-count="1321" data-total-count="10206" id="story-continues-28" tabindex="-1">5.1 Usted declara, garantiza y acuerda que (a) ningún material de ningún tipo publicado a través de su cuenta (i) violará, plagiará ni infringirá los derechos de ningún tercero, incluyendo los derechos de autor, marca registrada, privacidad u otros derechos personales o de propiedad; ni (ii) contendrá material difamatorio ni que sea ilegal de otra manera; y (b) tiene al menos trece años de edad. En este acto, usted acuerda que indemnizará, defenderá y sacará en paz y a salvo a NYT y todos sus funcionarios, consejeros, propietarios, representantes, proveedores de información, filiales, licenciantes y licenciatarios (de manera colectiva, las “Partes Indemnizadas”) por todas y cada una de las responsabilidades y costos, incluyendo, entre otros, los honorarios razonables de abogados, incurridos por las Partes Indemnizadas en relación con cualquier reclamo que surja por algún incumplimiento de su parte o de cualquier usuario de su cuente a los presentes Términos y Condiciones del Servicio o las anteriores declaraciones, garantías y acuerdos. Usted cooperará en la medida requerida en forma razonable en la defensa de tal reclamo. NYT se reserva el derecho, a su propia costa y gasto, de asumir la defensa exclusiva y control de cualquier asunto sujeto a indemnización por parte de usted.</p>
+<p class="story-body-text story-content" data-para-count="833" data-total-count="11039" id="story-continues-29" tabindex="-1">5.2 NYT no avala ni hace ninguna manifestación con respecto a la precisión o confiabilidad de ningún anuncio, opinión, declaración u otra información desplegada, cargada o distribuida a través de los Servicios por cualquier usuario, proveedor de información o cualquier otra persona física o moral. Usted reconoce que será bajo su propio riesgo si usted depende de alguna de estas opiniones, avisos, declaraciones, memoranda o informaciones. LOS SERVICIOS Y TODO SOFTWARE DESCARGABLE SE DISTRIBUYEN EN LA CONDICIÓN “COMO SE ENCUENTRAN”, SIN GARANTÍAS DE NINGÚN TIPO, YA SEAN EXPRESAS O IMPLÍCITAS, INCLUYENDO, ENTRE OTRAS, GARANTÍAS DE TÍTULO O GARANTÍAS IMPLÍCITAS DE COMERCIABILIDAD O ADECUACIÓN PARA UN FIN EN ESPECÍFICO. POR ESTE MEDIO, USTED RECONOCE QUE EL USO DE LOS SERVICIOS ES BAJO SU PROPIO RIESGO.</p>
+<hr />
+<p class="story-body-text story-content" data-para-count="23" data-total-count="11062" id="story-continues-30" tabindex="-1"><strong id="6.registroyseguridad">6. REGISTRO Y SEGURIDAD</strong></p>
+<p class="story-body-text story-content" data-para-count="1257" data-total-count="12319" id="story-continues-31" tabindex="-1">6.1 Como parte del proceso de registro o de creación de cuenta, usted creará una identificación eligiendo una contraseña y proporcionando una dirección de correo electrónico. Usted también nos dará cierta información de registro, la cual debe ser precisa y estar actualizada.<br />Cada registro es para un solo usuario. Usted no tiene permitido compartir su identificación de registro ni proporcionarlas a nadie más. Nosotros podremos cancelar o suspender su acceso a los Servicios de NYT si usted comparte su identificación de registro. Es su responsabilidad mantener la confidencialidad de su contraseña, la cual no deberá revelar a ningún representante o agente de NYT. Usted no podrá (i) elegir ni utilizar las identificaciones de registro de otra persona con la intención de suplantar a tal persona; (ii) utilizar una identificación de registro con la que otra persona tenga derechos sin la autorización de dicha persona, ni (iii) utilizar la identificación de registro que nosotros, a nuestra entera discrecionalidad, consideremos ofensivas. El incumplimiento con lo anterior constituirá una violación de los presentes Términos y Condiciones del Servicio, lo cual podrá ocasionar la suspensión o terminación inmediata de su cuenta.</p>
+<p class="story-body-text story-content" data-para-count="315" data-total-count="12634" id="story-continues-32" tabindex="-1">6.2 Sírvase avisar a help@nytimes.com en caso de que tenga conocimiento o sospeche de cualquier uso no autorizado de su cuenta o que tenga conocimiento o sospeche de alguna violación a la seguridad, incluyendo pérdida, robo o divulgación no autorizada de su contraseña o información de su tarjeta de crédito.</p>
+<p class="story-body-text story-content" data-para-count="98" data-total-count="12732" id="story-continues-33" tabindex="-1">6.3 Usted debe tener 13 años de edad o más para suscribirse a todas las partes de los Servicios.</p>
+<p class="story-body-text story-content" data-para-count="429" data-total-count="13161" id="story-continues-34" tabindex="-1">6.4 Usted es responsable por el uso o actividad de su cuenta en NYTimes.com, incluyendo el uso de la cuenta por parte de terceros a quienes usted autorice utilizar su identificación de registro. Cualquier actividad fraudulenta, abusiva o ilegal de otra manera podrá ser el fundamento para la terminación de su cuenta, a nuestra entera discrecionalidad, y podremos remitirlo a la dependencia del orden público correspondiente.</p>
+<hr />
+<p class="story-body-text story-content" data-para-count="17" data-total-count="13178" id="story-continues-35" tabindex="-1"><strong id="7.cuotasypagos">7. CUOTAS Y PAGOS</strong></p>
+<p class="story-body-text story-content" data-para-count="1236" data-total-count="14414" id="story-continues-36" tabindex="-1">7.1. Nos reservamos el derecho de cobrar, en cualquier momento, cuotas de acceso a partes de los Servicios o a los Servicios en su conjunto. Sin embargo, bajo ninguna circunstancia se le cobrará el acceso a los Servicios salvo que obtengamos su previo consentimiento para pagar tales cargos. Así, si, en algún momento, requerimos una cuota por partes del Servicio que ahora son gratuitas, le notificaremos con anticipación con respecto a dichas cuotas. Usted podrá cancelar su cuenta en cualquier momento. Todas las cuotas nuevas, si las hubiese, se publicarán de manera notoria en el Sitio y en cualquier ubicación adecuada del Servicio. Usted pagará todas las cuotas y cargos incurridos a través de su cuenta según las tarifas en vigor para el período de facturación en el que haya incurrido en tales cuotas y cargos, incluyendo de manera enunciativa, más no limitativa, los cargos por cualquier producto o servicio digital ofrecido en venta a través de los Servicios por nosotros o cualquier otro vendedor o proveedor de servicio. Todas las cuotas y cargos se facturarán a su nombre y usted deberá pagarlos. Usted pagará todos los impuestos aplicables en relación con el uso de los Servicios a través de su cuenta.</p>
+<hr />
+<p class="story-body-text story-content" data-para-count="42" data-total-count="14456" id="story-continues-37" tabindex="-1"><strong id="8.comunicacionesentrenytysususuarios">8. COMUNICACIONES ENTRE NYT Y SUS USUARIOS</strong></p>
+<p class="story-body-text story-content" data-para-count="229" data-total-count="14685" id="story-continues-38" tabindex="-1">8.1 Nosotros, nuestros propietarios y cesionarios permitiremos que ciertos terceros proveedores le envíen información sobre sus productos y servicios si usted indica en su formato de registro que desea recibir tal información.</p>
+<p class="story-body-text story-content" data-para-count="125" data-total-count="14810" id="story-continues-39" tabindex="-1">8.2 NYT se reserva el derecho de enviarle correos electrónicos con el fin de informarle los cambios o adiciones al Servicio.</p>
+<p class="story-body-text story-content" data-para-count="447" data-total-count="15257" id="story-continues-40" tabindex="-1">8.3 NYT se reserve el derecho de divulgar información sobre su uso e información demográfica, en el entendido de que no revelará su identidad personal en relación con la divulgación de tal información. Los Anunciantes y/o Licenciatarios de nuestro sitio web podrán recabar y compartir información adicional sobre usted sólo si usted indica su aceptación para ello. Para mayor información, sírvase leer nuestra Política de Privacidad.</p>
+<p class="story-body-text story-content" data-para-count="443" data-total-count="15700" id="story-continues-41" tabindex="-1">8.4 NYT podrá ponerse en contacto con usted por medio de un correo electrónico con respecto a su participación en encuestas de usuario y pedirle alguna retroalimentación sobre los Servicios actuales o posibles productos y servicios. Esta información se utilizará para mejorar los Servicios y entender mejor a nuestros usuarios, y no compartiremos ninguna información que obtengamos en tales encuestas con terceros, salgo en su conjunto.</p>
+<hr />
+<p class="story-body-text story-content" data-para-count="24" data-total-count="15724" id="story-continues-42" tabindex="-1"><strong id="9.licenciasdesoftware">9. LICENCIAS DE SOFTWARE</strong></p>
+<p class="story-body-text story-content" data-para-count="645" data-total-count="16369" id="story-continues-43" tabindex="-1">9.1 Usted no tendrá derecho sobre el software registrado y la documentación relacionada ni ninguna de sus mejoras o modificaciones, que se le proporcionen con el fin de que usted tenga acceso a los Servicios (el “Software”). Usted no podrá otorgar sub-licencias, ceder ni transferir ninguna licencia otorgada por NYTimes.com, y cualquier intento de otorgar tal sub-licencia o realizar tal cesión o transferencia carecerá de toda validez. Usted podrá realizar una copia de tal software sólo para fines de archivo. Usted no podrá copiar, distribuir, modificar, revertir la ingeniería ni crear obras derivadas a partir de tal Software.</p>
+<hr />
+<p class="story-body-text story-content" data-para-count="16" data-total-count="16385" id="story-continues-44" tabindex="-1"><strong id="10.terminación">10. TERMINACIÓN</strong></p>
+<p class="story-body-text story-content" data-para-count="525" data-total-count="16910" id="story-continues-45" tabindex="-1">10.1 Usted podrá terminar su cuenta en cualquier momento llamando a Servicio al Cliente al (800) 5919233. Para clientes internacionales, envíenos un correo electrónico a help@nytimes.com. Al momento de la terminación, usted recibirá un correo electrónico de confirmación automatizada respecto al procesamiento de su cancelación, y su acceso quedará suspendido en un lapso de 24 horas. La terminación de productos digitales pagados se regirá por nuestra Política de Cancelación y Reembolso de Productos Digitales.</p>
+<p class="story-body-text story-content" data-para-count="234" data-total-count="17144" id="story-continues-46" tabindex="-1">10.2 NYT podrá, a su entera discrecionalidad, terminar o suspender su acceso a todos o parte de los Servicios por cualquier motivo, incluyendo, entre otros, violación o cesión del los presentes Términos y Condiciones del Servicio.</p>
+<hr />
+<p class="story-body-text story-content" data-para-count="13" data-total-count="17157" id="story-continues-47" tabindex="-1"><strong id="11.generales">11. GENERALES</strong></p>
+<p class="story-body-text story-content" data-para-count="345" data-total-count="17502" id="story-continues-48" tabindex="-1">11.1 Los presentes Términos y Condiciones del Servicio se han redactado y se interpretarán y ejecutarán de conformidad con las leyes de Nueva York. Cualquier procedimiento para exigir la ejecución de los presentes Términos y Condiciones del Servicio se entablará en los tribunales estatales y federales con sede en la ciudad de Nueva York.</p>
+<p class="story-body-text story-content" data-para-count="222" data-total-count="17724" id="story-continues-49" tabindex="-1">11.2 Independientemente de lo anterior, nada de lo contenido en los presentes Términos y Condiciones del Servicio se utilizará para dar prioridad a las promesas hechas en la Política de Privacidad de The New York Times.</p>
+<p class="story-body-text story-content" data-para-count="60" data-total-count="17784" id="story-continues-50" tabindex="-1">11.3 La correspondencia deberá enviarse a help@nytimes.com.</p>
+<p class="story-body-text story-content" data-para-count="476" data-total-count="18260" id="story-continues-51" tabindex="-1">11.4 Usted está de acuerdo en informar a The New York Times sobre cualquier violación a los derechos de autor de los Términos y Condiciones del Servicio a la brevedad posible de que tenga conocimiento al respecto. En caso de que usted tenga algún reclamo por violación de derechos de autor con respecto al material contenido en el servicio de NYTimes.com, sírvase notificarlo a copyrights@nytimes.com (Por favor, envíe todas sus preguntas generales a help@nytimes.com).</p>
+
+	</div>
+</article>
+
+			</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+    require(['page/main']);
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":490,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

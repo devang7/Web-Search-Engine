@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000003630351"/>
+<meta name="hdl" content="Un trabajo tan duro como las uñas" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20150507" />
+<meta name="utime" content="20150507104131" />
+<meta name="ptime" content="20150507104131" />
+<meta name="DISPLAYDATE" content="May. 7, 2015" />
+<meta name="dat" content="May. 7, 2015" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="un-trabajo-tan-duro-como-las-unas" />
+<meta property="og:url" content="https://www.nytimes.com/es/2015/05/07/un-trabajo-tan-duro-como-las-unas/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Un trabajo tan duro como las uñas" />
+<meta property="og:description" content="Las manicuristas en Nueva York son explotadas, sufren discriminación étnica y otros abusos, descubrió una investigación de The New York Times." />
+<meta property="og:image" content="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb1-copy-ES/10nailsweb1-copy-ES-videoSixteenByNine768-v2.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2015-05-07" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2015/05/07/un-trabajo-tan-duro-como-las-unas/" />
+<meta property="twitter:title" content="Un trabajo tan duro como las uñas" />
+<meta property="twitter:description" content="Las manicuristas en Nueva York son explotadas, sufren discriminación étnica y otros abusos, descubrió una investigación de The New York Times." />
+<meta name="author" content="Sarah Maslin Nir" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Sarah Maslin Nir" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="estados-unidos" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="estados-unidos" />
+<meta name="id" content="100000003630351"/>
+<meta name="wordCount" content="7428"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2015/05/07/un-trabajo-tan-duro-como-las-unas/">
+<meta name="nyt-collection:uri" content="year=2015&amp;monthnum=05&amp;day=07&amp;name=un-trabajo-tan-duro-como-las-unas">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=2211">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2015\/05\/07\/un-trabajo-tan-duro-como-las-unas\/"},"headline":"Un trabajo tan duro como las u\u00f1as","datePublished":"2015-05-07T10:41:31+00:00","dateModified":"2016-04-21T19:23:21+00:00","author":{"@type":"Person","name":"veronica"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2015\/04\/30\/nyregion\/10nailsweb1-copy-ES\/10nailsweb1-copy-ES-videoSixteenByNine768-v2.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Las manicuristas en Nueva York son explotadas, sufren discriminaci\u00f3n \u00e9tnica y otros abusos, descubri\u00f3 una investigaci\u00f3n de The New York Times."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2015/05/07/un-trabajo-tan-duro-como-las-unas/" hreflang="es" />
+<meta name="dfp-ad-unit-path" content="noticias/estadosunidos" />
+<title>Un trabajo tan duro como las uñas &#8211; Español</title>
+<link rel="canonical" href="" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2015/05/07/un-trabajo-tan-duro-como-las-unas/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-2211 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Un trabajo tan duro como las uñas
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2015/05/07/un-trabajo-tan-duro-como-las-unas/"
+					data-title="Noticias: Un trabajo tan duro como las uñas"
+					data-author="POR SARAH MASLIN NIR"
+					data-media=""
+					data-description="Las manicuristas en Nueva York son explotadas, sufren discriminación étnica y otros abusos, descubrió una investigación de The New York Times."
+					data-publish-date="7 de mayo de 2015"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/1SxLfCt">http://nyti.ms/1SxLfCt</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/estados-unidos/">Estados Unidos</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Un trabajo tan duro como las uñas</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Sarah Maslin Nir</span>
+</span>
+
+					<time class="dateline" datetime="2015-05-07">7 de mayo de 2015</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2015/05/07/un-trabajo-tan-duro-como-las-unas/"
+							data-title="Noticias: Un trabajo tan duro como las uñas"
+							data-author="POR SARAH MASLIN NIR"
+							data-media=""
+							data-description="Las manicuristas en Nueva York son explotadas, sufren discriminación étnica y otros abusos, descubrió una investigación de The New York Times."
+							data-publish-date="7 de mayo de 2015"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000003669319" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb1-copy-ES/10nailsweb1-copy-ES-master1050-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb1-copy-ES/10nailsweb1-copy-ES-master1050-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb1-copy-ES/10nailsweb1-copy-ES-superJumbo-v2.jpg" data-mediaviewer-caption="En West 14th Street en Manhattan, una clienta recibe un masaje de cuello mientras espera a que se sequen sus uñas." data-mediaviewer-credit="Nicole Bengiveno para The New York Times
+"  itemprop="url" itemid="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb1-copy-ES/10nailsweb1-copy-ES-master1050-v2.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">En West 14th Street en Manhattan, una clienta recibe un masaje de cuello mientras espera a que se sequen sus uñas.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Nicole Bengiveno para The New York Times
+
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="318" data-total-count="318" id="story-continues-2" tabindex="-1">Todos los días las mujeres aparecen un poco antes de las 8:00, hasta que casi cada esquina de las calles principales de Flushing, en Queens, se llena de jóvenes asiáticas e hispanas. Como si obedecieran una orden, llega retumbando una procesión de maltrechas camionetas Ford Econoline que las trabajadoras abordan.</p>
+<p class="story-body-text story-content" data-para-count="287" data-total-count="605" id="story-continues-3" tabindex="-1">Es el comienzo de otro día de trabajo para una multitud de manicuristas en Nueva York que serán repartidas a toda prisa entre salones de uñas en tres estados. No regresarán hasta tarde en la noche, después de trabajar turnos de 10 a 12 horas, encorvadas sobre dedos de manos y pies.</p>
+<p class="story-body-text story-content" data-para-count="375" data-total-count="980" id="story-continues-4" tabindex="-1">Una mañana del pasado mayo, Jing Ren, una joven de 20 años, recién llegada de China, se paró entre las mujeres por primera vez, y la llevaron a trabajar en el salón de un centro comercial de Long Island. Tenía el cabello arreglado, las gafas ladeadas y se aferraba a la bolsa con comida y al paquete de utensilios que las manicuristas deben llevar de un trabajo a otro.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="435" data-total-count="1415" id="story-continues-5" tabindex="-1">En su bolsillo tenía un billete de 100 dólares cuidadosamente doblado para cubrir otro gasto, la cuota que el propietario del salón cobra a cada empleada nueva a cambio del trabajo. Muchas manicuristas principiantes de los salones del área de Nueva York aceptan el mismo trato: no hay salario y se subsiste, con exiguas propinas, hasta que el patrón decida que la candidata tiene la habilidad suficiente como para merecer un pago.</p>
+<p class="story-body-text story-content" data-para-count="85" data-total-count="1500" id="story-continues-6" tabindex="-1">Pasarían casi tres meses para que a Ren le pagaran un sueldo de 30 dólares diarios.</p>
+<p class="story-body-text story-content" data-para-count="417" data-total-count="1917" id="story-continues-7" tabindex="-1">Antes era un lujo reservado para ocasiones especiales, ahora los salones de manicura se han convertido en un elemento básico del arreglo personal de las mujeres de todos los estratos económicos. Actualmente existen más de 17.000 salones de uñas en Estados Unidos, según datos del censo. Tan solo en Nueva York, el número se ha triplicado en el transcurso de 15 años y en 2012 había casi 2000 establecimientos.</p>
+<p class="story-body-text story-content" data-para-count="366" data-total-count="2283" id="story-continues-8" tabindex="-1">Pero la explotación de las mujeres que laboran en esta industria es ignorada casi por completo. Durante más de un año, The New York Times entrevistó a más de 150 trabajadoras y propietarios de salones de uñas en cuatro idiomas y descubrió que a la gran mayoría de las trabajadoras se les paga menos del salario mínimo. En ocasiones, ni siquiera se les paga.</p>
+
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-10">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+			<h2 class="interactive-headline">La capital de la manicura</h2>
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			<!--
+
+======================================================
+
+THIS IS A GENERATED TEMPLATE FILE. DO NOT EDIT.
+
+======================================================
+
+-->
+<div id='g-salons1-box' class='ai2html'>
+	<!-- Generated by ai2html v0.52 - 2015-05-07 - 13:52 -->
+	<!-- ai file: salons1 -->
+	<!-- preview: 2015-05-05-nail-salon-graphics -->
+	<!-- scoop  : salons-graphic-3-korean -->
+
+	<style type='text/css' media='screen,print'>
+		.g-artboard {
+			margin:0 auto;
+		}
+	</style>
+
+
+	<!-- Artboard: artboard-600 -->
+	<div id='g-salons1-artboard-600' class='g-artboard g-show-submedium g-show-medium g-show-large g-show-xlarge'>
+		<style type='text/css' media='screen,print'>
+			#g-salons1-artboard-600{
+				position:relative;
+				overflow:hidden;
+				width:600px;
+			}
+			.g-aiAbs{
+				position:absolute;
+			}
+			.g-aiImg{
+				display:block;
+				width:100% !important;
+			}
+			#g-salons1-artboard-600 p{
+				font-family:nyt-franklin,arial,helvetica,sans-serif;
+				font-size:13px;
+				line-height:18px;
+				margin:0;
+			}
+			#g-salons1-artboard-600 .g-aiPstyle0 {
+				font-size:12px;
+				line-height:12px;
+				font-weight:300;
+				text-align:right;
+				color:#000000;
+			}
+			#g-salons1-artboard-600 .g-aiPstyle1 {
+				font-size:12px;
+				line-height:12px;
+				font-weight:300;
+				color:#000000;
+			}
+			#g-salons1-artboard-600 .g-aiPstyle2 {
+				font-size:10px;
+				line-height:12px;
+				font-weight:500;
+				text-align:center;
+				letter-spacing:0.10416666666667em;
+				color:#000000;
+			}
+			#g-salons1-artboard-600 .g-aiPstyle3 {
+				font-size:12px;
+				line-height:13px;
+				font-weight:500;
+				text-align:center;
+				color:#000000;
+			}
+			#g-salons1-artboard-600 .g-aiPstyle4 {
+				font-size:12px;
+				line-height:12px;
+				font-weight:500;
+				text-transform:uppercase;
+				text-align:center;
+				color:#000000;
+			}
+			#g-salons1-artboard-600 .g-aiPstyle5 {
+				font-size:15px;
+				line-height:10px;
+				font-weight:700;
+				text-align:center;
+				color:#000000;
+			}
+		</style>
+		<div id='g-salons1-artboard-600-graphic'>
+			<img id='g-ai0-0'
+				class='g-aiImg'
+				src='data:image/gif;base64,R0lGODlhCgAKAIAAAB8fHwAAACH5BAEAAAAALAAAAAAKAAoAAAIIhI+py+0PYysAOw=='
+				data-src='https://static01.nyt.com/newsgraphics/2015/05/05/nail-salon-graphics/4a000864ca9501bd9e55d22ffa6fafe38bddf8e6/salons1-artboard-600.png'
+				data-height-multiplier='1.0789'
+				/>
+			<div id='g-ai0-1' class='g-New_York g-aiAbs' style='top:4.0165%;right:56.8241%;'>
+				<p class='g-aiPstyle0'>Huntington</p>
+			</div>
+			<div id='g-ai0-2' class='g-chicago g-aiAbs' style='top:6.4882%;left:65.6751%;'>
+				<p class='g-aiPstyle1'>Buffalo Grove</p>
+			</div>
+			<div id='g-ai0-3' class='g-chicago g-aiAbs' style='top:11.5860%;left:83.2848%;'>
+				<p class='g-aiPstyle1'>Winnetka</p>
+			</div>
+			<div id='g-ai0-4' class='g-New_York g-aiAbs' style='top:11.7405%;right:58.1983%;'>
+				<p class='g-aiPstyle0'>Hicksville</p>
+			</div>
+			<div id='g-ai0-5' class='g-New_York g-aiAbs' style='top:12.2039%;right:67.4519%;'>
+				<p class='g-aiPstyle0'>Flushing</p>
+			</div>
+			<div id='g-ai0-6' class='g-chicago g-aiAbs' style='top:12.6674%;left:61.7254%;width:14.8652%;margin-left:-7.4326%;'>
+				<p class='g-aiPstyle2'>COOK</p>
+				<p class='g-aiPstyle2'>COUNTY</p>
+			</div>
+			<div id='g-ai0-7' class='g-New_York g-aiAbs' style='top:19.4645%;left:14.5652%;width:22.2313%;margin-left:-11.1156%;'>
+				<p class='g-aiPstyle2'>MANHATTAN</p>
+			</div>
+			<div id='g-ai0-8' class='g-chicago g-aiAbs' style='top:24.5623%;left:88.5073%;'>
+				<p class='g-aiPstyle1'>Lincoln Park</p>
+			</div>
+			<div id='g-ai0-9' class='g-New_York g-aiAbs' style='top:27.3429%;right:88.3553%;'>
+				<p class='g-aiPstyle0'>Union</p>
+			</div>
+			<div id='g-ai0-10' class='g-New_York g-aiAbs' style='top:31.2049%;right:65.1158%;'>
+				<p class='g-aiPstyle0'>Ridgewood</p>
+			</div>
+			<div id='g-ai0-11' class='g-New_York g-aiAbs' style='top:34.6035%;right:71.1875%;'>
+				<p class='g-aiPstyle0'>Sheepshead</p>
+				<p class='g-aiPstyle0'>Bay</p>
+			</div>
+			<div id='g-ai0-12' class='g-New_York g-aiAbs' style='top:34.7580%;left:39.5978%;width:12.1667%;margin-left:-6.0833%;'>
+				<p class='g-aiPstyle3'>Salones por código postal</p>
+			</div>
+			<div id='g-ai0-13' class='g-chicago g-aiAbs' style='top:34.7580%;left:61.2296%;width:14.8652%;margin-left:-7.4326%;'>
+				<p class='g-aiPstyle2'>DUPAGE</p>
+				<p class='g-aiPstyle2'>COUNTY</p>
+			</div>
+			<div id='g-ai0-14' class='g-chicago g-aiAbs' style='top:36.6117%;left:71.7269%;'>
+				<p class='g-aiPstyle1'>Hinsdale</p>
+			</div>
+			<div id='g-ai0-15' class='g-New_York g-aiAbs' style='top:42.1730%;left:36.4009%;width:4.5599%;margin-left:-2.2799%;'>
+				<p class='g-aiPstyle4'>50</p>
+			</div>
+			<div id='g-ai0-16' class='g-New_York g-aiAbs' style='top:42.1730%;left:39.7348%;width:4.5599%;margin-left:-2.2799%;'>
+				<p class='g-aiPstyle4'>20</p>
+			</div>
+			<div id='g-ai0-17' class='g-New_York g-aiAbs' style='top:42.1730%;left:43.0411%;width:2.2799%;margin-left:-1.1400%;'>
+				<p class='g-aiPstyle4'>5</p>
+			</div>
+			<div id='g-ai0-18' class='g-Layer_14 g-aiAbs' style='top:46.0350%;left:76.5973%;width:40.2995%;margin-left:-20.1497%;'>
+				<p class='g-aiPstyle5'>Chicago</p>
+			</div>
+			<div id='g-ai0-19' class='g-Layer_14 g-aiAbs' style='top:46.1895%;left:22.5573%;width:40.2995%;margin-left:-20.1497%;'>
+				<p class='g-aiPstyle5'>Nueva York</p>
+			</div>
+			<div id='g-ai0-20' class='g-Los_Angeles g-aiAbs' style='top:56.6941%;left:38.9809%;width:25.0529%;margin-left:-12.5264%;'>
+				<p class='g-aiPstyle2'>LOS ANGELES</p>
+				<p class='g-aiPstyle2'>COUNTY</p>
+			</div>
+			<div id='g-ai0-21' class='g-Los_Angeles g-aiAbs' style='top:63.8002%;left:39.1798%;'>
+				<p class='g-aiPstyle1'>Pasadena</p>
+			</div>
+			<div id='g-ai0-22' class='g-Boston g-aiAbs' style='top:67.6622%;right:12.7821%;'>
+				<p class='g-aiPstyle0'>Revere</p>
+			</div>
+			<div id='g-ai0-23' class='g-Los_Angeles g-aiAbs' style='top:68.8980%;left:1.3274%;'>
+				<p class='g-aiPstyle1'>Ventura Boulevard</p>
+			</div>
+			<div id='g-ai0-24' class='g-Boston g-aiAbs' style='top:71.9876%;right:4.3645%;'>
+				<p class='g-aiPstyle0'>Back Bay</p>
+			</div>
+			<div id='g-ai0-25' class='g-Boston g-aiAbs' style='top:71.8332%;left:62.3884%;width:21.1468%;margin-left:-10.5734%;'>
+				<p class='g-aiPstyle2'>MIDDLESEX</p>
+				<p class='g-aiPstyle2'>COUNTY</p>
+			</div>
+			<div id='g-ai0-26' class='g-Los_Angeles g-aiAbs' style='top:73.6869%;left:2.7177%;'>
+				<p class='g-aiPstyle1'>Beverly Hills</p>
+			</div>
+			<div id='g-ai0-27' class='g-Boston g-aiAbs' style='top:82.9557%;right:27.4632%;'>
+				<p class='g-aiPstyle0'>Dorchester</p>
+				<p class='g-aiPstyle0'>Center</p>
+			</div>
+			<div id='g-ai0-28' class='g-Los_Angeles g-aiAbs' style='top:86.9722%;left:26.4922%;'>
+				<p class='g-aiPstyle1'>Lakewood</p>
+			</div>
+			<div id='g-ai0-29' class='g-Boston g-aiAbs' style='top:89.5984%;left:74.0469%;width:17.2197%;margin-left:-8.6099%;'>
+				<p class='g-aiPstyle2'>NORFOLK</p>
+				<p class='g-aiPstyle2'>COUNTY</p>
+			</div>
+			<div id='g-ai0-30' class='g-Layer_14 g-aiAbs' style='top:97.0134%;left:75.0784%;width:40.2995%;margin-left:-20.1497%;'>
+				<p class='g-aiPstyle5'>Boston</p>
+			</div>
+			<div id='g-ai0-31' class='g-Layer_14 g-aiAbs' style='top:97.0134%;left:23.4874%;width:40.2995%;margin-left:-20.1497%;'>
+				<p class='g-aiPstyle5'>Los Angeles</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Artboard: artboard-300 -->
+	<div id='g-salons1-artboard-300' class='g-artboard g-show-small g-show-smallplus'>
+		<style type='text/css' media='screen,print'>
+			#g-salons1-artboard-300{
+				position:relative;
+				overflow:hidden;
+				width:300px;
+			}
+			.g-aiAbs{
+				position:absolute;
+			}
+			.g-aiImg{
+				display:block;
+				width:100% !important;
+			}
+			#g-salons1-artboard-300 p{
+				font-family:nyt-franklin,arial,helvetica,sans-serif;
+				font-size:13px;
+				line-height:18px;
+				margin:0;
+			}
+			#g-salons1-artboard-300 .g-aiPstyle0 {
+				font-size:12px;
+				line-height:12px;
+				font-weight:300;
+				text-align:right;
+				color:#000000;
+			}
+			#g-salons1-artboard-300 .g-aiPstyle1 {
+				font-size:10px;
+				line-height:12px;
+				font-weight:500;
+				text-align:center;
+				letter-spacing:0.10416666666667em;
+				color:#000000;
+			}
+			#g-salons1-artboard-300 .g-aiPstyle2 {
+				font-size:12px;
+				line-height:14px;
+				font-weight:500;
+				text-align:center;
+				color:#000000;
+			}
+			#g-salons1-artboard-300 .g-aiPstyle3 {
+				font-size:12px;
+				line-height:12px;
+				font-weight:500;
+				text-transform:uppercase;
+				text-align:center;
+				color:#000000;
+			}
+			#g-salons1-artboard-300 .g-aiPstyle4 {
+				font-size:15px;
+				line-height:10px;
+				font-weight:700;
+				text-align:center;
+				color:#000000;
+			}
+			#g-salons1-artboard-300 .g-aiPstyle5 {
+				font-size:9px;
+				line-height:12px;
+				font-weight:500;
+				text-align:center;
+				letter-spacing:0.10416666666667em;
+				color:#000000;
+			}
+			#g-salons1-artboard-300 .g-aiPstyle6 {
+				font-size:12px;
+				line-height:12px;
+				font-weight:300;
+				color:#000000;
+			}
+		</style>
+		<div id='g-salons1-artboard-300-graphic'>
+			<img id='g-ai1-0'
+				class='g-aiImg'
+				src='data:image/gif;base64,R0lGODlhCgAKAIAAAB8fHwAAACH5BAEAAAAALAAAAAAKAAoAAAIIhI+py+0PYysAOw=='
+				data-src='https://static01.nyt.com/newsgraphics/2015/05/05/nail-salon-graphics/4a000864ca9501bd9e55d22ffa6fafe38bddf8e6/salons1-artboard-300.png'
+				data-height-multiplier='4.5478'
+				/>
+			<div id='g-ai1-1' class='g-New_York_copy g-aiAbs' style='top:2.0523%;right:10.2709%;'>
+				<p class='g-aiPstyle0'>Huntington</p>
+			</div>
+			<div id='g-ai1-2' class='g-New_York_copy g-aiAbs' style='top:5.7904%;right:13.1423%;'>
+				<p class='g-aiPstyle0'>Hicksville</p>
+			</div>
+			<div id='g-ai1-3' class='g-New_York_copy g-aiAbs' style='top:6.0836%;right:32.4857%;'>
+				<p class='g-aiPstyle0'>Flushing</p>
+			</div>
+			<div id='g-ai1-4' class='g-New_York_copy g-aiAbs' style='top:9.6751%;left:29.9151%;width:44.4629%;margin-left:-22.2314%;'>
+				<p class='g-aiPstyle1'>MANHATTAN</p>
+			</div>
+			<div id='g-ai1-5' class='g-New_York_copy g-aiAbs' style='top:13.5597%;right:76.1797%;'>
+				<p class='g-aiPstyle0'>Union</p>
+			</div>
+			<div id='g-ai1-6' class='g-New_York_copy g-aiAbs' style='top:15.5387%;right:27.6016%;'>
+				<p class='g-aiPstyle0'>Ridgewood</p>
+			</div>
+			<div id='g-ai1-7' class='g-New_York_copy g-aiAbs' style='top:17.1512%;right:40.2943%;'>
+				<p class='g-aiPstyle0'>Sheepshead</p>
+				<p class='g-aiPstyle0'>Bay</p>
+			</div>
+			<div id='g-ai1-8' class='g-New_York_copy g-aiAbs' style='top:17.3711%;left:82.2500%;width:22.3670%;margin-left:-11.1835%;'>
+				<p class='g-aiPstyle2'>Salones por código postal</p>
+			</div>
+			<div id='g-ai1-9' class='g-New_York_copy g-aiAbs' style='top:20.8893%;left:75.5676%;width:9.1198%;margin-left:-4.5599%;'>
+				<p class='g-aiPstyle3'>50</p>
+			</div>
+			<div id='g-ai1-10' class='g-New_York_copy g-aiAbs' style='top:20.8893%;left:82.5367%;width:9.1198%;margin-left:-4.5599%;'>
+				<p class='g-aiPstyle3'>20</p>
+			</div>
+			<div id='g-ai1-11' class='g-New_York_copy g-aiAbs' style='top:20.8893%;left:89.4475%;width:4.5599%;margin-left:-2.2799%;'>
+				<p class='g-aiPstyle3'>5</p>
+			</div>
+			<div id='g-ai1-12' class='g-Layer_14_copy g-aiAbs' style='top:22.8683%;left:46.6301%;width:80.5977%;margin-left:-40.2988%;'>
+				<p class='g-aiPstyle4'>Nueva York</p>
+			</div>
+			<div id='g-ai1-13' class='g-Los_Angeles_copy g-aiAbs' style='top:28.1456%;left:80.9340%;width:45.9395%;margin-left:-22.9697%;'>
+				<p class='g-aiPstyle5'>LOS ANGELES</p>
+				<p class='g-aiPstyle5'>COUNTY</p>
+			</div>
+			<div id='g-ai1-14' class='g-Los_Angeles_copy g-aiAbs' style='top:31.6638%;left:81.3766%;'>
+				<p class='g-aiPstyle6'>Pasadena</p>
+			</div>
+			<div id='g-ai1-15' class='g-Los_Angeles_copy g-aiAbs' style='top:34.2292%;left:2.2535%;'>
+				<p class='g-aiPstyle6'>Ventura Boulevard</p>
+			</div>
+			<div id='g-ai1-16' class='g-Los_Angeles_copy g-aiAbs' style='top:36.5746%;left:5.1598%;'>
+				<p class='g-aiPstyle6'>Beverly Hills</p>
+			</div>
+			<div id='g-ai1-17' class='g-Los_Angeles_copy g-aiAbs' style='top:43.1713%;left:54.8551%;'>
+				<p class='g-aiPstyle6'>Lakewood</p>
+			</div>
+			<div id='g-ai1-18' class='g-Layer_14_copy g-aiAbs' style='top:48.1554%;left:48.5742%;width:80.5977%;margin-left:-40.2988%;'>
+				<p class='g-aiPstyle4'>Los Angeles</p>
+			</div>
+			<div id='g-ai1-19' class='g-chicago_copy g-aiAbs' style='top:53.5793%;left:29.1093%;'>
+				<p class='g-aiPstyle6'>Buffalo Grove</p>
+			</div>
+			<div id='g-ai1-20' class='g-chicago_copy g-aiAbs' style='top:56.0713%;left:65.9189%;'>
+				<p class='g-aiPstyle6'>Winnetka</p>
+			</div>
+			<div id='g-ai1-21' class='g-chicago_copy g-aiAbs' style='top:56.5844%;left:20.8437%;width:29.7305%;margin-left:-14.8652%;'>
+				<p class='g-aiPstyle1'>COOK</p>
+				<p class='g-aiPstyle1'>COUNTY</p>
+			</div>
+			<div id='g-ai1-22' class='g-chicago_copy g-aiAbs' style='top:62.5947%;left:76.8356%;'>
+				<p class='g-aiPstyle6'>Lincoln Park</p>
+			</div>
+			<div id='g-ai1-23' class='g-chicago_copy g-aiAbs' style='top:67.5788%;left:19.8074%;width:29.7298%;margin-left:-14.8649%;'>
+				<p class='g-aiPstyle1'>DUPAGE</p>
+				<p class='g-aiPstyle1'>COUNTY</p>
+			</div>
+			<div id='g-ai1-24' class='g-chicago_copy g-aiAbs' style='top:68.5316%;left:41.7594%;'>
+				<p class='g-aiPstyle6'>Hinsdale</p>
+			</div>
+			<div id='g-ai1-25' class='g-Layer_14_copy g-aiAbs' style='top:73.1493%;left:52.2884%;width:80.5977%;margin-left:-40.2988%;'>
+				<p class='g-aiPstyle4'>Chicago</p>
+			</div>
+			<div id='g-ai1-26' class='g-Boston_copy g-aiAbs' style='top:83.9238%;right:25.8598%;'>
+				<p class='g-aiPstyle0'>Revere</p>
+			</div>
+			<div id='g-ai1-27' class='g-Boston_copy g-aiAbs' style='top:86.0494%;right:8.2644%;'>
+				<p class='g-aiPstyle0'>Back Bay</p>
+			</div>
+			<div id='g-ai1-28' class='g-Boston_copy g-aiAbs' style='top:86.0494%;left:22.2296%;width:42.2936%;margin-left:-21.1468%;'>
+				<p class='g-aiPstyle1'>MIDDLESEX</p>
+				<p class='g-aiPstyle1'>COUNTY</p>
+			</div>
+			<div id='g-ai1-29' class='g-Boston_copy g-aiAbs' style='top:91.5465%;right:56.5476%;'>
+				<p class='g-aiPstyle0'>Dorchester</p>
+				<p class='g-aiPstyle0'>Center</p>
+			</div>
+			<div id='g-ai1-30' class='g-Boston_copy g-aiAbs' style='top:94.8449%;left:46.5994%;width:34.4395%;margin-left:-17.2197%;'>
+				<p class='g-aiPstyle1'>NORFOLK</p>
+				<p class='g-aiPstyle1'>COUNTY</p>
+			</div>
+			<div id='g-ai1-31' class='g-Layer_14_copy g-aiAbs' style='top:98.4364%;left:49.1132%;width:80.5977%;margin-left:-40.2988%;'>
+				<p class='g-aiPstyle4'>Boston</p>
+			</div>
+		</div>
+	</div>
+
+
+	<script>_gaq = [['_setAccount', 'UA-9262032-1'], ['_trackPageview']];</script>
+	<script async src='http://www.google-analytics.com/ga.js'></script>
+	<!-- End ai2html - 2015-05-07 - 13:52 -->
+</div>
+
+<script>require(['foundation/main'], function() { require(["https://static01.nyt.com/newsgraphics/2015/05/05/nail-salon-graphics/4a000864ca9501bd9e55d22ffa6fafe38bddf8e6/build.js"]); });</script><!-- Pipeline: 2015-05-05-nail-salon-graphics | January 25, 2017, 07:09PM | 4a000864ca9501bd9e55d22ffa6fafe38bddf8e6 -->
+
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="264" data-total-count="2547" id="story-continues-10" tabindex="-1">Las manicuristas toleran todo tipo de humillaciones, como que se les castigue con descuentos de sus propinas por infracciones menores, la vigilancia constante por cámaras de video y diversos maltratos. Rara vez se hacen cumplir las leyes laborales y de otro tipo.</p>
+<p class="story-body-text story-content" data-para-count="427" data-total-count="2974" id="story-continues-11" tabindex="-1">En los periódicos de la comunidad asiática proliferan los anuncios clasificados que enumeran estos trabajos con una paga diaria tan baja, que a primera vista parece un error de imprenta. Los anuncios en chino en el Sing Tao Daily y World Journal del NYC Nail Spa, un salón ubicado en un segundo piso del Upper West Side de Manhattan, mencionan un sueldo inicial de 10 dólares diarios. Varias empleadas confirmaron el monto.</p>
+<p class="story-body-text story-content" data-para-count="536" data-total-count="3510" id="story-continues-12" tabindex="-1">Demandas entabladas ante los tribunales de Nueva York aducen una larga lista de abusos: en un salón de East Northport, las trabajadoras dijeron que se les pagaba solo 1,50 dólares la hora por una semana laboral de 66 horas; en un local de Harlem, las manicuristas declararon que se les cobraba por tomar agua y, en los días con poca clientela, no les pagaban nada. En una minicadena de establecimientos de Long Island no solo les pagaban mal, sino que además las insultaban y pateaban al estar sentadas en los taburetes de pedicura.</p>
+<p class="story-body-text story-content" data-para-count="457" data-total-count="3967" id="story-continues-13" tabindex="-1">En 2014, el Departamento del Trabajo del estado de Nueva York, junto con varios organismos, llevó a cabo la primera inspección de salones de uñas en la historia. Ocurrió cerca de un mes después de que The New York Times hiciera llegar a los funcionarios una solicitud de información relacionada con sus registros de cumplimiento de obligaciones en dicha industria. Los investigadores inspeccionaron 29 salones y encontraron 116 violaciones salariales.</p>
+<p class="story-body-text story-content" data-para-count="384" data-total-count="4351" id="story-continues-14" tabindex="-1">Entre las más de 100 trabajadoras entrevistadas por este diario, solo cerca de la cuarta parte declaró que se le pagaba un monto equivalente al salario mínimo por hora en el estado de Nueva York. Sin embargo, a todas las trabajadoras, con excepción de tres, se les retenía su sueldo en formas que podrían ser consideradas ilegales: por ejemplo, nunca se les pagaba tiempo extra.</p>
+<p class="story-body-text story-content" data-para-count="450" data-total-count="4801" id="story-continues-15" tabindex="-1">Las contradicciones en las vidas de las mujeres que laboran en los salones de uñas pueden resultar absurdas. Muchas de ellas se pasan los días estrechando las manos de mujeres cuya riqueza es inimaginable, en centros de belleza ubicados en Madison Avenue y Greenwich, Connecticut. Lejos de las mesas de manicura, duermen en pensiones de mala muerte abarrotadas de literas o en apartamentos apestosos que comparten hasta con una docena de extraños.</p>
+<p class="story-body-text story-content" data-para-count="570" data-total-count="5371" id="story-continues-16" tabindex="-1">La joven Ren fue a trabajar en un salón adornado con candelabros en Hicksville, Nueva York, donde los sillones de pedicura estaban equipados con iPads sobre monturas especiales para que los clientes pudieran navegar sin estropear su manicura. Rara vez intercambiaban alguna palabra con Ren, quien, al igual que la mayoría de las manicuristas, tenía un nombre falso en el distintivo que llevaba en el pecho. “Sherry”, así la llamaba su supervisora. Trabajaba en silencio, frotando callos de los pies de los clientes o cortando piel muerta de la base de las uñas.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="390" data-total-count="5761" id="story-continues-17" tabindex="-1">Por la noche regresaba a dormir a un departamento de una habitación, atestado de gente, en Flushing. Allí convivía con su prima, el padre de su prima y tres extraños. Las camas estaban amontonadas en la sala, cada una acordonada por cortinas de baño que colgaban del techo. Cuando las luces se encendían en la cocina, se veía a las cucarachas correr por las cubiertas de los muebles.</p>
+<figure id="media-100000003670380" class="media photo media-100000003670380 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/05/07/nyregion/NAILSsub-copy-es/NAILSsub-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-19">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/05/07/nyregion/NAILSsub-copy-es/NAILSsub-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/05/07/nyregion/NAILSsub-copy-es/NAILSsub-superJumbo.jpg" data-mediaviewer-caption="Xue Sun, una manicurista, en el apartamento de Flushing, Queens, que comparte; las camas est&amp;aacute;n separadas por cortinas. Xue va a fisioterapia a causa del dolor que siente en el brazo y el cuello. Trabaja tres d&amp;iacute;as a la semana y asiste a la escuela." data-mediaviewer-credit="Nicole Bengiveno/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/05/07/nyregion/NAILSsub-copy-es/NAILSsub-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Xue Sun, una manicurista, en el apartamento de Flushing, Queens, que comparte; las camas est&amp;aacute;n separadas por cortinas. Xue va a fisioterapia a causa del dolor que siente en el brazo y el cuello. Trabaja tres d&amp;iacute;as a la semana y asiste a la escuela.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Nicole Bengiveno/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="528" data-total-count="6289" id="story-continues-19" tabindex="-1">Casi todas las trabajadoras entrevistadas por The New York Times, como Ren, hablan muy poco inglés y muchas están en el país de manera ilegal, una combinación que las vuelve vulnerables. Para algunas el sufrimiento es mayor. Los salones de uñas tienen sus propios usos y costumbres, siendo este un mundo que se oculta detrás de los ventanales de vidrio y la calidez de la decoración. Allí reina un estricto sistema de castas raciales y étnicas que dicta no solo la paga, sino el trato que se les da a las trabajadoras.</p>
+<p class="story-body-text story-content" data-para-count="413" data-total-count="6702" id="story-continues-20" tabindex="-1">Por lo general, las manicuristas coreanas ganan el doble que sus colegas de otras nacionalidades, puesto que son más valoradas por los coreanos que dominan la industria. Estos propietarios suelen hablar con sorprendente franqueza sobre su desprecio hacia las demás empleadas. Las chinas ocupan el siguiente escalón de la jerarquía; las hispanas y otras mujeres que no son asiáticas ocupan el nivel más bajo.</p>
+<p class="story-body-text story-content" data-para-count="363" data-total-count="7065" id="story-continues-21" tabindex="-1">El precio habitual de una manicura en la ciudad ayuda a explicar los raquíticos sueldos. Una encuesta en más de 105 salones de Manhattan, efectuada por este periódico, mostró que el precio promedio es de unos 10,50 dólares. El promedio nacional es casi el doble, de acuerdo con un censo efectuado en 2014 por Nails Magazine, una publicación de la industria.</p>
+<p class="story-body-text story-content" data-para-count="517" data-total-count="7582" id="story-continues-22" tabindex="-1">Con tarifas tan bajas, resulta inevitable que alguien tenga que pagar las consecuencias. “Pueden estar seguros, si van a un lugar que tiene precios bajísimos, es probable que se estén robando los sueldos de las empleadas”, comenta Nicole Hallett, catedrática de la Facultad de Derecho de Yale que ha llevado a juicio varios casos de robo de sueldos por parte de salones. “Las trabajadoras con los sueldos bajos que les están arreglando las uñas son las que asumen los costos y las consecuencias”, agrega.</p>
+<p class="story-body-text story-content" data-para-count="553" data-total-count="8135" id="story-continues-23" tabindex="-1">En las entrevistas, algunos propietarios no tuvieron reparos en reconocer lo poco que le pagan a su fuerza de trabajo. El patrón de Ren, Lian Sheng Sun, quien se hace llamar Howard, negó en un principio estar incurriendo en malas prácticas. Pero después dijo que así era como funcionaba: “Los salones tienen sus formas de hacer negocio”, y agregó, “nosotros lo administramos a nuestro modo para que nuestra pequeña empresa se mantenga a flote”. Muchos propietarios alegaron estar ayudando a inmigrantes recién llegadas al darles trabajo.</p>
+<p class="story-body-text story-content" data-para-count="580" data-total-count="8715" id="story-continues-24" tabindex="-1">“Quiero cambiar a la primera generación que llega aquí, que cae en desgracia y es humillada”, afirmó Roger Liu, inmigrante chino de 28 años. Estaba sentado en el interior del salón de su propiedad, Relaxing Town Nails and Spa en Huntington Station (Nueva York). Mientras Liu hablaba, una mujer de unos cincuenta y tantos años, caminaba de un lado a otro del salón, estudiando un pedazo de papel garabateado con los pasos de una pedicura. Los repetía en chino, en una cantaleta apenas audible comentó que era su primera semana en un salón, y Liu no le estaba pagando.</p>
+<figure id="media-100000003669342" class="media photo media-100000003669342 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb3-copy-ES/NAILSTEST13-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-26">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb3-copy-ES/NAILSTEST13-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb3-copy-ES/NAILSTEST13-superJumbo.jpg" data-mediaviewer-caption="Una de las empleadas hace una pedicura en Relaxing Town Nails &amp;amp; Spa en Huntington Station, Nueva York." data-mediaviewer-credit="Nicole Bengiveno/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb3-copy-ES/NAILSTEST13-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Una de las empleadas hace una pedicura en Relaxing Town Nails &amp;amp; Spa en Huntington Station, Nueva York.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Nicole Bengiveno/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="734" data-total-count="9449" id="story-continues-26" tabindex="-1">Las manicuristas, obligadas a trabajar incesantes horas solo para subsistir, viven vidas que se desarrollan casi en su totalidad dentro de las paredes de los salones. Una economía subterránea ha surgido en Flushing, así como en los barrios de otras ciudades donde ellas viven, para ayudarlas a salir adelante. Entre semana se ve a mujeres caminando, de puerta en puerta como el Flautista de Hamelín, para llevar a la escuela a los hijos de las empleadas de los salones a cambio de un pago. Muchas manicuristas pagan casi la mitad de lo que ganan a cuidadoras para que se hagan cargo de sus bebés seis días a la semana, 24 horas al día, ya que no pueden cuidar de ellos por la noche y levantarse a esmaltar uñas por la mañana.</p>
+<p class="story-body-text story-content" data-para-count="415" data-total-count="9864" id="story-continues-27" tabindex="-1">Jing Ren pasaba los días durmiendo en un camastro delgado a unos cuantos centímetros de la cama de su prima de 24 años, Xue Sun, manicurista también, sin tiempo para hacer más amigos. Después de un tiempo, comenzó a tomar clases de inglés, con la esperanza de hacerse una nueva vida, pero tenía muchos miedos. “Me daba escalofríos solo de pensar que seguiría haciendo esto el resto de mi vida”, dijo.</p>
+<h2 class="story-subheading story-content">Bajos precios, mala paga</h2>
+<p class="story-body-text story-content" data-para-count="49" data-total-count="9913" id="story-continues-29" tabindex="-1">Es relativamente fácil abrir un salón de uñas.</p>
+<p class="story-body-text story-content" data-para-count="325" data-total-count="10238" id="story-continues-30" tabindex="-1">Bastan unos cuantos miles de dólares para equipo como sillones para pedicura con tinas de hidromasaje, un poco de inglés y sortear unos cuantos permisos. Muchos los pasan por alto. Los gastos generales son mínimos: el alquiler, algunos frascos de esmalte de uñas nuevos al mes y los sueldos mezquinos de las trabajadoras.</p>
+<p class="story-body-text story-content" data-para-count="227" data-total-count="10465" id="story-continues-31" tabindex="-1">Además de las pocas barreras de ingreso, las manicuristas, los propietarios y otros que han seguido de cerca a la industria de las uñas no pueden dar una razón específica que explique por qué han proliferado estos locales.</p>
+<p class="story-body-text story-content" data-para-count="268" data-total-count="10733" id="story-continues-32" tabindex="-1">De acuerdo con Nails Magazine, en los años noventa las marcas de esmalte para uñas comenzaron a vender su producto directamente a los consumidores, con lo que aumentó la demanda. Los esmaltes se sofisticaron; ahora duran más tiempo y son más fáciles de retirar.</p>
+<p class="story-body-text story-content" data-para-count="303" data-total-count="11036" id="story-continues-33" tabindex="-1">Los datos del censo muestran que el número de salones en Nueva York se disparó después del año 2000, superando al resto del país. El crecimiento disminuyó solo un poco durante la recesión, ya que las uñas esmaltadas siguieron siendo un gusto que muchas se podían dar, y luego remontó de nuevo.</p>
+
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-35">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+			<h2 class="interactive-headline">Salones vs. Starbucks</h2>
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			<!--
+
+======================================================
+
+THIS IS A GENERATED TEMPLATE FILE. DO NOT EDIT.
+
+======================================================
+
+-->
+<div id='g-salons3-box' class='ai2html'>
+	<!-- Generated by ai2html v0.52 - 2015-05-07 - 14:30 -->
+	<!-- ai file: salons3 -->
+	<!-- preview: 2015-05-05-nail-salon-graphics -->
+	<!-- scoop  : salons-graphic-3-korean -->
+
+	<style type='text/css' media='screen,print'>
+		.g-artboard {
+			margin:0 auto;
+		}
+	</style>
+
+
+	<!-- Artboard: artboard-300 -->
+	<div id='g-salons3-artboard-300' class='g-artboard g-show-small g-show-smallplus g-show-submedium g-show-medium g-show-large g-show-xlarge'>
+		<style type='text/css' media='screen,print'>
+			#g-salons3-artboard-300{
+				position:relative;
+				overflow:hidden;
+				width:300px;
+			}
+			.g-aiAbs{
+				position:absolute;
+			}
+			.g-aiImg{
+				display:block;
+				width:100% !important;
+			}
+			#g-salons3-artboard-300 p{
+				font-family:nyt-franklin,arial,helvetica,sans-serif;
+				font-size:13px;
+				line-height:18px;
+				margin:0;
+			}
+			#g-salons3-artboard-300 .g-aiPstyle0 {
+				font-size:15px;
+				font-weight:700;
+				color:#000000;
+			}
+			#g-salons3-artboard-300 .g-aiPstyle1 {
+				font-size:12px;
+				line-height:14px;
+				font-weight:500;
+				font-style:italic;
+				color:#000000;
+			}
+		</style>
+		<div id='g-salons3-artboard-300-graphic'>
+			<img id='g-ai0-0'
+				class='g-aiImg'
+				src='data:image/gif;base64,R0lGODlhCgAKAIAAAB8fHwAAACH5BAEAAAAALAAAAAAKAAoAAAIIhI+py+0PYysAOw=='
+				data-src='https://static01.nyt.com/newsgraphics/2015/05/05/nail-salon-graphics/4a000864ca9501bd9e55d22ffa6fafe38bddf8e6/salons3-artboard-300.png'
+				data-height-multiplier='1.4286'
+				/>
+			<div id='g-ai0-1' class='g-Layer_21 g-aiAbs' style='top:-0.0000%;left:-0.0001%;'>
+				<p class='g-aiPstyle0'>Ubicaciones de Starbucks</p>
+			</div>
+			<div id='g-ai0-2' class='g-Layer_21 g-aiAbs' style='top:8.8663%;left:33.3756%;'>
+				<p class='g-aiPstyle1'>96TH STREET</p>
+			</div>
+			<div id='g-ai0-3' class='g-Layer_21 g-aiAbs' style='top:45.0316%;left:55.6407%;'>
+				<p class='g-aiPstyle1'>86TH STREET</p>
+			</div>
+			<div id='g-ai0-4' class='g-Layer_21 g-aiAbs' style='top:51.5646%;left:0.0001%;'>
+				<p class='g-aiPstyle0'>Salones de uñas</p>
+			</div>
+			<div id='g-ai0-5' class='g-Layer_21 g-aiAbs' style='top:74.1971%;left:4.9677%;'>
+				<p class='g-aiPstyle1'>92ND ST.</p>
+			</div>
+			<div id='g-ai0-6' class='g-Layer_21 g-aiAbs' style='top:95.8962%;left:51.0079%;'>
+				<p class='g-aiPstyle1'>86TH ST.</p>
+			</div>
+		</div>
+	</div>
+
+
+	<script>_gaq = [['_setAccount', 'UA-9262032-1'], ['_trackPageview']];</script>
+	<script async src='http://www.google-analytics.com/ga.js'></script>
+	<!-- End ai2html - 2015-05-07 - 14:30 -->
+</div>
+
+<script>require(['foundation/main'], function() { require(["https://static01.nyt.com/newsgraphics/2015/05/05/nail-salon-graphics/4a000864ca9501bd9e55d22ffa6fafe38bddf8e6/build.js"]); });</script><!-- Pipeline: 2015-05-05-nail-salon-graphics | January 25, 2017, 07:09PM | 4a000864ca9501bd9e55d22ffa6fafe38bddf8e6 -->
+
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="294" data-total-count="11330" id="story-continues-35" tabindex="-1">Pero en vista de que los salones se han propagado como pólvora, algunos propietarios comentaron que es mucho más difícil obtener ganancias. Los precios de la manicura no han variado mucho desde los años noventa y, de acuerdo con las trabajadoras con mayor antigüedad, los sueldos tampoco.</p>
+<p class="story-body-text story-content" data-para-count="338" data-total-count="11668" id="story-continues-36" tabindex="-1">Con sus relucientes fachadas de vidrio, estos locales parecen exhibir lo que sucede en su interior con la misma transparencia que una tienda departamental muestra un escaparate de temporada. Pero gran parte de los métodos con que operan muchos salones y el trato que se les da sus empleadas se esconde deliberadamente del mundo exterior.</p>
+<p class="story-body-text story-content" data-para-count="313" data-total-count="11981" id="story-continues-37" tabindex="-1">Entre las costumbres ocultas está la forma en la que debutan las manicuristas: la mayoría tiene que pagar en efectivo (por lo general de 100 a 200 dólares, aunque puede ser mucho más) una cuota de capacitación; después vienen semanas o meses de trabajo disfrazado de prácticas profesionales no remuneradas.</p>
+<p class="story-body-text story-content" data-para-count="245" data-total-count="12226" id="story-continues-38" tabindex="-1">Ren pasó casi tres meses esmaltando uñas de los pies y aplicando tratamientos de parafina antes de que, una tarde a finales del verano, su jefe la llevó a un cuarto privado para depilación con cera y le dijo que por fin recibiría un sueldo.</p>
+<p class="story-body-text story-content" data-para-count="328" data-total-count="12554" id="story-continues-39" tabindex="-1">“Solté una buena carcajada sin darme cuenta. Había trabajado tanto tiempo sin ganar un solo centavo y ahora, por fin, todo ese esfuerzo rendía frutos”, recuerda. Esa noche sus primas le organizaron una fiesta. Cuando llegó el siguiente día de pago se enteró de que su sueldo diario sería menos de 3 dólares por hora.</p>
+<p class="story-body-text story-content" data-para-count="600" data-total-count="13154" id="story-continues-40" tabindex="-1">Basta aventurarse al interior de los inmaculados confines de casi cualquier salón para encontrarse con empleadas a las que se les pagan sueldos muy bajos. En el May’s Nails Salon, en el West Village de Manhattan, donde cuelga una foto de la cantante Gwen Stefani con una manicurista, las novatas deben pagar 100 dólares, para después tener un pago inicial de 30 o 40 al día, comentó una empleada. Un hombre que se identificó como el dueño pero solo dio su primer nombre, Greg, afirmó que el salón no le cobraba a las trabajadoras por su trabajo, pero se negó a decir cuánto les pagaba.</p>
+<p class="story-body-text story-content" data-para-count="416" data-total-count="13570" id="story-continues-41" tabindex="-1">En Sona Nails, sobre la Primera Avenida, cerca de Stuyvesant Town, una empleada dijo que ganaba 35 dólares al día. Sona Grung, dueña de Sona Nails, negó que sus sueldos estuvieran por debajo del mínimo. Sin embargo, defendió la práctica de pagar menos a las empleadas nuevas: “Cuando llega una novata no sabe nada y se le da un trabajo. Si te pagan 35 dólares en un salón, no está nada mal”, concluyó.</p>
+<p class="story-body-text story-content" data-para-count="394" data-total-count="13964" id="story-continues-42" tabindex="-1">Las trabajadoras de los salones de uñas entran en la categoría de “empleados que reciben propinas” conforme a la ley estatal y federal en materia laboral. En Nueva York se permite que los empleadores paguen a dichos trabajadores un poco menos del salario mínimo en el estado, que es de 8,75 dólares por hora, con base en un cálculo complejo para determinar cuánto se gana en propinas.</p>
+<p class="story-body-text story-content" data-para-count="380" data-total-count="14344" id="story-continues-43" tabindex="-1">Pero entrevistas con un gran número de empleadas revelaron que había sueldos tan bajos que el cálculo de propinas es casi insignificante. Ninguna declaró haber recibido un pago complementario de sus patrones, como se debe hacer por ley cuando las propinas del día están por debajo del salario mínimo. El pago de horas extras es una cuestión casi insólita en la industria.</p>
+<p class="story-body-text story-content" data-para-count="741" data-total-count="15085" id="story-continues-44" tabindex="-1">Dentro de la división laboral del salón comúnmente existen tres tipos de trabajos. Las mujeres con los “trabajos grandes” son las de mayor antigüedad, expertas en esculpir uñas falsas de acrílico. Esta es la ocupación más lucrativa, aunque muchas manicuristas lo evitan debido a los serios problemas de salud, abortos espontáneos y casos de cáncer asociados con la inhalación de gases y vapores de partículas plásticas. Las empleadas con los “trabajos medianos” hacen las manicuras habituales, en tanto que las principiantes llevan a cabo los “trabajos menores”. Las novatas lavan toallas de manos calientes y barren fragmentos de uñas de los pies, o hacen las labores que nadie más quiere hacer, como la pedicura.</p>
+<figure id="media-100000003669356" class="media photo media-100000003669356 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb5-copy-ES/NAILSTEST15-1430357381420-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-46">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb5-copy-ES/NAILSTEST15-1430357381420-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb5-copy-ES/NAILSTEST15-1430357381420-superJumbo.jpg" data-mediaviewer-caption="En Relaxing Town Nails &amp;amp; Spa en Huntington Station, a una mujer le est&amp;aacute;n aplicando u&amp;ntilde;as de acr&amp;iacute;lico. Las manicuristas utilizan tapabocas debido a las peque&amp;ntilde;as part&amp;iacute;culas que respiran d&amp;iacute;a tras d&amp;iacute;as. Una manicurista, de pie, observa a una compa&amp;ntilde;era con mayor experiencia hacer el trabajo." data-mediaviewer-credit="Nicole Bengiveno/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb5-copy-ES/NAILSTEST15-1430357381420-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">En Relaxing Town Nails &amp;amp; Spa en Huntington Station, a una mujer le est&amp;aacute;n aplicando u&amp;ntilde;as de acr&amp;iacute;lico. Las manicuristas utilizan tapabocas debido a las peque&amp;ntilde;as part&amp;iacute;culas que respiran d&amp;iacute;a tras d&amp;iacute;as. Una manicurista, de pie, observa a una compa&amp;ntilde;era con mayor experiencia hacer el trabajo.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Nicole Bengiveno/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="412" data-total-count="15497" id="story-continues-46" tabindex="-1">Las que tienen más experiencia ganan entre 50 y 70 dólares diarios, en ocasiones, pueden llegar a los 80. No obstante, su paga sigue estando muy por debajo del salario mínimo, teniendo en cuenta el extenso horario laboral. En las zonas más pobres de la ciudad, en los salones con baja clientela en el Bronx y Queens, a muchas empleadas no se les paga ni siquiera un salario base, solo obtienen una comisión.</p>
+<p class="story-body-text story-content" data-para-count="550" data-total-count="16047" id="story-continues-47" tabindex="-1">La ecuatoriana Nora Cacho cobraba alrededor de la mitad del precio de cada manicura y depilación con cera para el labio superior que hacía en un salón de Harlem. Trabajaba en la cadena Envy Nails y casi siempre ganaba unos 200 por una semana laboral de 66 horas: apenas 3 dólares la hora. En la temporada en que se usan sandalias, si tenía suerte, salía del salón con un poco más, unos 300 a la semana. En los días en que nevaba regresaba a casa con las manos vacías, comenta Cacho, quien forma parte de una demanda grupal contra la cadena.</p>
+<p class="story-body-text story-content" data-para-count="327" data-total-count="16374" id="story-continues-48" tabindex="-1">Al igual que muchas inmigrantes, Cacho vio a la industria como su salvación financiera en un comienzo. Pero lo que parece ser un camino hacia la superación, casi siempre acaba por conducir sus vidas a la miseria. Las manicuristas describen una cultura de sumisión ciega que va mucho más allá del buen trato a los clientes.</p>
+<p class="story-body-text story-content" data-para-count="467" data-total-count="16841" id="story-continues-49" tabindex="-1">Las propinas o los salarios pasan por recortes o nunca se entregan o se descuentan como castigo por infracciones, como haber derramado el esmalte de uñas. En el salón de Harlem donde trabajaba, Cacho relató que ella y sus colegas tenían que comprar ropa del color que la encargada decidiera que estaba de moda esa semana. Es habitual que estos sitios cuenten con cámaras escondidas que transmiten, en tiempo real, a los teléfonos y tabletas de los propietarios.</p>
+<p class="story-body-text story-content" data-para-count="254" data-total-count="17095" id="story-continues-50" tabindex="-1">Qing Lin tiene 47 años y ha trabajado como manicurista en el Upper East Side durante la última década. Aún se exalta cuando recuerda la ocasión en que unas gotas de removedor de esmalte estropearon las sandalias de charol marca Prada de una clienta.</p>
+<p class="story-body-text story-content" data-para-count="206" data-total-count="17301" id="story-continues-51" tabindex="-1">Cuando la mujer exigió ser indemnizada, los 270 que el patrón le entregó salieron del sueldo de la manicurista. Además le pidieron que no regresara a trabajar: “Valgo menos que un zapato”, exclamó.</p>
+<h2 class="story-subheading story-content">Un sistema de castas basado en etnias</h2>
+<p class="story-body-text story-content" data-para-count="367" data-total-count="17668" id="story-continues-53" tabindex="-1">Cada mañana, mientras la bandada de manicuristas se reúne en Flushing, la mayoría de los “buenos días” resuenan en chino y español, con una que otra incursión en tibetano o nepalí. Casi nunca se escucha el coreano entre las trabajadoras que se dirigen a los salones de las afueras de Nueva York, muchos de los cuales se encuentran a varias horas de camino.</p>
+<p class="story-body-text story-content" data-para-count="404" data-total-count="18072" id="story-continues-54" tabindex="-1">Para los clientes que se sientan en la comodidad de un sillón de pedicura en Manhattan, pareciera que toda la mano de obra es coreana. El contraste resulta de la marcada jerarquía étnica impuesta por los propietarios de los salones de uñas. Entre el 70 y el 80 por ciento de los salones en la ciudad son propiedad de coreanos, de acuerdo con la Asociación Coreana-Estadounidense de Salones de Uñas.</p>
+<figure id="media-100000003669368" class="media photo media-100000003669368 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb6-copy-ES/NAILStest1-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-56">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb6-copy-ES/NAILStest1-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb6-copy-ES/NAILStest1-superJumbo.jpg" data-mediaviewer-caption="Una escena matutina habitual en Flushing, Queens: Camionetas recogen a las empleadas de los salones para llevarlas a trabajar. Las manicuristas coreanas predominan en Manhattan; las de otras nacionalidades a menudo son llevadas fuera de la ciudad, donde hay menos clientes.&lt;br /&gt;&lt;br /&gt;" data-mediaviewer-credit="Nicole Bengiveno/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb6-copy-ES/NAILStest1-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Una escena matutina habitual en Flushing, Queens: Camionetas recogen a las empleadas de los salones para llevarlas a trabajar. Las manicuristas coreanas predominan en Manhattan; las de otras nacionalidades a menudo son llevadas fuera de la ciudad, donde hay menos clientes.&lt;br /&gt;&lt;br /&gt;</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Nicole Bengiveno/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="446" data-total-count="18518" id="story-continues-56" tabindex="-1">Las coreanas, en especial las jóvenes y bonitas, son las que pueden elegir los trabajos más atractivos en la industria: los resplandecientes locales sobre Madison Avenue y otras partes adineradas de la ciudad. A las manicuristas que no son de ese país se les obliga a aceptar trabajos en los barrios aledaños a Manhattan, o incluso mucho más lejos de la ciudad, en zonas donde hay una menor afluencia de clientes y las propinas son ínfimas.</p>
+<p class="story-body-text story-content" data-para-count="267" data-total-count="18785" id="story-continues-57" tabindex="-1">En general, las empleadas coreanas ganan, por lo menos, de un 15 a 20 por ciento más que sus compañeras de otras nacionalidades. Pero algunas veces la disparidad puede ser mucho mayor, de acuerdo con manicuristas, instructores de escuelas de belleza y propietarios.</p>
+<p class="story-body-text story-content" data-para-count="269" data-total-count="19054" id="story-continues-58" tabindex="-1">Algunos patrones no dudan en aprovecharse de la desesperación de las latinas, quienes muchas veces se encuentran en apuros debido a los enormes montos que deben a los coyotes que las ayudaron a cruzar la frontera ilegalmente, según cuentan las empleadas y defensores.</p>
+<p class="story-body-text story-content" data-para-count="314" data-total-count="19368" id="story-continues-59" tabindex="-1">Muchos propietarios coreanos hablan sin tapujos sobre sus prejuicios. “Las empleadas hispanas no son tan inteligentes como las coreanas ni tan limpias”, confesó Mal Sung Noh. Esta mujer de 68 años, conocida como Mary, se encuentra en la recepción de Rose Nails, salón de su propiedad en el Upper East Side.</p>
+<p class="story-body-text story-content" data-para-count="434" data-total-count="19802" id="story-continues-60" tabindex="-1">El salón de Noh está ubicado tras las barreras de construcción de la línea del metro de la Segunda Avenida. Tal vez por ello da trabajo a un puñado de hispanas (los locales menos lucrativos que no están en las calles principales, o en el segundo piso de edificios, tienden a contar con una mayor diversidad). Noh dijo que las manicuristas hispanas hacen los trabajos de menor jerarquía. “No quieren aprender más”, espetó.</p>
+<p class="story-body-text story-content" data-para-count="397" data-total-count="20199" id="story-continues-61" tabindex="-1">La discriminación étnica impregna otros aspectos de la vida de estos negocios. Muchas manicuristas evitan a la clientela masculina debido a que sus uñas son más gruesas y tienen los nudillos cubiertos de vello. Cuando un hombre entra al local, casi invariablemente una empleada que no es coreana es la primera candidata para hacerse cargo de su pedicura, comentan las empleadas de los salones.</p>
+<p class="story-body-text story-content" data-para-count="375" data-total-count="20574" id="story-continues-62" tabindex="-1">Ana Luisa Camas es otra manicurista ecuatoriana de 32 años. Contó que en un salón de coreanos donde trabajó, ella y sus colegas hispanas tenían que sentarse en silencio durante todo el turno de 12 horas, en tanto que las coreanas tenían libertad de hablar. “Viví con dolor de cabeza por dos años. No era otra cosa que el estrés lo que me estaba matando”, relata.</p>
+<p class="story-body-text story-content" data-para-count="274" data-total-count="20848" id="story-continues-63" tabindex="-1">Lhamo Dolma, una tibetana de 39 años que se hace llamar Jackey, recordó un trabajo anterior en un local de Brooklyn donde tenía que comer todos los días de pie, en una cocineta con sus compañeras no coreanas. Las oriundas de Corea, en cambio, podían comer en su lugar.</p>
+<p class="story-body-text story-content" data-para-count="240" data-total-count="21088" id="story-continues-64" tabindex="-1">“Sus paisanas son libres de hacer todo lo que quieran”, dijo en una entrevista en su casa en Queens, sentada en un sofá ante el altar budista de su hogar. Rompe en llanto y dice: “¿Por qué dividirnos en dos? Todos somos iguales”.</p>
+<h2 class="story-subheading story-content">Una novata asustada</h2>
+<p class="story-body-text story-content" data-para-count="374" data-total-count="21462" id="story-continues-66" tabindex="-1">Un pez beta de color azul intenso daba vueltas en el interior de un frasco de vidrio, en una esquina del departamento de una habitación donde Ren vivía con su prima y otros cuatro adultos. El pez se encontraba sobre una mesa hecha con la puerta rota de un armario. Su nombre era July, en honor al mes (julio) en el que le informaron a Ren que, por fin, ganaría un sueldo.</p>
+<p class="story-body-text story-content" data-para-count="206" data-total-count="21668" id="story-continues-67" tabindex="-1">En aquella ocasión estaba en sus primeros días en Nueva York y tuvo una extraña sensación de logro. Cuando era una recién llegada, se encerró durante semanas porque estaba demasiado temerosa de salir.</p>
+<p class="story-body-text story-content" data-para-count="388" data-total-count="22056" id="story-continues-68" tabindex="-1">Hubiera deseado ser como Sun, su prima mayor con la que comparte el apartamento. Ella salía cada mañana de su casa, en Flushing, luciendo más como sus clientas que como una manicurista, enfundada en imitaciones de Hermès y Chanel. Sun se levantaba temprano a planchar su atuendo para que todos los rastros de su habitación sombría se quedaran detrás de las puertas del apartamento.</p>
+<p class="story-body-text story-content" data-para-count="412" data-total-count="22468" id="story-continues-69" tabindex="-1">Cuando el trabajo en el salón comenzó a decaer a fines de 2013, a Sun (quien usa el nombre de Michelle) se le ocurrió una idea: subió a un autobús barato con dirección al sur, a Florida, un lugar del que lo único que sabía era que siempre tenía un clima cálido. Pensó que sandalias y pedicuras serían artículos de primera necesidad todo el año y fue de salón en salón hasta que encontró trabajo.</p>
+<p class="story-body-text story-content" data-para-count="293" data-total-count="22761" id="story-continues-70" tabindex="-1">A su regreso en la primavera de 2014, Sun se enfureció al encontrar a Ren casi confinada en casa. Convenció a su prima menor para que llamara a los salones que anunciaban vacantes en línea y hablaba por ella cuando esta se sentía demasiado asustada para entrevistarse con los propietarios.</p>
+<p class="story-body-text story-content" data-para-count="675" data-total-count="23436" id="story-continues-71" tabindex="-1">Al día siguiente, Ren apareció en la intersección de Franklin Avenue y Kissena Boulevard, con su lonchera en mano, para esperar a la camioneta que la llevaría a su nuevo trabajo, cuya ubicación desconocía.<br />En el salón Bee Nails de Hicksville, Ren realizaba con torpeza hasta las tareas más sencillas, dejándose llevar por su nerviosismo. Pasó días haciendo pilas de papel doblado para separar los dedos de los pies o barriendo recortes de uñas. Las manos le temblaban cuando trataba de poner esmalte hasta en sus propias uñas en el cuarto de descanso. Se negó a unirse a las demás empleadas de trabajos menores en sesiones de práctica, mirándolas con timidez.</p>
+<figure id="media-100000003669369" class="media photo media-100000003669369 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/05/05/nyregion/10NAILSweb12-copy-ES/10NAILSweb12-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-73">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/05/05/nyregion/10NAILSweb12-copy-ES/10NAILSweb12-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/05/05/nyregion/10NAILSweb12-copy-ES/10NAILSweb12-superJumbo.jpg" data-mediaviewer-caption="Manicuristas en un apartamento dividido que comparten con otras personas en Flushing, Queens." data-mediaviewer-credit="Nicole Bengiveno/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/05/05/nyregion/10NAILSweb12-copy-ES/10NAILSweb12-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Manicuristas en un apartamento dividido que comparten con otras personas en Flushing, Queens.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Nicole Bengiveno/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="421" data-total-count="23857" id="story-continues-73" tabindex="-1">Una semana después, hizo su primera manicura a un varón; su novia estaba sentada junto a él, haciéndole notar en voz baja las temblorosas manos de la manicurista, lo que solo ocasionó que Ren temblara aún más. “Traté de calmarme en el camino de regreso en la camioneta; el viaje es largo y silencioso. Me dije que tenía que demostrar que era capaz de vencer todas esas dificultades y salir adelante”, contó.</p>
+<p class="story-body-text story-content" data-para-count="456" data-total-count="24313" id="story-continues-74" tabindex="-1">Una vez en casa, se quedaba despierta hasta tarde para practicar la manicura en las manos de su prima y llevar un meticuloso registro de sus gastos. Sus ingresos eran de unos cuantos dólares al día en propinas, pero era cuidadosa, contabilizaba cada fruta y hasta su primer helado de un camión que atraía a los clientes con música. Al lado del garabato de un cono de helado, escribió “1,50”, seguido de las palabras en inglés: “<em>It’s good!</em>”</p>
+<p class="story-body-text story-content" data-para-count="723" data-total-count="25036" id="story-continues-75" tabindex="-1">Para octubre Ren había logrado dominar su ansiedad. Un domingo por la mañana, ante la mirada de un visitante, se sentó en cuclillas sobre un banco mientras sostenía en alto los pies de una mujer vestida con pantalones y chaqueta deportiva Juicy Couture y frotaba hábilmente la piel endurecida con una lima. La mujer examinaba la pantalla de su teléfono y se mordía la cutícula de las manos. Solo se dirigió a Ren en una ocasión: para advertirle acerca de una ampolla que tenía en el talón. De vez en cuando, un frasco de esmalte o las tijeras para remover cutícula salían volando, pero Ren disimulaba su error con una risita ahogada y la útil frase en inglés que su jefe le había enseñado: “Disculpe”.</p>
+<p class="story-body-text story-content" data-para-count="482" data-total-count="25518" id="story-continues-76" tabindex="-1">Algunas noches el padre de Sun, asistente de cocina en Manhattan, improvisaba cenas elaboradas con tortuga de caparazón blando y taro que les hacían recordar su país natal. Por la noche las arropaba dándoles palabras de aliento, antes de cerrar la cortina de baño que separaba su cama de la de ellas. Traten de imaginar que los pies de los clientes son “patitas de cerdo”, les decía para animarlas, ¿acaso no les encantaba ese manjar chino cuando lo preparaba para ellas?</p>
+<p class="story-body-text story-content" data-para-count="568" data-total-count="26086" id="story-continues-77" tabindex="-1">A medida que el frío comenzó a hacerse sentir, Ren volvió a sentirse angustiada porque es la época del año en la que muchos patrones despiden a la mayoría del personal de los salones. En los días flojos pasaba el tiempo frente al salón repartiendo folletos. En el sitio web Yelp una clienta dejó un comentario en el que describía al salón como “un taller clandestino, en pocas palabras”, y para Ren lo era. Algunas veces pasaba todo el día desempolvando cientos de cajas de plástico donde guardaban los utensilios de manicura de clientes específicos.</p>
+<p class="story-body-text story-content" data-para-count="70" data-total-count="26156" id="story-continues-78" tabindex="-1">“Sentía que todo lo que hacía era para nada”, comentó después.</p>
+<h2 class="story-subheading story-content">Detrás del Mercedes</h2>
+<p class="story-body-text story-content" data-para-count="386" data-total-count="26542" id="story-continues-80" tabindex="-1">Un adorno con relieves de caracteres chinos y listones rojos entrelazados cuelga de la puerta de una casa de dos pisos en Center Moriches, en Long Island. Está a una hora en automóvil hacia el este de donde trabaja Ren, en Hicksville. Un ancho riachuelo que desemboca en la Bahía Moriches corre por el otro lado de la calle. Hay una camioneta Mercedes-Benz estacionada en la entrada.</p>
+<p class="story-body-text story-content" data-para-count="287" data-total-count="26829" id="story-continues-81" tabindex="-1">Es el hogar del dueño de Nail Love, un salón en un centro comercial cercano. El talismán que cuelga de la puerta promete traer prosperidad financiera a los habitantes de la casa, pero la vida de la media docena de manicuristas que pasan la noche en el sótano es todo menos próspera.</p>
+<p class="story-body-text story-content" data-para-count="403" data-total-count="27232" id="story-continues-82" tabindex="-1">Son empleadas de Nail Love. Su madriguera poco iluminada es un dormitorio proporcionado por el propietario, un acuerdo habitual para trabajadoras que están lejos de Nueva York y no pueden tomar transporte público para regresar a sus casas. Es un ahorro de dinero para los propietarios y, algunas veces, incluso supone una ganancia porque las trabajadoras tienen que pagarle un alquiler a sus patrones.</p>
+<p class="story-body-text story-content" data-para-count="655" data-total-count="27887" id="story-continues-83" tabindex="-1">Los dueños de salones de uñas a menudo se convierten en relatos de éxito en sus comunidades de inmigrantes. Algunos surgieron de entre las filas de las propias manicuristas. En entrevistas, muchos propietarios se consideran héroes que tienen que soportar sobre sus hombros la carga de capacitar trabajadoras y el riesgo de emplear gente que no cuenta con un permiso legal para trabajar en Estados Unidos. Para ellos la cuota de ingreso que cobran a empleadas nuevas, como Ren, es una justa compensación por el inconveniente de tener que entrenarlas. Varios propietarios dijeron sentirse traicionados cuando sus empleadas renunciaban o los demandaban.</p>
+<p class="story-body-text story-content" data-para-count="446" data-total-count="28333" id="story-continues-84" tabindex="-1">“No se detienen a pensar lo difícil que es en estos tiempos mantener abiertas las puertas del negocio para darle servicio a la gente”, escribió Romelia M. Agudo, quien fuera propietaria del salón Romy’s Nails, en Park Slope, en una declaración jurada en la que le pedía al juez que desechara una demanda iniciada por dos empleadas. Las mujeres dijeron que les pagaba menos de lo debido y no les permitía hacer una pausa para almorzar.</p>
+<figure id="media-100000003669370" class="media photo media-100000003669370 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb9-copy-ES/10nailsweb9-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-86">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb9-copy-ES/10nailsweb9-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb9-copy-ES/10nailsweb9-superJumbo-v2.jpg" data-mediaviewer-caption="Los propietarios de Iris Nails, una cadena de salones en Manhattan y Brooklyn, ten&amp;iacute;an siete locales que generaban ventas por $8 millones anuales, de acuerdo con un art&amp;iacute;culo que apareci&amp;oacute; en un peri&amp;oacute;dico en 2012. En los dos salones Iris de Madison Avenue en el Upper East Side, las trabajadoras de mayor antig&amp;uuml;edad dijeron que los salarios iniciales oscilaban entre los $30 y $40 d&amp;oacute;lares al d&amp;iacute;a." data-mediaviewer-credit="Nicole Bengiveno/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb9-copy-ES/10nailsweb9-master675-v2.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Los propietarios de Iris Nails, una cadena de salones en Manhattan y Brooklyn, ten&amp;iacute;an siete locales que generaban ventas por $8 millones anuales, de acuerdo con un art&amp;iacute;culo que apareci&amp;oacute; en un peri&amp;oacute;dico en 2012. En los dos salones Iris de Madison Avenue en el Upper East Side, las trabajadoras de mayor antig&amp;uuml;edad dijeron que los salarios iniciales oscilaban entre los $30 y $40 d&amp;oacute;lares al d&amp;iacute;a.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Nicole Bengiveno/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="468" data-total-count="28801" id="story-continues-86" tabindex="-1">Muchos propietarios defienden sus métodos por ser la única forma de mantenerse a flote ante tanta competencia. Ansik Nam, expresidente de la Asociación Coreana-Estadounidense de Salones de Uñas, dijo que a principios de la década del 2000, un gran número de empresarios celebraron una reunión de emergencia en un restaurante coreano de Flushing, con la esperanza de evitar que los precios de la manicura y la pedicura cayeran aún más, sin llegar a un acuerdo.</p>
+<p class="story-body-text story-content" data-para-count="292" data-total-count="29093" id="story-continues-87" tabindex="-1">El actual presidente de la asociación, Sangho Lee, declinó una solicitud para discutir la cuestión de los salarios por debajo del mínimo en los salones. Expresó que eran tantos los propietarios que no pagaban el sueldo mínimo que creía que contestar preguntas dañaría a la industria.</p>
+<p class="story-body-text story-content" data-para-count="632" data-total-count="29725" id="story-continues-88" tabindex="-1">Entre los secadores de manos del NYC Nail Spa en el Upper West Side, donde el salario de las principiantes es de 10 dólares diarios, la cruda realidad de los salones de uñas se muestra en un anuncio pulcramente pintado. Allí se ruega a la clientela dar buenas propinas en un inglés chapurreado: “<em>Less tips make us hard to hire good workers, or we have to pay higher wages to hire them, which might also cause a raise on the price</em>”, es decir: &#8220;Menos propinas hacen difícil contratar buenas empleadas, o tenemos que pagar sueldos más altos para contratarlas, lo que también podría hacer que aumente el precio&#8221;.</p>
+
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-90">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+			<h2 class="interactive-headline">El auge en los salones de uñas</h2>
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			<!--
+
+======================================================
+
+THIS IS A GENERATED TEMPLATE FILE. DO NOT EDIT.
+
+======================================================
+
+-->
+<div id='g-salons2-box' class='ai2html'>
+	<!-- Generated by ai2html v0.52 - 2015-05-06 - 11:41 -->
+	<!-- ai file: salons2 -->
+	<!-- preview: 2015-05-05-nail-salon-graphics -->
+	<!-- scoop  : "" -->
+
+	<style type='text/css' media='screen,print'>
+		.g-artboard {
+			margin:0 auto;
+		}
+	</style>
+
+
+	<!-- Artboard: artboard-180 -->
+	<div id='g-salons2-artboard-180' class='g-artboard g-show-xsmall g-show-small g-show-smallplus g-show-submedium g-show-medium g-show-large g-show-xlarge'>
+		<style type='text/css' media='screen,print'>
+			#g-salons2-artboard-180{
+				position:relative;
+				overflow:hidden;
+				width:180px;
+			}
+			.g-aiAbs{
+				position:absolute;
+			}
+			.g-aiImg{
+				display:block;
+				width:100% !important;
+			}
+			#g-salons2-artboard-180 p{
+				font-family:nyt-franklin,arial,helvetica,sans-serif;
+				font-size:13px;
+				line-height:18px;
+				margin:0;
+			}
+			#g-salons2-artboard-180 .g-aiPstyle0 {
+				line-height:16px;
+				font-weight:500;
+				color:#000000;
+			}
+			#g-salons2-artboard-180 .g-aiPstyle1 {
+				font-size:11px;
+				line-height:13px;
+				font-weight:300;
+				text-align:right;
+				color:#000000;
+			}
+			#g-salons2-artboard-180 .g-aiPstyle2 {
+				font-size:12px;
+				line-height:14px;
+				font-weight:300;
+				color:#000000;
+			}
+			#g-salons2-artboard-180 .g-aiPstyle3 {
+				font-size:11px;
+				line-height:13px;
+				font-weight:300;
+				color:#000000;
+			}
+		</style>
+		<div id='g-salons2-artboard-180-graphic'>
+			<img id='g-ai0-0'
+				class='g-aiImg'
+				src='data:image/gif;base64,R0lGODlhCgAKAIAAAB8fHwAAACH5BAEAAAAALAAAAAAKAAoAAAIIhI+py+0PYysAOw=='
+				data-src='https://static01.nyt.com/newsgraphics/2015/05/05/nail-salon-graphics/4a000864ca9501bd9e55d22ffa6fafe38bddf8e6/salons2-artboard-180.png'
+				data-height-multiplier='2.4399'
+				/>
+			<div id='g-ai0-1' class='g-local_zip_per_cap g-aiAbs' style='top:-0.2277%;left:-0.0002%;width:100.0002%;'>
+				<p class='g-aiPstyle0'>Salones de uñas por cada condado de 100.000 habitantes</p>
+			</div>
+			<div id='g-ai0-2' class='g-growth g-aiAbs' style='top:8.6525%;right:92.6457%;'>
+				<p class='g-aiPstyle1'>40</p>
+			</div>
+			<div id='g-ai0-3' class='g-growth g-aiAbs' style='top:11.8403%;left:63.0153%;'>
+				<p class='g-aiPstyle2'>Nassau</p>
+			</div>
+			<div id='g-ai0-4' class='g-growth g-aiAbs' style='top:17.5327%;left:63.0159%;'>
+				<p class='g-aiPstyle2'>Manhattan</p>
+			</div>
+			<div id='g-ai0-5' class='g-growth g-aiAbs' style='top:26.6406%;left:63.0153%;'>
+				<p class='g-aiPstyle2'>Bergen</p>
+			</div>
+			<div id='g-ai0-6' class='g-growth g-aiAbs' style='top:30.0561%;right:92.6457%;'>
+				<p class='g-aiPstyle1'>30</p>
+			</div>
+			<div id='g-ai0-7' class='g-growth g-aiAbs' style='top:30.9669%;left:63.0159%;'>
+				<p class='g-aiPstyle2'>Staten Island</p>
+			</div>
+			<div id='g-ai0-8' class='g-growth g-aiAbs' style='top:43.4903%;left:63.0153%;'>
+				<p class='g-aiPstyle2'>Brooklyn</p>
+			</div>
+			<div id='g-ai0-9' class='g-growth g-aiAbs' style='top:51.2320%;right:92.6457%;'>
+				<p class='g-aiPstyle1'>20</p>
+			</div>
+			<div id='g-ai0-10' class='g-growth g-aiAbs' style='top:72.4079%;right:92.6457%;'>
+				<p class='g-aiPstyle1'>10</p>
+			</div>
+			<div id='g-ai0-11' class='g-growth g-aiAbs' style='top:81.7435%;left:64.8008%;'>
+				<p class='g-aiPstyle2'>U.S</p>
+			</div>
+			<div id='g-ai0-12' class='g-growth g-aiAbs' style='top:93.5837%;right:92.6457%;'>
+				<p class='g-aiPstyle1'>0</p>
+			</div>
+			<div id='g-ai0-13' class='g-local_zip_per_cap g-aiAbs' style='top:96.5438%;left:5.4573%;'>
+				<p class='g-aiPstyle3'>2000</p>
+			</div>
+			<div id='g-ai0-14' class='g-local_zip_per_cap g-aiAbs' style='top:96.5438%;left:54.0820%;'>
+				<p class='g-aiPstyle3'>2012</p>
+			</div>
+		</div>
+	</div>
+
+
+	<script>_gaq = [['_setAccount', 'UA-9262032-1'], ['_trackPageview']];</script>
+	<script async src='http://www.google-analytics.com/ga.js'></script>
+	<!-- End ai2html - 2015-05-06 - 11:41 -->
+</div>
+
+<script>require(['foundation/main'], function() { require(["https://static01.nyt.com/newsgraphics/2015/05/05/nail-salon-graphics/4a000864ca9501bd9e55d22ffa6fafe38bddf8e6/build.js"]); });</script><!-- Pipeline: 2015-05-05-nail-salon-graphics | January 25, 2017, 07:09PM | 4a000864ca9501bd9e55d22ffa6fafe38bddf8e6 -->
+
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="501" data-total-count="30226" id="story-continues-90" tabindex="-1">En una entrevista, la esposa del propietario, quien solo aceptó dar su nombre de pila, Hwu, admitió que las ventas del salón estaban por encima de los 400.000 dólares al año. Durante una conversación en febrero, después de que su marido la dejara en el salón en su camioneta Cadillac, Hwu dijo que a algunos principiantes no se les pagan 10 diarios. Señaló a un varón manicurista en su primer día de trabajo: “Si no demuestra que tiene futuro, se irá con las manos vacías”, aseguró.</p>
+<p class="story-body-text story-content" data-para-count="426" data-total-count="30652" id="story-continues-91" tabindex="-1">Los propietarios de Iris Nails, una cadena con locales en Manhattan y Brooklyn, cuentan con siete salones que generaron ventas por 8 millones al año, de acuerdo con un artículo del año 2012 en Korea Daily, un periódico coreano-estadounidense. En los dos locales de Iris que se encuentran en Madison Avenue, las empleadas con mayor antigüedad revelaron que los sueldos iniciales oscilan entre los 30 y 40 dólares diarios.</p>
+<p class="story-body-text story-content" data-para-count="852" data-total-count="31504" id="story-continues-92" tabindex="-1">La diferencia entre la vida de algunos propietarios y sus empleados es bastante marcada. Sophia Hong, propietaria de Madison Nails en Scarsdale, en el estado de Nueva York, se enorgullece de su colección de arte que incluye obras de Park Soo Keun, un artista coreano cuyo lienzo que retrata a personas alrededor de un árbol se subastó por casi 2 millones de dólares en Christie’s en 2012. Las obras se exhiben en su casa en Bayside, Queens, una de las muchas propiedades que posee. Según los registros, también es dueña de un apartamento en Manhattan en un lujoso edificio con vista al Columbus Circle. En 2010 fue demandada por una empleada de su salón en Scarsdale por no pagarle tiempo extra; el abogado de la manicurista manifestó que se llegó a un acuerdo para dar por terminada la demanda. Hong declinó hacer comentarios al respecto.</p>
+<p class="story-body-text story-content" data-para-count="487" data-total-count="31991" id="story-continues-93" tabindex="-1">En los pocos casos en los que los propietarios son declarados culpables del robo de salarios, los salones se venden a toda prisa, algunas veces a parientes. Los dueños originales desaparecen, junto con sus activos, cuentan los fiscales. Y si no lo hacen resulta difícil cobrar los sueldos. Los empresarios pueden alegar que no tienen los medios para pagar y muchas veces es imposible probar lo contrario, debido a lo poco confiables que son los registros financieros de estos negocios.</p>
+<p class="story-body-text story-content" data-para-count="478" data-total-count="32469" id="story-continues-94" tabindex="-1">A pesar de que se dictó a su favor una resolución, sin precedentes, por 474.000 dólares en 2012 por el pago de salarios por debajo del mínimo, seis manicuristas de una cadena de salones llamada Babi en Long Island no han recibido ni la cuarta parte de esa suma a la fecha. El dueño de la cadena, In Bae Kim, alegó que no tenía dinero, aunque sus registros contables demuestran que vendió su casa en 1,13 millones y un local comercial en 2 millones poco antes del juicio.</p>
+<p class="story-body-text story-content" data-para-count="234" data-total-count="32703" id="story-continues-95" tabindex="-1">Kim fue arrestado el año pasado por la procuraduría de justicia estatal por acosar a una empleada en su nuevo empleo; el 3 de enero se declaró culpable de actuar en forma inadecuada y fue sentenciado a pasar ocho días en prisión.</p>
+<h2 class="story-subheading story-content">Falta de investigaciones</h2>
+<p class="story-body-text story-content" data-para-count="401" data-total-count="33104" id="story-continues-97" tabindex="-1">Durante los casi tres meses que Ren trabajó sin sueldo, como muchas otras manicuristas, en el salón de uñas de Long Island, nunca supo que eso era ilegal ni que el sueldo de 30 dólares diarios que su patrón acabó pagándole también era ilegal por ser inferior al mínimo. Como inmigrante se sentía contenta de poder trabajar y tenía miedo de quejarse. Además, ¿quién le haría caso?, dijo.</p>
+<p class="story-body-text story-content" data-para-count="516" data-total-count="33620" id="story-continues-98" tabindex="-1">El Departamento del Trabajo es la entidad responsable de supervisar violaciones salariales en el estado de Nueva York. Un estudio hecho por The New York Times de la base de datos del departamento sobre violaciones a la ley desde el año 2008 encontró que el departamento comúnmente da inicio a dos o tres docenas de casos relacionados con salones de uñas al año en todo el estado. De acuerdo con los datos del censo, había más de 3600 salones de uñas en el estado en 2012, que es la cifra anual más reciente.</p>
+<p class="story-body-text story-content" data-para-count="485" data-total-count="34105" id="story-continues-99" tabindex="-1">Los datos muestran que el departamento dio inicio a la gran mayoría de los casos en respuesta a quejas de trabajadores, en lugar de efectuar sus propias investigaciones. Un equipo que trabaja encubierto lleva a cabo visitas de inspección de rutina a negocios que están en sospecha de violar la ley, pero la agencia nunca había llevado a cabo visitas de inspección a los salones sino hasta el año pasado, según confirmó Christopher White, portavoz del Departamento del Trabajo.</p>
+<p class="story-body-text story-content" data-para-count="397" data-total-count="34502" id="story-continues-100" tabindex="-1">El mes pasado, White declinó dar más información sobre los salones en relación con la operación o las violaciones encontradas, debido a que la investigación seguía en curso. Pero una revisión de los 37 casos iniciados en 2014 mostró que casi un tercio de ellos tenía que ver con locales de una misma cadena, Envy Nails, la que enfrenta una demanda grupal presentada por sus trabajadoras.</p>
+<figure id="media-100000003669371" class="media photo media-100000003669371 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb10-copy-ES/NAILStest14-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-102">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb10-copy-ES/NAILStest14-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb10-copy-ES/NAILStest14-superJumbo.jpg" data-mediaviewer-caption="Una clienta selecciona una combinaci&amp;oacute;n de color para retocar sus u&amp;ntilde;as." data-mediaviewer-credit="Nicole Bengiveno/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb10-copy-ES/NAILStest14-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Una clienta selecciona una combinaci&amp;oacute;n de color para retocar sus u&amp;ntilde;as.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Nicole Bengiveno/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="282" data-total-count="34784" id="story-continues-102" tabindex="-1">Cuando el departamento sí investiga a un salón, la agencia descubre que en más del 80 por ciento de los casos los trabajadores no han recibido sueldos o se les ha pagado por debajo del mínimo, y trata de recuperar el dinero, según consta en el análisis efectuado por el Times.</p>
+<p class="story-body-text story-content" data-para-count="418" data-total-count="35202" id="story-continues-103" tabindex="-1">El departamento se negó a conceder una entrevista formal con alguno de sus funcionarios. Tuvieron que pasar nueve meses de solicitudes de información continuas para que el departamento entregara parte de su base de datos de casos de violaciones a la ley. Solo una minoría de las trabajadoras entrevistadas por este diario dijo haber visto alguna vez a un investigador de algún organismo gubernamental en su salón.</p>
+<p class="story-body-text story-content" data-para-count="563" data-total-count="35765" id="story-continues-104" tabindex="-1">De los 115 investigadores que tiene el Departamento del Trabajo en todo el estado, 56 se encuentran en la ciudad de Nueva York, de los cuales 18 hablan español y ocho hablan chino, una herramienta básica para interrogar a los trabajadores inmigrantes a fin de descubrir si están siendo explotados. Pero según información del departamento, solo dos hablan coreano y ninguno habla nepalí, el idioma que habla un creciente número de empleados. Los funcionarios de esta institución dicen que todos sus inspectores tienen acceso a servicios de interpretación.</p>
+<p class="story-body-text story-content" data-para-count="528" data-total-count="36293" id="story-continues-105" tabindex="-1">Cuando los investigadores tratan de entrevistarlas, las manicuristas muchas veces se muestran renuentes a cooperar, más que en ninguna otra industria, como reveló un funcionario del Departamento del Trabajo que habló bajo condición de anonimato, pues no se le permite hablar con reporteros. “Es la única industria en la que vemos esto”, dijo la fuente, al explicar que eso es un indicador de qué tan generalizada es la explotación en los salones de uñas. “Esta industria se sirve del miedo para operar”, explica.</p>
+<p class="story-body-text story-content" data-para-count="360" data-total-count="36653" id="story-continues-106" tabindex="-1">Las empleadas deben contar con un permiso, pero esta es otra área en la que el cumplimiento de la ley no es estricto. En el estado hay casi 30.000 técnicos en uñas con permiso de trabajo, conforme al Departamento de Estado de Nueva York, pero varias manicuristas, como Ren, trabajan sin permiso y a menudo los permisos se falsifican, se compran y se venden.</p>
+<p class="story-body-text story-content" data-para-count="479" data-total-count="37132" id="story-continues-107" tabindex="-1">Las trabajadoras cuentan que cuando las agencias gubernamentales llevan a cabo una revisión a los empleados es fácil evadirla. Lili, manicurista ecuatoriana que cada mañana aborda una camioneta en Flushing junto a Ren, ríe cuando recuerda la ocasión en que los inspectores estatales aparecieron en el salón del condado de Westchester donde trabaja. Al verlos, su jefe les gritó a todas las empleadas sin permiso, que eran 10, que salieran sin demora por la puerta trasera.</p>
+<p class="story-body-text story-content" data-para-count="233" data-total-count="37365" id="story-continues-108" tabindex="-1">“Así que salimos, nos subimos a un auto y dimos vueltas por el vecindario. Veinte o treinta minutos más tarde regresamos. Después de que se habían ido, nos pusimos nuestros uniformes de nuevo y regresamos a trabajar”, cuenta.</p>
+<h2 class="story-subheading story-content">No hay reembolsos</h2>
+<p class="story-body-text story-content" data-para-count="370" data-total-count="37735" id="story-continues-110" tabindex="-1">El otoño pasado los padres de Ren llegaron de China porque se habían quedado sin trabajo. Su madre era vendedora de seguros y su padre es chef, además, extrañaban a su única hija. Incluidas las visitas, ya eran ocho las personas que tenían que acomodarse en el apartamento de una habitación; así que Ren y sus padres tuvieron que encontrar otro lugar para vivir.</p>
+<p class="story-body-text story-content" data-para-count="327" data-total-count="38062" id="story-continues-111" tabindex="-1">La manicurista tomó a su pez y la familia se instaló a unas cuantas calles sobre Union Street, en un apartamento en un sótano frío y húmedo, donde los tres compartían una habitación por 830 dólares mensuales. En el trabajo Ren obtuvo un aumento de sueldo, lo que le levantó el ánimo: ahora ganaba 40 dólares diarios.</p>
+<p class="story-body-text story-content" data-para-count="370" data-total-count="38432" id="story-continues-112" tabindex="-1">Inspirada por su prima que se había inscrito nuevamente en clases de inglés, Ren hizo lo mismo en octubre, tres días a la semana. Esperaba que la escuela la ayudaría a dejar este trabajo que había llegado a odiar, pero algunos días le dolían tanto las manos que no podía asistir a clase, incapaz de sostener el lápiz. Otros días simplemente estaba muy cansada.</p>
+<figure id="media-100000003669372" class="media photo media-100000003669372 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb11-copy-ES/nailstest2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-114">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb11-copy-ES/nailstest2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb11-copy-ES/nailstest2-superJumbo.jpg" data-mediaviewer-caption="Jing Ren, de 21 a&amp;ntilde;os, pasa su d&amp;iacute;a libre de la escuela y del trabajo haciendo encargos en el vecindario de Queens donde vive." data-mediaviewer-credit="Nicole Bengiveno/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2015/04/30/nyregion/10nailsweb11-copy-ES/nailstest2-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Jing Ren, de 21 a&amp;ntilde;os, pasa su d&amp;iacute;a libre de la escuela y del trabajo haciendo encargos en el vecindario de Queens donde vive.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Nicole Bengiveno/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="662" data-total-count="39094" id="story-continues-114" tabindex="-1">Poco antes de que acabara el primer semestre de sus clases de inglés, Ren pidió otro aumento de sueldo; fue entonces cuando se enteró de que había dos listas de precios en el salón. Una es para los clientes y la otra está anotada en un cuaderno que no está a la vista y en ella están los precios que las empleadas deben pagar al propietario para aprender nuevas habilidades: la depilación de cejas con cera cuesta 100 dólares, al igual que entrenarse para aplicar uñas de gel y dejar que se sequen con luz ultravioleta. Un aumento implicaba aprender una nueva técnica, su jefe sugirió el depilado de cejas y las uñas de gel, y la cuota en efectivo.</p>
+<p class="story-body-text story-content" data-para-count="458" data-total-count="39552" id="story-continues-115" tabindex="-1">Ren estaba en la camioneta del salón de uñas cuando su jefe le habló del dinero que tenía que pagar, mientras la llevaba a otro salón de Long Island que también es de su propiedad. El dueño distribuye a las empleadas entre los dos locales, dependiendo del que tenga mayor clientela. Un iPad colocado sobre un soporte mostraba transmisiones de video de ambos salones. Ren reaccionó ante la nueva cuota con una exaltación poco característica de ella.</p>
+<p class="story-body-text story-content" data-para-count="255" data-total-count="39807" id="story-continues-116" tabindex="-1">Su jefe hizo una concesión. Le haría un 50 por ciento de descuento. Ella no aceptó. “Ya pagué la primera vez que vine. Ahora soy empleada y he estado aquí por mucho tiempo. ¿Por qué aún tengo que pagar para aprender nuevas habilidades?”, dijo.</p>
+<p class="story-body-text story-content" data-para-count="302" data-total-count="40109" id="story-continues-117" tabindex="-1">En una entrevista, el jefe de Ren dijo que las cuotas de capacitación eran “depósitos” para que las empleadas no se fueran a otro salón con sus nuevas habilidades y que, al final, se les reembolsaban. Ren aclaró que nunca recibió los 100 dólares que tuvo que pagar para que le dieran trabajo.</p>
+<p class="story-body-text story-content" data-para-count="212" data-total-count="40321" id="story-continues-118" tabindex="-1">Después de aquel paseo en la camioneta, pasó semanas soñando renunciar. Pero había otro semestre de clases de inglés en la primavera y, aunque sus padres le pedían que los dejara ayudarla, no podían solos.</p>
+<p class="story-body-text story-content" data-para-count="261" data-total-count="40582" id="story-continues-119" tabindex="-1">El último insulto fue un sobre de color rojo con el símbolo chino para la felicidad y la prosperidad grabado en dorado, un regalo por el Año Nuevo Lunar de la tradición china, que su jefe puso en sus manos en febrero. Al abrirlo encontró sólo 20 dólares.</p>
+<p class="story-body-text story-content" data-para-count="234" data-total-count="40816" id="story-continues-120" tabindex="-1">Renunció el 8 de marzo. Su jefe no dijo nada; una colega le dio un abrazo de despedida. Después de diez meses había ganado unos 10.000 dólares, dijo. Hace un mes encontró un trabajo de 65 dólares diarios en otro salón de uñas.</p>
+<p class="story-body-text story-content" data-para-count="101" data-total-count="40917" id="story-continues-121" tabindex="-1">Para entonces, sus padres también habían encontrado empleo. Su padre es cocinero en un restaurante.</p>
+<p class="story-body-text story-content" data-para-count="60" data-total-count="40977" id="story-continues-122" tabindex="-1">¿Su madre? Se volvió manicurista, por 30 dólares diarios.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Sarah Cohen, Jiha Ham, Jeanne Li, Yuhan Liu, Julie Turkewitz, Isvett Verde, Yeong-Ung Yang y Heyang Zhang colaboraron en el reportaje. Susan C. Beachy contribuyó con la investigación.</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/discriminacion-etnica/" rel="tag">discriminación étnica</a>, <a href="https://www.nytimes.com/es/tag/explotacion-laboral/" rel="tag">explotación laboral</a>, <a href="https://www.nytimes.com/es/tag/manicura/" rel="tag">manicura</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2015/05/07/un-trabajo-tan-duro-como-las-unas/"
+				data-title="Noticias: Un trabajo tan duro como las uñas"
+				data-author="POR SARAH MASLIN NIR"
+				data-media=""
+				data-description="Las manicuristas en Nueva York son explotadas, sufren discriminación étnica y otros abusos, descubrió una investigación de The New York Times."
+				data-publish-date="7 de mayo de 2015"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":1001,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

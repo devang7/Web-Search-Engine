@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004803928"/>
+<meta name="hdl" content="Templos para los lectores viajeros: librerías alrededor del mundo que debes conocer" />
+<meta name="col" content="Cultura" id="column-name" />
+<meta name="pdate" content="20161213" />
+<meta name="utime" content="20161213160041" />
+<meta name="ptime" content="20161213160041" />
+<meta name="DISPLAYDATE" content="Dec. 13, 2016" />
+<meta name="dat" content="Dec. 13, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="librerias-alrededor-del-mundo-el-pendulo-shakespeare-and-company-paris" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/12/13/librerias-alrededor-del-mundo-el-pendulo-shakespeare-and-company-paris/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Templos para los lectores viajeros: librerías alrededor del mundo que debes conocer" />
+<meta property="og:description" content="De la Ciudad de México a Hangzhou, en China, las librerías son destinos en si mismos. Este es un recorrido por algunas de las más hermosas del planeta." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/12/11/travel/11BOOKSPORTO/11BOOKSPORTO-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-12-13" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/12/13/librerias-alrededor-del-mundo-el-pendulo-shakespeare-and-company-paris/" />
+<meta property="twitter:title" content="Templos para los lectores viajeros: librerías alrededor del mundo que debes conocer" />
+<meta property="twitter:description" content="De la Ciudad de México a Hangzhou, en China, las librerías son destinos en si mismos. Este es un recorrido por algunas de las más hermosas del planeta." />
+<meta name="author" content="The New York Times" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por The New York Times" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="cultura" />
+<meta name="cd12" content="viajes" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="cultura" />
+<meta name="ser" content="viajes" />
+<meta name="id" content="100000004803928"/>
+<meta name="wordCount" content="2545"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/12/13/librerias-alrededor-del-mundo-el-pendulo-shakespeare-and-company-paris/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=12&amp;day=13&amp;name=librerias-alrededor-del-mundo-el-pendulo-shakespeare-and-company-paris">
+<meta name="PT" content="article">
+<meta name="article:section" content="Cultura">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/6?exclude=31180">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/12\/13\/librerias-alrededor-del-mundo-el-pendulo-shakespeare-and-company-paris\/"},"headline":"Templos para los lectores viajeros: librer\u00edas alrededor del mundo que debes conocer","datePublished":"2016-12-13T16:00:41+00:00","dateModified":"2016-12-13T11:23:46+00:00","author":{"@type":"Person","name":"dulce.ramos"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/12\/11\/travel\/11BOOKSPORTO\/11BOOKSPORTO-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"De la Ciudad de M\u00e9xico a Hangzhou, en China, las librer\u00edas son destinos en si mismos. Este es un recorrido por algunas de las m\u00e1s hermosas del planeta."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/12/13/librerias-alrededor-del-mundo-el-pendulo-shakespeare-and-company-paris/" hreflang="es" />
+<meta name="dfp-ad-unit-path" content="cultura/viajes" />
+<title>Templos para los lectores viajeros: librerías alrededor del mundo que debes conocer &#8211; Español</title>
+<link rel="canonical" href="https://www.nytimes.com/es/2016/12/13/librerias-alrededor-del-mundo-el-pendulo-shakespeare-and-company-paris/" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/12/13/librerias-alrededor-del-mundo-el-pendulo-shakespeare-and-company-paris/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+		<script src="https://a1.nyt.com/assets/article/latest/js/article/common/layout.js"></script>
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-31180 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+					<span class="pipe">|</span>
+				Templos para los lectores viajeros: librerías alrededor del mundo que debes conocer
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/12/13/librerias-alrededor-del-mundo-el-pendulo-shakespeare-and-company-paris/"
+					data-title="Cultura: Templos para los lectores viajeros: librerías alrededor del mundo que debes conocer"
+					data-author="POR THE NEW YORK TIMES"
+					data-media=""
+					data-description="De la Ciudad de México a Hangzhou, en China, las librerías son destinos en si mismos. Este es un recorrido por algunas de las más hermosas del planeta."
+					data-publish-date="13 de diciembre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2hsmYxJ">http://nyti.ms/2hsmYxJ</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+	
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main has-full-bleed-image-lede">
+	<header id="story-header" class="story-header">
+			<figure id="media-100000004805347" class="media cover photo layout-horizontal-full-bleed" data-bleed-style="full-bleed" itemid="https://static01.nyt.com/images/2016/12/11/travel/11BOOKSPORTO/11BOOKSPORTO-articleLarge.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="presentation">
+				<span class="visually-hidden"></span>
+				<div class="image">
+					<img
+						src="https://static01.nyt.com/images/2016/12/11/travel/11BOOKSPORTO/11BOOKSPORTO-articleLarge.jpg"
+						alt="Livraria Lello en Porto, Portugal, convoca a los fans de las novelas de Harry Potter. "
+						data-jumbosrc="https://static01.nyt.com/images/2016/12/11/travel/11BOOKSPORTO/11BOOKSPORTO-jumbo.jpg"
+						data-superjumbosrc="https://static01.nyt.com/images/2016/12/11/travel/11BOOKSPORTO/11BOOKSPORTO-superJumbo.jpg"
+						id="media-image-100000004805347"
+					>
+				</div>
+				<figcaption id="media-caption-100000004805347" class="caption" itemprop="caption description">
+					<span class="caption-text">Livraria Lello en Porto, Portugal, convoca a los fans de las novelas de Harry Potter. </span>
+
+					<span class="credit" itemprop="copyrightHolder">
+						<span class="visually-hidden">crédito</span>
+						Daniel Rodrigues para The New York Times
+					</span>
+				</figcaption>
+				<meta itemprop="height" content="400">
+				<meta itemprop="width" content="600">
+			</figure>
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/viajes/">Viajes</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Templos para los lectores viajeros: librerías alrededor del mundo que debes conocer</h1>
+				<p itemprop="headline" id="story-deck" class="deck">De la Ciudad de México a Hangzhou, en China, las librerías son destinos en si mismos. Este es un recorrido por algunas de las más hermosas del planeta.</p>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">The New York Times</span>
+</span>
+
+					<time class="dateline" datetime="2016-12-13">13 de diciembre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/12/13/librerias-alrededor-del-mundo-el-pendulo-shakespeare-and-company-paris/"
+							data-title="Cultura: Templos para los lectores viajeros: librerías alrededor del mundo que debes conocer"
+							data-author="POR THE NEW YORK TIMES"
+							data-media=""
+							data-description="De la Ciudad de México a Hangzhou, en China, las librerías son destinos en si mismos. Este es un recorrido por algunas de las más hermosas del planeta."
+							data-publish-date="13 de diciembre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+			<script>
+				if (window.magnum && window.magnum.responsiveImages && window.magnum.responsiveImages.setCoverImage) {
+					window.magnum.responsiveImages.setCoverImage('100000004805347','full-bleed',400,600,0,0,0,0);
+				}
+			</script>
+
+			
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="15" data-total-count="15" id="story-continues-1" tabindex="-1">PORTO, PORTUGAL</p>
+<h4 class="story-subheading story-content">Livraria Lello</h4>
+
+<p class="story-body-text story-content" data-para-count="385" data-total-count="400" id="story-continues-3" tabindex="-1">Para los devoradores de esa exquisitez hecha de texto y celulosa mejor conocida como el libro, el barrio de Clérigos en Porto satisface todos los gustos. Vinotecas repletas de libros (<a href="http://www.cafecandelabro.com/library/" target="_blank">Café Candelabro</a>), restaurantes (<a href="http://www.restaurantebook.pt/" target="_blank">Restaurante Book</a>) y cafés (<a href="https://www.facebook.com/livrariadabaixa/" target="_blank">Livraria da Baixa</a>) llenan el distrito, que también es hogar de <a href="http://www.livrarialello.pt/en/" target="_blank">Livraria Lello</a>, una hermosa librería rebosante de tomos nuevos y antiguos.</p>
+<p class="story-body-text story-content" data-para-count="375" data-total-count="775" id="story-continues-4" tabindex="-1">La estructura de 110 años podría confundirse fácilmente con un una iglesia. Con capiteles en lo alto, la fachada finamente forjada al estilo gótico se abre hacia un espacio de techos altos con columnas, motivos medievales y un deslumbrante techo de vitrales que sobrevuela la atracción estelar: una sólida escalera doble de color rojo en espiral, como una hebra de ADN.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="188" data-total-count="963" id="story-continues-5" tabindex="-1">“La intención era hacer un edificio extraordinario&#8230; una catedral para el arte y las letras”, dijo uno de los propietarios, José Lello, cuyo bisabuelo fue uno de los fundadores.</p>
+<p class="story-body-text story-content" data-para-count="150" data-total-count="1113" id="story-continues-6" tabindex="-1">Tal como una catedral, la librería atrae a fervientes feligreses —hasta 3500 al día— que pagan una cuota de tres euros (cerca de 3,20 dólares).</p>
+<p class="story-body-text story-content" data-para-count="222" data-total-count="1335" id="story-continues-7" tabindex="-1">Algunos peregrinos son bibliófilos dispuestos a meterse de lleno en una de las librerías más vistosas de Europa. Muchos son discípulos del niño que se ha convertido en el santo patrono de Livraria Lello: <a href="https://www.nytimes.com/topic/subject/harry-potter?inline=nyt-classifier" target="_blank">Harry Potter</a>.</p>
+<p class="story-body-text story-content" data-para-count="241" data-total-count="1576" id="story-continues-8" tabindex="-1">Según se dice, J. K. Rowling se inspiró en el interior de la tienda, que conoció cuando daba clases de inglés en Porto a principios de los noventa. Por lo menos dos empleados de ese entonces recordaron a Rowling como clienta, dijo Lello.</p>
+<p class="story-body-text story-content" data-para-count="250" data-total-count="1826" id="story-continues-9" tabindex="-1">Matilde Linberg, la “coordinadora de turismo” de la tienda, dijo que había muchas similitudes entre su escalera &#8220;y la que se describe en la escuela de Hogwarts”, señaló, refiriéndose al colegio donde estudian Harry y sus amigos magos.</p>
+<p class="story-body-text story-content" data-para-count="17" data-total-count="1843" id="story-continues-10" tabindex="-1"><em>— SETH SHERWOOD</em></p>
+<figure id="media-100000004800975" class="media photo media-100000004800975 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION7/11DESTINATION7-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-12">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION7/11DESTINATION7-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION7/11DESTINATION7-superJumbo.jpg" data-mediaviewer-caption="El Péndulo in Mexico City serves as a cultural hub." data-mediaviewer-credit="Adriana Zehbrauskas for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION7/11DESTINATION7-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">El Péndulo in Mexico City serves as a cultural hub.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Adriana Zehbrauskas for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="17" data-total-count="1860" id="story-continues-12" tabindex="-1">CIUDAD DE MÉXICO</p>
+<h4 class="story-subheading story-content">El Péndulo</h4>
+
+<p class="story-body-text story-content" data-para-count="418" data-total-count="2278" id="story-continues-14" tabindex="-1">Con sus árboles ficus y macetas de trepadoras, El Péndulo (52-55-5280-4111), en la elegante zona de Polanco, es un refugio del incesante ritmo urbano. Los estantes se extienden por los muros del atrio  y una escalera curva llega a la galería del segundo piso, lo cual hace que el lugar se sienta más como una biblioteca que una librería, y crea la sensación de que estás ahí tanto para leer como para comprar.</p>
+<p class="story-body-text story-content" data-para-count="359" data-total-count="2637" id="story-continues-15" tabindex="-1">La decoración es simple: pisos de madera, pintura blanca y un techo de PVC corrugado que llena la tienda de luz natural. Si necesitas más ánimos, hay sofás donde puedes pedir café y hojear un libro o un periódico. Hay otras invitaciones más ingeniosas para reflexionar, como el péndulo que cuelga del techo y deja caer arena en una caja poco profunda.</p>
+<p class="story-body-text story-content" data-para-count="312" data-total-count="2949" id="story-continues-16" tabindex="-1">Además de tener colecciones de literatura en español y crítica literaria, hay secciones dedicadas a libros en inglés, novelas gráficas y discos de vinil. Como lo señaló un fanático, sus selecciones cuidadosas son muestra de que “los responsables de la tienda son lectores que se dirigen a lectores”.</p>
+<p class="story-body-text story-content" data-para-count="648" data-total-count="3597" id="story-continues-17" tabindex="-1">Y deben llegar a esos lectores, pues México estuvo en el penúltimo lugar de una encuesta de la Unesco en más de 100 países acerca de hábitos de lectura hace unos años; solo hay una librería en México por cada 200.000 habitantes, en comparación con España, por ejemplo, donde hay una por cada 8000. Cristóbal Pera, el director de la Wylie Agency España en Nueva York y antiguo residente de la Ciudad de México, dijo que el hecho ha originado una “singular tradición” en las librerías, entre ellas El Péndulo, que como iniciativa para atraer lectores incorporan cafés y áreas de esparcimiento que sirven como centros culturales.</p>
+<p class="story-body-text story-content" data-para-count="313" data-total-count="3910" id="story-continues-18" tabindex="-1">Las seis librerías de El Péndulo, todas en Ciudad de México, que llevan el nombre de “cafebrería”, sirven desayunos, bocadillos y café. La comida es aceptable. Es mejor que te dé hambre con una hora de lectura y después salir en busca de las opciones más auténticas que ofrece la Ciudad de México.</p>
+<p class="story-body-text story-content" data-para-count="20" data-total-count="3930" id="story-continues-19" tabindex="-1"><em>— VICTORIA BURNETT</em></p>
+<figure id="media-100000004800945" class="media photo media-100000004800945 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION1/11DESTINATION1-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-21">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION1/11DESTINATION1-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION1/11DESTINATION1-superJumbo.jpg" data-mediaviewer-caption="Zhongshuge Bookstore in China has a mirrored ceiling and optical illusions." data-mediaviewer-credit="Zhongshuge Bookstore"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION1/11DESTINATION1-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Zhongshuge Bookstore in China has a mirrored ceiling and optical illusions.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Zhongshuge Bookstore
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="15" data-total-count="3945" id="story-continues-21" tabindex="-1">HANGZHOU, CHINA<br /><h4 class="story-subheading story-content">Librería Zhongshuge</h4>
+</p>
+<p class="story-body-text story-content" data-para-count="664" data-total-count="4609" id="story-continues-22" tabindex="-1">En China, donde todos son adictos al internet y ahora se encuentra el mercado de comercio electrónico más grande del mundo, las librerías han tenido que reinventarse rápidamente para sobrevivir. Para la nueva sucursal de la librería china Zhongshuge en la calle Binsheng en Hangzhou, un centro tecnológico en auge que está a casi una hora al sureste de Shanghai en tren, esto significó transformar por completo el concepto de librería: en vez de hacer que los libros sean el único punto focal, los propietarios crearon un espacio de diseño lleno de ilusiones ópticas que atraen a millennials en busca de experiencias e incluso a lectores más jóvenes.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="485" data-total-count="5094" id="story-continues-23" tabindex="-1">Cuando entras a la tienda, los libros parecen alcanzar alturas imposibles y extenderse a la distancia, un efecto creado por la simetría perfecta de los estantes de madera y la ingeniosa disposición de los espejos en el techo y los muros. En un salón parecido a un anfiteatro, destinado a lecturas y conferencias, la ilusión se amplifica con el reflejo del muro curvo en el techo con espejos; se siente como si estuvieras completamente rodeado de un arcoíris de columnas de libros.</p>
+<p class="story-body-text story-content" data-para-count="389" data-total-count="5483" id="story-continues-24" tabindex="-1">Li Xiang, la diseñadora de la tienda, dijo que la idea era hacer que los jóvenes entraran a los espacios y animarlos a quedarse ahí durante horas mientras leen un libro o disfrutan un tiramisú y un exprés en el café. En una tarde reciente, eso era precisamente lo que los clientes hacían; la tienda estaba llena de veinteañeros que hojeaban novelas, sin un solo celular a la vista.</p>
+<p class="story-body-text story-content" data-para-count="103" data-total-count="5586" id="story-continues-25" tabindex="-1">“No quería que fuera una librería tradicional; preferí que fuera una galería de arte”, dijo Li.</p>
+<p class="story-body-text story-content" data-para-count="6" data-total-count="5592" id="story-continues-26" tabindex="-1">&nbsp;</p>
+<p class="story-body-text story-content" data-para-count="18" data-total-count="5610" id="story-continues-27" tabindex="-1"><em>— JUSTIN BERGMAN</em></p>
+<figure id="media-100000004800948" class="media photo media-100000004800948 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION2/11DESTINATION2-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-29">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION2/11DESTINATION2-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION2/11DESTINATION2-superJumbo.jpg" data-mediaviewer-caption="Shakespeare and Company in Paris has a team for web orders and has added a cafe." data-mediaviewer-credit="Alex Cretey-Systermans for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION2/11DESTINATION2-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Shakespeare and Company in Paris has a team for web orders and has added a cafe.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Alex Cretey-Systermans for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="6" data-total-count="5616" id="story-continues-29" tabindex="-1">PARÍS</p>
+<h4 class="story-subheading story-content">Shakespeare and Company</h4>
+
+<p class="story-body-text story-content" data-para-count="608" data-total-count="6224" id="story-continues-31" tabindex="-1">Desde sus máquinas de escribir antiguas, hasta sus tomos agrietados en estantes que crujen, Shakespeare and Company, la legendaria librería parisina, ofrece a los visitantes una oportunidad de viajar en una cápsula del tiempo. Lo mítico susurra desde las esquinas mohosas: Allen Ginsberg alguna vez se desnudó ahí para una lectura de poesía. Anaïs Nin dejó su testamento bajo la cama del excéntrico fundador de la librería, George Whitman, quien hospedó a legiones de escritores antes de su muerte en 2011. Henry Miller alabó el lugar simplemente como “un país de las maravillas de libros”.</p>
+<p class="story-body-text story-content" data-para-count="461" data-total-count="6685" id="story-continues-32" tabindex="-1">Todo eso ha ocurrido desde que Whitman abrió la tienda en 1951, en el número 37 de la calle de la Bûcherie, donde antes se encontraba un monasterio medieval, frente a las torres sombrías de la Catedral de Notre-Dame. Con sus cubículos bohemios y bancas flojas que también sirven de camas para escritores imprevisibles, conocidos como <em><a href="https://shakespeareandcompany.com/38/About%20Tumbleweeds" target="_blank">Tumbleweeds</a></em>, la librería ha atraído a millones de almas curiosas que buscan empaparse del espíritu de tiempos pasados.</p>
+<p class="story-body-text story-content" data-para-count="640" data-total-count="7325" id="story-continues-33" tabindex="-1">Sin embargo, en estos días, Shakespeare and Company está intentando adaptarse más al siglo XXI. Desde la muerte de Whitman, su hija, Sylvia, ha trabajado para lograr un equilibrio entre la preservación del pasado legendario de la tienda y procurar un escenario vibrante para obras modernas. Una remodelación reciente de la planta baja le da prominencia a los escritores contemporáneos, mientras que otro espacio alberga un equipo electrónico para pedidos en línea. Una abundante programación de eventos presenta a autores establecidos, recientemente se presentaron Don DeLillo y Marlon James, el ganador del premio <a href="https://www.nytimes.com/topic/subject/man-booker-prize?inline=nyt-classifier" target="_blank">Man Booker 2015</a>.</p>
+<p class="story-body-text story-content" data-para-count="215" data-total-count="7540" id="story-continues-34" tabindex="-1">“Así es como debería ser una librería”, dijo Adam Biles, el gerente de eventos de la tienda. “No una pieza de museo, sino un lugar donde la gente puede ir a descubrir cosas nuevas y obtener ideas nuevas”.</p>
+<p class="story-body-text story-content" data-para-count="580" data-total-count="8120" id="story-continues-35" tabindex="-1">También está Shakespeare and Company Café, que abrió al lado en octubre de 2015. Debajo de estantes de libros viejos, los visitantes pueden sentarse con un capuchino o una rebanada de pastel sin gluten y leer sin que los molesten. Si hay quienes necesiten un lugar más callado, pueden subir por las crujientes escaleras de la librería principal al viejo salón de lectura. En el portal de la entrada, un letrero que Whitman puso no se ha borrado a lo largo de los años: “No seas poco hospitalario con los extraños, puede que sean ángeles disfrazados”.<br /><em><br />— LIZ ALDERMAN</em></p>
+<figure id="media-100000004800964" class="media photo media-100000004800964 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION5/11DESTINATION5-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-37">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION5/11DESTINATION5-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION5/11DESTINATION5-superJumbo.jpg" data-mediaviewer-caption="Atlantis Books in Santorini, Greece, holds a film festival and tzatziki competitions." data-mediaviewer-credit="Eirini Vourloumis for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION5/11DESTINATION5-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Atlantis Books in Santorini, Greece, holds a film festival and tzatziki competitions.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Eirini Vourloumis for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="17" data-total-count="8137" id="story-continues-37" tabindex="-1">SANTORINI, GRECIA</p>
+<h4 class="story-subheading story-content">Atlantis Books</h4>
+
+<p class="story-body-text story-content" data-para-count="438" data-total-count="8575" id="story-continues-39" tabindex="-1">Entre la ostentación y el escándalo de las tiendas para turistas en el paraíso vacacional de Santorini, una escalera encalada se hunde en la tierra. Abajo, una entrada empedrada llega a una guarida digna de un Hobbit. Adentro hay un tesoro oculto: miles de títulos de literatura, poesía y cuento, además de libros para niños y libros de viejo que se extienden en los estantes de madera flotante y las tarimas salidas de la chatarra</p>
+<p class="story-body-text story-content" data-para-count="644" data-total-count="9219" id="story-continues-40" tabindex="-1">Este capullo literario es <a href="http://atlantisbooks.org/" target="_blank">Atlantis Books</a>, una librería extravagante que abrió en 2004 en la isla y que, cuenta la leyenda, es el lugar donde se encontraba la ciudad perdida de Atlantis. Situada en un acantilado de piedra caliza, por encima del Mar Egeo, la tienda se ha convertido en un destino de culto para viajeros que buscan relajarse bajo el sol griego con una buena lectura en inglés, francés, italiano u otras lenguas. Bajo la mirada constante de Naxie, el gato calicó de la tienda, los visitantes se encontrarán con libros raros y antiguos, ediciones de bolsillo nuevas y usadas, clásicos modernos y tesoros de literatura griega.</p>
+<p class="story-body-text story-content" data-para-count="468" data-total-count="9687" id="story-continues-41" tabindex="-1">“Lo único que nos importa es que los libros sean buenos”, dijo Craig Walzer, uno de los fundadores y expatriado estadounidense. A los 23 años comenzó la tienda originalmente un poco en broma. Después de enamorarse de la isla, llenó una furgoneta en Cambridge, Inglaterra, con libros y amigos, y pasó una temporada en la ciudad de Oia, donde consiguió un edificio vacío frente a los atardeceres color ocre, instaló estantes y libros, e inauguró la tienda.</p>
+<p class="story-body-text story-content" data-para-count="285" data-total-count="9972" id="story-continues-42" tabindex="-1">Hoy, la librería organiza festivales literarios con lecturas de los autores. Hay presentaciones musicales, un festival de cine e incluso competencias de <a href="https://cooking.nytimes.com/recipes/1016438-tzatziki" target="_blank">tzatziki</a> en la terraza, la cual tiene una hermosa vista de la caldera volcánica donde se creía que Atlantis se hundió en el mar.</p>
+<p class="story-body-text story-content" data-para-count="417" data-total-count="10389" id="story-continues-43" tabindex="-1">Para que los vacacionistas no se preocupen de atascar de libros sus maletas llenas, Atlantis tiene una solución. Walzer abrió recientemente un pequeño servicio en Nueva York con delgados títulos hechos a mano, desde Edgar Allan Poe hasta Platón, que se pueden enviar a casa o a la casa de sus amigos. También se pueden ordenar copias en línea para la gente que desea una pequeña rebanada de Grecia o Atlantis.</p>
+<p class="story-body-text story-content" data-para-count="16" data-total-count="10405" id="story-continues-44" tabindex="-1"><em>— LIZ ALDERMAN</em></p>
+<figure id="media-100000004800972" class="media photo media-100000004800972 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION8/11DESTINATION8-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-46">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION8/11DESTINATION8-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION8/11DESTINATION8-superJumbo.jpg" data-mediaviewer-caption="El Ateneo Grand Splendid, a former theater in Buenos Aires, attracts readers to its balcony seats." data-mediaviewer-credit="Horacio Paone for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION8/11DESTINATION8-master1050.jpg"/>
+		<meta itemprop="height" content="697" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">El Ateneo Grand Splendid, a former theater in Buenos Aires, attracts readers to its balcony seats.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Horacio Paone for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="12" data-total-count="10417" id="story-continues-46" tabindex="-1">BUENOS AIRES</p>
+<h4 class="story-subheading story-content">El Ateneo Grand Splendid</h4>
+
+<p class="story-body-text story-content" data-para-count="775" data-total-count="11192" id="story-continues-48" tabindex="-1"><a href="http://www.yenny-elateneo.com/local/grand-splendid/" target="_blank">El Ateneo Grand Splendid</a> es uno de los puntos emblemáticos más notables de esta ciudad, un espacio extenso cuya historia refleja el desarrollo cultural argentino. La grandeza del antiguo teatro contrasta con la mercancía prosaica que ofrece la cadena de librerías que hoy posee este teatro: el interior abierto está rodeado de hileras de balcones que, en especial cuando se iluminan por las noches, hacen que sea más fácil imaginar el ballet, la ópera y las presentaciones de tango de hace un siglo. Más tarde se convirtió en el primer cine de Buenos Aires en proyectar películas con sonido, y algunos filmes tuvieron acompañamiento de una orquesta de tango en vivo. Incluso tuvo su propia estación de radio, LR4 Radio Spendid, que comenzó a transmitir en 1923.</p>
+<p class="story-body-text story-content" data-para-count="1038" data-total-count="12230" id="story-continues-49" tabindex="-1">El edificio se estaba cayendo a pedazos cuando la cadena El Ateneo lo convirtió en una librería en 2000; la remodelación fue hecha por el estudio de Fernando Manzone, arquitecto bonaerense, quien tuvo cuidado de dejar la mayoría de las florituras arquitectónicas intactas. El segundo y tercer piso, que alguna vez fueron balcones y palcos para la audiencia, aún tienen el soporte de pilares ornamentados y ahora están llenos de libros, además cuentan con cómodas sillas para leer. El techo con domo, con un fresco del muralista Nazareno Orlandi, sigue estando ahí. En la planta baja, al fondo de la tienda, está el escenario, aún adornado con telones rojos, y ahora tiene sillas y mesas: se ha convertido en un café, y se trata de un buen lugar para que turistas con pies cansados disfruten un café exprés. Los libros incluyen obras distribuidas por cadenas de librerías (hay una pequeña sección de libros en inglés) pero la selección de música es excelente, un pequeño recordatorio del patrimonio del Grand Spendid.</p>
+<p class="story-body-text story-content" data-para-count="25" data-total-count="12255" id="story-continues-50" tabindex="-1"><em>— NELL McSHANE WULFHART</em></p>
+<figure id="media-100000004800955" class="media photo media-100000004800955 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION4/11DESTINATION4-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-52">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION4/11DESTINATION4-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION4/11DESTINATION4-superJumbo.jpg" data-mediaviewer-caption="Quagga Rare Books and Art in South Africa also has whale ribs and giraffe skulls." data-mediaviewer-credit="Samantha Reinders for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/11/travel/11DESTINATION4/11DESTINATION4-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Quagga Rare Books and Art in South Africa also has whale ribs and giraffe skulls.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Samantha Reinders for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="20" data-total-count="12275" id="story-continues-52" tabindex="-1">KALK BAY, SUDÁFRICA</p>
+<h4 class="story-subheading story-content">Kalk Bay Books; Quagga Rare Books and Art</h4>
+
+<p class="story-body-text story-content" data-para-count="196" data-total-count="12471" id="story-continues-54" tabindex="-1">La aldea costera de Kalk Bay, a casi hora y media por la costa desde Ciudad del Cabo, es un casco pintoresco con boutiques contemporáneas, tiendas de fish-and-chips y un par de amadas librerías.</p>
+<p class="story-body-text story-content" data-para-count="868" data-total-count="13339" id="story-continues-55" tabindex="-1">Kalk Bay Books es la librería independiente por excelencia, con estantes de piso a techo rebosantes de éxitos literarios, una acogedora zona con sillas y simpáticos empleados más que dispuestos a compartir sus opiniones acerca de autores locales… quizá es mejor ignorar Recipes for Love and Murder de Sally Andrew y mejor optar por An Imperfect Blessing de Nadia Davids. Una escalera de caracol llega a un ático desde donde se ve todo el espacio y se puede buscar entre los libros de segunda mano junto con las cajas de discos clásicos… hay de todo, desde Jesus Christ Superstar hasta Paul Simon. Kalk Bay Books también es un centro literario que atrae a autores como Barbara Kingsolver y John Maytham para lecturas e incluso un ocasional evento musical. Los lugareños saben que deben seguir su página de Facebook para tener la programación más actual.</p>
+<p class="story-body-text story-content" data-para-count="974" data-total-count="14313" id="story-continues-56" tabindex="-1">En la misma calle, Quagga Rare Books and Art es el tipo de lugar donde pasarás horas y regresarás con obras desconocidas que jamás habías sabido que necesitabas, pero de pronto ya no puedes imaginar tu vida sin ellas. La tienda laberíntica es un deleite de coleccionistas que también sirve de museo de rarezas: en cada superficie que no está llena de libros hay costillas de ballenas, cráneos de jirafas, cartas viejas para jugar, colmillos de facochero y más. Quagga se especializa en literatura africana y arte sudafricano, y querrás explorar el laberinto de habitaciones, viendo tomos viejos con títulos como Home Life on an Ostrich Farm y Medical, Poisonous, and Edible plants in Namibia. También se ofrecen mapas viejos enmarcados de Sudáfrica, lienzos náuticos del siglo XIX y esculturas de clavos de un artista de Kalk Bay, Eduard Ladan. El exterior pintado a mano de Quagga es una obra de arte en sí, y hace que el baluarte de 25 años sea imperdible.</p>
+<p class="story-body-text story-content" data-para-count="14" data-total-count="14327" id="story-continues-57" tabindex="-1"><em>— SARAH KHAN</em></p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/el-ateneo-grand-splendid/" rel="tag">El Ateneo Grand Splendid</a>, <a href="https://www.nytimes.com/es/tag/el-pendulo/" rel="tag">El Péndulo</a>, <a href="https://www.nytimes.com/es/tag/librerias/" rel="tag">librerías</a>, <a href="https://www.nytimes.com/es/tag/livraria-lello/" rel="tag">Livraria Lello</a>, <a href="https://www.nytimes.com/es/tag/shakespeare-and-company/" rel="tag">Shakespeare and Company</a>, <a href="https://www.nytimes.com/es/tag/viajes/" rel="tag">viajes</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/12/13/librerias-alrededor-del-mundo-el-pendulo-shakespeare-and-company-paris/"
+				data-title="Cultura: Templos para los lectores viajeros: librerías alrededor del mundo que debes conocer"
+				data-author="POR THE NEW YORK TIMES"
+				data-media=""
+				data-description="De la Ciudad de México a Hangzhou, en China, las librerías son destinos en si mismos. Este es un recorrido por algunas de las más hermosas del planeta."
+				data-publish-date="13 de diciembre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/06/aunque-muchos-predijeron-su-ocaso-los-libros-de-papel-se-mantienen/">
+					<div class="story-body">
+						<h3 class="kicker">Tecnología</h3>
+
+						<h2 class="headline">
+							<span class="title">Aunque muchos predijeron su ocaso, los libros de papel se mantienen</span>
+							<time class="dateline">6 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/09/02/us/02xp-books/02xp-books-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/12/puedes-leer-este-articulo-sin-distraerte/">
+					<div class="story-body">
+						<h3 class="kicker">Vida</h3>
+
+						<h2 class="headline">
+							<span class="title">¿Puedes leer este artículo sin distraerte?</span>
+							<time class="dateline">12 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/24/fashion/25MONOTASKING/25MONOTASKING-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/12/06/las-otras-apropiaciones-de-borges-y-bolano/">
+					<div class="story-body">
+						<h3 class="kicker">Ensayo</h3>
+
+						<h2 class="headline">
+							<span class="title">Las otras apropiaciones de Borges y Bolaño</span>
+							<time class="dateline">6 de diciembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/12/07/universal/es/6jordiES3/6jordiES3-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/10/13/bob-dylan-el-primer-nobel-del-futuro/">
+					<div class="story-body">
+						<h3 class="kicker">Libros</h3>
+
+						<h2 class="headline">
+							<span class="title">Bob Dylan, ¿el primer nobel del futuro?</span>
+							<time class="dateline">13 de octubre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/10/14/arts/14DYLAN/14DYLAN-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+			
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":904,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

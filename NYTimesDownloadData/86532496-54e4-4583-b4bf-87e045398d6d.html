@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004605182"/>
+<meta name="hdl" content="Estados Unidos perdió cientos de miles de armas en Irak y Afganistán" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20160912" />
+<meta name="utime" content="20160912091732" />
+<meta name="ptime" content="20160912091732" />
+<meta name="DISPLAYDATE" content="Sep. 12, 2016" />
+<meta name="dat" content="Sep. 12, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="estados-unidos-perdio-cientos-de-miles-de-armas-en-irak-y-afganistan" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/09/12/estados-unidos-perdio-cientos-de-miles-de-armas-en-irak-y-afganistan/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Estados Unidos perdió cientos de miles de armas en Irak y Afganistán" />
+<meta property="og:description" content="Un estudio demuestra que el Ejército de Estados Unidos falló en lo más básico a la hora de controlar las armas que enviaba a sus aliados en Irak y Afganistán: evitar que se perdieran. Ahora alimentan el mercado ilegal de armamento en internet" />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/08/23/magazine/23mag-guns/23mag-guns-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-09-12" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/09/12/estados-unidos-perdio-cientos-de-miles-de-armas-en-irak-y-afganistan/" />
+<meta property="twitter:title" content="Estados Unidos perdió cientos de miles de armas en Irak y Afganistán" />
+<meta property="twitter:description" content="Un estudio demuestra que el Ejército de Estados Unidos falló en lo más básico a la hora de controlar las armas que enviaba a sus aliados en Irak y Afganistán: evitar que se perdieran. Ahora alimentan el mercado ilegal de armamento en internet" />
+<meta name="author" content="C. J. Chivers" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por C. J. Chivers" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="estados-unidos" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="estados-unidos" />
+<meta name="id" content="100000004605182"/>
+<meta name="wordCount" content="3428"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/09/12/estados-unidos-perdio-cientos-de-miles-de-armas-en-irak-y-afganistan/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=09&amp;day=12&amp;name=estados-unidos-perdio-cientos-de-miles-de-armas-en-irak-y-afganistan">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=23778">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/09\/12\/estados-unidos-perdio-cientos-de-miles-de-armas-en-irak-y-afganistan\/"},"headline":"Estados Unidos perdi\u00f3 cientos de miles de armas en Irak y Afganist\u00e1n","datePublished":"2016-09-12T09:17:32+00:00","dateModified":"2016-09-12T09:17:32+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/08\/23\/magazine\/23mag-guns\/23mag-guns-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Un estudio demuestra que el Ej\u00e9rcito de Estados Unidos fall\u00f3 en lo m\u00e1s b\u00e1sico a la hora de controlar las armas que enviaba a sus aliados en Irak y Afganist\u00e1n: evitar que se perdieran. Ahora alimentan el mercado ilegal de armamento en internet"}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/09/12/estados-unidos-perdio-cientos-de-miles-de-armas-en-irak-y-afganistan/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/08/23/magazine/how-many-guns-did-the-us-lose-track-of-in-iraq-and-afghanistan-hundreds-of-thousands.html?rref=collection%2Fbyline%2Fc.-j.-chivers&amp;#038;action=click&amp;#038;contentCollection=undefined&amp;#038;region=stream&amp;#038;module=stream_unit&amp;#038;version=latest&amp;#038;contentPlacement=1&amp;#038;pgtype=collection" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/estadosunidos" />
+<title>Estados Unidos perdió cientos de miles de armas en Irak y Afganistán &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/08/23/magazine/how-many-guns-did-the-us-lose-track-of-in-iraq-and-afghanistan-hundreds-of-thousands.html?rref=collection%2Fbyline%2Fc.-j.-chivers&#038;action=click&#038;contentCollection=undefined&#038;region=stream&#038;module=stream_unit&#038;version=latest&#038;contentPlacement=1&#038;pgtype=collection" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/09/12/estados-unidos-perdio-cientos-de-miles-de-armas-en-irak-y-afganistan/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-23778 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Estados Unidos perdió cientos de miles de armas en Irak y Afganistán
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/09/12/estados-unidos-perdio-cientos-de-miles-de-armas-en-irak-y-afganistan/"
+					data-title="Noticias: Estados Unidos perdió cientos de miles de armas en Irak y Afganistán"
+					data-author="POR C. J. CHIVERS"
+					data-media=""
+					data-description="Un estudio demuestra que el Ejército de Estados Unidos falló en lo más básico a la hora de controlar las armas que enviaba a sus aliados en Irak y Afganistán: evitar que se perdieran. Ahora alimentan el mercado ilegal de armamento en internet"
+					data-publish-date="12 de septiembre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2cQLIO9">http://nyti.ms/2cQLIO9</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/estados-unidos/">Estados Unidos</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Estados Unidos perdió cientos de miles de armas en Irak y Afganistán</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">C. J. Chivers</span>
+</span>
+
+					<time class="dateline" datetime="2016-09-12">12 de septiembre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/09/12/estados-unidos-perdio-cientos-de-miles-de-armas-en-irak-y-afganistan/"
+							data-title="Noticias: Estados Unidos perdió cientos de miles de armas en Irak y Afganistán"
+							data-author="POR C. J. CHIVERS"
+							data-media=""
+							data-description="Un estudio demuestra que el Ejército de Estados Unidos falló en lo más básico a la hora de controlar las armas que enviaba a sus aliados en Irak y Afganistán: evitar que se perdieran. Ahora alimentan el mercado ilegal de armamento en internet"
+							data-publish-date="12 de septiembre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004607982" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/23/magazine/23mag-guns/23mag-guns-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/23/magazine/23mag-guns/23mag-guns-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/23/magazine/23mag-guns/23mag-guns-superJumbo.jpg" data-mediaviewer-caption="Iraqi soldiers after receiving new rifles from U.S. forces in Baghdad in May 2007." data-mediaviewer-credit="Ceerwan Aziz-Pool/Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/23/magazine/23mag-guns/23mag-guns-master1050.jpg"/>
+		<meta itemprop="height" content="666" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Iraqi soldiers after receiving new rifles from U.S. forces in Baghdad in May 2007.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Ceerwan Aziz-Pool/Getty Images
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/08/23/magazine/how-many-guns-did-the-us-lose-track-of-in-iraq-and-afghanistan-hundreds-of-thousands.html?rref=collection%2Fbyline%2Fc.-j.-chivers&#038;action=click&#038;contentCollection=undefined&#038;region=stream&#038;module=stream_unit&#038;version=latest&#038;contentPlacement=1&#038;pgtype=collection&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="394" data-total-count="394" id="story-continues-2" tabindex="-1">A principios de este año, un usuario de Facebook en Bagdad que tenía una cuenta bajo el nombre de Hussein Mahyawi publicó una fotografía de un fusil de asalto M4 que quería vender. Varios veteranos de la guerra de Irak lo reconocieron de inmediato. Era un arma de uso habitual en el Ejército de Estados Unidos, con mira telescópica militar y una calcomanía con un código de inventario.</p>
+<p class="story-body-text story-content" data-para-count="379" data-total-count="773" id="story-continues-3" tabindex="-1">Excepto por un detalle —traía una empuñadura de pistola que es el tipo de accesorios con los que los combatientes personalizan sus armas— era la viva imagen de las decenas de miles de M4 que el Pentágono le entregó a las fuerzas de seguridad iraquíes y a varias milicias aliadas, después de derrocar a Saddam Hussein en 2003. Y ahí estaba: subastándose en el mercado.</p>
+<p class="story-body-text story-content" data-para-count="534" data-total-count="1307" id="story-continues-4" tabindex="-1">¿Sorprende? No. Estados Unidos retiró a todas sus fuerzas de combate de Irak hace más de cuatro años y no han pasado más de dos desde que una cantidad mucho menor de tropas regresó a ese país para colaborar en la guerra contra el Estado Islámico, mientras tanto, la subasta de armas se ha vuelto una actividad común. Lo que Mahyawi vendía es una muestra de un fallo extraordinario y peligroso por parte de la rendición de cuentas a la que debe someterse cualquier protocolo militar: hacerle seguimiento al uso de las armas.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="464" data-total-count="1771" id="story-continues-5" tabindex="-1">Desde los atentados del 11 de septiembre, Estados Unidos ha enviado un número indefinido, inmenso, de armas de guerra a muchos de sus aliados tanto en Irak como en Afganistán. El Pentágono solo tiene una idea parcial de esa cantidad de armas, y respecto a dónde están, su conocimiento es mucho más difuso. La abundancia de armas provenientes de Estados Unidos que ahora aparecen en el mercado negro es uno de los problemas generados por la invasión de Irak.</p>
+<p class="story-body-text story-content" data-para-count="165" data-total-count="1936" id="story-continues-6" tabindex="-1">Una muestra del alcance de estas transferencias de armas y de lo difícil que es cuantificarlas se puede comprobar al examinar un proyecto dirigido por Iain Overton.</p>
+<p class="story-body-text story-content" data-para-count="325" data-total-count="2261" id="story-continues-7" tabindex="-1">Overton fue periodista de la BBC y ahora dirige Action on Armed Violence, una organización con sede en Londres que investiga y hace presión política contra la proliferación de armas y su uso contra civiles. Es autor de <em>The Way of the Gun</em>, un análisis poco optimista del papel que juegan las armas en nuestras sociedades.</p>
+<figure id="media-100000004552579" class="media photo media-100000004552579 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/07/30/world/middleeast/xxFalluja-slide-ZW8K/xxFalluja-slide-ZW8K-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-9">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/07/30/world/middleeast/xxFalluja-slide-ZW8K/xxFalluja-slide-ZW8K-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/07/30/world/middleeast/xxFalluja-slide-ZW8K/xxFalluja-slide-ZW8K-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Bryan Denton for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/07/30/world/middleeast/xxFalluja-slide-ZW8K/xxFalluja-slide-ZW8K-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Bryan Denton for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="970" data-total-count="3231" id="story-continues-9" tabindex="-1">Overton, junto con un pequeño equipo de investigadores, presentó varias solicitud de acceso a la información el año pasado y comenzó a revisar archivos del Pentágono correspondientes a un periodo de 14 años de contratos relacionados con fusiles, ametralladoras, accesorios y munición, tanto para las tropas estadounidenses como para sus aliados. Después cruzaron los datos con otros archivos públicos. Ahora, Overton divulgó esos datos junto a su análisis que abarca 412 contratos y merece que los miembros del Tratado sobre el Comercio de Armas reflexionen sobre sus hallazgos. El tratado, que entró en vigor en 2014 y del cual Estados Unidos es signatario, tiene la intención de impulsar la transparencia y la responsabilidad en la transferencia de armas convencionales para reducir las posibilidades de que terminen en las manos equivocadas, que es exactamente lo que las fuerzas armadas estadounidenses no han hecho en sus conflictos armados recientes.</p>
+<p class="story-body-text story-content" data-para-count="656" data-total-count="3887" id="story-continues-10" tabindex="-1">En conjunto, según lo descubierto por Overton, el Pentágono ha entregado más de 1.450.000 armas a las fuerzas de seguridad en Afganistán e Irak. Entre esas armas hay 978.000 fusiles, 266.000 pistolas y 112.000 ametralladoras. Estas transferencias forman un conjunto de armas de todo tipo y algunas son antiguas: los kalashnikovs que sobraron de la Guerra Fría, M16 y M4 recién producidos según las normas de la OTAN en fábricas de Estados Unidos, ametralladoras rusas y occidentales, fusiles para francotiradores, y pistolas de distinto origen y calibre entre las que hay Glock semiautomáticas, una pistola que en Irak suele venderse por internet.</p>
+<p class="story-body-text story-content" data-para-count="542" data-total-count="4429" id="story-continues-11" tabindex="-1">Muchos de los receptores de esas armas se convirtieron en aliados valientes e importantes en el campo de batalla. Pero otros no. En su conjunto, esas armas fueron parte de un inmenso y poco supervisado flujo de armamentos de una superpotencia hacia ejércitos y milicias debilitadas por su poco entrenamiento, deserción, corrupción y una serie de violaciones de los derechos humanos. Al conocer lo que sabemos sobre esas fuerzas, habría sido importante que mantuvieran el control de sus armas. Sin embargo, no sorprende que no lo hicieran.</p>
+<p class="story-body-text story-content" data-para-count="564" data-total-count="4993" id="story-continues-12" tabindex="-1">Para ilustrar lo azarosa que ha sido la supervisión de la distribución de armas, cinco meses después de que The New York Times preguntara por el recuento de armas ligeras entregadas a sus socios en Irak y Afganistán, el Pentágono dijo que sus registros mostraban que el número no llegaba a la mitad de lo mostrado por los investigadores, unas 700.000 en total. Esa cantidad, según Overton &#8220;solo incluye el 40 por ciento del total de armas ligeras entregadas por el gobierno de Estados Unidos que aparecen en los informes públicos del gobierno&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="788" data-total-count="5781" id="story-continues-13" tabindex="-1">Según el Pentágono, la diferencia entre ambas cifras se debe a que al principio, el Ejército de Estados Unidos trató de apoyar a dos gobiernos que estaban muy involucrados en la guerra. Mark Wright, portavoz del Pentágono, dijo que &#8220;la velocidad fue algo esencial a la hora de equipar y entrenar a sus fuerzas armadas para que afrontaran retos tan complicados y como resultado hubo problemas en la contabilidad de la entrega de parte de las armas&#8221;. El funcionario también señaló que las prácticas del Pentágono al respecto han mejorado y que para garantizar &#8220;que el equipamiento se usa solo para los fines autorizados&#8221;, sus representantes &#8220;hacen un inventario de cada arma que llega al país y registran la distribución al socio extranjero&#8221;.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="622" data-total-count="6403" id="story-continues-14" tabindex="-1">Lo que no queda claro es por qué contar las armas y llevar un registro de números de serie y receptores se convirtió en algo que llevaba tanto tiempo como para frenar la guerra. Cualquiera que haya formado parte del ejército sabe que documentar quién recibe cada arma es una tarea importante y un hábito que fácilmente se convierte en rutina. No lleva más tiempo que entregarle un uniforme a un soldado o darle de comer. Pero, a menudo, el Pentágono no siguió ese paso. Wright señaló que una vez que una arma está en manos de otro ejército &#8220;la responsabilidad de controlarla es de ese ejército&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="558" data-total-count="6961" id="story-continues-15" tabindex="-1">A principios de año, mientras Overton trabajaba en su propio recuento, le pedí a Nic Marsh, investigador del Peace Research Institute de Oslo, que echara un vistazo a la misma cifra pero usando otros datos que él monitorea, sobre todo las cifras de las exportaciones de la Unión Europea e información del inspector general de las Fuerzas Armadas de Estados Unidos. El total también excedió de manera importante a las cifras del Pentágono. Al examinar el envío de armas desde Europa, encontró más de 465.000 del Pentágono a Afganistán desde 2001.</p>
+<p class="story-body-text story-content" data-para-count="676" data-total-count="7637" id="story-continues-16" tabindex="-1">Marsh dijo que las exportaciones incluían armas albanesas, inglesas, búlgaras, canadienses, croatas, checas, húngaras, italianas, montenegrinas, paquistaníes, polacas, rumanas, rusas, serbias, eslovacas y estadounidenses. También descubrió al menos 628.000 más exportadas a Irak entre 2003 y 2014 desde los mismos países con la inclusión de nuevas naciones como Bosnia, Estonia, Francia, Lituania y Turquía. Su conteo de las iraquíes no incluye más de 300.000, que sospecha que llegaron por encargo del Pentágono pero que no cuentan con registros claros. &#8220;La cifra es mucho mayor a 628.000 pero no estamos seguros de la cantidad que salió de Bosnia&#8221;.</p>
+<figure id="media-100000004552584" class="media photo media-100000004552584 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/07/30/world/middleeast/xxFalluja-slide-KHCQ/xxFalluja-slide-KHCQ-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-18">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/07/30/world/middleeast/xxFalluja-slide-KHCQ/xxFalluja-slide-KHCQ-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/07/30/world/middleeast/xxFalluja-slide-KHCQ/xxFalluja-slide-KHCQ-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Bryan Denton for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/07/30/world/middleeast/xxFalluja-slide-KHCQ/xxFalluja-slide-KHCQ-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Bryan Denton for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="1102" data-total-count="8739" id="story-continues-18" tabindex="-1">Las armas enviadas desde Europa a Irak y sus municiones llenaban los aviones de carga. Aunque Marsh dice que los datos disponibles no dicen cuantos envíos fueron pagados por Estados Unidos y no eran compras realizadas por ministerios iraquíes con donaciones estadounidenses o donaciones hechas por países que se deshacían de lo que almacenaban. La observación es importante pues estas dos categorías: los regalos entre países a través de transportes estadounidenses y las armas compradas directamente por Afganistán e Irak podrían no estar incluidas en la lista de Overton. Y esa es una de las múltiples razones por las que se sospecha que la cifra de 1.450.000 armas podría estar por debajo de la cantidad real que fue entregada mientras el Pentágono suministró armamento ligero en Irak y Afganistán. En palabras de Overton: &#8220;Hasta donde sabemos podría ser el doble&#8221;. Su análisis no incluye muchas armas entregadas por el Ejército de Estados Unidos a fuerzas locales a través de otras vías como el reenvío de armas capturadas, una práctica habitual y poco registrada.</p>
+<p class="story-body-text story-content" data-para-count="548" data-total-count="9287" id="story-continues-19" tabindex="-1">Overton asegura que su conteo no incluye los envíos que se perdieron porque los datos proporcionados por el Departamento de Defensa estaban incompletos o llenos de contradicciones irresolubles. Por ejemplo, dependiendo del año, los contratos públicos eran de más 6,5 o 7 millones de dólares. Overton sospecha que hay muchos por precios menores. Y a veces los datos son tan vagos que dificultan determinar con exactitud lo que se compró y mucho menos para quién. La información del Pentágono no precisa mucho de lo que realmente se compró.</p>
+<p class="story-body-text story-content" data-para-count="886" data-total-count="10173" id="story-continues-20" tabindex="-1">Hay algo indiscutible: gran cantidad de las armas no estuvieron mucho tiempo en manos del gobierno después de llegar a esos países. En uno de muchos ejemplos, un informe de la oficina de rendición de cuentas del gobierno descubrió que 110.000 kalashnikovs y 80.000 pistolas compradas para las fuerzas de seguridad iraquíes no aparecían. Esa cifra significa más de un arma de fuego por cada uno de los soldados estadounidenses que estuvieron en Irak en cualquier momento de la guerra. Esas faltas de registro son anteriores al momento en que divisiones enteras del ejército iraquí desaparecieron del campo de batalla, como pasó con cuatro contingentes cuando el Estado Islámico tomó Mosul y Tikrit en 2014. Los datos son de una petición de presupuesto del ejército de 2015 para comprar armas destinadas al ejército iraquí con el fin de remplazar lo que se había perdido.</p>
+<p class="story-body-text story-content" data-para-count="750" data-total-count="10923" id="story-continues-21" tabindex="-1">Estas grandes pérdidas forman parte del lento drenaje que muchos veteranos de ambas guerras vieron con sus propios ojos y entre los que se destacan sucesos tan vergonzosos como cuando los reclutas del ejército afgano se presentaban a sesiones de entrenamiento y luego desaparecían al recibir un arma. Se sospecha que para venderlas. En los lugares en los que las fuerzas iraquíes y afganas trabajaban juntas, las unidades locales solo tenían una pequeña fracción de la capacidad de fuego que decían tener y disminuían a medida que los soldados desertaban con sus armas. Cuando Estados Unidos comenzó a armar a los rebeldes sirios, tanto desde la CIA como desde el Departamento de Defensa, surgieron <a href="http://www.nytimes.com/2016/06/27/world/middleeast/cia-arms-for-syrian-rebels-supplied-black-market-officials-say.html" target="_blank">acusaciones de robo y falta de registros</a>.</p>
+<p class="story-body-text story-content" data-para-count="746" data-total-count="11669" id="story-continues-22" tabindex="-1">Pero este año, varios vendedores de armas por internet, muchos de ellos a través de Facebook, se percataron de un flujo infinito de armas de origen estadounidense como el M4 que ofrecía Hussein Mahyawi desde ese perfil de Facebook en el que se presentaba como un diseñador de interiores. En abril, después de que The New York Times se pusiera en contacto con él y tras revisar datos de una empresa privada que asesora en materia armamentista, Facebook cerró las páginas que desde Oriente Medio servían como bazares de armas en Siria e Irak. El perfil de Mahyawi se <a href="http://www.nytimes.com/2016/04/07/world/middleeast/facebook-weapons-syria-libya-iraq.html" target="_blank">esfumó</a>. Pero desde entonces ha aparecido una multitud de nuevos perfiles que se describen como mercados virtuales que operan desde Bagdad o Kerbala. El comercio continúa.</p>
+<p class="story-body-text story-content" data-para-count="1039" data-total-count="12708" id="story-continues-23" tabindex="-1">Los nuevos datos también sugieren que la lucha en tierra del ejército de Estados Unidos ha cambiado durante la última década y media. Según su propio recuento el ejército ha ofrecido contratos por más de 40.000 millones de dólares para armas, accesorios, munición y reformas en las fábricas que los suministran desde el 11 de septiembre. La mayor parte de este gasto iba dirigido a fuerzas estadounidenses y los detalles muestran que ninguna de las dos guerras influyó tanto como se pensó. Más de 4000 millones de dólares se destinaron a armas ligeras como pistolas, ametralladoras, rifles de asalto y de francotirador y más de 11.000 para suministros asociados, según los cálculos de Overton. Una cantidad mucho mayor, casi 25.000 millones, fueron destinados a cubrir los gastos de munición y mejoras a las fábricas que la suministran. La última cifra coincide con lo que podría contar cualquier veterano: desde 2001 se han quemado montañas y montañas de munición porque el número de combates no cesa de aumentar.</p>
+<figure id="media-100000004552587" class="media photo media-100000004552587 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/07/30/world/middleeast/xxFalluja-slide-GFN9/xxFalluja-slide-GFN9-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-25">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/07/30/world/middleeast/xxFalluja-slide-GFN9/xxFalluja-slide-GFN9-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/07/30/world/middleeast/xxFalluja-slide-GFN9/xxFalluja-slide-GFN9-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Bryan Denton for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/07/30/world/middleeast/xxFalluja-slide-GFN9/xxFalluja-slide-GFN9-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Bryan Denton for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="895" data-total-count="13603" id="story-continues-25" tabindex="-1">Algunas de las hojas de cálculo de Overton muestran profundos cambios técnicos. En 2001, el Ejército de Estados Unidos entró en Afganistán con pocas tropas que lograron sacar a los talibanes del poder gracias a sus aliados locales y con el apoyo de la armada y los bombardeos. En 2003 invadió Irak con columnas mecanizadas protegidas por un manto de fuego aéreo, misiles de crucero, bombas incendiarias y de racimo. La combinación anuló a las fuerzas convencionales iraquíes. Después llegaron los años de ocupación e intentos de reconstrucción en las zonas de guerra. La rotación de soldados y marines comenzó a empantanarse por los sucesivos cambios de misión y el enfrentamiento de los retos habituales de la guerra de guerrillas, junto a varias modalidades nuevas como los explosivos emplazados en las carreteras, las emboscadas y, especialmente en Irak, los francotiradores.</p>
+<p class="story-body-text story-content" data-para-count="459" data-total-count="14062" id="story-continues-26" tabindex="-1">Los datos muestran grandes compras de ametralladoras y cargadores de municiones. Y eso solo es una pequeña parte del cambio sufrido por muchas unidades estadounidenses que han pasado de desplazarse a pie a moverse en vehículos blindados y torretas con gran potencia de fuego para poder defenderse, una adaptación forzada por las emboscadas y los objetos explosivos, esas armas baratas que han golpeado hasta el agotamiento al ejército más caro del mundo.</p>
+<p class="story-body-text story-content" data-para-count="1370" data-total-count="15432" id="story-continues-27" tabindex="-1">Ahora, olvidémonos de los datos por un momento y pensemos en otros aspectos. El Pentágono le entregó a Overton la información de contratos de armas de hasta 30 milímetros de calibre. Eso significa que ciertos tipos de armas de infantería no se incluyeron en la lista, por ejemplo, los morteros, lanzamisiles unipersonales y lanzagranadas Mark 19 que se ubican en vehículos en posiciones terrestres. Esa omisión muestra que los datos entregados no detallan uno de los aspectos más arriesgados del modo en que el Pentágono armó a sus aliados: la amplia distribución de armas con capacidad de atravesar blindajes entre las que se incluyen los RPG 7, lanzagranadas a cohete, y armas sin retroceso como el SPG-9. Cada uno de esos sistemas balísticos lanza proyectiles que pueden traspasar blindajes y todos ellos han sido utilizados por los insurgentes en atentados. Tras las primeras semanas de cada una de las guerras, los únicos blindajes existentes sobre el terreno eran los que estaban en manos de Estados Unidos y sus aliados, lo que hace que la entrega de este tipo de armas contra blindaje a las fuerzas afganas e iraquíes sea cuestionable. ¿Por qué necesitarían armas contra blindaje si el enemigo no tenía dispositivos blindados? Al mismo tiempo, los convoyes y patrullas estadounidenses fueron impactados por este tipo de armas en ambas guerras.</p>
+<p class="story-body-text story-content" data-para-count="796" data-total-count="16228" id="story-continues-28" tabindex="-1">Al recontar el tamaño del gasto, la confusión sobre su importe total y las presiones ejercidas sobre lo almacenado emerge un retrato de la torpeza del Pentágono a la hora de representar el papel que eligió representar —el de traficante de armas en nombre del Estado—, un rol que, en repetidas ocasiones, generó contradicciones. Si bien ambas guerras fueron de rápida evolución, el ejército estadounidense trató de crear y fortalecer las nuevas democracias, los gobiernos y las clases políticas; reclutar, entrenar y equipar rápidamente a las fuerzas de seguridad e inteligencia; reparar la infraestructura de transporte y conseguir que fuera seguro; fomentar el Estado de derecho y los servicios públicos; y dejar tras de sí algo mejor que el gobierno de las facciones violentas.</p>
+<p class="story-body-text story-content" data-para-count="590" data-total-count="16818" id="story-continues-29" tabindex="-1">Cualquiera de esas iniciativas sería un reto difícil. Pero Estados Unidos las emprendió todas al mismo tiempo, comprando y enviando a ambos países una inmensa cantidad de armas ligeras y entregándoselas a unas personas desconocidas. A menudo quienes las recibieron eran manifiestamente corruptos y, en ocasiones, tenían estrechos lazos con las mismas milicias que trataban de expulsar a los estadounidenses y asegurarse de que su proyecto de país no fructificara. Por eso no sorprende que las unidades estadounidenses desplegadas en provincias y barrios hostiles fuesen muy atacadas.</p>
+<figure id="media-100000004552592" class="media photo media-100000004552592 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/07/30/world/middleeast/xxFalluja-slide-FFDB/xxFalluja-slide-FFDB-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-31">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/07/30/world/middleeast/xxFalluja-slide-FFDB/xxFalluja-slide-FFDB-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/07/30/world/middleeast/xxFalluja-slide-FFDB/xxFalluja-slide-FFDB-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Bryan Denton for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/07/30/world/middleeast/xxFalluja-slide-FFDB/xxFalluja-slide-FFDB-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Bryan Denton for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="1203" data-total-count="18021" id="story-continues-31" tabindex="-1">La compra y entrega de armas ha continuado hasta hoy en día, con más actores involucrados entre los que se incluyen Irán y sus aliados en Irak y varios donantes de armas a los guerrilleros kurdos. En marzo, Rusia anunció que había entregado 10.000 fusiles de asalto Kalashnikov a Afganistán, uno de los lugares de la Tierra que está más saturado de Kalashnikov. Si el análisis del inspector general para la Reconstrucción de Afganistán es fiable, el país no los necesitaba. En 2014, el inspector dijo que después de que Estados Unidos decidiera remplazar el Kalashnikov del ejército afgano por armas aprobadas por la OTAN (algo que le importaba mucho más a los fabricantes de armas que al ejército afgano), el ejército se encontró con que le sobraban 83.000 kalashnikovs. Estados Unidos nunca intentó recuperar el exceso de armamento que había creado y provocó la preocupación de la oficina del inspector general. &#8220;Sin confianza en la capacidad del gobierno afgano para rendir cuentas o disponer correctamente de esas armas&#8221;, señaló, &#8220;existe la preocupación de pudieran acabar en manos de rebeldes y terminar siendo un riesgo adicional para los civiles&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="1114" data-total-count="19135" id="story-continues-32" tabindex="-1">Al final, el recuento de armas hecho por Overton sirve para mostrar la grave desconexión institucional entre lo que el Pentágono exige de sus soldados y lo que se exige a sí mismo. Desde sus inicios en la institución, los reclutas del ejército y los marines aprenden a santificar su arma. Aprenden rápidamente que ningún otro elemento de su equipo será revisado con tanta rigidez en la rutina de contabilidad de material y que la inspección será rutinaria durante toda su carrera. Las armas tienen que mantenerse limpias y lubricadas. Siempre deben estar a mano. Solo deben apuntarse cuando es necesario. Nunca pueden perderse. Cada elemento de la armería de una patrulla se cuenta una y otra vez para que cada uno de sus miembros, desde el soldado raso hasta el comandante, sepan que nada está fuera de lugar y que las armas están listas para lo que vaya a suceder. Esta mentalidad es tan fuerte que muchos veteranos, cuando regresan a la vida civil, pueden recitar de memoria los números de serie de las armas que portaron. Algunos se sorprenden a sí mismos buscando sus armas a lo largo del día.</p>
+<p class="story-body-text story-content" data-para-count="540" data-total-count="19675" id="story-continues-33" tabindex="-1">Cuando el ejército distribuyó armas en Afganistán e Irak, la dinámica era distinta. Seguirles la pista de manera confiable, es decir, saber quién recibía qué, cuándo lo hacía y dónde terminaba, no fue una prioridad. Hoy es imposible. Así que nadie sabe dónde están muchas de esas armas. Al menos hasta que aparecen en las redes sociales o en los combates o en las acciones de delincuentes. Esto nos recuerda los miles de millones de dólares que han terminado en países donde la violencia y el terrorismo parecen no tener fin.</p>
+<p class="story-body-text story-content" data-para-count="138" data-total-count="19813" id="story-continues-34" tabindex="-1">¿Qué hacer? Si el pasado sirve de precedente y, conociendo las soluciones que suele implementar Estados Unidos, se enviarán más armas.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>C. J. Chivers es un periodista de The New York Times.</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/afganistan/" rel="tag">Afganistán</a>, <a href="https://www.nytimes.com/es/tag/armas/" rel="tag">armas</a>, <a href="https://www.nytimes.com/es/tag/estados-unidos/" rel="tag">Estados Unidos</a>, <a href="https://www.nytimes.com/es/tag/industria-armamentista/" rel="tag">industria armamentista</a>, <a href="https://www.nytimes.com/es/tag/irak/" rel="tag">Irak</a>, <a href="https://www.nytimes.com/es/tag/trafico-de-armas/" rel="tag">tráfico de armas</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/09/12/estados-unidos-perdio-cientos-de-miles-de-armas-en-irak-y-afganistan/"
+				data-title="Noticias: Estados Unidos perdió cientos de miles de armas en Irak y Afganistán"
+				data-author="POR C. J. CHIVERS"
+				data-media=""
+				data-description="Un estudio demuestra que el Ejército de Estados Unidos falló en lo más básico a la hora de controlar las armas que enviaba a sus aliados en Irak y Afganistán: evitar que se perdieran. Ahora alimentan el mercado ilegal de armamento en internet"
+				data-publish-date="12 de septiembre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/07/26/a-medida-que-pierde-terreno-en-irak-el-estado-islamico-retoma-sus-tacticas-de-guerrilla/">
+					<div class="story-body">
+						<h3 class="kicker">Medio Oriente</h3>
+
+						<h2 class="headline">
+							<span class="title">A medida que pierde terreno en Irak, el Estado Islámico retoma sus tácticas de guerrilla</span>
+							<time class="dateline">26 de julio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/07/26/world/26military-web2/26military-web2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/07/06/barack-obama-retrasa-la-salida-de-tropas-estadounidenses-de-afganistan/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">Obama retrasa el retiro de Afganistán y así continúa la guerra que prometió terminar</span>
+							<time class="dateline">6 de julio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/07/07/us/07potusv2/07potusv2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/06/11/kalashnikov-fabricante-del-rifle-ak-47-se-moderniza/">
+					<div class="story-body">
+						<h3 class="kicker">Economía</h3>
+
+						<h2 class="headline">
+							<span class="title">Kalashnikov, fabricante del rifle AK-47, se moderniza</span>
+							<time class="dateline">11 de junio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/06/07/business/07RUSSIAGUN-1/07RUSSIAGUN-1-thumbStandard-v3.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/23/olvidate-de-tinder-el-coqueteo-todavia-importa/">
+					<div class="story-body">
+						<h3 class="kicker">Vida</h3>
+
+						<h2 class="headline">
+							<span class="title">Olvídate de Tinder, el coqueteo todavía importa</span>
+							<time class="dateline">23 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/17/fashion/17TINDER/17TINDER-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":860,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

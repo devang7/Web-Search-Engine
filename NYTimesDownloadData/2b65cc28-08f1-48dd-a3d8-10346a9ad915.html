@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004848396"/>
+<meta name="hdl" content="Ciberguerra a la venta" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20170112" />
+<meta name="utime" content="20170112085152" />
+<meta name="ptime" content="20170112085152" />
+<meta name="DISPLAYDATE" content="Jan. 12, 2017" />
+<meta name="dat" content="Jan. 12, 2017" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="ciberguerra-a-la-venta" />
+<meta property="og:url" content="https://www.nytimes.com/es/2017/01/12/ciberguerra-a-la-venta/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Ciberguerra a la venta" />
+<meta property="og:description" content="Detrás del &quot;hackeo&quot; de las elecciones internas del Partido Acción Nacional en Puebla, México, estaba un software de Hacking Team. Los documentos filtrados sobre esta empresa muestran la sombría industria mundial de vigilancia de actividad virtual." />
+<meta property="og:image" content="https://static01.nyt.com/images/2017/01/12/universal/es/12granadaES/12granadaES-videoSixteenByNine768.png" />
+<meta property="article:published" itemprop="datePublished" content="2017-01-12" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2017/01/12/ciberguerra-a-la-venta/" />
+<meta property="twitter:title" content="Ciberguerra a la venta" />
+<meta property="twitter:description" content="Detrás del &quot;hackeo&quot; de las elecciones internas del Partido Acción Nacional en Puebla, México, estaba un software de Hacking Team. Los documentos filtrados sobre esta empresa muestran la sombría industria mundial de vigilancia de actividad virtual." />
+<meta name="author" content="Mattathias Schwartz" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Mattathias Schwartz" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="internacional" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="internacional" />
+<meta name="id" content="100000004848396"/>
+<meta name="wordCount" content="8414"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2017/01/12/ciberguerra-a-la-venta/">
+<meta name="nyt-collection:uri" content="year=2017&amp;monthnum=01&amp;day=12&amp;name=ciberguerra-a-la-venta">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=32683">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2017\/01\/12\/ciberguerra-a-la-venta\/"},"headline":"Ciberguerra a la venta","datePublished":"2017-01-12T08:51:52+00:00","dateModified":"2017-01-12T09:35:58+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2017\/01\/12\/universal\/es\/12granadaES\/12granadaES-videoSixteenByNine768.png","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Detr\u00e1s del \"hackeo\" de las elecciones internas del Partido Acci\u00f3n Nacional en Puebla, M\u00e9xico, estaba un software de Hacking Team. Los documentos filtrados sobre esta empresa muestran la sombr\u00eda industria mundial de vigilancia de actividad virtual."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2017/01/12/ciberguerra-a-la-venta/" hreflang="es" />
+<link rel="alternate" href="https://www.nytimes.com/2017/01/04/magazine/cyberwar-for-sale.html?smid=tw-share&amp;#038;_r=1" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/internacional" />
+<title>Ciberguerra a la venta &#8211; Español</title>
+<link rel="canonical" href="https://www.nytimes.com/2017/01/04/magazine/cyberwar-for-sale.html?smid=tw-share&#038;_r=1" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2017/01/12/ciberguerra-a-la-venta/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+		<script src="https://a1.nyt.com/assets/article/latest/js/article/common/layout.js"></script>
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-32683 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard intl-masthead-theme-light" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Ciberguerra a la venta
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2017/01/12/ciberguerra-a-la-venta/"
+					data-title="Noticias: Ciberguerra a la venta"
+					data-author="POR MATTATHIAS SCHWARTZ"
+					data-media=""
+					data-description="Detrás del &quot;hackeo&quot; de las elecciones internas del Partido Acción Nacional en Puebla, México, estaba un software de Hacking Team. Los documentos filtrados sobre esta empresa muestran la sombría industria mundial de vigilancia de actividad virtual."
+					data-publish-date="12 de enero de 2017"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2jHVXe9">http://nyti.ms/2jHVXe9</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+	
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main has-full-bleed-image-lede">
+	<header id="story-header" class="story-header">
+			<figure id="media-100000004867509" class="media cover photo layout-horizontal-full-bleed" data-bleed-style="full-bleed-cover" itemid="https://static01.nyt.com/images/2017/01/12/universal/es/12granadaES/12granadaES-articleLarge.png" itemtype="https://schema.org/ImageObject" aria-label="media" role="presentation">
+				<span class="visually-hidden"></span>
+				<div class="image">
+					<img
+						src="https://static01.nyt.com/images/2017/01/12/universal/es/12granadaES/12granadaES-articleLarge.png"
+						alt=""
+						data-jumbosrc="https://static01.nyt.com/images/2017/01/12/universal/es/12granadaES/12granadaES-jumbo.png"
+						data-superjumbosrc="https://static01.nyt.com/images/2017/01/12/universal/es/12granadaES/12granadaES-superJumbo.png"
+						id="media-image-100000004867509"
+					>
+				</div>
+				<figcaption id="media-caption-100000004867509" class="caption" itemprop="caption description">
+
+					<span class="credit" itemprop="copyrightHolder">
+						<span class="visually-hidden">crédito</span>
+						Utilería de Pink Sparrow, ilustración de Jamie Ching
+					</span>
+				</figcaption>
+				<meta itemprop="height" content="331">
+				<meta itemprop="width" content="600">
+			</figure>
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/internacional/">Internacional</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Ciberguerra a la venta</h1>
+				<p itemprop="headline" id="story-deck" class="deck">Detrás del &quot;hackeo&quot; de las elecciones internas del Partido Acción Nacional en Puebla, México, estaba un software de Hacking Team. Los documentos filtrados sobre esta empresa muestran la sombría industria mundial de vigilancia de actividad virtual.</p>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Mattathias Schwartz</span>
+</span>
+
+					<time class="dateline" datetime="2017-01-12">12 de enero de 2017</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2017/01/12/ciberguerra-a-la-venta/"
+							data-title="Noticias: Ciberguerra a la venta"
+							data-author="POR MATTATHIAS SCHWARTZ"
+							data-media=""
+							data-description="Detrás del &quot;hackeo&quot; de las elecciones internas del Partido Acción Nacional en Puebla, México, estaba un software de Hacking Team. Los documentos filtrados sobre esta empresa muestran la sombría industria mundial de vigilancia de actividad virtual."
+							data-publish-date="12 de enero de 2017"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+			<script>
+				if (window.magnum && window.magnum.responsiveImages && window.magnum.responsiveImages.setCoverImage) {
+					window.magnum.responsiveImages.setCoverImage('100000004867509','full-bleed-cover',331,600,0,0,0,0);
+				}
+			</script>
+
+			
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="https://www.nytimes.com/2017/01/04/magazine/cyberwar-for-sale.html?smid=tw-share&#038;_r=1&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="566" data-total-count="566" id="story-continues-1" tabindex="-1">La mañana del 18 de mayo de 2014, Violeta Lagunes quedó perpleja por una serie de extraños mensajes que aparecieron en su correo. Era el día de las votaciones para elegir al líder de la agrupación política mexicana de derecha, Partido Acción Nacional (PAN), y Lagunes, una excongresista federal, tuvo una reunión estratégica en su oficina de la ciudad de Puebla. Los correos electrónicos le parecieron inofensivos, por lo menos al principio. Parecía que uno provenía de la cuenta de un colega confiable. Le pedía que descargara y revisara un documento.</p>
+<p class="story-body-text story-content" data-para-count="410" data-total-count="976" id="story-continues-2" tabindex="-1">Lagunes hizo clic en el enlace pero, al parecer no funcionaba, así que le respondió a su colega y le pidió que lo enviara de nuevo. En otro correo había un mensaje en el que Google le advertía que alguien había intentado entrar a su cuenta. Mientras tanto, comenzó a recibir llamadas de aliados del PAN que afirmaban haber recibido correos electrónicos de su cuenta que ella no recordaba haber enviado.</p>
+<p class="story-body-text story-content" data-para-count="677" data-total-count="1653" id="story-continues-3" tabindex="-1">Ahora estaba preocupada. Cerca de la una de la tarde llamó al colega que supuestamente le había enviado el correo. Lo alcanzó en un restaurante donde estaba terminando de almorzar con otros aliados de campaña. “No te envié ningún correo”, le contestó. Un asesor de la campaña —quien pidió conservar su anonimato para proteger su relación con otros candidatos— escuchó la conversación. Sabía de otros empleados de la campaña que habían estado recibiendo mensajes similares: correos con asuntos ambiguos, en los que se le pedía al destinatario que revisara un documento o hiciera clic en un vínculo. Se dio cuenta de que la campaña había sido <em>hackeada</em>.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="494" data-total-count="2147" id="story-continues-4" tabindex="-1">En la votación del líder del partido, Lagunes y sus aliados de Puebla —población del suroeste ubicada a dos horas de Ciudad de México— estaban apoyando a Ernesto Cordero, un senador que prometió lograr que el partido regresara a sus raíces conservadoras. Sin embargo, el titular en ese momento, Gustavo Madero, era respaldado por Rafael Moreno Valle, el poderoso gobernador de Puebla y una figura política en ascenso, muy cercano al actual presidente de México, Enrique Peña Nieto.</p>
+<p class="story-body-text story-content" data-para-count="665" data-total-count="2812" id="story-continues-5" tabindex="-1">Moreno ha forjado una alianza entre el PAN y el Partido Revolucionario Institucional (PRI), en el que milita Peña, que durante mucho tiempo ha sido la fuerza dominante de la política mexicana. Los opositores de Moreno dicen que desde que ganó la gobernación en 2010, sus ambiciones han crecido por lo que ha recurrido a medidas cada vez más duras para mantener bajo control al estado de Puebla —incluyendo a los miembros de su propio partido—. “Al principio, el gobernador era discreto y respetuoso”, me dijo Rafael Micalco, un exlíder del PAN en Puebla. “Cuando se volvió gobernador, se transformó. Ahora controla al partido mediante amenazas”.</p>
+<p class="story-body-text story-content" data-para-count="841" data-total-count="3653" id="story-continues-6" tabindex="-1">Esta carrera para mantener el control del liderazgo del PAN en 2014 fue una prueba crucial para el gobernador quien, en septiembre pasado, anunció públicamente su intención de postularse en 2018 a la presidencia de México. Los choques entre ambos bandos fueron particularmente intensos en Puebla, donde los simpatizantes de Ernesto Cordero, el otro contrincante en las elecciones nacionales del PAN, afirmaron que el gobernador utilizó los fondos públicos para apoyar a Gustavo Madero, aunque la oficina de Moreno ha negado esas acusaciones. Poco antes de la elección, el jefe de campaña de Madero dijo que el equipo de Cordero intentaba socavar la legitimidad del proceso. “Su estrategia ha sido clara desde el inicio”, dijo en una entrevista con una revista mexicana. “‘Si gano, qué bueno. Si no, me hicieron trampa’”.</p>
+<p class="story-body-text story-content" data-para-count="721" data-total-count="4374" id="story-continues-7" tabindex="-1">Después de la llamada de Lagunes el día de la elección, sus colegas se fueron del restaurante y regresaron a su sede local, el salón de conferencias de un hotel al que apodaban “el búnker”. Toda la mañana intentaron comunicarse con su red de campo, un grupo de 40 agentes electorales de Cordero que trabajaron para obtener votos en Puebla. No obstante, la red parecía haberse desconectado. Pocos agentes estaban contestando sus teléfonos. El equipo concluyó que los <em>hackers</em> seguramente habían encontrado la lista con los nombres y teléfonos de los agentes electorales —la cual había circulado por correos electrónicos de manera extensa entre el equipo de campaña— y habían comenzado a intimidarlos.</p>
+<p class="story-body-text story-content" data-para-count="381" data-total-count="4755" id="story-continues-8" tabindex="-1">“El día anterior”, me dijo el asesor, la red de campo estaba “motivada y dispuesta a hacer este trabajo. Después del <em>hackeo</em> fue muy difícil comunicarse con ellos. Los pocos que contestaron dijeron que habían recibido llamadas telefónicas en las que les decían que sus vidas estaban en peligro. Les preocupaba que si salían, ellos o sus familias podían ser heridos”.</p>
+<p class="story-body-text story-content" data-para-count="354" data-total-count="5109" id="story-continues-9" tabindex="-1">De acuerdo con otro empleado de la campaña de Cordero, quien también pidió conservar el anonimato por miedo a las represalias, dijo que el mensaje dirigido a los agentes fue simple y directo: “Sabemos quiénes son. Si no quieren problemas, apaguen sus celulares y detengan sus actividades”. El trabajador agregó: “Es un régimen autoritario”.</p>
+<p class="story-body-text story-content" data-para-count="923" data-total-count="6032" id="story-continues-10" tabindex="-1">Finalmente, Madero <a href="http://www.reuters.com/article/us-mexico-reforms-idUSBREA4I01M20140519" target="_blank">ganó la elección</a> con 57 por ciento de los 162.792 votos que se emitieron. En Puebla su margen fue sustancialmente más amplio, casi del 74 por ciento. El equipo de Cordero decidió no impugnar el resultado. Tenían sospechas de que los habían <em>hackeado</em> pero pasaría otro año antes de que surgiera cualquier tipo de evidencia. Sus enemigos políticos, según demostraron varios documentos filtrados, crearon una operación de espionaje utilizando un software de una firma italiana llamada Hacking Team, una de las empresas privadas que, sin el conocimiento del público, han surgido para ayudar a que los gobiernos vigilen las vidas privadas de los ciudadanos comunes. La industria afirma que sus productos cumplen con las leyes locales y se utilizan para combatir el crimen y el terrorismo. Sin embargo, en muchos países del mundo, estas herramientas también son usadas para el espionaje político.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="440" data-total-count="6472" id="story-continues-11" tabindex="-1"><strong>Un oficinista estadounidense envía</strong> y recibe en promedio unos <a href="http://www.radicati.com/wp/wp-content/uploads/2015/02/Email-Statistics-Report-2015-2019-Executive-Summary.pdf" target="_blank">120 correos al día</a> y ese número crece cada año. La omnipresencia y utilidad del correo electrónico lo ha convertido en un registro detallado de nuestras vidas cotidianas, lleno de detalles mundanos y potencialmente vergonzosos, almacenado en un archivo perpetuo que es accesible desde cualquier parte del planeta y, en algunos casos, protegido solamente por una contraseña.</p>
+<p class="story-body-text story-content" data-para-count="914" data-total-count="7386" id="story-continues-12" tabindex="-1">En el caso de Violeta Lagunes, el inicio de sesión de su correo electrónico representaba un punto vulnerable, una grieta en los muros digitales que protegían su campaña y su capacidad de determinar si un mensaje supuestamente confiable era real o falso. Casi dos años después, John Podesta, el director de la campaña de Hillary Clinton, enfrentó una situación similar. Un correo electrónico le advertía que alguien en Ucrania había intentado entrar a su cuenta de Gmail y le pedía darle clic a un botón para restablecer su contraseña. Su asesor sénior le envió el correo a uno de los expertos en tecnología de la campaña. “Este es un correo legítimo”, le respondió el técnico en un mensaje que fue un simple error de escritura de su parte porque <a href="http://www.slate.com/articles/technology/future_tense/2016/12/an_interview_with_charles_delavan_the_it_guy_whose_typo_led_to_the_podesta.html" target="_blank">luego aclaró</a> que lo que quiso decir es que no era legítimo. “El de Gmail es REAL”, les escribió el asesor a Podesta y a otro asistente.</p>
+<p class="story-body-text story-content" data-para-count="533" data-total-count="7919" id="story-continues-13" tabindex="-1">Al igual que Lagunes, Podesta cayó en una trampa. Al parecer, el botón conectaba el mensaje a una página oficial de Google, pero en realidad era un sitio falso meticulosamente personalizado con un dominio electrónico asociado a un grupo de atolones en el Pacífico Sur. Los detalles fueron diseñados para engañar a Podesta y obtener su contraseña. Esta técnica se conoce como “spear phishing”. Es un arma especialmente potente contra las empresas y organizaciones políticas porque le basta con tener éxito una sola vez.</p>
+<p class="story-body-text story-content" data-para-count="528" data-total-count="8447" id="story-continues-14" tabindex="-1">Después de eso, los atacantes pueden usar la identidad de la primera cuenta afectada para convencer a otros colegas de que abran adjuntos infectados o hagan clic en enlaces malignos. Una contraseña vigente de correo electrónico puede dar acceso a años de conversaciones laborales, facturas, recibos de tarjetas de crédito y recordatorios confidenciales; a menudo puede ser aprovechada para controlar otras cuentas personales —Twitter, Facebook, Amazon— e incluso acceder a servidores de empresas y dominios de internet.</p>
+<p class="story-body-text story-content" data-para-count="1185" data-total-count="9632" id="story-continues-15" tabindex="-1">Los casos de Podesta y Lagunes están lejos de ser los únicos en que los <em>hackers</em> han utilizado información proveniente de correos robados contra toda una institución. El incidente de 2009 llamado <a href="https://www.theguardian.com/environment/blog/2012/jul/20/climategate-detective-disappointed-catch-hacker" target="_blank">“Climategate”</a>, que expuso un arsenal de correos de prominentes investigadores sobre el clima, comenzó cuando unos <em>hackers</em> entraron remotamente a los servidores de una universidad británica usando contraseñas robadas. La manipulación de los archivos internos de Sony en 2014, que los funcionarios estadounidenses le atribuyeron al gobierno norcoreano, comenzó con una serie de correos electrónicos de “spear phishing” que los atacantes utilizaron para entrar en los servidores. Cada manipulación le otorgó a los atacantes el acceso a los pensamientos más privados y las acciones de los miembros de cada organización: sus insultos, sus desacuerdos, los planes a medias, sus halagos melosos y todo lo que queda registrado desde el momento en que el autor da clic en el botón de “Enviar”. Antes, los <em>hackers</em> tenían que correr más riesgos y recurrir a tácticas como los sobornos o el robo. Ahora, en muchos casos, lo único que tienen que hacer es enviar un enlace.</p>
+<p class="story-body-text story-content" data-para-count="745" data-total-count="10377" id="story-continues-16" tabindex="-1">La Casa Blanca, la CIA y el FBI han afirmado que, basados en evidencia clasificada, pueden rastrear los <em>hackeos</em> de la cuenta de correo de Podesta (y otros ataques a personas vinculadas a la campaña de Clinton) hasta el gobierno ruso. Pero con el ascenso de firmas privadas como Hacking Team, penetrar las cuentas de correo de los oponentes políticos no requiere la cantidad de dinero y conocimiento que solo las principales potencias tienen a su disposición. Un sitio web de suscripciones llamado Insider Surveillance tiene una lista de más de una decena de empresas que venden programas malignos éticos, incluyendo a la compañía Hacking Team —con sede en Milán—, las firmas alemanas FinFisher y Trovicor, y la empresa israelí Nice.</p>
+<p class="story-body-text story-content" data-para-count="545" data-total-count="10922" id="story-continues-17" tabindex="-1">Comparado con las armas convencionales, el software de vigilancia tiene pocos controles comerciales; recientemente fracasó un intento de Estados Unidos para regularlo con un pacto de 41 países llamado el Acuerdo Wassenaar. “La tecnología es moralmente neutral”, dice Joel Brenner, un exinspector general de la Agencia de Seguridad Nacional (NSA, por sus siglas en inglés). “El mismo programa que utilizas para monitorear a una niñera, podría ser usado por Bashar Al Asad o Abdulfatah el Sisi para vigilar a quienes no les agradan”.</p>
+<p class="story-body-text story-content" data-para-count="855" data-total-count="11777" id="story-continues-18" tabindex="-1">Hacking Team cuenta con menos de 50 empleados pero tiene clientes en todo el mundo. Según documentos internos, su herramienta de espionaje llamada Remote Control System (RCS) puede comprarse por 200.000 dólares al año… una cifra que está dentro del presupuesto de un dictador de provincia. Después de instalarse clandestinamente en la computadora o el celular de la víctima, el Remote Control System puede espiar todo de manera invisible: mensajes de texto, correos electrónicos, llamadas de Skype, información de localización, etcétera. Mientras que los programas de la NSA recogen información de cables submarinos y cuartos confidenciales, el RCS lo adquiere directamente de la fuente a partir del dispositivo de la víctima, antes de que pueda cifrarse. Es el equivalente invisible y digitalizado de un allanamiento al estilo de Watergate.</p>
+<p class="story-body-text story-content" data-para-count="620" data-total-count="12397" id="story-continues-19" tabindex="-1">El gobierno estadounidense es casi con toda seguridad el repositorio más formidable del talento de <em>hackeo</em>, pero sus ciberarmas más poderosas generalmente están reservadas para las agencias de inteligencia y los militares. Eso podría explicar por qué, según los documentos empresariales, por lo menos dos agencias federales han sido clientes de Hacking Team: el FBI, desde 2011, y la Administración para el Control de Drogas (DEA, por su sigla en inglés), a partir de 2012. El FBI le pagó más de 700.000 dólares a Hacking Team; al parecer la DEA utilizó el software para perseguir a sus objetivos en Colombia.</p>
+<p class="story-body-text story-content" data-para-count="955" data-total-count="13352" id="story-continues-20" tabindex="-1">Hay documentos que muestran que la empresa también le vendió su software a algunos de los gobiernos más represores del mundo. Algunos de esos países como Honduras, Etiopía, Baréin, Marruecos, Egipto y Arabia Saudita, son aliados de Occidente. Otros países como Uzbekistán y Turquía tienen una relación más problemática. Pocos son abiertamente hostiles a Occidente. Entre 2012 y 2014, Hacking Team recibió casi un millón de euros del gobierno de Sudán, al que Estados Unidos designó como Estado patrocinador del terrorismo. Ante algunos sucesos recientes, es mucho más notable la relación que Hacking Team tuvo durante tres años con la FSB, una de las principales agencias de inteligencia de Rusia. Hacking Team utilizó a un intermediario, una agencia de investigación llamada Kvant, para manejar sus ventas en Rusia. Entre 2012 y 2014, esa agencia le pagó 451.000 euros a Hacking Team para tener la licencia de Remote Control System.</p>
+<figure id="media-100000004848395" class="media photo media-100000004848395 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/01/08/magazine/08hacking2/08hacking2-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-22">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/01/08/magazine/08hacking2/08hacking2-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/01/08/magazine/08hacking2/08hacking2-superJumbo-v2.jpg" data-mediaviewer-caption="Violeta Lagunes, whose email account was compromised during a Partido Acción Nacional election campaign." data-mediaviewer-credit="Dominic Bracco II/Prime, for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/01/08/magazine/08hacking2/08hacking2-master675-v2.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Violeta Lagunes, whose email account was compromised during a Partido Acción Nacional election campaign.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Dominic Bracco II/Prime, for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="819" data-total-count="14171" id="story-continues-22" tabindex="-1">Hacking Team afirma que le pone un límite a los clientes que cometen “abusos flagrantes a los derechos humanos” y que solo le vende a gobiernos que operan dentro de las leyes de sus países. David Vincenzetti, fundador de Hacking Team y su director ejecutivo, le dijo a un vendedor que pospusiera una venta a un potencial cliente mexicano. “Le vendemos a fuerzas de seguridad gubernamentales y oficiales, y únicamente a agencias de seguridad”, escribió en un correo electrónico. Pero, en otras ocasiones, prevaleció una actitud más casual dentro de la empresa. “Si uno le vende emparedados a Sudán no está sujeto, hasta donde llegan mis conocimientos, a la ley”, escribió un abogado de Hacking Team en un correo electrónico. “Hacking Team debería ser tratado como un vendedor de emparedados”.</p>
+<p class="story-body-text story-content" data-para-count="699" data-total-count="14870" id="story-continues-23" tabindex="-1">Cuando se le preguntó por sus acuerdos en varios países, la empresa respondió que “no hace comentarios en torno a acuerdos confidenciales de negocios”. Su portavoz estadounidense, Eric Rabe, me dijo que ni Rusia ni Sudán son clientes actuales de Hacking Team (su relación con esos países, escribió Rabe, terminó en 2014: con Rusia finalizó porque “el gobierno de Putin pasó de ser amigable con Occidente a convertirse en un régimen más hostil” y con Sudán “debido a preocupaciones sobre la capacidad de ese país para utilizar el sistema, según el contrato de HT”). De manera independiente, la compañía confirmó que el estado de Puebla era, de hecho, un cliente antiguo.</p>
+<p class="story-body-text story-content" data-para-count="479" data-total-count="15349" id="story-continues-24" tabindex="-1"><strong>Hasta hace poco, gran</strong> parte de lo que se conocía del mundo de las empresas de vigilancia privada era un asunto de rumores y especulación. Los protagonistas de esa industria mantenían un perfil bajo, al operar discretamente desde oficinas rentadas y algunas veces al año se reunían con sus potenciales clientes en ferias comerciales que son investigadas cuidadosamente. Por eso fue tan notable cuando, en julio de 2015, apareció un tuit inusual en la cuenta de Hacking Team.</p>
+<p class="story-body-text story-content" data-para-count="576" data-total-count="15925" id="story-continues-25" tabindex="-1">“Como no tenemos nada que ocultar”, decía, “publicaremos todos nuestros correos electrónicos, archivos y código fuente”. Después apareció otro mensaje con enlaces a un archivo descargable llamado Hacked Team. El archivo era enorme: 420 gigabites de material proveniente de los servidores internos de Hacking Team. Adentro había 33 carpetas que contenían contratos, documentos de nómina, facturas, recordatorios legales, registros de asesoría al cliente y una reserva de correspondencia de correos que incluía a toda la jerarquía desde el director ejecutivo.</p>
+<p class="story-body-text story-content" data-para-count="798" data-total-count="16723" id="story-continues-26" tabindex="-1">Hacking Team había sido <em>hackeada</em>. WikiLeaks aprovechó una violación de seguridad y rápidamente subió a internet los correos en una <a href="https://wikileaks.org/hackingteam/emails/" target="_blank">base de datos indexada</a>. Cualquiera que tuviera conexión a internet podía leer cómo el director ejecutivo bromeaba sobre la forma en que su empresa se dedicaba al negocio de vender “la tecnología más malvada del planeta”. También se podía navegar por todo el código fuente de Hacking Team, incluyendo una línea que utilizaba “bomb_blueprints.pdf” como marcador para los archivos que podían encontrarse en el dispositivo de una víctima. En Reddit, se formó un grupo dedicado a criticar las inútiles costumbres digitales de un ingeniero de Hacking Team y sus propias contraseñas que eran notablemente débiles: HTPassword!, P4ssword, Passw0rd.</p>
+<p class="story-body-text story-content" data-para-count="710" data-total-count="17433" id="story-continues-27" tabindex="-1">Pero las revelaciones más dañinas de la filtración fueron las listas de clientes de Hacking Team y los nombres de algunos de los blancos de sus clientes. En Corea del Sur, los diarios se concentraron en la evidencia que sugería que el software había ayudado al servicio de inteligencia del país a que <a href="https://www.nytimes.com/2015/07/20/world/asia/in-suicide-note-south-korea-hacking-expert-denies-domestic-spying.html" target="_blank">amañaran una elección</a>; después de la filtración se suicidó un agente que, según los reportes, había utilizado el sistema. En Ecuador, una <a href="https://panampost.com/rebeca-morla/2015/07/13/ecuadorian-websites-report-on-hacking-team-get-taken-down/" target="_blank">revista</a> encontró un correo electrónico con siete números telefónicos que, al parecer, el gobierno había vigilado utilizando el RCS. Tres pertenecían a legisladores y un cuarto al alcalde de Quito pero los cuatro eran miembros del partido de oposición.</p>
+<p class="story-body-text story-content" data-para-count="746" data-total-count="18179" id="story-continues-28" tabindex="-1">Puesto que el código fuente del Remote Control System se hizo público, la empresa y sus clientes dejaron de utilizarlo temporalmente. Sin embargo, para fines de año, Hacking Team había actualizado el producto e intentaba recuperar su reputación. Tenía la curiosidad de saber si una empresa que se beneficiaba de las violaciones de seguridad podía recuperarse de un ataque. Eric Rabe, el portavoz estadounidense, parecía dispuesto a reunirse conmigo para tomar un café en Filadelfia. Es un antiguo presentador de noticias televisivas que tiene credibilidad. “Si no estás de acuerdo con alguien en internet”, dijo refiriéndose a los archivos de Hacked Team, “no hay necesidad de tener un debate público. Solo ve y destrúyelos”.</p>
+<p class="story-body-text story-content" data-para-count="578" data-total-count="18757" id="story-continues-29" tabindex="-1">Un par de meses después fui a Milán a visitar la sede de Hacking Team, un edificio gris de apartamentos con macetas de flores marchitas que adornan algunas repisas sucias. Para hacer una demostración del software de la empresa estaban Rabe; Phillipe Vinci, el vicepresidente de la compañía, y Alessandro Scarafile, un joven ingeniero. Scarafile tenía una computadora Dell de escritorio y tres celulares: un iPhone, un BlackBerry y un Android. La pantalla de su laptop, que representaba la consola de la agencia de inteligencia de un cliente, estaba proyectada en la pared.</p>
+<p class="story-body-text story-content" data-para-count="758" data-total-count="19515" id="story-continues-30" tabindex="-1">Varios iconos mostraban los distintos flujos de información que potencialmente podrían verse al tomar el control de la computadora de la víctima: imágenes de cámaras internas, sonido de micrófonos internos, impresiones de pantalla, registros detallados de las aplicaciones abiertas y los bitcoines transferidos, un registro continuo de ubicación con latitud y longitud, así como los registros de las libretas de direcciones, calendarios, llamadas telefónicas, llamadas de Skype y contraseñas, así como los sitios web visitados. Un registro de teclas grababa cada tecla que se presionaba. Eran muchas cosas que controlar. Otras dos vistas, llamadas “línea de eventos” y “línea de acciones”, reunían la información en orden cronológico.</p>
+<p class="story-body-text story-content" data-para-count="273" data-total-count="19788" id="story-continues-31" tabindex="-1">Scarafile, quien interpretaba el papel del cliente y el de la víctima, encendió la Dell. Después de ver el fondo de pantalla de la computadora, una escena gótica enmarcada por siluetas de castillos, parecía que estaba planeando un ataque terrorista desde Transilvania.</p>
+<p class="story-body-text story-content" data-para-count="1035" data-total-count="20823" id="story-continues-32" tabindex="-1">Scarafile explicó que existen tres métodos para hacer que el Remote Control System acceda al dispositivo de una víctima. Los clientes pueden obtener acceso físico al dispositivo y después infectarlo con una memoria USB o una tarjeta de memoria. Pueden irradiar el RCS en un wifi, o pueden enviar un correo y hacer que la víctima le dé clic a un adjunto infectado… generalmente, un archivo de un programa reconocido como Microsoft Word o PowerPoint. Scarafile no mencionó un cuarto método, descrito por los <a href="https://citizenlab.org/2014/08/cat-video-and-the-death-of-clear-text/" target="_blank">críticos de Hacking Team</a> y al que se refieren en sus correos internos: la instalación del RCS mediante un proceso más complejo llamado “inyección de red” que, supuestamente, requiere determinar la ubicación exacta de la víctima en internet y observarla mientras busca, por ejemplo, un video de gatos en YouTube, y después ofrecerle una versión falsa de la misma página, una que tenga el video al fondo —con el logo de YouTube y todo— mientras el RCS atraviesa sus defensas digitales de forma discreta.</p>
+<p class="story-body-text story-content" data-para-count="444" data-total-count="21267" id="story-continues-33" tabindex="-1">Sea cual sea el método de infección el código maligno, conocido como “agente”, después se comunica con sus controladores de manera anónima a través de envíos transferidos por una serie de servidores que se encuentran en todo el mundo. Aunque la víctima sospeche y averigüe que algo está mal, esta cadena de servidores hace que sea casi imposible saber exactamente quién está utilizando el producto de Hacking Team para espiarla.</p>
+<figure id="media-100000004848394" class="media photo media-100000004848394 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/01/08/magazine/08hacking3/08mag-08hacking-t_CA1-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-35">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/01/08/magazine/08hacking3/08mag-08hacking-t_CA1-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/01/08/magazine/08hacking3/08mag-08hacking-t_CA1-superJumbo.jpg" data-mediaviewer-caption="David Vincenzetti, Hacking Team’s chief executive, in Milan." data-mediaviewer-credit="Luca Locatelli/Institute, for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/01/08/magazine/08hacking3/08mag-08hacking-t_CA1-master675.jpg"/>
+		<meta itemprop="height" content="506" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">David Vincenzetti, Hacking Team’s chief executive, in Milan.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Luca Locatelli/Institute, for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="588" data-total-count="21855" id="story-continues-35" tabindex="-1">Para la demostración, Scarafile optó por el tercer método, al cual se refirió como “un poco de ingeniería social”. Utilizando la computadora del cliente le envió a la víctima un correo con un archivo adjunto de Word. Después regresó a la computadora de la víctima y le dio doble clic al enlace, justo como Lagunes había hecho con el que estaba en su buzón de entrada. “A partir de ahora”, dijo, “este sistema está infectado, o monitoreado por el Remote Control System”. Seguiría estando infectado aunque la víctima apagara su dispositivo o saliera de su cuenta.</p>
+<p class="story-body-text story-content" data-para-count="716" data-total-count="22571" id="story-continues-36" tabindex="-1">En la línea de tiempo, el objetivo aparecía como un patán desaliñado vestido con una camiseta, llamado “Jimmy Page… dirigente de una célula terrorista”. Utilizando la Dell de &#8220;Jimmy Page&#8221;, Scarafile accedió al Gmail, Facebook y Twitter de Page. Abrió Skype, analizó a los colegas criminales de Page (Don Corleone, Harry Potter, Keyser Soze) y le dejó a uno de ellos un mensaje de voz desde el celular de Page. Accediendo a una memoria USB conectada a la computadora infectada, Scarafile abrió un archivo cifrado que resultó contener una orden para “matar a David Vincenzetti”. RCS lo capturó todo incluyendo imágenes periódicas de Scarafile, encarnando a Page, mientras trabajaba.</p>
+<p class="story-body-text story-content" data-para-count="321" data-total-count="22892" id="story-continues-37" tabindex="-1">“No me gustan las palabras ‘inyectar’ e ‘infectar’”, dijo Vinci, el vicepresidente. “RCS está desplegando el agente en el dispositivo de la víctima porque quieres monitorear algunas de sus actividades. Exactamente de la misma manera en que las fuerzas del orden escuchan algunas de tus llamadas, ¿no?”.</p>
+<p class="story-body-text story-content" data-para-count="564" data-total-count="23456" id="story-continues-38" tabindex="-1">Rabe me había dicho que Vincenzetti era “un combatiente”, y que su lado combativo era obvio debido a una mezcla de recortes de revistas e impresiones que tenía pegadas en la pared detrás de su escritorio… una suerte de pizarra de sus estados de ánimo, como las que se usan en la industria de la publicidad para inspirarse antes de lanzar una nueva marca. Sin embargo, la pizarra de Vincenzetti no se trataba de zapatos o refrescos. Era sobre la lucha mundial por el poder, la cual concibe como un gran conflicto, una batalla entre los buenos y los malos.</p>
+<p class="story-body-text story-content" data-para-count="726" data-total-count="24182" id="story-continues-39" tabindex="-1">Del lado bueno había una foto de la campana que los aspirantes a soldados de la Marina estadounidense pueden hacer sonar en caso de querer renunciar al programa durante la Semana Infernal, y una cita de otro empresario acerca de que “el negocio es guerra”. Del lado malo, Vincenzetti había pegado una imagen satelital que mostraba una de las zonas más conflictivas de tensión internacional, las islas artificiales que se alzan en el mar de China Meridional, una línea de peones terrestres que impulsan el dominio de la influencia china. A su lado se encontraba un gráfico de Irán en el que se describía cómo ese país podría seguir impulsando su programa nuclear, a pesar del reciente acuerdo con Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="168" data-total-count="24350" id="story-continues-40" tabindex="-1">“Creo que el acuerdo de Irán es simplemente terrible”, dijo Vincenzetti, y después agregó con sarcasmo: “Ah, es una expansión tan pacífica. Muy pacífica”.</p>
+<p class="story-body-text story-content" data-para-count="65" data-total-count="24415" id="story-continues-41" tabindex="-1">“Esa no es la postura oficial de la empresa”, interpuso Rabe.</p>
+<p class="story-body-text story-content" data-para-count="697" data-total-count="25112" id="story-continues-42" tabindex="-1">Vincenzetti, de 48 años, parece una persona familiar… pero en realidad es un empresario ferozmente competitivo y motivado, cuya existencia se organiza en torno a su trabajo. Su esposa nació en Marruecos y no tiene hijos. Sus ojos pequeños y de párpados pesados pueden hacer que luzca indiferente de una manera somnolienta. La mañana que nos conocimos llevaba jeans, un saco azul marino y una camisa rayada con los botones desabrochados hasta la mitad del pecho. Parecía más cómodo de pie que sentado. Mientras hablábamos en un salón de conferencias, se puso de pie y paseaba alrededor de la mesa observando la máquina de café, el paisaje de la ventana o una caja de agua embotellada.</p>
+<p class="story-body-text story-content" data-para-count="509" data-total-count="25621" id="story-continues-43" tabindex="-1">“Si quisiera entrar a la fuerza en esta habitación, ¿cómo lo haría?”, preguntó. “Hay una puerta y hay dos ventanas”. Puso sus manos contra los páneles de cristal. “El perímetro es lo primero que debes asegurar”, continuó. En los inicios de su carrera se dedicó a proteger información. Ahora había avanzado. “Si no puedes entrar a la fuerza en un banco, no puedes protegerlo. Así que cuando estás en seguridad, en realidad no hay diferencia entre pensar ofensiva y defensivamente”.</p>
+<p class="story-body-text story-content" data-para-count="907" data-total-count="26528" id="story-continues-44" tabindex="-1">A mediados de los ochenta, los padres de Vincenzetti, un vendedor y una profesora, le compraron una Commodore 64, una de las primeras computadoras personales. Pronto creó un clon de Pac-Man, un juego al estilo de Tron y otro de aventuras basadas en textos. En los noventa, siendo estudiante de informática en la Universidad de Milán, desarrolló una fascinación por la criptografía y se escribía con programadores de todo el mundo acerca de nuevas teorías criptográficas, además escribió un código para el cifrado de correos. En su último año fue el encargado de administrar la red interna de la universidad, un puesto que generalmente se reservaba a los estudiantes de posgrado. Vincenzetti recuerda esos primeros días como una época en la que “todo era gratis y nadie intentaba dañarte. Estábamos totalmente abiertos y accesibles. Los mejores se llamaban <em>hackers</em>, y yo era un <em>hacker</em>”.</p>
+<p class="story-body-text story-content" data-para-count="577" data-total-count="27105" id="story-continues-45" tabindex="-1">Vincenzetti dejó la universidad prematuramente y fundó tres empresas; todas se enfocaban en la ciberseguridad defensiva. Después de fundar Hacking Team, en 2003, intentó venderle sus servicios a las agencias policiacas italianas pero vio que eran escépticas de que los mafiosos y otros criminales de alto nivel se molestaran en cifrar sus comunicaciones. En Italia, la policía estaba acostumbrada a obtener lo que necesitaba mediante el espionaje telefónico, organizado con distintos niveles de formalidad a través de sus contactos con las firmas de telecomunicaciones.</p>
+<p class="story-body-text story-content" data-para-count="728" data-total-count="27833" id="story-continues-46" tabindex="-1">Pero después de los atentados de Madrid en 2004, que fueron coordinados a través de celulares e internet, los oficiales de policía y agentes de inteligencia, no solo en Italia sino en toda Europa, se interesaron por contratar proveedores de <em>hackeo</em> ofensivo, parte de una emergente carrera armamentística dedicada al cifrado comercial. El crecimiento de Skype hizo que fuera fácil para los usuarios cifrar sus comunicaciones y las autoridades estaban dispuestas a pagar medidas correctivas como el Remote Control System. Singapur, el primer cliente de Hacking Team fuera de Europa, lo contrató en 2008. El negocio de la empresa en Medio Oriente despegó en 2011, un auge que coincidió con el inicio de la Primavera Árabe.</p>
+<p class="story-body-text story-content" data-para-count="798" data-total-count="28631" id="story-continues-47" tabindex="-1">Para ese entonces, Hacking Team había entrado en una fase de crecimiento pues su negocio estaba impulsado por la demanda entre los gobiernos del tercer mundo que necesitaban las herramientas de vigilancia del primer mundo. De acuerdo con dos antiguos empleados, la empresa sostuvo charlas con el principal funcionario de seguridad del coronel Muamar Gadafi, quien quería crear un sistema nacional de recolección de información que pudiera incluirse en cada celular libio (Rabe no confirmó ni negó que esta reunión haya sucedido y agregó: “A menudo la empresa recibe peticiones para proveer servicios que no vendería ni tiene disponibles”). Naciones Unidas, que prohíbe la exportación de “armas electrónicas” a Sudán, ha investigado las actividades de Hacking Team en ese país.</p>
+<p class="story-body-text story-content" data-para-count="448" data-total-count="29079" id="story-continues-48" tabindex="-1">Hace poco, 19 miembros del parlamento italiano firmaron una petición en la que se preguntaban si el gobierno egipcio pudo haber usado el RCS para rastrear a Giulio Regeni, un estudiante italiano de 28 años que parece haber estado bajo vigilancia y cuyo <a href="https://www.nytimes.com/2016/09/10/world/middleeast/egypt-italy-giulio-regeni.html" target="_blank">cuerpo mutilado</a> apareció el año pasado en una carretera de Egipto. El software de Hacking Team no se ha asociado con ese caso pero la empresa ha hecho negocios con el actual régimen egipcio.</p>
+<p class="story-body-text story-content" data-para-count="676" data-total-count="29755" id="story-continues-49" tabindex="-1">Como parte de la controversia, el gobierno italiano revocó temporalmente la licencia de exportación mundial de Hacking Team, así que durante varios meses la empresa tuvo que registrar una solicitud independiente para cada uno de sus clientes fuera de la Unión Europea (cuando le mencioné el caso de Regeni a Rabe, dijo que el estudiante asesinado era “un italiano que hizo que lo mataran en Egipto”. Citó la política oficial de Hacking Team: la empresa no conoce, ni desea saber las identidades de las personas que sus clientes eligen atacar. “No hay evidencia de que el software de Hacking Team tuviera algo que ver con el fallecimiento de Regeni”, dijo Rabe).</p>
+<figure id="media-100000004848927" class="media photo media-100000004848927 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/01/08/magazine/08hacking4/08hacking4-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-51">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/01/08/magazine/08hacking4/08hacking4-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/01/08/magazine/08hacking4/08hacking4-superJumbo.jpg" data-mediaviewer-caption="An entrance to Hacking Team’s Milan offices." data-mediaviewer-credit="Luca Locatelli/Institute, for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/01/08/magazine/08hacking4/08hacking4-master675.jpg"/>
+		<meta itemprop="height" content="506" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">An entrance to Hacking Team’s Milan offices.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Luca Locatelli/Institute, for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="760" data-total-count="30515" id="story-continues-51" tabindex="-1">Todos los clientes de la empresa firman contratos en los que se comprometen a cumplir con las leyes locales. La compañía dice que veta a clientes potenciales y estudia los informes de periodistas y grupos de defensa de derechos humanos en busca de “evidencia objetiva o preocupaciones creíbles” de que sus productos están siendo mal utilizados. Pero cuando se trata de las interacciones de Hacking Team con sus clientes, los documentos filtrados sugieren que los empleados a veces ignoran esos asuntos. En el caso del gobierno de Puebla y otros clientes latinoamericanos, parece que el personal ignoró las advertencias en las que se insinuaba que el Remote Control System se estaba utilizando para recolectar información de los opositores políticos.</p>
+<p class="story-body-text story-content" data-para-count="1001" data-total-count="31516" id="story-continues-52" tabindex="-1">En varias ocasiones, los clientes le enviaron documentos adjuntos a Hacking Team con contenido relacionado con elecciones, incluyendo información de encuestas, formularios de partido e invitaciones dirigidas y firmadas por funcionarios electos. En vez de preguntar cómo estaban relacionados esos archivos con la lucha contra el crimen y el tráfico de drogas, los técnicos simplemente respondieron con un correo, como se lo pidieron, con un “software maligno” incluido con lo cual convertían ese documento en una herramienta de vigilancia que podía usarse contra quien lo recibiera. Cuando se le preguntó sobre esos casos, Rabe respondió que los clientes “no deben usarlo con propósitos políticos, pero no creo que sea razonable esperar que un programador italiano”, por ejemplo, un técnico de soporte, “hubiera visto esos archivos y supiera qué estaba pasando… creo que eso es una exageración, que un italiano que trabaja con software supiera que un sujeto es un disidente”.</p>
+<p class="story-body-text story-content" data-para-count="1178" data-total-count="32694" id="story-continues-53" tabindex="-1">El crítico más prominente de Hacking Team es <a href="https://citizenlab.org/" target="_blank">Citizen Lab</a>, un grupo de investigación de la Munk School of Global Affairs de la Universidad de Toronto. Antes de la filtración de Hacked Team, Citizen Lab <a href="https://citizenlab.org/2014/02/hacking-team-targeting-ethiopian-journalists/" target="_blank">documentó casos</a> en los que el software de Hacking Team apareció en los dispositivos de activistas en Marruecos y los Emiratos Árabes Unidos, así como en el caso de un periodista etíope-estadounidense en Alejandría, Virginia. Ronald Deibert, director de Citizen Lab, me dijo que Hacking Team “es una empresa que al parecer no tiene controles internos para verificar el abuso de sus productos”. Cuando le pregunté a Vincenzetti acerca de esto, dijo que Citizen Lab estaba motivado por el dinero y señaló que el grupo ganó una beca de un millón de dólares una semana después de publicar un informe sobre las ventas de Hacking Team a Etiopía. “Su identidad es: ‘Soy el defensor de la libre expresión, soy el defensor de la libertad y la democracia’. Muy bien, entonces yo también lo soy. También lo es cada persona sensata”, dijo. Si a Citizen Lab realmente le importara el bien y el mal, comentó Vincenzetti, estaría combatiendo a China e Irán.</p>
+<p class="story-body-text story-content" data-para-count="808" data-total-count="33502" id="story-continues-54" tabindex="-1"><strong>Casi inmediatamente después</strong> de que los documentos de Hacked Team aparecieran en internet fueron analizados por <a href="http://r3d.mx/" target="_blank">R3D</a>, un grupo de defensa de los derechos digitales con sede en Ciudad de México. Luis Fernando García, el director de R3D, dice que la intimidación y la vigilancia en línea han aumentado durante la presidencia de Peña Nieto y se percató de eso cuando, en 2014, Citizen Lab publicó un informe que rastreaba una cadena de servidores asociados con Hacking Team que transfería información a través de Hong Kong, Londres, Ámsterdam y Atlanta antes de terminar en algún lugar de México. Entonces no se sabía exactamente quién estaba del otro lado del tránsito y qué estaban haciendo con esa información, pero el equipo de R3D reconoció que podía ser su oportunidad para averiguarlo.</p>
+<p class="story-body-text story-content" data-para-count="835" data-total-count="34337" id="story-continues-55" tabindex="-1">Poco después, R3D publicó tres facturas provenientes de la filtración de Hacking Team en las que se demostraba que el gobierno del estado de Jalisco le había pagado a la empresa casi medio millón de euros por el Remote Control System. Pronto se encontraron otros documentos que implicaban a varios estados más, entre ellos Puebla, aunque la mayoría de los estados negaron haber utilizado el software (después Jalisco admitió haber comprado el sistema que, supuestamente, estaba destinado a la oficina del fiscal). La noticia no atrajo la atención de la prensa mexicana, excepto en Puebla, después de que R3D se conectó con <a href="http://ladobe.com.mx/" target="_blank">Lado B</a>, un pequeño colectivo de noticias en internet. El nombre del colectivo alude al reverso de un disco… lo cual simboliza su dedicación a contar historias que de otra manera no se revelarían.</p>
+<p class="story-body-text story-content" data-para-count="901" data-total-count="35238" id="story-continues-56" tabindex="-1">Al editor de Lado B, Ernesto Aroche, no le sorprendió que el gobierno de Puebla usara el Remote Control System. En sus seis años de gobierno, Moreno Valle ha gastado desmesuradamente en nuevos sistemas de vigilancia, incluyendo varios “arcos de seguridad” que son estructuras de vigilancia ubicadas en carreteras que analizan el tránsito con cámaras de video y rayos X, y cuyo costo generó algunas preguntas en la prensa local. A inicios de 2013, Aroche empezó a notar que en el sitio web del estado de Puebla había solicitudes de cámaras ocultas y otros equipos de espionaje. Cuando pidió los registros públicos, el formulario de respuesta del gobierno indicaba que esas solicitudes jamás se habían llenado pero Aroche estaba escéptico, dada la creciente evidencia de que el gobierno de Moreno Valle había comenzado a utilizar sus mecanismos de seguridad con propósitos políticos.</p>
+<p class="story-body-text story-content" data-para-count="484" data-total-count="35722" id="story-continues-57" tabindex="-1">Por ese entonces hubo robos en las casas de varios disidentes políticos y periodistas; a veces los ladrones se llevaban pocas cosas además de las computadoras portátiles de sus víctimas. Los políticos recibían llamadas de números desconocidos y escuchaban sus propias conversaciones grabadas. Otro periodista llamado Fernando Maldonado, recibió un sobre sin marcar lleno de lo que supuestamente eran las transcripciones de 400 llamadas privadas hechas por políticos poblanos.</p>
+<p class="story-body-text story-content" data-para-count="746" data-total-count="36468" id="story-continues-58" tabindex="-1">Mientras Aroche y R3D revisaban los archivos filtrados de Hacked Team, descubrieron que los datos sobre Puebla tenían más detalles que los de otras cuentas mexicanas de Hacking Team. A menudo, el cliente de Puebla escribía correos electrónicos en los que pedía ayuda para infectar un documento en particular con un virus maligno. Algunos de estos mensajes provenían de una cuenta —soporteuiamx@gmail.com— que también aparece en muchas de las notas internas de Hacking Team. Una de esas notas documenta la petición de ayuda de un cliente para infectar un adjunto: una invitación para asistir a un evento de una organización política mexicana, firmada por Violeta Lagunes y dirigida a otro colega del partido contrario al gobernador.</p>
+<p class="story-body-text story-content" data-para-count="770" data-total-count="37238" id="story-continues-59" tabindex="-1">Aroche entrevistó a políticos y periodistas que estaban del otro extremo de los correos infectados en los archivos de Hacked Team. De acuerdo con un artículo de 2015 que Lado B publicó con la colaboración de un sitio web de política, el grupo de Puebla le envió a Hacking Team por lo menos 47 peticiones para infectar archivos específicos que después le enviaron a sus víctimas. Casi todos esos documentos estaban relacionados con asuntos políticos. Revisando los materiales, Aroche encontró el nombre de un empleado del gobierno de Puebla que parecía estar trabajando dentro de la operación de espionaje. “Antes, habíamos estado hablando de fantasmas”, me dijo Aroche. “Ahora podíamos probarlo. Comenzamos a ponerle nombres a los participantes”.</p>
+<p class="story-body-text story-content" data-para-count="987" data-total-count="38225" id="story-continues-60" tabindex="-1">Más de un año después, no hubo repercusiones políticas para el gobernador o sus aliados en Puebla. Me reuní con Aroche este otoño en la sede de Lado B, una pequeña oficina que está frente al patio de un viejo edificio construido en la época colonial de Puebla. La única insinuación de la presencia de Lado B era una pequeña calcomanía en la ventana. En su interior, Aroche estaba revisando un sobre de documentos que le había arrebatado al gobierno estatal. Dos contratos redactados y firmados por funcionarios mostraban un acuerdo entre el gobierno estatal y una empresa llamada Sym Servicios Integrales que los reportajes de Aroche habían identificado como un intermediario de Hacking Team. Los detalles de lo que había sido comprado estaban editados. “Estos contratos demuestran que el gobierno de Puebla tenía una relación comercial con esta empresa”, dijo Aroche. Sym Servicios Integrales dice que “jamás le vendió tecnología de HT al estado de Puebla”.</p>
+<p class="story-body-text story-content" data-para-count="311" data-total-count="38536" id="story-continues-61" tabindex="-1">En una breve declaración escrita de Sagrario Conde Valerio, una portavoz, el gobierno de Puebla negó las acusaciones de espionaje y afirmó que “no hay ni jamás ha habido relación entre el gobierno de Puebla y la empresa Hacking Team”. El gobierno rechazó responder en detalle a una lista de preguntas.</p>
+<p class="story-body-text story-content" data-para-count="456" data-total-count="38992" id="story-continues-62" tabindex="-1">Sin embargo, un exfuncionario del gobierno de Moreno Valle me dijo que cada año más de 1 millón de dólares se desviaban del presupuesto estatal para financiar la unidad de espionaje político. Documentos del archivo de Hacked Team indican que Hacking Team recibió un pedido del gobierno de Puebla por 415.000 euros en la primavera de 2013, y que Hacking Team reservó habitaciones de hotel para sus asociados que viajaron a Puebla en mayo de ese año.</p>
+<p class="story-body-text story-content" data-para-count="806" data-total-count="39798" id="story-continues-63" tabindex="-1">También me dijeron que parte de la capacitación para el RCS se realizó en un edificio verde de una calle residencial. Cuando visité el lugar, un letrero en la puerta decía que el edificio había sido una institución educativa. Ahora tenía barras a lo largo de la puerta y ventanas reflejantes. Los vecinos me dijeron que había sido abandonado durante varios meses. “La gente viene y va”, dijo una mujer. “Fueron muy herméticos. Dejaban equipo, se llevaban equipo. Entonces un día, hace casi un año, vinieron y se llevaron todo”. Otro vecino dijo que a menudo veía un vehículo de la policía estatal estacionado frente a la casa y a un hombre cojo que entraba y salía… un exagente mexicano de inteligencia, según alguien que estuvo presente durante la capacitación de Hacking Team.</p>
+<p class="story-body-text story-content" data-para-count="785" data-total-count="40583" id="story-continues-64" tabindex="-1">México es el mercado de exportación más grande de Hacking Team, pues suma casi seis millones de euros en ventas, según los documentos filtrados. Supuestamente, el Remote Control System está destinado a combatir criminales y tráfico de drogas. “Hay informes de que el software se utilizó en la detención del Chapo Guzmán, pero no puedo confirmarlo”, me dijo Rabe. Los archivos indican que por lo menos otros siete gobiernos estatales de México fueron clientes de Hacking Team, pero como no utilizaron el correo electrónico tanto como Puebla, sus actividades son más difíciles de rastrear. Varios exempleados de Hacking Team me dijeron que los abusos del software no se limitaban a Puebla. Un exempleado dijo que configuró el sistema dentro de la oficina de un alcalde.</p>
+<p class="story-body-text story-content" data-para-count="717" data-total-count="41300" id="story-continues-65" tabindex="-1">Katitza Rodríguez, directora de derechos internacionales en la Electronic Frontier Foundation, dice que la ley mexicana permite interceptar comunicaciones como la vigilancia telefónica, pero no da autoridad legal para utilizar las nuevas y poderosas herramientas que crea Hacking Team. Además, argumenta que es mucho más peligroso en México que en otros países donde los controles y contrapesos son más fuertes. “Esto es mucho más intrusivo que interceptar una llamada”, dijo. “No solo están escuchando; están invadiendo tu laptop. México necesita tener un debate en el congreso acerca de qué salvaguardas jurídicas se necesitan para este tipo de vigilancia o si el gobierno debería utilizarla”.</p>
+<figure id="media-100000004848393" class="media photo media-100000004848393 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/01/08/magazine/08hacking5/08mag-08hacking-t_CA0-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-67">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/01/08/magazine/08hacking5/08mag-08hacking-t_CA0-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/01/08/magazine/08hacking5/08mag-08hacking-t_CA0-superJumbo.jpg" data-mediaviewer-caption="A building in Puebla that was reportedly used to train operatives on Hacking Team’s software." data-mediaviewer-credit="Dominic Bracco II/Prime, for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/01/08/magazine/08hacking5/08mag-08hacking-t_CA0-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A building in Puebla that was reportedly used to train operatives on Hacking Team’s software.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Dominic Bracco II/Prime, for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="1040" data-total-count="42340" id="story-continues-67" tabindex="-1">Los archivos indican que a mediados de 2015, Hacking Team abrió una filial estadounidense y alquiló oficinas en Reston, Virginia, a 20 minutos de la sede de la CIA. La empresa elaboró un “plan de acción estadounidense”, en el que hacía un llamado a una expansión significativa en Norteamérica, con nuevas contrataciones y fases de lanzamientos en el Departamento de Justicia, las fuerzas armadas de Estados Unidos y la Real Policía Montada de Canadá. Hacking Team también tenía en mente otro mercado potencialmente lucrativo: los gobiernos locales y estatales de Estados Unidos. Les habló del producto a las agencias del orden público en San Bernardino, California; Washington; Nueva York; Fort Lauderdale y Orlando. En una evaluación de riesgos comisionada por la empresa, los abogados dijeron que ese tipo de ventas probablemente eran legales, siempre y cuando el producto se vendiera “a cierta distancia” de las investigaciones reales y se utilizara “en el transcurso normal de las operaciones gubernamentales”.</p>
+<p class="story-body-text story-content" data-para-count="1277" data-total-count="43617" id="story-continues-68" tabindex="-1">Puede que la expansión estadounidense de empresas como Hacking Team no enfrente mucha resistencia del gobierno federal, que está aceptando la vigilancia electrónica como parte del trabajo policiaco normal. El año pasado, el Departamento de Justicia cambió con éxito las reglas del proceso criminal, lo que facilitó que los agentes federales puedan <em>hackear</em> varias computadoras con una sola orden. Steve Daines, senador de Montana, intentó bloquear el cambio y se quejó de que permite un “poder ilimitado para el <em>hackeo</em> ilimitado”. En un discurso de 2014, que ahora se conoce en los círculos de ciberseguridad como su discurso “oscuro”, James Comey, el director del FBI, argumentó que el cifrado incluido en los productos de Apple representaba una amenaza a la seguridad pública… porque no solo permitía el terrorismo, sino también el tráfico de drogas, abuso infantil y la posibilidad de fugarse después de cometer un crimen. En vez de tener una “caja de seguridad que no puede abrirse”, Comey quería que las empresas de tecnología le dieran la combinación. “La ley no le ha seguido el paso a la tecnología y esa desconexión ha creado un problema de seguridad pública significativo”, dijo Comey. “Lo llamamos ‘mantenerse oculto’”.</p>
+<p class="story-body-text story-content" data-para-count="1355" data-total-count="44972" id="story-continues-69" tabindex="-1">Mientras el gobierno estadounidense ha defendido protecciones más débiles para las comunicaciones personales, las empresas han estado propagando herramientas de vigilancia más poderosas en todo el mundo. Muchas agencias extranjeras del orden público ya le compran productos de vigilancia electrónica a SS8 —una empresa respaldada por la firma de capital de riesgo, Kleiner Perkins Caufield Byers— así como a Harris Corporation, una empresa de 13 mil millones de dólares con sede en Florida que cotiza en la Bolsa de Nueva York. Por lo menos 25 departamentos estadounidenses de policía han utilizado el dispositivo Stingray de Harris que imita a las antenas de telefonía móvil y puede interceptar llamadas de celular en un rango de 200 metros. Todas las ventas de Stingray a las agencias locales del orden público han sido autorizadas por el FBI, que desde entonces ha peleado en la corte para que esas transacciones sigan siendo secretas. Tan solo en Baltimore, se ha utilizado Stingray más de 4000 veces en investigaciones de rutina sobre drogas. Se conoce mucho menos sobre otro producto de Harris, el Hailstrom, que también se comercializa en los departamentos locales de policía. Según los informes, Hailstrom es capaz de implantar un programa maligno que puede controlar el celular de un objetivo, igual que el RCS de Hacking Team.</p>
+<p class="story-body-text story-content" data-para-count="746" data-total-count="45718" id="story-continues-70" tabindex="-1">Los documentos de Hacked Team que ofrecen la perspectiva más reveladora de la ética de la empresa son los más públicos. Durante años, de dos a tres veces al día, Vincenzetti le envió correos masivos a cientos de sus contactos empresariales. Los destinatarios incluyeron a varios miembros de las fuerzas armadas estadounidenses y la comunidad de inteligencia, así como empleados gubernamentales de la ciudad de Cincinnati y el Servicio de Recaudación Interna. En esos mensajes, Vincenzetti se dirige a esta audiencia como “caballeros”. Las noticias a las que alude son un recordatorio de cómo los vientos geopolíticos han soplado a favor de Hacking Team y otros aliados que se llaman a sí mismos como empresas de la ley y el orden.</p>
+<p class="story-body-text story-content" data-para-count="518" data-total-count="46236" id="story-continues-71" tabindex="-1">Como dijo George Tener sobre la inteligencia previa al 11 de septiembre, en el mundo de Vincenzetti el sistema siempre está “en alerta roja”: Medio Oriente se desmorona; Rusia, intranquila y con armas nucleares, además de los ejércitos de yihadistas entrenados por el Estado Islámico (EI) en toda Europa con sus dispositivos USB cifrados y conocimientos sobre la web oscura. Contrastadas con este contexto de peligro siempre latente, las preocupaciones sobre los derechos son ingenuas en el mejor de los casos.</p>
+<p class="story-body-text story-content" data-para-count="585" data-total-count="46821" id="story-continues-72" tabindex="-1">Los correos de Vincenzetti aprovechan esta sensación de peligro y alarma. Escribe sobre sombrías pandillas de <em>hackers</em> iraníes que utilizan la etiqueta #JeSuisCharlie para inyectar programas malignos en las computadoras francesas. Celebra la sentencia condenatoria a Ross Ulbricht, también conocido como Dread Pirate Roberts, creador del sitio web Silk Road. Después de los arrestos de dos hombres de Uzbekistán en Brooklyn por decirle a unos informantes que querían unirse al EI, Vincenzetti escribe sobre “un complot terrorista muy grave frustrado en suelo estadounidense”.</p>
+<p class="story-body-text story-content" data-para-count="39" data-total-count="46860" id="story-continues-73" tabindex="-1">Algunos de sus argumentos de venta son:</p>
+<p class="story-body-text story-content" data-para-count="244" data-total-count="47104" id="story-continues-74" tabindex="-1">&#8220;Ha llegado el momento de tener una supervisión en internet tecnológicamente más sofisticada y mucho más efectiva… algo capaz de penetrar el núcleo de los foros terroristas OCULTOS. Y una tecnología así (de única) EXISTE&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="30" data-total-count="47134" id="story-continues-75" tabindex="-1">Otro día brindó más pistas:</p>
+<p class="story-body-text story-content" data-para-count="363" data-total-count="47497" id="story-continues-76" tabindex="-1">&#8220;Estoy hablando de una NUEVA tecnología capaz de neutralizar las capas protectoras que dependen del cifrado para poder rastrearlos, identificarlos, ubicarlos, perseguirlos y, finalmente, atraparlos. Algo que opere a gran escala. Algo distinto. Estoy hablando de una tecnología de vigilancia masiva que sea nueva y superior, de próxima generación&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="320" data-total-count="47817" id="story-continues-77" tabindex="-1">El tono de la jerga de venta de Vincenzetti era extrañamente animado, en especial si se consideran sus funestas predicciones. Era casi como si estuviera en el negocio de vender hornos de microondas o emparedados, y no herramientas que permiten exponer por completo las vidas privadas de los criminales (o de quien sea).</p>
+<p class="story-body-text story-content" data-para-count="903" data-total-count="48720" id="story-continues-78" tabindex="-1">La ecuación no declarada de Vincenzetti —la privacidad es opacidad y la opacidad es terrorismo— es menos controvertida de lo que parece. Un eco de apoyo a sus teorías puede escucharse en muchas de las declaraciones públicas de funcionarios estadounidenses que Vincenzetti suele cortar y pegar en sus correos masivos. Eric Holder, el exfiscal general, hizo un llamado a utilizar “herramientas penales y de investigación que nos permitan tomar acciones preventivas”. Cuando Comey advirtió que “el cifrado amenaza con llevarnos a todos a un lugar muy oscuro”, Vincenzetti reenvió esa frase junto al lema: “SÍ tenemos una solución para muchas, si no es que para todas estas preocupaciones”. Y cuando, en mayo de 2015, Comey advirtió sobre una “amenaza” que se había “transformado” en una “telaraña caótica”, Vincenzetti también se lo informó a sus “caballeros”.</p>
+<p class="story-body-text story-content" data-para-count="667" data-total-count="49387" id="story-continues-79" tabindex="-1">Un mes más tarde, un <em>hackeo</em> anónimo reveló la telaraña invisible de Hacking Team y un año más tarde, durante el periodo previo al día de la elección, llegaron los correos internos del Partido Demócrata. Para ese entonces quedó claro que las herramientas de robo digital se habían propagado más allá de las manos de los funcionarios policiales. Comey había criticado las debilidades de la seguridad; Vincenzetti estaba vendiendo herramientas más fuertes. Podían utilizarse para atrapar a &#8220;Jimmy Page&#8221;, arrestar al Chapo Guzmán, combatir el crimen, desacreditar a un oponente político o tan solo mantener vigilado a alguien, sea quien sea.</p>
+<p class="story-body-text story-content" data-para-count="190" data-total-count="49577" id="story-continues-80" tabindex="-1">Estar oculto es ser terrorista… ese era el núcleo del argumento de venta. Cualquier reducto digital que pudiera resistirse a ser revelado era un riesgo público y una oportunidad privada.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Mattathias Schwartz es reportero de seguridad nacional de The Intercept y colaborador de la revista. Su último artículo trató sobre el confuso papel de las fuentes pagadas en las investigaciones sobre terrorismo del FBI.</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/chapo-guzman/" rel="tag">Chapo Guzmán</a>, <a href="https://www.nytimes.com/es/tag/ciberseguridad/" rel="tag">ciberseguridad</a>, <a href="https://www.nytimes.com/es/tag/comite-nacional-democrata/" rel="tag">Comité Nacional Demócrata</a>, <a href="https://www.nytimes.com/es/tag/donald-trump/" rel="tag">Donald Trump</a>, <a href="https://www.nytimes.com/es/tag/electronic-frontier-foundation/" rel="tag">Electronic Frontier Foundation</a>, <a href="https://www.nytimes.com/es/tag/enrique-pena-nieto/" rel="tag">Enrique Peña Nieto</a>, <a href="https://www.nytimes.com/es/tag/ernesto-cordero/" rel="tag">Ernesto Cordero</a>, <a href="https://www.nytimes.com/es/tag/estados-unidos/" rel="tag">Estados Unidos</a>, <a href="https://www.nytimes.com/es/tag/fbi/" rel="tag">FBI</a>, <a href="https://www.nytimes.com/es/tag/finfisher/" rel="tag">FinFisher</a>, <a href="https://www.nytimes.com/es/tag/fsb/" rel="tag">FSB</a>, <a href="https://www.nytimes.com/es/tag/gmail/" rel="tag">gmail</a>, <a href="https://www.nytimes.com/es/tag/gustavo-madero/" rel="tag">Gustavo Madero</a>, <a href="https://www.nytimes.com/es/tag/hacked-team/" rel="tag">Hacked Team</a>, <a href="https://www.nytimes.com/es/tag/hacking-team/" rel="tag">Hacking Team</a>, <a href="https://www.nytimes.com/es/tag/hillary-clinton/" rel="tag">Hillary Clinton</a>, <a href="https://www.nytimes.com/es/tag/insider-surveillance/" rel="tag">Insider Surveillance</a>, <a href="https://www.nytimes.com/es/tag/james-comey/" rel="tag">James Comey</a>, <a href="https://www.nytimes.com/es/tag/john-podesta/" rel="tag">John Podesta</a>, <a href="https://www.nytimes.com/es/tag/malware-etico/" rel="tag">malware ético</a>, <a href="https://www.nytimes.com/es/tag/mexico/" rel="tag">México</a>, <a href="https://www.nytimes.com/es/tag/muamar-gadafi/" rel="tag">Muamar Gadafi</a>, <a href="https://www.nytimes.com/es/tag/nice/" rel="tag">Nice</a>, <a href="https://www.nytimes.com/es/tag/nsa/" rel="tag">NSA</a>, <a href="https://www.nytimes.com/es/tag/pan/" rel="tag">PAN</a>, <a href="https://www.nytimes.com/es/tag/pri/" rel="tag">PRI</a>, <a href="https://www.nytimes.com/es/tag/puebla/" rel="tag">Puebla</a>, <a href="https://www.nytimes.com/es/tag/rcs/" rel="tag">RCS</a>, <a href="https://www.nytimes.com/es/tag/rusia/" rel="tag">Rusia</a>, <a href="https://www.nytimes.com/es/tag/spear-phishing/" rel="tag">spear phishing</a>, <a href="https://www.nytimes.com/es/tag/stingray/" rel="tag">Stingray</a>, <a href="https://www.nytimes.com/es/tag/trovicor/" rel="tag">Trovicor</a>, <a href="https://www.nytimes.com/es/tag/violeta-lagunes/" rel="tag">Violeta Lagunes</a>, <a href="https://www.nytimes.com/es/tag/wikileaks/" rel="tag">WikiLeaks</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2017/01/12/ciberguerra-a-la-venta/"
+				data-title="Noticias: Ciberguerra a la venta"
+				data-author="POR MATTATHIAS SCHWARTZ"
+				data-media=""
+				data-description="Detrás del &quot;hackeo&quot; de las elecciones internas del Partido Acción Nacional en Puebla, México, estaba un software de Hacking Team. Los documentos filtrados sobre esta empresa muestran la sombría industria mundial de vigilancia de actividad virtual."
+				data-publish-date="12 de enero de 2017"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/06/trump-reconoce-que-rusia-podria-ser-responsable-del-hackeo-durante-las-elecciones/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">Trump reconoce que Rusia podría ser responsable del hackeo durante las elecciones</span>
+							<time class="dateline">6 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/01/07/us/07trump3_hp/07trump3_hp-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/12/14/yahoo-anuncio-que-mas-de-mil-millones-de-sus-cuentas-fueron-hackeadas-en-2013/">
+					<div class="story-body">
+						<h3 class="kicker">Tecnología</h3>
+
+						<h2 class="headline">
+							<span class="title">Yahoo anunció que más de mil millones de sus cuentas fueron hackeadas en 2013</span>
+							<time class="dateline">14 de diciembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/12/15/business/15YAHOO/15YAHOO-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/09/los-sin-genero-de-japon-desdibujan-la-linea-entre-el-rosa-y-el-azul/">
+					<div class="story-body">
+						<h3 class="kicker">Asia</h3>
+
+						<h2 class="headline">
+							<span class="title">Los ‘sin género’ de Japón desdibujan la línea entre el rosa y el azul</span>
+							<time class="dateline">9 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/01/05/international-home/GENDERLESS-vid/GENDERLESS-vid-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/09/no-solo-un-iceberg-condeno-al-titanic-sostiene-periodista/">
+					<div class="story-body">
+						<h3 class="kicker">Internacional</h3>
+
+						<h2 class="headline">
+							<span class="title">No solo un iceberg condenó al Titanic, sostiene periodista</span>
+							<time class="dateline">9 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/01/04/world/04Titanic/04Titanic-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+			
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-transparent-ffffff' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-transparent-ffffff', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":772,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

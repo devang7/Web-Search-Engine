@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004400377"/>
+<meta name="hdl" content="&#8216;Intoxicado por el poder&#8217;, el Partido de los Trabajadores de Brasil cae en desgracia" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20160516" />
+<meta name="utime" content="20160516095846" />
+<meta name="ptime" content="20160516095846" />
+<meta name="DISPLAYDATE" content="May. 16, 2016" />
+<meta name="dat" content="May. 16, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="intoxicado-por-el-poder-el-partido-de-los-trabajadores-de-brasil-cae-en-desgracia" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/05/16/intoxicado-por-el-poder-el-partido-de-los-trabajadores-de-brasil-cae-en-desgracia/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="&#8216;Intoxicado por el poder&#8217;, el Partido de los Trabajadores de Brasil cae en desgracia" />
+<meta property="og:description" content="El juicio político en contra de Dilma Rousseff es un golpe devastador para el partido que intentaba representar a las masas, pero que sucumbió a la corrupción que criticaba." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/05/12/world/12workers-web/12workers-web-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-05-16" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/05/16/intoxicado-por-el-poder-el-partido-de-los-trabajadores-de-brasil-cae-en-desgracia/" />
+<meta property="twitter:title" content="&#8216;Intoxicado por el poder&#8217;, el Partido de los Trabajadores de Brasil cae en desgracia" />
+<meta property="twitter:description" content="El juicio político en contra de Dilma Rousseff es un golpe devastador para el partido que intentaba representar a las masas, pero que sucumbió a la corrupción que criticaba." />
+<meta name="author" content="Andrew Jacobs" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Andrew Jacobs" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="brasil" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="brasil" />
+<meta name="id" content="100000004400377"/>
+<meta name="wordCount" content="1996"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/05/16/intoxicado-por-el-poder-el-partido-de-los-trabajadores-de-brasil-cae-en-desgracia/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=05&amp;day=16&amp;name=intoxicado-por-el-poder-el-partido-de-los-trabajadores-de-brasil-cae-en-desgracia">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=11943">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/05\/16\/intoxicado-por-el-poder-el-partido-de-los-trabajadores-de-brasil-cae-en-desgracia\/"},"headline":"'Intoxicado por el poder', el Partido de los Trabajadores de Brasil cae en desgracia","datePublished":"2016-05-16T09:58:46+00:00","dateModified":"2016-07-27T18:58:27+00:00","author":{"@type":"Person","name":"Paula Duran"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/05\/12\/world\/12workers-web\/12workers-web-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"El juicio pol\u00edtico en contra de Dilma Rousseff es un golpe devastador para el partido que intentaba representar a las masas, pero que sucumbi\u00f3 a la corrupci\u00f3n que criticaba."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/05/16/intoxicado-por-el-poder-el-partido-de-los-trabajadores-de-brasil-cae-en-desgracia/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/05/13/world/americas/brazil-workers-party-dilma-rousseff-impeachment-vote.html?_r=0" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="americalatina/brasil" />
+<title>&#8216;Intoxicado por el poder&#8217;, el Partido de los Trabajadores de Brasil cae en desgracia &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/05/13/world/americas/brazil-workers-party-dilma-rousseff-impeachment-vote.html?_r=0" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/05/16/intoxicado-por-el-poder-el-partido-de-los-trabajadores-de-brasil-cae-en-desgracia/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-11943 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				&#8216;Intoxicado por el poder&#8217;, el Partido de los Trabajadores de Brasil cae en desgracia
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/05/16/intoxicado-por-el-poder-el-partido-de-los-trabajadores-de-brasil-cae-en-desgracia/"
+					data-title="América Latina: &#8216;Intoxicado por el poder&#8217;, el Partido de los Trabajadores de Brasil cae en desgracia"
+					data-author="POR ANDREW JACOBS"
+					data-media=""
+					data-description="El juicio político en contra de Dilma Rousseff es un golpe devastador para el partido que intentaba representar a las masas, pero que sucumbió a la corrupción que criticaba."
+					data-publish-date="16 de mayo de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/1TcQOGO">http://nyti.ms/1TcQOGO</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/brasil/">Brasil</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">&#8216;Intoxicado por el poder&#8217;, el Partido de los Trabajadores de Brasil cae en desgracia</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Andrew Jacobs</span>
+</span>
+
+					<time class="dateline" datetime="2016-05-16">16 de mayo de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/05/16/intoxicado-por-el-poder-el-partido-de-los-trabajadores-de-brasil-cae-en-desgracia/"
+							data-title="América Latina: &#8216;Intoxicado por el poder&#8217;, el Partido de los Trabajadores de Brasil cae en desgracia"
+							data-author="POR ANDREW JACOBS"
+							data-media=""
+							data-description="El juicio político en contra de Dilma Rousseff es un golpe devastador para el partido que intentaba representar a las masas, pero que sucumbió a la corrupción que criticaba."
+							data-publish-date="16 de mayo de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004401043" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/12/world/12workers-web/12workers-web-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/12/world/12workers-web/12workers-web-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/12/world/12workers-web/12workers-web-superJumbo.jpg" data-mediaviewer-caption="Simpatizantes del Partido de los Trabajadores manifestándose el mes pasado en Brasilia. La caída del partido que alguna vez se comprometió con la transparencia y el gobierno limpio ha profundizado la desconfianza en los políticos brasileños. " data-mediaviewer-credit="Fernando Bizerra Jr./European Pressphoto Agency"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/12/world/12workers-web/12workers-web-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Simpatizantes del Partido de los Trabajadores manifestándose el mes pasado en Brasilia. La caída del partido que alguna vez se comprometió con la transparencia y el gobierno limpio ha profundizado la desconfianza en los políticos brasileños. </span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Fernando Bizerra Jr./European Pressphoto Agency
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/05/13/world/americas/brazil-workers-party-dilma-rousseff-impeachment-vote.html?_r=0&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="324" data-total-count="324" id="story-continues-2" tabindex="-1">BRASILIA — Desde sus inicios como un grupo de marxistas que desafiaba a los gobernantes militares de Brasil, el Partido de los Trabajadores creció para convertirse en uno de los movimientos de izquierda más perdurables en el mundo: una fuerza electoral que dominó la política de la nación durante más de una década.</p>
+<p class="story-body-text story-content" data-para-count="365" data-total-count="689" id="story-continues-3" tabindex="-1">No obstante, el senado brasileño le asestó un golpe devastador el jueves pasado, cuando votó a favor de suspender a la Presidenta Dilma Rousseff y apartó del poder a la organización política que ha gobernado a la nación más grande de América Latina durante 13 años, el régimen más largo de un partido elegido democráticamente en la historia de Brasil.</p>
+<p class="story-body-text story-content" data-para-count="271" data-total-count="960" id="story-continues-4" tabindex="-1">“El Partido de los Trabajadores fue un partido de esperanza, pero sus líderes se intoxicaron de poder y ahora esas esperanzas han sido frustradas”, declaró Hélio Bicudo, de 93 años, uno de los miembros veteranos del partido y exlegislador, quien desertó en 2005.</p>
+<p class="story-body-text story-content" data-para-count="240" data-total-count="1200" id="story-continues-5" tabindex="-1">Después de una década de altísima popularidad, la fortuna del Partido de los Trabajadores se vio golpeada por una serie de crisis económicas y un escándalo descomunal de corrupción que derribó a algunos de sus líderes principales.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="279" data-total-count="1479" id="story-continues-6" tabindex="-1">Mientras la pobreza acababa con millones de brasileños, el partido que había llegado al poder con promesas de representar al pueblo y eliminar la impunidad terminó siendo parte del mismo tipo de corrupción que por tanto tiempo caracterizó a las clases gobernantes del país.</p>
+<p class="story-body-text story-content" data-para-count="440" data-total-count="1919" id="story-continues-7" tabindex="-1">Aunque Rousseff no ha sido acusada de corrupción (su proceso de destitución se basa en una artimaña presupuestaria que tenía la intención de aumentar sus posibilidades de reelección), los escándalos de corrupción han empañado la reputación de su mentor, el expresidente Luiz Inácio Lula da Silva, referente del Partido de los Trabajadores, quien la eligió para que fuera su sucesora y tenía planeado contender de nuevo en 2018.</p>
+<p class="story-body-text story-content" data-para-count="266" data-total-count="2185" id="story-continues-8" tabindex="-1">Da Silva aún no ha sido acusado de ningún delito, pero los fiscales federales están investigando su participación en una conspiración que involucraba desvío de dinero de la compañía petrolera nacional a los fondos de campaña del Partido de los Trabajadores.</p>
+<figure id="media-100000004401049" class="media photo media-100000004401049 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/12/world/12workers-web2/12workers-web2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-10">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/12/world/12workers-web2/12workers-web2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/12/world/12workers-web2/12workers-web2-superJumbo.jpg" data-mediaviewer-caption="Former President Luiz Inácio Lula da Silva at a news conference in March. The Workers’ Party standard-bearer, he picked Dilma Rousseff as his successor and had planned to run again in 2018." data-mediaviewer-credit="Lalo de Almeida for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/12/world/12workers-web2/12workers-web2-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Former President Luiz Inácio Lula da Silva at a news conference in March. The Workers’ Party standard-bearer, he picked Dilma Rousseff as his successor and had planned to run again in 2018.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Lalo de Almeida for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="295" data-total-count="2480" id="story-continues-10" tabindex="-1">Algunos aliados importantes de Da Silva, entre ellos, miembros veteranos del partido, han sido encarcelados o están siendo investigados por su participación en esta conspiración, la cual distribuyó miles de millones de dólares en sobornos entre personajes destacados de la esfera política.</p>
+<p class="story-body-text story-content" data-para-count="209" data-total-count="2689" id="story-continues-11" tabindex="-1">Incluso en una nación acostumbrada a la corrupción sistémica, la caída de un partido que alguna vez se comprometió con la transparencia y el gobierno limpio ha agudizado la desconfianza en los políticos.</p>
+<p class="story-body-text story-content" data-para-count="264" data-total-count="2953" id="story-continues-12" tabindex="-1">También está presente la amenaza de echar por tierra algunos de los logros del partido, una fuerza política que ayudó, admitieron incluso sus detractores, a aliviar la apabullante pobreza y la desigualdad económica que ha plagado esta nación de 200 millones.</p>
+<p class="story-body-text story-content" data-para-count="211" data-total-count="3164" id="story-continues-13" tabindex="-1">“Que el Partido de los Trabajadores se manchara al involucrarse en toda esta corrupción es una tragedia, quizá la mayor tragedia de lo que está pasando hoy”, afirmó José Murilo de Carvalho, historiador.</p>
+<p class="story-body-text story-content" data-para-count="351" data-total-count="3515" id="story-continues-14" tabindex="-1">De acuerdo con lo que reportan los medios de comunicación brasileños, en las últimas semanas, más de 130 alcaldes que ganaron el puesto con una candidatura del Partido de los Trabajadores han cambiado de partido y cerca de 30 diputados en la Cámara Baja del congreso, aproximadamente la mitad del pleno, han sugerido que deberían hacer lo mismo.</p>
+<p class="story-body-text story-content" data-para-count="408" data-total-count="3923" id="story-continues-15" tabindex="-1">Otros partidos fueron parte de este juego de corrupción; sin embargo, animados por la caída política de Rousseff, sus oponentes en la legislatura están trabajando para revertir algunos de los logros del partido de esta, incluidas las estrictas leyes ambientales, de protección a indígenas brasileños en el Amazonas y leyes que criminalizan las condiciones de trabajo abusivas en los ranchos ganaderos.</p>
+<p class="story-body-text story-content" data-para-count="351" data-total-count="4274" id="story-continues-16" tabindex="-1">Jan Rocha, autora del libro “Brazil Under the Workers’s Party”, opinó que tales esfuerzos, si logran concretarse, podrían atizar las divisiones de clase y provocar un contragolpe violento por parte de los brasileños que han sido privados de su voto y corren el riesgo de ser quienes más pierdan en el repliegue de las políticas del partido.</p>
+<p class="story-body-text story-content" data-para-count="349" data-total-count="4623" id="story-continues-17" tabindex="-1">“El Partido de los Trabajadores representó un intento por cambiar el escenario político en Brasil y dio voz a los millones de brasileños que nunca la habían tenido”, afirmó. “Sacó de la pobreza a millones de personas, pero Brasil sigue teniendo un espantoso y largo camino que recorrer antes de convertirse en una sociedad equitativa”.</p>
+<p class="story-body-text story-content" data-para-count="177" data-total-count="4800" id="story-continues-18" tabindex="-1">Marcado por la avaricia, la traición y la conquista eterna de más y más poder, la caída en desgracia del partido presenta todos los elementos de una tragedia shakespeariana.</p>
+<p class="story-body-text story-content" data-para-count="228" data-total-count="5028" id="story-continues-19" tabindex="-1">Su principal protagonista es Da Silva, de 70 años, quien trabajó lustrando zapatos cuando era niño, antes de conseguir trabajo en una fábrica de tornillos. Desde ahí, llegó a la presidencia y supervisó el auge económico.</p>
+<p class="story-body-text story-content" data-para-count="265" data-total-count="5293" id="story-continues-20" tabindex="-1">Inició en la década de 1970, cuando ayudó a transformar un grupo heterogéneo de activistas laborales, miembros del clero católico romano liberal y estudiantes idealistas en un formidable movimiento político que se enfrentó a los líderes militares del país.</p>
+<p class="story-body-text story-content" data-para-count="145" data-total-count="5438" id="story-continues-21" tabindex="-1">Formado en 1980, el Partido de los Trabajadores rechazó el dogma marxista estricto y adoptó un proceso democrático para elegir a sus líderes.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="82" data-total-count="5520" id="story-continues-22" tabindex="-1">Da Silva compitió por el puesto con la consigna “Tierra, trabajo y libertad”.</p>
+<p class="story-body-text story-content" data-para-count="341" data-total-count="5861" id="story-continues-23" tabindex="-1">A finales de la década de 1980, los candidatos del partido estaban ganando elecciones. En 1986, Da Silva fue electo como miembro del Congreso y, dos años más tarde, un candidato del Partido de los Trabajadores ganó la alcaldía de São Paulo, la ciudad más grande del País. Fue entonces cuando Da Silva puso sus ojos en la presidencia.</p>
+<p class="story-body-text story-content" data-para-count="546" data-total-count="6407" id="story-continues-24" tabindex="-1">Conocido ampliamente por el apodo de Lula, era una figura política con pocas posibilidades de ganar, su manera de hablar poco refinada y su retórica izquierdista inquietaba a la élite brasileña. No obstante, en 1998, después de tres candidaturas a la presidencia que no tuvieron éxito, Da Silva modificó su estrategia. Dejó las camisetas por trajes sastres y se deshizo de los discursos de cambio revolucionario para decir que se ocuparía de la deuda exterior de 250 mil millones de dólares que estaba coartando la economía brasileña.</p>
+<p class="story-body-text story-content" data-para-count="41" data-total-count="6448" id="story-continues-25" tabindex="-1">Su nuevo eslogan: “Lula, amor y paz”.</p>
+<p class="story-body-text story-content" data-para-count="439" data-total-count="6887" id="story-continues-26" tabindex="-1">En 2002, empleó el descontento popular sobre la desigualdad económica y la corrupción descontrolada para ganar la presidencia de manera abrumadora. Las medidas de austeridad que introdujo y una creciente demanda de los productos básicos de Brasil ayudaron a enderezar la economía, pero no tardó en darse cuenta de que era necesario hacer acuerdos con el reacio congreso brasileño para lograr aprobar su ambiciosa agenda legislativa.</p>
+<p class="story-body-text story-content" data-para-count="278" data-total-count="7165" id="story-continues-27" tabindex="-1">Para los expartidarios incondicionales como Idelber Avelar, el punto de rompimiento llegó cuando Da Silva comenzó a repartir cargos clientelistas y a formar alianzas con los líderes de los partidos de oposición que no compartían los ideales del Partido de los Trabajadores.</p>
+<figure id="media-100000004401052" class="media photo media-100000004401052 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/12/world/12workers-web3/12workers-web3-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-29">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/12/world/12workers-web3/12workers-web3-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/12/world/12workers-web3/12workers-web3-superJumbo.jpg" data-mediaviewer-caption="Ms. Rousseff in her office in Brasília in March." data-mediaviewer-credit="Tomas Munita for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/12/world/12workers-web3/12workers-web3-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Ms. Rousseff in her office in Brasília in March.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tomas Munita for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="268" data-total-count="7433" id="story-continues-29" tabindex="-1">“Representaba todo aquello en contra de lo que había estado luchando el partido”, declaró Avelar, académico que ahora vive en Estados Unidos. “Había algunas alternativas, pero la primera opción fue optar por la política de hacer tratos a puerta cerrada”.</p>
+<p class="story-body-text story-content" data-para-count="421" data-total-count="7854" id="story-continues-30" tabindex="-1">El acuerdo con los aliados que pedían renta casi hunde al gobierno de Da Silva en 2005, cuando el plan para comprar votos mediante pagos a los legisladores de la oposición por su lealtad fue expuesto en los medios brasileños. Da Silva sorteó el escándalo y fue reelecto en 2006, aunque se vio sustancialmente debilitado por esta crisis y estuvo forzado a hacer aún más alianzas para mantener el apoyo del congreso.</p>
+<p class="story-body-text story-content" data-para-count="467" data-total-count="8321" id="story-continues-31" tabindex="-1">Aparentemente, los funcionarios del Partido de los Trabajadores no aprendieron la lección que les dio su acercamiento al escándalo, pues se involucraron de manera secreta en un gigantesco esquema de sobornos con los ejecutivos de Petrobras, el gigante energético propiedad del Estado. El arreglo consistía en tomar miles de millones de dólares del auge petrolero y desviar el dinero hacia el Partido de los Trabajadores y sus socios de coalición en el congreso.</p>
+<p class="story-body-text story-content" data-para-count="169" data-total-count="8490" id="story-continues-32" tabindex="-1">El escándalo sacudió a la clase dirigente del país y hay decenas de ejecutivos corporativos y líderes de partido que han ido a prisión o están bajo investigación.</p>
+<p class="story-body-text story-content" data-para-count="270" data-total-count="8760" id="story-continues-33" tabindex="-1">“Nuestros mayores logros fueron sacar a 36 millones de personas de la pobreza y elevar otros 40 millones a la clase media”, declaró Da Silva en un correo electrónico esta semana. “Seguimos siendo un partido que se preocupa por los pobres y la justicia social”.</p>
+<p class="story-body-text story-content" data-para-count="140" data-total-count="8900" id="story-continues-34" tabindex="-1">A menos que se le acuse de algún delito, muchos analistas políticos siguen esperando que Da Silva compita por la presidencia en dos años.</p>
+<p class="story-body-text story-content" data-para-count="321" data-total-count="9221" id="story-continues-35" tabindex="-1">“En la política brasileña, nunca puedes poner la maquinaria en contra de alguien y creer que no se recuperará”, explicó Alfred P. Montero, autor del libro “Brazil: Reversal of Fortune” y catedrático en Carleton College. “He observado a estas personas desde la década de los ochenta, y siempre regresan”.</p>
+<p class="story-body-text story-content" data-para-count="371" data-total-count="9592" id="story-continues-36" tabindex="-1">Los expertos opinan que, a pesar de los problemas por los que pasa actualmente, el Partido de los Trabajadores, con sus 500.000 miembros activos, seguirá siendo una fuerza poderosa en la política de Brasil los siguientes años. Algunos consideran que la crisis de la destitución quizá incite a un periodo de introspección que podría ayudar a revigorizar el partido.</p>
+<p class="story-body-text story-content" data-para-count="142" data-total-count="9734" id="story-continues-37" tabindex="-1">“El Partido de los Trabajadores está volviendo a ser la oposición, lo cual quizá sea justo lo que recetó el médico”, afirmó Montero.</p>
+<p class="story-body-text story-content" data-para-count="251" data-total-count="9985" id="story-continues-38" tabindex="-1">Por ahora, los que permanecen fieles al Partido de los Trabajadores están ocupados en una búsqueda interior. ¿El partido abandonó sus ideales en la embriagadora avalancha de poder? ¿O sus líderes se adaptaron a un sistema arraigado y defectuoso?</p>
+<p class="story-body-text story-content" data-para-count="375" data-total-count="10360" id="story-continues-39" tabindex="-1">Lincoln Secco, catedrático de historia contemporánea en la Universidad de São Paulo y miembro veterano del partido, declaró que Da Silva cometió un error catastrófico durante sus primeros meses en el poder al no impulsar cambios políticos a pesar de la dificultad, incluido el ajuste del sistema de finanzas de campañas que depende tanto de los donantes corporativos.</p>
+<p class="story-body-text story-content" data-para-count="179" data-total-count="10539" id="story-continues-40" tabindex="-1">“Si el partido no confronta el sistema político, no hay otra forma de gobernar en Brasil salvo estableciendo alianzas corruptas”, aseveró. “Escogieron el camino fácil”.</p>
+<p class="story-body-text story-content" data-para-count="426" data-total-count="10965" id="story-continues-41" tabindex="-1">A pesar de las desilusiones, millones de brasileños siguen teniendo gran afecto hacia el partido, especialmente aquellos que se han beneficiado de los distintos programas de bienestar social que se implementaron durante los ejercicios de Da Silva y Rousseff. Estos incluyen un estipendio mensual para los residentes más pobres del país y programas que permitieron a millones de personas ir a la universidad por primera vez.</p>
+<p class="story-body-text story-content" data-para-count="359" data-total-count="11324" id="story-continues-42" tabindex="-1">Milton Nunes Sobrinho, de 53 años, portero en São Paulo, reconoce la ayuda que le brindó el partido para conseguir un trabajo estable, comprar un auto usado y sacar a su familia de una casucha infestada de ratas, gracias al programa de préstamos con subsidio federal, el cual generó 2,6 millones de nuevos propietarios de casas durante la década pasada.</p>
+<p class="story-body-text story-content" data-para-count="130" data-total-count="11454" id="story-continues-43" tabindex="-1">“Todo lo que prometieron, lo hicieron”, dijo Sobrinho. “Todo el progreso que hemos tenido en nuestras vidas es por ellos”.</p>
+<p class="story-body-text story-content" data-para-count="217" data-total-count="11671" id="story-continues-44" tabindex="-1">Al preguntarle sobre los problemas del partido, sacudió la cabeza. “Todo es un juego político”, respondió. “Y la siguiente ocasión definitivamente votaré por el candidato del Partido de los Trabajadores”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Paula Moura colaboró con información desde Brasilia y Vinod Sreeharsha desde Rio de Janeiro.</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/dilma-rousseff/" rel="tag">Dilma Rousseff</a>, <a href="https://www.nytimes.com/es/tag/juicio-politico/" rel="tag">juicio político</a>, <a href="https://www.nytimes.com/es/tag/luiz-inacio-lula-da-silva/" rel="tag">Luiz Inácio Lula da Silva</a>, <a href="https://www.nytimes.com/es/tag/partido-de-los-trabajadores/" rel="tag">Partido de los Trabajadores</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/05/16/intoxicado-por-el-poder-el-partido-de-los-trabajadores-de-brasil-cae-en-desgracia/"
+				data-title="América Latina: &#8216;Intoxicado por el poder&#8217;, el Partido de los Trabajadores de Brasil cae en desgracia"
+				data-author="POR ANDREW JACOBS"
+				data-media=""
+				data-description="El juicio político en contra de Dilma Rousseff es un golpe devastador para el partido que intentaba representar a las masas, pero que sucumbió a la corrupción que criticaba."
+				data-publish-date="16 de mayo de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/13/tras-dos-decadas-el-pendulo-politico-de-brasil-cambia-con-michel-temer/">
+					<div class="story-body">
+						<h3 class="kicker">Brasil</h3>
+
+						<h2 class="headline">
+							<span class="title">Tras dos décadas, el péndulo político de Brasil cambia con Michel Temer</span>
+							<time class="dateline">13 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/05/13/world/TEMER/TEMER-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/12/las-politicas-populistas-le-robaron-el-futuro-a-brasil/">
+					<div class="story-body">
+						<h3 class="kicker">Comentario</h3>
+
+						<h2 class="headline">
+							<span class="title">Las políticas populistas le robaron el futuro a Brasil</span>
+							<time class="dateline">12 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/05/04/business/04PORTER/04PORTER-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/04/delcidio-do-amaral-revela-en-detalle-la-corrupcion-en-brasil/">
+					<div class="story-body">
+						<h3 class="kicker">Brasil</h3>
+
+						<h2 class="headline">
+							<span class="title">El Senador Delcídio do Amaral revela en detalle la corrupción en Brasil</span>
+							<time class="dateline">4 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/02/world/04brazil-web/04brazil-web-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/14/britney-spears-la-superestrella-que-vive-en-una-jaula-de-oro/">
+					<div class="story-body">
+						<h3 class="kicker">Música</h3>
+
+						<h2 class="headline">
+							<span class="title">Britney Spears, la superestrella que vive en una jaula de oro</span>
+							<time class="dateline">14 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/26/arts/music/00Britney-promos-slide-QVN2/00Britney-promos-slide-QVN2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":852,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

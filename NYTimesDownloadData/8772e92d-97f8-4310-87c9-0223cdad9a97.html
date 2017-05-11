@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-opinion has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-opinion has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-opinion has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-opinion has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004613282"/>
+<meta name="hdl" content="¿Podemos salvar Venecia antes de que sea demasiado tarde?" />
+<meta name="col" content="Cultura" id="column-name" />
+<meta name="pdate" content="20160905" />
+<meta name="utime" content="20160905080801" />
+<meta name="ptime" content="20160905080801" />
+<meta name="DISPLAYDATE" content="Sep. 5, 2016" />
+<meta name="dat" content="Sep. 5, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="podemos-salvar-venecia-antes-de-que-sea-demasiado-tarde" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/09/05/podemos-salvar-venecia-antes-de-que-sea-demasiado-tarde/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="¿Podemos salvar Venecia antes de que sea demasiado tarde?" />
+<meta property="og:description" content="El turismo excesivo está erosionando la estructura social, la cohesión y la cultura cívica venecianas. La situación provocó que  Naciones Unidas incluyera a la ciudad en la lista de Patrimonios de la Humanidad en Peligro." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/08/30/opinion/30venice-web/30venice-web-videoSixteenByNine768-v2.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-09-05" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/09/05/podemos-salvar-venecia-antes-de-que-sea-demasiado-tarde/" />
+<meta property="twitter:title" content="¿Podemos salvar Venecia antes de que sea demasiado tarde?" />
+<meta property="twitter:description" content="El turismo excesivo está erosionando la estructura social, la cohesión y la cultura cívica venecianas. La situación provocó que  Naciones Unidas incluyera a la ciudad en la lista de Patrimonios de la Humanidad en Peligro." />
+<meta name="author" content="Salvatore Settis" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por Salvatore Settis" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="cultura" />
+<meta name="cd12" content="comentario" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="cultura" />
+<meta name="ser" content="comentario" />
+<meta name="id" content="100000004613282"/>
+<meta name="wordCount" content="1129"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/09/05/podemos-salvar-venecia-antes-de-que-sea-demasiado-tarde/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=09&amp;day=05&amp;name=podemos-salvar-venecia-antes-de-que-sea-demasiado-tarde">
+<meta name="PT" content="article">
+<meta name="article:section" content="Cultura">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/6?exclude=24277">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/09\/05\/podemos-salvar-venecia-antes-de-que-sea-demasiado-tarde\/"},"headline":"\u00bfPodemos salvar Venecia antes de que sea demasiado tarde?","datePublished":"2016-09-05T08:08:01+00:00","dateModified":"2016-09-05T08:08:01+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-videoSixteenByNine768-v2.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"El turismo excesivo est\u00e1 erosionando la estructura social, la cohesi\u00f3n y la cultura c\u00edvica venecianas. La situaci\u00f3n provoc\u00f3 que  Naciones Unidas incluyera a la ciudad en la lista de Patrimonios de la Humanidad en Peligro."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/09/05/podemos-salvar-venecia-antes-de-que-sea-demasiado-tarde/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/08/30/opinion/can-we-save-venice-before-its-too-late.html?smprod=nytcore-iphone&amp;#038;smid=nytcore-iphone-share" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="cultura/comentario" />
+<title>¿Podemos salvar Venecia antes de que sea demasiado tarde? &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/08/30/opinion/can-we-save-venice-before-its-too-late.html?smprod=nytcore-iphone&#038;smid=nytcore-iphone-share" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/09/05/podemos-salvar-venecia-antes-de-que-sea-demasiado-tarde/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-24277 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+					<span class="pipe">|</span>
+				¿Podemos salvar Venecia antes de que sea demasiado tarde?
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/09/05/podemos-salvar-venecia-antes-de-que-sea-demasiado-tarde/"
+					data-title="Cultura: ¿Podemos salvar Venecia antes de que sea demasiado tarde?"
+					data-author="POR SALVATORE SETTIS"
+					data-media=""
+					data-description="El turismo excesivo está erosionando la estructura social, la cohesión y la cultura cívica venecianas. La situación provocó que  Naciones Unidas incluyera a la ciudad en la lista de Patrimonios de la Humanidad en Peligro."
+					data-publish-date="5 de septiembre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2bQX7BK">http://nyti.ms/2bQX7BK</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/comentario/">Comentario</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">¿Podemos salvar Venecia antes de que sea demasiado tarde?</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Salvatore Settis</span>
+</span>
+
+					<time class="dateline" datetime="2016-09-05">5 de septiembre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/09/05/podemos-salvar-venecia-antes-de-que-sea-demasiado-tarde/"
+							data-title="Cultura: ¿Podemos salvar Venecia antes de que sea demasiado tarde?"
+							data-author="POR SALVATORE SETTIS"
+							data-media=""
+							data-description="El turismo excesivo está erosionando la estructura social, la cohesión y la cultura cívica venecianas. La situación provocó que  Naciones Unidas incluyera a la ciudad en la lista de Patrimonios de la Humanidad en Peligro."
+							data-publish-date="5 de septiembre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<figure class="media slideshow promo lede layout-large-horizontal launch-media-viewer" id="slideshow-100000004615121" data-media-action="modal" aria-label="media" role="group"
+        itemprop="associatedMedia" itemscope
+        itemid="https://static01.nyt.com/images/2016/08/30/opinion/30venice-web/30venice-web-master1050.jpg"
+        itemtype="https://schema.org/ImageObject"
+>
+	<script type="application/json">{"url":"https:\/\/www.nytimes.com\/slideshow\/2016\/08\/29\/opinion\/our-endangered-heritage-tourism-venice.html","headline":"Lugares Patrimonio de la Humanidad en riesgo de desaparecer","summary":"Important historical sites around the world are in danger of disappearing.","content_kicker":null,"section_name":"Opinion","subsection_name":"","publication_date":"August 29, 2016","id":100000004615121,"imageslideshow":{"intro":"","slides":[{"data_id":100000004616985,"slide_url":"30venice-web","image_type":"photo","caption":{"full":"Venecia ha sido alterada profundamente por los millones de turistas que llegan a la ciudad cada a\u00f1o, por lo que la Unesco lanz\u00f3 una advertencia: la ciudad estar\u00eda en la Lista de Patrimonios de la Humanidad en Peligro, en la que hay 55 lugares de todo el mundo por razones tan variadas como el terrorismo, el turismo o la falta de mantenimiento.","short":null},"credit":"Getty Images","image_crops":{"master768":{"height":511,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-master768.jpg"},"videoSixteenByNine495":{"height":278,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-videoSixteenByNine495-v2.jpg"},"thumbWide":{"height":126,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-thumbWide-v2.jpg"},"largeHorizontalJumbo":{"height":683,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-largeHorizontalJumbo-v2.jpg"},"articleLarge":{"height":399,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-articleLarge.jpg"},"hpLarge":{"height":288,"width":511,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-hpLarge-v2.jpg"},"mediumThreeByTwo440":{"height":293,"width":440,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-mediumThreeByTwo440-v2.jpg"},"largeHorizontal375":{"height":250,"width":375,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-largeHorizontal375-v2.jpg"},"thumbLarge":{"height":150,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-thumbLarge-v2.jpg"},"mediumFlexible177":{"height":118,"width":177,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-mediumFlexible177.jpg"},"videoSixteenByNine540":{"height":304,"width":540,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-videoSixteenByNine540-v2.jpg"},"square320":{"height":320,"width":320,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-square320-v2.jpg"},"square640":{"height":640,"width":640,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-square640-v2.jpg"},"moth":{"height":151,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-moth-v2.jpg"},"videoSmall":{"height":281,"width":500,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-videoSmall-v2.jpg"},"thumbStandard":{"height":75,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-thumbStandard-v2.jpg"},"videoSixteenByNine225":{"height":126,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-videoSixteenByNine225-v2.jpg"},"articleInline":{"height":126,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-articleInline.jpg"},"smallSquare252":{"height":252,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-smallSquare252-v2.jpg"},"watch308":{"height":348,"width":312,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-watch308-v2.jpg"},"hpSmall":{"height":108,"width":163,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-hpSmall.jpg"},"videoFifteenBySeven2610":{"height":1218,"width":2610,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-videoFifteenBySeven2610-v2.jpg"},"slide":{"height":399,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-slide.jpg"},"videoSixteenByNine96":{"height":54,"width":96,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-videoSixteenByNine96-v2.jpg"},"master1050":{"height":699,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-master1050.jpg"},"watch268":{"height":303,"width":272,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-watch268-v2.jpg"},"master495":{"height":329,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-master495.jpg"},"largeWidescreen573":{"height":323,"width":573,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-largeWidescreen573-v2.jpg"},"sfSpan":{"height":263,"width":395,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-sfSpan-v2.jpg"},"jumbo":{"height":682,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-jumbo.jpg"},"videoSixteenByNine150":{"height":84,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-videoSixteenByNine150-v2.jpg"},"videoSixteenByNine390":{"height":219,"width":390,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-videoSixteenByNine390-v2.jpg"},"mediumSquare149":{"height":149,"width":149,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-mediumSquare149-v2.jpg"},"largeWidescreen1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-largeWidescreen1050-v2.jpg"},"videoSixteenByNine310":{"height":174,"width":310,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-videoSixteenByNine310-v2.jpg"},"videoSixteenByNine1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-videoSixteenByNine1050-v2.jpg"},"master180":{"height":120,"width":180,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-master180.jpg"},"smallSquare168":{"height":168,"width":168,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-smallSquare168-v2.jpg"},"mediumThreeByTwo225":{"height":150,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-mediumThreeByTwo225-v2.jpg"},"verticalTwoByThree735":{"height":1103,"width":735,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-verticalTwoByThree735-v2.jpg"},"facebookJumbo":{"height":550,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-facebookJumbo-v2.jpg"},"filmstrip":{"height":190,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-filmstrip-v2.jpg"},"master315":{"height":210,"width":315,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-master315.jpg"},"miniMoth":{"height":70,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-miniMoth-v2.jpg"},"videoSixteenByNine480":{"height":270,"width":480,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-videoSixteenByNine480-v2.jpg"},"master675":{"height":449,"width":675,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-master675.jpg"},"tmagArticle":{"height":394,"width":592,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-tmagArticle.jpg"},"videoSixteenByNine768":{"height":432,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-videoSixteenByNine768-v2.jpg"},"videoThumb":{"height":50,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-videoThumb-v2.jpg"},"videoSixteenByNine600":{"height":338,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-videoSixteenByNine600-v2.jpg"},"tmagSF":{"height":241,"width":362,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-tmagSF.jpg"},"videoSixteenByNineJumbo1600":{"height":901,"width":1600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-videoSixteenByNineJumbo1600-v2.jpg"},"popup":{"height":433,"width":650,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-popup.jpg"},"mediumThreeByTwo252":{"height":168,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-mediumThreeByTwo252-v2.jpg"},"mediumThreeByTwo210":{"height":140,"width":210,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-mediumThreeByTwo210-v2.jpg"},"windowsTile336H":{"height":336,"width":694,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-windowsTile336H-v2.jpg"},"mediumThreeByTwo378":{"height":252,"width":378,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-mediumThreeByTwo378-v2.jpg"},"videoFifteenBySeven1305":{"height":609,"width":1305,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-videoFifteenBySeven1305-v2.jpg"},"superJumbo":{"height":1363,"width":2048,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-superJumbo.jpg"},"videoLarge":{"height":507,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/30\/opinion\/30venice-web\/30venice-web-videoLarge-v2.jpg"}},"url":"\/slideshow\/2016\/08\/29\/opinion\/our-endangered-heritage-tourism-venice\/s\/30venice-web.html","short_url":"http:\/\/nyti.ms\/2c3mLhW","approved_for_syndication":true},{"data_id":100000004615138,"slide_url":"30settis-Slideshow-slide-EHMG","image_type":"photo","caption":{"full":"Tras siglos de extracci\u00f3n de plata con grandes beneficios, el interior de la monta\u00f1a de Potos\u00ed, Bolivia, se est\u00e1 derrumbando de arriba abajo.","short":null},"credit":"Giles Clarke\/Getty Images","image_crops":{"master768":{"height":513,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-master768.jpg"},"videoSixteenByNine495":{"height":278,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-videoSixteenByNine495.jpg"},"thumbWide":{"height":126,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-thumbWide.jpg"},"largeHorizontalJumbo":{"height":683,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-largeHorizontalJumbo.jpg"},"articleLarge":{"height":400,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-articleLarge.jpg"},"hpLarge":{"height":288,"width":511,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-hpLarge.jpg"},"mediumThreeByTwo440":{"height":293,"width":440,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-mediumThreeByTwo440.jpg"},"largeHorizontal375":{"height":250,"width":375,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-largeHorizontal375.jpg"},"thumbLarge":{"height":150,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-thumbLarge.jpg"},"mediumFlexible177":{"height":118,"width":177,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-mediumFlexible177.jpg"},"videoSixteenByNine540":{"height":304,"width":540,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-videoSixteenByNine540.jpg"},"square320":{"height":320,"width":320,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-square320.jpg"},"square640":{"height":640,"width":640,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-square640.jpg"},"moth":{"height":151,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-moth.jpg"},"videoSmall":{"height":281,"width":500,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-videoSmall.jpg"},"thumbStandard":{"height":75,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-thumbStandard.jpg"},"videoSixteenByNine225":{"height":126,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-videoSixteenByNine225.jpg"},"smallSquare252":{"height":252,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-smallSquare252.jpg"},"articleInline":{"height":127,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-articleInline.jpg"},"watch308":{"height":348,"width":312,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-watch308.jpg"},"hpSmall":{"height":109,"width":163,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-hpSmall.jpg"},"videoFifteenBySeven2610":{"height":1218,"width":2610,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-videoFifteenBySeven2610.jpg"},"slide":{"height":400,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-slide.jpg"},"videoSixteenByNine96":{"height":54,"width":96,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-videoSixteenByNine96.jpg"},"master1050":{"height":701,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-master1050.jpg"},"watch268":{"height":304,"width":272,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-watch268.jpg"},"master495":{"height":330,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-master495.jpg"},"largeWidescreen573":{"height":322,"width":573,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-largeWidescreen573.jpg"},"sfSpan":{"height":263,"width":395,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-sfSpan.jpg"},"jumbo":{"height":683,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-jumbo.jpg"},"videoSixteenByNine150":{"height":84,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-videoSixteenByNine150.jpg"},"videoSixteenByNine390":{"height":219,"width":390,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-videoSixteenByNine390.jpg"},"mediumSquare149":{"height":149,"width":149,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-mediumSquare149.jpg"},"largeWidescreen1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-largeWidescreen1050.jpg"},"videoSixteenByNine310":{"height":174,"width":310,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-videoSixteenByNine310.jpg"},"videoSixteenByNine1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-videoSixteenByNine1050.jpg"},"master180":{"height":120,"width":180,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-master180.jpg"},"smallSquare168":{"height":168,"width":168,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-smallSquare168.jpg"},"mediumThreeByTwo225":{"height":150,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-mediumThreeByTwo225.jpg"},"verticalTwoByThree735":{"height":1103,"width":735,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-verticalTwoByThree735.jpg"},"facebookJumbo":{"height":550,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-facebookJumbo.jpg"},"filmstrip":{"height":190,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-filmstrip.jpg"},"master315":{"height":210,"width":315,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-master315.jpg"},"miniMoth":{"height":70,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-miniMoth.jpg"},"videoSixteenByNine480":{"height":270,"width":480,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-videoSixteenByNine480.jpg"},"master675":{"height":450,"width":675,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-master675.jpg"},"tmagArticle":{"height":395,"width":592,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-tmagArticle.jpg"},"videoSixteenByNine768":{"height":432,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-videoSixteenByNine768.jpg"},"videoThumb":{"height":50,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-videoThumb.jpg"},"videoSixteenByNine600":{"height":338,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-videoSixteenByNine600.jpg"},"videoSixteenByNine3000":{"height":1688,"width":3000,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-videoSixteenByNine3000.jpg"},"tmagSF":{"height":242,"width":362,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-tmagSF.jpg"},"videoSixteenByNineJumbo1600":{"height":900,"width":1600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-videoSixteenByNineJumbo1600.jpg"},"popup":{"height":434,"width":650,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-popup.jpg"},"mediumThreeByTwo252":{"height":168,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-mediumThreeByTwo252.jpg"},"mediumThreeByTwo210":{"height":140,"width":210,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-mediumThreeByTwo210.jpg"},"windowsTile336H":{"height":336,"width":694,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-windowsTile336H.jpg"},"mediumThreeByTwo378":{"height":252,"width":378,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-mediumThreeByTwo378.jpg"},"videoFifteenBySeven1305":{"height":609,"width":1305,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-videoFifteenBySeven1305.jpg"},"superJumbo":{"height":1367,"width":2048,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-superJumbo.jpg"},"videoLarge":{"height":507,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-EHMG\/30settis-Slideshow-slide-EHMG-videoLarge.jpg"}},"url":"\/slideshow\/2016\/08\/29\/opinion\/our-endangered-heritage-tourism-venice\/s\/30settis-Slideshow-slide-EHMG.html","short_url":"http:\/\/nyti.ms\/2c3okMu","approved_for_syndication":false},{"data_id":100000004615132,"slide_url":"30settis-Slideshow-slide-ZFUX","image_type":"photo","caption":{"full":"La iglesia de la Natividad en Bel\u00e9n, administrada por palestinos en Cisjordania, ocupada por Israel, es considerado el lugar del nacimiento de Jes\u00fas. La Unesco a\u00f1adi\u00f3 la iglesia a la lista de Patrimonios de la Humanidad y Patrimonios en Peligro en 2012; el riesgo se atribuye al turismo no reglamentado, el tr\u00e1nsito y las reparaciones requeridas.","short":null},"credit":"Jim Hollander\/European Pressphoto Agency","image_crops":{"master768":{"height":520,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-master768.jpg"},"videoSixteenByNine495":{"height":278,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-videoSixteenByNine495.jpg"},"thumbWide":{"height":126,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-thumbWide.jpg"},"largeHorizontalJumbo":{"height":683,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-largeHorizontalJumbo.jpg"},"articleLarge":{"height":406,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-articleLarge.jpg"},"hpLarge":{"height":288,"width":511,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-hpLarge.jpg"},"mediumThreeByTwo440":{"height":293,"width":440,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-mediumThreeByTwo440.jpg"},"largeHorizontal375":{"height":250,"width":375,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-largeHorizontal375.jpg"},"thumbLarge":{"height":150,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-thumbLarge.jpg"},"mediumFlexible177":{"height":120,"width":177,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-mediumFlexible177.jpg"},"videoSixteenByNine540":{"height":304,"width":540,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-videoSixteenByNine540.jpg"},"square320":{"height":320,"width":320,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-square320.jpg"},"square640":{"height":640,"width":640,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-square640.jpg"},"moth":{"height":151,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-moth.jpg"},"videoSmall":{"height":281,"width":500,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-videoSmall.jpg"},"thumbStandard":{"height":75,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-thumbStandard.jpg"},"videoSixteenByNine225":{"height":126,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-videoSixteenByNine225.jpg"},"smallSquare252":{"height":252,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-smallSquare252.jpg"},"articleInline":{"height":129,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-articleInline.jpg"},"watch308":{"height":348,"width":312,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-watch308.jpg"},"hpSmall":{"height":110,"width":163,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-hpSmall.jpg"},"videoFifteenBySeven2610":{"height":1218,"width":2610,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-videoFifteenBySeven2610.jpg"},"slide":{"height":406,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-slide.jpg"},"videoSixteenByNine96":{"height":54,"width":96,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-videoSixteenByNine96.jpg"},"master1050":{"height":711,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-master1050.jpg"},"watch268":{"height":303,"width":272,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-watch268.jpg"},"master495":{"height":335,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-master495.jpg"},"largeWidescreen573":{"height":322,"width":573,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-largeWidescreen573.jpg"},"sfSpan":{"height":263,"width":395,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-sfSpan.jpg"},"jumbo":{"height":694,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-jumbo.jpg"},"videoSixteenByNine150":{"height":84,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-videoSixteenByNine150.jpg"},"videoSixteenByNine390":{"height":219,"width":390,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-videoSixteenByNine390.jpg"},"mediumSquare149":{"height":149,"width":149,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-mediumSquare149.jpg"},"largeWidescreen1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-largeWidescreen1050.jpg"},"videoSixteenByNine310":{"height":174,"width":310,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-videoSixteenByNine310.jpg"},"videoSixteenByNine1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-videoSixteenByNine1050.jpg"},"master180":{"height":122,"width":180,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-master180.jpg"},"smallSquare168":{"height":168,"width":168,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-smallSquare168.jpg"},"mediumThreeByTwo225":{"height":150,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-mediumThreeByTwo225.jpg"},"verticalTwoByThree735":{"height":1103,"width":735,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-verticalTwoByThree735.jpg"},"facebookJumbo":{"height":550,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-facebookJumbo.jpg"},"filmstrip":{"height":190,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-filmstrip.jpg"},"master315":{"height":213,"width":315,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-master315.jpg"},"miniMoth":{"height":70,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-miniMoth.jpg"},"videoSixteenByNine480":{"height":270,"width":480,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-videoSixteenByNine480.jpg"},"master675":{"height":457,"width":675,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-master675.jpg"},"tmagArticle":{"height":401,"width":592,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-tmagArticle.jpg"},"videoSixteenByNine768":{"height":432,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-videoSixteenByNine768.jpg"},"videoThumb":{"height":50,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-videoThumb.jpg"},"videoSixteenByNine600":{"height":338,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-videoSixteenByNine600.jpg"},"videoSixteenByNine3000":{"height":1688,"width":3000,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-videoSixteenByNine3000.jpg"},"tmagSF":{"height":245,"width":362,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-tmagSF.jpg"},"videoSixteenByNineJumbo1600":{"height":900,"width":1600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-videoSixteenByNineJumbo1600.jpg"},"popup":{"height":440,"width":650,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-popup.jpg"},"mediumThreeByTwo252":{"height":168,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-mediumThreeByTwo252.jpg"},"mediumThreeByTwo210":{"height":140,"width":210,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-mediumThreeByTwo210.jpg"},"windowsTile336H":{"height":336,"width":694,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-windowsTile336H.jpg"},"mediumThreeByTwo378":{"height":252,"width":378,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-mediumThreeByTwo378.jpg"},"videoFifteenBySeven1305":{"height":609,"width":1305,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-videoFifteenBySeven1305.jpg"},"superJumbo":{"height":1387,"width":2048,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-superJumbo.jpg"},"videoLarge":{"height":507,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-ZFUX\/30settis-Slideshow-slide-ZFUX-videoLarge.jpg"}},"url":"\/slideshow\/2016\/08\/29\/opinion\/our-endangered-heritage-tourism-venice\/s\/30settis-Slideshow-slide-ZFUX.html","short_url":"http:\/\/nyti.ms\/2c3mhYQ","approved_for_syndication":false},{"data_id":100000004615140,"slide_url":"30settis-Slideshow-slide-FCMD","image_type":"photo","caption":{"full":"Las fuertes lluvias da\u00f1aron muchas de las estructuras coloniales de Coro, Venezuela, algunas de las cuales datan del siglo XV.","short":null},"credit":"Danita Delimont\/Getty Images","image_crops":{"master768":{"height":513,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-master768.jpg"},"videoSixteenByNine495":{"height":278,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-videoSixteenByNine495.jpg"},"thumbWide":{"height":126,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-thumbWide.jpg"},"largeHorizontalJumbo":{"height":683,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-largeHorizontalJumbo.jpg"},"articleLarge":{"height":400,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-articleLarge.jpg"},"hpLarge":{"height":288,"width":511,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-hpLarge.jpg"},"mediumThreeByTwo440":{"height":293,"width":440,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-mediumThreeByTwo440.jpg"},"largeHorizontal375":{"height":250,"width":375,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-largeHorizontal375.jpg"},"thumbLarge":{"height":150,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-thumbLarge.jpg"},"mediumFlexible177":{"height":118,"width":177,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-mediumFlexible177.jpg"},"videoSixteenByNine540":{"height":304,"width":540,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-videoSixteenByNine540.jpg"},"square320":{"height":320,"width":320,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-square320.jpg"},"square640":{"height":640,"width":640,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-square640.jpg"},"moth":{"height":151,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-moth.jpg"},"videoSmall":{"height":281,"width":500,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-videoSmall.jpg"},"thumbStandard":{"height":75,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-thumbStandard.jpg"},"videoSixteenByNine225":{"height":126,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-videoSixteenByNine225.jpg"},"smallSquare252":{"height":252,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-smallSquare252.jpg"},"articleInline":{"height":127,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-articleInline.jpg"},"watch308":{"height":348,"width":312,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-watch308.jpg"},"hpSmall":{"height":109,"width":163,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-hpSmall.jpg"},"videoFifteenBySeven2610":{"height":1218,"width":2610,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-videoFifteenBySeven2610.jpg"},"slide":{"height":400,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-slide.jpg"},"videoSixteenByNine96":{"height":54,"width":96,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-videoSixteenByNine96.jpg"},"master1050":{"height":701,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-master1050.jpg"},"watch268":{"height":304,"width":272,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-watch268.jpg"},"master495":{"height":330,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-master495.jpg"},"largeWidescreen573":{"height":322,"width":573,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-largeWidescreen573.jpg"},"sfSpan":{"height":263,"width":395,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-sfSpan.jpg"},"jumbo":{"height":683,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-jumbo.jpg"},"videoSixteenByNine150":{"height":84,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-videoSixteenByNine150.jpg"},"videoSixteenByNine390":{"height":219,"width":390,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-videoSixteenByNine390.jpg"},"mediumSquare149":{"height":149,"width":149,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-mediumSquare149.jpg"},"largeWidescreen1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-largeWidescreen1050.jpg"},"videoSixteenByNine310":{"height":174,"width":310,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-videoSixteenByNine310.jpg"},"videoSixteenByNine1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-videoSixteenByNine1050.jpg"},"master180":{"height":120,"width":180,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-master180.jpg"},"smallSquare168":{"height":168,"width":168,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-smallSquare168.jpg"},"mediumThreeByTwo225":{"height":150,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-mediumThreeByTwo225.jpg"},"verticalTwoByThree735":{"height":1103,"width":735,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-verticalTwoByThree735.jpg"},"facebookJumbo":{"height":550,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-facebookJumbo.jpg"},"filmstrip":{"height":190,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-filmstrip.jpg"},"master315":{"height":210,"width":315,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-master315.jpg"},"miniMoth":{"height":70,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-miniMoth.jpg"},"videoSixteenByNine480":{"height":270,"width":480,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-videoSixteenByNine480.jpg"},"master675":{"height":450,"width":675,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-master675.jpg"},"tmagArticle":{"height":395,"width":592,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-tmagArticle.jpg"},"videoSixteenByNine768":{"height":432,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-videoSixteenByNine768.jpg"},"videoThumb":{"height":50,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-videoThumb.jpg"},"videoSixteenByNine600":{"height":338,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-videoSixteenByNine600.jpg"},"videoSixteenByNine3000":{"height":1688,"width":3000,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-videoSixteenByNine3000.jpg"},"tmagSF":{"height":242,"width":362,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-tmagSF.jpg"},"videoSixteenByNineJumbo1600":{"height":900,"width":1600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-videoSixteenByNineJumbo1600.jpg"},"popup":{"height":434,"width":650,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-popup.jpg"},"mediumThreeByTwo252":{"height":168,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-mediumThreeByTwo252.jpg"},"mediumThreeByTwo210":{"height":140,"width":210,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-mediumThreeByTwo210.jpg"},"windowsTile336H":{"height":336,"width":694,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-windowsTile336H.jpg"},"mediumThreeByTwo378":{"height":252,"width":378,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-mediumThreeByTwo378.jpg"},"videoFifteenBySeven1305":{"height":609,"width":1305,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-videoFifteenBySeven1305.jpg"},"superJumbo":{"height":1367,"width":2048,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-superJumbo.jpg"},"videoLarge":{"height":507,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-FCMD\/30settis-Slideshow-slide-FCMD-videoLarge.jpg"}},"url":"\/slideshow\/2016\/08\/29\/opinion\/our-endangered-heritage-tourism-venice\/s\/30settis-Slideshow-slide-FCMD.html","short_url":"http:\/\/nyti.ms\/2bVbUZY","approved_for_syndication":false},{"data_id":100000004615129,"slide_url":"30settis-Slideshow-slide-4YWX","image_type":"photo","caption":{"full":"Los mausoleos de Tombuct\u00fa \u2014el m\u00e1s antiguo de los cuales databa del siglo XIII\u2014 se han reconstruido desde que extremistas isl\u00e1micos llevaron a cabo una campa\u00f1a de destrucci\u00f3n contra los \u201ct\u00f3tems de idolatr\u00eda\u201d. Sin embargo, los monumentos de la ciudad, como la mezquita Djingareyber, que se muestra aqu\u00ed, a\u00fan est\u00e1n en riesgo de desertificaci\u00f3n.","short":null},"credit":"Philippe Desmazes\/Agence France-Presse \u2014 Getty Images","image_crops":{"master768":{"height":511,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-master768.jpg"},"videoSixteenByNine495":{"height":278,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-videoSixteenByNine495.jpg"},"thumbWide":{"height":126,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-thumbWide.jpg"},"largeHorizontalJumbo":{"height":683,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-largeHorizontalJumbo.jpg"},"articleLarge":{"height":399,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-articleLarge.jpg"},"hpLarge":{"height":287,"width":511,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-hpLarge.jpg"},"mediumThreeByTwo440":{"height":293,"width":440,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-mediumThreeByTwo440.jpg"},"largeHorizontal375":{"height":250,"width":375,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-largeHorizontal375.jpg"},"thumbLarge":{"height":150,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-thumbLarge.jpg"},"mediumFlexible177":{"height":118,"width":177,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-mediumFlexible177.jpg"},"videoSixteenByNine540":{"height":304,"width":540,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-videoSixteenByNine540.jpg"},"square320":{"height":320,"width":320,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-square320.jpg"},"square640":{"height":640,"width":640,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-square640.jpg"},"moth":{"height":151,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-moth.jpg"},"videoSmall":{"height":281,"width":500,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-videoSmall.jpg"},"thumbStandard":{"height":75,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-thumbStandard.jpg"},"videoSixteenByNine225":{"height":126,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-videoSixteenByNine225.jpg"},"smallSquare252":{"height":252,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-smallSquare252.jpg"},"articleInline":{"height":126,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-articleInline.jpg"},"watch308":{"height":348,"width":312,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-watch308.jpg"},"hpSmall":{"height":109,"width":163,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-hpSmall.jpg"},"videoFifteenBySeven2610":{"height":1218,"width":2610,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-videoFifteenBySeven2610.jpg"},"slide":{"height":399,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-slide.jpg"},"videoSixteenByNine96":{"height":54,"width":96,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-videoSixteenByNine96.jpg"},"master1050":{"height":699,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-master1050.jpg"},"watch268":{"height":303,"width":272,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-watch268.jpg"},"master495":{"height":330,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-master495.jpg"},"largeWidescreen573":{"height":322,"width":573,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-largeWidescreen573.jpg"},"sfSpan":{"height":263,"width":395,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-sfSpan.jpg"},"jumbo":{"height":682,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-jumbo.jpg"},"videoSixteenByNine150":{"height":84,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-videoSixteenByNine150.jpg"},"videoSixteenByNine390":{"height":219,"width":390,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-videoSixteenByNine390.jpg"},"mediumSquare149":{"height":149,"width":149,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-mediumSquare149.jpg"},"largeWidescreen1050":{"height":590,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-largeWidescreen1050.jpg"},"videoSixteenByNine310":{"height":174,"width":310,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-videoSixteenByNine310.jpg"},"videoSixteenByNine1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-videoSixteenByNine1050.jpg"},"master180":{"height":120,"width":180,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-master180.jpg"},"smallSquare168":{"height":168,"width":168,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-smallSquare168.jpg"},"mediumThreeByTwo225":{"height":150,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-mediumThreeByTwo225.jpg"},"verticalTwoByThree735":{"height":1102,"width":735,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-verticalTwoByThree735.jpg"},"facebookJumbo":{"height":550,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-facebookJumbo.jpg"},"filmstrip":{"height":190,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-filmstrip.jpg"},"master315":{"height":210,"width":315,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-master315.jpg"},"miniMoth":{"height":70,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-miniMoth.jpg"},"videoSixteenByNine480":{"height":270,"width":480,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-videoSixteenByNine480.jpg"},"master675":{"height":449,"width":675,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-master675.jpg"},"tmagArticle":{"height":394,"width":592,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-tmagArticle.jpg"},"videoSixteenByNine768":{"height":432,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-videoSixteenByNine768.jpg"},"videoThumb":{"height":50,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-videoThumb.jpg"},"videoSixteenByNine600":{"height":338,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-videoSixteenByNine600.jpg"},"videoSixteenByNine3000":{"height":1687,"width":3000,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-videoSixteenByNine3000.jpg"},"tmagSF":{"height":241,"width":362,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-tmagSF.jpg"},"videoSixteenByNineJumbo1600":{"height":900,"width":1600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-videoSixteenByNineJumbo1600.jpg"},"popup":{"height":433,"width":650,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-popup.jpg"},"mediumThreeByTwo252":{"height":168,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-mediumThreeByTwo252.jpg"},"mediumThreeByTwo210":{"height":140,"width":210,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-mediumThreeByTwo210.jpg"},"windowsTile336H":{"height":336,"width":694,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-windowsTile336H.jpg"},"mediumThreeByTwo378":{"height":252,"width":378,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-mediumThreeByTwo378.jpg"},"videoFifteenBySeven1305":{"height":609,"width":1305,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-videoFifteenBySeven1305.jpg"},"superJumbo":{"height":1363,"width":2048,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-superJumbo.jpg"},"videoLarge":{"height":507,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-4YWX\/30settis-Slideshow-slide-4YWX-videoLarge.jpg"}},"url":"\/slideshow\/2016\/08\/29\/opinion\/our-endangered-heritage-tourism-venice\/s\/30settis-Slideshow-slide-4YWX.html","short_url":"http:\/\/nyti.ms\/2c3mbk9","approved_for_syndication":true},{"data_id":100000004615127,"slide_url":"30settis-Slideshow-slide-YBQR","image_type":"photo","caption":{"full":"El Minarete de Jam, del siglo XII, en Afganist\u00e1n, se est\u00e1 ladeando tan severamente que est\u00e1 en riesgo inminente de colapsar.\r\n\r\n","short":null},"credit":"Hiromi Yasui","image_crops":{"master768":{"height":512,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-master768.jpg"},"videoSixteenByNine495":{"height":278,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-videoSixteenByNine495.jpg"},"thumbWide":{"height":126,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-thumbWide.jpg"},"largeHorizontalJumbo":{"height":683,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-largeHorizontalJumbo.jpg"},"articleLarge":{"height":400,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-articleLarge.jpg"},"hpLarge":{"height":288,"width":511,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-hpLarge.jpg"},"mediumThreeByTwo440":{"height":293,"width":440,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-mediumThreeByTwo440.jpg"},"largeHorizontal375":{"height":250,"width":375,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-largeHorizontal375.jpg"},"thumbLarge":{"height":150,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-thumbLarge.jpg"},"mediumFlexible177":{"height":118,"width":177,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-mediumFlexible177.jpg"},"videoSixteenByNine540":{"height":304,"width":540,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-videoSixteenByNine540.jpg"},"square320":{"height":320,"width":320,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-square320.jpg"},"square640":{"height":640,"width":640,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-square640.jpg"},"moth":{"height":151,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-moth.jpg"},"videoSmall":{"height":281,"width":500,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-videoSmall.jpg"},"thumbStandard":{"height":75,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-thumbStandard.jpg"},"videoSixteenByNine225":{"height":126,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-videoSixteenByNine225.jpg"},"smallSquare252":{"height":252,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-smallSquare252.jpg"},"articleInline":{"height":127,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-articleInline.jpg"},"watch308":{"height":348,"width":312,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-watch308.jpg"},"hpSmall":{"height":109,"width":163,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-hpSmall.jpg"},"videoFifteenBySeven2610":{"height":1218,"width":2610,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-videoFifteenBySeven2610.jpg"},"slide":{"height":400,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-slide.jpg"},"videoSixteenByNine96":{"height":54,"width":96,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-videoSixteenByNine96.jpg"},"master1050":{"height":700,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-master1050.jpg"},"watch268":{"height":303,"width":272,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-watch268.jpg"},"master495":{"height":330,"width":495,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-master495.jpg"},"largeWidescreen573":{"height":322,"width":573,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-largeWidescreen573.jpg"},"sfSpan":{"height":263,"width":395,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-sfSpan.jpg"},"jumbo":{"height":683,"width":1024,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-jumbo.jpg"},"videoSixteenByNine150":{"height":84,"width":150,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-videoSixteenByNine150.jpg"},"videoSixteenByNine390":{"height":219,"width":390,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-videoSixteenByNine390.jpg"},"mediumSquare149":{"height":149,"width":149,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-mediumSquare149.jpg"},"largeWidescreen1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-largeWidescreen1050.jpg"},"videoSixteenByNine310":{"height":174,"width":310,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-videoSixteenByNine310.jpg"},"videoSixteenByNine1050":{"height":591,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-videoSixteenByNine1050.jpg"},"master180":{"height":120,"width":180,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-master180.jpg"},"smallSquare168":{"height":168,"width":168,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-smallSquare168.jpg"},"mediumThreeByTwo225":{"height":150,"width":225,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-mediumThreeByTwo225.jpg"},"verticalTwoByThree735":{"height":1102,"width":735,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-verticalTwoByThree735.jpg"},"facebookJumbo":{"height":550,"width":1050,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-facebookJumbo.jpg"},"filmstrip":{"height":190,"width":190,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-filmstrip.jpg"},"master315":{"height":210,"width":315,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-master315.jpg"},"miniMoth":{"height":70,"width":151,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-miniMoth.jpg"},"videoSixteenByNine480":{"height":270,"width":480,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-videoSixteenByNine480.jpg"},"master675":{"height":450,"width":675,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-master675.jpg"},"tmagArticle":{"height":395,"width":592,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-tmagArticle.jpg"},"videoSixteenByNine768":{"height":432,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-videoSixteenByNine768.jpg"},"videoThumb":{"height":50,"width":75,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-videoThumb.jpg"},"videoSixteenByNine600":{"height":338,"width":600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-videoSixteenByNine600.jpg"},"videoSixteenByNine3000":{"height":1688,"width":3000,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-videoSixteenByNine3000.jpg"},"tmagSF":{"height":241,"width":362,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-tmagSF.jpg"},"videoSixteenByNineJumbo1600":{"height":900,"width":1600,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-videoSixteenByNineJumbo1600.jpg"},"popup":{"height":433,"width":650,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-popup.jpg"},"mediumThreeByTwo252":{"height":168,"width":252,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-mediumThreeByTwo252.jpg"},"mediumThreeByTwo210":{"height":140,"width":210,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-mediumThreeByTwo210.jpg"},"windowsTile336H":{"height":336,"width":694,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-windowsTile336H.jpg"},"mediumThreeByTwo378":{"height":252,"width":378,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-mediumThreeByTwo378.jpg"},"videoFifteenBySeven1305":{"height":609,"width":1305,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-videoFifteenBySeven1305.jpg"},"superJumbo":{"height":1365,"width":2048,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-superJumbo.jpg"},"videoLarge":{"height":507,"width":768,"url":"https:\/\/static01.nyt.com\/images\/2016\/08\/29\/opinion\/30settis-Slideshow-slide-YBQR\/30settis-Slideshow-slide-YBQR-videoLarge.jpg"}},"url":"\/slideshow\/2016\/08\/29\/opinion\/our-endangered-heritage-tourism-venice\/s\/30settis-Slideshow-slide-YBQR.html","short_url":"http:\/\/nyti.ms\/2bVbanN","approved_for_syndication":false}]},"related_assets":[]}</script>
+	<a href="https://www.nytimes.com/slideshow/2016/08/29/opinion/our-endangered-heritage-tourism-venice.html">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Slide Show</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/30/opinion/30venice-web/30venice-web-master1050.jpg" itemprop="url" itemid="https://static01.nyt.com/images/2016/08/30/opinion/30venice-web/30venice-web-master1050.jpg"/>
+
+		<div class="media-action-overlay">
+			<i class="icon sprite-icon"></i>
+			<div class="media-meta">
+				<h5 class="kicker"><span class="kicker-label">Slide Show</span><span class="pipe">|</span><span class="counter">6 fotos</span></h5>
+				<h4 class="headline">Lugares Patrimonio de la Humanidad en riesgo de desaparecer</h4>
+			</div>
+		</div><!-- close media-action-overlay -->
+
+	</div><!-- close image -->
+
+	<figcaption class="caption" itemprop="description">
+		<h4 class="headline">Lugares Patrimonio de la Humanidad en riesgo de desaparecer</h4>
+		<p class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>Getty Images
+		</p>
+	</figcaption>
+
+	<meta itemprop="identifier" content="https://static01.nyt.com/images/2016/08/30/opinion/30venice-web/30venice-web-master1050.jpg" />
+	<meta itemprop="height" content="699" />
+	<meta itemprop="width" content="1050" />
+
+	</a>
+</figure>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/08/30/opinion/can-we-save-venice-before-its-too-late.html?smprod=nytcore-iphone&#038;smid=nytcore-iphone-share&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="416" data-total-count="416" id="story-continues-2" tabindex="-1">PISA, Italia — Una plaga mortal acecha Venecia, y no se trata del cólera ante el que el personaje de Thomas Mann, Gustav von Aschenbach, sucumbió en la novela corta que el premio nobel publicó en 1912, <em>Muerte en Venecia</em>. Una monocultura de turistas rapaces amenaza la existencia de Venecia; diezma a esta ciudad histórica y convierte a la reina del Adriático en una plaza comercial &#8220;disneyficada&#8221;. </p>
+<p class="story-body-text story-content" data-para-count="359" data-total-count="775" id="story-continues-3" tabindex="-1">Millones de turistas llegan a las calles y canales de <a href="http://whc.unesco.org/en/list/394" target="_blank">Venecia</a> cada año y alteran drásticamente la población y la economía, lo que provoca que muchos de sus ciudadanos desaparecen de la ciudad isleña y que quienes se quedan no tengan otra opción más que trabajar en hoteles, restaurantes y tiendas vendiendo recuerdos de cristal y máscaras de carnaval.</p>
+<p class="story-body-text story-content" data-para-count="617" data-total-count="1392" id="story-continues-4" tabindex="-1">El turismo está destrozando la estructura social, la cohesión y la cultura cívica venecianas, pues se hace cada vez más predatorio. El número de visitantes en la ciudad podría elevarse aún más ahora que los viajeros internacionales están evitando destinos como Turquía y Túnez a causa del miedo al terrorismo y los problemas políticos. Esto significa que los 2400 hoteles y otros lugares de alojamiento con los que la ciudad cuenta ya no satisfacen el apetito de la industria turística. El número total de alojamientos en el centro histórico de Venecia podría llegar a 50.000 e invadirlo por completo.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="255" data-total-count="1647" id="story-continues-5" tabindex="-1">Justo a lo largo del Gran Canal, cauce principal de Venecia, en los últimos 15 años se ha visto el cierre de instituciones estatales, oficinas judiciales, bancos, el Consulado Alemán, consultorios médicos y tiendas, para dar lugar a 16 hoteles nuevos.</p>
+<p class="story-body-text story-content" data-para-count="387" data-total-count="2034" id="story-continues-6" tabindex="-1">La alarma que provocó el estado de la ciudad condujo a que el mes pasado la Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura (Unesco) decidiera poner a Venecia en su lista de Patrimonios de la Humanidad en <a href="http://whc.unesco.org/en/news/1353/" target="_blank">Peligro</a> a menos que se alcance un progreso sustancial para detener la degradación de la ciudad y su ecosistema para cuando llegue febrero próximo. </p>
+<p class="story-body-text story-content" data-para-count="401" data-total-count="2435" id="story-continues-7" tabindex="-1">Hasta ahora, la Unesco solo le ha quitado a una ciudad el título de Patrimonio de la Humanidad, en la que hay más de mil: <a href="http://whc.unesco.org/fr/actualites/522/" target="_blank">Dresde</a>, después de que las autoridades alemanas ignoraron las recomendaciones de la Unesco, que en 2009 aconsejaba no construir un puente sobre el río Elba, pues estropearía el conjunto urbano y barroco. ¿Acaso Venecia será la siguiente en alcanzar ese deshonroso estatus?</p>
+<p class="story-body-text story-content" data-para-count="368" data-total-count="2803" id="story-continues-8" tabindex="-1">En su informe de julio, el comité de la Unesco para el Patrimonio de la Humanidad expresó “una gran preocupación” acerca de “la combinación de transformaciones continuas y proyectos propuestos que amenazan con hacer cambios irreversibles a la relación general entre la ciudad y su laguna”, los cuales, según ellos, erosionarían la integridad de Venecia.</p>
+<p class="story-body-text story-content" data-para-count="546" data-total-count="3349" id="story-continues-9" tabindex="-1">El ultimátum de la Unesco nace de varios problemas antiguos. Primero, el creciente desequilibrio entre el número de habitantes de la ciudad (que se desplomó de 174.808 en 1951 a 56.311 en 2014, el último año que esas cifras estuvieron disponibles) y los turistas. El desarrollo propuesto a gran escala, que incluye nuevos canales de navegación en aguas profundas y un tren subterráneo que pasaría debajo de la laguna, acelerarían la erosión y causarían estragos en el frágil sistema ecológico y urbano que ha crecido en toda Venecia.</p>
+<p class="story-body-text story-content" data-para-count="423" data-total-count="3772" id="story-continues-10" tabindex="-1">Por ahora, cruceros gigantescos desfilan con regularidad frente a la Plaza de San Marcos, la plaza pública principal de la ciudad, mofándose de los logros de los últimos 1500 años. Para mencionar solo uno, el MSC Divina tiene 67 metros de altura, dos veces más que el Palacio Ducal de Venecia, un hito de la ciudad, que se construyó en el siglo XIV. A veces, en un solo día entran a la laguna una decena de cruceros. </p>
+<p class="story-body-text story-content" data-para-count="750" data-total-count="4522" id="story-continues-11" tabindex="-1">La respuesta de las autoridades italianas a los problemas reales que Venecia enfrenta brinda pocas esperanzas de que esta situación cambie pronto. Después del naufragio del Costa Concordia en enero de 2012 frente a las costas de Toscana, que provocó la muerte de 32 personas, el gobierno italiano detcidió que los megabuques deben quedarse por lo menos a dos kilómetros y medio de la costa para prevenir accidentes similares en el futuro. Sin embargo, el gobierno italiano, como era de esperar, fracasó al resistirse a las grandes cantidades de dinero que las empresas turísticas prometen: se creó un vacío legal solo para Venecia. Un crucero que llegara a tocar tierra en la Plaza de San Marcos destruiría siglos de historia irremplazable.</p>
+<p class="story-body-text story-content" data-para-count="516" data-total-count="5038" id="story-continues-12" tabindex="-1">Además, después del escándalo de corrupción en torno al proyecto de una barrera para la laguna con un costo de miles de millones de dólares, el alcalde Giorgio Orsoni se vio obligado a renunciar en junio de 2014; un año más tarde fue Luigi Brugnaro quien lo remplazó e impulsó el turismo veneciano. Brugnaro no solo da la bienvenida a barcos colosales, sino que incluso ha propuesto la venta de millones de dólares de arte de los museos de la ciudad para ayudar a controlar la exorbitante deuda de Venecia.</p>
+<p class="story-body-text story-content" data-para-count="746" data-total-count="5784" id="story-continues-13" tabindex="-1">La destrucción de Venecia no le conviene a Italia; sin embargo, las autoridades siguen sin hacer nada. Las autoridades locales —de la ciudad y de la región— tienen un conflicto con el gobierno en Roma. A pesar de eso, no han logrado diversificar la economía de la ciudad, lo cual significa que cualquier cambio dejaría sin trabajo a los pocos venecianos que quedan. Para renovar la vida económica de Venecia, se necesitan nuevas políticas cuyo objetivo sea animar a los jóvenes a que permanezcan en la ciudad histórica, con lo que alentarían la manufactura y generarían oportunidades para empleos creativos —desde la investigación hasta universidades y el mundo del arte— mientras vuelven a hacer útiles los edificios vacíos.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="352" data-total-count="6136" id="story-continues-14" tabindex="-1">El Ministerio de Patrimonio Cultural no ha hecho nada a favor de Venecia, aunque la protección del ambiente y el patrimonio cultural están entre los principios fundamentales de la constitución italiana. Las autoridades tampoco están desarrollando proyecto alguno para preservar los monumentos de Venecia y asegurar a sus ciudadanos un futuro digno.</p>
+<p class="story-body-text story-content" data-para-count="332" data-total-count="6468" id="story-continues-15" tabindex="-1">Si Italia quiere evitar que Venecia sufra más destrucción por parte de la nueva plaga que está devorando su belleza y memoria colectiva, primero debe revisar sus prioridades generales y, cumpliendo con su propia constitución, debe poner el patrimonio cultural, la educación y la investigación por delante de cualquier negocio.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Salvatore Settis es el presidente del consejo consultivo científico del Museo de Louvre y autor del libro de próxima publicación "If Venice Dies".</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/patrimonio-de-la-humanidad/" rel="tag">patrimonio de la humanidad</a>, <a href="https://www.nytimes.com/es/tag/turismo/" rel="tag">turismo</a>, <a href="https://www.nytimes.com/es/tag/unesco/" rel="tag">Unesco</a>, <a href="https://www.nytimes.com/es/tag/venecia/" rel="tag">Venecia</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/09/05/podemos-salvar-venecia-antes-de-que-sea-demasiado-tarde/"
+				data-title="Cultura: ¿Podemos salvar Venecia antes de que sea demasiado tarde?"
+				data-author="POR SALVATORE SETTIS"
+				data-media=""
+				data-description="El turismo excesivo está erosionando la estructura social, la cohesión y la cultura cívica venecianas. La situación provocó que  Naciones Unidas incluyera a la ciudad en la lista de Patrimonios de la Humanidad en Peligro."
+				data-publish-date="5 de septiembre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/08/03/los-ataques-terroristas-golpean-al-turismo-en-europa-y-demoran-la-recuperacion-de-la-industria/">
+					<div class="story-body">
+						<h3 class="kicker">Europa</h3>
+
+						<h2 class="headline">
+							<span class="title">Los ataques terroristas golpean al turismo en Europa y demoran la recuperación de la industria</span>
+							<time class="dateline">3 de agosto de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/07/29/business/30euecon-web2/30euecon-1469746916998-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/06/04/en-egipto-otro-golpe-al-turismo-entre-senales-de-esperanza/">
+					<div class="story-body">
+						<h3 class="kicker">Viajes</h3>
+
+						<h2 class="headline">
+							<span class="title">En Egipto, otro golpe al turismo entre señales de esperanza</span>
+							<time class="dateline">4 de junio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/05/29/travel/29UPDATE/29UPDATE-thumbStandard-v3.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/07/29/habla-el-hombre-acusado-de-orquestar-el-golpe-en-turquia-he-defendido-a-la-democracia-durante-decadas/">
+					<div class="story-body">
+						<h3 class="kicker">Comentario</h3>
+
+						<h2 class="headline">
+							<span class="title">Habla el hombre acusado de orquestar el golpe en Turquía: He defendido a la democracia durante décadas</span>
+							<time class="dateline">29 de julio de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/07/26/opinion/26gulen/26gulen-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/08/04/guia-para-dar-propinas-en-tus-proximas-vacaciones/">
+					<div class="story-body">
+						<h3 class="kicker">Vida</h3>
+
+						<h2 class="headline">
+							<span class="title">Guía para dar propinas en tus próximas vacaciones</span>
+							<time class="dateline">4 de agosto de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/07/24/travel/24TIPS/24TIPS-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":964,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

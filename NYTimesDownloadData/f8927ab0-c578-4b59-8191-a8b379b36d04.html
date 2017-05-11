@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-jumbo-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-jumbo-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-jumbo-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-jumbo-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004833499"/>
+<meta name="hdl" content="36 horas en Puerto Vallarta" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20170112" />
+<meta name="utime" content="20170112160051" />
+<meta name="ptime" content="20170112160051" />
+<meta name="DISPLAYDATE" content="Jan. 12, 2017" />
+<meta name="dat" content="Jan. 12, 2017" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="36-horas-en-puerto-vallarta" />
+<meta property="og:url" content="https://www.nytimes.com/es/2017/01/12/36-horas-en-puerto-vallarta/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="36 horas en Puerto Vallarta" />
+<meta property="og:description" content="Olvídate de la idea que tenías de Puerto Vallarta y visita esta playa del Pacífico mexicano, cuyo creciente ambiente culinario y cultural tiene una nueva vibra que la hace perfecta para tus próximas vacaciones. " />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/12/24/travel/24hours-puerto-vallarta1-inyt/24hours-puerto-vallarta1-inyt-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2017-01-12" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2017/01/12/36-horas-en-puerto-vallarta/" />
+<meta property="twitter:title" content="36 horas en Puerto Vallarta" />
+<meta property="twitter:description" content="Olvídate de la idea que tenías de Puerto Vallarta y visita esta playa del Pacífico mexicano, cuyo creciente ambiente culinario y cultural tiene una nueva vibra que la hace perfecta para tus próximas vacaciones. " />
+<meta name="author" content="Odine Cohane" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Odine Cohane" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="mexico" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="mexico" />
+<meta name="id" content="100000004833499"/>
+<meta name="wordCount" content="1642"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2017/01/12/36-horas-en-puerto-vallarta/">
+<meta name="nyt-collection:uri" content="year=2017&amp;monthnum=01&amp;day=12&amp;name=36-horas-en-puerto-vallarta">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=32843">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2017\/01\/12\/36-horas-en-puerto-vallarta\/"},"headline":"36 horas en Puerto Vallarta","datePublished":"2017-01-12T16:00:51+00:00","dateModified":"2017-01-12T13:00:09+00:00","author":{"@type":"Person","name":"marina.franco"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/12\/24\/travel\/24hours-puerto-vallarta1-inyt\/24hours-puerto-vallarta1-inyt-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Olv\u00eddate de la idea que ten\u00edas de Puerto Vallarta y visita esta playa del Pac\u00edfico mexicano, cuyo creciente ambiente culinario y cultural tiene una nueva vibra que la hace perfecta para tus pr\u00f3ximas vacaciones. "}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2017/01/12/36-horas-en-puerto-vallarta/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/interactive/2016/12/22/travel/what-to-do-36-hours-in-puerto-vallarta-mexico.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="americalatina/mexico" />
+<title>36 horas en Puerto Vallarta &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/interactive/2016/12/22/travel/what-to-do-36-hours-in-puerto-vallarta-mexico.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2017/01/12/36-horas-en-puerto-vallarta/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-32843 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				36 horas en Puerto Vallarta
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2017/01/12/36-horas-en-puerto-vallarta/"
+					data-title="América Latina: 36 horas en Puerto Vallarta"
+					data-author="POR ODINE COHANE"
+					data-media=""
+					data-description="Olvídate de la idea que tenías de Puerto Vallarta y visita esta playa del Pacífico mexicano, cuyo creciente ambiente culinario y cultural tiene una nueva vibra que la hace perfecta para tus próximas vacaciones. "
+					data-publish-date="12 de enero de 2017"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2jJqd8q">http://nyti.ms/2jJqd8q</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/mexico/">México</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">36 horas en Puerto Vallarta</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Odine Cohane</span>
+</span>
+
+					<time class="dateline" datetime="2017-01-12">12 de enero de 2017</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2017/01/12/36-horas-en-puerto-vallarta/"
+							data-title="América Latina: 36 horas en Puerto Vallarta"
+							data-author="POR ODINE COHANE"
+							data-media=""
+							data-description="Olvídate de la idea que tenías de Puerto Vallarta y visita esta playa del Pacífico mexicano, cuyo creciente ambiente culinario y cultural tiene una nueva vibra que la hace perfecta para tus próximas vacaciones. "
+							data-publish-date="12 de enero de 2017"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004832277" class="media photo lede layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/24/travel/24hours-puerto-vallarta1-inyt/24hours-puerto-vallarta1-inyt-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/24/travel/24hours-puerto-vallarta1-inyt/24hours-puerto-vallarta1-inyt-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/24/travel/24hours-puerto-vallarta1-inyt/24hours-puerto-vallarta1-inyt-superJumbo.jpg" data-mediaviewer-caption="Una bailarina folclórica se presenta en las calles del viejo pueblo de Puerto Vallarta, enfrente de la Iglesia de Guadalupe." data-mediaviewer-credit="Danielle Villasana para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/24/travel/24hours-puerto-vallarta1-inyt/24hours-puerto-vallarta1-inyt-master1050.jpg"/>
+		<meta itemprop="height" content="708" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Una bailarina folclórica se presenta en las calles del viejo pueblo de Puerto Vallarta, enfrente de la Iglesia de Guadalupe.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Danielle Villasana para The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/interactive/2016/12/22/travel/what-to-do-36-hours-in-puerto-vallarta-mexico.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="335" data-total-count="335" id="story-continues-2" tabindex="-1">Pese a su reputación de tener muchos Señor Frog’s y complejos turísticos de todo incluido, <a href="https://www.nytimes.com/es/interactive/52-lugares-para-visitar-en-2017/" target="_blank">Puerto Vallarta</a> —y en especial la parte más antigua, conocida como Viejo Vallarta— en realidad alguna vez fue uno de los escapes más glamorosos de México; Elizabeth Taylor y Richard Burton estaban entre sus admiradores más famosos.</p>
+<p class="story-body-text story-content" data-para-count="258" data-total-count="593" id="story-continues-3" tabindex="-1">Ahora el destino atrae a un nuevo grupo de aficionados elegantes que están interesados en su vibrante comunidad local y arquitectura encantadora, que contrasta con las ciudades costeras que se han construido en las últimas décadas pensadas para turistas.</p>
+<p class="story-body-text story-content" data-para-count="291" data-total-count="884" id="story-continues-4" tabindex="-1">Gracias a esta vibra auténtica, pero llena de fiesta, así como a sus excelentes playas, Puerto Vallarta se ha convertido en uno de los lugares preferidos en México, tanto para quienes buscan un clima cálido en invierno como para los visitantes que quieren escapar un fin de semana largo.</p>
+<p class="story-body-text story-content" data-para-count="598" data-total-count="1482" id="story-continues-5" tabindex="-1">Pero Vallarta no solo es atractiva por el sol y la arena, sino por la nueva generación de tiendas, restaurantes y galerías que han ido apareciendo en las vitrinas del viejo pueblo. Un ambiente culinario creciente, que incluye taquerías descuidadas y nuevos restaurantes con chefs prometedores, la convierten en una de las mejores ciudades mexicanas para comer. Con un sinfín de bares y clubes nocturnos gay (y un evento del Orgullo Gay que empezó hace cuatro años), la ciudad también tiene la merecida reputación de ser uno de los destinos más amigables con la comunidad LGBT en México.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="28" data-total-count="1510" id="story-continues-6" tabindex="-1"><strong>Viernes<br />15:00<br />Colas de pescado</strong></p>
+<p class="story-body-text story-content" data-para-count="723" data-total-count="2233" id="story-continues-7" tabindex="-1">Es comprensible no haber visto este pequeño restaurante frente al aeropuerto, escondido tras el puente peatonal que cruza la carretera, pero no entrar al <a href="https://www.facebook.com/tacondemarlin/" target="_blank">Tacón de Marlin</a> para comer un tentempié de mediodía significaría perderte de uno de los hitos culinarios de la ciudad: el tacón de pez espada (un tipo de taco asado; 78 pesos mexicanos o unos 3,85 dólares) desbordante, ahumado y jugoso, es el platillo estrella del lugar. Los lugareños y los conocedores del lugar se reúnen para rendirle homenaje, y la mezcla de rancheros mexicanos con sombrero de vaquero, surfistas bronceados, gringos de la tercera edad y viajeros gastronómico constituye una buena imagen de la particular combinación de Puerto Vallarta.</p>
+<p class="story-body-text story-content" data-para-count="930" data-total-count="3163" id="story-continues-8" tabindex="-1"><strong>17:00<br />Paseo al atardecer</strong><br />El puerto y el Malecón —el paseo a la orilla del océano Pacífico (con vistas dignas de postal gracias al mar y la Sierra Madre al fondo)— han sido un destino para turistas y residentes desde la década de los treinta. Con una remodelación de 2,4 millones de dólares en 2013, dejó de ser andrajoso y se volvió elegante. Después de ver el nuevo muelle y mirador, dirígete a <a href="http://www.cuatesycuetes.com/" target="_blank">Cuates y Cuetes</a> para beber una margarita bajo sus hojas de maíz secas; la &#8220;hora feliz&#8221; en realidad parece durar la mayor parte del día, pero es el lugar preferido por expatriados y lugareños para beber un trago o dos al atardecer. Mientras tanto, la nueva <a href="http://lacerveceriaunion.com.mx/La_Cerveceria_Union/Inicio.html" target="_blank">Cervecería Unión </a>ofrece una gran selección de cerveza artesanal local de microcervecerías en un espacio grande y con ventiladores en el techo. Prueba la Calavera, una cerveza negra de Tlalnepantla, junto con las deliciosas ostras saladas locales.</p>
+<figure id="media-100000004828940" class="media photo media-100000004828940 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/25/travel/25HOURS-PUERTO-VALLARTA4/25HOURS-PUERTO-VALLARTA4-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-10">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/25/travel/25HOURS-PUERTO-VALLARTA4/25HOURS-PUERTO-VALLARTA4-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/25/travel/25HOURS-PUERTO-VALLARTA4/25HOURS-PUERTO-VALLARTA4-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Danielle Villasana for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/25/travel/25HOURS-PUERTO-VALLARTA4/25HOURS-PUERTO-VALLARTA4-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Danielle Villasana for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="30" data-total-count="3193" id="story-continues-10" tabindex="-1"><strong>20:00<br />Celebridades de Hollywood</strong></p>
+<p class="story-body-text story-content" data-para-count="878" data-total-count="4071" id="story-continues-11" tabindex="-1">Cuando John Huston filmó <em>La noche de la Iguana</em> en la costa cercana, puso a Puerto Vallarta en el mapa de las celebridades. Uno de los protagonistas de la película, Richard Burton, tuvo una aventura apasionada con Elizabeth Taylor, mientras ambos estaban casados… así que quizá era inevitable que Puerto Vallarta se asociara con uno de los amoríos más famosos del mundo. Uno de los santuarios de su romance es <a href="http://casakimberly.com/" target="_blank">Casa Kimberly</a>, un regalo del actor a Taylor cuando ella cumplió 32 años. El icono fue reinventado hace poco como un hotel boutique de nueve suites, con un restaurante y un bar de tequila, el Iguana. Prueba el cebiche de pulpo, ostión y camarón (236 pesos) y el róbalo asado con jamaica y chipotle, junto con un buen tequila o mezcal, antes de visitar el Puente del Amor, que conectaba el alojamiento de Taylor con el de su amante a través de la carretera.</p>
+<p class="story-body-text story-content" data-para-count="28" data-total-count="4099" id="story-continues-12" tabindex="-1"><strong>Sábado<br />10:00<br />Todos al mercado</strong></p>
+<p class="story-body-text story-content" data-para-count="567" data-total-count="4666" id="story-continues-13" tabindex="-1">Hace poco, se han abierto mercados de productores y artesanías en pueblos a lo largo de esta costa y las mañanas del sábado docenas de vendedores llegan al Parque Lázaro Cárdenas para su venta semanal. El café orgánico mexicano, las mermeladas locales, el pan recién horneado y los pequeños productores artesanales que venden de todo, desde bolsos tejidos a mano hasta joyería, están entre los atractivos de los puestos al aire libre. Todos los productos se cultivan, se fabrican o se producen en un rango de 75 kilómetros alrededor del <a href="https://www.facebook.com/olasaltasfarmersmarket">mercado municipal</a>.</p>
+<figure id="media-100000004832281" class="media photo media-100000004832281 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/24/travel/24hours-puerto-vallarta3-inyt/24hours-puerto-vallarta3-inyt-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-15">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/24/travel/24hours-puerto-vallarta3-inyt/24hours-puerto-vallarta3-inyt-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/24/travel/24hours-puerto-vallarta3-inyt/24hours-puerto-vallarta3-inyt-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Danielle Villasana for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/24/travel/24hours-puerto-vallarta3-inyt/24hours-puerto-vallarta3-inyt-master675.jpg"/>
+		<meta itemprop="height" content="471" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Danielle Villasana for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="35" data-total-count="4701" id="story-continues-15" tabindex="-1"><strong>12:00<br />Por quién doblan las campanas</strong></p>
+<p class="story-body-text story-content" data-para-count="543" data-total-count="5244" id="story-continues-16" tabindex="-1">Aunque la mayoría de los visitantes del pueblo se concentran frente al mar, Viejo Vallarta es una encantadora mezcla de calles adoquinadas y arquitectura colonial, con cafés, restaurantes y boutiques. Comienza tu día con una visita a la Iglesia de Guadalupe, con su hermosa torre abovedada, que se remplazó después de un terremoto en 1955 con una nueva diseñada por el artista jalisciense Carlos Terrés. A lo largo de la calle, el nuevo café <a href="https://www.facebook.com/salatipv" target="_blank">Salati</a> ofrece deliciosos y saludables jugos frescos servidos en tarros, en un lindo espacio.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="24" data-total-count="5268" id="story-continues-17" tabindex="-1"><strong>14:00<br />Tesoros artesanales</strong></p>
+<p class="story-body-text story-content" data-para-count="481" data-total-count="5749" id="story-continues-18" tabindex="-1">Mientras Puerto Vallarta se concentra en transformar su imagen para alejarse de una reputación más <em>kitsch</em>, hay pequeñas boutiques que han empezado a adoptar una filosofía de “Hecho en México”. Ponciana Boutique, por ejemplo, ofrece todo: desde vasos de tequila fabricados localmente hasta textiles oaxaqueños; mientras que <a href="http://www.banderassoapblends.com/" target="_blank">Banderas Soap Blends</a> tiene aceites orgánicos de coco y cáñamo, así como cremas corporales perfumadas. Los regalos perfectos para llevar a casa.</p>
+<p class="story-body-text story-content" data-para-count="30" data-total-count="5779" id="story-continues-19" tabindex="-1"><strong>17:00<br />Sensación contemporánea</strong></p>
+<p class="story-body-text story-content" data-para-count="778" data-total-count="6557" id="story-continues-20" tabindex="-1">Cuando la galería <a href="http://www.oficinacultural.org/" target="_blank">OPC, Oficina de Proyectos Culturales</a>, una organización sin fines de lucro, se inauguró en 2014, se convirtió en una infusión de seriedad al ambiente artístico del lugar, con exhibiciones dignas de museo y un contrapunto cultural para la reputación más turística de la ciudad. Curadas por Pilar Pérez (quien antes fue la curadora de Track 16 en Santa Mónica, California), las exhibiciones previas han incluido una retrospectiva de El Nopal Press (una casa editorial que se concentra en publicaciones de bellas artes sobre problemas sociales que van de Los Ángeles a Ciudad de México) y un espectáculo dedicado a los 43 estudiantes desaparecidos cuyo secuestro masivo en 2014 en la provincia de Guerrero —aún no resuelto— movilizó al país.</p>
+<figure id="media-100000004832280" class="media photo media-100000004832280 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/24/travel/24hours-puerto-vallarta2-inyt/24hours-puerto-vallarta2-inyt-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-22">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/24/travel/24hours-puerto-vallarta2-inyt/24hours-puerto-vallarta2-inyt-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/24/travel/24hours-puerto-vallarta2-inyt/24hours-puerto-vallarta2-inyt-superJumbo.jpg" data-mediaviewer-caption="Diners at Cuates y Cuetes, top, and visitors to Puerto Vallarta’s pier, above. The city has excellent beaches." data-mediaviewer-credit="Danielle Villasana for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/24/travel/24hours-puerto-vallarta2-inyt/24hours-puerto-vallarta2-inyt-master675.jpg"/>
+		<meta itemprop="height" content="477" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Diners at Cuates y Cuetes, top, and visitors to Puerto Vallarta’s pier, above. The city has excellent beaches.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Danielle Villasana for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="27" data-total-count="6584" id="story-continues-22" tabindex="-1"><strong>19:00<br />De la granja a la mesa</strong></p>
+<p class="story-body-text story-content" data-para-count="897" data-total-count="7481" id="story-continues-23" tabindex="-1">Una red de restaurantes más pequeños dirigidos por familias está surgiendo en el viejo pueblo como prueba del creciente ambiente culinario. Uno de los nuevos participantes, <a href="http://www.trepiatti.com/" target="_blank">Tre Piatti</a>, fue inaugurado por una pareja estadounidense de chefs (se conocieron en Quince de San Francisco). El menú cambia cada dos semanas, pero siempre tiene un enfoque italiano y la pasta fresca, como los ravioles de gorgonzola con compota de higo, así como los vegetales locales y los postres, entre ellos la tarta de mora azul, han hecho que la popularidad del lugar crezca; una cena para dos cuesta cerca de 1600 pesos sin vino. Por otro lado,<a href="https://www.facebook.com/Elcampanio/" target="_blank">El Campanario</a> es un ejemplo de cómo la comida mexicana simple puede transportarte a otro lugar. No te pierdas el pozole, un caldo espeso de maíz con puerco que puedes aderezar con limón y acompañar con tostadas de maíz. La cena para dos cuesta cerca de 150 pesos.</p>
+<p class="story-body-text story-content" data-para-count="34" data-total-count="7515" id="story-continues-24" tabindex="-1"><strong>22:00<br />Las largas horas de la noche</strong></p>
+<p class="story-body-text story-content" data-para-count="378" data-total-count="7893" id="story-continues-25" tabindex="-1"><a href="https://www.facebook.com/elpatiodemicasavallarta/" target="_blank">El Patio de mi Casa</a> es donde los hípsteres se reúnen en una terraza para escuchar música en vivo y beber cocteles artesanales como Ginger Verde, una bebida congelada con mezcal, naranja, jengibre, albahaca y un ligero toque de miel (75 pesos). <a href="http://www.elbarracuda.com/solar.html" target="_blank">El Solar</a> es un lugar favorito para bailar cerca de la playa, con varios DJ los viernes por la noche y tocadas en vivo los sábados.</p>
+<figure id="media-100000004828941" class="media photo media-100000004828941 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/25/travel/25HOURS-PUERTO-VALLARTA5/25HOURS-PUERTO-VALLARTA5-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-27">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/25/travel/25HOURS-PUERTO-VALLARTA5/25HOURS-PUERTO-VALLARTA5-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/25/travel/25HOURS-PUERTO-VALLARTA5/25HOURS-PUERTO-VALLARTA5-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Danielle Villasana for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/25/travel/25HOURS-PUERTO-VALLARTA5/25HOURS-PUERTO-VALLARTA5-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Danielle Villasana for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="33" data-total-count="7926" id="story-continues-27" tabindex="-1"><strong>Domingo<br />10:00<br />Desayuno de campeones</strong></p>
+<p class="story-body-text story-content" data-para-count="329" data-total-count="8255" id="story-continues-28" tabindex="-1">Chefs en sus horas de descanso, artistas, familias locales y conocedores de Puerto Vallarta se dirigen a <a href="https://www.facebook.com/cocoskitchenpv/" target="_blank">Coco’s Kitchen</a> para almorzar. Úneteles en el jardín interior para comer un plato de huevos rancheros, pan francés relleno de queso y mermelada, y hotcakes de churro, con una taza de café con leche (450 pesos para dos).</p>
+<p class="story-body-text story-content" data-para-count="24" data-total-count="8279" id="story-continues-29" tabindex="-1"><strong>12:00<br />Domingo en la playa</strong></p>
+<p class="story-body-text story-content" data-para-count="732" data-total-count="9011" id="story-continues-30" tabindex="-1">Los domingos, muchas tiendas, restaurantes y galerías están cerradas, por lo que es el día perfecto para visitar una de las playas prístinas, pasear brevemente en bote o hacer una caminata. <a href="http://oceangrillpv.com/" target="_blank">Ocean Grill</a>, cerca de Boca de Tomatlán, ofrece un servicio gratuito de embarcaciones para invitados que hagan una reservación para el almuerzo —y tiene una playa privada para nadar antes y después—, que podría incluir mahi mahi y la margarita distintiva del restaurante por cerca de 1000 pesos para dos. <a href="http://www.casitasmaraika.com/" target="_blank">Casitas Maraika</a>, que está más apartado, sirve cebiche y unos buenos cocteles, como Bloody Mary con un toque mexicano, en frente de un tramo perfecto de arena y agua cristalina. El almuerzo cuesta cerca de 600 pesos para dos.</p>
+<p class="story-body-text story-content" data-para-count="15" data-total-count="9026" id="story-continues-31" tabindex="-1"><strong>Dónde quedarse</strong></p>
+<p class="story-body-text story-content" data-para-count="237" data-total-count="9263" id="story-continues-32" tabindex="-1">Propiedad del arquitecto mexicano Óscar Morán, <a href="http://www.hotelvillamercedes.com">Hotel Villa Mercedes</a>, cerca del Malecón, tiene un patio ventilado, habitaciones lindas con buenos precios y una vibra bohemia (habitación doble desde 89 dólares; no se permiten niños).</p>
+<p class="story-body-text story-content" data-para-count="179" data-total-count="9442" id="story-continues-33" tabindex="-1">El nuevo <a href="http://casakimberly.com/">Casa Kimberly</a> dentro de un punto emblemático de Puerto Vallarta también ofrece un bar de tequila y un restaurante (habitaciones dobles de 290 dólares a 1125 dólares).</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/mexico/" rel="tag">México</a>, <a href="https://www.nytimes.com/es/tag/puerto-vallarta/" rel="tag">Puerto Vallarta</a>, <a href="https://www.nytimes.com/es/tag/viajes/" rel="tag">viajes</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2017/01/12/36-horas-en-puerto-vallarta/"
+				data-title="América Latina: 36 horas en Puerto Vallarta"
+				data-author="POR ODINE COHANE"
+				data-media=""
+				data-description="Olvídate de la idea que tenías de Puerto Vallarta y visita esta playa del Pacífico mexicano, cuyo creciente ambiente culinario y cultural tiene una nueva vibra que la hace perfecta para tus próximas vacaciones. "
+				data-publish-date="12 de enero de 2017"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/29/36-horas-en-ciudad-de-mexico/">
+					<div class="story-body">
+						<h3 class="kicker">México</h3>
+
+						<h2 class="headline">
+							<span class="title">36 horas en Ciudad de México</span>
+							<time class="dateline">29 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/20/travel/30HOURS1/30HOURS1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/interactive/52-lugares-para-visitar-en-2017/">
+					<div class="story-body">
+						<h3 class="kicker">Viajes</h3>
+
+						<h2 class="headline">
+							<span class="title">52 lugares para visitar en 2017</span>
+							<time class="dateline">6 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/01/03/travel/places-to-visit-1483468095725/places-to-visit-1483468095725-thumbStandard-v10.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/10/la-despedida-de-obama-si-lo-hicimos/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">La despedida de Obama: &#8216;Sí, lo hicimos&#8217;</span>
+							<time class="dateline">10 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/01/11/us/11obama-new2/11obama-new2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/11/21/la-mafia-de-pobres-que-desangra-el-salvador/">
+					<div class="story-body">
+						<h3 class="kicker">El Salvador</h3>
+
+						<h2 class="headline">
+							<span class="title">La mafia de pobres que desangra a El Salvador</span>
+							<time class="dateline">21 de noviembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/11/17/universal/es/20SALVADORGANG-2-copy/20SALVADORGANG-2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":742,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

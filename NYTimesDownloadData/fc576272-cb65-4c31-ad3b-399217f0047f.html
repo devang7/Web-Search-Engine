@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004506319"/>
+<meta name="hdl" content="El Estado Islámico controla la nueva ruta del hachís hacia Europa" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20160920" />
+<meta name="utime" content="20160920120052" />
+<meta name="ptime" content="20160920120052" />
+<meta name="DISPLAYDATE" content="Sep. 20, 2016" />
+<meta name="dat" content="Sep. 20, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="el-estado-islamico-controla-la-nueva-ruta-del-hachis-hacia-europa" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/09/20/el-estado-islamico-controla-la-nueva-ruta-del-hachis-hacia-europa/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="El Estado Islámico controla la nueva ruta del hachís hacia Europa" />
+<meta property="og:description" content="El hachís marroquí que entra a Europa ya no lo hace a través de España: ahora pasa por Libia y lo controla el Estado Islámico. " />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/08/22/world/22ships4/22ships4-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-09-20" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/09/20/el-estado-islamico-controla-la-nueva-ruta-del-hachis-hacia-europa/" />
+<meta property="twitter:title" content="El Estado Islámico controla la nueva ruta del hachís hacia Europa" />
+<meta property="twitter:description" content="El hachís marroquí que entra a Europa ya no lo hace a través de España: ahora pasa por Libia y lo controla el Estado Islámico. " />
+<meta name="author" content="Rukmini Callimachi y Lorenzo Tondo" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Rukmini Callimachi y Lorenzo Tondo" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="medio-oriente" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="medio-oriente" />
+<meta name="id" content="100000004506319"/>
+<meta name="wordCount" content="1160"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/09/20/el-estado-islamico-controla-la-nueva-ruta-del-hachis-hacia-europa/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=09&amp;day=20&amp;name=el-estado-islamico-controla-la-nueva-ruta-del-hachis-hacia-europa">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=25888">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/09\/20\/el-estado-islamico-controla-la-nueva-ruta-del-hachis-hacia-europa\/"},"headline":"El Estado Isl\u00e1mico controla la nueva ruta del hach\u00eds hacia Europa","datePublished":"2016-09-20T12:00:52+00:00","dateModified":"2016-09-20T09:22:42+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/08\/22\/world\/22ships4\/22ships4-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"El hach\u00eds marroqu\u00ed que entra a Europa ya no lo hace a trav\u00e9s de Espa\u00f1a: ahora pasa por Libia y lo controla el Estado Isl\u00e1mico. "}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/09/20/el-estado-islamico-controla-la-nueva-ruta-del-hachis-hacia-europa/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/09/14/world/europe/italy-morocco-isis-drug-trade.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/mediooriente" />
+<title>El Estado Islámico controla la nueva ruta del hachís hacia Europa &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/09/14/world/europe/italy-morocco-isis-drug-trade.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/09/20/el-estado-islamico-controla-la-nueva-ruta-del-hachis-hacia-europa/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-25888 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				El Estado Islámico controla la nueva ruta del hachís hacia Europa
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/09/20/el-estado-islamico-controla-la-nueva-ruta-del-hachis-hacia-europa/"
+					data-title="Noticias: El Estado Islámico controla la nueva ruta del hachís hacia Europa"
+					data-author="POR RUKMINI CALLIMACHI Y LORENZO TONDO"
+					data-media=""
+					data-description="El hachís marroquí que entra a Europa ya no lo hace a través de España: ahora pasa por Libia y lo controla el Estado Islámico. "
+					data-publish-date="20 de septiembre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2defKvu">http://nyti.ms/2defKvu</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/medio-oriente/">Medio Oriente</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">El Estado Islámico controla la nueva ruta del hachís hacia Europa</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Rukmini Callimachi</span>
+</span>
+ y <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Lorenzo Tondo</span>
+</span>
+
+					<time class="dateline" datetime="2016-09-20">20 de septiembre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/09/20/el-estado-islamico-controla-la-nueva-ruta-del-hachis-hacia-europa/"
+							data-title="Noticias: El Estado Islámico controla la nueva ruta del hachís hacia Europa"
+							data-author="POR RUKMINI CALLIMACHI Y LORENZO TONDO"
+							data-media=""
+							data-description="El hachís marroquí que entra a Europa ya no lo hace a través de España: ahora pasa por Libia y lo controla el Estado Islámico. "
+							data-publish-date="20 de septiembre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004599702" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/22/world/22ships4/22ships4-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/22/world/22ships4/22ships4-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/22/world/22ships4/22ships4-superJumbo.jpg" data-mediaviewer-caption="A jute suitcase containing 100 blocks of hashish in the office of the Guardia di Finanza, the Italian financial police force, in Palermo, Italy. The blocks were among 13 tons of hashish seized from the cargo ship Munzur in December." data-mediaviewer-credit="Gianni Cipriano for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/22/world/22ships4/22ships4-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A jute suitcase containing 100 blocks of hashish in the office of the Guardia di Finanza, the Italian financial police force, in Palermo, Italy. The blocks were among 13 tons of hashish seized from the cargo ship Munzur in December.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Gianni Cipriano for The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/09/14/world/europe/italy-morocco-isis-drug-trade.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="216" data-total-count="216" id="story-continues-2" tabindex="-1">PALERMO, Italia — Los investigadores de la unidad antidrogas de la policía italiana estaban acostumbrados a medir el flujo de hachís desde Marruecos a Europa en lanchas rápidas o motos acuáticas. De una en una. </p>
+<p class="story-body-text story-content" data-para-count="312" data-total-count="528" id="story-continues-3" tabindex="-1">Cuando llegó el aviso de que un carguero enorme lleno de hachís surcaba aguas internacionales al sur de Sicilia con destino a Libia, a cientos de millas al este de la ruta más normal y corta hasta España, Francesco Amico, uno de los investigadores más experimentados, supo de inmediato que pasaba algo raro. </p>
+<p class="story-body-text story-content" data-para-count="279" data-total-count="807" id="story-continues-4" tabindex="-1">No solo raro. Sino grande. Cuando dos buques de la armada italiana detuvieron al carguero, el Adam, cerca de la costa libia, el 12 de abril de 2013, los agentes encontraron a la tripulación, siria, en pánico y 15 toneladas de hachís, la mayor cantidad que habían visto nunca. </p>
+<p class="story-body-text story-content" data-para-count="215" data-total-count="1022" id="story-continues-5" tabindex="-1">&#8220;Había tanta droga que no sabíamos dónde ponerla&#8221;, dijo Amico, que esperaba en el puerto siciliano de Trapani a que el barco llegara junto a la escolta. &#8220;Tuvimos que alquilar un almacén&#8221;.  </p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="249" data-total-count="1271" id="story-continues-6" tabindex="-1">Las autoridades italianas se han encontrado con una ruta nueva y lucrativa para el narcotráfico: avanza en dirección este por la costa africana y siempre pasa por Libia, por una zona en la que el Estados Islámico compite con otros grupos armados. </p>
+<figure id="media-100000004601311" class="media photo media-100000004601311 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/22/world/22ships-video/22ships-video-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-8">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/22/world/22ships-video/22ships-video-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/22/world/22ships-video/22ships-video-superJumbo.jpg" data-mediaviewer-caption="Helmeted security forces climbing ladder into boat Munzur, seized on Dec. 3, 2015 with 13,606 kilograms of hashish on board." data-mediaviewer-credit="Guardia di Finanza di Palermo"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/22/world/22ships-video/22ships-video-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Helmeted security forces climbing ladder into boat Munzur, seized on Dec. 3, 2015 with 13,606 kilograms of hashish on board.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Guardia di Finanza di Palermo
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="353" data-total-count="1624" id="story-continues-8" tabindex="-1">Este fue el primero de 20 barcos interceptados en la misma ruta en poco menos de tres años según las autoridades. La carga total asciende a casi 280 toneladas de hachís, valoradas en 2800 millones de euros, la mitad de todo lo decomisado en Europa el año pasado, según el centro de monitoreo de tráfico de drogas y adicciones de la Unión Europea. </p>
+<p class="story-body-text story-content" data-para-count="220" data-total-count="1844" id="story-continues-9" tabindex="-1">Después dejaron de llegar los chivatazos. La investigación italiana, que ya incluía otros países europeos y a Estados Unidos no ha detectado ningún barco en 2016 pero las autoridades creen que el tráfico continúa. </p>
+<p class="story-body-text story-content" data-para-count="159" data-total-count="2003" id="story-continues-10" tabindex="-1">En su lugar, mientras tratan de entender lo que sucede con cargamentos de ese tamaño, pelean contra un misterio que despierta gran intriga y pocas respuestas. </p>
+<p class="story-body-text story-content" data-para-count="287" data-total-count="2290" id="story-continues-11" tabindex="-1">Algo que saben es que las drogas no tenían a Libia como destino final. Los productores marroquíes firman sus envíos con un dólar o con un escorpión, por ejemplo, y eso ayudó a seguirle la ruta a la carga más allá de Libia. Pasaba por Egipto y llegaba a Europa desde los Balcanes. </p>
+<p class="story-body-text story-content" data-para-count="256" data-total-count="2546" id="story-continues-12" tabindex="-1">Los investigadores no están seguros de qué sucede cuando la droga avanza. Saben que la ruta cruza por territorio que hasta hace poco controlaba el Estado Islámico, que cobra impuestos sobre los envíos de droga y otro material que pasa por Siria e Irak. </p>
+<figure id="media-100000004599701" class="media photo media-100000004599701 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/08/22/world/22ships1/22ships1-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-14">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/08/22/world/22ships1/22ships1-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/08/22/world/22ships1/22ships1-superJumbo.jpg" data-mediaviewer-caption="The cargo ship Meryem docked in Palermo in June. The freighter, with 20 tons of hashish, was seized last year." data-mediaviewer-credit="Gianni Cipriano for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/08/22/world/22ships1/22ships1-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The cargo ship Meryem docked in Palermo in June. The freighter, with 20 tons of hashish, was seized last year.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Gianni Cipriano for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="409" data-total-count="2955" id="story-continues-14" tabindex="-1">Eso, en particular, llevó a los investigadores a comenzar a hacer preguntas que no se esperaban: ¿Podría ser que el Estados Islámico se beneficie del tráfico de drogas cobrando impuestos? ¿El caos de milicias armadas en Libia genera una ventana de oportunidad para que los traficantes usen una ruta no conocida por las autoridades o son los grupos armados quienes lo gestionan? La investigación avanza. </p>
+<p class="story-body-text story-content" data-para-count="177" data-total-count="3132" id="story-continues-15" tabindex="-1">&#8220;Una vez que llega a Libia le perdemos la pista&#8221;, dijo el coronel Giuseppe Campobasso, quien dirige la unidad antidroga en Sicilia que lucha contra el narcotráfico. </p>
+<p class="story-body-text story-content" data-para-count="359" data-total-count="3491" id="story-continues-16" tabindex="-1">Los envíos anteriores de hachís de Marruecos, de 100 en 100 kilos, llegaban a España en barco a través del estrecho de Gibraltar, que se cruza en 35 minutos. En 2007 España comenzó a blindar su frontera marítima. Con una Europa que ya sabe controlar los barcos que vienen del sur, nadie se dio cuenta de que barcos más grandes navegaban hacia el este. </p>
+<p class="story-body-text story-content" data-para-count="185" data-total-count="3676" id="story-continues-17" tabindex="-1">Esos barcos, inmensos, algunos del tamaño de un campo de fútbol, fueron diseñados para coches y contenedores y ahora solo llevan droga. Pero mucha menos de la que el barco cargaría. </p>
+<p class="story-body-text story-content" data-para-count="75" data-total-count="3751" id="story-continues-18" tabindex="-1">Es como usar un camión de 18 ruedas para llevar un cartón de cigarrillos.</p>
+<p class="story-body-text story-content" data-para-count="318" data-total-count="4069" id="story-continues-19" tabindex="-1">Lo que demuestra el valor de la carga. Un kilo de hachís vale alrededor de 10.000 euros cuando llega a la calle. La carga del Adam estaba valorada en 150 millones de euros. Y los cargamentos decomisados después eran incluso mayores. Un carguero, el Aberdeen, llevaba 420 millones de euros encima cuando fue detenido. </p>
+<p class="story-body-text story-content" data-para-count="116" data-total-count="4185" id="story-continues-20" tabindex="-1">Los tripulantes del Adam insistieron en que no sabían que las 591 bolsas de plástico que llevaban eran de hachís. </p>
+<p class="story-body-text story-content" data-para-count="194" data-total-count="4379" id="story-continues-21" tabindex="-1">El capitán del barco testificó que creía que llevaba ayuda humanitaria que había subido a bordo una lancha rápida frente a la costa de Marruecos e insistieron en que se llevaran las bolsas. </p>
+<p class="story-body-text story-content" data-para-count="355" data-total-count="4734" id="story-continues-22" tabindex="-1">Los investigadores, que tienen décadas de experiencia con la mafia siciliana, decidieron poner micrófonos en las celdas donde los seis miembros de la tripulación fueron encerrados. Después de meses de investigación llegaron a entender rutas y, sobre todo, el misterio del bastión de hombres armados en la costa libia por el que pasaban estos barcos. </p>
+<p class="story-body-text story-content" data-para-count="271" data-total-count="5005" id="story-continues-23" tabindex="-1">Desde el derrocamiento de Gadafi en 2011, la costa libia se ha convertido en una zona en disputa entre grupos armados. En 20014 se sumó el Estado Islámico que una vez controló zonas de Bengasi, Sirte y Derna que ahora están casi en manos de grupos leales al gobierno. </p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="203" data-total-count="5208" id="story-continues-24" tabindex="-1">Italia cree que esos lugares eran el destino de estos barcos cargados de droga, aunque algunas bitácoras también señalaban Tobruk, controlado por otro grupo armado que se enfrenta al Estado Islámico. </p>
+<p class="story-body-text story-content" data-para-count="312" data-total-count="5520" id="story-continues-25" tabindex="-1">Los investigadores creen que la organización terrorista ha cobrado impuesto por permitir el paso de la droga. Y eso se corresponde con lo mismo que hacen en el territorio que controlan en Siria e Irak, donde IHS Country Risks ha calculado que el siete por ciento de sus ingresos proviene del tráfico de drogas. </p>
+<p class="story-body-text story-content" data-para-count="111" data-total-count="5631" id="story-continues-26" tabindex="-1">Pero no se sabe, además de eso, qué papel pudo haber jugado el Estado Islámico en los envíos de mercancía. </p>
+<p class="story-body-text story-content" data-para-count="335" data-total-count="5966" id="story-continues-27" tabindex="-1">Masood Karimipour, representante de la Oficina de Naciones Unidas para la droga y el crimen en Oriente Medio y norte de África dijo que &#8220;nadie tiene ojos en el terreno para afirmar que lo sabe a ciencia cierta. Lo que podemos deducir es que donde los terroristas controlan, controlan todo lo que pasa, sea armas o drogas&#8221;. </p>
+<p class="story-body-text story-content" data-para-count="139" data-total-count="6105" id="story-continues-28" tabindex="-1">Las grabaciones de la celda de la tripulación del Adam sugieren que la droga era parte de algo más grande en lo que se incluirían armas. </p>
+<p class="story-body-text story-content" data-para-count="191" data-total-count="6296" id="story-continues-29" tabindex="-1">El barco zarpó de Chipre con &#8220;muebles&#8221; para Bengasi. Dejó la carga y se fue a Marruecos, donde recogió el hachís. Los italianos creen que los &#8220;muebles&#8221; eran armas. </p>
+<p class="story-body-text story-content" data-para-count="168" data-total-count="6464" id="story-continues-30" tabindex="-1">&#8220;La gente en Libia no consume hachís&#8221;, dijo uno de los fiscales, Maurizio Agnello. &#8220;Esa carga de droga es para pagar otra cosa, es una moneda&#8221;. </p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/barcos/" rel="tag">barcos</a>, <a href="https://www.nytimes.com/es/tag/estado-islamico/" rel="tag">Estado Islámico</a>, <a href="https://www.nytimes.com/es/tag/hachis/" rel="tag">Hachís</a>, <a href="https://www.nytimes.com/es/tag/libia/" rel="tag">Libia</a>, <a href="https://www.nytimes.com/es/tag/marruecos/" rel="tag">Marruecos</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/09/20/el-estado-islamico-controla-la-nueva-ruta-del-hachis-hacia-europa/"
+				data-title="Noticias: El Estado Islámico controla la nueva ruta del hachís hacia Europa"
+				data-author="POR RUKMINI CALLIMACHI Y LORENZO TONDO"
+				data-media=""
+				data-description="El hachís marroquí que entra a Europa ya no lo hace a través de España: ahora pasa por Libia y lo controla el Estado Islámico. "
+				data-publish-date="20 de septiembre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/08/30/estratega-y-vocero-del-estado-islamico-fue-asesinado-en-siria/">
+					<div class="story-body">
+						<h3 class="kicker">Internacional</h3>
+
+						<h2 class="headline">
+							<span class="title">Estratega y vocero del Estado Islámico fue asesinado en Siria</span>
+							<time class="dateline">30 de agosto de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/08/30/world/31ISIS-hp/31ISIS-hp-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/14/las-lecciones-de-bolivia-de-la-lucha-contra-el-narcotrafico/">
+					<div class="story-body">
+						<h3 class="kicker">Editorial</h3>
+
+						<h2 class="headline">
+							<span class="title">Las lecciones de Bolivia de la lucha contra el narcotráfico</span>
+							<time class="dateline">14 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/09/14/opinion/14wed3web/14wed3web-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2015/10/01/sicario-se-adentra-en-el-desgarrador-mundo-de-la-guerra-contra-las-drogas/">
+					<div class="story-body">
+						<h3 class="kicker">Cine</h3>
+
+						<h2 class="headline">
+							<span class="title">‘Sicario’ se adentra en el desgarrador mundo de la guerra contra las drogas</span>
+							<time class="dateline">1 de octubre de 2015</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2015/09/18/arts/18SICARIO-copy/18SICARIO-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/15/de-patrulla-en-la-frontera-con-mexico-usando-la-realidad-virtual/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">De patrulla en la frontera de Estados Unidos con México usando la realidad virtual</span>
+							<time class="dateline">15 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/09/13/us/13arizona1sub/13arizona1sub-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":981,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

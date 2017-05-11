@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004288090"/>
+<meta name="hdl" content="Cómo el Estado Islámico construyó su maquinaria terrorista en Europa" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20160331" />
+<meta name="utime" content="20160331080037" />
+<meta name="ptime" content="20160331080037" />
+<meta name="DISPLAYDATE" content="Mar. 31, 2016" />
+<meta name="dat" content="Mar. 31, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="el-estado-islamico-construyo-su-maquinaria-terrorista-bajo-la-mirada-de-europa" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/03/31/el-estado-islamico-construyo-su-maquinaria-terrorista-bajo-la-mirada-de-europa/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Cómo el Estado Islámico construyó su maquinaria terrorista en Europa" />
+<meta property="og:description" content="El grupo  envió atacantes entrenados en Siria al continente con la misión de ejecutar pequeñas operaciones para poner a prueba el aparato de seguridad europeo." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/03/26/world/xxisisplotheader/xxisisplotheader-videoSixteenByNine768-v2.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-03-31" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/03/31/el-estado-islamico-construyo-su-maquinaria-terrorista-bajo-la-mirada-de-europa/" />
+<meta property="twitter:title" content="Cómo el Estado Islámico construyó su maquinaria terrorista en Europa" />
+<meta property="twitter:description" content="El grupo  envió atacantes entrenados en Siria al continente con la misión de ejecutar pequeñas operaciones para poner a prueba el aparato de seguridad europeo." />
+<meta name="author" content="Rukmini Callimachi" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Rukmini Callimachi" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="internacional" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="internacional" />
+<meta name="id" content="100000004288090"/>
+<meta name="wordCount" content="3866"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/03/31/el-estado-islamico-construyo-su-maquinaria-terrorista-bajo-la-mirada-de-europa/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=03&amp;day=31&amp;name=el-estado-islamico-construyo-su-maquinaria-terrorista-bajo-la-mirada-de-europa">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=8387">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/03\/31\/el-estado-islamico-construyo-su-maquinaria-terrorista-bajo-la-mirada-de-europa\/"},"headline":"C\u00f3mo el Estado Isl\u00e1mico construy\u00f3 su maquinaria terrorista en Europa","datePublished":"2016-03-31T08:00:37+00:00","dateModified":"2016-03-31T09:02:43+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/03\/26\/world\/xxisisplotheader\/xxisisplotheader-videoSixteenByNine768-v2.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"El grupo  envi\u00f3 atacantes entrenados en Siria al continente con la misi\u00f3n de ejecutar peque\u00f1as operaciones para poner a prueba el aparato de seguridad europeo."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/03/31/el-estado-islamico-construyo-su-maquinaria-terrorista-bajo-la-mirada-de-europa/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/03/29/world/europe/isis-attacks-paris-brussels.html?_r=0" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/internacional" />
+<title>Cómo el Estado Islámico construyó su maquinaria terrorista en Europa &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/03/29/world/europe/isis-attacks-paris-brussels.html?_r=0" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/03/31/el-estado-islamico-construyo-su-maquinaria-terrorista-bajo-la-mirada-de-europa/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-8387 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Cómo el Estado Islámico construyó su maquinaria terrorista en Europa
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/03/31/el-estado-islamico-construyo-su-maquinaria-terrorista-bajo-la-mirada-de-europa/"
+					data-title="Noticias: Cómo el Estado Islámico construyó su maquinaria terrorista en Europa"
+					data-author="POR RUKMINI CALLIMACHI"
+					data-media=""
+					data-description="El grupo  envió atacantes entrenados en Siria al continente con la misión de ejecutar pequeñas operaciones para poner a prueba el aparato de seguridad europeo."
+					data-publish-date="31 de marzo de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/internacional/">Internacional</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Cómo el Estado Islámico construyó su maquinaria terrorista en Europa</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Rukmini Callimachi</span>
+</span>
+
+					<time class="dateline" datetime="2016-03-31">31 de marzo de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/03/31/el-estado-islamico-construyo-su-maquinaria-terrorista-bajo-la-mirada-de-europa/"
+							data-title="Noticias: Cómo el Estado Islámico construyó su maquinaria terrorista en Europa"
+							data-author="POR RUKMINI CALLIMACHI"
+							data-media=""
+							data-description="El grupo  envió atacantes entrenados en Siria al continente con la misión de ejecutar pequeñas operaciones para poner a prueba el aparato de seguridad europeo."
+							data-publish-date="31 de marzo de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004293265" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/03/26/world/xxisisplotheader/xxisisplotheader-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/03/26/world/xxisisplotheader/xxisisplotheader-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/03/26/world/xxisisplotheader/xxisisplotheader-superJumbo.jpg" data-mediaviewer-caption="Los ataques en París dejaron 130 muertos en noviembre, pero dos años antes una rama del Estado Islámico ya estaba obsesionada con atacar Europa.
+" data-mediaviewer-credit="Philippe Wojazer / REUTERS"  itemprop="url" itemid="https://static01.nyt.com/images/2016/03/26/world/xxisisplotheader/xxisisplotheader-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Los ataques en París dejaron 130 muertos en noviembre, pero dos años antes una rama del Estado Islámico ya estaba obsesionada con atacar Europa.
+</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Philippe Wojazer / REUTERS
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/03/29/world/europe/isis-attacks-paris-brussels.html?_r=0&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="215" data-total-count="215" id="story-continues-2" tabindex="-1">El día que salió de Siria con instrucciones para realizar un ataque terrorista en Francia, Reda Hame, un técnico en computación de París, había pertenecido al Estado Islámico (EI) por poco más de una semana.</p>
+<p class="story-body-text story-content" data-para-count="413" data-total-count="628" id="story-continues-3" tabindex="-1">El pasaporte francés y su experiencia en tecnologías de la información lo convirtieron en el recluta ideal para una rama que se expandió rápidamente dentro del Estado Islámico y que se centraba en cometer actos terroristas en Europa. En tan solo unos días, lo llevaron a un parque, le enseñaron cómo disparar un rifle de asalto, le dieron una granada y le dijeron que la lanzara hacia una silueta humana.</p>
+<p class="story-body-text story-content" data-para-count="475" data-total-count="1103" id="story-continues-4" tabindex="-1">Su rápido entrenamiento incluyó cómo utilizar un programa de codificación llamado TrueCrypt, el primer paso en un proceso destinado a ocultar comunicaciones con el operador de EI en Siria. Ese hombre, cuyo nombre clave es &#8220;Papá&#8221;, trasladó a Hame hasta la frontera turca después de aconsejarle que eligiera un blanco fácil, disparara a tantos civiles como le fuera posible y retuviera rehenes hasta que las fuerzas de seguridad lo convirtieran en mártir.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="61" data-total-count="1164" id="story-continues-5" tabindex="-1">“Sé valiente”, le dijo &#8220;Papá&#8221; y lo abrazó.</p>
+<p class="story-body-text story-content" data-para-count="585" data-total-count="1749" id="story-continues-6" tabindex="-1">Hame fue enviado por un sector del Estado Islámico que estaba obsesionado con atacar Europa al menos dos años antes de los <a href="http://www.nytimes.com/news-event/attacks-in-paris?8qa" target="_blank">ataques en París</a> el pasado noviembre y en <a href="http://www.nytimes.com/2016/03/23/world/europe/brussels-airport-explosions.html" target="_blank">Bruselas</a> este mes. Durante ese tiempo, el grupo envió atacantes entrenados en Siria, que tenían la misión de ejecutar pequeños ataques para poner a prueba el aparato de seguridad europeo, aunque las acciones más mortíferas aún estaban planeándose, según el proceso judicial, las transcripciones de los interrogatorios y los registros de intervenciones telefónicas en Europa obtenidos por The New York Times.</p>
+<figure id="media-100000004292696" class="media photo media-100000004292696 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/03/26/world/xxisisplot3-web/xxisisplot3-web-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-8">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/03/26/world/xxisisplot3-web/xxisisplot3-web-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/03/26/world/xxisisplot3-web/xxisisplot3-web-superJumbo.jpg" data-mediaviewer-caption="Abdelhamid Abaaoud, who oversaw the Paris attacks, was known to Islamic State operatives in Europe as “Dad.”" data-mediaviewer-credit="Agence France-Presse — Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/03/26/world/xxisisplot3-web/xxisisplot3-web-master315.jpg"/>
+		<meta itemprop="height" content="445" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Abdelhamid Abaaoud, who oversaw the Paris attacks, was known to Islamic State operatives in Europe as “Dad.”</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Agence France-Presse — Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="319" data-total-count="2068" id="story-continues-8" tabindex="-1">Las autoridades dicen que el rastro de esta máquina terrorista podía percibirse en Europa desde 2014. Sin embargo, las autoridades locales subestimaron cada complot consecutivo, pues los describieron como actos aislados o fortuitos; se pasaba por alto la conexión con el Estado Islámico o se le restaba importancia.</p>
+<p class="story-body-text story-content" data-para-count="261" data-total-count="2329" id="story-continues-9" tabindex="-1">“Esto no surgió repentinamente en los últimos seis meses”, dijo Michael T. Flynn, un general jubilado que dirigió la Agencia de Inteligencia de la Defensa de 2012 a 2014. “Han contemplado ataques externos desde que el grupo se mudó a Siria en 2012”.</p>
+<p class="story-body-text story-content" data-para-count="363" data-total-count="2692" id="story-continues-10" tabindex="-1">En agosto pasado, Hame fue arrestado en París antes de que pudiera atacar; es uno de los 21 terroristas entrenados que consiguieron regresar a Europa. El registro de su interrogatorio ofrece una ventana a los orígenes y la evolución de un grupo del Estado Islámico que es responsable de haber matado a cientos de personas en París, Bruselas y otros países.</p>
+<p class="story-body-text story-content" data-para-count="352" data-total-count="3044" id="story-continues-11" tabindex="-1">Las autoridades europeas ahora saben que Papá, el entrenador de Hame, era nada menos que Abdelhamid Abaaoud, el terrorista belga que seleccionó y entrenó a combatientes para que realizaran complots en Europa; además, él mismo regresó para supervisar el ataque en París, el acto terrorista más mortífero en suelo europeo en más de una década.</p>
+<p class="story-body-text story-content" data-para-count="262" data-total-count="3306" id="story-continues-12" tabindex="-1">Las personas que participaron en las operaciones de Abaaoud también ejecutaron los ataques en Bruselas, así como una operación frustrada en un suburbio de París hace unos días, y otros son buscados urgentemente, según las autoridades belgas y francesas.</p>
+<p class="story-body-text story-content" data-para-count="215" data-total-count="3521" id="story-continues-13" tabindex="-1">“Lo que hay ahí es una fábrica”, advirtió Hame a sus interlocutores del servicio de inteligencia de Francia después de su arresto. “Están haciendo todo lo posible para atacar Francia o toda Europa&#8221;.</p>
+<figure id="media-100000004292693" class="media photo media-100000004292693 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/03/26/world/xxisisplot2-web/xxisisplot2-web-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-15">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/03/26/world/xxisisplot2-web/xxisisplot2-web-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/03/26/world/xxisisplot2-web/xxisisplot2-web-superJumbo.jpg" data-mediaviewer-caption="Mehdi Nemmouche killed four people at the Jewish Museum of Belgium in May 2014. Despite evidence of his ties to ISIS, a Belgian prosecutor said at the time, “He probably acted alone.”" data-mediaviewer-credit="Agence France-Presse — Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/03/26/world/xxisisplot2-web/xxisisplot2-web-master315.jpg"/>
+		<meta itemprop="height" content="407" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Mehdi Nemmouche killed four people at the Jewish Museum of Belgium in May 2014. Despite evidence of his ties to ISIS, a Belgian prosecutor said at the time, “He probably acted alone.”</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Agence France-Presse — Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="229" data-total-count="3750" id="story-continues-15" tabindex="-1">Un nombre comenzó a aparecer en cada investigación: <a href="http://www.nytimes.com/2015/11/18/world/europe/paris-attacks-abdelhamid-abaaoud-an-isis-militant-from-belgium-whose-own-family-wanted-him-dead.html" target="_blank">Abdelhamid Abaaoud</a>, un ciudadano belga que, según oficiales de contraterrorismo, ascendió hasta convertirse en lugarteniente de los operativos externos del Estado Islámico.</p>
+<p class="story-body-text story-content" data-para-count="450" data-total-count="4200" id="story-continues-16" tabindex="-1">Esa unidad identifica reclutas, provee entrenamiento, dinero en efectivo y organiza la entrega de las armas una vez que los combatientes están en el lugar. Aunque su objetivo principal ha sido Europa, los ataques externos han sido más mortíferos en otros sitios. Por lo menos 650 personas han sido asesinadas en las acciones del grupo en países frecuentados por occidentales como Turquía, Egipto y Túnez, de acuerdo con un análisis del Times.</p>
+<p class="story-body-text story-content" data-para-count="27" data-total-count="4227" id="story-continues-17" tabindex="-1"><strong>El sistema de reclutamiento</strong></p>
+<p class="story-body-text story-content" data-para-count="247" data-total-count="4474" id="story-continues-18" tabindex="-1">A fines de 2015, la rama de operaciones externas del Estado Islámico tenía personal dedicado a pasar sus días en los cibercafés de Siria con el fin de publicar propaganda dirigida a incitar los ataques en solitario y atraer nuevos reclutas.</p>
+<p class="story-body-text story-content" data-para-count="344" data-total-count="4818" id="story-continues-19" tabindex="-1">Entre las personas que mordieron el anzuelo estaba Reda Hame, el joven profesional de la tecnología, quien más tarde le dijo a los investigadores que se había unido con la esperanza de derrocar al Presidente Bashar al Asad. En vez de eso, después de llegar a Siria en junio de 2015, fue captado por la sección de ataques en el extranjero.</p>
+<p class="story-body-text story-content" data-para-count="585" data-total-count="5403" id="story-continues-20" tabindex="-1">Durante su entrevista de ingreso en Raqqa, Siria, en junio de 2015, el administrador del Estado Islámico que tomaba notas en una computadora expresó su satisfacción cuando supo que Hame era de París y tenía experiencia en asuntos tecnológicos, de acuerdo con un recuento detallado de la agencia de inteligencia francesa, la <em>Direction Générale de la Sécurité Intérieure</em>, o DGSI. Los detalles se registraron en más de 16 horas de preguntas, según una transcripción obtenida por The New York Times, la cual se reportó por primera vez a través del diario francés Le Monde.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="212" data-total-count="5615" id="story-continues-21" tabindex="-1">Días más tarde, un hombre que usaba una máscara le pidió que saliera, le dijo que se recostara en la parte trasera de una camioneta pickup y lo cubrió con una lona. Se le advirtió que no mirara al exterior.</p>
+<p class="story-body-text story-content" data-para-count="336" data-total-count="5951" id="story-continues-22" tabindex="-1">Condujeron a gran velocidad y cuando la camioneta se detuvo, un combatiente que hablaba árabe lo llevó a otro vehículo que estaba cerca; las ventanas polarizadas ocultaban a sus ocupantes. Cuando Hame abrió la puerta del asiento trasero, el conductor le dijo: “Monte devant”, que en francés significa “Siéntate adelante”.</p>
+<p class="story-body-text story-content" data-para-count="321" data-total-count="6272" id="story-continues-23" tabindex="-1">El conductor, dijo Hame, era Abaaoud, quien para entonces se consideraba el terrorista más buscado en Europa. Conforme condujeron a través del campo sirio, el futuro arquitecto de los ataques en París le explicó a Hame que si solamente enfrentaba a los enemigos del islam, recibiría una recompensa doble en el cielo.</p>
+<p class="story-body-text story-content" data-para-count="247" data-total-count="6519" id="story-continues-24" tabindex="-1">“Me preguntó si estaba interesado en ir al extranjero”, dijo Hame a los investigadores. “Me dijo que imaginara un concierto de rock en un país europeo… si te dieran un arma, ¿estarías listo para abrir fuego contra los espectadores?”.</p>
+<p class="story-body-text story-content" data-para-count="325" data-total-count="6844" id="story-continues-25" tabindex="-1">Cuando Hame reiteró que en vez de eso quería luchar contra el gobierno de Asad, Abaaoud se volvió brusco. “Dijo que me mostraría a los heridos de guerra y los edificios que habían sido destruidos para que me diera cuenta de la suerte que tenía por ser enviado a Francia en vez de quedarme a combatir”, relató Hame.</p>
+<figure id="media-100000004292752" class="media photo media-100000004292752 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/03/26/world/xxisisplot7-web/xxisisplot7-web-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-27">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/03/26/world/xxisisplot7-web/xxisisplot7-web-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/03/26/world/xxisisplot7-web/xxisisplot7-web-superJumbo.jpg" data-mediaviewer-caption="An Islamic State propaganda video showed one of the Paris attackers while he was still in Syria. In the footage, he is seen beheading a captive." data-mediaviewer-credit="SITE Intelligence Group"  itemprop="url" itemid="https://static01.nyt.com/images/2016/03/26/world/xxisisplot7-web/xxisisplot7-web-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">An Islamic State propaganda video showed one of the Paris attackers while he was still in Syria. In the footage, he is seen beheading a captive.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			SITE Intelligence Group
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="534" data-total-count="7378" id="story-continues-27" tabindex="-1">Los videos lanzados por el Estado Islámico después de los ataques de París en noviembre incluyeron grabaciones de ocho de los diez atacantes mientras aún estaban en territorio controlado por el grupo terrorista en Irak y Siria. Anunciaron que actuaban bajo órdenes de Baghdadi, el califa del Estado Islámico, y después procedió a dispararle o decapitar a un prisionero; la mayoría lo hacía según escenas coreografiadas grotescamente con un fondo del desierto, según el material archivado por el Grupo de Inteligencia SITE.</p>
+<p class="story-body-text story-content" data-para-count="407" data-total-count="7785" id="story-continues-28" tabindex="-1">Los oficiales han deducido que el material se filmó entre febrero y septiembre de 2015, lo cual sugiere que los ataques de París se estaban planeando meses antes de que se llevaran a cabo. Ahora se sabe que al mismo tiempo Abaaoud estaba preparando el terreno para el devastador complot; estaba reclutando, persuadiendo y entrenando a Hame y otros miembros para realizar ataques más pequeños y rápidos.</p>
+<p class="story-body-text story-content" data-para-count="329" data-total-count="8114" id="story-continues-29" tabindex="-1">La noche que se conocieron, Abaaoud dejó a Hame en una casa en Raqqa con una puerta blanca, según la transcripción. Dijo que recogería a Hame la mañana siguiente y le advirtió que si no aceptaba llevar a cabo la misión, le darían su pasaporte, que estaba a punto de expirar, a otro recluta que iría a Europa en su lugar.</p>
+<p class="story-body-text story-content" data-para-count="478" data-total-count="8592" id="story-continues-30" tabindex="-1">Cuando Abaaoud regresó el siguiente día, su rostro estaba cubierto con una bufanda café que tenía hendiduras para sus ojos. Llevaba un revólver guardado en una funda. “Me dijo que ahora me iba a explicar la misión”, Hame relató después de su arresto, cuando describió cómo ocurrió la discusión en el vehículo del líder operativo. “Me dijo que no tenía mucho tiempo; dijo que solo estaba esperando la confirmación por parte de su emir. Le dijo que iría”.</p>
+<figure id="media-100000004292692" class="media photo media-100000004292692 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/03/26/world/xxisisplot1-web/xxisisplot1-web-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-32">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/03/26/world/xxisisplot1-web/xxisisplot1-web-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/03/26/world/xxisisplot1-web/xxisisplot1-web-superJumbo.jpg" data-mediaviewer-caption="One of the Paris attackers at target practice in Syria, in an Islamic State video. Mr. Hame’s lack of skill with a Kalashnikov rifle angered Mr. Abaaoud, Mr. Hame told French investigators after his arrest." data-mediaviewer-credit="Site Intelligence Group"  itemprop="url" itemid="https://static01.nyt.com/images/2016/03/26/world/xxisisplot1-web/xxisisplot1-web-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">One of the Paris attackers at target practice in Syria, in an Islamic State video. Mr. Hame’s lack of skill with a Kalashnikov rifle angered Mr. Abaaoud, Mr. Hame told French investigators after his arrest.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Site Intelligence Group
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="23" data-total-count="8615" id="story-continues-32" tabindex="-1"><strong>Entrenamiento acelerado</strong></p>
+<p class="story-body-text story-content" data-para-count="353" data-total-count="8968" id="story-continues-33" tabindex="-1">Hame dijo que su entrenamiento comenzó a media hora en auto desde Raqqa, en una villa que fungía como el salón de clases de Abaaoud. Ahí, el líder operativo demostró cómo cargar un rifle Kalashnikov. Cuando Hame lo intentó, se machucó el pulgar con el metal, lo cual le causó una herida. Abaaoud hizo que repitiera el ejercicio una y otra vez.</p>
+<p class="story-body-text story-content" data-para-count="203" data-total-count="9171" id="story-continues-34" tabindex="-1">Al día siguiente lo llevaron en auto a un parque cubierto de pasto seco para practicar con blancos. A lo largo de la lección, Abaaoud perdió la paciencia, molesto por la falta de destreza del recluta.</p>
+<p class="story-body-text story-content" data-para-count="161" data-total-count="9332" id="story-continues-35" tabindex="-1">“Me gritó porque cuando estaba disparando en ráfaga, se iba al aire”, relató Hame. “Hizo que practicara mucho, a tal punto que el pasto se incendió”.</p>
+<p class="story-body-text story-content" data-para-count="384" data-total-count="9716" id="story-continues-36" tabindex="-1">El instructor pareció irritarse más durante el tercer y último día del entrenamiento militar, cuando dibujó una silueta en el muro de un edificio abandonado y demostró cómo arrojar una granada. Hame no la lanzó a la distancia suficiente y la metralla lo cortó. Solo cuando Abaaoud lo vio sangrar se detuvo y llevó a su estudiante a una clínica cercana para que lo vendaran.</p>
+<p class="story-body-text story-content" data-para-count="488" data-total-count="10204" id="story-continues-37" tabindex="-1">Por la noche, dejaron a Hame en un apartamento en Raqqa que parecía ser el dormitorio para miembros de la rama de operaciones externas. Una habitación servía como arsenal, con pilas de cinturones suicidas, jarros de explosivos, armamento corporal y botas de combate. Los otros reclutas también eran francófonos, entre ellos, un hombre que dijo haber sido entrenado durante ocho meses. Abaaoud, quien decidió enviarlos de regreso a Europa el mismo día, les dijo que formaran equipo.</p>
+<p class="story-body-text story-content" data-para-count="90" data-total-count="10294" id="story-continues-38" tabindex="-1">Estaban entre los muchos peones que Abaaoud tenía posicionados a lo largo del continente.</p>
+<p class="story-body-text story-content" data-para-count="6" data-total-count="10300" id="story-continues-39" tabindex="-1">&nbsp;</p>
+<p class="story-body-text story-content" data-para-count="26" data-total-count="10326" id="story-continues-40" tabindex="-1"><strong>Trabajando en la seguridad</strong></p>
+<p class="story-body-text story-content" data-para-count="166" data-total-count="10492" id="story-continues-41" tabindex="-1">TrueCrypt, un programa básico de codificación utilizado por Hame y otros yihadistas, fue la primera capa en un protocolo de seguridad que se le pidió que siguiera.</p>
+<p class="story-body-text story-content" data-para-count="377" data-total-count="10869" id="story-continues-42" tabindex="-1">Más de un año y medio antes, Ibrahim Boudina, quien bombardearía Cannes, había intentado borrar los tres días previos de su historial de búsquedas, de acuerdo con detalles en su registro tribunal, pero la policía fue capaz de recuperarlo. Hallaron que Boudina había estado buscando cómo conectarse a internet mediante un túnel seguro y cómo cambiar su dirección IP.</p>
+<p class="story-body-text story-content" data-para-count="112" data-total-count="10981" id="story-continues-43" tabindex="-1">Aunque pudo haber estado consciente del riesgo de recuperación, quizá no estaba lo suficientemente preocupado.</p>
+<p class="story-body-text story-content" data-para-count="537" data-total-count="11518" id="story-continues-44" tabindex="-1">Boudina había sido bastante descuidado para seguir usando su cuenta de Facebook, y el gran volumen de conversaciones le permitió a los oficiales franceses determinar su relación con el Estado Islámico. La intervención de llamadas con sus amigos y familiares, que se detallaron más tarde en los registros del tribunal francés obtenido por The New York Times y confirmados por oficiales de seguridad, definieron su plan más en detalle, el cual, creen los oficiales, consistía en dirigirse al carnaval anual de la Riviera Francesa.</p>
+<p class="story-body-text story-content" data-para-count="550" data-total-count="12068" id="story-continues-45" tabindex="-1">A Hame, en contraste, le dieron instrucciones estrictas de cómo comunicarse. Después de utilizar TrueCrypt, debía cargar la carpeta de mensajes codificados en un sitio comercial de almacenamiento de información, desde donde lo descargaría su operador en Siria. Se le dijo que no lo enviara por correo electrónico, seguramente para evitar la creación de metadatos que registraran detalles como el punto de origen y el destino, aunque el contenido de la misiva sea ilegible. Hame describió el sitio web como “básicamente un buzón muerto”.</p>
+<p class="story-body-text story-content" data-para-count="295" data-total-count="12363" id="story-continues-46" tabindex="-1">El técnico del EI le dijo a Hame una cosa más: en cuanto regresara a Europa, necesitaba comprar otra memoria USB para transferir ahí el programa de codificación. Las memorias USB tienen números de serie, así que el proceso no era diferente al de un ladrón que cambia de auto para escapar.</p>
+<p class="story-body-text story-content" data-para-count="152" data-total-count="12515" id="story-continues-47" tabindex="-1">“Me dijo que copiara lo que estaba en la memoria y después me deshiciera de ella”, explicó Hame. “Eso fue lo que hice cuando llegué a Praga”.</p>
+<p class="story-body-text story-content" data-para-count="442" data-total-count="12957" id="story-continues-48" tabindex="-1">Abaaoud también estaba obsesionado con la seguridad telefónica. Anotó el número de un celular turco que, dijo, estaría en un edificio en Siria, pero bastante cerca de la frontera para alcanzar la red telefónica turca, según el relato de Hame. Abaaoud aparentemente imaginó que sería más probable que los investigadores rastrearan llamadas desde Europa hasta un número telefónico sirio, y podrían dejar pasar llamadas a uno turco.</p>
+<p class="story-body-text story-content" data-para-count="51" data-total-count="13008" id="story-continues-49" tabindex="-1">Junto al número, escribió la palabra “Papá”.</p>
+<figure id="media-100000004292750" class="media photo media-100000004292750 embedded layout-large-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/03/26/world/xxisisplot5-web/xxisisplot5-web-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-51">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/03/26/world/xxisisplot5-web/xxisisplot5-web-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/03/26/world/xxisisplot5-web/xxisisplot5-web-superJumbo.jpg" data-mediaviewer-caption="Mr. Abaaoud rose through the ranks of the Islamic State’s external operations efforts." data-mediaviewer-credit="Agence France-Presse — Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/03/26/world/xxisisplot5-web/xxisisplot5-web-master675.jpg"/>
+		<meta itemprop="height" content="380" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Mr. Abaaoud rose through the ranks of the Islamic State’s external operations efforts.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Agence France-Presse — Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="278" data-total-count="13286" id="story-continues-51" tabindex="-1">Hame recibió instrucciones para regresar a París; debía emplear un itinerario que imitara el recorrido de un mochilero durante las vacaciones de verano: tenía que viajar a Estambul y pasar algunos días paseando por las calles del distrito turístico cerca de Taksim Square.</p>
+<p class="story-body-text story-content" data-para-count="438" data-total-count="13724" id="story-continues-52" tabindex="-1">Después debía volar a Praga y comprar una tarjeta SIM checa. Una vez más se registraría en un hotel, fingiría ser un turista y dejaría llamadas perdidas en el teléfono de Abaadoud. El registro de las llamadas serían las notificaciones para Abaaoud del progreso de su aprendiz. Se esperaba que Hame repitiera el procedimiento en cada parte de su viaje, incluyendo Ámsterdam y después Bruselas, antes de regresar a París en tren.</p>
+<p class="story-body-text story-content" data-para-count="192" data-total-count="13916" id="story-continues-53" tabindex="-1">Una vez que los líderes del Estado Islámico supieron que Hame había llegado a casa, utilizarían la codificación y el buzón electrónico turco para coordinar más instrucciones, comentó.</p>
+<p class="story-body-text story-content" data-para-count="472" data-total-count="14388" id="story-continues-54" tabindex="-1">La misión comenzó la mañana del 12 de junio, cuando Abaaoud llevó en auto a Hame y a un segundo recluta a la frontera turca. Ambos tenían memorias USB con TrueCrypt, y a cada uno se le entregaron 2000 euros, en billetes de 500, dijo Hame. Ambos tenían el mismo objetivo general ⎯atacar un blanco menor en Europa⎯ pero se les dieron instrucciones para tomar caminos separados, pues Hame debía regresar a Francia mientras el segundo recluta se dirigía a España.</p>
+<p class="story-body-text story-content" data-para-count="569" data-total-count="14957" id="story-continues-55" tabindex="-1">Pero detuvieron al colega de Hame después de que voló a España y, bajo interrogación, divulgó el plan de Hame también. Después de ser notificada, la policía francesa rastreó a Hame en el apartamento de su madre en París. Detrás de un sofá, encontraron la memoria USB que el Estado Islámico le había dado, y en su mochila hallaron un pedazo de papel en el que estaban las contraseñas de TrueCrypt. Lo arrestaron y comenzaron a interrogarlo en agosto pasado, casi tres meses antes del día en que ocurrió el peor ataque terrorista en la historia francesa.</p>
+<p class="story-body-text story-content" data-para-count="251" data-total-count="15208" id="story-continues-56" tabindex="-1">En muchas maneras, fue otra falla clara de la seguridad operacional del Estado Islámico. Hame aceptó cooperar con los investigadores y confirmó que el grupo se disponía a atacar en Europa y ya estaba interesado en elegir un auditorio para hacerlo.</p>
+<p class="story-body-text story-content" data-para-count="307" data-total-count="15515" id="story-continues-57" tabindex="-1">Sin embargo, muchos aspectos del protocolo de seguridad del grupo estaban funcionando. Al final, Hame tenía pocos detalles que compartir con las autoridades. No sabía los nombres ni las nacionalidades de los otros terroristas que había conocido; se los habían presentado únicamente con sus seudónimos.</p>
+<p class="story-body-text story-content" data-para-count="538" data-total-count="16053" id="story-continues-58" tabindex="-1">Dos de los complots de menor tamaño de Abaaoud cerca del mismo periodo no salieron bien tampoco. Abaaoud le ordenó a Sid Ahmed Ghlam que abriera fuego en una iglesia en Villejuif, al sur de París, de acuerdo con el reporte que realizó la policía antiterrorista francesa. En vez de eso, se disparó en la pierna. Ayoub el Khazzani, el otro atacante enviado por Abaaoud, fue derribado por pasajeros después de que su arma se atascara mientras trataba de abrir fuego dentro de un tren rápido Thalys en agosto pasado, según oficiales.</p>
+<p class="story-body-text story-content" data-para-count="153" data-total-count="16206" id="story-continues-59" tabindex="-1">Aunque fracasaron, los ataques frustrados mantuvieron a los oficiales de contraterrorismo ocupados en los meses previos al ataque de noviembre en París.</p>
+<p class="story-body-text story-content" data-para-count="259" data-total-count="16465" id="story-continues-60" tabindex="-1">“Sirvió para poner a todas nuestras agencias nerviosas”, dijo el juez antiterrorismo Marc Trévidic, quien interrogó a Hame, Ghlam y Khazzani antes de retirarse el verano pasado. “Como una cortina de humo, les permitió prepararse con tranquilidad”.</p>
+<p class="story-body-text story-content" data-para-count="23" data-total-count="16488" id="story-continues-61" tabindex="-1"><strong>Un explosivo distintivo</strong></p>
+<p class="story-body-text story-content" data-para-count="201" data-total-count="16689" id="story-continues-62" tabindex="-1">Entre las señales más claras de la capacidad creciente del Estado Islámico para los ataques terroristas es su progreso al fabricar y utilizar bombas que contienen triperóxido de triacetona, o <a href="http://www.nytimes.com/2016/03/24/world/europe/brussels-explosives-tatp.html" target="_blank">TATP</a>.</p>
+<p class="story-body-text story-content" data-para-count="209" data-total-count="16898" id="story-continues-63" tabindex="-1">El polvo blanco explosivo se encontró en los cinturones suicidas de los atacantes de París y en los portafolios de los bombarderos en Bruselas, así como en dos complots más dirigidos por EI en 2014 y 2015.</p>
+<p class="story-body-text story-content" data-para-count="332" data-total-count="17230" id="story-continues-64" tabindex="-1">Antes del EI, Al Qaeda intentó en repetidas ocasiones utilizar bombas TATP desde 2001, pero fracasó en la mayoría. Por ejemplo, cuando Richard Reid intentó hacer explotar un vuelo de American Airlines al meter de contrabando TATP a bordo en la suela de su zapato. Su intento se frustró cuando el detonador no logró encenderse.</p>
+<p class="story-body-text story-content" data-para-count="287" data-total-count="17517" id="story-continues-65" tabindex="-1">TATP se ha convertido en el explosivo favorito de los terroristas en Europa porque los ingredientes principales, la acetona y el peróxido de hidrógeno, pueden encontrarse en productos domésticos comunes como removedor de esmalte de uñas y decolorante para el cabello, dicen expertos.</p>
+<p class="story-body-text story-content" data-para-count="337" data-total-count="17854" id="story-continues-66" tabindex="-1">Pero mientras que los ingredientes son fáciles de conseguir, TATP es difícil de hacer, porque los ingredientes son inestables una vez que se combinan y puede detonarse fácilmente si no se manejan con cuidado. A lo largo de por lo menos dos años, los operadores del Estado Islámico estaban trabajando para hacerlo de manera adecuada.</p>
+<p class="story-body-text story-content" data-para-count="226" data-total-count="18080" id="story-continues-67" tabindex="-1">Las tres bombas que se encontraron en el edificio de Boudina cerca de Cannes en 2014 fueron latas de bebidas llenas del polvo explosivo y envueltas en cinta negra, de acuerdo con el archivo del tribunal francés sobre el caso.</p>
+<p class="story-body-text story-content" data-para-count="549" data-total-count="18629" id="story-continues-68" tabindex="-1">Aunque pudo preparar el explosivo con éxito, a Boudina aún le resultaba difícil detonarlo. Había introducido un filamento en una cavidad de cada lata; lo más probable es que lo hiciera para utilizarlo como detonante improvisado, concluyeron los investigadores. Sin embargo, las búsquedas en línea que había hecho en su laptop justo antes de su arresto indicaron que no sabía cómo fabricar el último componente. Buscó “cómo hacer un detonador remoto”, “detonación mediante celular” y finalmente “¿dónde comprar petardos?”.</p>
+<p class="story-body-text story-content" data-para-count="140" data-total-count="18769" id="story-continues-69" tabindex="-1">En comparación, el equipo enviado desde Siria para llevar a cabo los ataques de noviembre en París habían resuelto los últimos detalles.</p>
+<p class="story-body-text story-content" data-para-count="543" data-total-count="19312" id="story-continues-70" tabindex="-1">Dos meses antes de los ataques, el hombre del que se sospecha que manejó la logística de los atacantes, Salah Abdeslam, se detuvo en una tienda de fuegos artificiales al noreste de París para comprar un mecanismo utilizado para detonar fuegos artificiales a distancia, de acuerdo con el abogado francés de la acusación. El abogado interno de la tienda Firework Magician, Frédéric Zajac, recordó poco acerca del joven con acento belga, excepto que “a diferencia de otros clientes, no hizo preguntas acerca de cómo funcionaba todo”.</p>
+<p class="story-body-text story-content" data-para-count="183" data-total-count="19495" id="story-continues-71" tabindex="-1">Se cree que Abdeslam es el único participante directo que sobrevivió en los ataques, y fue arrestado la semana pasada en Bélgica después de una persecución en todo el continente.</p>
+<p class="story-body-text story-content" data-para-count="212" data-total-count="19707" id="story-continues-72" tabindex="-1">Los atacantes a quienes había estado ayudando detonaron con éxito sus cinturones suicidas en siete locaciones en París, lo cual indica que el grupo había dominado cómo mezclar el compuesto y cómo detonarlo.</p>
+<p class="story-body-text story-content" data-para-count="303" data-total-count="20010" id="story-continues-73" tabindex="-1">“Ser capaz de armarlo con seguridad y detonarlo repetidamente sugiere un esfuerzo más organizado”, dijo Michael Marks, un agente especial jubilado del Naval Criminal Investigative Service, quien fue el investigador después de la explosión en el Navy Destroyer Cole. “Sugiere que hay una red”.</p>
+<p class="story-body-text story-content" data-para-count="374" data-total-count="20384" id="story-continues-74" tabindex="-1">Esa red se extendió como una telaraña en toda Europa hasta por lo menos una docena de otros cómplices, entre ellos, un celular que se encontraba en un apartamento en el vecindario de Schaerbeek en Bruselas, donde otros dos equipos de combatientes del Estado Islámico prepararon las bombas detonadas la semana pasada en el aeropuerto de Bruselas y una estación de metro.</p>
+<p class="story-body-text story-content" data-para-count="224" data-total-count="20608" id="story-continues-75" tabindex="-1">El propietario del edificio notó el olor abrumador que llega con el refinamiento y el almacenamiento del TATP semanas antes de los bombardeos, dicen oficiales belgas, pero no lo denunció sino hasta después de los ataques.</p>
+<p class="story-body-text story-content" data-para-count="448" data-total-count="21056" id="story-continues-76" tabindex="-1">Mientras que cada uno de los chalecos explosivos utilizados en París en noviembre tenían cerca de 500 gramos de TATP terminado, se estima que las bombas utilizadas en la terminal de salida del aeropuerto y dentro del vagón de metro en Bruselas pesaron entre 13 y 27 kilos cada una, de acuerdo con Claude Moniquet, un veterano del servicio de inteligencia de Francia, quien ahora dirige el Centro Europeo de Seguridad e Inteligencia Estratégica.</p>
+<p class="story-body-text story-content" data-para-count="124" data-total-count="21180" id="story-continues-77" tabindex="-1">Eso marcó otro nivel de logros al fabricar el explosivo: entre más alto sea el volumen de TATP, más volátil se volverá.</p>
+<p class="story-body-text story-content" data-para-count="374" data-total-count="21554" id="story-continues-78" tabindex="-1">Los ataques de la semana pasada pudieron haber sido peores: dentro del apartamento de los atacantes había más de los ingredientes precursores utilizados para fabricar el explosivo —cerca de 40 galones de acetona y 8 galones de peróxido de hidrógeno–, así como un portafolio que contenía más de 13 kilos de TATP listo para llevar, de acuerdo con la policía belga.</p>
+<p class="story-body-text story-content" data-para-count="218" data-total-count="21772" id="story-continues-79" tabindex="-1">Lo único que los atacantes no habían considerado era que el taxi que llamaron para que los llevara al aeropuerto solo tenía espacio para tres portafolios, así que dejaron el cuarto en el apartamento, dijo Moniquet.</p>
+<p class="story-body-text story-content" data-para-count="205" data-total-count="21977" id="story-continues-80" tabindex="-1">El conductor del taxi le dijo al diario belga DH que los clientes se habían rehusado a permitirle ayudar con las pesadas maletas, y que durante el trayecto al aeropuerto, se sentaron tensos y en silencio.</p>
+<p class="story-body-text story-content" data-para-count="99" data-total-count="22076" id="story-continues-81" tabindex="-1">El conductor no pudo evitar darse cuenta del fuerte olor que despedía la cajuela cerrada del taxi.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>David E. Sanger y Eric Schmitt contribuyeron al reportaje desde Washington, Laure Fourquet y Aurelien Breeden desde París, Katrin Bernhold desde Londres, Andrew Higgins desde Bruselas y Runa Sandvik desde Nueva York. Alain Delaquérière y Karen Yourish contribuyeron con la investigación.</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/estado-islamico/" rel="tag">Estado Islámico</a>, <a href="https://www.nytimes.com/es/tag/europa/" rel="tag">Europa</a>, <a href="https://www.nytimes.com/es/tag/siria/" rel="tag">Siria</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/03/31/el-estado-islamico-construyo-su-maquinaria-terrorista-bajo-la-mirada-de-europa/"
+				data-title="Noticias: Cómo el Estado Islámico construyó su maquinaria terrorista en Europa"
+				data-author="POR RUKMINI CALLIMACHI"
+				data-media=""
+				data-description="El grupo  envió atacantes entrenados en Siria al continente con la misión de ejecutar pequeñas operaciones para poner a prueba el aparato de seguridad europeo."
+				data-publish-date="31 de marzo de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/22/lo-mas-reciente-de-los-ataques-en-bruselas/">
+					<div class="story-body">
+						<h3 class="kicker">Europa</h3>
+
+						<h2 class="headline">
+							<span class="title">Lo más reciente sobre los ataques del Estado Islámico en Bruselas</span>
+							<time class="dateline">22 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/24/universal/es/bruselas2/bruselas2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/24/el-estado-islamico-pierde-terreno-en-irak-y-siria-y-europa-sufre-las-consecuencias/">
+					<div class="story-body">
+						<h3 class="kicker">Comentario</h3>
+
+						<h2 class="headline">
+							<span class="title">El Estado Islámico pierde terreno en Irak y Siria, y Europa sufre las consecuencias</span>
+							<time class="dateline">24 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/24/opinion/edbyman24/edbyman24-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":1005,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

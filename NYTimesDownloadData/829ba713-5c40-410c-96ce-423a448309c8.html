@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-jumbo-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-jumbo-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-jumbo-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-jumbo-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004649291"/>
+<meta name="hdl" content="La enfermedad mental y la escasez convergen en una realidad dantesca en Venezuela" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20161002" />
+<meta name="utime" content="20161002152953" />
+<meta name="ptime" content="20161002152953" />
+<meta name="DISPLAYDATE" content="Oct. 2, 2016" />
+<meta name="dat" content="Oct. 2, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="la-enfermedad-mental-y-la-escasez-convergen-en-una-realidad-dantesca-en-venezuela" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/10/02/la-enfermedad-mental-y-la-escasez-convergen-en-una-realidad-dantesca-en-venezuela/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="La enfermedad mental y la escasez convergen en una realidad dantesca en Venezuela" />
+<meta property="og:description" content="En medio del colapso económico, los hospitales psiquiátricos venezolanos se quedan sin medicinas, alimentos y otras provisiones. Miles de pacientes se hunden en la desesperanza y la psicosis." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/09/30/universal/es/VENEZ-WEB1-copyES/VENEZ-WEB1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-10-02" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/10/02/la-enfermedad-mental-y-la-escasez-convergen-en-una-realidad-dantesca-en-venezuela/" />
+<meta property="twitter:title" content="La enfermedad mental y la escasez convergen en una realidad dantesca en Venezuela" />
+<meta property="twitter:description" content="En medio del colapso económico, los hospitales psiquiátricos venezolanos se quedan sin medicinas, alimentos y otras provisiones. Miles de pacientes se hunden en la desesperanza y la psicosis." />
+<meta name="author" content="Nicholas Casey" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Nicholas Casey" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="venezuela" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="venezuela" />
+<meta name="id" content="100000004649291"/>
+<meta name="wordCount" content="2906"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/10/02/la-enfermedad-mental-y-la-escasez-convergen-en-una-realidad-dantesca-en-venezuela/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=10&amp;day=02&amp;name=la-enfermedad-mental-y-la-escasez-convergen-en-una-realidad-dantesca-en-venezuela">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=26921">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/10\/02\/la-enfermedad-mental-y-la-escasez-convergen-en-una-realidad-dantesca-en-venezuela\/"},"headline":"La enfermedad mental y la escasez convergen en una realidad dantesca en Venezuela","datePublished":"2016-10-02T15:29:53+00:00","dateModified":"2016-10-02T15:29:53+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/09\/30\/universal\/es\/VENEZ-WEB1-copyES\/VENEZ-WEB1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"En medio del colapso econ\u00f3mico, los hospitales psiqui\u00e1tricos venezolanos se quedan sin medicinas, alimentos y otras provisiones. Miles de pacientes se hunden en la desesperanza y la psicosis."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/10/02/la-enfermedad-mental-y-la-escasez-convergen-en-una-realidad-dantesca-en-venezuela/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/10/02/world/americas/venezuela-mental-health-medicine-shortages.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="americalatina/venezuela" />
+<title>La enfermedad mental y la escasez convergen en una realidad dantesca en Venezuela &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/10/02/world/americas/venezuela-mental-health-medicine-shortages.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/10/02/la-enfermedad-mental-y-la-escasez-convergen-en-una-realidad-dantesca-en-venezuela/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-26921 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				La enfermedad mental y la escasez convergen en una realidad dantesca en Venezuela
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/10/02/la-enfermedad-mental-y-la-escasez-convergen-en-una-realidad-dantesca-en-venezuela/"
+					data-title="América Latina: La enfermedad mental y la escasez convergen en una realidad dantesca en Venezuela"
+					data-author="POR NICHOLAS CASEY"
+					data-media=""
+					data-description="En medio del colapso económico, los hospitales psiquiátricos venezolanos se quedan sin medicinas, alimentos y otras provisiones. Miles de pacientes se hunden en la desesperanza y la psicosis."
+					data-publish-date="2 de octubre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2dKvMxy">http://nyti.ms/2dKvMxy</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/venezuela/">Venezuela</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">La enfermedad mental y la escasez convergen en una realidad dantesca en Venezuela</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Nicholas Casey</span>
+</span>
+
+					<time class="dateline" datetime="2016-10-02">2 de octubre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/10/02/la-enfermedad-mental-y-la-escasez-convergen-en-una-realidad-dantesca-en-venezuela/"
+							data-title="América Latina: La enfermedad mental y la escasez convergen en una realidad dantesca en Venezuela"
+							data-author="POR NICHOLAS CASEY"
+							data-media=""
+							data-description="En medio del colapso económico, los hospitales psiquiátricos venezolanos se quedan sin medicinas, alimentos y otras provisiones. Miles de pacientes se hunden en la desesperanza y la psicosis."
+							data-publish-date="2 de octubre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004683033" class="media photo lede layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/30/universal/es/VENEZ-WEB1-copyES/VENEZ-WEB1-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/30/universal/es/VENEZ-WEB1-copyES/VENEZ-WEB1-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/30/universal/es/VENEZ-WEB1-copyES/VENEZ-WEB1-superJumbo.jpg" data-mediaviewer-caption="Mario Simeone and his wife, Evelin, at home in Maracay with their sons, Gerardo and Accel, who both suffer from schizophrenia. Venezuela has run out of most psychiatric medicines, and the voices in Accel’s head demanded that he kill his brother." data-mediaviewer-credit="Meridith Kohut for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/30/universal/es/VENEZ-WEB1-copyES/VENEZ-WEB1-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Mario Simeone and his wife, Evelin, at home in Maracay with their sons, Gerardo and Accel, who both suffer from schizophrenia. Venezuela has run out of most psychiatric medicines, and the voices in Accel’s head demanded that he kill his brother.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Meridith Kohut for The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/10/02/world/americas/venezuela-mental-health-medicine-shortages.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="93" data-total-count="93" id="story-continues-2" tabindex="-1">MARACAY, Venezuela — Las voces que atormentaban a Accel Simeone eran cada vez más fuertes.</p>
+<p class="story-body-text story-content" data-para-count="170" data-total-count="263" id="story-continues-3" tabindex="-1">Con los últimos suministros de medicamentos antipsicóticos en Venezuela casi por acabarse, Accel tenía semanas sin tomar las pastillas que controlan su esquizofrenia.</p>
+<p class="story-body-text story-content" data-para-count="245" data-total-count="508" id="story-continues-4" tabindex="-1">Su realidad se desintegraba, día tras día. Pronto los ruidos en su cabeza se convirtieron en personas, con nombres propios. Esos personajes fueron creciendo y multiplicándose hasta desplazar a su familia. Le gritaban obscenidades al oído.</p>
+<p class="story-body-text story-content" data-para-count="43" data-total-count="551" id="story-continues-5" tabindex="-1">Luego le exigieron que matara a su hermano.</p>
+<p class="story-body-text story-content" data-para-count="66" data-total-count="617" id="story-continues-6" tabindex="-1">&#8220;Yo no quería hacerlo&#8221;, recordó Accel, de 25 años.</p>
+<p class="story-body-text story-content" data-para-count="247" data-total-count="864" id="story-continues-7" tabindex="-1">Entonces fue al garaje de la familia, tomó una amoladora eléctrica y la encendió. Pero, en vez de matar a su hermano, se atacó a sí mismo y empezó a cortarse el brazo hasta que su padre le arrancó la herramienta de sus manos ensangrentadas.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="229" data-total-count="1093" id="story-continues-8" tabindex="-1">El colapso económico de Venezuela <a href="https://www.nytimes.com/es/2016/05/15/mueren-recien-nacidos-y-faltan-las-medicinas-el-colapso-del-sistema-de-salud-en-venezuela/" target="_blank">ha diezmado su sistema de salud</a> al dejar a los hospitales sin antibióticos, a los cirujanos sin guantes y al provocar el fallecimiento de muchos pacientes que llegan a las salas de emergencias.</p>
+<p class="story-body-text story-content" data-para-count="330" data-total-count="1423" id="story-continues-9" tabindex="-1">Ahora, miles de personas con problemas de salud mental están a la deriva viviendo momentos de desesperación y episodios psicóticos porque el país se ha quedado sin la gran mayoría de los medicamentos psiquiátricos. Las familias y los hospitales no tienen insumos para poder ayudarlos, dicen los expertos en temas de salud.</p>
+<p class="story-body-text story-content" data-para-count="410" data-total-count="1833" id="story-continues-10" tabindex="-1">Las instituciones mentales han decidido dar de alta o rechazar a miles de pacientes psiquiátricos porque ya no pueden tratarlos. Los que todavía reciben atención médica están recluidos en centros donde apenas pueden alimentarlos. Los médicos y enfermeras temen ataques violentos y dicen que no les queda más remedio que atar a sus pacientes, encerrarlos o quitarles las ropa para prevenir los suicidios.</p>
+<p class="story-body-text story-content" data-para-count="96" data-total-count="1929" id="story-continues-11" tabindex="-1">En la ciudad de Barquisimeto, las escenas en el Hospital Psiquiátrico El Pampero son de terror.</p>
+<p class="story-body-text story-content" data-para-count="519" data-total-count="2448" id="story-continues-12" tabindex="-1">La escasez de alimentos convirtió a un hombre esquizofrénico en un esqueleto descarnado que recuerda a las imágenes de los prisioneros en los campos de concentración. Un hombre epiléptico, que desde hace tiempo no recibe sus medicamentos, sufre agitadas convulsiones, mientras que otro paciente sin tratamiento está amarrado a su cama. Una mujer mayor, también esquizofrénica, se arrastraba por el suelo y más allá un paciente hambriento se comía una fruta que se había caído en un charco de aguas negras.</p>
+<p class="story-body-text story-content" data-para-count="367" data-total-count="2815" id="story-continues-13" tabindex="-1">Los médicos afirman que la mayoría de los pacientes viven con sus familiares, como es el caso de los Simeone. En esa familia deben turnarse para ir a trabajar y velar por sus seres queridos. Sus vidas transcurren en la desesperada búsqueda de medicamentos que cada vez son más escasos, mientras esperan que sus familiares no se hagan daño ni perjudiquen a otros.</p>
+<p class="story-body-text story-content" data-para-count="199" data-total-count="3014" id="story-continues-14" tabindex="-1">&#8220;Cuando escuché que podía tratar de lastimar a su hermano, me quebré&#8221;, dijo Evelin de Simeone, la madre de Accel, al recordar el episodio de junio cuando su hijo agarró la amoladora.</p>
+<figure id="media-100000004683036" class="media photo media-100000004683036 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/30/universal/es/venez-web5-copyES/venez-web5-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-16">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/30/universal/es/venez-web5-copyES/venez-web5-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/30/universal/es/venez-web5-copyES/venez-web5-superJumbo.jpg" data-mediaviewer-caption="Raúl Martínez, who suffers from schizophrenia but has little medication, was tied down at El Pampero Psychiatric Hospital in Barquisimeto to prevent him from hurting himself." data-mediaviewer-credit="Meridith Kohut for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/30/universal/es/venez-web5-copyES/venez-web5-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Raúl Martínez, who suffers from schizophrenia but has little medication, was tied down at El Pampero Psychiatric Hospital in Barquisimeto to prevent him from hurting himself.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Meridith Kohut for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="419" data-total-count="3433" id="story-continues-16" tabindex="-1">Venezuela es el país con las mayores reservas de petróleo del mundo y en el pasado produjo la mayor parte de los fármacos que su población necesitaba. En la década de 2000, el expresidente Hugo Chávez inició una amplia nacionalización de los fabricantes de medicamentos en un esfuerzo por producir fármacos más baratos. Empresas extranjeras como Pfizer y Eli Lilly también subsanaban la producción nacional.</p>
+<p class="story-body-text story-content" data-para-count="371" data-total-count="3804" id="story-continues-17" tabindex="-1">Pero los precios del petróleo se desplomaron. El gobierno comenzó a quedarse sin divisas, por lo que no pudo importar las materias primas necesarias para que las fábricas estatales pudieran continuar con el suministro de medicinas a los hospitales venezolanos. Las farmacéuticas extranjeras dejaron de enviar fármacos porque el gobierno dejó de cancelar sus deudas.</p>
+<p class="story-body-text story-content" data-para-count="198" data-total-count="4002" id="story-continues-18" tabindex="-1">Como consecuencia, alrededor del 85 por ciento de los medicamentos psiquiátricos no se encuentran en Venezuela, según los datos que maneja una de las cadenas farmacéuticas más grandes del país.</p>
+<p class="story-body-text story-content" data-para-count="181" data-total-count="4183" id="story-continues-19" tabindex="-1">&#8220;Las cosas más elementales no se encuentran&#8221;, dijo Robert Lespinasse, expresidente de la Sociedad Venezolana de Psiquiatría. &#8220;Eso genera mucha impotencia&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="436" data-total-count="4619" id="story-continues-20" tabindex="-1">La falta de medicamentos se ha convertido en tragedia. El 30 de junio, Yolanda Sayago, una paciente de 63 años que sufría de depresión severa, subió a la novena planta del Hospital Central de la ciudad de San Cristóbal, en Táchira. Sus últimos momentos fueron grabados en un video que ahora circula en YouTube: allí puede verse a la paciente mirando hacia abajo, luego se inclina hacia delante y, con los brazos abiertos, salta.</p>
+<p class="story-body-text story-content" data-para-count="223" data-total-count="4842" id="story-continues-21" tabindex="-1">Había pasado meses sin encontrar antidepresivos, dijo Jesús Guillén, su hijo de 43 años, que trabaja para la compañía estatal de electricidad. Dijo que su madre tuvo una recaída depresiva que la empujó al suicidio.</p>
+<p class="story-body-text story-content" data-para-count="109" data-total-count="4951" id="story-continues-22" tabindex="-1">&#8220;Ella siempre estaba diciendo que aquí era imposible encontrar los medicamentos&#8221;, dijo Guillén.</p>
+<p class="story-body-text story-content" data-para-count="279" data-total-count="5230" id="story-continues-23" tabindex="-1">Debido a la escasez, las instituciones mentales solo atienden a una pequeña parte de los pacientes que tenían. En 2013 había 23.630 pacientes psiquiátricos en los hospitales públicos, pero el año pasado la cifra descendió a 5558, según un informe del Ministerio de Salud.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="125" data-total-count="5355" id="story-continues-24" tabindex="-1">El gobierno venezolano niega las fallas de sus hospitales y ha rechazado varios ofrecimientos de ayuda médica internacional.</p>
+<p class="story-body-text story-content" data-para-count="226" data-total-count="5581" id="story-continues-25" tabindex="-1">Pero, por invitación del personal médico, The New York Times visitó seis pabellones psiquiátricos en diferentes partes del país. En todos se pudo constatar la escasez, no solo de medicamentos, sino también de alimentos.</p>
+<p class="story-body-text story-content" data-para-count="235" data-total-count="5816" id="story-continues-26" tabindex="-1">En el Hospital de El Peñón, ubicado en Caracas, solo quedan dos pacientes a pesar de tener capacidad para albergar a 40. Los médicos no están recibiendo a más pacientes porque desde hace meses la comida no llega de manera regular.</p>
+<p class="story-body-text story-content" data-para-count="255" data-total-count="6071" id="story-continues-27" tabindex="-1">En el Hospital Psiquiátrico Dr. José Ortega Durán, en Valencia, un joven de 18 años que es esquizofrénico estaba atado a una silla de metal —una medida necesaria según los trabajadores del hospital porque no tenían medicamentos para atenderlo—.</p>
+<p class="story-body-text story-content" data-para-count="355" data-total-count="6426" id="story-continues-28" tabindex="-1">En el Hospital El Pampero, Jusmar Torres se quedó varias semanas sin la medicina necesaria para tratar un trastorno del estado de ánimo y depresión. Estaba sentada en una celda, en régimen de aislamiento. Había estado allí, desnuda, durante cuatro días. El personal del hospital la había despojado de su ropa porque temían que pudiera ahorcarse.</p>
+<p class="story-body-text story-content" data-para-count="144" data-total-count="6570" id="story-continues-29" tabindex="-1">Semanas antes, una esquizofrénica paranoica que se quedó sin medicamentos se le tiró encima a una compañera de litera y le mordió la nariz.</p>
+<p class="story-body-text story-content" data-para-count="157" data-total-count="6727" id="story-continues-30" tabindex="-1">&#8220;No fui yo, yo no lo hice&#8221;, dijo la paciente mientras paseaba por su húmeda celda de aislamiento mientras las enfermeras guardaban la distancia.</p>
+<p class="story-body-text story-content" data-para-count="329" data-total-count="7056" id="story-continues-31" tabindex="-1">Al final del pasillo estaba la víctima con el rostro cubierto de vendas, retorciéndose de dolor. Todo lo que las enfermeras podían ofrecerle era un antiinflamatorio similar al ibuprofeno. Un mosquitero la protegía del enjambre de moscas que atrajo su herida. Perros y gatos recorrían los pasillos. Olía muy fuerte a orina.</p>
+<p class="story-body-text story-content" data-para-count="150" data-total-count="7206" id="story-continues-32" tabindex="-1">&#8220;Esto es demasiado duro&#8221;, dijo la hermana de la víctima, Doris Villegas. &#8220;Busco sus medicamentos pero no puedo conseguirlos&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="272" data-total-count="7478" id="story-continues-33" tabindex="-1">Los gritos de Emiliana Rodríguez, otra paciente esquizofrénica, se escucharon en el recinto. Había comido muy poco y no recibió su medicación para el glaucoma, lo que la había dejado casi ciega. Apenas podía reconocer su entorno pero, por momentos, lucía centrada.</p>
+<p class="story-body-text story-content" data-para-count="62" data-total-count="7540" id="story-continues-34" tabindex="-1">&#8220;No estoy loca&#8221;, dijo. &#8220;Tengo hambre&#8221;.</p>
+<figure id="media-100000004683037" class="media photo media-100000004683037 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/30/universal/es/VENEZ-WEB9-copyES/VENEZ-WEB9-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-36">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/30/universal/es/VENEZ-WEB9-copyES/VENEZ-WEB9-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/30/universal/es/VENEZ-WEB9-copyES/VENEZ-WEB9-superJumbo.jpg" data-mediaviewer-caption="A patient with schizophrenia pleaded with El Pampero’s head nurse, Évila García, to let him out of solitary confinement. Hospital staff members feared that without his medication, he could become violent." data-mediaviewer-credit="Meridith Kohut for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/30/universal/es/VENEZ-WEB9-copyES/VENEZ-WEB9-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A patient with schizophrenia pleaded with El Pampero’s head nurse, Évila García, to let him out of solitary confinement. Hospital staff members feared that without his medication, he could become violent.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Meridith Kohut for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="193" data-total-count="7733" id="story-continues-36" tabindex="-1">Évila García, la jefa de enfermeras, alzó la vista con angustia al hablar de los pacientes que se habían quedado en el hospital. &#8220;Nadie quiere tener a un loco en su casa&#8221;, dijo.</p>
+<p class="story-body-text story-content" data-para-count="429" data-total-count="8162" id="story-continues-37" tabindex="-1">No es el caso de Accel Simeone. Él vive en una casa de bloques de cemento en la ciudad de Maracay, Aragua, que sigue siendo su refugio. Poco después de que intentó mutilarse, un psiquiatra le recetó un medicamento diferente que sí pudieron encontrar (al menos ese mes) y las voces que lo atormentaban se callaron. Eso podría haber calmado a su familia pero Gerardo Simeone, el hermano de Accel, también es esquizofrénico.</p>
+<p class="story-body-text story-content" data-para-count="44" data-total-count="8206" id="story-continues-38" tabindex="-1">Muy pronto, Gerardo se quedó sin medicinas.</p>
+<h4 class="story-subheading story-content">El inicio de la crisis</h4>
+
+<p class="story-body-text story-content" data-para-count="392" data-total-count="8598" id="story-continues-40" tabindex="-1">Los Simeone eran verdaderos seguidores de Chávez y su revolución. Mario Simeone, el padre, es hijo de un refugiado italiano de la Segunda Guerra Mundial que formó su familia en Venezuela, pero el trabajo duro de sus padres no mejoró mucho su vida. Cuando Mario y su esposa, Evelin, se casaron a fines de la década de los ochenta, su primera casa no tenía muebles ni siquiera una cama.</p>
+<p class="story-body-text story-content" data-para-count="220" data-total-count="8818" id="story-continues-41" tabindex="-1">Cuando Chávez llegó al poder en 1999 con la promesa de mejorar el sistema de salud, la educación y generar empleos para reorientar al país y su riqueza petrolera hacia los pobres, los Simeone se volvieron chavistas.</p>
+<p class="story-body-text story-content" data-para-count="329" data-total-count="9147" id="story-continues-42" tabindex="-1">Evelin terminó una licenciatura en derecho en una universidad del Estado y comenzó a especializarse en litigios y testamentos. Mario abrió un taller para reparar vehículos. En 2005, los dos se compraron una casa nueva y la llenaron de electrodomésticos: cuatro televisores, dos computadoras portátiles, lavadora y secadora.</p>
+<p class="story-body-text story-content" data-para-count="70" data-total-count="9217" id="story-continues-43" tabindex="-1">&#8220;Nuestra nevera siempre estaba llena&#8221;, afirmó la abogada.</p>
+<p class="story-body-text story-content" data-para-count="269" data-total-count="9486" id="story-continues-44" tabindex="-1">Pero algo le pasaba a Accel. El joven afable, apodado el Gordo, había cumplido 18 años y estaba empezando a sufrir de ansiedad, con una constante sensación de ser perseguido. Las voces en su cabeza le dijeron que era homosexual, o que querían matarlo por su dinero.</p>
+<p class="story-body-text story-content" data-para-count="208" data-total-count="9694" id="story-continues-45" tabindex="-1">A los 19, Accel atacó a su padre con un palo. Un psiquiatra de Caracas reconoció inmediatamente los síntomas de la esquizofrenia y le prescribió una serie de medicamentos que fueron fáciles de conseguir.</p>
+<p class="story-body-text story-content" data-para-count="92" data-total-count="9786" id="story-continues-46" tabindex="-1">&#8220;Los remedios eran la única manera de ganarle a la enfermedad&#8221;, cuenta Evelin.</p>
+<p class="story-body-text story-content" data-para-count="31" data-total-count="9817" id="story-continues-47" tabindex="-1">Pero la lucha apenas comenzaba.</p>
+<p class="story-body-text story-content" data-para-count="239" data-total-count="10056" id="story-continues-48" tabindex="-1">El hermano menor de Accel, Gerardo, era el más hablador de la familia, un gran echador de broma que solía contar detalladamente lo que aprendía en la escuela. Pero el Negro, como lo llamaba su familia, de repente se quedó en silencio.</p>
+<p class="story-body-text story-content" data-para-count="167" data-total-count="10223" id="story-continues-49" tabindex="-1">&#8220;Sorpresas que te da la vida&#8221;, dijo Mario sobre la esquizofrenia de Gerardo. &#8220;¿Quién habría pensado que eso iba a afectar a mis dos hijos?&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="247" data-total-count="10470" id="story-continues-50" tabindex="-1">En muchos aspectos, la vida seguía siendo la misma. El medicamento calmó la paranoia de los hermanos, lo que permitía que Evelin pudiera seguir trabajando y Mario arreglara los autos en el taller, donde Accel comenzó a trabajar como asistente.</p>
+<p class="story-body-text story-content" data-para-count="212" data-total-count="10682" id="story-continues-51" tabindex="-1">A pesar de eso, Accel y Gerardo, que las fotos familiares muestran como dos niños sonrientes que se abrazaban, ahora apenas hablaban. Accel se interesó por el hip hop y la cocina. Pero Gerardo siguió callado.</p>
+<p class="story-body-text story-content" data-para-count="159" data-total-count="10841" id="story-continues-52" tabindex="-1">&#8220;Él era tan amable y cariñoso&#8221;, dijo su madre al recordar la conducta de Gerardo antes de enfermarse. &#8220;Tenía un léxico increíble&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="354" data-total-count="11195" id="story-continues-53" tabindex="-1">Pero fuera de la casa, el mundo seguía su curso. Chávez murió en 2013 después de batallar contra el cáncer y escogió a Nicolás Maduro como su sucesor en la presidencia. Al año siguiente, los precios del petróleo comenzaron a disminuir drásticamente. Por primera vez en muchos años, el país no pudo pagar por bienes, servicios e importaciones.</p>
+<p class="story-body-text story-content" data-para-count="310" data-total-count="11505" id="story-continues-54" tabindex="-1">Las filas en busca de alimentos se hicieron comunes en el barrio de los Simeone. Artículos básicos como la harina de maíz y el arroz eran difíciles de conseguir. En 2015, la inflación alcanzó los tres dígitos, diezmando los ahorros de la familia y provocando que Evelin y Mario se quedaran sin clientes.</p>
+<p class="story-body-text story-content" data-para-count="265" data-total-count="11770" id="story-continues-55" tabindex="-1">Y la escasez de medicamentos les afectó mucho. Cada semana, Evelin pasaba largas horas para conseguir la olanzapina, un antipsicótico. Cuando llegó abril, ella estaba dividiendo las píldoras restantes entre sus hijos, les redujo las dosis para que duraran más.</p>
+<p class="story-body-text story-content" data-para-count="168" data-total-count="11938" id="story-continues-56" tabindex="-1">&#8220;Dije: &#8216;Dios mío, pronto ninguno tendrá nada que tomar'&#8221;, recordó. Cuando el fármaco se agotó en mayo, Accel fue el primero en sentirse afectado.</p>
+<p class="story-body-text story-content" data-para-count="291" data-total-count="12229" id="story-continues-57" tabindex="-1">Volvió a escuchar las voces que lo acechaban. Sus fantasmas adoptaban la forma de artistas del hip hop como Nicki Minaj y Ñengo Flow, un cantante de Puerto Rico, que le decían insultos. Los muertos también le gritaban. Una y otra vez le decían que era homosexual y debía ser castigado.</p>
+<figure id="media-100000004683039" class="media photo media-100000004683039 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/30/universal/es/venez-web7-copyES/venez-web7-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-59">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/30/universal/es/venez-web7-copyES/venez-web7-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/30/universal/es/venez-web7-copyES/venez-web7-superJumbo.jpg" data-mediaviewer-caption="Mario Simeone, 54, standing in front of his tool shed with the grinder his son used to try to cut off his arm." data-mediaviewer-credit="Meridith Kohut for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/30/universal/es/venez-web7-copyES/venez-web7-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Mario Simeone, 54, standing in front of his tool shed with the grinder his son used to try to cut off his arm.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Meridith Kohut for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="391" data-total-count="12620" id="story-continues-59" tabindex="-1">Días antes de atacarse, Accel le escribió una serie de mensajes de Facebook a su madre. Le dijo que las voces estaban haciendo demandas absurdas, pidiéndole que hiciera grandes compras y amenazándolo si no lo hacía. Frustrada por la situación, Evelin le dijo que podía ayudar a su padre en el garaje y pensar en otras cosas. Accel advirtió que las voces cada vez eran más violentas.</p>
+<p class="story-body-text story-content" data-para-count="238" data-total-count="12858" id="story-continues-60" tabindex="-1">&#8220;Incluso me lanzaban granadas&#8221;, escribió el 30 de mayo. El 4 de junio, Evelin y Mario fueron a la casa de un familiar y dejaron solos a los dos hermanos. Fue entonces cuando las voces de Accel le dijeron que matara a Gerardo.</p>
+<p class="story-body-text story-content" data-para-count="157" data-total-count="13015" id="story-continues-61" tabindex="-1">&#8220;Vinieron y me dijeron que lo hiciera, que lo hiciera&#8221;, Accel recuerda que su hermano lo miraba. &#8220;No sabía si estaba vivo o muerto&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="181" data-total-count="13196" id="story-continues-62" tabindex="-1">Dividido entre hacerle caso a las voces o a su conciencia, dejó a su hermano y se dirigió a un cobertizo donde su padre guarda las herramientas. Las voces continuaron animándolo.</p>
+<p class="story-body-text story-content" data-para-count="186" data-total-count="13382" id="story-continues-63" tabindex="-1">&#8220;Sentía la necesidad de tener un destornillador y lo puso sobre mi pecho, justo donde está mi corazón&#8221;, dijo. Accel tomó una amoladora del suelo, la enchufó y encendió.</p>
+<p class="story-body-text story-content" data-para-count="161" data-total-count="13543" id="story-continues-64" tabindex="-1">&#8220;Me dijeron que debía cortarme el brazo&#8221;, dijo Accel. Él acababa de comenzar cuando Mario volvió a casa y le arrancó la herramienta de las manos.</p>
+<p class="story-body-text story-content" data-para-count="200" data-total-count="13743" id="story-continues-65" tabindex="-1">&#8220;Él estaba parado, como si fuera normal y no hubiese pasado nada&#8221;, dijo Mario. Las heridas no afectaron ninguna arteria o vena pero los grandes cortes en sus brazos le dejaron cicatrices.</p>
+<p class="story-body-text story-content" data-para-count="264" data-total-count="14007" id="story-continues-66" tabindex="-1">La familia aún paga los costos de esa crisis. Evelin ha dejado de trabajar y Mario arregla los autos de los pocos clientes que consigue para poder pagar los medicamentos de sus hijos, cuando logra conseguirlos, y se lamenta por los problemas que sufre su familia.</p>
+<p class="story-body-text story-content" data-para-count="234" data-total-count="14241" id="story-continues-67" tabindex="-1">Recuerda que cuando compraron su casa en 2005, el precio fue de 45 millones de bolívares, una cantidad que luego se redujo a 45.000 bolívares por la devaluación de 2008. Ahora la inflación ha hecho que esa cifra parezca ridícula.</p>
+<p class="story-body-text story-content" data-para-count="90" data-total-count="14331" id="story-continues-68" tabindex="-1">&#8220;El precio de la casa apenas alcanza para comprar un teléfono celular&#8221;, dijo.</p>
+<p class="story-body-text story-content" data-para-count="200" data-total-count="14531" id="story-continues-69" tabindex="-1">Parecía que Mario buscaba alguien a quien culpar. &#8220;Este es un Estado fanático&#8221;, dijo. &#8220;Si realmente amas a tu país, ¿cómo puedes dejarlo sin comida, trabajo y medicinas?&#8221;.</p>
+<figure id="media-100000004683063" class="media photo media-100000004683063 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/30/universal/es/VENEZ-WEB3-copyES/VENEZ-WEB3-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-71">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/30/universal/es/VENEZ-WEB3-copyES/VENEZ-WEB3-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/30/universal/es/VENEZ-WEB3-copyES/VENEZ-WEB3-superJumbo.jpg" data-mediaviewer-caption="Scars on the arm of Accel Simeone from when he tried to cut off his arm." data-mediaviewer-credit="Meridith Kohut for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/30/universal/es/VENEZ-WEB3-copyES/VENEZ-WEB3-master675.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Scars on the arm of Accel Simeone from when he tried to cut off his arm.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Meridith Kohut for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<h4 class="story-subheading story-content">Los silencios de Gerardo</h4>
+
+<p class="story-body-text story-content" data-para-count="434" data-total-count="14965" id="story-continues-72" tabindex="-1">A diferencia de su hermano, Gerardo no tuvo una conducta violenta cuando se le acabaron las pastillas. Para julio, cuando la mayoría de sus medicamentos se habían agotado, se sumió en su propio mundo. Se queda parado en un rincón mientras el resto de la familia se sienta a mirar la televisión en la sala de estar. Él mira hacia arriba y, de vez en cuando, responde una pregunta pero es como si estuviera soñando en otro lugar.</p>
+<p class="story-body-text story-content" data-para-count="72" data-total-count="15037" id="story-continues-73" tabindex="-1">&#8220;Lo llamamos nuestro guardia suizo&#8221;, dijo Mario con ironía.</p>
+<p class="story-body-text story-content" data-para-count="204" data-total-count="15241" id="story-continues-74" tabindex="-1">Las largas filas para conseguir alimentos y medicinas no son las únicas luchas diarias de la familia Simeone. La verdadera prueba es la tensa y, a veces violenta, convivencia que experimentan en su casa.</p>
+<p class="story-body-text story-content" data-para-count="188" data-total-count="15429" id="story-continues-75" tabindex="-1">Accel todavía oye voces en su cabeza, que ahora le dicen que ya no puede dormir en su cama. Se ha mudado a la habitación de sus padres. Mario y Evelin pasan las noches con su hijo mayor.</p>
+<p class="story-body-text story-content" data-para-count="245" data-total-count="15674" id="story-continues-76" tabindex="-1">La culpa persigue a Evelin, le preocupa no poder conseguir la medicina para Gerardo. &#8220;Estoy cansada&#8221;, dijo. &#8220;A veces, esto es demasiado&#8221;, exclamó y comenzó a llorar. Accel alzó la cabeza, sintiendo que algo estaba mal.</p>
+<p class="story-body-text story-content" data-para-count="54" data-total-count="15728" id="story-continues-77" tabindex="-1">&#8220;Son las alergias otra vez&#8221;, le dijo ella.</p>
+<p class="story-body-text story-content" data-para-count="314" data-total-count="16042" id="story-continues-78" tabindex="-1">La pequeña casa se siente estrecha, genera una sensación de claustrofobia. Cuando hay suficientes medicamentos para aclarar su mente, Accel escribe letras de hip hop. Una de ellas habla sobre su relación con Gerardo. Otra, llamada &#8220;The Lights Are Out”, cuenta sobre los constantes apagones en su barrio.</p>
+<p class="story-body-text story-content" data-para-count="305" data-total-count="16347" id="story-continues-79" tabindex="-1">Accel abrió la puerta de su dormitorio y señaló las letras escritas en la pared. Cada centímetro está cubierto por su escritura frenética. Mario pasa la mayor parte de sus días en el taller, quejándose por los repuestos que ya no se encuentran en Venezuela. Pero el silencio de Gerardo lo frustra.</p>
+<p class="story-body-text story-content" data-para-count="212" data-total-count="16559" id="story-continues-80" tabindex="-1">&#8220;A veces me molesto con él&#8221;, dijo. &#8220;Simplemente no entiendo por qué se está comportando de esa manera. Le digo: &#8220;&#8216;¿Qué te pasa? ¡No actúes como una persona estúpida!'&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="332" data-total-count="16891" id="story-continues-81" tabindex="-1">Gerardo lo mira, con su semblante inescrutable y silencioso. Mario se siente avergonzado así que atraviesa el cuarto, agarra a su hijo, lo levanta unos centímetros y le da vueltas. Cuando lo soltó, Gerardo permanecía inmutable pero, de repente, sus ojos se abrieron como dos platos y sonrió. Toda la familia comenzó a reírse.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Ana Vanessa Herrero colaboró en este reportaje</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/escasez/" rel="tag">Escasez</a>, <a href="https://www.nytimes.com/es/tag/nicolas-maduro/" rel="tag">Nicolás Maduro</a>, <a href="https://www.nytimes.com/es/tag/pacientes-psiquiatricos/" rel="tag">pacientes psiquiátricos</a>, <a href="https://www.nytimes.com/es/tag/salud-mental/" rel="tag">salud mental</a>, <a href="https://www.nytimes.com/es/tag/venezuela/" rel="tag">Venezuela</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/10/02/la-enfermedad-mental-y-la-escasez-convergen-en-una-realidad-dantesca-en-venezuela/"
+				data-title="América Latina: La enfermedad mental y la escasez convergen en una realidad dantesca en Venezuela"
+				data-author="POR NICHOLAS CASEY"
+				data-media=""
+				data-description="En medio del colapso económico, los hospitales psiquiátricos venezolanos se quedan sin medicinas, alimentos y otras provisiones. Miles de pacientes se hunden en la desesperanza y la psicosis."
+				data-publish-date="2 de octubre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/08/16/la-malaria-sale-de-las-infernales-minas-ilegales-venezolanas-y-vuelve-a-esparcirse-por-el-pais/">
+					<div class="story-body">
+						<h3 class="kicker">Venezuela</h3>
+
+						<h2 class="headline">
+							<span class="title">La malaria se esparce por Venezuela en medio del colapso económico</span>
+							<time class="dateline">16 de agosto de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/08/14/world/americas/14malaria-web1/14malaria-web1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/30/el-momento-oscuro-de-venezuela-hambre-apagones-y-un-gobierno-paralizado/">
+					<div class="story-body">
+						<h3 class="kicker">Venezuela</h3>
+
+						<h2 class="headline">
+							<span class="title">El momento oscuro de Venezuela: hambre, apagones y un gobierno paralizado</span>
+							<time class="dateline">30 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/05/26/world/americas/27VENEZUELA-SS-slide-3ZIT/27VENEZUELA-SS-slide-3ZIT-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/30/tras-52-anos-de-guerra-que-sigue-para-colombia/">
+					<div class="story-body">
+						<h3 class="kicker">Colombia</h3>
+
+						<h2 class="headline">
+							<span class="title">Tras 52 años de guerra: ¿qué sigue para Colombia?</span>
+							<time class="dateline">30 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/09/29/world/americas/farc-x-slide-CZAI/farc-x-slide-CZAI-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/30/violencia-policiaca-una-epidemia-estadounidense-con-consentimiento-estadounidense/">
+					<div class="story-body">
+						<h3 class="kicker">Comentario</h3>
+
+						<h2 class="headline">
+							<span class="title">Violencia policiaca: una epidemia tolerada en Estados Unidos</span>
+							<time class="dateline">30 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/09/26/opinion/26blowWeb/26blowWeb-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":1091,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

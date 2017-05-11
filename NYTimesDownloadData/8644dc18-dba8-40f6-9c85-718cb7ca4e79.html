@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004377110"/>
+<meta name="hdl" content="Opresión o profesión: ¿debería ser delito la prostitución?" />
+<meta name="col" content="Cultura" id="column-name" />
+<meta name="pdate" content="20160521" />
+<meta name="utime" content="20160521110045" />
+<meta name="ptime" content="20160521110045" />
+<meta name="DISPLAYDATE" content="May. 21, 2016" />
+<meta name="dat" content="May. 21, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="opresion-o-profesion-deberia-ser-delito-la-prostitucion" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/05/21/opresion-o-profesion-deberia-ser-delito-la-prostitucion/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Opresión o profesión: ¿debería ser delito la prostitución?" />
+<meta property="og:description" content="Un movimiento creciente de trabajadoras sexuales y activistas está convirtiendo la despenalización del trabajo sexual en un asunto feminista." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution2/08prostitution2-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-05-21" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/05/21/opresion-o-profesion-deberia-ser-delito-la-prostitucion/" />
+<meta property="twitter:title" content="Opresión o profesión: ¿debería ser delito la prostitución?" />
+<meta property="twitter:description" content="Un movimiento creciente de trabajadoras sexuales y activistas está convirtiendo la despenalización del trabajo sexual en un asunto feminista." />
+<meta name="author" content="EMILY BAZELON" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por EMILY BAZELON" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="cultura" />
+<meta name="cd12" content="vida" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="cultura" />
+<meta name="ser" content="vida" />
+<meta name="id" content="100000004377110"/>
+<meta name="wordCount" content="6153"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/05/21/opresion-o-profesion-deberia-ser-delito-la-prostitucion/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=05&amp;day=21&amp;name=opresion-o-profesion-deberia-ser-delito-la-prostitucion">
+<meta name="PT" content="article">
+<meta name="article:section" content="Cultura">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/6?exclude=12375">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/05\/21\/opresion-o-profesion-deberia-ser-delito-la-prostitucion\/"},"headline":"Opresi\u00f3n o profesi\u00f3n: \u00bfdeber\u00eda ser delito la prostituci\u00f3n?","datePublished":"2016-05-21T11:00:45+00:00","dateModified":"2016-05-20T15:31:01+00:00","author":{"@type":"Person","name":"Paula Duran"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/05\/08\/magazine\/08prostitution2\/08prostitution2-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Un movimiento creciente de trabajadoras sexuales y activistas est\u00e1 convirtiendo la despenalizaci\u00f3n del trabajo sexual en un asunto feminista."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/05/21/opresion-o-profesion-deberia-ser-delito-la-prostitucion/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/05/08/magazine/should-prostitution-be-a-crime.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="cultura/vida" />
+<title>Opresión o profesión: ¿debería ser delito la prostitución? &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/05/08/magazine/should-prostitution-be-a-crime.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/05/21/opresion-o-profesion-deberia-ser-delito-la-prostitucion/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-12375 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+					<span class="pipe">|</span>
+				Opresión o profesión: ¿debería ser delito la prostitución?
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/05/21/opresion-o-profesion-deberia-ser-delito-la-prostitucion/"
+					data-title="Cultura: Opresión o profesión: ¿debería ser delito la prostitución?"
+					data-author="POR EMILY BAZELON"
+					data-media=""
+					data-description="Un movimiento creciente de trabajadoras sexuales y activistas está convirtiendo la despenalización del trabajo sexual en un asunto feminista."
+					data-publish-date="21 de mayo de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/1TlYWoH">http://nyti.ms/1TlYWoH</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/vida/">Vida</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Opresión o profesión: ¿debería ser delito la prostitución?</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">EMILY BAZELON</span>
+</span>
+
+					<time class="dateline" datetime="2016-05-21">21 de mayo de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/05/21/opresion-o-profesion-deberia-ser-delito-la-prostitucion/"
+							data-title="Cultura: Opresión o profesión: ¿debería ser delito la prostitución?"
+							data-author="POR EMILY BAZELON"
+							data-media=""
+							data-description="Un movimiento creciente de trabajadoras sexuales y activistas está convirtiendo la despenalización del trabajo sexual en un asunto feminista."
+							data-publish-date="21 de mayo de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004381542" class="media photo lede layout-large-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution2/08prostitution2-master1050-v4.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution2/08prostitution2-master1050-v4.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution2/08prostitution2-superJumbo-v4.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Holly Andres para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution2/08prostitution2-master1050-v4.jpg"/>
+		<meta itemprop="height" content="553" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Holly Andres para The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/05/08/magazine/should-prostitution-be-a-crime.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="611" data-total-count="611" id="story-continues-2" tabindex="-1"><strong>En noviembre pasado,</strong> Meg Muñoz viajó a Los Ángeles para hablar en la conferencia anual de Amnistía Internacional en California. Estaba nerviosa. Tres meses antes, en una reunión a la que asistieron 500 delegados de 80 países, Amnistía votó para adoptar una propuesta a favor de la “despenalización total del trabajo sexual consensuado”, lo cual dio pie a una gran y controvertida discusión. Miembros del grupo defensor de los derechos humanos en Noruega y Suecia renunciaron en masa; argumentaron que el objetivo del organismo debería ser acabar con la demanda de prostitución y no al contrario.</p>
+<p class="story-body-text story-content" data-para-count="653" data-total-count="1264" id="story-continues-3" tabindex="-1">En todo el mundo, en las redes sociales y en la prensa, quienes se oponen a este enfoque criticaron fuertemente a Amnistía. En Los Ángeles, quienes protestaban contra esta postura formaron un círculo alrededor del lobby del Hotel Sheraton, donde la conferencia tenía lugar; cuando Muñoz trató de entrar, una mujer la enfrentó y se enojó cuando Muñoz explicó que, como extrabajadora sexual, ella apoyaba tal postura. “Aceptó respetar mi tiempo ante el micrófono”, me contó Muñoz. “No lo cumplió” (la mujer y otros oponentes gritaron durante su participación como panelista), “pero entiendo por qué es tan difícil para ella”.</p>
+<p class="story-body-text story-content" data-para-count="1074" data-total-count="2338" id="story-continues-4" tabindex="-1">Muñoz se encontraba en medio de una reñida batalla sobre el término trabajo sexual, e incluso sobre su significado. Alrededor del mundo, muchas trabajadoras sexuales (el término que prefieren los activistas en lugar de “prostitutas”) están tratando de cambiar la forma en que se les persigue y vigila. Se enfrentan a la ley y al feminismo tradicional, que siempre se ha enfocado en salvar a las mujeres del comercio sexual más que en apoyar a las trabajadoras sexuales que exigen sus derechos. No obstante, durante la última década los trabajadores sexuales activistas han ganado nuevos aliados. Si la junta directiva de Amnistía Internacional aprueba una política final a favor de la despenalización el próximo mes, unirá fuerzas con organismos de salud pública que durante años han trabajado exitosamente con grupos para detener el contagio del VIH y el SIDA, sobre todo en países en desarrollo. “La emergencia que significa la epidemia del VIH realmente rompió con muchos tabúes”, afirma Catherine Murphy, una asesora de políticas de Amnistía.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="1361" data-total-count="3699" id="story-continues-5" tabindex="-1">Frente al público, con una blusa blanca de encaje, la cara enmarcada con anteojos y el pelo castaño y lacio, Muñoz, de 43 años, se veía calmada y decidida cuando se acercó al micrófono para contar su historia. Comenzó como acompañante a los 18, después de terminar la preparatoria en Los Ángeles County; escogía hombres en una disco dos o tres veces a la semana y pactaba relaciones sexuales por más o menos 100 dólares, en un hotel o en sus departamentos. Tenía un trabajo de medio tiempo en un restaurante, pero le gustaba sentirse deseada y ganar dinero extra para gastar en ropa y diversiones. “Realmente me encantaba el trabajo”, dijo a su audiencia de más de 100 personas en la conferencia de Amnistía, “Era un poco inquieta”. Esa misma inquietud la llevó a consumir metanfetaminas. Cuando sus padres descubrieron que se drogaba, la mandaron a rehabilitación. Dejó de trabajar como acompañante, ya no consumía drogas y encontró un novio serio. Cuando tenía 24 años, la relación terminó y sus padres vendieron su casa. Muñoz comenzó a vivir sola por primera vez. Como debía pagar la renta y el seguro del auto, así como un plan de ahorros para la universidad, ser acompañante se convirtió en su manera de ganarse la vida. “Me dirigía a una meta y el sexo me ayudó a alcanzarla”, le dijo Muñoz a su audiencia.</p>
+<p class="story-body-text story-content" data-para-count="672" data-total-count="4371" id="story-continues-6" tabindex="-1">Sin embargo, unos años después otro exnovio, con quien seguía manteniendo una relación cercana, comenzó a sacar provecho de la naturaleza oculta del trabajo de Muñoz. Según me contó ella, lo primero fue pedirle que le ayudara con dinero. Luego empezó a decidir cuándo trabajaría ella y a qué clientes atendería. Muñoz no parecía una víctima del trafico de personas: conducía su propio auto, estudiaba y pagaba sus gastos. Sin embargo, dice que, si piensa en el pasado, diría que lo fue. “Como el trabajo que yo realizaba era ilegal, él comenzó a echármelo en cara. Me chantajeaba con la amenaza de decirle a todo el mundo, también a mi familia”.</p>
+<p class="story-body-text story-content" data-para-count="1003" data-total-count="5374" id="story-continues-7" tabindex="-1">El hombre era violento, y Muñoz pudo escapar de la situación gracias a un amigo con quien luego se casó. Como no podía olvidarse del control que su exnovio había ejercido sobre ella, en 2009 fundó un pequeño grupo religioso llamado Abeni, cerca de su casa en el condado de Orange, para ayudar a que otras mujeres escaparan de la prostitución tal como lo había hecho ella. Unos cuantos años después, Muñoz, ahora madre de cuatro hijos, se permitió a sí misma recordar ese periodo anterior de su vida, cuando ser acompañante le había funcionado bien como una fuente de ingresos e incluso de estabilidad. Su lucha interna la llevó a una “crisis de conciencia”, según sus propias palabras, y comenzó a arrepentirse de sus suposiciones sobre lo que era mejor para las integrantes de Abeni. Dejó de aceptar a gente nueva, y luego lo convirtió en uno de los pocos grupos estadounidenses que ayudan a que la gente deje el trabajo sexual o bien continúen ejerciéndolo de manera segura.</p>
+<p class="story-body-text story-content" data-para-count="364" data-total-count="5738" id="story-continues-8" tabindex="-1">En la conferencia de Amnistía, Muñoz le dijo a la audiencia que la despenalización traería beneficios para mucha gente al sacar el comercio sexual del terreno de lo subrepticio. “Creo en la trabajadora sexual empoderada”, dijo. “Yo fui una, pero la trabajadora sexual empoderada no representa a la mayoría. Está bien que seamos honestos al respecto”.</p>
+<p class="story-body-text story-content" data-para-count="391" data-total-count="6129" id="story-continues-9" tabindex="-1">Se refería a la división social y económica de la profesión. Las activistas del movimiento de trabajadoras sexuales son por lo general mujeres educadas y ganan cientos de dólares por hora. Las palabras que usan con frecuencia para describirse a sí mismas (dominatriz, fetichista, masajista sensual, cortesana, chica dulce, puta, bruja, pervertida) pueden ser traviesas hasta ruborizar.</p>
+<p class="story-body-text story-content" data-para-count="364" data-total-count="6493" id="story-continues-10" tabindex="-1">Algunas de sus inquietudes pueden ser muy diferentes a las de mujeres que sienten la obligación de vender sexo para sobrevivir: una madre que trata de pagar la renta, por ejemplo, o una adolescente que huyó de su casa. Las personas en estas situaciones por lo general no se llaman a sí mismas “trabajadoras sexuales” ni se consideran parte de un movimiento.</p>
+<figure id="media-100000004380432" class="media photo media-100000004380432 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution-ss-slide-8EKG/08prostitution-ss-slide-8EKG-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-12">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution-ss-slide-8EKG/08prostitution-ss-slide-8EKG-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution-ss-slide-8EKG/08prostitution-ss-slide-8EKG-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Holly Andres for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution-ss-slide-8EKG/08prostitution-ss-slide-8EKG-master315.jpg"/>
+		<meta itemprop="height" content="354" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Holly Andres for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="349" data-total-count="6842" id="story-continues-12" tabindex="-1">Los defensores de derechos humanos tienden a enfocarse en personas con situaciones difíciles. “Como para muchas feministas, el trabajo sexual representa un dilema para mí”, dice Liesl Gerntholtz, directora ejecutiva de la sección de derechos de la mujer en Human Rights Watch, que se declaró a favor de la despenalización hace cuatro años.</p>
+<p class="story-body-text story-content" data-para-count="511" data-total-count="7353" id="story-continues-13" tabindex="-1">“A menudo estás hablando de mujeres que tienen oportunidades en extremo limitadas. ¿Me gustaría vivir en un mundo donde nadie tuviera que hacer trabajo sexual? Por supuesto. Pero no es el caso, así que quiero vivir en un mundo donde las mujeres lo hagan en gran medida voluntariamente y de manera segura. Por ejemplo, que si las viola un policía o un cliente, puedan presentar una denuncia y saber que el asunto se investigará, que no expulsarían a su hijo de la escuela y su casero no las echaría”.</p>
+<p class="story-body-text story-content" data-para-count="368" data-total-count="7721" id="story-continues-14" tabindex="-1">Amnistía y Human Rights Watch, junto con otros grupos que apoyan la descriminalización (ONUSIDA, la Organización Mundial de la Salud y la Comisión Mundial sobre el VIH y la Legislación) reconocen que puede haber daños graves asociados con la industria del sexo, pero afirman que consideran los cambios en las leyes una condición previa para reducir esos daños.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="465" data-total-count="8186" id="story-continues-15" tabindex="-1">El año pasado, un análisis publicado en la revista médica The Lancet, predijo que “la descriminalización del trabajo sexual podría tener un efecto enorme en el curso de la epidemia del VIH”, al aumentar el acceso a condones y tratamientos médicos. Los defensores de derechos humanos afirman que los gobiernos tendrían más recursos para el combate al tráfico y la prostitución de menores si dejan de arrestar a adultos que actúan con consentimiento.</p>
+<p class="story-body-text story-content" data-para-count="331" data-total-count="8517" id="story-continues-16" tabindex="-1">Es un argumento práctico. Sin embargo, el movimiento de las trabajadoras sexuales también descansa en una convicción ideológica: la creencia de que el derecho penal no debería usarse como instrumento de castigo o vergüenza, puesto que el trabajo sexual no es inherentemente inmoral ni degradante. Puede incluso ser feminista.</p>
+<p class="story-body-text story-content" data-para-count="395" data-total-count="8912" id="story-continues-17" tabindex="-1">“Una vez que lo has hecho, tienes la seguridad: en último caso, tengo todo lo que necesito para sobrevivir”, asevera Anna Saini, una extrabajadora sexual que ahora es activista a favor del trabajo sexual y estudia derecho. “Eso te da poder”. Esta visión desafía al feminismo tradicional, que considera la industria del comercio sexual como una desagradable fuente de inequidad sexual.</p>
+<p class="story-body-text story-content" data-para-count="481" data-total-count="9393" id="story-continues-18" tabindex="-1"><strong>También las activistas están divididas.</strong> Pertenecen a diversos grupos pequeños que a veces compiten y cuestionan entre sí su buena fe en las redes sociales y a través de un blog llamado Tits and Sass. Las mujeres que defienden abiertamente la despenalización casi siempre son blancas. Las que no son blancas sostienen que para ellas es más difícil que las escuchen, pero no quieren que las blancas hablen en su nombre. Las mujeres transgénero plantean objeciones similares.</p>
+<p class="story-body-text story-content" data-para-count="642" data-total-count="10035" id="story-continues-19" tabindex="-1">“No cuentes mi historia para respaldar la de una que siempre estuvo a gusto con su género”, me advierte Monica Jones, que es transgénero y de color. Ejerció como trabajadora sexual para pagar su maestría en trabajo social en la Universidad Estatal de Arizona. “Si quieres estar conmigo, debes pagarme o comprarme un anillo”, cuenta con franqueza sobre lo que les dice a sus parejas. Hace dos años, aceptó que un hombre la llevara en su auto a un bar y se le declaró culpable de prostitución. Su caso se hizo célebre cuando apeló su sentencia; argumentó que esa noche solo quería salir a tomar una cerveza y ganó el caso.</p>
+<p class="story-body-text story-content" data-para-count="160" data-total-count="10195" id="story-continues-20" tabindex="-1">Algunos de quienes se oponen a la despenalización se llaman a sí mismos abolicionistas, invocando intencionalmente la batalla para terminar con la esclavitud.</p>
+<p class="story-body-text story-content" data-para-count="618" data-total-count="10813" id="story-continues-21" tabindex="-1">“Si la prostitución es legal y los hombres pueden comprar el cuerpo de las mujeres impunemente, se da la sexualización extrema de las mujeres”, afirma Yasmeen Hassan, directora ejecutiva global de Equality Now, un grupo que defiende los derechos de las mujeres y que hace campañas en contra del comercio sexual. “Son objetos sexuales. ¿Qué implica eso respecto a cómo se considera a las profesionales? Además, si las mujeres son juguetes sexuales que puedes comprar, piensa en el impacto que eso tendrá en las relaciones entre hombres y mujeres, ya sea dentro del matrimonio o en otras circunstancias”.</p>
+<figure id="media-100000004380435" class="media photo media-100000004380435 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution-ss-slide-GAAJ/08prostitution-ss-slide-GAAJ-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-23">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution-ss-slide-GAAJ/08prostitution-ss-slide-GAAJ-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution-ss-slide-GAAJ/08prostitution-ss-slide-GAAJ-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Holly Andres for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution-ss-slide-GAAJ/08prostitution-ss-slide-GAAJ-master315.jpg"/>
+		<meta itemprop="height" content="393" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Holly Andres for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="480" data-total-count="11293" id="story-continues-23" tabindex="-1">Los Estados Unidos tienen unas de las leyes más estrictas contra la prostitución; anualmente hay 55.000 arrestos anuales relacionados con ese delito, y en más de dos tercios de ellos hay mujeres implicadas. Las mujeres de color están en mayor riesgo de que las arresten (en la ciudad de Nueva York, suman el 85 por ciento de las personas arrestadas). Lo mismo sucede con las transgénero, quienes tienden más a dedicarse al trabajo sexual debido a la discriminación laboral.</p>
+<p class="story-body-text story-content" data-para-count="362" data-total-count="11655" id="story-continues-24" tabindex="-1">Puesto que los abolicionistas perciben a estas mujeres como víctimas, en general se oponen a su arresto. Sin embargo, quieren seguir usando el derecho penal como un arma de desaprobación moral para perseguir a los clientes de sexo masculino, junto con los proxenetas y los traficantes, pero este enfoque enreda a las trabajadoras sexuales en una maraña legal.</p>
+<p class="story-body-text story-content" data-para-count="227" data-total-count="11882" id="story-continues-25" tabindex="-1">En julio pasado, la Coalición contra el Tráfico de Mujeres, un grupo abolicionista, acusó a Amnistía de apoyar “un sistema de apartheid de género”, en el que algunas mujeres “se apartan para el consumo de hombres”.</p>
+<p class="story-body-text story-content" data-para-count="449" data-total-count="12331" id="story-continues-26" tabindex="-1">Las líneas de combate de las feministas estadounidenses en la batalla contra la venta de sexo se establecieron en la década de 1970. De un lado estaban las feministas radicales como la escritora Andrea Dworkin y la abogada y jurista Catherine MacKinnon. Fueron las primeras abolicionistas: juzgaron a la prostitución, junto con la pornografía y la violencia sexual, como las fuentes más virulentas y poderosas de la opresión hacia las mujeres.</p>
+<p class="story-body-text story-content" data-para-count="434" data-total-count="12765" id="story-continues-27" tabindex="-1">Otras feministas, que se llamaron “sexo positivas”, consideraron el trabajo sexual una subversión contra el patriarcado en lugar de una victimización. Pero para la década de los ochenta, el argumento de Dworkin que condenaba la prostitución entró a formar parte del feminismo tradicional con el apoyo de Gloria Steinem, que comenzó a rechazar el término “trabajo sexual”. Se relegó a las sexo positivas a la periferia.</p>
+<p class="story-body-text story-content" data-para-count="507" data-total-count="13272" id="story-continues-28" tabindex="-1">Las abolicionistas tomaron el rumbo de la lucha en contra del tráfico laboral internacional en la década de 1990; se enfocaron en la trata sexual, a pesar de que la mayoría de las estimaciones sugieren que la mayoría de las víctimas del tráfico son obligadas a realizar trabajos domésticos, en el campo o en la construcción. Las abolicionistas querían borrar la tradicional distinción legal entre prostitución forzada y prostitución consensuada para que siempre se considerara trata de personas.</p>
+<p class="story-body-text story-content" data-para-count="497" data-total-count="13769" id="story-continues-29" tabindex="-1">En 1998 trataron de convencer al Presidente Bill Clinton (y también a Hillary Clinton, que era presidenta honoraria del Consejo para la Mujer del gobierno de Clinton) de que adoptara esta amplia definición en un tratado penal internacional y una ley federal sobre la trata de personas. Su objetivo era extender y hacer más rígido el castigo penal, una estrategia que Elizabeth Bernstein, una socióloga de Barnard que estudia el trabajo y el comercio sexual, llamó “feminismo carcelario”.</p>
+<p class="story-body-text story-content" data-para-count="474" data-total-count="14243" id="story-continues-30" tabindex="-1">Las abolicionistas “han recurrido a estrategias de encarcelamiento como su herramienta principal de ‘justicia’”, escribió en 2007. Perdieron la batalla para definir todas las formas de prostitución como trata de personas durante el gobierno de Clinton. “Fueron años depresivos”, afirmó Donna Hughes, una investigadora abolicionista y profesora de estudios de la mujer en la Universidad de Rhode Island, en una entrevista publicada en National Review en 2006.</p>
+<p class="story-body-text story-content" data-para-count="638" data-total-count="14881" id="story-continues-31" tabindex="-1">Cuando se eligió a George W. Bush en el año 2000, Hughes y otras abolicionistas conformaron una coalición con grupos religiosos, incluyendo a republicanos evangélicos, para que hicieran presión política ante el nuevo presidente. El gobierno de Bush aportó dinero a grupos cristianos, como International Justice Mission (IJM), para rescatar a niñas y mujeres en el extranjero. IJM ayudó a hacer redadas en burdeles en Camboya, Tailandia e India, en conjunto con policías locales que tiraban puertas mientras cámaras de televisión estadounidenses grababan. IJM recibía cientos de donaciones provenientes de los Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="690" data-total-count="15571" id="story-continues-32" tabindex="-1">Grupos locales feministas y de derechos humanos se quejaron de esa táctica. Después de algunas redadas llevadas a cabo por fuerzas policiales en India e Indonesia, se deportó a niñas y mujeres que quedaron detenidas en instituciones donde sufrieron abusos y se les obligó a tener sexo con la policía, de acuerdo con un boletín de 2005 de la Organización Mundial de la Salud y la Coalición Mundial para las Mujeres y el SIDA. Dos años antes, cuando el IJM informó que había menores en un burdel de Tailandia, la policía hizo una redada y encerró a las mujeres que trabajaban ahí en un orfanato. Las mujeres amarraron sábanas para escapar desde una ventana en el segundo piso.</p>
+<figure id="media-100000004380429" class="media photo media-100000004380429 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution-ss-slide-9TJJ/08prostitution-ss-slide-9TJJ-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-34">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution-ss-slide-9TJJ/08prostitution-ss-slide-9TJJ-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution-ss-slide-9TJJ/08prostitution-ss-slide-9TJJ-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Holly Andres for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution-ss-slide-9TJJ/08prostitution-ss-slide-9TJJ-master315.jpg"/>
+		<meta itemprop="height" content="354" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Holly Andres for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="755" data-total-count="16326" id="story-continues-34" tabindex="-1">Françoise Girard era directora del programa de salud pública en la Open Society Foundations cuando se reunió con Gary Haugen, dirigente de IJM, y Holly Burkhalter, una experta en el tema, en 2007. “IJM dijo: ‘Si podemos salvar a una sola niña, vale la pena’”, cuenta Girard, ahora presidenta de la Coalición Internacional para la Salud de la Mujer. “Entonces yo dije: ¿Qué pasa con las niñas? Y no pudieron responderme”. Burkhalter dice que no recuerda la pregunta de Girard, pero la policía no permitió que IJM participara en la redada en Tailandia. “Si lo hubiéramos hecho, habría salido mucho mejor”, dice, y agrega que ahora que IJM ayuda en las redadas “todas las víctimas cuentan con alguien que trabaja en su caso”.</p>
+<p class="story-body-text story-content" data-para-count="465" data-total-count="16791" id="story-continues-35" tabindex="-1">El gobierno de Bush también financió una investigación abolicionista sobre los efectos negativos de la prostitución, presentando sobre todo referencias sobre ese trabajo en la página web del Departamento de Estado. Hughes, la profesora abolicionista de estudios sobre la mujer, denunció la existencia de clubes de strip tease y baile erótico en un informe de 2005 sobre la trata de personas financiado con más de 100.000 dólares del Departamento de Estado.</p>
+<p class="story-body-text story-content" data-para-count="489" data-total-count="17280" id="story-continues-36" tabindex="-1">Melissa Farley, una psicóloga que recibió fondos del gobierno de Bush, escribió en 2000 en la revista Women and Criminal Justice que cualquier mujer que afirmara haber escogido la prostitución estaba actuando de manera patológica: “disfrutar la dominación y la violación es parte de su naturaleza”. Los investigadores no abolicionistas la criticaron por presentar el daño brutal de algunas experiencias de prostitución como una realidad casi universal sin evidencias sólidas.</p>
+<p class="story-body-text story-content" data-para-count="485" data-total-count="17765" id="story-continues-37" tabindex="-1">El gobierno de Obama continúa financiando organizaciones relacionadas con misiones de rescate. En 2013, la Corte Suprema derogó la necesidad de la garantía antiprostitución para los grupos en Estados Unidos, pues consideró que violaba sus derechos de libre expresión. Sin embargo, la decisión no se aplica a grupos extranjeros, que siguen sin poder recibir financiación federal para la lucha contra el Sida si apoyan el movimiento por los derechos de las trabajadoras sexuales.</p>
+<p class="story-body-text story-content" data-para-count="573" data-total-count="18338" id="story-continues-38" tabindex="-1"><strong>El debate actual sobre el trabajo sexual</strong> en Estados Unidos a menudo se enmarca en la elección de distintos sistemas legales internacionales. Los abolicionistas se apegan a lo que llaman el modelo sueco (o nórdico). En 1999, a instancias de las feministas, el parlamento sueco aprobó la Ley de Adquisición Sexual, que establecía la compra de sexo como delito. La prostitución misma no se consideraba un crimen, pero la nueva ley la consideraba “un daño serio tanto para los individuos como para la sociedad”, con lo que daba un fundamento moral a la legislación.</p>
+<p class="story-body-text story-content" data-para-count="729" data-total-count="19067" id="story-continues-39" tabindex="-1">Una década después, Suecia anunció una reducción de hasta el 50 por ciento de la prostitución en las calles y proclamó que la ley había sido un éxito. Aunque nadie había registrado datos sobre la prostitución en las calles antes de que se aprobara la ley, la disminución de la que se hablaba se convirtió en el mayor atractivo en un sistema que castigaba a los hombres. No obstante, la publicidad de sexo por internet aumentó en Suecia, lo que llevó a los investigadores a concluir que ese pequeño mercado se estaba convirtiendo en algo privado. Noruega e Islandia adoptaron el modelo sueco en 2009 y en los últimos dos años Canadá e Irlanda del Norte pusieron en marcha versiones modificadas del mismo modelo.</p>
+<p class="story-body-text story-content" data-para-count="377" data-total-count="19444" id="story-continues-40" tabindex="-1">Los activistas del trabajo sexual rechazan este modelo. “La gente piensa que el estado sueco criminalizó a los clientes, y no a nosotras, porque nosotras le importamos, pero no es así”, dice Pye Jakobsson, una trabajadora sexual sueca que preside la Global Network of Sex Work Project. “La ley trata de proteger a la sociedad y a nosotras se nos ve como una amenaza”.</p>
+<p class="story-body-text story-content" data-para-count="386" data-total-count="19830" id="story-continues-41" tabindex="-1">Algunas trabajadoras sexuales afirman que criminalizar el comportamiento masculino las lleva a arriesgarse más. “Las mujeres que trabajaban en la calle contaban con lugares seguros donde podían decir al cliente que se dirigiera”, explica Jakobsson. “Ahora los clientes dicen que no, por la policía. Quieren ir a algún lugar remoto. ¿Cómo puede estar segura ahí la mujer?”</p>
+<p class="story-body-text story-content" data-para-count="333" data-total-count="20163" id="story-continues-42" tabindex="-1">En diciembre, una trabajadora sexual búlgara fue encontrada brutalmente asesinada en un estacionamiento en un puerto de Oslo. Sus amigas, también inmigrantes, al igual que muchas mujeres que venden sexo en Suecia y Noruega, la buscaron cuando no apareció. Sin embargo, no acudieron a la policía hasta que encontraron su cadáver.</p>
+<p class="story-body-text story-content" data-para-count="624" data-total-count="20787" id="story-continues-43" tabindex="-1">El gobierno sueco ha declarado claramente que considera que los problemas que la ley les causa a las trabajadoras sexuales constituyen una forma de disuasión, e informó en 2010 que los efectos negativos “deben considerarse positivos desde la perspectiva de que el propósito de la ley es de hecho combatir la prostitución”. Cuando Francia adoptó el modelo sueco en abril, el promotor de la ley en el parlamento dijo que un objetivo era “cambiar la mentalidad”. En las redes sociales, las trabajadoras sexuales estadounidenses mostraron su empatía con sus hermanas francesas, que hicieron una marcha de protesta.</p>
+<p class="story-body-text story-content" data-para-count="380" data-total-count="21167" id="story-continues-44" tabindex="-1">Australia ha adoptado un modelo legal muy diferente del sueco. En 1999, un estado australiano, Nueva Gales del Sur, derogó sus leyes penales contra la prostitución, con lo cual dieron libertad a los adultos que estén de acuerdo con vender y comprar sexo; también permitieron que los burdeles operaran como muchos otros negocios (en otros estados australianos hay otras leyes).</p>
+<p class="story-body-text story-content" data-para-count="431" data-total-count="21598" id="story-continues-45" tabindex="-1">Cuatro años después, Nueva Zelanda implementó la despenalización total. Los abolicionistas predijeron que habría un aumento explosivo de prostitución. Sin embargo, la cantidad de trabajadoras sexuales se mantuvo igual; cerca de 6000 de ellas en Nueva Zelanda y un poco más en ese estado australiano. El uso de condones entre trabajadores sexuales se incrementó más del 99 por ciento, de acuerdo con encuestas del gobierno.</p>
+<p class="story-body-text story-content" data-para-count="399" data-total-count="21997" id="story-continues-46" tabindex="-1">Hace unos cuantos años, una dominatriz y activista de Seattle que se hace llamar Señora Matisse viajó a Australia durante tres semanas y pasó una de ellas trabajando. “Tenía que ver cómo era”, dice. En casa, escribe para The Stranger, el semanario alternativo de Seattle, y con frecuencia tuitea sobre la práctica y las políticas del trabajo sexual para sus 27.000 seguidores en Twitter.</p>
+<p class="story-body-text story-content" data-para-count="439" data-total-count="22436" id="story-continues-47" tabindex="-1">En Australia Matisse trabajó en un pequeño burdel llamado Manzana Dorada (donde hay un pequeño bar y seis habitaciones) en Sydney, que se encuentra en Nueva Gales del Sur, y en uno más grande llamado Ciudad Gótica. “Pensé: aquí no seré la Señora Matisse. Sólo será una chica más dando servicio completo (coito), lo cual no había hecho en años”, cuenta. Atendía a tres o cuatro clientes cada noche y luego iba a la playa.</p>
+<p class="story-body-text story-content" data-para-count="542" data-total-count="22978" id="story-continues-48" tabindex="-1">Matisse comparó el trabajo en Australia con su trabajo en un burdel de Nevada hace varios años. Prefiere Australia por mucho. Nevada restringe la prostitución legal a un pequeño número de burdeles en áreas rurales, a los que somete a requisitos para operar muy estrictos. “En Australia, vas a casa todas las noches y puedes fumarte un cigarro, tener una cita y mantener un estado mental normal”, dice. “En Nevada, tenías que estar en el burdel 24/7. Era una especie de combinación de campamento de verano y prisión femenina”.</p>
+<p class="story-body-text story-content" data-para-count="937" data-total-count="23915" id="story-continues-49" tabindex="-1"><strong>En Alemania hay un comercio</strong> que también se clasifica en dos modalidades. El país se convirtió en un destino creciente para el turismo sexual después de que en 2002 se introdujeran nuevas reglas para el comercio sexual legal, con un estimado de 400.000 trabajadoras sexuales. Las inmigrantes que trabajan fuera de la ley, a algunas de las cuales engañan para que crucen la frontera, enfrentan la misma amenaza de deportación que en Suecia. Mientras tanto, los requisitos para la licencia subieron el coste de establecimiento de burdeles, con lo que se favoreció a las cadenas y empresas grandes, incluyendo un burdel de 12 pisos y luces de neón en Colonia. “Lo extraño es lo industriales que son los burdeles”, dice Skilbrei, la profesora de la Universidad de Oslo. “Controlan a las mujeres, por ejemplo con chequeos sanitarios”. Ese no es el modelo por el que luchan las trabajadoras sexuales, pues les quita autonomía.</p>
+<p class="story-body-text story-content" data-para-count="391" data-total-count="24306" id="story-continues-50" tabindex="-1">Amnistía distingue las leyes de Alemania (y los Países Bajos, donde el trabajo sexual es legal pero está regulado por las autoridades locales) de las de Nueva Zelanda y Australia, que ponen “mayor control en las manos de las trabajadoras sexuales para trabajar de manera independiente, organizarse a sí mismas en cooperativas informales y controlar sus propios ambientes de trabajo”.</p>
+<p class="story-body-text story-content" data-para-count="689" data-total-count="24995" id="story-continues-51" tabindex="-1">Melissa Farley, la psicóloga e investigadora abolicionista, rechaza todos estos modelos. “El estado funciona como proxeneta, cobrando impuestos, lo que considero dinero sucio”, escribió en un correo electrónico el pasado diciembre. Según las investigaciones gubernamentales más recientes, en una encuesta de 2008 que realizó el gobierno de Nueva Zelanda a 770 trabajadoras sexuales, la mayoría informó que no era probable que informaran sobre violencia a la policía, lo que el gobierno atribuyó a su sensación de estar estigmatizadas. Fareley considera esto una prueba de que “donde exista la prostitución, hay un daño que la acompaña, sin importar el estatus legal”.</p>
+<p class="story-body-text story-content" data-para-count="423" data-total-count="25418" id="story-continues-52" tabindex="-1">Para Amnistía, la lección es que la despenalización no es como oprimir un botón: toma tiempo que las actitudes cambien. Hay señales de que esto ya ha comenzado: en la encuesta de Nueva Zelanda de 2008, el 40 por ciento de las trabajadoras sexuales también dijeron que tenían una sensación de camaradería y pertenencia, lo que sugiere que las relaciones entre ellas pueden constituir un antídoto contra el estigma.</p>
+<p class="story-body-text story-content" data-para-count="466" data-total-count="25884" id="story-continues-53" tabindex="-1"><strong>Hace sesenta años,</strong> después de que Gloria Steinem se graduara del Smith College, pasó dos años en India becada para observar la reforma agraria basada en aldeas. Cuando regresó a la India en 2014, llamó a la prostitución “violación comercial”, una frase que acabó convertida en titulares. Hasta hace poco, las feministas de la India compartían la opinión de Steinem sobre la prostitución, pero muchas han ido cambiando poco a poco su manera de pensar.</p>
+<p class="story-body-text story-content" data-para-count="497" data-total-count="26381" id="story-continues-54" tabindex="-1">En 2014, Lalitha Kumaramangalam, presidenta de la Comisión Nacional de India para la Mujer, se pronunció a favor de la despenalización; argumentó que ayudaría proteger a las trabajadoras sexuales de la violencia y a mejorar su atención médica. Las reacciones en la India fueron encontradas. Sin embargo, el rechazo de estadounidenses como Steinem para reconsiderar su condena generalizada al trabajo sexual, o la propiedad de tácticas de rescate, hace enojar a algunas feministas de India.</p>
+<p class="story-body-text story-content" data-para-count="327" data-total-count="26708" id="story-continues-55" tabindex="-1">“¿Por qué se han limitado a salvar a las trabajadoras sexuales de India en lugar de comprometerse con el movimiento feminista, más representativo”?, preguntó Geeta Misra, que dirige el grupo de derechos humanos CREA en Nueva Delhi, que trata de construir liderazgo feminista y ampliar la libertad sexual y reproductiva.</p>
+<p class="story-body-text story-content" data-para-count="329" data-total-count="27037" id="story-continues-56" tabindex="-1">El debate cambió en India en gran parte debido al papel de los colectivos de trabajadoras sexuales, que se cuentan entre los más grandes del mundo, y que ejercen un poder social y político sin paralelo. Fundados a principios de los noventa, los colectivos mostraron primero su aptitud para ayudar a reducir el contagio de VIH.</p>
+<p class="story-body-text story-content" data-para-count="622" data-total-count="27659" id="story-continues-57" tabindex="-1">Melinda Gates viajó en 2004 a Sonagachi, la zona roja de la ciudad de Kolkata, y escribió en The Seattle Times acerca de una trabajadora sexual llamada Gita y sus compañeras, que “han ayudado a incrementar el uso del condón de cero a 70 por ciento en su zona, y a reducir las tasas de infección por VIH a 7 por ciento, en contraste con tasas de hasta el 66 por ciento entre trabajadoras sexuales de otros lugares”. Gates terminó por anunciar que la fundación que creó junto con su esposo, Bill Gates, gastaría 200 millones de dólares para combatir el VIH en India, cantidad que luego aumentó a 228 millones.</p>
+<p class="story-body-text story-content" data-para-count="965" data-total-count="28624" id="story-continues-58" tabindex="-1">Aunque en la India es ilegal ser dueño de un burdel o vender sexo en la calle, la prostitución a puerta cerrada no va contra la ley. Hacer cumplir la ley no es algo que suceda de manera uniforme, y a veces la policía exige sexo o sobornos. No obstante, la relación entre la policía y las trabajadoras sexuales puede llegar a una ligera tregua que permita a los colectivos autoafirmarse. Un proyecto de la Gates Foundation, de 2005 a 2011, utilizó el modelo de los colectivos para organizar a 60.000 trabajadoras sexuales en Karnataka. Llevaron educadoras para que hablaran con la policía y a abogados para que enseñaran a las trabajadoras sexuales sus derechos a no ser acosadas y, a menudo, a no ser arrestadas. Conforme disminuyeron los arrestos también lo hizo la violencia ejercida por la policía, los proxenetas y los clientes, junto con la tasa de VIH, según un estudio que apareció el año pasado en The Journal of the International AIDS Society.</p>
+<p class="story-body-text story-content" data-para-count="225" data-total-count="28849" id="story-continues-59" tabindex="-1">Los defensores de los derechos humanos, incluyendo a Amnistía, consideran que los colectivos de trabajadoras sexuales son un mucho mejor medio para prevenir la trata y la prostitución de menores que las redadas en burdeles.</p>
+<figure id="media-100000004381401" class="media photo media-100000004381401 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution-ss-slide-Q90G/08prostitution-ss-slide-Q90G-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-61">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution-ss-slide-Q90G/08prostitution-ss-slide-Q90G-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution-ss-slide-Q90G/08prostitution-ss-slide-Q90G-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Holly Andres for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/08/magazine/08prostitution-ss-slide-Q90G/08prostitution-ss-slide-Q90G-master315.jpg"/>
+		<meta itemprop="height" content="354" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Holly Andres for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="679" data-total-count="29528" id="story-continues-61" tabindex="-1">Las feministas de la India quieren que las mujeres pobres tengan alternativas decentes para ganarse la vida, pero es difícil encontrarlas. Kotiswaran encontró que las mujeres podían ganar aproximadamente seis veces más con el trabajo sexual en Sonagachi de lo que ganarían en una fábrica de ropa. En un estudio realizado en 2011 con más de 5.000 mujeres en toda la India, solo un 3 por ciento dijeron haber sido “forzadas” a incursionar en el comercio sexual, y solo un 3 por ciento dijeron haberlo hecho libremente. El resto cayó en la zona gris de en medio, y mencionaron razones relacionadas con la pobreza o asuntos como violencia doméstica o deserción escolar.</p>
+<p class="story-body-text story-content" data-para-count="1057" data-total-count="30585" id="story-continues-62" tabindex="-1">En cualquier otro contexto, las feministas estadounidenses celebrarían el que hubiera miles de mujeres organizándose para mejorar su vida. Sin embargo, Steinem expresa profundas sospechas respecto de los colectivos de trabajadoras sexuales en la India. El DMSC ha permitido a “la industria sexual atraer millones de dólares de la Gates Foundation”, con lo que se ha creado “una nueva gran fuente de ingresos para los propietarios de burdeles, padrotes y traficantes”, escribió en el periódico The Hindu en 2012. El otoño pasado, durante una entrevista con Esquire, dijo que el trabajo de la fundación en India es un “desastre” y que “no hay evidencia de que las mujeres tengan el poder de hacer que los hombres usen condón” (a través de un portavoz, la Gates Foundation se negó a hacer cualquier comentario). No obstante, los estudios han mostrado grandes avances en el uso del condón cuando las organizaciones de trabajadoras sexuales se coordinan y la tasa anual de nuevas infecciones por VIH en India se ha reducido a la mitad.</p>
+<p class="story-body-text story-content" data-para-count="666" data-total-count="31251" id="story-continues-63" tabindex="-1">Racher Moran, autora de un libro de memorias recién publicado, “Paid For”, y que se llama a sí misma una sobreviviente de la prostitución en Irlanda, también dice que “Amnistía Internacional ha adoptado directamente las opiniones de los alcahuetes y los traficantes”. Amnistía rechaza categóricamente estas acusaciones, y explica que consultó a trabajadoras sexuales a la par de realizar investigaciones exhaustivas. “Reconocemos que puede haber daño en el trabajo sexual, pero definir el movimiento por los derechos de las trabajadoras sexuales como una pantalla para los padrotes es realmente impactante”, afirma Catherine Murphy de Amnistía.</p>
+<p class="story-body-text story-content" data-para-count="603" data-total-count="31854" id="story-continues-64" tabindex="-1"><strong>¿Cómo sería la despenalización en los Estados Unidos</strong>, si el movimiento por los derechos de las trabajadoras sexuales logra su objetivo? Es difícil aplicar las lecciones aprendidas en otros países. Algunas activistas piensan que la mejor manera de saberlo es comenzar con un experimento local. “Necesitas un lugar donde probar”, me dijo Meg Muñoz, y mencionó la legalización de la mariguana en Colorado. “Necesitas el ambiente de prueba adecuado”. No está claro dónde sería; los votantes de San Francisco rechazaron un referéndum por la despenalización por un amplio margen en 2008.</p>
+<p class="story-body-text story-content" data-para-count="741" data-total-count="32595" id="story-continues-65" tabindex="-1">La manera en la que se desarrollaría la despenalización quizá resida en los detalles de su implementación. Las ciudades recurrirían a ordenanzas por zonas para abordar los efectos en barrios residenciales confinando los burdeles y los strip clubs a áreas industriales, además de restringir su tamaño. La trata de personas y la promoción de la prostitución de menores seguirían siendo delito. Las personas podrían trabajar de manera discreta en sus propias casas o en hoteles sin miedo a represalias. La industria del sexo podría ser más segura, como esperan los activistas. También es posible que el comercio sexual aumente, como advierten los abolicionistas, en especial si un área se convirtiera un punto de turismo sexual.</p>
+<p class="story-body-text story-content" data-para-count="805" data-total-count="33400" id="story-continues-66" tabindex="-1">Hasta ahora, las ideas de las abolicionistas sobre castigar a los hombres y tratar a las mujeres como víctimas han dominado la reforma legal en los Estados Unidos. Seattle, por ejemplo, anunció un cambio hacia arrestar a los clientes varones y vincular a las trabajadoras sexuales con servicios. Sin embargo, las trabajadoras sexuales con quienes hablé a lo largo del país y que se encuentran en diversas situaciones de vida, plantearon cuestiones como la manera en que castigar a los compradores haría mejor la vida de ellas; ellas seguirían siendo parte de transacciones ilegales y tendrían algo qué ocultar. Una acompañante ya mayor me dijo que si ella no temiera ser expuesta y perder su negocio, informaría sobre prostitución y trata de menores a la policía cuando fuera testigo de ellas.</p>
+<p class="story-body-text story-content" data-para-count="361" data-total-count="33761" id="story-continues-67" tabindex="-1">Hablé con trabajadoras sexuales de todo el país con circunstancias de vida distintas y escuché una amplia gama de sentimientos acerca de lo que hacen. Una mujer en Nueva York que se describió a sí misma como cortesana dijo que le encantaba “desempeñar un papel, llevar a cabo una fantasía con la que los dos podemos salir de nuestras vidas mundanas”.</p>
+<p class="story-body-text story-content" data-para-count="370" data-total-count="34131" id="story-continues-68" tabindex="-1">Una dominatriz que vive en el Upper East Side de Manhattan me dijo que a veces se sentía bien de establecer una conexión emocional. Luego su tono cambió. “Pero Dios mío, odio ponerme la correa”. Una mujer en Brooklyn me dijo que sus clientes no significan nada para ella. “Solo me importan mis hijos”, dijo. “Esto se trata de conseguir para mantenerlos”.</p>
+<p class="story-body-text story-content" data-para-count="563" data-total-count="34694" id="story-continues-69" tabindex="-1">La Señora Matisse, la dominatriz de Seattle, trata a algunos clientes como si fueran amigos: uno es su contador y otro, que trabaja como exterminador, fumiga su casa. Recaudó miles de dólares con clientes y donantes en línea para ayudar a una mujer llamada Heather que me dijo que odiaba el trabajo sexual pero lo hacía para poder comprar heroína; con el dinero podrá pagar sus gastos e ir a rehabilitación. “Si no quieres trabajar en esto, no deberías tener que hacerlo”, me dijo la Señora Matisse. “Puedo ver cómo podría dañar tu corazón”.</p>
+<p class="story-body-text story-content" data-para-count="484" data-total-count="35178" id="story-continues-70" tabindex="-1">Otras mujeres, que suenan atontadas o incluso traumatizadas, dijeron que necesitaban disociarse de sí mismas para poder estar con sus clientes. Ceyenne, una activista a quien arrestaron hace unos años mientras hacía “trabajo fetichista” en Nueva Jersey, me dijo: “Es una carga muy pesada, mental y físicamente”. Escribió un libro de memorias y habla con frecuencia ante grupos de jóvenes LGBT. “Cuando hablo con estas niñas que vienen, les digo que vayan por más”.</p>
+<p class="story-body-text story-content" data-para-count="667" data-total-count="35845" id="story-continues-71" tabindex="-1">El argumento tradicional feminista contra la despenalización es que legitimar la prostitución dañará a las mujeres, pues conducirá a una mayor falta de equidad sexual. El argumento de los derechos humanos a favor de la despenalización es que hará mejor y más segura la vida de las personas. En esta batalla por cuales son las voces a escuchar, quién habla por quién y cuándo usar la fuerza del derecho penal, el movimiento por los derechos de las trabajadoras sexuales es una rebelión en contra del castigo y la vergüenza. Exige respeto por un grupo que casi nunca lo ha recibido e insiste en que solo se puede ayudar realmente a la gente si la respetas.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>Emily Bazelon escribe para The New York Times Magazine y Holly Andres es una fotógrafa radicada en Portland.</p>
+
+			</div>
+
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/05/21/opresion-o-profesion-deberia-ser-delito-la-prostitucion/"
+				data-title="Cultura: Opresión o profesión: ¿debería ser delito la prostitución?"
+				data-author="POR EMILY BAZELON"
+				data-media=""
+				data-description="Un movimiento creciente de trabajadoras sexuales y activistas está convirtiendo la despenalización del trabajo sexual en un asunto feminista."
+				data-publish-date="21 de mayo de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":706,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

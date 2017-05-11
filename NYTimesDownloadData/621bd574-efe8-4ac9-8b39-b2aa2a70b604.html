@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content=""/>
+<meta name="hdl" content="Los derechos transgénero dominan el debate social en Estados Unidos" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20160525" />
+<meta name="utime" content="20160525110040" />
+<meta name="ptime" content="20160525110040" />
+<meta name="DISPLAYDATE" content="May. 25, 2016" />
+<meta name="dat" content="May. 25, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="los-derechos-transgenero-dominan-el-debate-social-en-estados-unidos" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/05/25/los-derechos-transgenero-dominan-el-debate-social-en-estados-unidos/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Los derechos transgénero dominan el debate social en Estados Unidos" />
+<meta property="og:description" content="Los derechos de la comunidad transgénero han acaparado los titulares en Estados Unidos debido a la aprobación de leyes que impiden que los miembros de esa comunidad usen el baño del sexo con el que se identifican." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/05/13/us/13TRANSGENDER/13TRANSGENDER-videoSixteenByNine768-v2.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-05-25" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/05/25/los-derechos-transgenero-dominan-el-debate-social-en-estados-unidos/" />
+<meta property="twitter:title" content="Los derechos transgénero dominan el debate social en Estados Unidos" />
+<meta property="twitter:description" content="Los derechos de la comunidad transgénero han acaparado los titulares en Estados Unidos debido a la aprobación de leyes que impiden que los miembros de esa comunidad usen el baño del sexo con el que se identifican." />
+<meta name="author" content="Albinson Linares" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Albinson Linares" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="estados-unidos" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="estados-unidos" />
+<meta name="id" content=""/>
+<meta name="wordCount" content="1905"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/05/25/los-derechos-transgenero-dominan-el-debate-social-en-estados-unidos/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=05&amp;day=25&amp;name=los-derechos-transgenero-dominan-el-debate-social-en-estados-unidos">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=12230">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/05\/25\/los-derechos-transgenero-dominan-el-debate-social-en-estados-unidos\/"},"headline":"Los derechos transg\u00e9nero dominan el debate social en Estados Unidos","datePublished":"2016-05-25T11:00:40+00:00","dateModified":"2016-05-25T15:58:23+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/05\/13\/us\/13TRANSGENDER\/13TRANSGENDER-videoSixteenByNine768-v2.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Los derechos de la comunidad transg\u00e9nero han acaparado los titulares en Estados Unidos debido a la aprobaci\u00f3n de leyes que impiden que los miembros de esa comunidad usen el ba\u00f1o del sexo con el que se identifican."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/05/25/los-derechos-transgenero-dominan-el-debate-social-en-estados-unidos/" hreflang="es" />
+<meta name="dfp-ad-unit-path" content="noticias/estadosunidos" />
+<title>Los derechos transgénero dominan el debate social en Estados Unidos &#8211; Español</title>
+<link rel="canonical" href="https://www.nytimes.com/es/2016/05/25/los-derechos-transgenero-dominan-el-debate-social-en-estados-unidos/" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/05/25/los-derechos-transgenero-dominan-el-debate-social-en-estados-unidos/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-12230 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Los derechos transgénero dominan el debate social en Estados Unidos
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/05/25/los-derechos-transgenero-dominan-el-debate-social-en-estados-unidos/"
+					data-title="Noticias: Los derechos transgénero dominan el debate social en Estados Unidos"
+					data-author="POR ALBINSON LINARES"
+					data-media=""
+					data-description="Los derechos de la comunidad transgénero han acaparado los titulares en Estados Unidos debido a la aprobación de leyes que impiden que los miembros de esa comunidad usen el baño del sexo con el que se identifican."
+					data-publish-date="25 de mayo de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/1TyWxXE">http://nyti.ms/1TyWxXE</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/estados-unidos/">Estados Unidos</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Los derechos transgénero dominan el debate social en Estados Unidos</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Albinson Linares</span>
+</span>
+
+					<time class="dateline" datetime="2016-05-25">25 de mayo de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/05/25/los-derechos-transgenero-dominan-el-debate-social-en-estados-unidos/"
+							data-title="Noticias: Los derechos transgénero dominan el debate social en Estados Unidos"
+							data-author="POR ALBINSON LINARES"
+							data-media=""
+							data-description="Los derechos de la comunidad transgénero han acaparado los titulares en Estados Unidos debido a la aprobación de leyes que impiden que los miembros de esa comunidad usen el baño del sexo con el que se identifican."
+							data-publish-date="25 de mayo de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004403956" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/13/us/13TRANSGENDER/13TRANSGENDER-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/13/us/13TRANSGENDER/13TRANSGENDER-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/13/us/13TRANSGENDER/13TRANSGENDER-superJumbo.jpg" data-mediaviewer-caption="Letrero de un baño para personas de cualquier género en la Santee High School en Los Ángeles
+" data-mediaviewer-credit="Mark Ralston/Agence France-Presse — Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/13/us/13TRANSGENDER/13TRANSGENDER-master1050.jpg"/>
+		<meta itemprop="height" content="755" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Letrero de un baño para personas de cualquier género en la Santee High School en Los Ángeles
+</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Mark Ralston/Agence France-Presse — Getty Images
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="469" data-total-count="469" id="story-continues-2" tabindex="-1">En este 2016, año electoral en Estados Unidos, parte de la controversia política se ha centrado en la comunidad transgénero después de que los legisladores de Carolina del Norte <a href="http://www.nytimes.com/2016/03/24/us/north-carolina-to-limit-bathroom-use-by-birth-gender.html?version=meter+at+0&amp;module=meter-Links&amp;pgtype=article&amp;contentId=&amp;mediaId=&amp;referrer=http%3A%2F%2Fwww.nytimes.com%2F2016%2F05%2F15%2Fnytnow%2Fyour-weekend-briefing-transgender-rights-donald-trump-doping.html&amp;priority=true&amp;action=click&amp;contentCollection=meter-links-click" target="_blank">aprobaran</a> en marzo pasado una ley que prohíbe que esas personas usen, en los edificios públicos, baños distintos a los del género que aparece registrado en sus certificados de nacimiento. El documento también prohíbe las demandas por discriminación en los tribunales estatales.</p>
+<p class="story-body-text story-content" data-para-count="313" data-total-count="782" id="story-continues-3" tabindex="-1">El presidente Barack Obama emitió recientemente una <a href="http://www.nytimes.com/2016/05/13/us/politics/obama-administration-to-issue-decree-on-transgender-access-to-school-restrooms.html" target="_blank">recomendación</a> que su gobierno le hizo a las escuelas públicas de permitir que los estudiantes transgénero usen el baño que corresponde con su identidad de género y aseveró que la sociedad debe proteger la dignidad y seguridad de los niños vulnerables.</p>
+<p class="story-body-text story-content" data-para-count="452" data-total-count="1234" id="story-continues-4" tabindex="-1">Las recomendaciones para las escuelas, publicadas por el Departamento de Justicia y el Departamento de Educación, establecen que los estudiantes deben estar autorizados para utilizar las instalaciones que coinciden con el género con el que se identifican, incluso si no corresponde con su sexo anatómico. Los distritos que se nieguen a cumplir con esta directiva deberán asumir potenciales acciones legales o la retención de los fondos federales.</p>
+<p class="story-body-text story-content" data-para-count="481" data-total-count="1715" id="story-continues-5" tabindex="-1">En respuesta a esas presiones representantes de 11 estados presentaron el miércoles una <a href="http://www.nytimes.com/2016/05/26/us/states-texas-sue-obama-administration-over-transgender-bathroom-policy.html?hp&amp;action=click&amp;pgtype=Homepage&amp;clickSource=story-heading&amp;module=first-column-region&amp;region=top-news&amp;WT.nav=top-news" target="_blank">demanda</a> que pone a prueba la interpretación del gobierno federal sobre la ley que prohíbe la discriminación sexual. Entre los demandantes hay funcionarios de Alabama, Georgia, Luisiana, Oklahoma, Tennessee, Texas, Utah, Virginia Occidental, Wisconsin, así como el gobernador de Maine, Paul R. Lepage; el Departamento de Educación de Arizona; y los distritos escolares de Arizona y Texas.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="319" data-total-count="2034" id="story-continues-6" tabindex="-1">&#8220;Las personas transgénero se identifican con el sexo contrario al que nacieron y buscan vivir esa expresión&#8221;, explica Lawrence La Fountain-Stokes, profesor universitario de la Universidad de Michigan y autor de diversos ensayos sobre sexualidad como <em>Queer Ricans: Cultures and Sexualities in the Diaspora</em>.</p>
+<p class="story-body-text story-content" data-para-count="359" data-total-count="2393" id="story-continues-7" tabindex="-1">&#8220;La comunidad ya tiene el apoyo de la ciencia médica, la psicología y la psiquiatría, por lo que usar los sanitarios del sexo con que se identifican es un reclamo legítimo. Sin embargo, en Estados Unidos hay muchas personas que todavía no están abiertas a entender la profunda transformación social que vivimos&#8221;, comenta La Fountain-Stokes.</p>
+<p class="story-body-text story-content" data-para-count="306" data-total-count="2699" id="story-continues-8" tabindex="-1">En abril, semanas después de la aprobación de esa ley tan controversial, la Corte de Apelación de Estados Unidos para el Circuito Cuarto en Richmond, Virginia, falló a favor de <a href="http://www.nytimes.com/es/2016/04/28/una-victoria-legal-para-las-personas-transgenero-influye-en-el-debate-en-estados-unidos/?rref=collection%2Fsectioncollection%2Findex" target="_blank">Gavin Grimm</a>, un estudiante transgénero que nació como mujer pero deseaba utilizar el baño para varones en su preparatoria.</p>
+<p class="story-body-text story-content" data-para-count="328" data-total-count="3027" id="story-continues-9" tabindex="-1">Los defensores de los derechos de la comunidad lesbiana, gay, bisexual y transgénero (LGBT) destacaron que esa decisión también aplica para Carolina del Norte. Sin embargo, el gobernador del estado, Pat McCrory (un político republicano que busca la reelección este año), firmó la ley y, hasta ahora, no ha sido revocada.</p>
+<p class="story-body-text story-content" data-para-count="214" data-total-count="3241" id="story-continues-10" tabindex="-1">Lo paradójico para muchos analistas es que esa ley fue aprobada pese a que en febrero de 2015 la ciudad de Charlotte, la urbe más grande de Carolina del Norte, decretó una ordenanza en contra la discriminación.</p>
+<p class="story-body-text story-content" data-para-count="274" data-total-count="3515" id="story-continues-11" tabindex="-1">American Airlines, empresa que emplea a 14.000 personas en Charlotte, donde tiene uno de sus mayores centros de operaciones, emitió un comunicado en el que critica la ley. Otras empresas como Apple, Dow Chemical, PayPal, Red Hat y Biogen también se unieron a los reclamos.</p>
+<p class="story-body-text story-content" data-para-count="252" data-total-count="3767" id="story-continues-12" tabindex="-1">&#8220;Nuestro futuro como estadounidenses debe centrarse en la inclusión y la prosperidad, y no en la discriminación y la división&#8221;, dijo Apple en un <a href="https://twitter.com/katieperalta/status/713139092960051200" target="_blank">comunicado</a>. &#8220;Ver al gobernador McCrory firmar esa legislación nos decepcionó&#8221;.</p>
+<figure id="media-100000004291801" class="media photo media-100000004291801 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/03/25/us/25carolina-web/25carolina-web-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-14">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/03/25/us/25carolina-web/25carolina-web-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/03/25/us/25carolina-web/25carolina-web-superJumbo.jpg" data-mediaviewer-caption="Protesters held a rally on Thursday at the Charlotte-Mecklenburg Government Center in Charlotte, N.C." data-mediaviewer-credit="Travis Dove for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/03/25/us/25carolina-web/25carolina-web-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Protesters held a rally on Thursday at the Charlotte-Mecklenburg Government Center in Charlotte, N.C.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Travis Dove for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="367" data-total-count="4134" id="story-continues-14" tabindex="-1">Durante décadas, el movimiento transgénero ha apoyado las luchas por la igualdad de derechos de las minorías sexuales, pero mientras la comunidad gay ha logrado grandes victorias legales y políticas, como el <a href="http://www.nytimes.com/2013/06/27/opinion/the-same-sex-marriage-rulings.html" target="_blank">matrimonio igualitario</a>, las personas transgénero (que pueden ser homosexuales o no) siguen conformando uno de los sectores más marginados de la sociedad.</p>
+<p class="story-body-text story-content" data-para-count="531" data-total-count="4665" id="story-continues-15" tabindex="-1">&#8220;Alrededor del 90 por ciento de las personas transgénero han sufrido alguna forma de hostigamiento en el trabajo&#8221;, afirma Victoria Rodríguez-Roldán, abogada e integrante de <a href="http://www.thetaskforce.org/" target="_blank">The National LGBTQ Task Force</a> en Washington. &#8220;Un 41 por ciento de los miembros de la comunidad han tratado de suicidarse; de hecho, esa es la tasa más alta de Estados Unidos en cualquier demografía. Además tenemos cuatro veces más probabilidades de vivir en la pobreza&#8221;, afirmó la experta legal, que también es transgénero.</p>
+<p class="story-body-text story-content" data-para-count="371" data-total-count="5036" id="story-continues-16" tabindex="-1">Abundan los ejemplos sobre el daño que causa la discriminación. En mayo de 2015, <a href="http://abcnews.go.com/US/california-mother-appeals-support-transgender-teens-losing-son/story?id=31338159" target="_blank">Kyler Prescott</a> se mató en San Diego; solo tenía 14 años. En diciembre del año pasado, la joven Leelah Alcorn, de 17 años, se lanzó delante de un tractor en movimiento en Ohio. En los <a href="http://www.nytimes.com/2015/06/15/us/beyond-caitlyn-jenner-lies-a-long-struggle-by-transgender-people.html?version=meter+at+0&amp;contentId=&amp;mediaId=&amp;referrer=http%3A%2F%2Fwww.nytimes.com%2Ftopic%2Fsubject%2Ftransgender-and-transsexuals&amp;priority=true&amp;action=click&amp;contentCollection=U.S.&amp;module=RelatedCoverage&amp;region=EndOfArticle&amp;pgtype=article" target="_blank">primeros meses de 2015</a>, siete mujeres transgénero, casi todas afroamericanas, fueron asesinadas.</p>
+<h4 class="story-subheading story-content">Los que están en contra del uso de los baños</h4>
+<p class="story-body-text story-content" data-para-count="264" data-total-count="5300" id="story-continues-18" tabindex="-1">En la zona rural de Florida, un veterinario y ganadero retirado llamado <a href="http://www.nytimes.com/2016/05/22/us/transgender-bathroom-obama-schools.html?rref=collection%2Ftimestopic%2FTransgender%20and%20Transsexuals&amp;action=click&amp;contentCollection=timestopics&amp;region=stream&amp;module=stream_unit&amp;version=latest&amp;contentPlacement=3&amp;pgtype=collection" target="_blank">Harrell Phillips</a> se preocupó una noche de marzo cuando su hijo, de 17 años, le informó durante la cena que se había encontrado con un chico transexual en el baño de la escuela secundaria.</p>
+<p class="story-body-text story-content" data-para-count="155" data-total-count="5455" id="story-continues-19" tabindex="-1">&#8220;Yo mismo me dirigí al director de la escuela&#8221;, dijo Phillips, que considera que &#8220;se nace con el sexo que Dios escogió que seas&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="294" data-total-count="5749" id="story-continues-20" tabindex="-1">Las autoridades de la escuela se asesoraron con abogados y le dijeron que no había nada que pudieran hacer. Así que Phillips recurrió a su mejor amigo, un abogado de Jacksonville, quien le presentó a Roger Gannam, miembro de Liberty Counsel, una organización cristiana con sede en Orlando.</p>
+<p class="story-body-text story-content" data-para-count="369" data-total-count="6118" id="story-continues-21" tabindex="-1">Gannam ayudó a bloquear una ordenanza contra la discriminación propuesta en Jacksonville con un argumento que los conservadores religiosos han estado utilizando de manera efectiva: se pondría en peligro a las mujeres y niñas al permitir que los hombres —y depredadores sexuales— puedan hacerse pasar como personas transgénero y entrar en los baños de mujeres.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="419" data-total-count="6537" id="story-continues-22" tabindex="-1">&#8220;Eso es un ataque con el fin de crear histeria y miedo acusando a los trans de ser depredadores sexuales&#8221;, asevera Rodríguez-Roldán, quien asegura que no se conoce un solo caso de violación donde haya estado involucrada una persona transgénero o alguien que hubiese fingido pertenecer a ese grupo. &#8220;Además, un violador no va a ser detenido por una ley que le dice en qué baño debe estar&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="262" data-total-count="6799" id="story-continues-23" tabindex="-1">Pese a que Carolina del Norte fue el primer estado en adoptar una ley que prohíbe explícitamente que las personas transgénero utilicen los baños de su elección en las instalaciones públicas, muchos piensan que el debate actual tiene sus raíces en Houston.</p>
+<p class="story-body-text story-content" data-para-count="251" data-total-count="7050" id="story-continues-24" tabindex="-1">En noviembre de 2015, los votantes de esa ciudad derogaron las leyes contra la discriminación después de una intensa campaña de televisión, radio e internet en la que los oponentes posicionaron la consigna: <em>“No Men in Women’s Bathrooms&#8221;.</em></p>
+<figure id="media-100000004424318" class="media photo media-100000004424318 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/21/us/21transgender-web05/21transgender-web05-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-26">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/21/us/21transgender-web05/21transgender-web05-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/21/us/21transgender-web05/21transgender-web05-superJumbo.jpg" data-mediaviewer-caption="Mathew Myers, a transgender teenager, with his mother, Beth Miller, at their home in Ocala, Fla." data-mediaviewer-credit="Jacob Langston for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/21/us/21transgender-web05/21transgender-web05-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Mathew Myers, a transgender teenager, with his mother, Beth Miller, at their home in Ocala, Fla.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Jacob Langston for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="454" data-total-count="7504" id="story-continues-26" tabindex="-1">Más de 200 ciudades de los Estados Unidos habían adoptado leyes contra la discriminación cuando Houston votó. Minneapolis, por ejemplo, expandió la protección de los derechos civiles de las personas trans en 1975. Sin embargo, la votación de Houston sucedió menos de cinco meses después de la decisión del Tribunal Supremo que permitió el matrimonio de personas del mismo sexo. Parece responder a una activación de los sectores conservadores.</p>
+<p class="story-body-text story-content" data-para-count="413" data-total-count="7917" id="story-continues-27" tabindex="-1">Muchos conservadores religiosos dicen que las protecciones generales de derechos civiles para las personas trans son innecesarias —porque solucionan un problema que, en su opinión, no existe—. Jeremy Tedesco, el abogado principal de Alliance Defending Freedom, un grupo conservador de Arizona, sostiene que &#8220;cuando se trata de vestuarios y baños, separar los sexos es una cuestión de decencia&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="460" data-total-count="8377" id="story-continues-28" tabindex="-1">&#8220;El derecho federal estadounidense establece que la discriminación por sexo es ilegal&#8221;, enfatiza Rodríguez-Roldán. &#8220;Se trata de principios vigentes como la Ley de Derechos Civiles de 1964 que prohíbe la discriminación por sexo en el mundo laboral, también lo tenemos en el Título IX que prohíbe eso en el ambiente educativo. La discriminación por identidad de género es discriminación por sexo, eso no lo estamos inventando&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="319" data-total-count="8696" id="story-continues-29" tabindex="-1">Para complicar el panorama legal, <a href="http://newlsb.lsb.state.ok.us/BillInfo.aspx?Bill=SB1619&amp;version=meter+at+0&amp;module=meter-Links&amp;pgtype=article&amp;contentId=&amp;mediaId=&amp;referrer=http%3A%2F%2Fwww.nytimes.com%2F2016%2F05%2F22%2Fus%2Ftransgender-bathroom-obama-schools.html%3Frref%3Dcollection%252Ftimestopic%252FTransgender%2520and%2520Transsexuals%26action%3Dclick%26contentCollection%3Dtimestopics%26region%3Dstream%26module%3Dstream_unit%26version%3Dlatest%26contentPlacement%3D3%26pgtype%3Dcollection&amp;priority=true&amp;action=click&amp;contentCollection=meter-links-click" target="_blank">el jueves 19 de mayo</a> se introdujo un proyecto de ley en Oklahoma que permitiría que los estudiantes soliciten, por motivos religiosos, que sus escuelas públicas prohíban que las personas transgénero usen el baño u otra instalación acorde con el sexo con el que se identifican.</p>
+<p class="story-body-text story-content" data-para-count="151" data-total-count="8847" id="story-continues-30" tabindex="-1">Este proyecto de ley parece ser una de las primeras acciones legislativas, a nivel estatal, para desafiar a las directivas de la Administración Obama.</p>
+<p class="story-body-text story-content" data-para-count="460" data-total-count="9307" id="story-continues-31" tabindex="-1">De ser aprobada esta ley un alumno podría solicitar que su escuela establezca que esas instalaciones solo puedan ser usadas por otros estudiantes que también son de sexo masculino desde que nacieron. El proyecto fue presentado por el senador Brian Bingman y el diputado Jeffrey Hickman, ambos republicanos, quienes dicen que es una respuesta a una &#8220;emergencia&#8221; y a la necesidad de preservar la &#8220;paz pública, la salud y la seguridad&#8221;.</p>
+<h4 class="story-subheading story-content">Lo que sigue</h4>
+<p class="story-body-text story-content" data-para-count="408" data-total-count="9715" id="story-continues-33" tabindex="-1">La comunidad transgénero se enfrenta a desafíos como: el acceso a la atención médica relacionada con su transición, que no siempre han sido parte de luchas más amplias como los derechos de los homosexuales. Los gays y las lesbianas son visibles en casi todos los ámbitos de la vida actual, y muchos son celebridades. En cambio, las personas transexuales fueron invisibles hasta hace muy poco tiempo.</p>
+<p class="story-body-text story-content" data-para-count="448" data-total-count="10163" id="story-continues-34" tabindex="-1">Caitlyn Jenner, que obtuvo medallas en las olimpiadas y es parte del clan Kardashian; Chaz Bono, el hijo de los artistas Sonny y Cher; Chelsea Manning, la exoficial que divulgó secretos del Ejército; Laverne Cox, la estrella de la serie de Netflix &#8220;Orange Is the New Black”, son algunos de los hombres y mujeres transgénero que representan públicamente a la comunidad que ha estado en el centro de la discusión nacional estadounidense.</p>
+<figure id="media-100000004406494" class="media photo media-100000004406494 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/16/us/16miami-web02/16miami-web02-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-36">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/16/us/16miami-web02/16miami-web02-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/16/us/16miami-web02/16miami-web02-superJumbo.jpg" data-mediaviewer-caption="Rodrigo Heng-Lehtinen, a transgender activist and Representative Ros-Lehtinen’s son, in New York." data-mediaviewer-credit="Jake Naughton for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/16/us/16miami-web02/16miami-web02-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Rodrigo Heng-Lehtinen, a transgender activist and Representative Ros-Lehtinen’s son, in New York.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Jake Naughton for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="500" data-total-count="10663" id="story-continues-36" tabindex="-1">En los últimos días ha tenido una particular resonancia mediática el caso de Rodrigo Heng-Lehtinen, el hijo transgénero de la congresista republicana de Florida, <a href="http://www.nytimes.com/2016/05/16/us/florida-congresswoman-has-personal-stake-in-transgender-debate.html?rref=collection%2Ftimestopic%2FTransgender%20and%20Transsexuals&amp;action=click&amp;contentCollection=timestopics&amp;region=stream&amp;module=stream_unit&amp;version=latest&amp;contentPlacement=13&amp;pgtype=collection" target="_blank">Ileana Ros-Lehtinen</a>. Pese a que esta líder discrepa profundamente con el presidente Obama en muchas de sus decisiones políticas, sobre todo en su acercamiento a Cuba, apoya las recomendaciones del gobierno para que se le permita a los estudiantes utilizar las instalaciones escolares que coinciden con el sexo el que se identifican.</p>
+<p class="story-body-text story-content" data-para-count="288" data-total-count="10951" id="story-continues-37" tabindex="-1">&#8220;Esas leyes innecesarias solo logran que los jóvenes trans sientan que no son aceptados, y puede llevarlos a la depresión o, peor aún, al suicidio&#8221;, dijo Ros-Lehtinen, de 63 años, quien fue la primera mujer hispana elegida como representante en el congreso estadounidense.</p>
+<p class="story-body-text story-content" data-para-count="445" data-total-count="11396" id="story-continues-38" tabindex="-1">Pese a toda la controversia y la batalla legal que últimamente rodea a esta comunidad, muchos analistas se sienten optimistas. &#8220;Tengo grandes esperanzas porque creo que estas transformaciones se van a dar, poco a poco, y es una lucha&#8221;, afirma Lawrence La Fountain-Stokes. &#8220;Creo que el presidente Obama, el Departamento de Justicia y el de Educación lideran la lucha porque es una discusión difícil, pero fundamental&#8221;.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/derechos-lgbt/" rel="tag">derechos LGBT</a>, <a href="https://www.nytimes.com/es/tag/derechos-transgenero/" rel="tag">derechos transgénero</a>, <a href="https://www.nytimes.com/es/tag/estados-unidos/" rel="tag">Estados Unidos</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/05/25/los-derechos-transgenero-dominan-el-debate-social-en-estados-unidos/"
+				data-title="Noticias: Los derechos transgénero dominan el debate social en Estados Unidos"
+				data-author="POR ALBINSON LINARES"
+				data-media=""
+				data-description="Los derechos de la comunidad transgénero han acaparado los titulares en Estados Unidos debido a la aprobación de leyes que impiden que los miembros de esa comunidad usen el baño del sexo con el que se identifican."
+				data-publish-date="25 de mayo de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2015/12/02/asesinatos-de-mujeres-transgenero-en-argentina-revelan-problema-de-discriminacion/">
+					<div class="story-body">
+						<h3 class="kicker">Argentina</h3>
+
+						<h2 class="headline">
+							<span class="title">Asesinatos de mujeres transgénero en Argentina revelan problema de discriminación</span>
+							<time class="dateline">2 de diciembre de 2015</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2015/11/29/world/SUB-ARGENTINA-copy/SUB-ARGENTINA-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2015/07/16/mas-alla-de-caitlyn-jenner-la-lucha-por-los-derechos-transgenero-continua/">
+					<div class="story-body">
+						<h3 class="kicker">Vida</h3>
+
+						<h2 class="headline">
+							<span class="title">Más allá de Caitlyn Jenner, la lucha por los derechos transgénero continúa</span>
+							<time class="dateline">16 de julio de 2015</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2015/07/17/fashion/17OTR-1-copy/17OTR-1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/28/una-victoria-legal-para-las-personas-transgenero-influye-en-el-debate-en-estados-unidos/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">Una victoria legal para las personas transgénero influye en el debate en Estados Unidos</span>
+							<time class="dateline">28 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/20/us/20virginia-web/20virginia-web-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2015/03/17/relaciones-sexuales-en-el-matrimonio-mejoran-en-los-anos-dorados/">
+					<div class="story-body">
+						<h3 class="kicker">Salud</h3>
+
+						<h2 class="headline">
+							<span class="title">Relaciones sexuales en el matrimonio mejoran en los años dorados</span>
+							<time class="dateline">17 de marzo de 2015</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2015/03/18/opinion/marriedsex-ES/marriedsex-ES-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":898,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-jumbo-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-jumbo-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-jumbo-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-jumbo-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004832869"/>
+<meta name="hdl" content="Solo dos equipos se enfrentan en la liga de fútbol más pequeña del mundo" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20170117" />
+<meta name="utime" content="20170117180057" />
+<meta name="ptime" content="20170117180057" />
+<meta name="DISPLAYDATE" content="Jan. 17, 2017" />
+<meta name="dat" content="Jan. 17, 2017" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="la-liga-de-futbol-mas-pequena-del-mundo-solo-tiene-dos-equipos" />
+<meta property="og:url" content="https://www.nytimes.com/es/2017/01/17/la-liga-de-futbol-mas-pequena-del-mundo-solo-tiene-dos-equipos/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Solo dos equipos se enfrentan en la liga de fútbol más pequeña del mundo" />
+<meta property="og:description" content="Alguna vez hubo cuatro equipos en la Liga de Fútbol de las islas Sorlingas: dos de St. Mary’s, uno de la isla Tresco y otro de St. Martin’s. Pero desde la década de 1950 se ha reducido la población, por lo que ahora solo hay dos." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY01/22SCILLY01-videoSixteenByNine768-v2.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2017-01-17" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2017/01/17/la-liga-de-futbol-mas-pequena-del-mundo-solo-tiene-dos-equipos/" />
+<meta property="twitter:title" content="Solo dos equipos se enfrentan en la liga de fútbol más pequeña del mundo" />
+<meta property="twitter:description" content="Alguna vez hubo cuatro equipos en la Liga de Fútbol de las islas Sorlingas: dos de St. Mary’s, uno de la isla Tresco y otro de St. Martin’s. Pero desde la década de 1950 se ha reducido la población, por lo que ahora solo hay dos." />
+<meta name="author" content="Rory Smith" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Rory Smith" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="deportes" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="deportes" />
+<meta name="id" content="100000004832869"/>
+<meta name="wordCount" content="2116"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2017/01/17/la-liga-de-futbol-mas-pequena-del-mundo-solo-tiene-dos-equipos/">
+<meta name="nyt-collection:uri" content="year=2017&amp;monthnum=01&amp;day=17&amp;name=la-liga-de-futbol-mas-pequena-del-mundo-solo-tiene-dos-equipos">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=33199">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2017\/01\/17\/la-liga-de-futbol-mas-pequena-del-mundo-solo-tiene-dos-equipos\/"},"headline":"Solo dos equipos se enfrentan en la liga de f\u00fatbol m\u00e1s peque\u00f1a del mundo","datePublished":"2017-01-17T18:00:57+00:00","dateModified":"2017-01-17T14:47:04+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/12\/22\/sports\/22SCILLY01\/22SCILLY01-videoSixteenByNine768-v2.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Alguna vez hubo cuatro equipos en la Liga de F\u00fatbol de las islas Sorlingas: dos de St. Mary\u2019s, uno de la isla Tresco y otro de St. Martin\u2019s. Pero desde la d\u00e9cada de 1950 se ha reducido la poblaci\u00f3n, por lo que ahora solo hay dos."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2017/01/17/la-liga-de-futbol-mas-pequena-del-mundo-solo-tiene-dos-equipos/" hreflang="es" />
+<link rel="alternate" href="https://www.nytimes.com/2016/12/21/sports/soccer/smallest-soccer-league-scilly.html?mcid=nyt-es&amp;#038;subid=article" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/deportes" />
+<title>Solo dos equipos se enfrentan en la liga de fútbol más pequeña del mundo &#8211; Español</title>
+<link rel="canonical" href="https://www.nytimes.com/2016/12/21/sports/soccer/smallest-soccer-league-scilly.html?mcid=nyt-es&#038;subid=article" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2017/01/17/la-liga-de-futbol-mas-pequena-del-mundo-solo-tiene-dos-equipos/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-33199 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				Solo dos equipos se enfrentan en la liga de fútbol más pequeña del mundo
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2017/01/17/la-liga-de-futbol-mas-pequena-del-mundo-solo-tiene-dos-equipos/"
+					data-title="Noticias: Solo dos equipos se enfrentan en la liga de fútbol más pequeña del mundo"
+					data-author="POR RORY SMITH"
+					data-media=""
+					data-description="Alguna vez hubo cuatro equipos en la Liga de Fútbol de las islas Sorlingas: dos de St. Mary’s, uno de la isla Tresco y otro de St. Martin’s. Pero desde la década de 1950 se ha reducido la población, por lo que ahora solo hay dos."
+					data-publish-date="17 de enero de 2017"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2iyWL4T">http://nyti.ms/2iyWL4T</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/deportes/">Deportes</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Solo dos equipos se enfrentan en la liga de fútbol más pequeña del mundo</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Rory Smith</span>
+</span>
+
+					<time class="dateline" datetime="2017-01-17">17 de enero de 2017</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2017/01/17/la-liga-de-futbol-mas-pequena-del-mundo-solo-tiene-dos-equipos/"
+							data-title="Noticias: Solo dos equipos se enfrentan en la liga de fútbol más pequeña del mundo"
+							data-author="POR RORY SMITH"
+							data-media=""
+							data-description="Alguna vez hubo cuatro equipos en la Liga de Fútbol de las islas Sorlingas: dos de St. Mary’s, uno de la isla Tresco y otro de St. Martin’s. Pero desde la década de 1950 se ha reducido la población, por lo que ahora solo hay dos."
+							data-publish-date="17 de enero de 2017"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004833426" class="media photo lede layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY01/21SCILLY01-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY01/21SCILLY01-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY01/21SCILLY01-superJumbo.jpg" data-mediaviewer-caption="Los Garrison Gunners en el medio tiempo de un partido de la Liga de Fútbol de las Islas Sorlingas. Todos los domingos juegan contra el otro equipo de la liga: los Wollpack Wanderers. " data-mediaviewer-credit="Tom Jamieson para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY01/21SCILLY01-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Los Garrison Gunners en el medio tiempo de un partido de la Liga de Fútbol de las Islas Sorlingas. Todos los domingos juegan contra el otro equipo de la liga: los Wollpack Wanderers. </span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tom Jamieson para The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="https://www.nytimes.com/2016/12/21/sports/soccer/smallest-soccer-league-scilly.html?mcid=nyt-es&#038;subid=article&#038;ref=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="225" data-total-count="225" id="story-continues-2" tabindex="-1">ST. MARY’S, islas Sorlingas — Falta casi una hora y hay mucho que hacer antes del inicio del partido cuando los jugadores empiezan a llegar, medio dormidos, con las piernas pesadas y deslumbrados por la fría luz del sol.</p>
+<p class="story-body-text story-content" data-para-count="348" data-total-count="573" id="story-continues-3" tabindex="-1">La noche anterior fue larga. Hugh Town, el pueblo de mil almas que es la capital de St. Mary’s, la más grande de las islas Sorlingas o islas Scilly, está a reventar durante el verano. Su población se desborda por los turistas que descienden a este archipiélago del Atlántico, ubicado a unos 48 kilómetros de la punta suroeste de Inglaterra.</p>
+<p class="story-body-text story-content" data-para-count="403" data-total-count="976" id="story-continues-4" tabindex="-1">El pueblo duerme durante casi todo el invierno, pero anoche fue una rara excepción. Estuvo vibrante por las actividades: tres fiestas de Navidad y la secuela del desayuno de una boda. Todos estaban de pie en los pocos bares que están abiertos todo el año. El karaoke, según todos los testigos, terminó a las tres de la madrugada por lo que esta mañana toda la isla parece sentirse un poco frágil.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="515" data-total-count="1491" id="story-continues-5" tabindex="-1">Sin embargo, la resaca no detiene a los jugadores. Aquí los partidos de fútbol que se juegan en las mañanas de los domingos son en parte deporte, parte ritual social y parte cura para el malestar. Cautelosamente, se disponen a realizar sus quehaceres ceremoniales. Un jugador empieza a marcar las líneas del campo, otro coloca los banderines de esquina. Dos escuadrones tienen la misión de poner las redes y otro debe ir al lugar más lejano con una carretilla y una pala para llenar los huecos de los conejos.</p>
+<figure id="media-100000004833623" class="media photo media-100000004833623 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY03-sub/22SCILLY03-sub-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-7">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY03-sub/22SCILLY03-sub-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY03-sub/22SCILLY03-sub-superJumbo.jpg" data-mediaviewer-caption="For some Garrison players, the night before a recent league match included karaoke until the wee hours." data-mediaviewer-credit="Tom Jamieson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY03-sub/22SCILLY03-sub-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">For some Garrison players, the night before a recent league match included karaoke until the wee hours.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tom Jamieson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<figure id="media-100000004833459" class="media photo media-100000004833459 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY09/21SCILLY09-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-8">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY09/21SCILLY09-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY09/21SCILLY09-superJumbo.jpg" data-mediaviewer-caption="The clubhouse at the Garrison soccer field, where the two teams alternate as home and away." data-mediaviewer-credit="Tom Jamieson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY09/21SCILLY09-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The clubhouse at the Garrison soccer field, where the two teams alternate as home and away.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tom Jamieson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<figure id="media-100000004833549" class="media photo media-100000004833549 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY04sub/21SCILLY04sub-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-9">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY04sub/21SCILLY04sub-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY04sub/21SCILLY04sub-superJumbo.jpg" data-mediaviewer-caption="The players have their chores at each game: One marks out the field, another places the corner flags and at least one fills in the rabbit holes." data-mediaviewer-credit="Tom Jamieson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY04sub/21SCILLY04sub-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The players have their chores at each game: One marks out the field, another places the corner flags and at least one fills in the rabbit holes.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tom Jamieson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="271" data-total-count="1762" id="story-continues-9" tabindex="-1">El resto, los flojos y los rezagados, se reúnen afuera de los vestidores; fuman cigarros hechos a mano y envidian a los que llevaron emparedados de tocino. Comienzan a contar cada vez que llega otro rival y se preguntan si esta semana será un juego de once contra once.</p>
+<p class="story-body-text story-content" data-para-count="291" data-total-count="2053" id="story-continues-10" tabindex="-1">Solo cuando terminan todas las tareas necesarias, se dan la vuelta y se dirigen a ponerse el uniforme. Sin dudar, la mitad de los jugadores gira a la izquierda; el resto, a la derecha como en piloto automático. Cada segundo es tan familiar que termina por diseminar la confusión de anoche.</p>
+<p class="story-body-text story-content" data-para-count="248" data-total-count="2301" id="story-continues-11" tabindex="-1">Es lo mismo cada semana: el mismo campo, los mismos vestidores, los mismos compañeros de equipo y el mismo oponente. Esta mañana, la única diferencia es la resaca. El resto es solo otro día típico en la liga de fútbol más pequeña del mundo.</p>
+<h4 class="story-subheading story-content">Una liga que se hace más pequeña</h4>
+
+<p class="story-body-text story-content" data-para-count="337" data-total-count="2638" id="story-continues-13" tabindex="-1">Alguna vez hubo cuatro equipos en la Liga de Fútbol de las Islas Sorlingas: dos de St. Mary’s, uno de la isla Tresco y otro de St. Martin’s. Pero desde la década de 1950 se ha reducido la población, por lo que ahora solo hay dos. Al principio se llamaban los Rangers y los Rovers, pero los nombres cambiaron en la década de 1980.</p>
+<p class="story-body-text story-content" data-para-count="335" data-total-count="2973" id="story-continues-14" tabindex="-1">Desde entonces, en el mismo césped de Garrison Field, ubicado en lo alto de la colina que sirve de mirador en Hugh Town, los dos equipos han jugado el uno contra el otro cada semana. No hay un clásico en el mundo del fútbol que se haya jugado con tanta frecuencia como el que enfrenta a los Garrison Gunner y los Woolpack Wanderers.</p>
+<p class="story-body-text story-content" data-para-count="685" data-total-count="3658" id="story-continues-15" tabindex="-1">Entre octubre y mayo, los equipos juegan una temporada completa de veinte juegos. Regularmente, hay dos juegos de exhibición: uno contra un equipo de veteranos, el 26 de diciembre, y otro contra una escuadra formada por los observadores de aves que visitan las islas en otoño. En algunas ocasiones, un combinado se mide contra el Dynamo Chough, un club con sede en Penzance que es el pueblo más cercano de tierra firme, para ganar el trofeo más pequeño del mundo del fútbol. La campaña comienza con el Charity Shield y también hay dos torneos de copa. “Y uno de ellos”, señaló Anthony Gibbons, el presidente de la liga, con una sonrisa irónica, “es de ida y vuelta”.</p>
+<p class="story-body-text story-content" data-para-count="238" data-total-count="3896" id="story-continues-16" tabindex="-1">Más o menos durante la última década, Gibbons y el grupo de fieles que se inscriben para jugar cada temporada se fueron acostumbrando a la idea de que su particular microclima deportivo esporádicamente llama la atención del exterior.</p>
+<figure id="media-100000004833457" class="media photo media-100000004833457 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY08/21SCILLY08-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-18">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY08/21SCILLY08-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY08/21SCILLY08-superJumbo.jpg" data-mediaviewer-caption="The Lyonesse Cup is awarded for games between a combined island team and a club based in Penzance on the mainland. A version of the trophy, believed to be the smallest in the world, is in the FIFA museum." data-mediaviewer-credit="Tom Jamieson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY08/21SCILLY08-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The Lyonesse Cup is awarded for games between a combined island team and a club based in Penzance on the mainland. A version of the trophy, believed to be the smallest in the world, is in the FIFA museum.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tom Jamieson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<figure id="media-100000004833472" class="media photo media-100000004833472 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY12/22SCILLY12-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-19">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY12/22SCILLY12-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY12/22SCILLY12-superJumbo.jpg" data-mediaviewer-caption="A photo of the 1948-49 St. Mary’s team. The Isles of Scilly Football League used to have four teams." data-mediaviewer-credit="Tom Jamieson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY12/22SCILLY12-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A photo of the 1948-49 St. Mary’s team. The Isles of Scilly Football League used to have four teams.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tom Jamieson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<figure id="media-100000004833464" class="media photo media-100000004833464 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY10/22SCILLY10-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-20">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY10/22SCILLY10-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY10/22SCILLY10-superJumbo.jpg" data-mediaviewer-caption="The players are mostly amateurs, and the captains pick the sides before each season to keep the league competitive." data-mediaviewer-credit="Tom Jamieson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY10/22SCILLY10-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The players are mostly amateurs, and the captains pick the sides before each season to keep the league competitive.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tom Jamieson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="218" data-total-count="4114" id="story-continues-20" tabindex="-1">En 2008, Adidas <a href="https://www.youtube.com/watch?v=fWHZwmlWlT0" target="_blank">grabó una serie de videos promocionales</a> aquí con astros de la talla de David Beckham, Steven Gerrard, Patrick Vieira y Michael Ballack para que los jugadores jóvenes de las islas siguieran sus pasos.</p>
+<p class="story-body-text story-content" data-para-count="594" data-total-count="4708" id="story-continues-21" tabindex="-1">Muchos de los veteranos de esa semana, que en ese entonces eran jóvenes tímidos, han crecido para convertirse en los jugadores más destacados de las islas. En el video, Jeremy Martin, un volante de los Wanderers, “dejaba” que Gerrard se quedara a dormir en el sofá de sus papás después de las sesiones de entrenamiento. Su línea era: <a href="https://www.youtube.com/watch?v=8VRff6-slNI&amp;feature=youtu.be&amp;t=4m25s" target="_blank">“No hay problema; mis amigos se quedan a dormir todo el tiempo”</a>. Lee Eaton y Dan Ware, la pareja de centrales de los Gunners, también recuerdan cómo fue ver a esos atletas famosos en Garrison Field. Los dos coinciden en que fue “muy raro”.</p>
+<p class="story-body-text story-content" data-para-count="321" data-total-count="5029" id="story-continues-22" tabindex="-1">Desde ese momento, las cadenas de televisión han seguido visitándolos a intervalos regulares para seguir su progreso. Recientemente, la televisora italiana RAI mandó una unidad. Gibbons también ha sido entrevistado para medios de Alemania, Japón y Noruega. Sky Sports ya grabó aquí y la BBC quiere venir este 2017.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="171" data-total-count="5200" id="story-continues-23" tabindex="-1">El interés es bienvenido, pero está teñido de un grado de desconcierto. “Nunca sabemos muy bien si la gente se está riendo a nuestras costillas”, comentó Gibbons.</p>
+<p class="story-body-text story-content" data-para-count="282" data-total-count="5482" id="story-continues-24" tabindex="-1">Ciertamente, las Sorlingas dan la sensación de ser un lugar diferente. Nadie de aquí se refiere al país que está un poco al este como “Inglaterra” o “Gran Bretaña”: siempre es “el continente”. Está cerca —un vuelo de 15 minutos, según el clima— pero distante.</p>
+<p class="story-body-text story-content" data-para-count="246" data-total-count="5728" id="story-continues-25" tabindex="-1">“Hay que ser una persona especial para vivir aquí”, señaló Matt Simons, un defensa lateral de los Wanderers y empleado de la Steamship Company, una de las empleadoras más grandes de las islas. “Es desafiante, en especial en invierno”.</p>
+<p class="story-body-text story-content" data-para-count="345" data-total-count="6073" id="story-continues-26" tabindex="-1">Están aislados. El transbordador de fondo plano no funciona fuera de temporada porque los mares son demasiado fuertes, y la neblina regularmente afecta a los aviones de hélices que llegan de Land’s End, Exeter y Newquay. Hace un par de años, el mal clima duró tanto tiempo que tuvieron que lanzarles las provisiones médicas desde aviones.</p>
+<p class="story-body-text story-content" data-para-count="351" data-total-count="6424" id="story-continues-27" tabindex="-1">Cualquier problema de salud grave debe tratarse en tierra firme porque aquí no hay instalaciones avanzadas. Llega a dar claustrofobia. La isla tiene un pequeño cuerpo de policía que envía desde el departamento más cercano del continente, en Devon y Cornualles: consta de dos agentes que reciben ayuda de oficiales de medio tiempo de la comunidad.</p>
+<p class="story-body-text story-content" data-para-count="171" data-total-count="6595" id="story-continues-28" tabindex="-1">Solo les permiten servir cinco años. Después de eso, se considera que son demasiado “cercanos” a la comunidad para hacer sus trabajos eficientemente y los remplazan.</p>
+<figure id="media-100000004833429" class="media photo media-100000004833429 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY02/21SCILLY02-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-30">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY02/21SCILLY02-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY02/21SCILLY02-superJumbo.jpg" data-mediaviewer-caption="Hugh Town serves as the capital of the island of St. Mary&amp;rsquo;s. Bustling with tourists in the summer, its population dwindles to about 1,000 in the winter." data-mediaviewer-credit="Tom Jamieson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY02/21SCILLY02-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Hugh Town serves as the capital of the island of St. Mary&amp;rsquo;s. Bustling with tourists in the summer, its population dwindles to about 1,000 in the winter.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tom Jamieson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<figure id="media-100000004833452" class="media photo media-100000004833452 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY06/21SCILLY06-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-31">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY06/21SCILLY06-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY06/21SCILLY06-superJumbo.jpg" data-mediaviewer-caption="The Scillies, off England’s southwest coast, are isolated. The ferry does not run out of season, and fog regularly grounds air traffic." data-mediaviewer-credit="Tom Jamieson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY06/21SCILLY06-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The Scillies, off England’s southwest coast, are isolated. The ferry does not run out of season, and fog regularly grounds air traffic.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tom Jamieson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<figure id="media-100000004833550" class="media photo media-100000004833550 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY17/22SCILLY17-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-32">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY17/22SCILLY17-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY17/22SCILLY17-superJumbo.jpg" data-mediaviewer-caption="The Woolpack Battery was originally constructed to protect the Scillies from a French invasion, but the Germans later became a bigger threat." data-mediaviewer-credit="Tom Jamieson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY17/22SCILLY17-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The Woolpack Battery was originally constructed to protect the Scillies from a French invasion, but the Germans later became a bigger threat.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tom Jamieson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="207" data-total-count="6802" id="story-continues-32" tabindex="-1">También es un lugar difícil. Muchos jugadores tienen más de un trabajo. Tom Spinner, otro Wanderer, además de trabajar con Simons en la Steamship Company es bombero, con lo que apenas llega a fin de mes.</p>
+<p class="story-body-text story-content" data-para-count="181" data-total-count="6983" id="story-continues-33" tabindex="-1">“Va mejorando, pero todo Cornualles, y las Sorlingas en particular, sufrieron mucho con la recesión”, indicó Will Lethbridge, un DJ de Radio Scilly y volante de los Wanderers.</p>
+<p class="story-body-text story-content" data-para-count="565" data-total-count="7548" id="story-continues-34" tabindex="-1">Al mismo tiempo, la vida es cara y los precios aumentan por los turistas en el verano y el costo del transporte de todo el año. Ser dueño de una propiedad suele ser completamente inalcanzable, por las cifras elevadas de tener una segunda residencia y las duras restricciones para urbanizar. La combinación de lo anterior junto a la carencia de oportunidades académicas ha ido mermando a la población: la escuela local llega hasta los 16 años y los adolescentes que quieren estudiar en la universidad deben abandonar a sus familias para vivir en el continente.</p>
+<p class="story-body-text story-content" data-para-count="299" data-total-count="7847" id="story-continues-35" tabindex="-1">Las Sorlingas tienen fama de ser un lugar de una belleza extraordinaria: playas doradas y prístinas; agua clara, color azul celeste y colinas verdes. También es un lugar de una gran paz. “Deje su teléfono y billetera en la mesa del pub”, dijo Simons. “Se los entregarán en unos minutos”.</p>
+<p class="story-body-text story-content" data-para-count="208" data-total-count="8055" id="story-continues-36" tabindex="-1">No obstante, la vida no es fácil en este lugar y, sin duda, dirigir una liga de fútbol tampoco lo es. Por eso vienen los forasteros, para ver cómo puede sobrevivir ese deporte en un entorno tan complicado.</p>
+<h4 class="story-subheading story-content">El proceso de selección</h4>
+
+<p class="story-body-text story-content" data-para-count="206" data-total-count="8261" id="story-continues-38" tabindex="-1">Todos los veranos, unas semanas antes del inicio de temporada, los capitanes de los Gunners y los Wanderers se ven en un pub para celebrar una de las tradiciones más viejas de la liga: escoger los equipos.</p>
+<p class="story-body-text story-content" data-para-count="377" data-total-count="8638" id="story-continues-39" tabindex="-1">“Son reglas de escuela, básicamente”, señaló Gibbons, cada lado escoge a un jugador en su turno hasta que cada uno tiene, en teoría, una escuadra competitiva. No siempre resulta bien: este año, los Gunners llevan nueve puntos de ventaja en la tabla. Pero Gibbons destaca con orgullo que en años recientes la liga se ha disputado hasta el último día de la temporada.</p>
+<p class="story-body-text story-content" data-para-count="213" data-total-count="8851" id="story-continues-40" tabindex="-1">“Si lo hacemos así, se mantiene la frescura y es más parejo”, dijo acerca de la selección anual. “No podría haber un equipo que sea mucho mejor que otro todo el tiempo. La gente perdería el interés”.</p>
+<p class="story-body-text story-content" data-para-count="375" data-total-count="9226" id="story-continues-41" tabindex="-1">El método funciona. Varios expresan su interés en jugar al inicio de cada temporada y pagan la cuota de inscripción de 40 libras (cerca de 50 dólares) que les garantiza un lugar. Sin embargo, la cantidad de entusiastas disminuye a medida que pasan los meses, ya que interfieren los compromisos familiares y laborales, pero normalmente son los suficientes para un partido.</p>
+<p class="story-body-text story-content" data-para-count="201" data-total-count="9427" id="story-continues-42" tabindex="-1">“Siempre hay problemas con la gente de entre 16 y 25 años”, comentó Lethbridge. “Es la edad en la que es más fácil que puedas jugar, pero la mayoría de esa generación se va de las islas”.</p>
+<p class="story-body-text story-content" data-para-count="347" data-total-count="9774" id="story-continues-43" tabindex="-1">Este verano, Gibbons tuvo que hacer un llamado en Radio Scilly para conseguir voluntarios y realizó una búsqueda en un torneo de equipos de seis que se juega durante el verano, para ver si habría interesados entre los trabajadores de los hoteles y restaurantes. Su criterio de selección fue: “Nada más alguien que pueda patear un balón”.</p>
+<figure id="media-100000004833625" class="media photo media-100000004833625 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY16-sub/22SCILLY16-sub-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-45">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY16-sub/22SCILLY16-sub-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY16-sub/22SCILLY16-sub-superJumbo.jpg" data-mediaviewer-caption="Garrison’s captain, Anthony Gibbons, right, during a halftime sideline cigarette break." data-mediaviewer-credit="Tom Jamieson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/22/sports/22SCILLY16-sub/22SCILLY16-sub-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Garrison’s captain, Anthony Gibbons, right, during a halftime sideline cigarette break.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tom Jamieson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="266" data-total-count="10040" id="story-continues-45" tabindex="-1">Por supuesto, él sabe que las mañanas de domingo en el Garrison no siempre son las experiencias más placenteras. Paul Charnock, uno de los dos árbitros regulares, recuerda haber pitado con “granizo, nieve, lluvia torrencial, neblina espesa, rayos y truenos”.</p>
+<p class="story-body-text story-content" data-para-count="408" data-total-count="10448" id="story-continues-46" tabindex="-1">Como regla, solo suspende los encuentros cuando la superficie de juego está gravemente inundada. “Hubo un partido que debimos parar porque alguien se torció el tobillo en un hoyo de conejo”, relató Charnock, quien solía pitar en la Liga Nacional, la quinta división de Inglaterra. “Fue la primera vez que detenía un partido por eso”, aclaró. “Solo llenamos los huecos y seguimos el juego”.</p>
+<p class="story-body-text story-content" data-para-count="615" data-total-count="11063" id="story-continues-47" tabindex="-1">Se necesita más que un hoyo en la cancha para dejar de jugar. Ellos seguirán jugando en el peor clima que les pueda lanzar el Atlántico. Los ánimos tampoco decaen porque todo es, oficialmente, no oficial. Cuando uno de los predecesores de Gibbons intentó solicitar la inclusión en los Récords Mundiales de Guinness, descubrió que los dos equipos de la liga más pequeña del mundo están registrados en la Asociación de Fútbol de Inglaterra como parte del St. Mary’s Football Club —para mantener bajos los costos—, por lo que sus partidos formalmente se consideran como encuentros de interescuadras.</p>
+<p class="story-body-text story-content" data-para-count="211" data-total-count="11274" id="story-continues-48" tabindex="-1">Mantienen la liga a pesar de que haya una lucha constante por completar los equipos. El sistema de selección garantiza que no exista el aburrimiento, no hay temor de que todo se pueda volver demasiado familiar.</p>
+<p class="story-body-text story-content" data-para-count="243" data-total-count="11517" id="story-continues-49" tabindex="-1">Los mismos equipos están ahí cada domingo, a la misma hora, en el mismo lugar; aunque no siempre recuerden para quién juegan. No recuerdan el nombre del equipo, en todo caso. Eso no importa. Vienen por el ritual, por el juego, solo a jugar.</p>
+<p class="story-body-text story-content" data-para-count="227" data-total-count="11744" id="story-continues-50" tabindex="-1">Hayden Simpson observa a sus colegas mientras preparan el campo, disfruta la luz del sol y el frío. “Juego con los rojos”, dijo, cuando le preguntaron si era Wanderer o Gunner. Pero “¿cuál es cuál?”, le preguntaron.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/adidas/" rel="tag">Adidas</a>, <a href="https://www.nytimes.com/es/tag/david-beckham/" rel="tag">David Beckham</a>, <a href="https://www.nytimes.com/es/tag/dynamo-chough/" rel="tag">Dynamo Chough</a>, <a href="https://www.nytimes.com/es/tag/garrison-field/" rel="tag">Garrison Field</a>, <a href="https://www.nytimes.com/es/tag/garrison-gunner/" rel="tag">Garrison Gunner</a>, <a href="https://www.nytimes.com/es/tag/hugh-town/" rel="tag">Hugh Town</a>, <a href="https://www.nytimes.com/es/tag/islas-sorlingas/" rel="tag">Islas Sorlingas</a>, <a href="https://www.nytimes.com/es/tag/michael-ballack/" rel="tag">Michael Ballack</a>, <a href="https://www.nytimes.com/es/tag/patrick-vieira/" rel="tag">Patrick Vieira</a>, <a href="https://www.nytimes.com/es/tag/steven-gerrard/" rel="tag">Steven Gerrard</a>, <a href="https://www.nytimes.com/es/tag/woolpack-wanderers/" rel="tag">Woolpack Wanderers</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2017/01/17/la-liga-de-futbol-mas-pequena-del-mundo-solo-tiene-dos-equipos/"
+				data-title="Noticias: Solo dos equipos se enfrentan en la liga de fútbol más pequeña del mundo"
+				data-author="POR RORY SMITH"
+				data-media=""
+				data-description="Alguna vez hubo cuatro equipos en la Liga de Fútbol de las islas Sorlingas: dos de St. Mary’s, uno de la isla Tresco y otro de St. Martin’s. Pero desde la década de 1950 se ha reducido la población, por lo que ahora solo hay dos."
+				data-publish-date="17 de enero de 2017"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/10/el-proximo-mundial-de-futbol-se-disputara-entre-48-equipos/">
+					<div class="story-body">
+						<h3 class="kicker">Deportes</h3>
+
+						<h2 class="headline">
+							<span class="title">El Mundial de Fútbol de 2026 se disputará entre 48 equipos</span>
+							<time class="dateline">10 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/01/11/world/11FIFA/11FIFA-thumbStandard-v3.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/06/tevez-china-y-la-revolucion-del-futbol/">
+					<div class="story-body">
+						<h3 class="kicker">Comentario</h3>
+
+						<h2 class="headline">
+							<span class="title">Tévez, China y la revolución del fútbol</span>
+							<time class="dateline">6 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/01/06/universal/es/6tevezES1/6tevezES1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/17/los-humanos-aprenden-nuevos-trucos-para-evaluar-la-inteligencia-de-sus-perros/">
+					<div class="story-body">
+						<h3 class="kicker">Ciencia</h3>
+
+						<h2 class="headline">
+							<span class="title">Los humanos aprenden nuevos trucos para evaluar la inteligencia de sus perros</span>
+							<time class="dateline">17 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/01/08/science/08SMARTDOGS/08SMARTDOGS-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/01/17/los-libros-que-ayudaron-a-barack-obama-en-la-casa-blanca/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">Los libros que ayudaron a Barack Obama en la Casa Blanca</span>
+							<time class="dateline">17 de enero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/01/16/us/16OBAMA-BOOKS-01/16OBAMA-BOOKS-01-thumbStandard-v3.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":955,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

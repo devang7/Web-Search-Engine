@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004155960"/>
+<meta name="hdl" content="Los retos de llevar al teatro &#8216;2666&#8217; de Roberto Bolaño" />
+<meta name="col" content="Cultura" id="column-name" />
+<meta name="pdate" content="20160219" />
+<meta name="utime" content="20160219110051" />
+<meta name="ptime" content="20160219110051" />
+<meta name="DISPLAYDATE" content="Feb. 19, 2016" />
+<meta name="dat" content="Feb. 19, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="el-reto-de-llevar-al-teatro-2666-de-roberto-bolano" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/02/19/el-reto-de-llevar-al-teatro-2666-de-roberto-bolano/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Los retos de llevar al teatro &#8216;2666&#8217; de Roberto Bolaño" />
+<meta property="og:description" content="El director de teatro Robert Falls, asombrado y cautivado por la novela del escritor chileno, estrenó en Chicago una adaptación escénica de cinco horas de duración." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/01/31/arts/3126661/3126661-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-02-19" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/02/19/el-reto-de-llevar-al-teatro-2666-de-roberto-bolano/" />
+<meta property="twitter:title" content="Los retos de llevar al teatro &#8216;2666&#8217; de Roberto Bolaño" />
+<meta property="twitter:description" content="El director de teatro Robert Falls, asombrado y cautivado por la novela del escritor chileno, estrenó en Chicago una adaptación escénica de cinco horas de duración." />
+<meta name="author" content="Jennifer Schuessler" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por Jennifer Schuessler" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="cultura" />
+<meta name="cd12" content="arte" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="cultura" />
+<meta name="ser" content="arte" />
+<meta name="id" content="100000004155960"/>
+<meta name="wordCount" content="1653"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/02/19/el-reto-de-llevar-al-teatro-2666-de-roberto-bolano/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=02&amp;day=19&amp;name=el-reto-de-llevar-al-teatro-2666-de-roberto-bolano">
+<meta name="PT" content="article">
+<meta name="article:section" content="Cultura">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/6?exclude=2957">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/02\/19\/el-reto-de-llevar-al-teatro-2666-de-roberto-bolano\/"},"headline":"Los retos de llevar al teatro '2666' de Roberto Bola\u00f1o","datePublished":"2016-02-19T11:00:51+00:00","dateModified":"2016-02-22T10:17:00+00:00","author":{"@type":"Person","name":"dulce.ramos"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/01\/31\/arts\/3126661\/3126661-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"El director de teatro Robert Falls, asombrado y cautivado por la novela del escritor chileno, estren\u00f3 en Chicago una adaptaci\u00f3n esc\u00e9nica de cinco horas de duraci\u00f3n."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/02/19/el-reto-de-llevar-al-teatro-2666-de-roberto-bolano/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/01/31/theater/2666-a-most-difficult-novel-takes-the-stage.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="cultura/arte" />
+<title>Los retos de llevar al teatro &#8216;2666&#8217; de Roberto Bolaño &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/01/31/theater/2666-a-most-difficult-novel-takes-the-stage.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/02/19/el-reto-de-llevar-al-teatro-2666-de-roberto-bolano/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-2957 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+					<span class="pipe">|</span>
+				Los retos de llevar al teatro &#8216;2666&#8217; de Roberto Bolaño
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/02/19/el-reto-de-llevar-al-teatro-2666-de-roberto-bolano/"
+					data-title="Cultura: Los retos de llevar al teatro &#8216;2666&#8217; de Roberto Bolaño"
+					data-author="POR JENNIFER SCHUESSLER"
+					data-media=""
+					data-description="El director de teatro Robert Falls, asombrado y cautivado por la novela del escritor chileno, estrenó en Chicago una adaptación escénica de cinco horas de duración."
+					data-publish-date="19 de febrero de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href=""></a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/arte/">Arte</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Los retos de llevar al teatro &#8216;2666&#8217; de Roberto Bolaño</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Jennifer Schuessler</span>
+</span>
+
+					<time class="dateline" datetime="2016-02-19">19 de febrero de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/02/19/el-reto-de-llevar-al-teatro-2666-de-roberto-bolano/"
+							data-title="Cultura: Los retos de llevar al teatro &#8216;2666&#8217; de Roberto Bolaño"
+							data-author="POR JENNIFER SCHUESSLER"
+							data-media=""
+							data-description="El director de teatro Robert Falls, asombrado y cautivado por la novela del escritor chileno, estrenó en Chicago una adaptación escénica de cinco horas de duración."
+							data-publish-date="19 de febrero de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004162357" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/31/arts/3126661/3126661-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/31/arts/3126661/3126661-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/31/arts/3126661/3126661-superJumbo.jpg" data-mediaviewer-caption="Los actores Demetrios Troy (a la izquierda) y Lawrence Grimm ensayan una escena de la obra “2666”, en el Goodman Theater de Chicago. " data-mediaviewer-credit="Rob Hart para The New York Times
+"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/31/arts/3126661/3126661-master1050.jpg"/>
+		<meta itemprop="height" content="673" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Los actores Demetrios Troy (a la izquierda) y Lawrence Grimm ensayan una escena de la obra “2666”, en el Goodman Theater de Chicago. </span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Rob Hart para The New York Times
+
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/01/31/theater/2666-a-most-difficult-novel-takes-the-stage.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="317" data-total-count="317" id="story-continues-2" tabindex="-1">CHICAGO — “<a href="http://www.nytimes.com/2008/11/09/books/review/Lethem-t.html" target="_blank">2666</a>”, la última novela del escritor chileno <a href="http://www.nytimes.com/topic/person/roberto-bolano?inline=nyt-per" target="_blank">Roberto Bolaño</a>, es oscura y enigmática, salvajemente digresiva, a veces densamente filosófica y, sobre todo, extremadamente larga. Desde su publicación póstuma en 2004, ha asombrado, cautivado, desconcertado y exasperado a lectores en todo el mundo.</p>
+<p class="story-body-text story-content" data-para-count="176" data-total-count="493" id="story-continues-3" tabindex="-1">El director de teatro Robert Falls está entre esos lectores asombrados y cautivados, aunque también admite haberse sentido algo desconcertado, e incluso bastante exasperado.</p>
+<p class="story-body-text story-content" data-para-count="442" data-total-count="935" id="story-continues-4" tabindex="-1">“Tan solo explicar de qué se trata la novela tomaría 45 minutos”, afirmó hace poco Falls, quien desde hace mucho tiempo ha sido el director artístico del Teatro Goodman en Chicago. Pero eso no le impidió convertirla en una adaptación escénica de cinco horas que <a href="https://www.goodmantheatre.org/2666" target="_blank">se estrenó</a> el sábado 6 de febrero. Es la culminación de lo que describe como casi una década de esfuerzos para llevar ese monstruo colosal de Bolaño a las tablas.</p>
+<p class="story-body-text story-content" data-para-count="249" data-total-count="1184" id="story-continues-5" tabindex="-1">&#8220;Hace años me obsesioné con esta novela y todavía no sé exactamente por qué&#8221;, comentó Falls. &#8220;El proceso de montarla es parte de un intento por averiguar a qué respondo personalmente. Todavía no lo sé con exactitud&#8221;.</p>
+<figure id="media-100000004162362" class="media photo media-100000004162362 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/31/arts/3126662/3126662-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-7">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/31/arts/3126662/3126662-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/31/arts/3126662/3126662-superJumbo.jpg" data-mediaviewer-caption="Robert Falls, left, and Seth Bockley watching a rehearsal for “2666” at the Goodman Theater in Chicago." data-mediaviewer-credit="Rob Hart for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/31/arts/3126662/3126662-master675.jpg"/>
+		<meta itemprop="height" content="448" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Robert Falls, left, and Seth Bockley watching a rehearsal for “2666” at the Goodman Theater in Chicago.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Rob Hart for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="639" data-total-count="1823" id="story-continues-7" tabindex="-1">Se puede decir que la novela de Bolaño —de casi 900 páginas— es sobre personajes alejados que convergen en la ficticia ciudad mexicana de Santa Teresa (creada a partir de Ciudad Juárez). Entre otros, la novela incluye a tres académicos europeos obsesionados con un escurridizo novelista alemán llamado Archimboldi, un profesor de filosofía viudo que se está volviendo loco, un detective policiaco y un periodista estadounidense atraído por los asesinatos sin resolver de cientos de mujeres jóvenes, cuyos cuerpos mutilados siguen apareciendo en el desierto (basado en la <a href="http://www.nytimes.com/2012/06/24/world/americas/wave-of-violence-swallows-more-women-in-juarez-mexico.html" target="_blank">ola real de crímenes</a> ocurrida en los años noventa).</p>
+<p class="story-body-text story-content" data-para-count="205" data-total-count="2028" id="story-continues-8" tabindex="-1">Pero “2666”, escrita en cinco partes conectadas vagamente, también explora la maldad, la memoria, el caos, la futilidad, el temor y, no menos importante, el exasperante encanto de la literatura misma.</p>
+<p class="story-body-text story-content" data-para-count="355" data-total-count="2383" id="story-continues-9" tabindex="-1">Seth Bockley, quien adaptó la obra y la dirige junto con Falls, dijo que la producción (que incluye a 15 actores que interpretan casi 80 personajes, complejas proyecciones de video e incluso una película completa que se proyecta en una pantalla que cubre el escenario en varios momentos de la obra) es como ver toda la novela de Bolaño en una sentada.</p>
+<p class="story-body-text story-content" data-para-count="417" data-total-count="2800" id="story-continues-10" tabindex="-1">“Hay momentos en que el libro es difícil de explicar pues está increíblemente lleno de digresiones. No tienes idea de qué vendrá después”, comentó Bockley. “El reto que nos propusimos no consistía en ser confusos, experimentales y salvajes, sino preguntarnos: ¿Cómo hacemos lo que hizo Bolaño pero a través del teatro, que tiene un límite de tiempo, es tridimensional y depende de los actores?”.</p>
+<p class="story-body-text story-content" data-para-count="636" data-total-count="3436" id="story-continues-11" tabindex="-1">El proyecto tuvo sus orígenes en Barcelona en 2006, donde Falls vio los carteles promocionales del libro de bolsillo, en los que aparecía una imagen con cruces rosas en el desierto y el título, ominosamente misterioso. (Su significado jamás se explica). Un amigo español le contó la historia de Bolaño, quien fue un poeta de vanguardia desconocido antes de recurrir a la ficción en los últimos años de su vida. Después saltó al estrellato con “Los detectives salvajes” y <a href="http://www.nytimes.com/2005/08/09/books/a-writer-whose-posthumous-novel-crowns-an-illustrious-career.html" target="_blank">casi a la santificación</a> con “2666”, que se apresuró a terminar antes de su muerte por insuficiencia hepática en 2003, cuando tenía 50 años.</p>
+<p class="story-body-text story-content" data-para-count="180" data-total-count="3616" id="story-continues-12" tabindex="-1">Cuando la traducción al inglés de “2666” salió a la venta en 2008, Falls “la devoró” y pronto “la llevaba a todas partes para subrayar y tachar páginas”, recordó.</p>
+<p class="story-body-text story-content" data-para-count="457" data-total-count="4073" id="story-continues-13" tabindex="-1">En 2009, Falls hizo una lectura informal de un guion parcial con el elenco de su producción de “<a href="http://www.nytimes.com/2006/10/18/theater/18ishe.html" target="_blank">El rey Lear</a>”. Más tarde sumó a Seth Bockley, un escritor y director de 34 años, cuyo ecléctico currículo incluye adaptaciones de dos cuentos del escritor estadounidense George Saunders, el libreto del musical “<a href="http://www.nytimes.com/2012/05/23/theater/reviews/february-house-at-the-public-theater.html" target="_blank">February House</a>” y algunos espectáculos para la compañía Redmoon, en Chicago, que presenta instalaciones teatrales fuera de los foros.</p>
+<p class="story-body-text story-content" data-para-count="302" data-total-count="4375" id="story-continues-14" tabindex="-1">Compartir las tareas de director “fue el gran e inusual salto para mí”, dijo Falls. “Pero admiré el trabajo de Seth, y él tenía mucha más experiencia con el uso de voces narrativas (la mayor parte de “2666” se dirige a la audiencia), lo cual es algo que en verdad jamás había hecho”.</p>
+<figure id="media-100000004168893" class="media photo media-100000004168893 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/31/arts/312666-4/312666JP-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-16">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/31/arts/312666-4/312666JP-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/31/arts/312666-4/312666JP-superJumbo.jpg" data-mediaviewer-caption="Robert Falls, bottom right, directing the filming of the movie that lowers over the stage during “2666.”" data-mediaviewer-credit="Shawn Sagady"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/31/arts/312666-4/312666JP-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Robert Falls, bottom right, directing the filming of the movie that lowers over the stage during “2666.”</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Shawn Sagady
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="393" data-total-count="4768" id="story-continues-16" tabindex="-1">En 2012 hubo una lectura dramatizada en el Teatro Goodman, pero la obra aún parecía imposible de producirse, hasta que la suerte llegó personificada en Roy Cockrum, quien fuera actor y alguna vez monje episcopal. Con parte de un premio de 153 millones de dólares que ganó en la lotería, Cockrum comenzó una fundación para las artes y eligió “2666” como <a href="http://artsbeat.blogs.nytimes.com/2015/03/13/bolanos-2666-coming-to-the-stage-thanks-to-a-powerball-jackpot/" target="_blank">primera obra beneficiaria</a>.</p>
+<p class="story-body-text story-content" data-para-count="248" data-total-count="5016" id="story-continues-17" tabindex="-1">Falls, de 61 años, se ha hecho de una reputación con los montajes a gran escala de realistas estadounidenses clásicos, como su reciente y aclamada producción de “The Iceman Cometh”, protagonizada por los actores Brian Dennehy y Nathan Lane.</p>
+<p class="story-body-text story-content" data-para-count="329" data-total-count="5345" id="story-continues-18" tabindex="-1">Pero “2666”, que se presenta fuera de la temporada regular del Teatro Goodman y está totalmente financiada por la beca de Cockrum ⎯cuyo monto asciende a una cifra &#8220;cercana o superior al millón de dólares”, según el teatro⎯, es enorme incluso para los estándares maximalistas de Falls, dijeron viejos colegas.</p>
+<p class="story-body-text story-content" data-para-count="457" data-total-count="5802" id="story-continues-19" tabindex="-1">La obra se presenta con tres intermedios. Para mantener las cosas en movimiento, Falls y Bockley redujeron la novela a los personajes y las líneas narrativas esenciales; aunque de manera periódica recuperarán algunas de las historias dentro de otras historias, dentro de otras historias, como el cuento de un pintor que pega su mano disecada a un autorretrato: una de las muchas historias de locura artística que brotan a lo largo de la obra de Bolaño.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="168" data-total-count="5970" id="story-continues-20" tabindex="-1">“Hay una sensibilidad increíblemente hermosa, digresiva y poética en Bolaño, y nos dimos cuenta de que necesitábamos dejarla aflorar de nuevo”, agregó Bockley.</p>
+<figure id="media-100000004162363" class="media photo media-100000004162363 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/01/31/arts/3126663/3126663-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-22">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/01/31/arts/3126663/3126663-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/01/31/arts/3126663/3126663-superJumbo.jpg" data-mediaviewer-caption="Notes spilling out of Roberto Bola&amp;ntilde;o&amp;rsquo;s 900-page novel, &amp;ldquo;2666.&amp;rdquo;" data-mediaviewer-credit="Rob Hart for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/01/31/arts/3126663/3126663-master675.jpg"/>
+		<meta itemprop="height" content="461" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Notes spilling out of Roberto Bola&amp;ntilde;o&amp;rsquo;s 900-page novel, &amp;ldquo;2666.&amp;rdquo;</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Rob Hart for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="330" data-total-count="6300" id="story-continues-22" tabindex="-1">Los directores y el equipo de diseño crearon un estilo distintivo para cada una de las cinco partes, afinadas según los géneros literarios radicalmente diferentes a los que Bolaño recurrió: el cuento de hadas, la novela negra explícita, la sátira académica, el cuento lírico y la picaresca al estilo de “Don Quijote”.</p>
+<p class="story-body-text story-content" data-para-count="475" data-total-count="6775" id="story-continues-23" tabindex="-1">En algún momento, los directores contemplaron la idea de hacer una parte en español, con subtítulos. Y también hubo una escena inspirada en la lucha libre con la que experimentaron en los ensayos. En esa escena arrojaban sombreros, peluches, flores de papel y otros objetos a dos actores que interpretan a unos académicos que sufren de mal de amores y pelean por una mujer, mientras una canción de <em>death metal</em> mexicano de los noventa hacía vibrar el sistema de sonido.</p>
+<p class="story-body-text story-content" data-para-count="184" data-total-count="6959" id="story-continues-24" tabindex="-1">“En realidad es como ver cinco espectáculos diferentes”, aseguró Sean Fortunato, miembro del elenco. “La gente de verdad se sorprenderá con lo rápido que avanza la obra”.</p>
+<p class="story-body-text story-content" data-para-count="399" data-total-count="7358" id="story-continues-25" tabindex="-1">La parte que retoma el estilo del cine negro, que trata de un periodista estadounidense atraído por los asesinatos sin resolver en Santa Teresa y termina formando parte de una pandilla local, se cuenta, en parte, a través de una película parecida a las de Tarantino, filmada durante cuatro días en los alrededores de Chicago, y en una taquería y una disco construidas dentro del Teatro Goodman.</p>
+<p class="story-body-text story-content" data-para-count="330" data-total-count="7688" id="story-continues-26" tabindex="-1">Pero el corazón oscuro de la novela es la cuarta sección, de 300 páginas, llamada “La parte de los crímenes”, que alterna entre la narrativa de un proceso policiaco y decenas de descripciones de un solo párrafo sobre el asesinato y la mutilación de mujeres, escritas con el estilo imperturbable de los informes forenses.</p>
+<p class="story-body-text story-content" data-para-count="449" data-total-count="8137" id="story-continues-27" tabindex="-1">El crítico Sam Anderson, en un artículo para New York Magazine, se refirió a esa sección como “por mucho, uno de los mejores tramos de ficción que he leído en mi vida”. Pero también es el lugar donde muchos lectores abandonan la novela, ya sea por aburrimiento o por puro horror. (“Cometí el error de empezar esa parte cuando estaba solo en una cabaña”, apuntó Mikhail Fiksel, uno de los diseñadores de audio de la producción).</p>
+<p class="story-body-text story-content" data-para-count="357" data-total-count="8494" id="story-continues-28" tabindex="-1">Los directores dijeron que habían recortado los informes de los asesinatos ⎯relatados por tres mujeres, al estilo de un coro griego⎯ pero después pusieron más. “De verdad siento que la audiencia debe experimentar lo que se siente cuando lees la novela, lo cual es hasta cierto punto un ‘Basta. Ya fue suficiente con las muertas’”, dijo Falls.</p>
+<p class="story-body-text story-content" data-para-count="433" data-total-count="8927" id="story-continues-29" tabindex="-1">En los ensayos, los actores que interpretan a los detectives policiacos que están menos que motivados con el caso, hicieron una selección de los chistes escabrosamente misóginos que alivian la tensión de la comedia negra. (En cambio, la lista del propio Bolaño abarca varias páginas). Hubo carcajadas, pero Falls también ofreció una analogía de la ola de asesinatos que ha invadido a los barrios de las minorías de Chicago.</p>
+<p class="story-body-text story-content" data-para-count="184" data-total-count="9111" id="story-continues-30" tabindex="-1">“Vivimos en un mundo donde la gente está siendo asesinada constantemente”, dijo durante una pausa. “¿Cuántos asesinatos más tiene que haber antes de que nos demos cuenta?”.</p>
+<p class="story-body-text story-content" data-para-count="272" data-total-count="9383" id="story-continues-31" tabindex="-1">En la parte final, que regresa al escurridizo Archimboldi, Falls y Bockley no resuelven los asesinatos. Pero sí otorgan algo más parecido a un final que en la novela, que no concluye de verdad —como más de un crítico ha señalado—, sino que simplemente se detiene.</p>
+<p class="story-body-text story-content" data-para-count="202" data-total-count="9585" id="story-continues-32" tabindex="-1">El libro está inconcluso de muchas maneras, lo cual no puede ocurrir en una obra, comentó Falls. “Tienes que darle a la audiencia lo que desea, pero no de la forma en que creen que lo obtendrán”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/02/19/el-reto-de-llevar-al-teatro-2666-de-roberto-bolano/"
+				data-title="Cultura: Los retos de llevar al teatro &#8216;2666&#8217; de Roberto Bolaño"
+				data-author="POR JENNIFER SCHUESSLER"
+				data-media=""
+				data-description="El director de teatro Robert Falls, asombrado y cautivado por la novela del escritor chileno, estrenó en Chicago una adaptación escénica de cinco horas de duración."
+				data-publish-date="19 de febrero de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":758,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

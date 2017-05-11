@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-jumbo-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-jumbo-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-jumbo-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-jumbo-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004907906"/>
+<meta name="hdl" content="La desmovilización de las Farc: cuando los enemigos se vuelven vecinos" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20170207" />
+<meta name="utime" content="20170207140011" />
+<meta name="ptime" content="20170207140011" />
+<meta name="DISPLAYDATE" content="Feb. 7, 2017" />
+<meta name="dat" content="Feb. 7, 2017" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="la-desmovilizacion-de-las-farc-cuando-los-enemigos-se-vuelven-vecinos" />
+<meta property="og:url" content="https://www.nytimes.com/es/2017/02/07/la-desmovilizacion-de-las-farc-cuando-los-enemigos-se-vuelven-vecinos/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="La desmovilización de las Farc: cuando los enemigos se vuelven vecinos" />
+<meta property="og:description" content="De los más de siete mil rebeldes de las Farc que han empezado a dejar las armas, varios se han mudado al noreste del país, donde los habitantes locales no terminan de perdonar y olvidar." />
+<meta property="og:image" content="https://static01.nyt.com/images/2017/02/04/world/04farc1/04farc1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2017-02-07" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2017/02/07/la-desmovilizacion-de-las-farc-cuando-los-enemigos-se-vuelven-vecinos/" />
+<meta property="twitter:title" content="La desmovilización de las Farc: cuando los enemigos se vuelven vecinos" />
+<meta property="twitter:description" content="De los más de siete mil rebeldes de las Farc que han empezado a dejar las armas, varios se han mudado al noreste del país, donde los habitantes locales no terminan de perdonar y olvidar." />
+<meta name="author" content="Nicholas Casey" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Nicholas Casey" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="colombia" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="colombia" />
+<meta name="id" content="100000004907906"/>
+<meta name="wordCount" content="1787"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2017/02/07/la-desmovilizacion-de-las-farc-cuando-los-enemigos-se-vuelven-vecinos/">
+<meta name="nyt-collection:uri" content="year=2017&amp;monthnum=02&amp;day=07&amp;name=la-desmovilizacion-de-las-farc-cuando-los-enemigos-se-vuelven-vecinos">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=34917">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2017\/02\/07\/la-desmovilizacion-de-las-farc-cuando-los-enemigos-se-vuelven-vecinos\/"},"headline":"La desmovilizaci\u00f3n de las Farc: cuando los enemigos se vuelven vecinos","datePublished":"2017-02-07T14:00:11+00:00","dateModified":"2017-02-07T11:26:58+00:00","author":{"@type":"Person","name":"marina.franco"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2017\/02\/04\/world\/04farc1\/04farc1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"De los m\u00e1s de siete mil rebeldes de las Farc que han empezado a dejar las armas, varios se han mudado al noreste del pa\u00eds, donde los habitantes locales no terminan de perdonar y olvidar."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2017/02/07/la-desmovilizacion-de-las-farc-cuando-los-enemigos-se-vuelven-vecinos/" hreflang="es" />
+<link rel="alternate" href="https://www.nytimes.com/2017/02/04/world/americas/farc-colombia-juan-manuel-santos.html?mcid=nyt-es&amp;#038;subid=article" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="americalatina/colombia" />
+<title>La desmovilización de las Farc: cuando los enemigos se vuelven vecinos &#8211; Español</title>
+<link rel="canonical" href="https://www.nytimes.com/2017/02/04/world/americas/farc-colombia-juan-manuel-santos.html?mcid=nyt-es&#038;subid=article" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2017/02/07/la-desmovilizacion-de-las-farc-cuando-los-enemigos-se-vuelven-vecinos/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-34917 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				La desmovilización de las Farc: cuando los enemigos se vuelven vecinos
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2017/02/07/la-desmovilizacion-de-las-farc-cuando-los-enemigos-se-vuelven-vecinos/"
+					data-title="América Latina: La desmovilización de las Farc: cuando los enemigos se vuelven vecinos"
+					data-author="POR NICHOLAS CASEY"
+					data-media=""
+					data-description="De los más de siete mil rebeldes de las Farc que han empezado a dejar las armas, varios se han mudado al noreste del país, donde los habitantes locales no terminan de perdonar y olvidar."
+					data-publish-date="7 de febrero de 2017"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2ln6MzH">http://nyti.ms/2ln6MzH</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/colombia/">Colombia</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">La desmovilización de las Farc: cuando los enemigos se vuelven vecinos</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Nicholas Casey</span>
+</span>
+
+					<time class="dateline" datetime="2017-02-07">7 de febrero de 2017</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2017/02/07/la-desmovilizacion-de-las-farc-cuando-los-enemigos-se-vuelven-vecinos/"
+							data-title="América Latina: La desmovilización de las Farc: cuando los enemigos se vuelven vecinos"
+							data-author="POR NICHOLAS CASEY"
+							data-media=""
+							data-description="De los más de siete mil rebeldes de las Farc que han empezado a dejar las armas, varios se han mudado al noreste del país, donde los habitantes locales no terminan de perdonar y olvidar."
+							data-publish-date="7 de febrero de 2017"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004911754" class="media photo lede layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/02/04/world/04farc1/xxfarc1-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/02/04/world/04farc1/xxfarc1-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/02/04/world/04farc1/xxfarc1-superJumbo.jpg" data-mediaviewer-caption="Tierra Grata, un asentamiento en La Paz, Colombia, a donde se fueron a vivir los exguerrilleros. Este año, 7000 de ellos dejarán sus armas en todo el país. " data-mediaviewer-credit="Federico Rios Escobar para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/02/04/world/04farc1/xxfarc1-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Tierra Grata, un asentamiento en La Paz, Colombia, a donde se fueron a vivir los exguerrilleros. Este año, 7000 de ellos dejarán sus armas en todo el país. </span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Federico Rios Escobar para The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="https://www.nytimes.com/2017/02/04/world/americas/farc-colombia-juan-manuel-santos.html?mcid=nyt-es&#038;subid=article&#038;ref=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="119" data-total-count="119" id="story-continues-2" tabindex="-1">LA PAZ, Colombia — En la población de La Paz los días por venir pondrán a prueba qué tan bien le queda el nombre.</p>
+<p class="story-body-text story-content" data-para-count="333" data-total-count="452" id="story-continues-3" tabindex="-1">Después de medio siglo de guerra, los rebeldes de <a href="https://www.nytimes.com/es/tag/colombia/" target="_blank">Colombia</a> están dejando las armas, preparándose para ingresar a la vida civil bajo el <a href="https://www.nytimes.com/es/2016/12/01/el-congreso-de-colombia-aprueba-nuevo-acuerdo-de-paz-con-las-farc/" target="_blank">acuerdo de paz</a> firmado el año pasado. En este pueblo montañoso, nace un nuevo asentamiento de exguerrilleros –hasta ahora son 80 residentes–, uno de los muchos repartidos por todo el país.</p>
+<p class="story-body-text story-content" data-para-count="410" data-total-count="862" id="story-continues-4" tabindex="-1">Ya casi nadie viste de uniforme, el cual ha sido remplazado por el tipo de prendas que usan los pobladores que viven cerca y que observan a los exguerrilleros con cierto recelo. Las tiendas de campaña con sus postes de madera también desaparecerán y serán sustituidos por una pequeña biblioteca, un centro comunitario, una tienda: un <a href="https://www.nytimes.com/es/2016/03/21/en-un-campamento-de-las-farc-la-rutina-continua-en-medio-de-la-incertidumbre/" target="_blank">poblado en miniatura</a> que constituye un escalón para salir de la selva.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="188" data-total-count="1050" id="story-continues-5" tabindex="-1">“Hemos pasado 52 años en hamacas”, narró el comandante de los combatientes, quien todavía usa su nombre de guerra, Aldemar Altamiranda. “Ya era hora de irnos a vivir a casitas”.</p>
+<p class="story-body-text story-content" data-para-count="458" data-total-count="1508" id="story-continues-6" tabindex="-1">A lo largo del país, se calcula que 7000 integrantes de las Fuerzas Armadas Revolucionarias de Colombia, o las <a href="https://www.nytimes.com/es/tag/farc/" target="_blank">Farc</a>, entregarán sus armas a los supervisores de las Naciones Unidas este año. Las armas se fundirán y con ellas se crearán monumentos de guerra. Las Farc también esperan transformarse para convertirse en un grupo político que represente a la izquierda, como los que se crearon después de los conflictos armados en <a href="https://www.nytimes.com/es/tag/nicaragua/" target="_blank">Nicaragua</a> y <a href="https://www.nytimes.com/es/tag/el-salvador/" target="_blank">El Salvador</a>.</p>
+<figure id="media-100000004911758" class="media photo media-100000004911758 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/02/04/world/04farc2/xxfarc2-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-8">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/02/04/world/04farc2/xxfarc2-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/02/04/world/04farc2/xxfarc2-superJumbo.jpg" data-mediaviewer-caption="Las tiendas de las Farc pronto serán remplazadas por un poblado en miniatura, que incluirá una biblioteca, un centro comunitario y una tienda." data-mediaviewer-credit="Federico Rios Escobar para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/02/04/world/04farc2/xxfarc2-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Las tiendas de las Farc pronto serán remplazadas por un poblado en miniatura, que incluirá una biblioteca, un centro comunitario y una tienda.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Federico Rios Escobar para The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="387" data-total-count="1895" id="story-continues-8" tabindex="-1">El asentamiento en La Paz, llamado Tierra Grata, es la vanguardia del esfuerzo para hacer realidad el tan discutido acuerdo de paz de Colombia. El acuerdo fue <a href="https://www.nytimes.com/es/2016/10/11/el-resultado-del-plebiscito-revela-profunda-tension-entre-corrientes-liberales-y-conservadoras/" target="_blank">revocado por el voto popular</a> a finales del año pasado pero, posteriormente, el presidente Juan Manuel Santos, quien recibió <a href="https://www.nytimes.com/es/2016/10/07/juan-manuel-santos-nobel-de-la-paz-un-premio-merecido-pero-sobre-todo-oportuno/" target="_blank">el Nobel de la Paz</a> por buscar poner fin a décadas de conflicto, forzó su aprobación en el congreso.</p>
+<p class="story-body-text story-content" data-para-count="321" data-total-count="2216" id="story-continues-9" tabindex="-1">Sin embargo, la decisión del presidente de someter el acuerdo a la voluntad popular y aun así impulsar el acuerdo de paz es un trago amargo para muchos colombianos, que deja el futuro del pacto en la incertidumbre en caso de que los <a href="https://www.nytimes.com/es/2016/10/14/alvaro-uribe-el-hombre-que-esta-bloqueando-la-paz-en-colombia/" target="_blank">opositores de Santos</a> asuman el poder cuando él deje la presidencia el año que viene.</p>
+<p class="story-body-text story-content" data-para-count="341" data-total-count="2557" id="story-continues-10" tabindex="-1">La Paz es una prueba fehaciente de las divisiones persistentes del país: aunque estuvieron a favor del plebiscito, cuatro de cada diez residentes votó por revocar el acuerdo de paz. Algunos todavía tienen recuerdos amargos de la guerra y de un enemigo que alguna vez abusó de ellos pero que ahora, de repente, se convirtió en su vecino.</p>
+<p class="story-body-text story-content" data-para-count="333" data-total-count="2890" id="story-continues-11" tabindex="-1">“Muchos tienen la capacidad de perdonar, pero no podemos olvidar la violencia que todos vivimos en esos tiempos”, dijo Julio Fuentes, de 42 años, un médico que dijo haber votado en contra del acuerdo. Fuentes, cuyo hermano fue asesinado a finales de los años noventa, mencionó que ya había hecho la paz con los guerrilleros.</p>
+<p class="story-body-text story-content" data-para-count="85" data-total-count="2975" id="story-continues-12" tabindex="-1">Pero para muchos, advirtió: “Ya es cosa de cada quien si decide hacer lo mismo”.</p>
+<p class="story-body-text story-content" data-para-count="354" data-total-count="3329" id="story-continues-13" tabindex="-1">Este asentamiento de combatientes es uno de los más desarrollados, una extensión del tamaño de un rancho donde las excavadoras han limpiado la maleza. Sobre la tierra roja hay una cancha de fútbol, un comedor de concreto y un área de recepción donde el gobierno espera que los rebeldes comiencen a encontrarse con familiares abandonados hace años.</p>
+<figure id="media-100000004911757" class="media photo media-100000004911757 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/02/04/world/04farc3/xxfarc3-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-15">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/02/04/world/04farc3/xxfarc3-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/02/04/world/04farc3/xxfarc3-superJumbo.jpg" data-mediaviewer-caption="Un hombre trabaja en una de las casas prefabricadas del asentamiento.  " data-mediaviewer-credit="Federico Rios Escobar para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/02/04/world/04farc3/xxfarc3-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Un hombre trabaja en una de las casas prefabricadas del asentamiento.  </span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Federico Rios Escobar para The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="234" data-total-count="3563" id="story-continues-15" tabindex="-1">Los únicos que portan armas aquí son los miembros de la guerrilla. El perímetro está resguardado por el ejército colombiano, que se está adaptando a su nueva función: proteger a los guerrilleros en lugar de luchar contra ellos.</p>
+<p class="story-body-text story-content" data-para-count="146" data-total-count="3709" id="story-continues-16" tabindex="-1">Un contingente de las Naciones Unidas también está apostado aquí, encargado de recolectar las armas de los rebeldes antes de irse para siempre.</p>
+<p class="story-body-text story-content" data-para-count="323" data-total-count="4032" id="story-continues-17" tabindex="-1">El asentamiento se ha convertido en un lugar de reflexión. Ya sin guerra, ahora los rebeldes pasan los días cavilando sobre la vida que elegirán. ¿Regresarán a las poblaciones de las que se fueron y trabajarán la tierra? ¿Se afiliarán al nuevo partido político que los líderes de la guerrilla han prometido crear?</p>
+<p class="story-body-text story-content" data-para-count="380" data-total-count="4412" id="story-continues-18" tabindex="-1">“Muchos miran cómo se hace política aquí, con una corbata y un auto bonito y todo el dinero, y dicen: ‘No podemos hacer eso, no queremos’”, comenta Yimmy Ríos, de 47 años, agente de inteligencia insurgente en el asentamiento. Dijo que será un reto para los guerrilleros abrirse paso lentamente en un paisaje político en el que desconocen cómo dirigir una campaña.</p>
+<p class="story-body-text story-content" data-para-count="104" data-total-count="4516" id="story-continues-19" tabindex="-1">Los primeros electores a los que tienen que ganarse son a los que desconfían de la comunidad de La Paz.</p>
+<p class="story-body-text story-content" data-para-count="341" data-total-count="4857" id="story-continues-20" tabindex="-1">El pueblo, que se ubica a los pies de la sierra de Perijá, una cordillera que durante mucho tiempo fue un refugio rebelde, pasó años asolado por las Farc y sus enemigos paramilitares. En 1997, el alcalde fue asesinado a tiros en la alcaldía por hombres armados, una de las incontables muertes que los residentes atribuyen a la guerrilla.</p>
+<figure id="media-100000004911761" class="media photo media-100000004911761 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/02/04/world/04farc4/xxfarc4-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-22">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/02/04/world/04farc4/xxfarc4-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/02/04/world/04farc4/xxfarc4-superJumbo.jpg" data-mediaviewer-caption="Un miembro de las Farc con trabajadores que construyen el asentamiento." data-mediaviewer-credit="Federico Rios Escobar para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/02/04/world/04farc4/xxfarc4-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Un miembro de las Farc con trabajadores que construyen el asentamiento.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Federico Rios Escobar para The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="405" data-total-count="5262" id="story-continues-22" tabindex="-1">La turbulenta historia estaba en la mente de Alcides Daza Quintero, el subalcalde de 27 años, cuando encendió el televisor en agosto pasado y vio al presidente Santos anunciar el acuerdo de paz desde el palacio de gobierno. Tras el anuncio vino una sorpresa: el gobierno dijo que este y las Farc habían elegido La Paz como una de las zonas en las que se establecerían los guerrilleros para el desarme.</p>
+<p class="story-body-text story-content" data-para-count="194" data-total-count="5456" id="story-continues-23" tabindex="-1">“Fue como un porrazo”, dijo Quintero, explicando que ninguna de las partes había consultado al pueblo. “Recibir a un grupo que ha estado al margen de la ley como este. Nos dieron duro”.</p>
+<p class="story-body-text story-content" data-para-count="362" data-total-count="5818" id="story-continues-24" tabindex="-1">El resto del pueblo estaba sumido en una profunda ambivalencia. Algunos fueron a protestar a la alcaldía. Otros, como Juan Martínez, un líder comunitario en el poblado cercano de San José del Oriente, argumentaron que la presencia de los guerrilleros sería algo bueno, ya que el Estado pondría atención en su pueblo, donde solo hay agua dos horas al día.</p>
+<p class="story-body-text story-content" data-para-count="111" data-total-count="5929" id="story-continues-25" tabindex="-1">“De este acuerdo han salido promesas”, dijo. “Es, se podría decir, el comienzo de la reconciliación”.</p>
+<p class="story-body-text story-content" data-para-count="327" data-total-count="6256" id="story-continues-26" tabindex="-1">Las Farc siguieron adelante, bajaron de las montañas y se ubicaron en un terreno cercano a La Paz en el otoño. Sin embargo, se toparon con una fría bienvenida: los yukpa, un grupo indígena seminómada que controlaba el terreno, dijeron a los insurgentes que no eran bienvenidos y que pronto tendrían que irse a otra parte.</p>
+<figure id="media-100000004911991" class="media photo media-100000004911991 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/02/04/world/04farc05/04farc05-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-28">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/02/04/world/04farc05/04farc05-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/02/04/world/04farc05/04farc05-superJumbo.jpg" data-mediaviewer-caption="San José del Oriente, un poblado cercano a Tierra Grata. Un líder comunitario dijo que la presencia de los rebeldes era buena y atraería la atención del gobierno federal." data-mediaviewer-credit="Federico Rios Escobar para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/02/04/world/04farc05/04farc05-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">San José del Oriente, un poblado cercano a Tierra Grata. Un líder comunitario dijo que la presencia de los rebeldes era buena y atraería la atención del gobierno federal.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Federico Rios Escobar para The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="82" data-total-count="6338" id="story-continues-28" tabindex="-1">Después vino el plebiscito de octubre, un rechazo que sorprendió a los rebeldes.</p>
+<p class="story-body-text story-content" data-para-count="304" data-total-count="6642" id="story-continues-29" tabindex="-1">“Estábamos todos pegados al radio, para saber el resultado, y de ahí con los comandantes para que nos dijeran qué seguía”, dijo un guerrillero de 25 años proveniente de la ciudad costera de Barranquilla que se hace llamar José. Al igual que los demás, oculta su nombre por miedo a represalias.</p>
+<p class="story-body-text story-content" data-para-count="288" data-total-count="6930" id="story-continues-30" tabindex="-1">Los principales comandantes de las Farc no tardaron en tranquilizar al público al decir que, a pesar del fracaso del plebiscito, estaban abiertos a renegociaciones y no volverían a la guerra. Altamiranda, el comandante en La Paz, decidió que era hora de presentarse ante sus críticos.</p>
+<p class="story-body-text story-content" data-para-count="347" data-total-count="7277" id="story-continues-31" tabindex="-1">Una noche a finales de octubre, cientos de personas se reunieron en un parque municipal, mientras líderes religiosos, políticos y rebeldes debatían el acuerdo. Las víctimas tomaron el micrófono y hablaron de los seres queridos que habían muerto durante la guerra. Altamiranda pronunció una disculpa pública por los delitos de la guerrilla.</p>
+<p class="story-body-text story-content" data-para-count="427" data-total-count="7704" id="story-continues-32" tabindex="-1">Los acontecimientos lograron conmover a líderes como Sol Marina Torres, de 39 años, quien forma parte del Centro Democrático, el partido de derecha que dirigió la campaña contra el acuerdo, así como los esfuerzos constantes para sabotearlo. Torres decidió alinearse en contra de los líderes de su partido y apoyar la presencia de los guerrilleros en su pueblo, diciendo que no había otra opción más que hacer la paz.</p>
+<p class="story-body-text story-content" data-para-count="134" data-total-count="7838" id="story-continues-33" tabindex="-1">“No puedo estar de acuerdo con todo lo de ese partido”, dijo Torres. “No puedo darle la espalda al bienestar de mi comunidad”.</p>
+<figure id="media-100000004911768" class="media photo media-100000004911768 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/02/04/world/04farc6/xxfarc6-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-35">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/02/04/world/04farc6/xxfarc6-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/02/04/world/04farc6/xxfarc6-superJumbo.jpg" data-mediaviewer-caption="Un campesino seca maíz en San José del Oriente." data-mediaviewer-credit="Federico Rios Escobar para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/02/04/world/04farc6/xxfarc6-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Un campesino seca maíz en San José del Oriente.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Federico Rios Escobar para The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="51" data-total-count="7889" id="story-continues-35" tabindex="-1">No todos los eventos públicos han salido tan bien.</p>
+<p class="story-body-text story-content" data-para-count="350" data-total-count="8239" id="story-continues-36" tabindex="-1">Durante una visita de medios informativos a principios de este año, hubo un escándalo cuando se mostraron videos de insurgentes bailando con funcionarios de las Naciones Unidas que estaban ahí para supervisar el proceso de desarme. Los opositores al acuerdo se apoderaron del video y, acto seguido, cuatro miembros de la misión fueron despedidos.</p>
+<p class="story-body-text story-content" data-para-count="350" data-total-count="8589" id="story-continues-37" tabindex="-1">El gobierno sabe que en estos asentamientos hay mucho más en juego que el desarme, ya que ven la posibilidad de que se desarrollen vastos tramos de la provincia que estuvieron fuera de su alcance durante décadas por el conflicto. Uno de los asentamientos yace en una remota selva costera; otro, al final de un camino al que se llega a lomo de mula.</p>
+<p class="story-body-text story-content" data-para-count="99" data-total-count="8688" id="story-continues-38" tabindex="-1">Desde hace décadas no se siente la presencia estable de un gobierno, si es que alguna vez la hubo.</p>
+<p class="story-body-text story-content" data-para-count="170" data-total-count="8858" id="story-continues-39" tabindex="-1">“Estamos hablando de lugares donde han estado las Farc: no había agua ni electricidad”, dijo Carlos Córdoba, director gubernamental de las llamadas zonas veredales.</p>
+<p class="story-body-text story-content" data-para-count="309" data-total-count="9167" id="story-continues-40" tabindex="-1">En el campo a las afueras de La Paz, aún se pueden ver algunas de las facetas de la vida guerrillera. Los combatientes siguen levantándose en la madrugada, a las 4:30, pero para tomar clases sobre el acuerdo de paz, en lugar de marchar. Un guerrillero patrulla el campo cautelosamente con un arma al hombro.</p>
+<figure id="media-100000004911779" class="media photo media-100000004911779 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/02/04/world/04farc7/xxfarc7-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-42">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/02/04/world/04farc7/xxfarc7-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/02/04/world/04farc7/xxfarc7-superJumbo.jpg" data-mediaviewer-caption="Ya sin guerra, muchos en los asentamientos pasan los días pensando en qué sigue, considerando opciones como regresar a sus hogares para trabajar la tierra." data-mediaviewer-credit="Federico Rios Escobar para The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2017/02/04/world/04farc7/xxfarc7-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Ya sin guerra, muchos en los asentamientos pasan los días pensando en qué sigue, considerando opciones como regresar a sus hogares para trabajar la tierra.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Federico Rios Escobar para The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="120" data-total-count="9287" id="story-continues-42" tabindex="-1">Otras escenas han cambiado. A la entrada del campo, una joven guerrillera abrazaba a sus familiares. La familia lloraba.</p>
+<p class="story-body-text story-content" data-para-count="212" data-total-count="9499" id="story-continues-43" tabindex="-1">La mayoría de los combatientes entrevistados dijeron que planeaban quedarse con las Farc, que ahora consideran su familia, y las seguirán bajo cualquier encarnación política que asuman en los próximos años.</p>
+<p class="story-body-text story-content" data-para-count="207" data-total-count="9706" id="story-continues-44" tabindex="-1">“No había manera de salir de donde vengo”, dijo Yackeline, de 32 años, una guerrillera que huyó a un campo rebelde cuando tenía 13 porque dice que era el único lugar donde podía recibir educación.</p>
+<p class="story-body-text story-content" data-para-count="179" data-total-count="9885" id="story-continues-45" tabindex="-1">No se había puesto en contacto con su familia, pero dijo que lo haría. Iba poco a poco, un paso a la vez, y cada cambio de vida después del conflicto estaba lleno de sorpresas.</p>
+<p class="story-body-text story-content" data-para-count="136" data-total-count="10021" id="story-continues-46" tabindex="-1">“Nos levantamos de los colchones cansados, como si no hubiéramos dormido”, contó. “Es que no estamos acostumbrados a usarlos”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/acuerdo-de-paz/" rel="tag">Acuerdo de paz</a>, <a href="https://www.nytimes.com/es/tag/colombia/" rel="tag">Colombia</a>, <a href="https://www.nytimes.com/es/tag/farc/" rel="tag">Farc</a>, <a href="https://www.nytimes.com/es/tag/juan-manuel-santos/" rel="tag">Juan Manuel Santos</a>, <a href="https://www.nytimes.com/es/tag/la-paz/" rel="tag">La Paz</a>, <a href="https://www.nytimes.com/es/tag/santander/" rel="tag">Santander</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2017/02/07/la-desmovilizacion-de-las-farc-cuando-los-enemigos-se-vuelven-vecinos/"
+				data-title="América Latina: La desmovilización de las Farc: cuando los enemigos se vuelven vecinos"
+				data-author="POR NICHOLAS CASEY"
+				data-media=""
+				data-description="De los más de siete mil rebeldes de las Farc que han empezado a dejar las armas, varios se han mudado al noreste del país, donde los habitantes locales no terminan de perdonar y olvidar."
+				data-publish-date="7 de febrero de 2017"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/02/01/todos-somos-buenos-el-proyecto-que-busca-desafiar-los-prejuicios-de-los-colombianos/">
+					<div class="story-body">
+						<h3 class="kicker">Fotografía</h3>
+
+						<h2 class="headline">
+							<span class="title">Todos Somos Buenos, el proyecto que busca desafiar los prejuicios de los colombianos</span>
+							<time class="dateline">1 de febrero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/02/02/universal/es/02todossomosbuenosES-slide-T9JI/02todossomosbuenosES-slide-T9JI-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/12/01/el-congreso-de-colombia-aprueba-nuevo-acuerdo-de-paz-con-las-farc/">
+					<div class="story-body">
+						<h3 class="kicker">Colombia</h3>
+
+						<h2 class="headline">
+							<span class="title">El Congreso de Colombia aprueba nuevo acuerdo de paz con las Farc</span>
+							<time class="dateline">1 de diciembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/12/02/world/01COLOMBIA-1/01COLOMBIA-1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/02/06/juventus-inter-dos-goleadores-higuain-icardi-y-el-mundo-de-machos-del-futbol/">
+					<div class="story-body">
+						<h3 class="kicker">Fútbol</h3>
+
+						<h2 class="headline">
+							<span class="title">Juventus-Inter: dos goleadores argentinos y el mundo de &#8220;machos&#8221; del fútbol</span>
+							<time class="dateline">6 de febrero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/02/07/universal/es/6ezequielES1/6ezequielES1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/02/04/en-bogota-los-sabores-y-los-ingredientes-regionales-estan-de-vuelta/">
+					<div class="story-body">
+						<h3 class="kicker">Colombia</h3>
+
+						<h2 class="headline">
+							<span class="title">En Bogotá, los sabores y los ingredientes regionales están de moda</span>
+							<time class="dateline">4 de febrero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/02/05/travel/05BOGOTA6/05BOGOTA6-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":893,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

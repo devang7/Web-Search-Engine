@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content=""/>
+<meta name="hdl" content="Los 10 libros que marcaron 2016" />
+<meta name="col" content="Cultura" id="column-name" />
+<meta name="pdate" content="20161212" />
+<meta name="utime" content="20161212181744" />
+<meta name="ptime" content="20161212181744" />
+<meta name="DISPLAYDATE" content="Dec. 12, 2016" />
+<meta name="dat" content="Dec. 12, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="los-10-libros-que-marcaron-2016" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/12/12/los-10-libros-que-marcaron-2016/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Los 10 libros que marcaron 2016" />
+<meta property="og:description" content="De las obras publicadas este año en nuestro idioma, estos diez libros tal vez no sean los mejores ni los más importantes, pero quizá sean los más significativos. " />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/11/27/books/review/27notables-gif/27notables-gif-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-12-12" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/12/12/los-10-libros-que-marcaron-2016/" />
+<meta property="twitter:title" content="Los 10 libros que marcaron 2016" />
+<meta property="twitter:description" content="De las obras publicadas este año en nuestro idioma, estos diez libros tal vez no sean los mejores ni los más importantes, pero quizá sean los más significativos. " />
+<meta name="author" content="Jorge Carrión" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por Jorge Carrión" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="cultura" />
+<meta name="cd12" content="libros" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="cultura" />
+<meta name="ser" content="libros" />
+<meta name="id" content=""/>
+<meta name="wordCount" content="2020"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/12/12/los-10-libros-que-marcaron-2016/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=12&amp;day=12&amp;name=los-10-libros-que-marcaron-2016">
+<meta name="PT" content="article">
+<meta name="article:section" content="Cultura">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/6?exclude=31185">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/12\/12\/los-10-libros-que-marcaron-2016\/"},"headline":"Los 10 libros que marcaron 2016","datePublished":"2016-12-12T18:17:44+00:00","dateModified":"2016-12-15T13:10:03+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/11\/27\/books\/review\/27notables-gif\/27notables-gif-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"De las obras publicadas este a\u00f1o en nuestro idioma, estos diez libros tal vez no sean los mejores ni los m\u00e1s importantes, pero quiz\u00e1 sean los m\u00e1s significativos. "}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/12/12/los-10-libros-que-marcaron-2016/" hreflang="es" />
+<meta name="dfp-ad-unit-path" content="cultura/libros" />
+<title>Los 10 libros que marcaron 2016 &#8211; Español</title>
+<link rel="canonical" href="https://www.nytimes.com/es/2016/12/12/los-10-libros-que-marcaron-2016/" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/12/12/los-10-libros-que-marcaron-2016/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-31185 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+					<span class="pipe">|</span>
+				Los 10 libros que marcaron 2016
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/12/12/los-10-libros-que-marcaron-2016/"
+					data-title="Cultura: Los 10 libros que marcaron 2016"
+					data-author="POR JORGE CARRIóN"
+					data-media=""
+					data-description="De las obras publicadas este año en nuestro idioma, estos diez libros tal vez no sean los mejores ni los más importantes, pero quizá sean los más significativos. "
+					data-publish-date="12 de diciembre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2gArSfo">http://nyti.ms/2gArSfo</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/libros/">Libros</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Los 10 libros que marcaron 2016</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Jorge Carrión</span>
+</span>
+
+					<time class="dateline" datetime="2016-12-12">12 de diciembre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/12/12/los-10-libros-que-marcaron-2016/"
+							data-title="Cultura: Los 10 libros que marcaron 2016"
+							data-author="POR JORGE CARRIóN"
+							data-media=""
+							data-description="De las obras publicadas este año en nuestro idioma, estos diez libros tal vez no sean los mejores ni los más importantes, pero quizá sean los más significativos. "
+							data-publish-date="12 de diciembre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004786289" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/11/27/books/review/27notables-gif/27notables-gif-master1050.gif" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/11/27/books/review/27notables-gif/27notables-gif-master1050.gif" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/11/27/books/review/27notables-gif/27notables-gif-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit="Roman Muradov"  itemprop="url" itemid="https://static01.nyt.com/images/2016/11/27/books/review/27notables-gif/27notables-gif-master1050.gif"/>
+		<meta itemprop="height" content="984" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Roman Muradov
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="318" data-total-count="318" id="story-continues-2" tabindex="-1">De las obras publicadas este año en nuestro idioma, estos diez libros tal vez no sean los mejores ni los más importantes, pero quizá sean los más significativos. Han sido leídos, comentados, discutidos y difundidos. Han generado comunidad y debate, una de las pocas caras fundamentales del poliedro de la cultura.</p>
+<p class="story-body-text story-content" data-para-count="308" data-total-count="626" id="story-continues-3" tabindex="-1">Esta selección trata de representar el espacio iberoamericano, pero su autor —pese a sus viajes y redes—, vive para bien o para mal en Barcelona. Acá los lectores encontrarán ficción, poesía, canción, crónica y ensayo, escritos por emergentes y consagrados, pistas, invitaciones, en fin, lecturas.</p>
+<figure id="media-100000004818310" class="media photo media-100000004818310 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/12/universal/es/DylanLetrasES/DylanLetrasES-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-5">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/12/universal/es/DylanLetrasES/DylanLetrasES-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/12/universal/es/DylanLetrasES/DylanLetrasES-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/12/universal/es/DylanLetrasES/DylanLetrasES-master315.jpg"/>
+		<meta itemprop="height" content="441" />
+		<meta itemprop="width" content="315" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="32" data-total-count="658" id="story-continues-5" tabindex="-1"><strong>Bob Dylan<br /><em>Letras completas</em><br />Malpaso</strong></p>
+<p class="story-body-text story-content" data-para-count="672" data-total-count="1330" id="story-continues-6" tabindex="-1">La faja publicitaria lo dice todo: “Premio Nobel de Literatura 2016. Obra lírica completa. 1962-2016”. A estas 1297 páginas de versos sólo les falta la música; pero su lector ideal seguramente la lleve incorporada en su cabeza. Como no es mi caso, esperaré a febrero a que Malpaso publique <em>Crónicas</em>, la colección de destellos en que Dylan examinó su vida contracultural, pues no necesita banda sonora para ser disfrutada. Sobre el significado de este premio Nobel ya <a href="http://www.nytimes.com/es/2016/10/13/bob-dylan-el-primer-nobel-del-futuro/" target="_blank">escribí</a> en su día. Esa polémica se ha ido apagando, pero la que importa se mantiene viva desde 1965: ¿La traducción de “Like a rolling stone” es ”Como un canto rodado”? ¿En serio?</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="288" data-total-count="1618" id="story-continues-7" tabindex="-1">También te interesarán: un testimonio imprescindible de la música y la cultura de la segunda mitad del siglo XX, <a href="http://www.megustaleer.com/libro/m-train/ES0138184"><em>M Train</em></a> (Lumen), de Patti Smith; o un ensayo divulgativo y poético sobre otras músicas, las de las esferas, <em><a href="http://www.blackiebooks.org/catalogo/el-universo-en-tu-mano/150" target="_blank">El universo en tu mano</a></em>, de Christophe Galfard (Blackie Books).</p>
+<figure id="media-100000004818340" class="media photo media-100000004818340 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/12/universal/es/SvetlanaES/SvetlanaES-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-9">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/12/universal/es/SvetlanaES/SvetlanaES-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/12/universal/es/SvetlanaES/SvetlanaES-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/12/universal/es/SvetlanaES/SvetlanaES-master315.jpg"/>
+		<meta itemprop="height" content="487" />
+		<meta itemprop="width" content="315" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="84" data-total-count="1702" id="story-continues-9" tabindex="-1"><strong>Svetlana Alexiévich<br /><em>Últimos testigos. Los niños de la Segunda Guerra Mundial</em><br />Debate</strong></p>
+<p class="story-body-text story-content" data-para-count="761" data-total-count="2463" id="story-continues-10" tabindex="-1">Los premios Nobel a veces tienen sentido. Sin él, por ejemplo, difícilmente hubiéramos dispuesto tan rápidamente en castellano de los títulos más emblemáticos de Alexiévich, una cronista mayúscula que construye arquitecturas complejas a partir de decenas de testimonios; o, como se ha definido a sí misma, una historiadora del alma humana -o, al menos, de la soviética. Todos sus libros son igualmente poliédricos y fascinantes, pero <em>Últimos testigos</em> aborda una edad que nos conmueve particularmente: la infancia. Si en la Segunda Guerra Mundial murieron cerca de trece millones de niños, la entrevistadora se encontró en los años ochenta con algunos de los supervivientes de Bielorrusia y recogió su visión coral del desastre. Imprescindible.</p>
+<p class="story-body-text story-content" data-para-count="320" data-total-count="2783" id="story-continues-11" tabindex="-1">También te interesarán: un ensayo en primera persona de Valeria Luiselli sobre la inmigración a los Estados Unidos (en la era de Trump), <a href="http://sextopiso.mx/tienda/los-ninos-perdidos/" target="_blank"><em>Los niños perdidos</em></a> (Sexto Piso); o una novela sin ficción sobre la pervivencia del espíritu nazi en Chile, Sprinters. <a href="http://hueders.cl/sprinters-los-ninos-de-colonia-dignidad/" target="_blank"><em>Los niños de la Colonia Dignidad</em></a> (Hueders), de Lola Larra.</p>
+<figure id="media-100000004818374" class="media photo media-100000004818374 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/12/universal/es/MagistralES/MagistralES-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-13">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/12/universal/es/MagistralES/MagistralES-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/12/universal/es/MagistralES/MagistralES-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/12/universal/es/MagistralES/MagistralES-master315.jpg"/>
+		<meta itemprop="height" content="465" />
+		<meta itemprop="width" content="315" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="50" data-total-count="2833" id="story-continues-13" tabindex="-1"><strong>Rubén Martín Giráldez<br /><em>Magistral</em><br />Jekyll &amp; Jill</strong></p>
+<p class="story-body-text story-content" data-para-count="573" data-total-count="3406" id="story-continues-14" tabindex="-1">La novela española más discutida –elogiada y vilipendiada a partes iguales– de este 2016 es un alegato en contra de la literatura domesticada, un grito a favor de la posibilidad de gritar, en este mundo nuestro de redes sociales que te invitan amablemente a que no levantes la voz. En la línea del Juan Goytisolo de <em>Reivindicación del conde don Julián</em>, invocando al experimental Ben Marcus, Martín Giráldez firma un libro incómodo y (realmente) necesario, que obliga a pensar en el español y en la literatura de hoy, ofendiéndonos a todos sin ofender a nadie.</p>
+<p class="story-body-text story-content" data-para-count="422" data-total-count="3828" id="story-continues-15" tabindex="-1">También te interesarán: otra escritora joven que experimenta a partir de materiales de extracciones aparentemente contradictorias, la boliviana Liliana Colanzi, quien acaba de publicar <a href="http://tienda.almadia.com.mx/libro/nuestro-mundo-muerto_863" target="_blank"><em>Nuestro mundo muerto</em></a> (El Cuervo/Almadía); o <a href="http://www.planetadelibros.com/libro-marienbad-electrico/209794" target="_blank"><em>Marienbad eléctrico</em></a> (Seix Barral), un tango electrónico y literario que bailan el escritor Enrique Vila-Matas y la artista Dominique Gonzalez-Foerster en las redes del arte contemporáneo.</p>
+<figure id="media-100000004818394" class="media photo media-100000004818394 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/12/universal/es/LuciaBerlinES/LuciaBerlinES-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-17">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/12/universal/es/LuciaBerlinES/LuciaBerlinES-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/12/universal/es/LuciaBerlinES/LuciaBerlinES-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/12/universal/es/LuciaBerlinES/LuciaBerlinES-master315.jpg"/>
+		<meta itemprop="height" content="505" />
+		<meta itemprop="width" content="315" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="55" data-total-count="3883" id="story-continues-17" tabindex="-1"><strong>Lucia Berlin<br /><em>Manual para mujeres de la limpieza</em><br />Alfaguara</strong></p>
+<p class="story-body-text story-content" data-para-count="618" data-total-count="4501" id="story-continues-18" tabindex="-1">Estos relatos son muy buenos. Y desgarrados, eléctricos, alcohólicos, autobiográficos. Y –sobre todo– muy inesperados. No nos esperábamos que existiera una escritora como Berlin. Admirada por Lydia Davis, fue enfermera, señora de la limpieza y profesora de escritura en la cárcel. Recorrió América y fue ambientando sus ficciones viscerales en varios de sus puntos: de Idaho a Santiago de Chile, pasando por Nueva York, El Paso o California. Esta antología esencial, excelentemente traducida por Eugenia Vázquez, abre varias ventanas a una escritora maldita que supo convertir su vida en gran literatura.</p>
+<p class="story-body-text story-content" data-para-count="215" data-total-count="4716" id="story-continues-19" tabindex="-1">También te interesarán: los tensos y exigentes relatos de <a href="https://www.anagrama-ed.es/libro/narrativas-hispanicas/mala-letra/9788433998057/NH_558" target="_blank"><em>Mala letra</em></a> (Anagrama) de Sara Mesa; o esa novela lenta y preciosa sobre la vida como escritura titulada <a href="http://www.librosdelasteroide.com/-a-contraluz" target="_blank"><em>A contraluz</em></a> (Libros del Asteroide), de Rachel Cusk.</p>
+<figure id="media-100000004818414" class="media photo media-100000004818414 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/12/universal/es/VilasES/VilasES-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-21">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/12/universal/es/VilasES/VilasES-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/12/universal/es/VilasES/VilasES-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/12/universal/es/VilasES/VilasES-master315.jpg"/>
+		<meta itemprop="height" content="489" />
+		<meta itemprop="width" content="315" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="45" data-total-count="4761" id="story-continues-21" tabindex="-1"><strong>Manuel Vilas<br /><em>Poesía completa (1980-2015)</em><br />Visor</strong></p>
+<p class="story-body-text story-content" data-para-count="769" data-total-count="5530" id="story-continues-22" tabindex="-1">Este libro debería ser leído en todos los institutos de secundaria y en todos los hospitales psiquiátricos. Es un libro de autoayuda disfrazado de antología poética. Tiene dos partes: la primera, que reúne piezas escritas entre 1980 y 2000, es interesante; la segunda, de 2005 hasta antes de ayer, es fundamental. Ésta comienza con <em>Resurrección</em>, el libro que mató al viejo Manuel y creó a Vilas, un experimento de auto-ficción poética sin precedentes en los libros que yo he leído; y termina con <em>El hundimiento</em>, el libro que acaba con Vilas y con todos nosotros. Brutal. Definitivo. Me pregunto cómo volverá a resucitar de sus cenizas quien escribió “Él dijo que te amaba, te inundaba a guasaps”, el mismo que escribió “Ya no me quiere nadie”.</p>
+<p class="story-body-text story-content" data-para-count="298" data-total-count="5828" id="story-continues-23" tabindex="-1">También te interesarán: la antología de poesía española actual titulada <a href="http://www.vasoroto.com/?lg=es&amp;id=4&amp;lid=191" target="_blank"><em>La cuarta persona del plural</em></a> (Vaso Roto), prologada y editada con rigor por Vicente Luis Mora; o la poesía completa de otro autor rabiosamente contemporáneo, el costarricense Luis Chaves (<a href="http://www.planetadelibros.com.ar/falso-documental-libro-217190.html" target="_blank"><em>Falso documental</em></a>, Seix Barral).</p>
+<figure id="media-100000004818428" class="media photo media-100000004818428 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/12/universal/es/CholosES/CholosES-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-25">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/12/universal/es/CholosES/CholosES-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/12/universal/es/CholosES/CholosES-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/12/universal/es/CholosES/CholosES-master315.jpg"/>
+		<meta itemprop="height" content="575" />
+		<meta itemprop="width" content="315" />
+	</div>
+</figure>
+
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="52" data-total-count="5880" id="story-continues-25" tabindex="-1"><strong>Marco Avilés<br /><em>De dónde venimos los cholos</em><br />Seix Barral</strong></p>
+<p class="story-body-text story-content" data-para-count="849" data-total-count="6729" id="story-continues-26" tabindex="-1">Si la literatura debe remover conciencias, la crónica debe vapulearlas. Marco Avilés –uno de los máximos representantes de la revista Etiqueta Negra, tal vez la mayor escuela de periodismo de América Latina– ha agitado las mentes de su país con este libro provocador de prosa seductora. ¿Qué es “un cholo”? ¿Cuántas capas de racismo cubren esa palabra? ¿No somos todos cholos, inmigrantes, mezcla, mestizaje, cócteles más o menos molotov? Para reflejar esa condición, la humana, este libro hibrida el viaje por la geografía de Perú, la entrevista, el perfil y la autobiografía. Particularmente memorables, de hecho, son la introducción y el epílogo, donde el autor, que nació en Los Andes y ahora vive en Estados Unidos, da claves personales para entender su obsesión por el racismo que este libro deconstruye y denuncia.</p>
+<p class="story-body-text story-content" data-para-count="373" data-total-count="7102" id="story-continues-27" tabindex="-1">También te interesarán: un libro escrito por un autor peruano de la misma generación, también afín a Etiqueta Negra, la desafiante novela <a href="http://www.planetadelibros.com/libro-nuevos-juguetes-de-la-guerra-fria/209193" target="_blank"><em>Nuevos juguetes de la guerra fría</em></a> (Seix Barral), de Juan Manuel Robles; u otra novela sofisticada que habla de un país todavía más esquizofrénico, la Venezuela del chavismo: <a href="http://www.megustaleer.com/libro/the-night/ES0140166" target="_blank"><em>The Night</em></a> (Alfaguara), de Rodrigo Blanco Calderón.</p>
+<figure id="media-100000004818442" class="media photo media-100000004818442 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/12/universal/es/CarrionES/CarrionES-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-29">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/12/universal/es/CarrionES/CarrionES-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/12/universal/es/CarrionES/CarrionES-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/12/universal/es/CarrionES/CarrionES-master315.jpg"/>
+		<meta itemprop="height" content="449" />
+		<meta itemprop="width" content="315" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="77" data-total-count="7179" id="story-continues-29" tabindex="-1"><strong>Guy Schraenen<br /><em>Querido lector. No lea</em><br />Museo Nacional Centro de Arte Reina Sofía</strong></p>
+<p class="story-body-text story-content" data-para-count="744" data-total-count="7923" id="story-continues-30" tabindex="-1">La retrospectiva de Ulises Carrión en el Reina Sofía, que en 2017 podrá verse en el Jumex de Ciudad de México, ha sido uno de los eventos culturales más importantes del año. Y su catálogo es un libro interesantísimo, que culmina la recuperación del Archivo Carrión (Tumbona Ediciones) y completa el muy recomendable ensayo Ulises Carrión, escritor (Ediciones La Bahía), de Javier Maderuelo. Incluye textos de los máximos expertos en el exescritor, curador, artista, librero, archivista, agitador, expatriado, entre otras cosas; y –sobre todo– reproduce la exposición en miniatura, a modo de museo portátil. No solo las fotografías, los dibujos, los folletos o las piezas de arte postal, también un disco con piezas sonoras.</p>
+<p class="story-body-text story-content" data-para-count="313" data-total-count="8236" id="story-continues-31" tabindex="-1">También te interesarán: una novela que mezcla sin complejos literatura y arte contemporáneo, <a href="http://www.alphadecay.org/libro/hermano-de-hielo/" target="_blank"><em>Hermano de hielo</em></a> (Alpha Decay), de la catalana Alicia Kopf; o los ensayos del gran crítico Boris Groys, <a href="http://www.cajanegraeditora.com.ar/libros/arte-en-flujo" target="_blank"><em>Arte en flujo</em></a> (Caja Negra), que diseccionan temas tan diversos como el activismo artístico, Wikileaks o Google.</p>
+<figure id="media-100000004818457" class="media photo media-100000004818457 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/12/universal/es/MorenoEs/MorenoEs-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-33">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/12/universal/es/MorenoEs/MorenoEs-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/12/universal/es/MorenoEs/MorenoEs-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/12/universal/es/MorenoEs/MorenoEs-master315.jpg"/>
+		<meta itemprop="height" content="462" />
+		<meta itemprop="width" content="315" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="42" data-total-count="8278" id="story-continues-33" tabindex="-1"><strong>María Moreno<br /><em>Black Out</em><br />Penguin Random House</strong></p>
+<p class="story-body-text story-content" data-para-count="791" data-total-count="9069" id="story-continues-34" tabindex="-1">Somos muchos los que consideramos a María Moreno la mejor cronista argentina de todos los tiempos y una de las voces documentales más lúcidas de la lengua –entre otras hipérboles razonables. Con <em>Black Out</em> nos ha sorprendido con una autobiografía etílica. Un libro que habla del tránsito entre el hogar familiar y el bar de los amigos, entre la adolescencia de lectora y la madurez de periodista, entre la ginebra y el whisky. Son cuatro las grandes figuras masculinas que retrata: Miguel Briante, Norberto Soares, Charlie Feiling y Claudio Uriarte. Como el alcohol borra las cronologías, el volumen va y viene por los tiempos con un ritmo de marea. Habla de los mismos problemas políticos y estéticos que Ricardo Piglia en sus diarios. Son lecturas absolutamente complementarias.</p>
+<p class="story-body-text story-content" data-para-count="293" data-total-count="9362" id="story-continues-35" tabindex="-1">También te interesarán: la personal interpretación de Nueva York que firma otro maestro de la crónica, Luc Santé, en <a href="http://www.librosdelko.com/products/bajos-fondos" target="_blank"><em>Bajos fondos</em></a> (Libros del K.O.); o las relaciones entre copas y literatura que va inventando Juan Tallón en las prosas exquisitas de <a href="http://circulodetiza.es/autores-2/juan-tallon/" target="_blank"><em>Mientras haya bares</em></a> (Círculo de Tiza)</p>
+<figure id="media-100000004818461" class="media photo media-100000004818461 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/12/universal/es/EspanaVaciaEs/EspanaVaciaEs-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-37">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/12/universal/es/EspanaVaciaEs/EspanaVaciaEs-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/12/universal/es/EspanaVaciaEs/EspanaVaciaEs-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/12/universal/es/EspanaVaciaEs/EspanaVaciaEs-master315.jpg"/>
+		<meta itemprop="height" content="494" />
+		<meta itemprop="width" content="315" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="40" data-total-count="9402" id="story-continues-37" tabindex="-1"><strong>Sergio del Molino<br /><em>La España vacía</em><br />Turner</strong></p>
+<p class="story-body-text story-content" data-para-count="780" data-total-count="10182" id="story-continues-38" tabindex="-1">Las dos obras literarias españolas que este año han multiplicado más rápidamente los elogios y sus lectores han sido este ensayo personal de Sergio del Molino y la novela <em>Patria</em> (Tusquets) de Fernando Aramburu. Ésta es una ficción galdosiana sobre cuarenta años de historia del País Vasco, en nuestros tiempos de post-conflicto etarra. Aquél es un completo recorrido por la geografía, la historia y las narrativas de la España interior, de la mano de un excelente prosista que sabe ser al mismo tiempo divulgativo, crítico y emocional, en nuestros tiempos de post-crisis económica y social. Ni el problema vasco ni la crisis se han superado, pero es humano buscar alivio en los libros y los españoles somos criaturas de Dios —mientras no se demuestre lo contrario.</p>
+<p class="story-body-text story-content" data-para-count="409" data-total-count="10591" id="story-continues-39" tabindex="-1">También te interesará: otro viaje por el país propio narrado con maestría, el que Alberto Salcedo Ramos ha ido haciendo por etapas a los epicentros de su Colombia, recogido ahora en <a href="http://www.pepitas.net/libro/viaje-al-macondo-real" target="_blank"><em>Viaje al Macondo real y otras crónicas</em></a> (Pepitas de Calabaza); o <a href="https://edurneportela.com/" target="_blank"><em>El eco de los disparos</em></a> (Galaxia Gutenberg), un incisivo ensayo de Edurne Portela, con dosis autobiográficas, sobre la violencia vasca y sus representaciones.</p>
+<figure id="media-100000004818465" class="media photo media-100000004818465 embedded layout-large-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/12/12/universal/es/EnardEs/EnardEs-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-41">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/12/12/universal/es/EnardEs/EnardEs-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/12/12/universal/es/EnardEs/EnardEs-superJumbo.jpg" data-mediaviewer-caption="" data-mediaviewer-credit=""  itemprop="url" itemid="https://static01.nyt.com/images/2016/12/12/universal/es/EnardEs/EnardEs-master315.jpg"/>
+		<meta itemprop="height" content="537" />
+		<meta itemprop="width" content="315" />
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="41" data-total-count="10632" id="story-continues-41" tabindex="-1"><strong>Mathias Enard<br /><em>Brújula</em><br />Penguin Random House</strong></p>
+<p class="story-body-text story-content" data-para-count="739" data-total-count="11371" id="story-continues-42" tabindex="-1">El premio Goncourt ha consagrado definitivamente a Enard como uno de los grandes escritores franceses contemporáneos. <em>Brújula</em> es el reverso luminoso de su otra obra mayor, <em>Zona</em>. Si ésta consistía en un monólogo demente por un laberinto a oscuras, en el mismo escenario mediterráneo ahora son las aventuras académicas de un grupo de orientalistas las que tejen y destejen la ficción y el ensayo. Podría haber sido una tesis doctoral, pero es una extraordinaria novela, con una mínima historia de amor que nos mantiene en vilo, no obstante su supuesta pequeñez. Como la mayor parte de su obra, <em>Brújula</em> ha sido traducida por el escritor Robert Juan-Cantavella: este esfuerzo merece ser candidato al Premio Nacional de Traducción.</p>
+<p class="story-body-text story-content" data-para-count="318" data-total-count="11689" id="story-continues-43" tabindex="-1">También te interesarán: el cuarto volumen de <em>Mi lucha</em>, la autobiografía novelada de otro novelista extremadamente ambicioso, Karl Ove Knausgard (<a href="https://www.anagrama-ed.es/libro/panorama-de-narrativas/bailando-en-la-oscuridad/9788433979575/PN_926" target="_blank"><em>Bailando en la oscuridad</em></a>, Anagrama); o <a href="http://www.todostuslibros.com/libros/los-cuatro-libros_978-84-16734-16-0" target="_blank"><em>Los cuatro libros</em></a> (Galaxia Gutenberg), la novela en que Yan Lianke narra la hecatombe que provocó Mao en la China de los años 50.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/bob-dylan/" rel="tag">Bob Dylan</a>, <a href="https://www.nytimes.com/es/tag/libros/" rel="tag">libros</a>, <a href="https://www.nytimes.com/es/tag/lucia-berlin/" rel="tag">Lucia Berlin</a>, <a href="https://www.nytimes.com/es/tag/manuel-vilas/" rel="tag">Manuel Vilas</a>, <a href="https://www.nytimes.com/es/tag/mathias-enard/" rel="tag">Mathias Enard</a>, <a href="https://www.nytimes.com/es/tag/mejores-libros-de-2016/" rel="tag">Mejores libros de 2016</a>, <a href="https://www.nytimes.com/es/tag/svetlana-alexievich/" rel="tag">Svetlana Alexiévich</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/12/12/los-10-libros-que-marcaron-2016/"
+				data-title="Cultura: Los 10 libros que marcaron 2016"
+				data-author="POR JORGE CARRIóN"
+				data-media=""
+				data-description="De las obras publicadas este año en nuestro idioma, estos diez libros tal vez no sean los mejores ni los más importantes, pero quizá sean los más significativos. "
+				data-publish-date="12 de diciembre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/07/la-familia-obama-podria-vivir-de-escribir-libros-despues-de-la-casa-blanca/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">Memorias millonarias: los Obama podrían vivir de los libros después de la Casa Blanca</span>
+							<time class="dateline">7 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/09/05/us/05WHLETTER-web1/05WHLETTER-web1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/06/aunque-muchos-predijeron-su-ocaso-los-libros-de-papel-se-mantienen/">
+					<div class="story-body">
+						<h3 class="kicker">Tecnología</h3>
+
+						<h2 class="headline">
+							<span class="title">Aunque muchos predijeron su ocaso, los libros de papel se mantienen</span>
+							<time class="dateline">6 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/09/02/us/02xp-books/02xp-books-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/11/23/la-fotografia-ha-muerto-viva-la-posfotografia/">
+					<div class="story-body">
+						<h3 class="kicker">Ensayo</h3>
+
+						<h2 class="headline">
+							<span class="title">La fotografía ha muerto, viva la posfotografía</span>
+							<time class="dateline">23 de noviembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/11/23/universal/es/23selfieES2/23selfieES2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/12/06/las-otras-apropiaciones-de-borges-y-bolano/">
+					<div class="story-body">
+						<h3 class="kicker">Ensayo</h3>
+
+						<h2 class="headline">
+							<span class="title">Las otras apropiaciones de Borges y Bolaño</span>
+							<time class="dateline">6 de diciembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/12/07/universal/es/6jordiES3/6jordiES3-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":784,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

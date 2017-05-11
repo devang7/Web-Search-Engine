@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-jumbo-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-jumbo-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-jumbo-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-jumbo-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004666472"/>
+<meta name="hdl" content="Los haitianos están desesperados ante la decisión de Estados Unidos de cerrarles las puertas" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20161003" />
+<meta name="utime" content="20161003170036" />
+<meta name="ptime" content="20161003170036" />
+<meta name="DISPLAYDATE" content="Oct. 3, 2016" />
+<meta name="dat" content="Oct. 3, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="los-haitianos-estan-desesperados-ante-la-decision-de-estados-unidos-de-cerrarles-las-puertas" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/10/03/los-haitianos-estan-desesperados-ante-la-decision-de-estados-unidos-de-cerrarles-las-puertas/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Los haitianos están desesperados ante la decisión de Estados Unidos de cerrarles las puertas" />
+<meta property="og:description" content="El gobierno de Obama anunció a finales de septiembre que endurecería la política migratoria relacionada con los haitianos, quienes cada vez viajan más desde Brasil en busca de una mejor vida en Estados Unidos." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/09/24/world/24HAITIANS1/24HAITIANS1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-10-03" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/10/03/los-haitianos-estan-desesperados-ante-la-decision-de-estados-unidos-de-cerrarles-las-puertas/" />
+<meta property="twitter:title" content="Los haitianos están desesperados ante la decisión de Estados Unidos de cerrarles las puertas" />
+<meta property="twitter:description" content="El gobierno de Obama anunció a finales de septiembre que endurecería la política migratoria relacionada con los haitianos, quienes cada vez viajan más desde Brasil en busca de una mejor vida en Estados Unidos." />
+<meta name="author" content="Kirk Semple" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Kirk Semple" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="haiti" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="haiti" />
+<meta name="id" content="100000004666472"/>
+<meta name="wordCount" content="1791"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/10/03/los-haitianos-estan-desesperados-ante-la-decision-de-estados-unidos-de-cerrarles-las-puertas/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=10&amp;day=03&amp;name=los-haitianos-estan-desesperados-ante-la-decision-de-estados-unidos-de-cerrarles-las-puertas">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=26942">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/10\/03\/los-haitianos-estan-desesperados-ante-la-decision-de-estados-unidos-de-cerrarles-las-puertas\/"},"headline":"Los haitianos est\u00e1n desesperados ante la decisi\u00f3n de Estados Unidos de cerrarles las puertas","datePublished":"2016-10-03T17:00:36+00:00","dateModified":"2016-10-04T09:57:02+00:00","author":{"@type":"Person","name":"Paula Duran"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/09\/24\/world\/24HAITIANS1\/24HAITIANS1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"El gobierno de Obama anunci\u00f3 a finales de septiembre que endurecer\u00eda la pol\u00edtica migratoria relacionada con los haitianos, quienes cada vez viajan m\u00e1s desde Brasil en busca de una mejor vida en Estados Unidos."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/10/03/los-haitianos-estan-desesperados-ante-la-decision-de-estados-unidos-de-cerrarles-las-puertas/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/09/24/world/americas/haitians-mexico-brazil-deport-united-states.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="americalatina/haiti" />
+<title>Los haitianos están desesperados ante la decisión de Estados Unidos de cerrarles las puertas &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/09/24/world/americas/haitians-mexico-brazil-deport-united-states.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/10/03/los-haitianos-estan-desesperados-ante-la-decision-de-estados-unidos-de-cerrarles-las-puertas/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-26942 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				Los haitianos están desesperados ante la decisión de Estados Unidos de cerrarles las puertas
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/10/03/los-haitianos-estan-desesperados-ante-la-decision-de-estados-unidos-de-cerrarles-las-puertas/"
+					data-title="América Latina: Los haitianos están desesperados ante la decisión de Estados Unidos de cerrarles las puertas"
+					data-author="POR KIRK SEMPLE"
+					data-media=""
+					data-description="El gobierno de Obama anunció a finales de septiembre que endurecería la política migratoria relacionada con los haitianos, quienes cada vez viajan más desde Brasil en busca de una mejor vida en Estados Unidos."
+					data-publish-date="3 de octubre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2cYA7i0">http://nyti.ms/2cYA7i0</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/haiti/">Haití</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Los haitianos están desesperados ante la decisión de Estados Unidos de cerrarles las puertas</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Kirk Semple</span>
+</span>
+
+					<time class="dateline" datetime="2016-10-03">3 de octubre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/10/03/los-haitianos-estan-desesperados-ante-la-decision-de-estados-unidos-de-cerrarles-las-puertas/"
+							data-title="América Latina: Los haitianos están desesperados ante la decisión de Estados Unidos de cerrarles las puertas"
+							data-author="POR KIRK SEMPLE"
+							data-media=""
+							data-description="El gobierno de Obama anunció a finales de septiembre que endurecería la política migratoria relacionada con los haitianos, quienes cada vez viajan más desde Brasil en busca de una mejor vida en Estados Unidos."
+							data-publish-date="3 de octubre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004667113" class="media photo lede layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/24/world/24HAITIANS1/24HAITIANS1-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/24/world/24HAITIANS1/24HAITIANS1-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/24/world/24HAITIANS1/24HAITIANS1-superJumbo.jpg" data-mediaviewer-caption="Haitians lined up to sleep at a shelter in Tijuana, Mexico. Some pretend to be Congolese in hopes of receiving better treatment from the Mexican authorities." data-mediaviewer-credit="Adam Ferguson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/24/world/24HAITIANS1/24HAITIANS1-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Haitians lined up to sleep at a shelter in Tijuana, Mexico. Some pretend to be Congolese in hopes of receiving better treatment from the Mexican authorities.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Adam Ferguson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/09/24/world/americas/haitians-mexico-brazil-deport-united-states.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="225" data-total-count="225" id="story-continues-2" tabindex="-1">TIJUANA, México — Pasaron de largo ante los cuerpos de otros migrantes que habían tratado de cruzar el continente; fueron embaucados por coyotes y desplumados por bandidos armados y, durante un buen tramo, pasaron hambre.</p>
+<p class="story-body-text story-content" data-para-count="356" data-total-count="581" id="story-continues-3" tabindex="-1">Por fin, después de meses de atravesar nueve fronteras internacionales, los haitianos lograron llegar a Tijuana, donde a miles de compatriotas ya les habían dado acceso a Estados Unidos este año. Todo lo que debían hacer, pensaban, era esperar su cita con los funcionarios migratorios y de ese modo también se les daría acceso a suelo estadounidense.</p>
+<p class="story-body-text story-content" data-para-count="223" data-total-count="804" id="story-continues-4" tabindex="-1">Entonces, sin más ni más, se enteraron de que era muy probable que su viaje, y las esperanzas de miles de otros como ellos que se dirigen hacia la frontera estadounidense, hubieran llegado a un final abrupto y devastador.</p>
+<p class="story-body-text story-content" data-para-count="342" data-total-count="1146" id="story-continues-5" tabindex="-1">El 22 de septiembre, el gobierno de Obama, en un esfuerzo por detener la extraordinaria ola de migrantes haitianos que se dirigen a Estados Unidos, anunció que endurecería la política migratoria relacionada con los haitianos. Aquellos que acudieran a la frontera estadounidense podían correr la suerte de ser enviados de regreso a Haití.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="293" data-total-count="1439" id="story-continues-6" tabindex="-1">El cambio inesperado diseminó un profundo desencanto y confusión entre los cientos de haitianos en la frontera que pensaban que estaban a unos cuantos días de ingresar a Estados Unidos. Miles más están en camino, arriesgando sus vidas en un viaje peligroso, que probablemente sea en vano.</p>
+<p class="story-body-text story-content" data-para-count="207" data-total-count="1646" id="story-continues-7" tabindex="-1">“Me siento mal, me siento mal”, dijo Renard Paul, un migrante haitiano, cuando se enteró del cambio en la política. Le costó trabajo digerir la noticia, tenía la esperanza de que fuera solo un rumor.</p>
+<p class="story-body-text story-content" data-para-count="78" data-total-count="1724" id="story-continues-8" tabindex="-1">“Toda la miseria que hemos sufrido para llegar aquí”, dijo entre dientes.</p>
+<p class="story-body-text story-content" data-para-count="311" data-total-count="2035" id="story-continues-9" tabindex="-1">Durante meses, los haitianos han estado viajando con dirección al norte desde Brasil, donde habían ido en busca de trabajo después de que Haití quedó devastado por un terremoto en 2010. En aquel entonces, Brasil, que necesitaba mano de obra barata, había recibido a muchos de ellos con visas humanitarias.</p>
+<p class="story-body-text story-content" data-para-count="196" data-total-count="2231" id="story-continues-10" tabindex="-1">Sin embargo, Brasil ha caído en la desgracia económica y política, ocasionando que muchos haitianos se queden sin trabajo, se hundan aún más en la pobreza y fijen su mirada en Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="262" data-total-count="2493" id="story-continues-11" tabindex="-1">La mayor parte del recorrido es por tierra; algunos encuentran un aliciente más para ir a la frontera debido a la elección estadounidense. El próximo presidente podría ser Donald Trump, dicen, y querían ingresar al país antes de que se construyera su muro.</p>
+<figure id="media-100000004667119" class="media photo media-100000004667119 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/24/world/24HAITIANS2/24HAITIANS2-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-13">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/24/world/24HAITIANS2/24HAITIANS2-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/24/world/24HAITIANS2/24HAITIANS2-superJumbo.jpg" data-mediaviewer-caption="A Haitian migrant after waking up in a shelter in Tijuana, Mexico on Tuesday. Migrants warn each other about the journey’s hazards and offer advice about the best smugglers using cellphone messaging apps." data-mediaviewer-credit="Adam Ferguson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/24/world/24HAITIANS2/24HAITIANS2-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A Haitian migrant after waking up in a shelter in Tijuana, Mexico on Tuesday. Migrants warn each other about the journey’s hazards and offer advice about the best smugglers using cellphone messaging apps.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Adam Ferguson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="192" data-total-count="2685" id="story-continues-13" tabindex="-1">La vanguardia de la explosión migratoria llegó aquí en mayo. Desde entonces, a más de 5000 haitianos sin visas se les ha permitido el paso por los cruces fronterizos del sur de California.</p>
+<p class="story-body-text story-content" data-para-count="288" data-total-count="2973" id="story-continues-14" tabindex="-1">Muchos otros, que según los funcionarios mexicanos llegan a los mil, todavía están en Tijuana, amontonándose en refugios para migrantes en la ciudad, hoteles baratos y cuartos en renta donde han pasado muchos días esperando sus citas con los funcionarios migratorios estadounidenses.</p>
+<p class="story-body-text story-content" data-para-count="153" data-total-count="3126" id="story-continues-15" tabindex="-1">Y miles de haitianos más están en camino, quizá muchos de ellos ignoran que se han revocado los privilegios migratorios especiales para los haitianos.</p>
+<p class="story-body-text story-content" data-para-count="375" data-total-count="3501" id="story-continues-16" tabindex="-1">Sarah Saldaña, directora del Servicio de Inmigración y Control de Aduanas de Estados Unidos, declaró ante el congreso esta semana que con base en los cálculos de algunos gobiernos centroamericanos, es probable que unos 40.000 más estén en camino, un sorprendente aumento en comparación con los cálculos iniciales que los defensores de los migrantes habían escuchado.</p>
+<p class="story-body-text story-content" data-para-count="421" data-total-count="3922" id="story-continues-17" tabindex="-1">Los haitianos han estado ingresando a Estados Unidos debido a un cambio en la política de deportación después del terremoto del 2010. En reconocimiento de la situación especial en Haití derivada de problemas políticos y económicos, los funcionarios migratorios de Estados Unidos les permitían el acceso conforme a una disposición de permiso humanitario, que les permite quedarse en el país hasta por tres años.</p>
+<p class="story-body-text story-content" data-para-count="326" data-total-count="4248" id="story-continues-18" tabindex="-1">No obstante, el 22 de septiembre, el gobierno de Obama <a href="https://www.nytimes.com/es/2016/09/23/estados-unidos-aumenta-de-manera-inesperada-las-deportaciones-de-haitianos/" target="_blank">anunció</a> que reanudaría por completo las deportaciones de haitianos indocumentados, lo cual quiere decir que cualquiera que se presente en el puesto fronterizo sin visa sería sujeto a un proceso de deportación rápida que con frecuencia se usa para migrantes sin visa.</p>
+<p class="story-body-text story-content" data-para-count="140" data-total-count="4388" id="story-continues-19" tabindex="-1">Las noticias tomaron por sorpresa a los defensores en ambos lados de la frontera, quienes batallaban para predecir qué ocurriría después.</p>
+<p class="story-body-text story-content" data-para-count="468" data-total-count="4856" id="story-continues-20" tabindex="-1">¿Los migrantes haitianos ahora se quedarían en México o se dirigirían a algún otro lugar de América Latina? ¿Los que iban en camino a Tijuana tomarían en cuenta las sugerencias de los funcionarios estadounidenses de dar media vuelta y regresar a Brasil? ¿México y otros países de América Latina ayudarían a darles asilo? ¿Algunos se quedarían esperando en la frontera, después de llegar tan lejos, para intentar cruzar ilegalmente hacia Estados Unidos?</p>
+<p class="story-body-text story-content" data-para-count="193" data-total-count="5049" id="story-continues-21" tabindex="-1">Paul, de 40 años, cuya esposa y cinco hijos viven en Haití, dijo que estaba muy seguro de una cosa: no iba a regresar a Brasil. Había pasado casi cuatro años ahí, trabajando como albañil.</p>
+<figure id="media-100000004667117" class="media photo media-100000004667117 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/24/world/24HAITIANS3/24HAITIANS3-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-23">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/24/world/24HAITIANS3/24HAITIANS3-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/24/world/24HAITIANS3/24HAITIANS3-superJumbo.jpg" data-mediaviewer-caption="A young Haitian migrant outside the Desayunador Salesiano Padre Chava shelter in Tijuana on Tuesday." data-mediaviewer-credit="Adam Ferguson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/24/world/24HAITIANS3/24HAITIANS3-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A young Haitian migrant outside the Desayunador Salesiano Padre Chava shelter in Tijuana on Tuesday.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Adam Ferguson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="130" data-total-count="5179" id="story-continues-23" tabindex="-1">“Ahí no hay nada”, dijo. “Estamos en busca de una mejor vida. Si no podemos trabajar, no podemos alimentar a la familia”.</p>
+<p class="story-body-text story-content" data-para-count="187" data-total-count="5366" id="story-continues-24" tabindex="-1">Su viaje desde Brasil había tomado once semanas. Los bandidos en Nicaragua le quitaron todo, incluidos los zapatos. Ahora, dijo, estaba totalmente abatido: “Ya no me quedan fuerzas”.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="486" data-total-count="5852" id="story-continues-25" tabindex="-1">El camino desde Brasil hasta Tijuana está lleno de peligros. Circulan historias de gente que es arrastrada por el fuerte caudal de los ríos. En entrevistas con más de 20 migrantes en esta ciudad, describieron cómo intercambian consejos a lo largo de toda la ruta, principalmente mediante aplicaciones de mensajes por teléfono celular: qué autobuses tomar, los nombres de los buenos coyotes, direcciones de refugios para migrantes, los peligros singulares de cada cruce fronterizo.</p>
+<p class="story-body-text story-content" data-para-count="368" data-total-count="6220" id="story-continues-26" tabindex="-1">Los migrantes, hombres principalmente, han llegado a Tijuana con poco, por lo general no más de una mochila o una bolsa de plástico. Algunos también llevaban niños de brazos y bebés. Una mujer dio a luz en septiembre después de cruzar la frontera de Guatemala a México. Estaba en un autobús con su bebé al día siguiente para el viaje de tres días a Tijuana.</p>
+<p class="story-body-text story-content" data-para-count="390" data-total-count="6610" id="story-continues-27" tabindex="-1">Por lo general, la ruta que siguen es del interior de Brasil a Perú, cruzando Ecuador y de ahí a Colombia. Posteriormente, muchos toman un barco antes de comenzar a caminar de nuevo, algunas veces durante días, por la Región del Darién en Panamá, siempre con un equipo de guías contratados que se van relevando, cada uno de los cuales les cobra entre 10 y 20 dólares por adelantado.</p>
+<p class="story-body-text story-content" data-para-count="325" data-total-count="6935" id="story-continues-28" tabindex="-1">Costa Rica es un lugar clave para lo que muchos dicen es el tramo más difícil del viaje: cruzar Nicaragua. Se necesita a un traficante de personas para atravesar ese país. Las tarifas de los guías oscilan entre los cientos de dólares a 1500 por persona, y el recorrido toma varios días, parte del cual se realiza a pie.</p>
+<p class="story-body-text story-content" data-para-count="462" data-total-count="7397" id="story-continues-29" tabindex="-1">Sin embargo, el pago no da ninguna garantía de transitar seguros. Los haitianos narran cómo sus traficantes los dejaron abandonados a medio camino, a merced de la delincuencia, o peor aún, de las fuerzas de seguridad nicaragüenses, quienes regresan a los migrantes a la frontera de Costa Rica. Algunos migrantes se quedaron varados por semanas o incluso meses en Costa Rica, a la espera de que familiares o amigos les enviaran dinero para completar el viaje.</p>
+<p class="story-body-text story-content" data-para-count="377" data-total-count="7774" id="story-continues-30" tabindex="-1">En la frontera mexicana, la mayoría de los haitianos se hacen pasar por ciudadanos de la República Democrática del Congo. Hay una creencia popular de que las autoridades mexicanas tratan mejor a los africanos que a los haitianos, y hay una mayor posibilidad de que les otorguen permisos de tránsito de veinte días. A los verdaderos africanos esta farsa les parece risible.</p>
+<p class="story-body-text story-content" data-para-count="215" data-total-count="7989" id="story-continues-31" tabindex="-1">“Ni siquiera saben que hay dos Congos”, se burló Evans Demorais, de 31 años, un migrante nigeriano. “Dicen: ‘Por favor, ¿eres de África? ¿Cuál es la capital del Congo? ¿Quién es el presidente?’”.</p>
+<figure id="media-100000004667263" class="media photo media-100000004667263 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/24/world/24haitians4/24haitians4-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-33">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/24/world/24haitians4/24haitians4-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/24/world/24haitians4/24haitians4-superJumbo.jpg" data-mediaviewer-caption="Migrants received clothing donations. Many arrive in Mexico carrying little more than a knapsack." data-mediaviewer-credit="Adam Ferguson for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/24/world/24haitians4/24haitians4-master1050.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Migrants received clothing donations. Many arrive in Mexico carrying little more than a knapsack.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Adam Ferguson for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="171" data-total-count="8160" id="story-continues-33" tabindex="-1">Para cuando los migrantes llegan a Tijuana, después de viajes que pueden llegar a durar seis meses, la mayoría ha gastado entre 3000 y 5000 dólares, y otros hasta 7000.</p>
+<p class="story-body-text story-content" data-para-count="169" data-total-count="8329" id="story-continues-34" tabindex="-1">“Llegan aquí extenuados, en todos los sentidos de la palabra”, comentó Margarita Andonaegui, coordinadora del refugio Desayunador Salesiano Padre Chava de Tijuana.</p>
+<p class="story-body-text story-content" data-para-count="285" data-total-count="8614" id="story-continues-35" tabindex="-1">Los haitianos no son los únicos que hacen la travesía. Han comenzado a llegar migrantes de todo el hemisferio americano, así como de África, Europa y Asia, en especial a principios del verano, una diversidad nunca antes vista por los administradores del refugio en los dormitorios.</p>
+<p class="story-body-text story-content" data-para-count="430" data-total-count="9044" id="story-continues-36" tabindex="-1">“Afganistán, Burkina Faso, Nigeria, Sudán, Cuba, Pakistán, Camerún”, continuó Andonaegui, leyendo las nacionalidades de un libro de registro. “Bangladés, Rusia, la República Dominicana, Irak, Costa de Marfil”. Más de dos docenas de nacionalidades en total, aunque las distintas nacionalidades se han reducido en semanas recientes, con lo que el rastro migrante quedó reducido a haitianos y latinos principalmente.</p>
+<p class="story-body-text story-content" data-para-count="225" data-total-count="9269" id="story-continues-37" tabindex="-1">El repentino aumento en las distintas nacionalidades en la ruta migratoria de Brasil a México sugiere la apertura de nuevos corredores de tráfico de personas, teniendo en cuenta que las fronteras europeas se han endurecido.</p>
+<p class="story-body-text story-content" data-para-count="411" data-total-count="9680" id="story-continues-38" tabindex="-1">Los funcionarios de Seguridad Nacional de Estados Unidos mencionaron que la diáspora de haitianos en la frontera sur era un estímulo importante para el cambio en la política. También insistieron en que la situación económica y política de Haití, apenas a una semana de una elección presidencial muy reñida, había mejorado lo suficiente para permitir que los haitianos fueran deportados con seguridad.</p>
+<p class="story-body-text story-content" data-para-count="149" data-total-count="9829" id="story-continues-39" tabindex="-1">No obstante, los defensores de los migrantes criticaron la decisión, esperando presionar al presidente Obama para que diera marcha atrás al cambio.</p>
+<p class="story-body-text story-content" data-para-count="224" data-total-count="10053" id="story-continues-40" tabindex="-1">“Que nos digan los hechos y las cifras y que nos prueben que los haitianos no serán deportados a una situación de inseguridad”, declaró Benjamin Johnson, director ejecutivo de American Immigration Lawyers Association.</p>
+<p class="story-body-text story-content" data-para-count="190" data-total-count="10243" id="story-continues-41" tabindex="-1">El reverendo Pat Murphy, director de Casa del Migrante, un refugio en Tijuana, manifestó que los migrantes en su refugio han narrado el dolor y los riesgos del viaje que acaban de soportar.</p>
+<p class="story-body-text story-content" data-para-count="178" data-total-count="10421" id="story-continues-42" tabindex="-1">“Comenzaron hablando de la gente que se quedó en el camino, la gente que murió durante el recorrido”, explicó. “Como diciendo: ‘No puedo volver ahí. Estoy vivo’”.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/barack-obama/" rel="tag">Barack Obama</a>, <a href="https://www.nytimes.com/es/tag/haiti/" rel="tag">Haití</a>, <a href="https://www.nytimes.com/es/tag/mexico/" rel="tag">México</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/10/03/los-haitianos-estan-desesperados-ante-la-decision-de-estados-unidos-de-cerrarles-las-puertas/"
+				data-title="América Latina: Los haitianos están desesperados ante la decisión de Estados Unidos de cerrarles las puertas"
+				data-author="POR KIRK SEMPLE"
+				data-media=""
+				data-description="El gobierno de Obama anunció a finales de septiembre que endurecería la política migratoria relacionada con los haitianos, quienes cada vez viajan más desde Brasil en busca de una mejor vida en Estados Unidos."
+				data-publish-date="3 de octubre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/02/06/editorial-haiti-democracia-en-pausa/">
+					<div class="story-body">
+						<h3 class="kicker">Haití</h3>
+
+						<h2 class="headline">
+							<span class="title">Editorial: Haití, democracia en pausa</span>
+							<time class="dateline">6 de febrero de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/01/26/opinion/26tue2/26tue2-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/23/estados-unidos-aumenta-de-manera-inesperada-las-deportaciones-de-haitianos/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">Estados Unidos aumenta de manera inesperada las deportaciones de haitianos</span>
+							<time class="dateline">23 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/09/23/world/23Haiti-web/23Haiti-web-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/29/enojo-y-verguenza-alicia-machado-una-miss-universo-que-sufrio-los-insultos-de-donald-trump/">
+					<div class="story-body">
+						<h3 class="kicker">Elecciones EE. UU.</h3>
+
+						<h2 class="headline">
+							<span class="title">Alicia Machado, la ex miss universo en el centro de la campaña electoral en Estados Unidos</span>
+							<time class="dateline">29 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/09/28/us/28MACHADOweb1/28MACHADOweb1-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/09/30/la-fiscal-general-de-guatemala-vive-bajo-amenaza-aun-asi-afirma-que-su-trabajo-anticorrupcion-no-ha-terminado/">
+					<div class="story-body">
+						<h3 class="kicker">Guatemala</h3>
+
+						<h2 class="headline">
+							<span class="title">Pese a las amenazas, la fiscal general de Guatemala, Thelma Aldana, afirma que su trabajo anticorrupción &#8216;no ha terminado&#8217;</span>
+							<time class="dateline">30 de septiembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/09/30/universal/es/30aldanaES/30aldanaES-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":968,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

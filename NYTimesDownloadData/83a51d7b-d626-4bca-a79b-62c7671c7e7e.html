@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004888743"/>
+<meta name="hdl" content="La Fundación Clinton se pregunta qué hacer ahora, en la era de Trump" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20170207" />
+<meta name="utime" content="20170207160000" />
+<meta name="ptime" content="20170207160000" />
+<meta name="DISPLAYDATE" content="Feb. 7, 2017" />
+<meta name="dat" content="Feb. 7, 2017" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="la-fundacion-clinton-discute-cuales-seran-sus-proximos-pasos-en-la-era-de-trump" />
+<meta property="og:url" content="https://www.nytimes.com/es/2017/02/07/la-fundacion-clinton-discute-cuales-seran-sus-proximos-pasos-en-la-era-de-trump/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="La Fundación Clinton se pregunta qué hacer ahora, en la era de Trump" />
+<meta property="og:description" content="Después de la derrota de Hillary Clinton en las elecciones presidenciales, la Fundación Clinton —su liderazgo, sus programas, su recaudación de fondos— se adapta a la vida en los tiempos de Donald Trump." />
+<meta property="og:image" content="https://static01.nyt.com/images/2017/02/03/us/03CLINTONFOUNDATION-04/00CLINTONFOUNDATION2-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2017-02-07" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2017/02/07/la-fundacion-clinton-discute-cuales-seran-sus-proximos-pasos-en-la-era-de-trump/" />
+<meta property="twitter:title" content="La Fundación Clinton se pregunta qué hacer ahora, en la era de Trump" />
+<meta property="twitter:description" content="Después de la derrota de Hillary Clinton en las elecciones presidenciales, la Fundación Clinton —su liderazgo, sus programas, su recaudación de fondos— se adapta a la vida en los tiempos de Donald Trump." />
+<meta name="author" content="Steve Eder, Sheri Fink y Amy Chozick" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Steve Eder, Sheri Fink y Amy Chozick" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="estados-unidos" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="estados-unidos" />
+<meta name="id" content="100000004888743"/>
+<meta name="wordCount" content="1536"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2017/02/07/la-fundacion-clinton-discute-cuales-seran-sus-proximos-pasos-en-la-era-de-trump/">
+<meta name="nyt-collection:uri" content="year=2017&amp;monthnum=02&amp;day=07&amp;name=la-fundacion-clinton-discute-cuales-seran-sus-proximos-pasos-en-la-era-de-trump">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=34900">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2017\/02\/07\/la-fundacion-clinton-discute-cuales-seran-sus-proximos-pasos-en-la-era-de-trump\/"},"headline":"La Fundaci\u00f3n Clinton se pregunta qu\u00e9 hacer ahora, en la era de Trump","datePublished":"2017-02-07T16:00:00+00:00","dateModified":"2017-02-07T14:18:24+00:00","author":{"@type":"Person","name":"paulina.chavira"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2017\/02\/03\/us\/03CLINTONFOUNDATION-04\/00CLINTONFOUNDATION2-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Despu\u00e9s de la derrota de Hillary Clinton en las elecciones presidenciales, la Fundaci\u00f3n Clinton \u2014su liderazgo, sus programas, su recaudaci\u00f3n de fondos\u2014 se adapta a la vida en los tiempos de Donald Trump."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2017/02/07/la-fundacion-clinton-discute-cuales-seran-sus-proximos-pasos-en-la-era-de-trump/" hreflang="es" />
+<link rel="alternate" href="https://www.nytimes.com/2017/02/02/us/hillary-bill-clinton-foundation.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/estadosunidos" />
+<title>La Fundación Clinton se pregunta qué hacer ahora, en la era de Trump &#8211; Español</title>
+<link rel="canonical" href="https://www.nytimes.com/2017/02/02/us/hillary-bill-clinton-foundation.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2017/02/07/la-fundacion-clinton-discute-cuales-seran-sus-proximos-pasos-en-la-era-de-trump/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-34900 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				La Fundación Clinton se pregunta qué hacer ahora, en la era de Trump
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2017/02/07/la-fundacion-clinton-discute-cuales-seran-sus-proximos-pasos-en-la-era-de-trump/"
+					data-title="Noticias: La Fundación Clinton se pregunta qué hacer ahora, en la era de Trump"
+					data-author="POR STEVE EDER, SHERI FINK Y AMY CHOZICK"
+					data-media=""
+					data-description="Después de la derrota de Hillary Clinton en las elecciones presidenciales, la Fundación Clinton —su liderazgo, sus programas, su recaudación de fondos— se adapta a la vida en los tiempos de Donald Trump."
+					data-publish-date="7 de febrero de 2017"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2lhBs8K">http://nyti.ms/2lhBs8K</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/estados-unidos/">Estados Unidos</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">La Fundación Clinton se pregunta qué hacer ahora, en la era de Trump</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Steve Eder</span>
+</span>
+, <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Sheri Fink</span>
+</span>
+ y <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Amy Chozick</span>
+</span>
+
+					<time class="dateline" datetime="2017-02-07">7 de febrero de 2017</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2017/02/07/la-fundacion-clinton-discute-cuales-seran-sus-proximos-pasos-en-la-era-de-trump/"
+							data-title="Noticias: La Fundación Clinton se pregunta qué hacer ahora, en la era de Trump"
+							data-author="POR STEVE EDER, SHERI FINK Y AMY CHOZICK"
+							data-media=""
+							data-description="Después de la derrota de Hillary Clinton en las elecciones presidenciales, la Fundación Clinton —su liderazgo, sus programas, su recaudación de fondos— se adapta a la vida en los tiempos de Donald Trump."
+							data-publish-date="7 de febrero de 2017"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004892169" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/02/03/us/03CLINTONFOUNDATION-04/00CLINTONFOUNDATION2-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/02/03/us/03CLINTONFOUNDATION-04/00CLINTONFOUNDATION2-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/02/03/us/03CLINTONFOUNDATION-04/00CLINTONFOUNDATION2-superJumbo.jpg" data-mediaviewer-caption="El expresidente Bill Clinton con su esposa, Hillary Clinton, y su hija, Chelsea, en la reunión de la Iniciativa Global Clinton en septiembre de 2013" data-mediaviewer-credit="Ramin Talaie/Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2017/02/03/us/03CLINTONFOUNDATION-04/00CLINTONFOUNDATION2-master1050.jpg"/>
+		<meta itemprop="height" content="659" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">El expresidente Bill Clinton con su esposa, Hillary Clinton, y su hija, Chelsea, en la reunión de la Iniciativa Global Clinton en septiembre de 2013</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Ramin Talaie/Getty Images
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="https://www.nytimes.com/2017/02/02/us/hillary-bill-clinton-foundation.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="279" data-total-count="279" id="story-continues-2" tabindex="-1">El verano pasado, el expresidente Bill Clinton prometió que si Hillary Clinton ganaba la elección presidencial dejaría de lado muchos de sus deberes en la Fundación Clinton, además de limitar las donaciones extranjeras a la organización benéfica y ceder ciertos programas.</p>
+<p class="story-body-text story-content" data-para-count="406" data-total-count="685" id="story-continues-3" tabindex="-1">Tres meses después de la derrota de Hillary Clinton, la fundación sigue luchando por encontrar su sitio en la era Trump. Enfrenta algunos grandes retos: una caída en la recaudación de fondos durante la campaña; la incertidumbre sobre la escala de las ambiciones del expresidente, preguntas sobre el liderazgo de la fundación y si Hillary Clinton podría reincorporarse a la organización benéfica.</p>
+<p class="story-body-text story-content" data-para-count="329" data-total-count="1014" id="story-continues-4" tabindex="-1">En una carta que se dio a conocer junto con el informe anual de la fundación la semana pasada, el expresidente se aventuró a pedir consejo sobre el futuro de la organización a sus donantes. “Buscamos sus contribuciones y también sus ideas”, escribió, señalando que la organización trabajaría para expandir su impacto.</p>
+<p class="story-body-text story-content" data-para-count="350" data-total-count="1364" id="story-continues-5" tabindex="-1">Donna E. Shalala, la presidenta de la fundación, reconoció las dificultades en una intervención de la semana pasada. “El año pasado fue difícil, porque la gente nos atacaba sin razón”, dijo en referencia a los dolorosos ataques políticos que afirmaban que los donantes usaban a la fundación para ganarse los favores de la familia Clinton.</p>
+<figure id="media-100000004892190" class="media photo media-100000004892190 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/01/25/us/00CLINTONFOUNDATION4/00CLINTONFOUNDATION4-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-7">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/01/25/us/00CLINTONFOUNDATION4/00CLINTONFOUNDATION4-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/01/25/us/00CLINTONFOUNDATION4/00CLINTONFOUNDATION4-superJumbo.jpg" data-mediaviewer-caption="“Last year was a tough year,” said Donna E. Shalala, president of the Clinton Foundation, whose tenure is in question." data-mediaviewer-credit="Rodrigo Varela/Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2017/01/25/us/00CLINTONFOUNDATION4/00CLINTONFOUNDATION4-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">“Last year was a tough year,” said Donna E. Shalala, president of the Clinton Foundation, whose tenure is in question.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Rodrigo Varela/Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="354" data-total-count="1718" id="story-continues-7" tabindex="-1">Los ingresos disminuyeron en 2016, reconoció Shalala, en parte debido a las restricciones voluntarias y al hecho de que los principales recaudadores de fondos de la organización —el expresidente y su hija, Chelsea— estaban en campaña con Hillary Clinton. Además, los ingresos “también cayeron debido a la recesión económica”, dijo Shalala.</p>
+<p class="story-body-text story-content" data-para-count="293" data-total-count="2011" id="story-continues-8" tabindex="-1">A pesar de ello, tanto Bill Clinton como Shalala, quienes ventilaron sus preocupaciones por mantener el talento, se mostraron optimistas. “A fin de cuentas”, dijo ella, “creo que va a ser como siempre ha sido: una fundación dinámica y creativa que ayuda a mejorar millones de vidas”.</p>
+<p class="story-body-text story-content" data-para-count="281" data-total-count="2292" id="story-continues-9" tabindex="-1">Según muchos expertos es un buen momento para este examen de conciencia de la fundación, que también debe evaluar si su principal activo sigue siendo una gran necesidad: la capacidad de acercar al sector privado con organizaciones benéficas para aportar a causas desatendidas.</p>
+<p class="story-body-text story-content" data-para-count="319" data-total-count="2611" id="story-continues-10" tabindex="-1">“Ciertamente, la situación ya no es la misma” que cuando la fundación comenzó sus labores, comentó Carolyn Miles, presidenta y directora ejecutiva de Save the Children, una organización que se cuenta entre los primeros socios de la fundación. “Así que yo diría que hay que regresar con algunos cambios”.</p>
+<figure id="media-100000004892189" class="media photo media-100000004892189 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/02/03/us/03CLINTONFOUNDATION-02/00CLINTONFOUNDATION3-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-12">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/02/03/us/03CLINTONFOUNDATION-02/00CLINTONFOUNDATION3-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/02/03/us/03CLINTONFOUNDATION-02/00CLINTONFOUNDATION3-superJumbo.jpg" data-mediaviewer-caption="Bill Clinton saluda a los niños de un hospital de Santo Domingo en la República Dominicana en 2007. " data-mediaviewer-credit="Win McNamee/Getty Images para la Fundación Clinton "  itemprop="url" itemid="https://static01.nyt.com/images/2017/02/03/us/03CLINTONFOUNDATION-02/00CLINTONFOUNDATION3-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Bill Clinton saluda a los niños de un hospital de Santo Domingo en la República Dominicana en 2007. </span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Win McNamee/Getty Images para la Fundación Clinton 
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="328" data-total-count="2939" id="story-continues-12" tabindex="-1">La organización también ha considerado reducir algunos esfuerzos, según varias personas familiarizadas con las discusiones, quienes hablaron con la condición de respetar su anonimato. El personal ha preparado opciones para la consideración de Bill y Chelsea Clinton que, según Shalala, incluyen algunos nuevos esfuerzos.</p>
+<p class="story-body-text story-content" data-para-count="734" data-total-count="3673" id="story-continues-13" tabindex="-1">Mientras tanto, quienes trabajan en la fundación luchan por proyectar una imagen de normalidad. El nuevo informe anual hizo énfasis en los esfuerzos globales de la organización, incluyendo la apertura de una clínica de salud en Malaui y la expansión de sus funciones para combatir la crisis de opiáceos en Estados Unidos. Durante las fiestas navideñas, Bill Clinton se puso en contacto con los donantes ofreciéndoles igualar sus contribuciones de fin de año. Chelsea Clinton y algunos miembros de la fundación empacaron toronjas en enero en un evento de servicio a la comunidad en Nueva York con City Harvest. Así mismo, Shalala anunció una nueva asociación para mejorar la salud de los niños del condado de San Diego.</p>
+<p class="story-body-text story-content" data-para-count="356" data-total-count="4029" id="story-continues-14" tabindex="-1">La fundación se creó en 1997, durante la presidencia de Bill Clinton, y ha recaudado cerca de 2 mil millones de dólares desde entonces. Su trabajo ha abarcado 3500 proyectos y 180 países —entre los que se encuentran Estados Unidos— con proyectos tan diversos como la recuperación posterior al terremoto en Haití e iniciativas de salud en Ruanda.</p>
+<p class="story-body-text story-content" data-para-count="382" data-total-count="4411" id="story-continues-15" tabindex="-1">Durante la campaña presidencial, los opositores políticos golpearon a la fundación con críticas sobre sus relaciones con donantes extranjeros. No hubo pruebas de clientelismo mientras Hillary Clinton fue secretaria de Estado, pero la yuxtaposición de intereses de donantes extranjeros de la fundación y los asuntos oficiales a nivel internacional persiguieron su candidatura.</p>
+<figure id="media-100000004892208" class="media photo media-100000004892208 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/02/03/us/03CLINTONFOUNDATION-01/00CLINTONFOUNDATION7-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-17">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/02/03/us/03CLINTONFOUNDATION-01/00CLINTONFOUNDATION7-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/02/03/us/03CLINTONFOUNDATION-01/00CLINTONFOUNDATION7-superJumbo.jpg" data-mediaviewer-caption="Hillary Clinton, cuando fungía como secretaria de Estado, y Melinda Gates en la inauguración de una asociación mundial para la salud materna e infantil en 2011.
+" data-mediaviewer-credit="Cliff Owen/Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2017/02/03/us/03CLINTONFOUNDATION-01/00CLINTONFOUNDATION7-master675.jpg"/>
+		<meta itemprop="height" content="435" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Hillary Clinton, cuando fungía como secretaria de Estado, y Melinda Gates en la inauguración de una asociación mundial para la salud materna e infantil en 2011.
+</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Cliff Owen/Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="323" data-total-count="4734" id="story-continues-17" tabindex="-1">La filantropía fue algo en lo que Hillary Clinton se concentró después de terminar su periodo como secretaria de Estado y antes de lanzarse a la contienda presidencial. Pero su futuro papel en la fundación es incierto: “No estamos ni remotamente pensando en eso ahora”, dijo Nick Merrill, vocero de Hillary Clinton.</p>
+<p class="story-body-text story-content" data-para-count="367" data-total-count="5101" id="story-continues-18" tabindex="-1">Shalala, por su parte, dijo que no estaba claro cuánto tiempo seguiría siendo presidenta de la fundación. Por el momento, no se ha dicho nada de futuras contrataciones: la mayor parte de los puestos de trabajo en la página web de la fundación son para servicios de alimentos y trabajos de restauración en el Centro Presidencial Clinton en Little Rock, Arkansas.</p>
+<p class="story-body-text story-content" data-para-count="440" data-total-count="5541" id="story-continues-19" tabindex="-1">Muchos creen que el futuro de la fundación dependerá de Bill Clinton, quien ahora tiene 70 años, y siempre ha sido su principal motor. “¿Todavía tiene la energía, la pasión, el deseo y la buena salud para poder dedicarle energía?”, se preguntó Neal Keny-Guyer, director ejecutivo de la organización humanitaria mundial Mercy Corps, en una entrevista telefónica desde Davos, Suiza, durante el Foro Económico Mundial en enero.</p>
+<p class="story-body-text story-content" data-para-count="316" data-total-count="5857" id="story-continues-20" tabindex="-1">El jueves, Shalala dijo que el expresidente y Chelsea, quienes forman parte del consejo de administración de la fundación, seguían comprometidos y que todavía ejercían una “gran influencia” en la toma decisiones. Además, Bill Clinton sigue atrayendo a donantes. “Tiene muchos amigos”, comentó Shalala.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="44" data-total-count="5901" id="story-continues-21" tabindex="-1">No obstante, otros ven obstáculos a futuro.</p>
+<p class="story-body-text story-content" data-para-count="303" data-total-count="6204" id="story-continues-22" tabindex="-1">“El gran problema al que van a enfrentarse es hasta qué grado pueden recaudar fondos ahora que parece que la familia Clinton ya no ocupa ningún puesto de liderazgo nacional”, manifestó Leslie Lenkowsky, experta en filantropía de la Universidad de Indiana. “Han perdido un poco de su brillo”.</p>
+<figure id="media-100000004892198" class="media photo media-100000004892198 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2017/02/03/us/03CLINTONFOUNDATION-03/00CLINTONFOUNDATION5-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-24">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2017/02/03/us/03CLINTONFOUNDATION-03/00CLINTONFOUNDATION5-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2017/02/03/us/03CLINTONFOUNDATION-03/00CLINTONFOUNDATION5-superJumbo.jpg" data-mediaviewer-caption="Chelsea Clinton ayuda a voluntarios a preparar botiquines médicos gratuitos que se distribuyeron por todo el mundo en 2015. La fundación está recortando algunos esfuerzos y buscando asesoría para determinar su futuro. 
+" data-mediaviewer-credit="Brennan Linsley/Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2017/02/03/us/03CLINTONFOUNDATION-03/00CLINTONFOUNDATION5-master675.jpg"/>
+		<meta itemprop="height" content="475" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Chelsea Clinton ayuda a voluntarios a preparar botiquines médicos gratuitos que se distribuyeron por todo el mundo en 2015. La fundación está recortando algunos esfuerzos y buscando asesoría para determinar su futuro. 
+</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Brennan Linsley/Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="407" data-total-count="6611" id="story-continues-24" tabindex="-1">En 2015, los ingresos de la organización benéfica llegaron casi a 300 millones de dólares y en 2014 llegaron a 338 millones, según su informe anual. Las cantidades del 2016 todavía no se dan a conocer, pero Shalala reconoció que eran inferiores. Aunque las metas internas de recaudar 20 millones en fondos sin restricciones en 2016 fueron alcanzadas, “hacerlo requirió un gran esfuerzo”, agregó.</p>
+<p class="story-body-text story-content" data-para-count="359" data-total-count="6970" id="story-continues-25" tabindex="-1">En agosto, en el arranque oficial de la campaña presidencial, la fundación anunció su decisión de cerrar la Iniciativa Global Clinton, una reunión anual que Douglas J. Band, asesor de Bill Clinton, había concebido como una forma de acercar a donantes y corporativos adinerados con causas valiosas. La Iniciativa celebró su reunión final en septiembre.</p>
+<p class="story-body-text story-content" data-para-count="228" data-total-count="7198" id="story-continues-26" tabindex="-1">En cambio, la Iniciativa Clinton de Acceso a la Salud, conocida como CHAI —una entidad aparte pero afiliada— suspendió una serie de movimientos para separarse de la familia Clinton en caso de que volviera a la Casa Blanca.</p>
+<p class="story-body-text story-content" data-para-count="109" data-total-count="7307" id="story-continues-27" tabindex="-1">Regan Lachapelle, vocera de CHAI, dijo que el trabajo del grupo continuaba entre discusiones sobre su futuro.</p>
+<p class="story-body-text story-content" data-para-count="335" data-total-count="7642" id="story-continues-28" tabindex="-1">“No hay nada resuelto”, comentó Paul Farmer, miembro del consejo de CHAI (que cuenta con un programa de salud en 70 países, entre cuyos propósitos está promover tratamientos contra el SIDA y fortalecer los sistemas de salud), en una entrevista telefónica desde Haití. “Es difícil saber qué hacer en el ambiente actual”.</p>
+<p class="story-body-text story-content" data-para-count="302" data-total-count="7944" id="story-continues-29" tabindex="-1">A lo largo de todos los lugares donde la Fundación Clinton está presente, la especulación sobre su futuro ha sido una constante. En algunos países extranjeros, CHAI ha sido acusada de usar la influencia del matrimonio Clinton para presionar a los gobiernos a comprometerse con ciertas iniciativas.</p>
+<p class="story-body-text story-content" data-para-count="167" data-total-count="8111" id="story-continues-30" tabindex="-1">“Si desaparece sería muy irónico”, comentó Patricia A. McQuilkin, profesora asociada de pediatría en la Escuela de Medicina de la Universidad de Massachusetts.</p>
+<p class="story-body-text story-content" data-para-count="297" data-total-count="8408" id="story-continues-31" tabindex="-1">En una entrevista desde Liberia, McQuilkin dijo que las iniciativas de CHAI en los primeros brotes de la epidemia de ébola habían marginado durante mucho tiempo a asociaciones académicas como la suya. “Ellos se autoproponen a lo largo de todo el proceso y tratan de tomar control”, agregó.</p>
+<p class="story-body-text story-content" data-para-count="310" data-total-count="8718" id="story-continues-32" tabindex="-1">Los expertos en desarrollo, entre los que se encuentra Daniel F. Runde, exdirector de la Oficina de Alianzas de Desarrollo Mundial en la Agencia de Estados Unidos para el Desarrollo Internacional, expresan en términos generales la creencia de que la fundación continuaría consiguiendo apoyo para su trabajo.</p>
+<p class="story-body-text story-content" data-para-count="98" data-total-count="8816" id="story-continues-33" tabindex="-1">“Es una marca que ha sufrido”, afirmó Runde, “pero sigue teniendo demanda internacional”.</p>
+<p class="story-body-text story-content" data-para-count="473" data-total-count="9289" id="story-continues-34" tabindex="-1">Durante años, la Fundación Clinton ha trabajado con organizaciones financiadas por otros expresidentes, desde Lyndon B. Johnson a George W. Bush. En meses recientes, dijo Shalala, los funcionarios de la fundación ofrecieron asesoría al expresidente Barack Obama y a su esposa, Michelle, para su propia fundación, que se concentrará en programas nacionales e internacionales de desarrollo comunitario. “Nos llamaron e hicieron algunas preguntas”, comentó Shalala.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/bill-clinton/" rel="tag">Bill Clinton</a>, <a href="https://www.nytimes.com/es/tag/fundacion-clinton/" rel="tag">Fundación Clinton</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2017/02/07/la-fundacion-clinton-discute-cuales-seran-sus-proximos-pasos-en-la-era-de-trump/"
+				data-title="Noticias: La Fundación Clinton se pregunta qué hacer ahora, en la era de Trump"
+				data-author="POR STEVE EDER, SHERI FINK Y AMY CHOZICK"
+				data-media=""
+				data-description="Después de la derrota de Hillary Clinton en las elecciones presidenciales, la Fundación Clinton —su liderazgo, sus programas, su recaudación de fondos— se adapta a la vida en los tiempos de Donald Trump."
+				data-publish-date="7 de febrero de 2017"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/11/02/un-viaje-en-carretera-con-hillary-clinton/">
+					<div class="story-body">
+						<h3 class="kicker">Elecciones EE. UU.</h3>
+
+						<h2 class="headline">
+							<span class="title">Un viaje en carretera con Hillary Clinton</span>
+							<time class="dateline">2 de noviembre de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/10/08/us/09ROADTRIPweb3/09ROADTRIPweb3-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/01/22/el-lenguaje-secreto-de-los-clinton/">
+					<div class="story-body">
+
+						<h2 class="headline">
+							<span class="title">El lenguaje secreto de los Clinton</span>
+							<time class="dateline">22 de enero de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/01/06/opinion/06brunniWeb/06brunniWeb-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/02/07/la-ausencia-de-melania-trump-en-washington-plantea-dudas-sobre-sus-funciones/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">La ausencia de Melania Trump en Washington plantea dudas sobre sus funciones</span>
+							<time class="dateline">7 de febrero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/02/03/us/03melania1/03melania1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2017/02/06/la-experiencia-como-refugiada-de-una-corresponsal-en-washington/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">De refugiada a corresponsal: La historia de nuestra periodista en el Pentágono</span>
+							<time class="dateline">6 de febrero de 2017</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2017/02/01/insider/01-Insider-CooperRefugee-Image3/01-Insider-CooperRefugee-Image3-thumbStandard-v4.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":668,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

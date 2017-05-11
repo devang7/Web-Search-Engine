@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-jumbo-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-jumbo-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-jumbo-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-jumbo-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004629845"/>
+<meta name="hdl" content="Justicia interrumpida: Paramilitares en Colombia, presos privilegiados en Estados Unidos" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20160909" />
+<meta name="utime" content="20160909213916" />
+<meta name="ptime" content="20160909213916" />
+<meta name="DISPLAYDATE" content="Sep. 9, 2016" />
+<meta name="dat" content="Sep. 9, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="paramilitares-colombia-narcotrafico-uribe-violencia-justicia-paz" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/09/09/paramilitares-colombia-narcotrafico-uribe-violencia-justicia-paz/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Justicia interrumpida: Paramilitares en Colombia, presos privilegiados en Estados Unidos" />
+<meta property="og:description" content="A través de entrevistas, información desclasificada y documentos internos de Colombia y Estados Unidos, The New York Time examinó los casos de 40 jefes paramilitares extraditados. La mayoría fueron tratados como personas sin antecedentes penales pese a sus extensas carreras criminales. " />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA1-full-bleed/11COLOMBIA1-full-bleed-videoSixteenByNine768-v3.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-09-09" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/09/09/paramilitares-colombia-narcotrafico-uribe-violencia-justicia-paz/" />
+<meta property="twitter:title" content="Justicia interrumpida: Paramilitares en Colombia, presos privilegiados en Estados Unidos" />
+<meta property="twitter:description" content="A través de entrevistas, información desclasificada y documentos internos de Colombia y Estados Unidos, The New York Time examinó los casos de 40 jefes paramilitares extraditados. La mayoría fueron tratados como personas sin antecedentes penales pese a sus extensas carreras criminales. " />
+<meta name="author" content="" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="colombia" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="colombia" />
+<meta name="id" content="100000004629845"/>
+<meta name="wordCount" content="8223"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/09/09/paramilitares-colombia-narcotrafico-uribe-violencia-justicia-paz/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=09&amp;day=09&amp;name=paramilitares-colombia-narcotrafico-uribe-violencia-justicia-paz">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=24677">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/09\/09\/paramilitares-colombia-narcotrafico-uribe-violencia-justicia-paz\/"},"headline":"Justicia interrumpida: Paramilitares en Colombia, presos privilegiados en Estados Unidos","datePublished":"2016-09-09T21:39:16+00:00","dateModified":"2016-09-12T11:49:35+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/09\/11\/us\/11COLOMBIA1-full-bleed\/11COLOMBIA1-full-bleed-videoSixteenByNine768-v3.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"A trav\u00e9s de entrevistas, informaci\u00f3n desclasificada y documentos internos de Colombia y Estados Unidos, The New York Time examin\u00f3 los casos de 40 jefes paramilitares extraditados. La mayor\u00eda fueron tratados como personas sin antecedentes penales pese a sus extensas carreras criminales. "}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/09/09/paramilitares-colombia-narcotrafico-uribe-violencia-justicia-paz/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/09/11/world/americas/colombia-cocaine-human-rights.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="americalatina/colombia" />
+<title>Justicia interrumpida: Paramilitares en Colombia, presos privilegiados en Estados Unidos &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/09/11/world/americas/colombia-cocaine-human-rights.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/09/09/paramilitares-colombia-narcotrafico-uribe-violencia-justicia-paz/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-24677 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard intl-masthead-theme-light" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				Justicia interrumpida: Paramilitares en Colombia, presos privilegiados en Estados Unidos
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/09/09/paramilitares-colombia-narcotrafico-uribe-violencia-justicia-paz/"
+					data-title="América Latina: Justicia interrumpida: Paramilitares en Colombia, presos privilegiados en Estados Unidos"
+					data-author=""
+					data-media=""
+					data-description="A través de entrevistas, información desclasificada y documentos internos de Colombia y Estados Unidos, The New York Time examinó los casos de 40 jefes paramilitares extraditados. La mayoría fueron tratados como personas sin antecedentes penales pese a sus extensas carreras criminales. "
+					data-publish-date="9 de septiembre de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/2cLoTLR">http://nyti.ms/2cLoTLR</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/colombia/">Colombia</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Justicia interrumpida: Paramilitares en Colombia, presos privilegiados en Estados Unidos</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					
+					<time class="dateline" datetime="2016-09-09">9 de septiembre de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/09/09/paramilitares-colombia-narcotrafico-uribe-violencia-justicia-paz/"
+							data-title="América Latina: Justicia interrumpida: Paramilitares en Colombia, presos privilegiados en Estados Unidos"
+							data-author=""
+							data-media=""
+							data-description="A través de entrevistas, información desclasificada y documentos internos de Colombia y Estados Unidos, The New York Time examinó los casos de 40 jefes paramilitares extraditados. La mayoría fueron tratados como personas sin antecedentes penales pese a sus extensas carreras criminales. "
+							data-publish-date="9 de septiembre de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004638681" class="media photo lede layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA1-full-bleed/11COLOMBIA1-full-bleed-master1050-v14.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA1-full-bleed/11COLOMBIA1-full-bleed-master1050-v14.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA1-full-bleed/11COLOMBIA1-full-bleed-superJumbo-v14.jpg" data-mediaviewer-caption="Hernán Giraldo Serna has gone from being a fearsome paramilitary commander in Colombia to a docile prisoner in the United States." data-mediaviewer-credit="Todd Heisler/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA1-full-bleed/11COLOMBIA1-full-bleed-master1050-v14.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Hernán Giraldo Serna has gone from being a fearsome paramilitary commander in Colombia to a docile prisoner in the United States.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Todd Heisler/The New York Times
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/09/11/world/americas/colombia-cocaine-human-rights.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="18" data-total-count="18" id="story-continues-2" tabindex="-1"><strong><em>Por Deborah Sontag</em></strong></p>
+<p class="story-body-text story-content" data-para-count="304" data-total-count="322" id="story-continues-3" tabindex="-1">CALABAZO, Colombia — Delgado pero imponente, con lentes de aviador, bigote poblado y sonrisa de dientes inmensos, Julio Henríquez Santamaría lideraba una reunión con miembros de esta comunidad cuando un grupo de paramilitares lo puso en la parte de atrás de una camioneta Toyota y lo secuestró.</p>
+<p class="story-body-text story-content" data-para-count="55" data-total-count="377" id="story-continues-4" tabindex="-1">Así desapareció para siempre el 4 de febrero de 2001.</p>
+<p class="story-body-text story-content" data-para-count="322" data-total-count="699" id="story-continues-5" tabindex="-1">Henríquez había estado organizando a los campesinos para que sustituyeran sus cultivos ilegales de coca por cultivos como el cacao, algo que el gobierno colombiano actual defiende como una de sus estrategia antidrogas al mismo tiempo que trata de acabar con una guerra civil que ha sido alimentada por el narcotráfico.</p>
+<p class="story-body-text story-content" data-para-count="107" data-total-count="806" id="story-continues-6" tabindex="-1">Pero a Hernán Giraldo Serna, o a sus hombres, no les gustaba esta estrategia. O no les gustaba Henríquez.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="348" data-total-count="1154" id="story-continues-7" tabindex="-1">Ya muy lejos de aquellos tiempos en los que cultivaba marihuana a pequeña escala, Giraldo se había convertido en el Patrón, un capo de la droga y comandante paramilitar. Su misión ya había evolucionado de una lucha contra la guerrilla hasta convertirse en una empresa criminal y asesina que controlaba gran parte de la costa norte colombiana.</p>
+<p class="story-body-text story-content" data-para-count="458" data-total-count="1612" id="story-continues-8" tabindex="-1">Henríquez no fue su única víctima; Giraldo, conocido como el Taladro por el apetito voraz que sentía por niñas menores de edad, tenía víctimas de todo tipo. Pero Henríquez fue su víctima emblemática. Y su familia fue lo suficientemente tenaz para perseguir a Giraldo incluso después de que, junto a otros 13 líderes paramilitares, se lo llevaran de Colombia a Estados Unidos el 13 de mayo de 2008 para afrontar acusaciones por narcotráfico.</p>
+<p class="story-body-text story-content" data-para-count="488" data-total-count="2100" id="story-continues-9" tabindex="-1">Fue una extradición en medio de la noche que dejó al país atónito, que interrumpió de manera abrupta un proceso de Justicia y Paz en el que se acusaba a varios hombres de cometer una serie de atrocidades. La guerra contra las drogas liderada por Estados Unidos, por petición del entonces presidente de Colombia, Álvaro Uribe, se impuso sobre los esfuerzos que el país desarrollaba para hacer frente a los crímenes contra la humanidad que habían marcado a toda una generación.</p>
+
+<figure id="" class="interactive interactive-embedded bullet-list">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-11">Continue reading the main story</a>
+
+	<figcaption class="interactive-caption">
+
+	</figcaption>
+
+		<div class="interactive-graphic">
+			
+		</div>
+
+	<div class="footer">
+
+
+	</div>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="267" data-total-count="2367" id="story-continues-11" tabindex="-1">Los defensores de las víctimas dijeron que era como exportar a “14 Pinochets&#8221;. La familia de Henríquez, mientras tanto, pedía que al menos uno de ellos rindiera cuentas por la sangre colombiana vertida sobre la cocaína que había llegado a Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="460" data-total-count="2827" id="story-continues-12" tabindex="-1">Bela Henríquez Chacín, de 32 años, es la hija de Julio Henríquez y planea dar una declaración cuando sentencien a Giraldo en Washington el mes que viene. “Esperamos que el esfuerzo que hemos hecho durante todos estos años se logre, que las cosas no queden en la impunidad”. Algunos expertos creen que los Henríquez serán la primera familia extranjera a la que se le dará la oportunidad de declarar en un caso por narcotráfico en Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="310" data-total-count="3137" id="story-continues-13" tabindex="-1">Si será más que un acto simbólico aún está por verse. Los hombres extraditados con Giraldo han recibido un tratamiento relativamente indulgente para ser narcotraficantes importantes que, además, han sido acusados de terrorismo por cometer masacres, desapariciones forzadas y desplazar a pueblos enteros.</p>
+<p class="story-body-text story-content" data-para-count="373" data-total-count="3510" id="story-continues-14" tabindex="-1">Una vez que los paramilitares colombianos (varias docenas en total) hayan cumplido las condenas que tienen en Estados Unidos, la media de su estancia en prisión será de siete años y medio, según los cálculos de The New York Times. Los líderes extraditados habrán cumplido un máximo de 10 años de media por haber introducido en Estados Unidos toneladas de cocaína.</p>
+<p class="story-body-text story-content" data-para-count="159" data-total-count="3669" id="story-continues-15" tabindex="-1">En comparación, las personas acusadas de vender crack y cocaína en la calle, no más de 25 gramos, cumplen en torno a 12 años de cárcel en Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="384" data-total-count="4053" id="story-continues-16" tabindex="-1">Es más, para algunos traficantes colombianos, la sentencia puede rendir un dividendo importante: un permiso de residencia en Estados Unidos. Aunque las autoridades colombianas tienen acusaciones formales contra ellos, dos ya tienen autorización para quedarse en Estados Unidos junto con sus familias. Tres más han pedido el mismo beneficio y se supone que varios más lo harán.</p>
+<p class="story-body-text story-content" data-para-count="250" data-total-count="4303" id="story-continues-17" tabindex="-1">Alirio Uribe, diputado en el congreso de Colombia, dijo que “en los tiempos de Pablo Escobar, solían decir que preferían una tumba en Colombia a una cárcel en Estados Unidos, pero ahora quizás la extradición sea más beneficiosa para ellos”.</p>
+<p class="story-body-text story-content" data-para-count="495" data-total-count="4798" id="story-continues-18" tabindex="-1">Durante 52 años, con el apoyo de Estados Unidos, el gobierno colombiano ha vivido atrapado en un conflicto armado feroz con la guerrilla. Aunque al principio impulsó a los paramilitares en calidad de aliados, décadas después les retiró su apoyo. Mucho después de que hubieran sido cooptados por los terratenientes y los carteles. Antes de la desmovilización, por el 2005, los paramilitares ya igualaban a la guerrilla en cuanto a tráfico de drogas y violaciones a los derechos humanos.</p>
+<p class="story-body-text story-content" data-para-count="450" data-total-count="5248" id="story-continues-19" tabindex="-1">Ahora, ocho años después de la extradición de los paramilitares, el gobierno de Colombia ha llegado a un acuerdo de paz con sus enemigos mortales, los guerrilleros de las Fuerzas Armadas Revolucionarias de Colombia (Farc). El 2 de octubre el país votará sobre el acuerdo y, mientras tanto, hay un debate, polarizado, sobre crimen y castigo para las Farc que se alimenta de los errores cometidos durante la desmovilización de los paramilitares.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="82" data-total-count="5330" id="story-continues-20" tabindex="-1">Nadie defiende ahora que se deje la justicia del país en manos de Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="271" data-total-count="5601" id="story-continues-21" tabindex="-1">Pero el capítulo de la historia paramilitar de Colombia no se ha cerrado y contiene muchas páginas en blanco, según María Teresa Ronderos, autora de <a href="http://www.verdadabierta.com/bloques-de-la-auc/5445-guerras-recicladas-un-libro-que-desentrana-el-paramilitarismo-en-colombia" target="_blank"><em>Guerras recicladas</em></a>, una historia del paramilitarismo colombiano. “Nadie sabe lo que le sucedió a esos hombres”.</p>
+<figure id="media-100000004630098" class="media photo media-100000004630098 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA10/11COLOMBIA10-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-23">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA10/11COLOMBIA10-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA10/11COLOMBIA10-superJumbo-v2.jpg" data-mediaviewer-caption="A purse that Mr. Giraldo wove from potato chip bags. He sells them to other inmates for “siete pollos,” seven portions of chicken from the commissary." data-mediaviewer-credit="Todd Heisler/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA10/11COLOMBIA10-master675-v2.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">A purse that Mr. Giraldo wove from potato chip bags. He sells them to other inmates for “siete pollos,” seven portions of chicken from the commissary.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Todd Heisler/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="271" data-total-count="5872" id="story-continues-23" tabindex="-1">Durante años, el Departamento de Justicia de Estados Unidos llevó los casos de los extraditados en secreto, no solo impidiendo el acceso a documentación básica para comprenderlos, sino ocultando información e incluso borrando a acusados como Giraldo de los sumarios.</p>
+<p class="story-body-text story-content" data-para-count="270" data-total-count="6142" id="story-continues-24" tabindex="-1">A través de entrevistas, información legal abierta recientemente al público, transcripciones, documentos internos del gobierno e información obtenida de Colombia y Estados Unidos, hemos examinado los casos de 40 paramilitares extraditados y de algunos de sus socios.</p>
+<p class="story-body-text story-content" data-para-count="450" data-total-count="6592" id="story-continues-25" tabindex="-1">La mayoría, según hemos descubierto, fueron premiados generosamente por declararse culpables y cooperar con las autoridades de Estados Unidos. Fueron tratados como personas sin antecedentes penales pese a sus extensas carreras criminales en Colombia, y se les descontó tiempo en prisión por el tiempo pasado en cárceles colombianas —aunque el argumento oficial para extraditarlos es que cometían delitos desde el interior de esos penales—.</p>
+<p class="story-body-text story-content" data-para-count="278" data-total-count="6870" id="story-continues-26" tabindex="-1">Por ejemplo, Salvatore Mancuso, de quien el gobierno dijo que “podría bien ser uno de los traficantes de cocaína más prolíficos que ha sido juzgado en Estados Unidos” y a quien la justicia colombiana cree responsable de la muerte o desaparición de más de mil personas.</p>
+<p class="story-body-text story-content" data-para-count="438" data-total-count="7308" id="story-continues-27" tabindex="-1">Según el acuerdo al que llegó con las autoridades, recibiría entre 30 años de condena y cadena perpetua. Gracias a su amplia colaboración con las autoridades, los fiscales, uno de los cuales describió a Mancuso durante una entrevista como “siempre un caballero ante mí”, pidieron solo 22 años. Un juez federal lo condenó a poco más de 15 años. Al final habrá pasado poco más de 12 años tras las rejas en Estados Unidos.</p>
+<h4 class="story-subheading story-content">&#8216;Lo peor de lo peor&#8217;</h4>
+
+<p class="story-body-text story-content" data-para-count="339" data-total-count="7647" id="story-continues-29" tabindex="-1">“Es una locura”, dijo <a href="https://www.law.berkeley.edu/our-faculty/faculty-profiles/roxanna-altholz/" target="_blank">Roxanna Altholz</a>, directora asociada de la clínica de derecho internacional humanitario de la Universidad de California en Berkeley, que representa a la familia Henríquez. “Estos individuos son lo peor de lo peor. Capos de la droga y criminales de guerra. ¿Por qué deberían recibir beneficios legales?”.</p>
+<p class="story-body-text story-content" data-para-count="237" data-total-count="7884" id="story-continues-30" tabindex="-1">Las autoridades de Estados Unidos creen que las extradicciones tuvieron sentido en una coyuntura histórica determinada y “demostraron a los colombianos que no existía nadie intocable”, tal y como lo explica uno de sus funcionarios.</p>
+<p class="story-body-text story-content" data-para-count="122" data-total-count="8006" id="story-continues-31" tabindex="-1">Varios fiscales federales respondieron a Altholz diciendo: “Vamos a acabar con ellos, no importa cuál sea el motivo”.</p>
+<p class="story-body-text story-content" data-para-count="299" data-total-count="8305" id="story-continues-32" tabindex="-1">Para ella y otros defensores de los derechos humanos, sí importa: los crímenes contra la humanidad se llevaron por delante al narcotráfico y Estados Unidos podría haber juzgado a esos hombres por tortura, por ejemplo. O podría haberle dado una oportunidad a la justicia transicional colombiana.</p>
+<p class="story-body-text story-content" data-para-count="76" data-total-count="8381" id="story-continues-33" tabindex="-1">Giraldo será el último de los paramilitares extraditados en ser condenado.</p>
+<p class="story-body-text story-content" data-para-count="308" data-total-count="8689" id="story-continues-34" tabindex="-1">Aunque las autoridades de Estados Unidos dijeron que sería improbable que The New York Times tuviera acceso a él, tras pedirle permiso a Giraldo, a su abogado, a la prisión, a un fiscal y a un juez federal, una reportera y un fotógrafo lograron encontrarse con él en una cárcel de Virginia, en agosto.</p>
+<p class="story-body-text story-content" data-para-count="367" data-total-count="9056" id="story-continues-35" tabindex="-1">Vestido con un holgado mono azul marino, el Patrón, que ahora tiene 68 años, parece una versión desmejorada de quien un día fue temible. Cabello gris, más delgado, de caminar lento. Pasa los días haciendo carteras con bolsas de papas fritas y vendiéndoselas a otros presos por “siete pollos”, es decir: siete raciones de pollo del economato de la cárcel.</p>
+<p class="story-body-text story-content" data-para-count="117" data-total-count="9173" id="story-continues-36" tabindex="-1">“Mire”, dice con orgullo, tirando de una de las correas hechas con papel de aluminio. “Son de doble costura”.</p>
+<p class="story-body-text story-content" data-para-count="240" data-total-count="9413" id="story-continues-37" tabindex="-1">Poco antes de la medianoche del 12 de mayo de 2008, a Giraldo lo despertaron bruscamente en una cárcel de Barranquilla, le dijeron que hiciera una maleta pequeña y lo subieron a un avión con destino a Bogotá. No le explicaron nada más.</p>
+<p class="story-body-text story-content" data-para-count="382" data-total-count="9795" id="story-continues-38" tabindex="-1">Una vez allí, encadenado, con las manos atadas a la cintura y grilletes, lo subieron a un avión de Estados Unidos junto a una buena representación de los paramilitares colombianos. Volaron rodeados de un silencio aplastante, enfadados porque el presidente de la mano dura, con quien “compartían ideología” en palabras de Giraldo, había roto su promesa de no extraditarlos.</p>
+<p class="story-body-text story-content" data-para-count="170" data-total-count="9965" id="story-continues-39" tabindex="-1">Tras años de negarse a entregarlos, el presidente Uribe había hecho una petición urgente a Estados Unidos: ¿esos líderes paramilitares? Llévenselos. Inmediatamente.</p>
+<p class="story-body-text story-content" data-para-count="365" data-total-count="10330" id="story-continues-40" tabindex="-1">Quería que se los llevaran después de que la Corte Suprema de Justicia de Colombia cerrara sus puertas por la tarde y antes de que las abriera de nuevo la mañana siguiente, según un funcionario estadounidense que aceptó hablar bajo anonimato. El presidente Uribe dijo que tenía miedo de que la corte bloqueara las extradiciones si no las hacían a toda prisa.</p>
+<p class="story-body-text story-content" data-para-count="315" data-total-count="10645" id="story-continues-41" tabindex="-1">Estados Unidos se puso manos a la obra. Era una operación de logística complicada. Necesitaban, en el testimonio del funcionario, “mover a hombres desde las cuatro esquinas de Colombia a un solo lugar y después el avión tenía que despegar con todos a bordo antes de que la Corte abriera al día siguiente”.</p>
+<p class="story-body-text story-content" data-para-count="271" data-total-count="10916" id="story-continues-42" tabindex="-1">En un momento dado, según la versión del funcionario, la autoridad antidrogas de Estados Unidos tenía seis aeronaves en funcionamiento para trasladar a los hombres desde Bogotá a Guantánamo, en Cuba, y de ahí a tribunales en Texas, Florida, Washington y Nueva York.</p>
+<p class="story-body-text story-content" data-para-count="169" data-total-count="11085" id="story-continues-43" tabindex="-1">¿Por qué el gobierno de Estados Unidos hizo un despliegue de esa magnitud para complacer a un presidente de Colombia que probablemente tenía sus propias motivaciones?</p>
+<p class="story-body-text story-content" data-para-count="521" data-total-count="11606" id="story-continues-44" tabindex="-1">“La política que dirigió el comportamiento de la administración de George Bush fue la de la cooperación en la lucha contra el narcotráfico”, dijo José Miguel Vivanco, director de Human Rights Watch para las Américas. “Ni los derechos humanos ni las atrocidades ni los crímenes contra la humanidad cometidos por esos bastardos les han costado un solo día de cárcel en Colombia. ¿Qué haces si de la noche al día recibes un regalo del presidente de Colombia, 14 narcotraficantes? Les das la bienvenida”.</p>
+<p class="story-body-text story-content" data-para-count="267" data-total-count="11873" id="story-continues-45" tabindex="-1">Es una historia de delitos que se mezclan con geopolítica. Colombia es el aliado más cercano a Estados Unidos y el principal receptor de ayuda de toda la región. La alianza de ambos países se basa en la lucha contra el narcotráfico, la guerrilla y el terrorismo.</p>
+<p class="story-body-text story-content" data-para-count="483" data-total-count="12356" id="story-continues-46" tabindex="-1">Tanto la guerrilla como los paramilitares financiaban sus actividades traficando con droga, cobrando “impuesto de guerra” y como grupos de seguridad de los narcotraficantes que operaban en las zonas bajo su control. Las agencias antidrogas se centraron primero en las narcoguerrillas. Los paramilitares, que eran enemigos en la guerra contra las drogas, estaban desde un punto de vista técnico en el mismo bando que los gobiernos de Colombia y Estados Unidos en la guerra civil.</p>
+<p class="story-body-text story-content" data-para-count="133" data-total-count="12489" id="story-continues-47" tabindex="-1">Desde el año 2000, cuando se creía que los paramilitares ya habían cometido al menos 75 masacres, Washington cambió de política.</p>
+<p class="story-body-text story-content" data-para-count="243" data-total-count="12732" id="story-continues-48" tabindex="-1">El 10 de septiembre de 2001, justo un día antes de poner su atención en otro lugar, Colin Powell, Secretario de Estado, designó a los paramilitares de las Autodefensas Unidas de Colombia como organización <a href="http://www.nytimes.com/2002/05/03/opinion/aiding-colombia-s-war-on-terrorism.html" target="_blank">terrorista</a>, al igual que las Farc.</p>
+<p class="story-body-text story-content" data-para-count="273" data-total-count="13005" id="story-continues-49" tabindex="-1">Las acusaciones de tráfico de drogas contra importantes líderes paramilitares llegaron enseguida y Uribe, elegido presidente en 2002 con la promesa de aplastar a la guerrilla, utilizó la amenaza de la extradición para forzar a los paramilitares a que dejaran las armas.</p>
+<figure id="media-100000004630104" class="media photo media-100000004630104 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA12/11COLOMBIA12-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-51">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA12/11COLOMBIA12-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA12/11COLOMBIA12-superJumbo.jpg" data-mediaviewer-caption="Photos of Mr. Henríquez collected by the National Center for Historical Memory in Bogotá as part of a project to memorialize victims of the Colombian conflict." data-mediaviewer-credit="Tomás Munita for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA12/11COLOMBIA12-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Photos of Mr. Henríquez collected by the National Center for Historical Memory in Bogotá as part of a project to memorialize victims of the Colombian conflict.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tomás Munita for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="314" data-total-count="13319" id="story-continues-51" tabindex="-1">Al contrario que su predecesor y su sucesor, Uribe utilizó la extradición como un arma de lucha contra el crimen. “Los bienes de mayor valor con los que Colombia y Estados Unidos comerciaban eran el café, la cocaína y los acusados por crímenes por ambos países”, según Robert Feitel, abogado de Giraldo.</p>
+<p class="story-body-text story-content" data-para-count="165" data-total-count="13484" id="story-continues-52" tabindex="-1">Pero durante años, Uribe mantuvo una excepción con respecto a los paramilitares con el argumento de que quería darle una oportunidad al <a href="http://www.fiscalia.gov.co/jyp/" target="_blank">proceso de Justicia y Paz</a>.</p>
+<p class="story-body-text story-content" data-para-count="409" data-total-count="13893" id="story-continues-53" tabindex="-1">La ley de Justicia y Paz inicial fue blanda. Un <a href="http://www.nytimes.com/2005/07/04/opinion/colombias-capitulation.html" target="_blank">editorial</a> de The New York Times de entonces la calificó como “impunidad para asesinos de masas, terroristas e importantes traficantes de cocaína”. Pero en 2006, la Corte Constitucional de Colombia la endureció y le otorgó un papel central a las víctimas al incrementar la pena máxima hasta 8 años de cárcel en caso de confesiones completas y reales.</p>
+<p class="story-body-text story-content" data-para-count="360" data-total-count="14253" id="story-continues-54" tabindex="-1">Para consternación de Uribe, los paramilitares comenzaron a confesar no solo sus crímenes de guerra sino sus vínculos con sus <a href="http://www.nytimes.com/2007/01/21/world/americas/21colombia.html" target="_blank">aliados y parientes</a>. La Corte Suprema de Justicia de Colombia, responsable de investigar a los legisladores, adoptó una actitud agresiva contra la “parapolítica” que implicó a muchos miembros de la coalición del presidente.</p>
+<p class="story-body-text story-content" data-para-count="235" data-total-count="14488" id="story-continues-55" tabindex="-1">Uribe pasó al contraataque y acusó a los jueces de izquierdismo y de conspirar contra él. Su agencia de inteligencia grabó de manera ilegal conversaciones de los miembros de la corte suprema y otros jueces. Negó saber algo de eso.</p>
+<p class="story-body-text story-content" data-para-count="181" data-total-count="14669" id="story-continues-56" tabindex="-1">Entonces, en abril de 2008, <a href="http://www.nytimes.com/2008/04/23/world/americas/23colombia.html" target="_blank">Mario Uribe</a>, primo del presidente y exsenador por nombramiento presidencial, fue detenido por conspirar junto con escuadrones de la muerte paramilitares.</p>
+<p class="story-body-text story-content" data-para-count="119" data-total-count="14788" id="story-continues-57" tabindex="-1">Unas semanas más tarde, Colombia despertó con las fotos de los paramilitares embarcando en aviones de Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="290" data-total-count="15078" id="story-continues-58" tabindex="-1">&#8220;El país entero entró en shock&#8221;, dijo Miguel Samper Strouss, quien fue viceministro de justicia a cargo de la justicia transicional. &#8220;Fue como si hubieran extraditado la posibilidad de conocer la verdad y de que se hiciera justicia y se reparase a las víctimas&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="241" data-total-count="15319" id="story-continues-59" tabindex="-1">En 2008, el proceso de Justicia y Paz, lento y lleno de problemas, se había convertido en algo real. Unas 200.000 víctimas se habían registrado para participar, se habían confesado miles de crímenes y se habían exhumado miles de fosas.</p>
+<h4 class="story-subheading story-content">Silencio e impunidad</h4>
+
+<p class="story-body-text story-content" data-para-count="160" data-total-count="15479" id="story-continues-61" tabindex="-1">En público, Uribe justificó la interrupción del proceso con el argumento de que los hombres seguían desarrollando sus actividades ilegales desde la cárcel.</p>
+<p class="story-body-text story-content" data-para-count="170" data-total-count="15649" id="story-continues-62" tabindex="-1">Los propios comandantes creían firmemente que Uribe los había enviado a Estados Unidos para silenciarlos. Y muchos de los defensores de las víctimas pensaban lo mismo.</p>
+<p class="story-body-text story-content" data-para-count="456" data-total-count="16105" id="story-continues-63" tabindex="-1">&#8220;Ellos iban colectivamente a entregar testimonios que comprometían a Uribe directamente&#8221;, dijo el senador Iván Cepeda, fundador del influyente <a href="http://www.movimientodevictimas.org/" target="_blank">Movimiento Nacional de Víctimas de Crímenes de Estado (Movice)</a>. &#8220;Además entraron a sus celdas, donde ellos tenían sus computadoras, sus USB, y se llevaron todo, desapareció todo el trabajo que ellos habían venido haciendo y todas las pruebas que le iban a presentar a la justicia&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="283" data-total-count="16388" id="story-continues-64" tabindex="-1">&#8220;Esas extradiciones marcaron un antes y un después&#8221;, continuó Cepeda. &#8220;Si el propósito era realmente lograr el silencio y lograr la impunidad, se consiguió en un alto grado. Solamente hasta hoy se comienza, después de tantos años, a tener un resultado&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="196" data-total-count="16584" id="story-continues-65" tabindex="-1">En una cárcel al norte de Virginia, los demás colombianos se ponían de pie cuando Giraldo entraba en la clase de inglés. Afilaban sus lápices y le daban papel, recuerda el director, Ted Hull.</p>
+<p class="story-body-text story-content" data-para-count="491" data-total-count="17075" id="story-continues-66" tabindex="-1">Si no fuera por esos detalles, los funcionarios de la prisión no habrían sabido con quién trataban. Que ese prisionero de edad avanzada que sufría de ciática y hablaba con las manos porque nunca logró ser fluido en inglés, fue una vez líder de una organización paramilitar con unas 4000 víctimas en la memoria y unas 1800 violaciones serias de los derechos humanos. Dicen que ahora Giraldo es el tipo de reo dócil que cruza las manos a la espalda incluso cuando no está esposado.</p>
+<p class="story-body-text story-content" data-para-count="282" data-total-count="17357" id="story-continues-67" tabindex="-1">Pero incluso aquí, en territorio que controlaba Giraldo, desde el bullicioso mercado del puerto de Santa Marta hasta las colinas de la Sierra Nevada, pasando por la costa del Caribe, sigue siendo esa especie de padrino de sombrero y <em>foulard</em> al cuello cuya presencia aún se siente.</p>
+<p class="story-body-text story-content" data-para-count="324" data-total-count="17681" id="story-continues-68" tabindex="-1">&#8220;Este señor desde que se desmovilizó dejó en la zona estructuras armadas protegiendo el territorio&#8221;, dijo Priscilla Zúñiga, asesora de seguridad del alcalde de Santa Marta. &#8220;No hemos dejado desde el 2006 hasta el 2016 de tener presencia armada ilegal en la zona. Ahora se llama el clan Giraldo&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="266" data-total-count="17947" id="story-continues-69" tabindex="-1">Zúñiga habla desde la oficina ubicada en el mercado, que cuenta con una estación policial para señalar que el gobierno trata de recuperar el control de la zona de manos de los hombres de Giraldo que aún tratan de cobrar extorsiones por protección en su nombre.</p>
+<p class="story-body-text story-content" data-para-count="460" data-total-count="18407" id="story-continues-70" tabindex="-1">Esa fuerte presencia policial sorprende a los visitantes pero, en general, la región trata de esconder su historia manchada de sangre, la amenaza que aún sigue ahí, presente. Es casi imposible imaginar los cuerpos enterrados en fosas clandestinas tras este paisaje de postal en el que montañas con picos cubiertos de nieve se yerguen sobre playas con palmeras y flotan botes de pesca en aguas cubiertas de helechos mientras grupos de mujeres lavan la ropa.</p>
+<p class="story-body-text story-content" data-para-count="301" data-total-count="18708" id="story-continues-71" tabindex="-1">Desde el principio, la historia de Giraldo, reconstruida a partir de entrevistas, registros judiciales, documentos del gobierno y su propia confesión, se cruza con la guerra civil colombiana. Nació en 1948, el año que dio inicio a la década del baño de sangre que se conoce hoy como La Violencia.</p>
+<p class="story-body-text story-content" data-para-count="325" data-total-count="19033" id="story-continues-72" tabindex="-1">No parecía destinado al liderazgo. Estudió hasta la secundaria y dejó su casa para trabajar en fincas. Su abogado, a quien le gusta recalcar la frase, dice que incluso ahora Giraldo sigue siendo &#8220;un campesino de corazón, el tipo de persona que quiere levantarse de madrugada y trabajar la tierra bajo el sol&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="271" data-total-count="19304" id="story-continues-73" tabindex="-1">Pero en los años setenta, Giraldo comenzó a formar parte de &#8220;la bonanza marimbera&#8221;, el <em>boom</em> de la marihuana que precedió al de la cocaína. Organizó un sistema de transporte en mulas que recogía la marihuana en zonas aisladas y la llevaba hasta la costa.</p>
+<p class="story-body-text story-content" data-para-count="408" data-total-count="19712" id="story-continues-74" tabindex="-1">La primera vez que tuvo que cometer un acto violento fue cuando su hermano menor fue asesinado durante un asalto en el mercado de Santa Marta. Para vengarlo, contrató a un grupo liderado por un tal Drácula y seis hombres murieron. Fue el principio de un largo proceso de limpieza social para eliminar &#8220;indeseables&#8221;. Ladrones, prostitutas, homosexuales, mujeres infieles, brujas e izquierdistas.</p>
+<p class="story-body-text story-content" data-para-count="314" data-total-count="20026" id="story-continues-75" tabindex="-1">Cuando Drácula fue asesinado, Giraldo se quedó con su negocio. Heredó sus intereses en la naciente industria de la cocaína que controlaba entonces el Cartel de Medellín. Transformó su grupo de seguridad en una milicia cuando las Farc trataron de poner pie en su territorio e intentaron asesinarlo tres veces.</p>
+<p class="story-body-text story-content" data-para-count="165" data-total-count="20191" id="story-continues-76" tabindex="-1">Un mercenario israelí entrenó a sus hombres y para practicar lo aprendido masacraron sindicalistas bananeros en fincas que se suponía eran bastiones guerrilleros.</p>
+<p class="story-body-text story-content" data-para-count="357" data-total-count="20548" id="story-continues-77" tabindex="-1">Giraldo fue arrestado como responsable de las masacres. Y ahí cayó en el radar de Estados Unidos, identificado en un cable diplomático como un &#8220;asesino de alto nivel del Cartel de Medellín&#8221;, cuya detención &#8220;muestra que las autoridades colombianas no se hacen de la vista gorda respecto a los crímenes cometidos por la derecha&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="302" data-total-count="20850" id="story-continues-78" tabindex="-1">Fue condenado a 20 años de cárcel. Pero para ese momento se había exiliado en la remota Sierra Nevada. Desde allí gobernó sobre el territorio bajo su control durante más de dos décadas, protegido por un grupo de 200 hombres y por familias de la élite y sus dependientes, según las autoridades.</p>
+<p class="story-body-text story-content" data-para-count="221" data-total-count="21071" id="story-continues-79" tabindex="-1">Según Zúñiga, &#8220;él no usaba un campamento como tal, como en la guerrilla. Su campamento era la comunidad porque él era parte de la comunidad, entonces las casas eran sus casas, las fincas eran sus fincas&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="289" data-total-count="21360" id="story-continues-80" tabindex="-1">&#8220;A pesar de ser, para nosotros como institución, un delincuente, para las comunidades siempre fue visto con mucho respeto, y no solamente respeto por miedo sino respeto por la organización que le dio al territorio, porque había mucha ausencia de Estado en la zona&#8221;, agregó.</p>
+<h4 class="story-subheading story-content">&#8216;Ya comenzaba a violar niñas&#8217;</h4>
+
+<p class="story-body-text story-content" data-para-count="316" data-total-count="21676" id="story-continues-82" tabindex="-1">Cuando la hija mayor de Henríquez, Nadiezhda se encontró por primera vez con Giraldo, lo que vio fue su mejor lado, casi benigno, el de una autoridad local. Entonces era profesora y apreciaba que Giraldo resolviera conflictos entre su pequeña escuela y los pescadores que la utilizaban para almacenar su material.</p>
+<p class="story-body-text story-content" data-para-count="209" data-total-count="21885" id="story-continues-83" tabindex="-1">También se dio cuenta de su lado más siniestro. Perdió a sus tres alumnas cuando su madre las envió lejos para protegerlas de la voracidad del Patrón. &#8220;Ya comenzaba a violar niñas&#8221;, recuerda.</p>
+<p class="story-body-text story-content" data-para-count="209" data-total-count="22094" id="story-continues-84" tabindex="-1">Como un señor feudal, Giraldo ejercía &#8220;una especie de derecho de pernada&#8221; sobre las niñas de la región, según un oficial de seguridad colombiano que no está autorizado a hablar con la prensa.</p>
+<p class="story-body-text story-content" data-para-count="289" data-total-count="22383" id="story-continues-85" tabindex="-1">&#8220;Las personas buscaban acercarse a Hernán Giraldo y llevaban a sus hijas o le facilitaban que pudiera tener relaciones sexuales con sus hijas porque era la forma de salvaguardar su vida, porque mientras tengas vínculos con el jefe, te sientes protegido&#8221;, dijo el funcionario.</p>
+<p class="story-body-text story-content" data-para-count="287" data-total-count="22670" id="story-continues-86" tabindex="-1">Cuando Giraldo dejó las armas, un fiscal le preguntó en una vista pública por qué le llamaban el Taladro. Se sonrojó, pero parecía orgulloso del apodo, dicen quienes estuvieron presentes. El fiscal le preguntó directamente si tenía que ver con su predilección por las vírgenes.</p>
+<p class="story-body-text story-content" data-para-count="38" data-total-count="22708" id="story-continues-87" tabindex="-1">&#8220;Podría ser&#8221;, respondió.</p>
+<p class="story-body-text story-content" data-para-count="219" data-total-count="22927" id="story-continues-88" tabindex="-1">Los fiscales colombianos comenzaron a examinar al detalle sus relaciones, comenzando por las madres de los 24 hijos que reconoce. Llegaron a llamar a Giraldo el &#8220;mayor depredador sexual del paramilitarismo&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="187" data-total-count="23114" id="story-continues-89" tabindex="-1">Durante el proceso de Justicia y Paz, aceptó la responsabilidad de 35 actos de violencia sexual, algunos cometidos por sus subordinados, incluida la violación de 11 menores de 14 años.</p>
+<p class="story-body-text story-content" data-para-count="140" data-total-count="23254" id="story-continues-90" tabindex="-1">El sumario de los fiscales recoge los casos como una letanía de consentimiento no informado que formaba parte de una dinámica patológica.</p>
+<p class="story-body-text story-content" data-para-count="406" data-total-count="23660" id="story-continues-91" tabindex="-1">Víctima Número 6: &#8220;Se tiene documentado que para el mes de octubre de 2004&#8221;, la chica visitó en varias ocasiones a una tía que trabajaba en al rancho de Giraldo. Pocos meses después &#8220;este le propuso que fuera su novia, propuesta que aceptó y el día 25 de diciembre mantuvieron sus primeras relaciones sexuales, cuando Yajanis apenas contaba con la edad de 13 años&#8221;. Él, 56.</p>
+<p class="story-body-text story-content" data-para-count="289" data-total-count="23949" id="story-continues-92" tabindex="-1">Tras el análisis de certificados de nacimiento, <a href="http://www.humanas.org.co/" target="_blank">Humanas Colombia</a>, una organización feminista, calculó que al menos 13 menores de edad tuvieron hijos que fueron &#8220;producto de accesos carnales violentos&#8221; de Giraldo. Nueve de ellas tenían menos de 14 años cuando dieron a luz.</p>
+<p class="story-body-text story-content" data-para-count="272" data-total-count="24221" id="story-continues-93" tabindex="-1">Algunas eran incluso demasiado jóvenes para quedarse embarazadas, como la hija de nueve años de sus cocineros. Adriana Benjumea, directora de Humanas, dijo que Giraldo le compró muñecas a la niña y le dijo que &#8220;no le diga nunca a su mamá porque la mato&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="306" data-total-count="24527" id="story-continues-94" tabindex="-1">Desde el mismo momento que inspectores de la policía llegaron a este lugar para investigar la desaparición de Julio Henríquez, se encontraron con un muro. &#8220;Desde el momento de nuestra llegada hasta la partida, se percibe la ley del silencio que impera allí&#8221;, dice un informe de la policía.</p>
+<figure id="media-100000004636543" class="media photo media-100000004636543 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/11/universal/es/11colombia-giraldo-copyES/11colombia-giraldo-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-96">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/11/universal/es/11colombia-giraldo-copyES/11colombia-giraldo-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/11/universal/es/11colombia-giraldo-copyES/11colombia-giraldo-superJumbo.jpg" data-mediaviewer-caption="Mr. Giraldo, also known as the Drill because of his rapacious appetite for underage girls, in February 2006." data-mediaviewer-credit="Armando Neira/Revista Semana-Colombia"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/11/universal/es/11colombia-giraldo-copyES/11colombia-giraldo-master1050.jpg"/>
+		<meta itemprop="height" content="786" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Mr. Giraldo, also known as the Drill because of his rapacious appetite for underage girls, in February 2006.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Armando Neira/Revista Semana-Colombia
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="337" data-total-count="24864" id="story-continues-96" tabindex="-1">La mujer de Henríquez y su hija mayor se habían enfrentado a los mismos miedos cuando huyeron a toda velocidad hacia el pueblo después de recibir la llamada en la que se les informó que había sido secuestrado. &#8220;Déjalo ir&#8221;, les dijeron. Eso enfureció a Nadiezhda Henríquez, quien ahora es abogada de derechos humanos.</p>
+<p class="story-body-text story-content" data-para-count="108" data-total-count="24972" id="story-continues-97" tabindex="-1">&#8220;Bueno, me matarán algún día, pero no es por miedo&#8221;, dijo durante una entrevista en Bogotá.</p>
+<p class="story-body-text story-content" data-para-count="505" data-total-count="25477" id="story-continues-98" tabindex="-1">Su padre tampoco tenía miedo, explica, era un defensor de la naturaleza, decidido a trabajar junto a los campesinos y pescadores para retomar el control de la región de manos de los traficantes. En su propia finca, muy extensa, estaba creando una reserva natural, plantando árboles indígenas y arrancando la marihuana y coca que plantaban sin su consentimiento. No era moralista ni estaba contra las drogas, pero le preocupaba la deforestación que causaba el cultivo de coca, según recuerda su hija.</p>
+<p class="story-body-text story-content" data-para-count="301" data-total-count="25778" id="story-continues-99" tabindex="-1">El pasado de Henríquez lo convertía en objetivo, según los documentos de la justicia colombiana. Giraldo defendió ante el tribunal que no tuvo nada que ver con el crimen, pero que había dado órdenes a sus hombres de que &#8220;todo lo que oliera a subversión fuera eliminado en esa zona&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="329" data-total-count="26107" id="story-continues-100" tabindex="-1">Henríquez había sido miembro de la guerrilla del M-19 aunque se había beneficiado de una amnistía concedida 17 años antes de su muerte. Su nuevo activismo (acababa de crear una organización no gubernamental llamada Madre Tierra) era una amenaza real, de aquí y ahora, según el testimonio del exparamilitar Carmelo Sierra.</p>
+<h4 class="story-subheading story-content">&#8216;La mafia no perdona&#8217;</h4>
+
+<p class="story-body-text story-content" data-para-count="289" data-total-count="26396" id="story-continues-102" tabindex="-1">&#8220;Es obvio que el señor Hernán no compartía eso, lo que el señor le estaba planteando a los campesinos, porque él es cultivador de coca y porque al invadir sus terrenos es motivo suficiente para matar a alguien&#8221;, dijo Sierra ante el juez. &#8220;La mafia no perdona&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="352" data-total-count="26748" id="story-continues-103" tabindex="-1">Sierra dijo que Giraldo envío a uno de sus hijos, el Grillo, para entregar un aviso: &#8220;Deja la ciudad o atente a las consecuencias&#8221;. Pero Henríquez no lo hizo. Así que siete de los hombres de Giraldo se alistaron una mañana, se vistieron de civiles y se encaminaron a la montaña para &#8220;hacer desaparecer al señor de la ONG&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="197" data-total-count="26945" id="story-continues-104" tabindex="-1">&#8220;Sinceramente, no sé qué pasó con él&#8221;, testificó Sierra. &#8220;Yo no sé si lo degollaron o lo descuartizaron. No sé cómo sería la muerte de él ni dónde lo enterraron&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="424" data-total-count="27369" id="story-continues-105" tabindex="-1">Ocho meses más tarde, agentes de la lucha antidrogas que investigaban las actividades de Giraldo fueron asesinados junto con un grupo de turistas y un empleado del hotel en el que se alojaban en la playa. Eso provocó una importante operación antinarcóticos y una guerra entre los paramilitares en la que el &#8220;Frente de la resistencia&#8221; de Giraldo fue derrotado por otro señor de la guerra, Rodrigo Tovar-Pupo.</p>
+<figure id="media-100000004629988" class="media photo media-100000004629988 embedded layout-jumbo-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA2/11COLOMBIA2-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-107">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA2/11COLOMBIA2-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA2/11COLOMBIA2-superJumbo.jpg" data-mediaviewer-caption="Taganga, the village where Julio Henríquez Santamaría organized and worked alongside local fishermen before Mr. Giraldo’s men murdered him." data-mediaviewer-credit="Tomás Munita for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA2/11COLOMBIA2-master1050.jpg"/>
+		<meta itemprop="height" content="701" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Taganga, the village where Julio Henríquez Santamaría organized and worked alongside local fishermen before Mr. Giraldo’s men murdered him.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tomás Munita for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="319" data-total-count="27688" id="story-continues-107" tabindex="-1">En 2005, Giraldo y Tover-Pupo fueron acusados en Washington de conspirar para fabricar cocaína y enviarla a Estados Unidos. Según los fiscales, ellos y sus aliados estaban implicados en el envío de miles de kilos de cocaína que dejaron el norte de Colombia en lanchas rápidas con motores y combustible adicionales.</p>
+<p class="story-body-text story-content" data-para-count="195" data-total-count="27883" id="story-continues-108" tabindex="-1">Un año más tarde, Giraldo —de mala gana, según las autoridades locales— dejó las armas en el proceso de paz con los paramilitares; 597 de sus hombres entregaron 73.000 cajas de munición.</p>
+<p class="story-body-text story-content" data-para-count="236" data-total-count="28119" id="story-continues-109" tabindex="-1">En 2007, su abogado entregó las coordenadas que llevaron a las autoridades hasta los restos de Henríquez en una fosa común. Su hija Nadiezha asistió a la exhumación con su madre. Fue un momento esperado tras años de incertidumbre.</p>
+<p class="story-body-text story-content" data-para-count="442" data-total-count="28561" id="story-continues-110" tabindex="-1">“Nunca pensé en que lo encontraría como lo encontramos: en una tumba del monte, todo tan verde, bajo un árbol, cerca de arroyos que se vuelven ríos, con el musgo y la piedra de la Sierra Nevada&#8221;, declaró Nadiezha como parte de su testimonio el jueves. &#8220;Con las manos amarradas atrás y dos tiros de gracia en la cabeza, con una ropa que no era de él, sin un zapato, sin un pie, sin parte de su boca. Solo huesitos&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="330" data-total-count="28891" id="story-continues-111" tabindex="-1">La familia de Henríquez no creía en el proceso de Justicia y Paz y presionó para que Giraldo fuera juzgado por la desaparición forzada ante una corte ordinaria. En 2009, después de su extradición, se le condenó en ausencia a 38 años y medio en prisión y a pagar una reparación de mil gramos de oro, unos 43.000 dólares.</p>
+<p class="story-body-text story-content" data-para-count="59" data-total-count="28950" id="story-continues-112" tabindex="-1">Pero eso está fuera del alcance de la justicia colombiana.</p>
+<p class="story-body-text story-content" data-para-count="73" data-total-count="29023" id="story-continues-113" tabindex="-1">Así que la familia decidió viajar a Estados Unidos para pedir justicia.</p>
+<p class="story-body-text story-content" data-para-count="297" data-total-count="29320" id="story-continues-114" tabindex="-1">Pocos meses después de que Giraldo llegara a Estados Unidos, fue transferido a la prisión de Northern Deck, donde cumplen condena traficantes mexicanos, pandilleros centroamericanos, yihadistas y combatientes colombianos de bandos enfrentados. Según Hull, el director del penal, se llevan bien.</p>
+<p class="story-body-text story-content" data-para-count="311" data-total-count="29631" id="story-continues-115" tabindex="-1">&#8220;Para serte honesto, y no quiero que suene como que justifico el terrorismo, tanto los presos de las Farc como los de las autodefensas unidas, los paramilitares, son presos modelo&#8221;, dijo. &#8220;Lo entienden como &#8216;me agarraron y estoy fuera&#8217;, todos cooperaban&#8221; con las autoridades.</p>
+<p class="story-body-text story-content" data-para-count="55" data-total-count="29686" id="story-continues-116" tabindex="-1">Ninguno de los paramilitares extraditados fue a juicio.</p>
+<p class="story-body-text story-content" data-para-count="287" data-total-count="29973" id="story-continues-117" tabindex="-1">Casi todos tenían abogados defensores. Pero Giraldo decía que su familia era pobre y que &#8220;un amigo&#8221; era quien asumía el coste de su defensa en Estados Unidos. Las tarifas pueden ser altas: un documento del caso de Tovar-Pupo revela que pagó a su abogado 390.000 dólares.</p>
+<p class="story-body-text story-content" data-para-count="121" data-total-count="30094" id="story-continues-118" tabindex="-1">&#8220;Los únicos que ganan en todo esto de la extradición son los abogados&#8221;, dijo Feitel, el abogado de Giraldo.</p>
+<p class="story-body-text story-content" data-para-count="530" data-total-count="30624" id="story-continues-119" tabindex="-1">En la defensa de estos hombres, sus abogados estadounidenses hacían hincapié en el contexto político de los crímenes y los presentaban como luchadores por la libertad cuyo movimiento se corrompió por culpa del tráfico de drogas. Uno de los abogados de la defensa, en referencia al apoyo de Estados Unidos al Ejército de Colombia, llegó a decirle al juez que un famoso líder paramilitar llamado Carlos Jiménez Naranjo &#8220;fue inicialmente, y podemos decirlo abiertamente, financiado por nuestro propio gobierno&#8221;.</p>
+<h4 class="story-subheading story-content">&#8216;Buenas intenciones&#8217;</h4>
+
+<p class="story-body-text story-content" data-para-count="536" data-total-count="31160" id="story-continues-121" tabindex="-1">En alguna instancia, las autoridades parecían ver a estos hombres como &#8220;sustantivamente diferentes&#8221; a señores de la droga que se mueven exclusivamente por el beneficio, tal y como lo explicó el juez Reggie B. Walton en Washington en la sentencia contra Tovar-Pupo: &#8220;Luchaba contra un enemigo que creo, probablemente, que si ese enemigo hubiese ganado, no habría mejorado la calidad de vida de la gente en Colombia. Lo que quiero decir es que estaban implicados en actividades con ciertas buenas intenciones&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="188" data-total-count="31348" id="story-continues-122" tabindex="-1">Robert Spelke, un fiscal antidrogas federal retirado, la persona que dijo que Mancuso es un caballero, afirmó que &#8220;algunos de estos tipos eran realmente malos, pero no tanto&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="302" data-total-count="31650" id="story-continues-123" tabindex="-1">Y continuó: &#8220;A veces es difícil creer que hicieron lo que hicieron. Está claro que hicieron cosas asquerosas. Pero ya se sabe que eso es lo que pasa en las guerras civiles. Siempre quise pensar que puesto ante la misma situación, hubiera hecho las cosas de otra manera. Pero no lo sé&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="261" data-total-count="31911" id="story-continues-124" tabindex="-1">Altholz, que representa a los Henríquez, dice que ve una ironía en esto: &#8220;Estos individuos asumieron un papel en el combate contra el ‘demonio comunista’ representado por las Farc y su identidad paramilitar mitiga en vez de agravar sus casos&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="137" data-total-count="32048" id="story-continues-125" tabindex="-1">Un oficial colombiano dice que esperaba penas mucho más duras a cambio de perder a los hombres al sistema de justicia de Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="386" data-total-count="32434" id="story-continues-126" tabindex="-1">&#8220;Todos hicimos muchos sacrificios para perseguirlos&#8221;, dijo. &#8220;A mí me amenazaron. Desplazaron a unos compañeros míos. Después mataron a varios compañeros míos. Nosotros creíamos que la justicia estadounidense iba a ser más drástica. Creíamos que iban a recibir penas más justas con todo el daño que hicieron, por lo menos penas superiores a 20 años&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="358" data-total-count="32792" id="story-continues-127" tabindex="-1">En los casos examinados por The New York Times, las sentencias que pudieron revisarse (algunas están selladas) iban desde libertad condicional a 30 años. Pero &#8220;la sentencia cumplida&#8221; era más fácil de comprobar y porque muchos de ellos vieron sus sentencias reducidas a &#8220;sentencia cumplida&#8221;; se usó eso como parámetro para medir.</p>
+<p class="story-body-text story-content" data-para-count="156" data-total-count="32948" id="story-continues-128" tabindex="-1">A cambio de su colaboración, muchos consiguieron reducciones de condena, algunas veces antes, otras veces después y otras veces tanto antes como después.</p>
+<p class="story-body-text story-content" data-para-count="28" data-total-count="32976" id="story-continues-129" tabindex="-1">Hubo una excepción notable.</p>
+<p class="story-body-text story-content" data-para-count="365" data-total-count="33341" id="story-continues-130" tabindex="-1">La fiscalía de Nueva York rechazó permitir que Diego Murillo Bejarano, Don Berna, pudiera cambiar información por beneficios de condena. Lo condenaron a 31 años. El único paramilitar que recibió una condena de más de 30 años además de él espera una reducción de entre el 35 y el 50 por ciento de la condena gracias a su cooperación, según sus abogados.</p>
+<p class="story-body-text story-content" data-para-count="413" data-total-count="33754" id="story-continues-131" tabindex="-1">En una ocasión, un juez de Florida obstaculizó la idea de una segunda reducción de condena a un jefe paramilitar. Así se llega a una situación, según el juez William Terrel Hidged, en la que cualquier reducción de condena &#8220;tiende a denigrar la seriedad del comportamiento del sujeto acusado y amenaza con provocar que el público le pierda respeto a la administración de la justicia criminal&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="255" data-total-count="34009" id="story-continues-132" tabindex="-1">Cuando Herbet Veloza García, conocido como HH, fue condenado esta primavera en un tribunal federal en Manhattan, el fiscal lo llamó un &#8220;acusado extraordinario por su conducta criminal grave, pero también por su extraordinaria cooperación&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="509" data-total-count="34518" id="story-continues-133" tabindex="-1">En este caso, como en la mayoría, no es posible determinar con certeza el grado en que esa cooperación ha sido útil para el gobierno de Estados Unidos porque la información específica no es de acceso público. Pero Veloza, según Rubén Oliva, su abogado, &#8220;dio una confesión completa&#8221; que permitió su propia acusación y su &#8220;asistencia sirvió para dar varios golpes a varias organizaciones importantes y a las peligrosas y corruptas organizaciones establecidas para servirles&#8221;.</p>
+<h4 class="story-subheading story-content">Refugio tras salir de prisión</h4>
+
+<p class="story-body-text story-content" data-para-count="433" data-total-count="34951" id="story-continues-135" tabindex="-1">El gobierno de Estados Unidos encontró a Veloza responsable de traficar más de 450 kilos de cocaína. Sentenciado a 11 años y medio, saldrá este otoño tras haber cumplido siete años y medio tras las rejas en Estados Unidos. Y entonces, pese &#8220;a todas las cosas horribles que has hecho a lo largo de tu vida&#8221;, como le dijo el juez William H. Pauley III, podrá &#8220;tener la oportunidad de comenzar de nuevo&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="183" data-total-count="35134" id="story-continues-136" tabindex="-1">Planea quedarse en Estados Unidos, según Oliva, aunque en Colombia le espera una sentencia del proceso de Justicia y Paz por 85 delitos entre los que se incluyen tortura y homicidio.</p>
+<p class="story-body-text story-content" data-para-count="253" data-total-count="35387" id="story-continues-137" tabindex="-1">Hasta ahora dos paramilitares han conseguido que Estados Unidos se convierta en su refugio tras salir de prisión: Juan Carlos Sierra, conocido como el Tuso, que pasó cinco años en prisión, y Carlos Mario Aguilar, alias Rogelio, que pasó casi siete.</p>
+<p class="story-body-text story-content" data-para-count="124" data-total-count="35511" id="story-continues-138" tabindex="-1">Ambos tienen órdenes de arresto en Colombia; Sierra en relación con un asesinato, según la Fiscalía General en Colombia.</p>
+<p class="story-body-text story-content" data-para-count="281" data-total-count="35792" id="story-continues-139" tabindex="-1">Sus familias han recibido asilo político al igual que la familia de un tercer paramilitar, Mauricio López Cardona, conocido como Yiyo, quien también ha pedido quedarse. Igual que Guillermo Pérez Alzate, extraditado con Giraldo y que ha cumplido menos de la mitad de su condena.</p>
+<p class="story-body-text story-content" data-para-count="293" data-total-count="36085" id="story-continues-140" tabindex="-1">Como narcotraficantes condenados, estos hombres no pueden pedir asilo. Piden una forma de protección poco habitual contra una posible expulsión basada en la Convención contra la Tortura, y argumentan que serían torturados por su gobierno, que ahora dirige el presidente Juan Manuel Santos.</p>
+<p class="story-body-text story-content" data-para-count="181" data-total-count="36266" id="story-continues-141" tabindex="-1">&#8220;No sugiero que el presidente Santos mienta&#8221;, dijo Oliva. &#8220;Pero estos hombres no sobrevivirían fuera del aeropuerto. Literalmente, los matarían al llegar&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="119" data-total-count="36385" id="story-continues-142" tabindex="-1">Samper, hijo de quien fuera presidente de Colombia en los noventa, dice que ese argumento &#8220;no es creíble&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="139" data-total-count="36524" id="story-continues-143" tabindex="-1">&#8220;Tenemos el mejor programa de protección individual del mundo reconocido por la Comisión Interamericana de Derechos Humanos&#8221;.</p>
+<figure id="media-100000004630107" class="media photo media-100000004630107 embedded layout-jumbo-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA7/11COLOMBIA7-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-145">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA7/11COLOMBIA7-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA7/11COLOMBIA7-superJumbo.jpg" data-mediaviewer-caption="The former paramilitary leader Salvatore Mancuso being led to a plane at the military airport in Bogotá for his extradition to the United States in May 2008." data-mediaviewer-credit="Colombia National Police via Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA7/11COLOMBIA7-master1050.jpg"/>
+		<meta itemprop="height" content="626" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The former paramilitary leader Salvatore Mancuso being led to a plane at the military airport in Bogotá for his extradition to the United States in May 2008.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Colombia National Police via Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="310" data-total-count="36834" id="story-continues-145" tabindex="-1">Como paramilitar y capo de la droga, Salvatore Mancuso fue un pez más gordo que Giraldo. Fue también, y a diferencia de Giraldo, un apologeta de verbosidad excesiva. Una vez que entró en el sistema de justicia transicional colombiano, habló y habló. Hasta lloriqueó cuando pidió perdón a sus víctimas.</p>
+<p class="story-body-text story-content" data-para-count="377" data-total-count="37211" id="story-continues-146" tabindex="-1">Después fue extraditado y cuando había pasado casi un año se sintió impelido a actuar &#8220;para evitar el estancamiento y la desaparición virtual&#8221; del Proceso de Justicia y Paz. Al menos eso dijo en una carta llena de florituras a una extraña amiga —Piedad Córdoba—, senadora entonces por el Partido Liberal que había sido secuestrada por los paramilitares.</p>
+<p class="story-body-text story-content" data-para-count="222" data-total-count="37433" id="story-continues-147" tabindex="-1">&#8220;Respetada senadora&#8221;, escribió. &#8220;La situación que se suscitó a partir de nuestra extradición ha generado un estado de indefensión, tanto para las víctimas, como para nosotros, los postulados&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="312" data-total-count="37745" id="story-continues-148" tabindex="-1">En algo parecido a un intento de reconciliación y verdad en privado, Córdoba, junto a defensores de las víctimas entre las que estaba Cepeda, viajaron a Estados Unidos para reunirse en la cárcel con Mancuso y otros paramilitares. Las autoridades no permitieron que The New York Times se entrevistara con él.</p>
+<p class="story-body-text story-content" data-para-count="225" data-total-count="37970" id="story-continues-149" tabindex="-1">Cepeda dice que le preguntó directamente si sabía quién había asesinado a su padre, un senador de izquierda, en 1994. El líder paramilitar le dio nombres a él y a la fiscalía. Llevó seis meses organizar ese encuentro.</p>
+<p class="story-body-text story-content" data-para-count="504" data-total-count="38474" id="story-continues-150" tabindex="-1">&#8220;Finalmente, un día se ordenaron las estrellas en el firmamento y fuimos con una fiscal colombiana y estaba alguien del Departamento de Justicia&#8221;, explicó. &#8220;Se logró obtener el testimonio, pero eso soy yo, que tengo posibilidad de hablar con el gobierno, hablar con el fiscal general, hablar con personas que están en Estados Unidos. Un campesino de una zona como Córdoba o de Antioquia, donde hay miles de personas que son víctimas, jamás van a poder hacer ese ejercicio&#8221;.</p>
+<figure id="media-100000004630096" class="media photo media-100000004630096 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA8/11COLOMBIA8-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-152">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA8/11COLOMBIA8-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA8/11COLOMBIA8-superJumbo-v2.jpg" data-mediaviewer-caption="In 2007, Mr. Giraldo’s lawyer provided coordinates that ultimately led the authorities to Mr. Henríquez’s remains in a clandestine grave. They now lie in this family mausoleum in Santa Marta." data-mediaviewer-credit="Tomas Munita for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/11/us/11COLOMBIA8/11COLOMBIA8-master675-v2.jpg"/>
+		<meta itemprop="height" content="451" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">In 2007, Mr. Giraldo’s lawyer provided coordinates that ultimately led the authorities to Mr. Henríquez’s remains in a clandestine grave. They now lie in this family mausoleum in Santa Marta.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tomas Munita for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="459" data-total-count="38933" id="story-continues-152" tabindex="-1">El fiscal general de Colombia y los jueces se sumaron en la protesta contra el gobierno de Obama, que había heredado los casos. Creían que se estaba coartando la justicia. Como resultado de esa gestión, en 2010, el Departamento de Justicia creó un &#8220;plan de acceso&#8221; que prometía que una docena de paramilitares estarían disponibles para hacer entrevistas por video si ellos mismos aceptaban participar en el proceso, lo que era suponer mucho.</p>
+<p class="story-body-text story-content" data-para-count="201" data-total-count="39134" id="story-continues-153" tabindex="-1">Las autoridades de Estados Unidos dicen que se realizaron al menos 500 entrevistas. Una quinta parte fue con Mancuso y, según un fiscal colombiano que testificó el año pasado, no sirvieron de tanto.</p>
+<p class="story-body-text story-content" data-para-count="447" data-total-count="39581" id="story-continues-154" tabindex="-1">&#8220;En total, conseguimos más o menos el ocho por ciento de lo que teníamos que conseguir&#8221;, según el fiscal Giovanni Álvarez Santoyo, señalando que Mancuso ha sido acusado de 4800 &#8220;asuntos&#8221; que van de &#8220;asesinato a desaparición forzada, desplazamiento forzado, reclutamiento de menores, violencia sexual, esclavitud sexual y delitos relacionados, como secuestro, terrorismo, robo y destrucción de propiedad&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="268" data-total-count="39849" id="story-continues-155" tabindex="-1">Es imposible saber si las cosas habrían sido diferentes si los líderes no hubieran sido extraditados. Si hubiera habido más verdad, si se habría hecho más justicia o más rápido, y si los grupos paramilitares habrían sido desmantelados con mayor o menos éxito.</p>
+<p class="story-body-text story-content" data-para-count="249" data-total-count="40098" id="story-continues-156" tabindex="-1">Iván Velásquez, que lideró la investigación de la Corte Suprema por la corrupción de los paramilitares, dijo en un foro en Bogotá hace varios años que la verdad contada por los militares antes y después de las extradiciones no fue demasiada.</p>
+<p class="story-body-text story-content" data-para-count="314" data-total-count="40412" id="story-continues-157" tabindex="-1">&#8220;Muchos de ellos y sus lugartenientes han reducido gran parte de su &#8216;colaboración&#8217;, como solemos llamar su obligación de decir la verdad, a relacionar de manera descontextualizada los homicidios cometidos, justificándolos por tratarse de guerrilleros vestidos de civil, mostrando fosas&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="297" data-total-count="40709" id="story-continues-158" tabindex="-1">Garantizar la &#8220;no repetición&#8221; de las atrocidades habría requerido de mucho más. &#8220;Que se revele los auspiciadores, financiadores, promotores, beneficiarios o usufructuarios de esas estructuras criminales que en muchos casos todavía permanecen intactas&#8221;, dijo Velásquez.</p>
+<p class="story-body-text story-content" data-para-count="309" data-total-count="41018" id="story-continues-159" tabindex="-1">Durante la última década, 128 exparamilitares han sido condenados en el Proceso de Justicia y Paz de entre los más de mil detenidos, según el gobierno colombiano. Pero mientras el país se prepara para un nuevo proceso de justicia transicional para las Farc, el modelo de Justicia y Paz sigue presionando.</p>
+<p class="story-body-text story-content" data-para-count="190" data-total-count="41208" id="story-continues-160" tabindex="-1">Al igual que las investigaciones sobre la parapolítica: este año, el hermano menor de Álvaro Uribe, Santiago, fue detenido por vínculos con un escuadrón de la muerte, <a href="http://www.verdadabierta.com/negocios-ilegales/otros-negocios-criminales/4918-los-doce-apostoles-la-sombra-de-santiago-uribe" target="_blank">Los 12 Apóstoles</a>.</p>
+<p class="story-body-text story-content" data-para-count="444" data-total-count="41652" id="story-continues-161" tabindex="-1">El expresidente también fue investigado el año pasado por sus propios vínculos con los paramilitares. Pero al final no se le acusó de nada. Ahora es senador y cree que la investigación contra él y su familia tiene motivaciones políticas. Uribe es el mayor crítico del proceso de paz con la guerrilla de su sucesor y acusa a Santos de lo que le acusaron a él en relación con los paramilitares: ofrecer impunidad a criminales de guerra.</p>
+<figure id="media-100000004638334" class="media photo media-100000004638334 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/11/universal/es/11colombia-jail-copyES/11colombia-jail--master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-163">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/11/universal/es/11colombia-jail-copyES/11colombia-jail--master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/11/universal/es/11colombia-jail-copyES/11colombia-jail--superJumbo.jpg" data-mediaviewer-caption="At the Northern Neck Regional Jail in Warsaw, Va., Mr. Giraldo awaits sentencing, eight years after he was extradited." data-mediaviewer-credit="Todd Heisler/The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/11/universal/es/11colombia-jail-copyES/11colombia-jail--master675.jpg"/>
+		<meta itemprop="height" content="434" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">At the Northern Neck Regional Jail in Warsaw, Va., Mr. Giraldo awaits sentencing, eight years after he was extradited.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Todd Heisler/The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="253" data-total-count="41905" id="story-continues-163" tabindex="-1">El presidente Santos ha dicho que espera que un dividendo del acuerdo de paz sea una reducción en el tráfico de drogas que financió el conflicto armado. Los cultivos de coca han seguido aumentando en Colombia, y en especial en los últimos dos años.</p>
+<p class="story-body-text story-content" data-para-count="380" data-total-count="42285" id="story-continues-164" tabindex="-1">La extradición como panacea ya no tiene tanto favor del público como antes. En 2015, las extradiciones a Estados Unidos cayeron a la mitad, 109, de las que hubo el año en que se extraditó a los líderes paramilitares. Y el nuevo acuerdo, si los votantes lo aprueban, podría garantizar la protección contra la extradición de los líderes guerrilleros por tráfico de drogas.</p>
+<p class="story-body-text story-content" data-para-count="170" data-total-count="42455" id="story-continues-165" tabindex="-1">&#8220;Si eso puede verse como una contribución de Estados Unidos al proceso de paz, bienvenido sea&#8221;, dijo Kevin Whitaker, embajador de Estados Unidos en Colombia.</p>
+<p class="story-body-text story-content" data-para-count="440" data-total-count="42895" id="story-continues-166" tabindex="-1">A principios de este año, dos mujeres jóvenes se aproximaron con cautela a las autoridades de Santa Marta. Habían decidido revelar que habían sido víctimas de la violencia sexual de Giraldo incluso después de su rendición y promesa de no volver a cometer crímenes. Tenían menos de 14 años y las habían llevado con Giraldo como visitas conyugales primero en una zona de detención especial de paramilitares y luego en una cárcel.</p>
+<p class="story-body-text story-content" data-para-count="288" data-total-count="43183" id="story-continues-167" tabindex="-1">Sus acusaciones eran tan sensibles que ahora están bajo protección. &#8220;Este año, me tocó la protección inicial de las dos chicas que denunciaron y las sacamos de la zona debido a que los hijos de Giraldo iban a matarlas&#8221;, dijo Zúñiga, la jefa de seguridad de Santa Marta.</p>
+<p class="story-body-text story-content" data-para-count="31" data-total-count="43214" id="story-continues-168" tabindex="-1">Giraldo dijo que eran mentiras.</p>
+<p class="story-body-text story-content" data-para-count="158" data-total-count="43372" id="story-continues-169" tabindex="-1">&#8220;Ahora aparecen montones de víctimas en Colombia porque les dan dinero&#8221;, dijo en referencia a las reparaciones, que pocas víctimas han obtenido.</p>
+<p class="story-body-text story-content" data-para-count="262" data-total-count="43634" id="story-continues-170" tabindex="-1">Si se prueban, esas acusaciones serían la base que serviría para denegar a Giraldo la sentencia de ocho años que obtendría bajo el amparo del proceso de Justicia y Paz. Afrontaría el resto de su vida en prisión. Si Estados Unidos decide enviarlo de vuelta.</p>
+<p class="story-body-text story-content" data-para-count="44" data-total-count="43678" id="story-continues-171" tabindex="-1">Y eso es en lo que se apoyan los Henríquez.</p>
+<p class="story-body-text story-content" data-para-count="457" data-total-count="44135" id="story-continues-172" tabindex="-1">Les llevó casi ocho años conseguir que Estados Unidos las aceptara como víctimas para poder participar en el caso de Giraldo. Sus abogados adoptaron un enfoque nuevo al argumentar que la ley de derechos de las víctimas de 2004 es aplicable. Explicaron que aunque Henríquez era una víctima extranjera de un crimen cometido en el extranjero, su crimen fue consecuencia de la trama de narcotráfico en la que participaba y de la que se declaró culpable.</p>
+<p class="story-body-text story-content" data-para-count="173" data-total-count="44308" id="story-continues-173" tabindex="-1">El Departamento de Justicia no estuvo de acuerdo y no intercambió opiniones con los Henríquez sobre las decisiones del caso ni les informó de los pasos del procedimiento.</p>
+<figure id="media-100000004638336" class="media photo media-100000004638336 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/09/11/universal/es/11colombia-sisters-copyES/11colombia-sisters-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-175">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/09/11/universal/es/11colombia-sisters-copyES/11colombia-sisters-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/09/11/universal/es/11colombia-sisters-copyES/11colombia-sisters-superJumbo.jpg" data-mediaviewer-caption="Bela Henríquez, left, and her sister, Nadiezdha, look through family photographs collected by the National Center for Historical Memory." data-mediaviewer-credit="Tomas Munita for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/09/11/universal/es/11colombia-sisters-copyES/11colombia-sisters-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Bela Henríquez, left, and her sister, Nadiezdha, look through family photographs collected by the National Center for Historical Memory.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Tomas Munita for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="360" data-total-count="44668" id="story-continues-175" tabindex="-1">La familia permaneció en la más completa oscuridad porque el Departamento de Justicia hizo que el juez sellara los archivos del caso, así como la moción en la que solicitaba esa restricción de información. No fue hasta que un comité de periodistas por la libertad de prensa presentó una <a href="https://www.rcfp.org/sites/default/files/litigation/inrereport_2015-04-03_application_to_unseal_court_records_and_.pdf" target="_blank">demanda</a> el año pasado, que se abrió el legajo del caso Giraldo.</p>
+<p class="story-body-text story-content" data-para-count="335" data-total-count="45003" id="story-continues-176" tabindex="-1">Aunque el juez denegó en un principio que los Henríquez fueran víctimas, cambió de opinión después de que una corte de apelaciones le pidiera que lo reconsiderara: &#8220;Creo que los peticionarios han establecido que su argumento de que si no fuera por la implicación del acusado, el fallecido no habría sido asesinado&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="497" data-total-count="45500" id="story-continues-177" tabindex="-1">Feitel, que considera que los Henríquez son &#8220;falsas víctimas molestas que ladran a espaldas de mi cliente&#8221;, se enfadó. Visto con perspectiva, Paul Cassell, quien fue juez federal y es experto en derechos de las víctimas, dijo que los casos de narcotráfico suelen tratarse como casos sin víctimas. &#8220;Esto crea un precedente real&#8221;, dijo. Podría tener consecuencias para capos violentos como Joaquín Guzmán, el Chapo, cuya extradición ya ha sido aprobada por México.</p>
+<p class="story-body-text story-content" data-para-count="182" data-total-count="45682" id="story-continues-178" tabindex="-1">Después de la vista judicial de marzo, Altholz llamó a las hijas de Henríquez a un aparte fuera del edificio de los tribunales. &#8220;Ganamos&#8221;, dijo. &#8220;Ganamos&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="285" data-total-count="45967" id="story-continues-179" tabindex="-1">A la familia Henríquez no le gusta hablar de los avances en el caso porque despierta de nuevo una sensación de dolor. &#8220;Somos como esos muñequitos de goma de un botoncito y se desbaratan&#8221;, dijo Bela Henríquez. &#8220;Pero fui contenta&#8221;. Nadiezhda fue más cauta.</p>
+<p class="story-body-text story-content" data-para-count="238" data-total-count="46205" id="story-continues-180" tabindex="-1">&#8220;Los derechos son meramente procesales&#8221;, dijo. &#8220;Tiene su sentido pero también es bastante limitado en lo que está internacionalmente reconocido a las víctimas como su derecho: verdad, justicia y reparación&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="260" data-total-count="46465" id="story-continues-181" tabindex="-1">Dijo que durante la persecución de estos paramilitares, el gobierno de Estados Unidos se implicó en &#8220;negociaciones sobre justicia, y eso no es justicia&#8221;. Se centraron en el daño causado a Estados Unidos y no &#8220;en lo que nos hicieron&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="182" data-total-count="46647" id="story-continues-182" tabindex="-1">¿Qué tipo de sentencia quieren los Henríquez para Giraldo? &#8220;Queremos el tiempo suficiente para que esto se desmantele, para que en mi tierra haya paz&#8221;, dijo Nadiezhda.</p>
+<p class="story-body-text story-content" data-para-count="355" data-total-count="47002" id="story-continues-183" tabindex="-1">Si se desmanteló en realidad a los paramilitares y qué papel jugaron las extradiciones, es un asunto a debate en Colombia. Pero las bandas criminales —bacrim, en la abreviatura que se usa habitualmente, que nacieron después de que los paramilitares se diluyesen— son consideradas sucesoras formales de los paramilitares en el acuerdo de paz actual.</p>
+<p class="story-body-text story-content" data-para-count="347" data-total-count="47349" id="story-continues-184" tabindex="-1">Cerca de Santa Marta, el estallido más reciente de violencia neoparamilitar sucedió a finales de 2013. Cientos de civiles tuvieron que dejar sus pueblos durante un enfrentamiento entre el Clan Giraldo y un grupo rival que duró cuatro meses y dejó cientos de muertos. Desde entonces, los parientes de Giraldo luchan entre ellos por el control.</p>
+<p class="story-body-text story-content" data-para-count="209" data-total-count="47558" id="story-continues-185" tabindex="-1">&#8220;Si Giraldo estuviera en la cárcel aquí y no en Virginia, no veríamos esta disputa territorial&#8221;, dijo Zúñiga. Y añadió: &#8220;No creo que Santa Marta esté preparada para su regreso&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="183" data-total-count="47741" id="story-continues-186" tabindex="-1">Bela Henríquez, que espera su visa para ir a Estados Unidos, espera poder mirar a la cara en una sala de audiencias al hombre condenado en rebeldía por la desaparición de su padre.</p>
+<p class="story-body-text story-content" data-para-count="546" data-total-count="48287" id="story-continues-187" tabindex="-1">&#8220;Yo no sé qué estará pensando Hernán Giraldo, pero por lo menos que tenga que ver con los crímenes que cometió en Colombia, que no quede en el olvido&#8221;, dijo. &#8220;Que tenga que reconocer que su negocio cobró vidas y no solamente una vida de un líder o una vida de una comunidad, sino que influencia la vida de todo el país. Afectará no solo a las familias que tenían que cargar con el peso de la violencia, sino que influencia la vida de todo el país, la historia de todo el país, de generaciones en adelante&#8221;.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/alvaro-uribe/" rel="tag">Álvaro Uribe</a>, <a href="https://www.nytimes.com/es/tag/colombia/" rel="tag">Colombia</a>, <a href="https://www.nytimes.com/es/tag/farc/" rel="tag">Farc</a>, <a href="https://www.nytimes.com/es/tag/guerrilla/" rel="tag">guerrilla</a>, <a href="https://www.nytimes.com/es/tag/justicia-y-paz/" rel="tag">Justicia y Paz</a>, <a href="https://www.nytimes.com/es/tag/narcotrafico/" rel="tag">narcotráfico</a>, <a href="https://www.nytimes.com/es/tag/paramilitares/" rel="tag">paramilitares</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/09/09/paramilitares-colombia-narcotrafico-uribe-violencia-justicia-paz/"
+				data-title="América Latina: Justicia interrumpida: Paramilitares en Colombia, presos privilegiados en Estados Unidos"
+				data-author=""
+				data-media=""
+				data-description="A través de entrevistas, información desclasificada y documentos internos de Colombia y Estados Unidos, The New York Time examinó los casos de 40 jefes paramilitares extraditados. La mayoría fueron tratados como personas sin antecedentes penales pese a sus extensas carreras criminales. "
+				data-publish-date="9 de septiembre de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/08/25/la-paz-en-colombia-del-fin-de-la-negociacion-a-la-encrucijada-por-el-plebiscito/">
+					<div class="story-body">
+						<h3 class="kicker">Comentario</h3>
+
+						<h2 class="headline">
+							<span class="title">La paz en Colombia: del fin de la negociación a la encrucijada por el plebiscito</span>
+							<time class="dateline">25 de agosto de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/08/26/universal/ColombiaES/ColombiaES-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/04/27/una-adolescente-que-crecio-en-las-filas-de-las-farc-trata-de-rehacer-su-vida-en-colombia/">
+					<div class="story-body">
+						<h3 class="kicker">Colombia</h3>
+
+						<h2 class="headline">
+							<span class="title">Una adolescente que creció en las filas de las Farc trata de rehacer su vida en Colombia</span>
+							<time class="dateline">27 de abril de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/04/27/world/28COLOMBIA-WEB1/28COLOMBIA-WEB1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-transparent-ffffff' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-transparent-ffffff', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":880,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

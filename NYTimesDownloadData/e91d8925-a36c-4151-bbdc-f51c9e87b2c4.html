@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content=" 100000004400814"/>
+<meta name="hdl" content="Las franquicias de superhéroes estancan a (casi todas) las estrellas de cine" />
+<meta name="col" content="Cultura" id="column-name" />
+<meta name="pdate" content="20160527" />
+<meta name="utime" content="20160527180051" />
+<meta name="ptime" content="20160527180051" />
+<meta name="DISPLAYDATE" content="May. 27, 2016" />
+<meta name="dat" content="May. 27, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="las-franquicias-de-superheroes-estancan-a-casi-todas-las-estrellas-de-cine" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/05/27/las-franquicias-de-superheroes-estancan-a-casi-todas-las-estrellas-de-cine/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Las franquicias de superhéroes estancan a (casi todas) las estrellas de cine" />
+<meta property="og:description" content="El cine de superhéroes produce tanto dinero que ha cambiado a la industria estadounidense del entretenimiento pero se corre el riesgo de agotar las historias y encasillar a buenos actores jóvenes." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLE/22ENSEMBLE-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-05-27" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/05/27/las-franquicias-de-superheroes-estancan-a-casi-todas-las-estrellas-de-cine/" />
+<meta property="twitter:title" content="Las franquicias de superhéroes estancan a (casi todas) las estrellas de cine" />
+<meta property="twitter:description" content="El cine de superhéroes produce tanto dinero que ha cambiado a la industria estadounidense del entretenimiento pero se corre el riesgo de agotar las historias y encasillar a buenos actores jóvenes." />
+<meta name="author" content="Wesley Morris" />
+<meta name="tone" content="feature" id="article-tone" />
+<meta name="byl" content="Por Wesley Morris" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="cultura" />
+<meta name="cd12" content="comentario" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="cultura" />
+<meta name="ser" content="comentario" />
+<meta name="id" content=" 100000004400814"/>
+<meta name="wordCount" content="1787"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/05/27/las-franquicias-de-superheroes-estancan-a-casi-todas-las-estrellas-de-cine/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=05&amp;day=27&amp;name=las-franquicias-de-superheroes-estancan-a-casi-todas-las-estrellas-de-cine">
+<meta name="PT" content="article">
+<meta name="article:section" content="Cultura">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/6?exclude=12808">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/05\/27\/las-franquicias-de-superheroes-estancan-a-casi-todas-las-estrellas-de-cine\/"},"headline":"Las franquicias de superh\u00e9roes estancan a (casi todas) las estrellas de cine","datePublished":"2016-05-27T18:00:51+00:00","dateModified":"2016-05-27T11:22:42+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/05\/22\/arts\/22ENSEMBLE\/22ENSEMBLE-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"El cine de superh\u00e9roes produce tanto dinero que ha cambiado a la industria estadounidense del entretenimiento pero se corre el riesgo de agotar las historias y encasillar a buenos actores j\u00f3venes."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/05/27/las-franquicias-de-superheroes-estancan-a-casi-todas-las-estrellas-de-cine/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/05/22/movies/in-x-men-apocalypse-and-captain-america-superheroes-versus-movie-stars.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="cultura/comentario" />
+<title>Las franquicias de superhéroes estancan a (casi todas) las estrellas de cine &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/05/22/movies/in-x-men-apocalypse-and-captain-america-superheroes-versus-movie-stars.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/05/27/las-franquicias-de-superheroes-estancan-a-casi-todas-las-estrellas-de-cine/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-12808 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+					<span class="pipe">|</span>
+				Las franquicias de superhéroes estancan a (casi todas) las estrellas de cine
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/05/27/las-franquicias-de-superheroes-estancan-a-casi-todas-las-estrellas-de-cine/"
+					data-title="Cultura: Las franquicias de superhéroes estancan a (casi todas) las estrellas de cine"
+					data-author="POR WESLEY MORRIS"
+					data-media=""
+					data-description="El cine de superhéroes produce tanto dinero que ha cambiado a la industria estadounidense del entretenimiento pero se corre el riesgo de agotar las historias y encasillar a buenos actores jóvenes."
+					data-publish-date="27 de mayo de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/1TKlMU1">http://nyti.ms/1TKlMU1</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/cultura/">Cultura</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/comentario/">Comentario</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">Las franquicias de superhéroes estancan a (casi todas) las estrellas de cine</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Wesley Morris</span>
+</span>
+
+					<time class="dateline" datetime="2016-05-27">27 de mayo de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/05/27/las-franquicias-de-superheroes-estancan-a-casi-todas-las-estrellas-de-cine/"
+							data-title="Cultura: Las franquicias de superhéroes estancan a (casi todas) las estrellas de cine"
+							data-author="POR WESLEY MORRIS"
+							data-media=""
+							data-description="El cine de superhéroes produce tanto dinero que ha cambiado a la industria estadounidense del entretenimiento pero se corre el riesgo de agotar las historias y encasillar a buenos actores jóvenes."
+							data-publish-date="27 de mayo de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004411588" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLE/22ENSEMBLE-master1050.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLE/22ENSEMBLE-master1050.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLE/22ENSEMBLE-superJumbo.jpg" data-mediaviewer-caption="Chris Evans en 'Captain America: Civil War'" data-mediaviewer-credit="Zade Rosenthal/Walt Disney Studios Motion Pictures"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLE/22ENSEMBLE-master1050.jpg"/>
+		<meta itemprop="height" content="689" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Chris Evans en 'Captain America: Civil War'</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Zade Rosenthal/Walt Disney Studios Motion Pictures
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/05/22/movies/in-x-men-apocalypse-and-captain-america-superheroes-versus-movie-stars.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="257" data-total-count="257" id="story-continues-2" tabindex="-1">Si algún fanático ansía terminar rápido la lectura de sus cómics, probablemente sea por dos razones: la publicación inmediata de la próxima edición y las grandes películas sobre sus superhéroes favoritos interpretados por actores de carne y hueso.</p>
+<p class="story-body-text story-content" data-para-count="293" data-total-count="550" id="story-continues-3" tabindex="-1">Lo primero es imposible. Lo segundo no me pasó hasta que estrenaron &#8220;X-Men&#8221; en el año 2000, cuando ya era un adulto. Halle Berry interpretaba a Storm, un personaje oriundo de África y cuyos poderes mutantes controlaban el clima. Eso debería haberme encantado pero me preocupó. </p>
+<p class="story-body-text story-content" data-para-count="421" data-total-count="971" id="story-continues-4" tabindex="-1">¿Qué tiene que ver Halle Berry con Storm? Lo que vi fue más como si la actriz solo hubiese emulado la ardiente sensualidad de Storm. Lo sé, lo sé: es una actuación. Pero después de 16 años, y al menos cuatro docenas de películas, empiezo a pensar que se trata de otra cosa. Este conflicto se ha profundizado con una crisis personal: mi amor por los libros de cómics chocó con mi necesidad de estrellas de cine.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="374" data-total-count="1345" id="story-continues-5" tabindex="-1">La verdad sobre Halle Berry en &#8220;X-Men&#8221; —y también aplica para James Marsden, Anna Paquin y Famke Janssen— se convirtió en la verdad de muchos actores que participan en esas producciones: hay demasiadas personas y aristas en esos personajes como para que cualquier actor (que no sea Hugh Jackman) pueda encarnarlos de una manera completamente satisfactoria.</p>
+<p class="story-body-text story-content" data-para-count="484" data-total-count="1829" id="story-continues-6" tabindex="-1">Vivimos en una época donde las estrellas se golpean entre sí como pasa en la tonta &#8220;Captain America: Civil War&#8221;: una película que se trata de ver a Robert Downey Jr. contra Chris Evans y contra Scarlett Johansson o Paul Rudd versus Jeremy Renner y contra Don Cheadle. Eso también pasa en las cintas de &#8220;Avengers&#8221;, en un montón de filmes sobre X-Men (incluyendo la reciente &#8220;Apocalipsis&#8221;), y en &#8220;Batman v Superman: Dawn of Justice&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="560" data-total-count="2389" id="story-continues-7" tabindex="-1">Y no puedo decir que esos actores se ven felices. Parte del conflicto de &#8220;Civil War&#8221; es que las luchas internas lo absorben todo. Sus estoicas caras largas sugieren que tienen un trabajo miserable y hay muchas estrellas así. Son los casos de Ben Affleck, Michael Fassbender y Jennifer Lawrence que interpretan a los superhéroes de los cómics con el mismo entusiasmo que Bruce Willis mostró en &#8220;The Sixth Sense&#8221;. Parece que las franquicias cinematográficas de cómics son el lugar donde las grandes estrellas del <em>star system</em>  mueren.</p>
+<figure id="media-100000004414076" class="media photo media-100000004414076 embedded layout-large-horizontal" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLEJP1/22ENSEMBLEJP1-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-9">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLEJP1/22ENSEMBLEJP1-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLEJP1/22ENSEMBLEJP1-superJumbo.jpg" data-mediaviewer-caption="From left, Robert Downey Jr., Don Cheadle, Scarlett Johansson, Chris Evans, Anthony Mackie, Paul Bettany and Elizabeth Olsen in &amp;ldquo;Captain America: Civil War.&amp;rdquo;" data-mediaviewer-credit="Walt Disney Studios Motion Pictures"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLEJP1/22ENSEMBLEJP1-master675.jpg"/>
+		<meta itemprop="height" content="282" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">From left, Robert Downey Jr., Don Cheadle, Scarlett Johansson, Chris Evans, Anthony Mackie, Paul Bettany and Elizabeth Olsen in &amp;ldquo;Captain America: Civil War.&amp;rdquo;</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Walt Disney Studios Motion Pictures
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="558" data-total-count="2947" id="story-continues-9" tabindex="-1">Así como las películas de cómics han hecho que le llueva dinero a los estudios —sobre todo a Disney, Warner Bros y Fox— y pese a lo mucho que me he divertido con algunas de ellas, el género ha pervertido lo que significa ver a ciertos actores en las películas. Cuando el personaje es más famoso que el actor que lo interpreta, ¿cómo se desarrollan las marcas comerciales? en muchas ocasiones las prerrogativas del cómic no encajan con las características del estrellato cinematográfico. Se siente como si estuvieran en un conflicto permanente.</p>
+<p class="story-body-text story-content" data-para-count="513" data-total-count="3460" id="story-continues-10" tabindex="-1">Chris Evans, por ejemplo, le debe su fama al trabajo que ha hecho con superhéroes. En dos pésimas películas de “Fantastic Four” (entre 2005 y 2007) encarnó a Johnny Storm, la Antorcha Humana, como si fuese un mariscal de campo que acaba de ganar el trofeo Heisman. Él pudo haber estudiado al personaje, más allá del material que lo originó, y dotarlo de una personalidad propia. Si lo vieron en películas como &#8220;Cellular&#8221;, de 2004, es fácil notar que logró algo distinto en esos papeles.</p>
+<p class="story-body-text story-content" data-para-count="308" data-total-count="3768" id="story-continues-11" tabindex="-1">Pero fue premiado con el Capitán América, un hombre cuya rectitud moral lo convierte en un personaje aburrido. La principal arma de Evans solía ser mostrarse arrogante y sorprendido: no podía creer que era un superhéroe. Pero cada vez hay menos espacio para ese tipo de ligerezas en la galaxia Avengers. </p>
+<p class="story-body-text story-content" data-para-count="263" data-total-count="4031" id="story-continues-12" tabindex="-1">Cuanto más oscuro es el cine de los cómics —casi siempre destinado a recrear el apocalipsis— menos necesita de la magia de una estrella. Evans no puede poner nada de más. Él tiene que mantenerse neutro porque la marca es lo primero. Marvel es la estrella.</p>
+<p class="story-body-text story-content" data-para-count="390" data-total-count="4421" id="story-continues-13" tabindex="-1">El precoz abordaje de las películas de superhéroes que hizo Evans generó un ambiente propicio para la diversión que Robert Downey Jr. hizo añicos, en 2008, mientras jugaba a ser Tony Stark en las tres películas de &#8220;Iron Man&#8221;. Este actor convirtió a Tony en un líder irónico para una banda que todavía no existía. Claro, estaba haciendo películas de Robert Downey Jr. </p>
+<p class="story-body-text story-content" data-para-count="332" data-total-count="4753" id="story-continues-14" tabindex="-1">Sin embargo, una consecuencia de su exuberante interpretación es que ya no era él mismo. Además del montón de apariciones de Tony Stark y sus dos periodos como Sherlock Holmes, apenas ha sido capaz de hacer otra cosa. Sin embargo, cuando hizo &#8220;Due Date&#8221; y &#8220;The Judge&#8221;, su ácido sarcasmo cuajó muy bien.</p>
+<p class="story-body-text story-content" data-para-count="453" data-total-count="5206" id="story-continues-15" tabindex="-1">Hace casi 20 años, George Clooney tuvo que luchar contra el hedor de haber sido Batman. Lo mismo fue una tortura para Michael Keaton quien se exorcizó cuando encarnó a un actor atormentado por su papel de superhéroe en &#8220;Birdman&#8221;. Ahora Batman es un buen personaje. A Batman no le importa quién lo interpreta. ¿Christian Bale? ¿Ben Affleck? No importa quién sea. Parafraseando al reciente personaje de Keaton: él sigue siendo Batman.</p>
+<figure id="media-100000004414084" class="media photo media-100000004414084 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLEJP2/22ENSEMBLEJP2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-17">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLEJP2/22ENSEMBLEJP2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLEJP2/22ENSEMBLEJP2-superJumbo.jpg" data-mediaviewer-caption="From left, Jennifer Lawrence, Rose Byrne, James McAvoy, Lucas Till and Nicholas Hoult in “X-Men: Apocalypse.”" data-mediaviewer-credit="Alan Markfield/20th Century Fox, via Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLEJP2/22ENSEMBLEJP2-master675.jpg"/>
+		<meta itemprop="height" content="485" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">From left, Jennifer Lawrence, Rose Byrne, James McAvoy, Lucas Till and Nicholas Hoult in “X-Men: Apocalypse.”</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Alan Markfield/20th Century Fox, via Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="500" data-total-count="5706" id="story-continues-17" tabindex="-1">Los demás —o sus agentes— también quiere entrar en ese juego. Este otoño, Benedict Cumberbatch protagoniza &#8220;Doctor Strange&#8221; junto a Chiwetel Ejiofor y Tilda Swinton. En agosto, Will Smith se une a &#8220;Suicide Squad&#8221;, con Jared Leto y Viola Davis, entre otros. &#8220;Batman v Superman&#8221; fue un buen inicio para Amy Adams, Jesse Eisenberg y Laurence Fishburne. Ya no estamos viendo una película más. Ahora vemos un paquete de 24 botellas de agua compradas en Costco.</p>
+<p class="story-body-text story-content" data-para-count="590" data-total-count="6296" id="story-continues-18" tabindex="-1">El éxito del género ha cambiado toda la industria del cine estadounidense. Incluso las películas derivadas de los clásicos cuentos de los hermanos Grimm se sienten como películas de cómic. Si no es así, ¿por qué se grabó “The Huntsman: Winter’s War”?, una retorcida secuela del éxito de 2012 que tuvo muy poca asistencia y trajo de vuelta a Charlize Theron y Chris Hemsworth, junto a las pobres Jessica Chastain y Emily Blunt. El reparto interactúa sin alegría y Theron eleva el ritmo cuando aparece, lo malo es que está perdida durante más de la mitad de la película.</p>
+<p class="story-body-text story-content" data-para-count="316" data-total-count="6612" id="story-continues-19" tabindex="-1">En vez de desarrollar nuevas historias para canibalizarlas durante los próximos 30 años, los estudios apostaron por propiedad intelectual preexistente como &#8220;Star Wars&#8221; y &#8220;Jurassic Park&#8221;. Algunos capítulos de estas franquicias me han gustado mucho y no puedo esperar para ver los próximos.  </p>
+<p class="story-body-text story-content" data-para-count="315" data-total-count="6927" id="story-continues-20" tabindex="-1">Pero no necesito un nuevo &#8220;Ghostbusters&#8221;. Esta versión se siente como Halloween. Ahora vivimos en un perpetuo estado de antioriginalidad en el que el gusto es dictado por un algoritmo totalitario de recomendación. Si te gustó &#8220;Star Wars&#8221;, bien. Ahora vas a poder verla&#8230; por siempre.</p>
+<p class="story-body-text story-content" data-para-count="527" data-total-count="7454" id="story-continues-21" tabindex="-1">Esto es diferente a la vieja época de Jerry Bruckheimer cuando un grupo de tipos se unían para robar bancos, pilotar aviones o fugarse de la cárcel, como pasa en &#8220;Con Air&#8221; o &#8220;The Rock&#8221;. La diversión estaba garantizada por el estrambótico reparto lleno de hombres famosos. El reparto también fue el truco de la saga &#8220;Ocean&#8221; de Steven Soderbergh, quien unió a George Clooney, Brad Pitt y Matt Damon con la fama absoluta de Julia Roberts para convertir sus cintas en un atraco hilarante. </p>
+<p class="story-body-text story-content" data-para-count="343" data-total-count="7797" id="story-continues-22" tabindex="-1">La serie &#8220;Rápido y Furioso&#8221; tiene una influencia notablemente de Bruckheimer y las películas &#8220;Ocean&#8221;. La trama se desarrolla en torno al encanto playero de Paul Walker, el carisma forzudo de Vin Diesel y el atractivo de cualquier otro actor invitado a jugar en el club. Si aparece en esas películas, es una estrella.</p>
+<figure id="media-100000004414089" class="media photo media-100000004414089 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLEJP3/22ENSEMBLEJP3-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-24">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLEJP3/22ENSEMBLEJP3-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLEJP3/22ENSEMBLEJP3-superJumbo.jpg" data-mediaviewer-caption="Jessica Chastain, left, and Charlize Theron in &amp;ldquo;The Huntsman: Winter&amp;rsquo;s War.&amp;rdquo;" data-mediaviewer-credit="Giles Keyte/Universal Pictures, via Associated Press"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLEJP3/22ENSEMBLEJP3-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Jessica Chastain, left, and Charlize Theron in &amp;ldquo;The Huntsman: Winter&amp;rsquo;s War.&amp;rdquo;</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Giles Keyte/Universal Pictures, via Associated Press
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="414" data-total-count="8211" id="story-continues-24" tabindex="-1">La expansión infinita de estos universos prefabricados tiene sus atributos. Por ejemplo, en una escena de &#8220;Civil War&#8221; aparecen tres negros —Don Cheadle, Anthony Mackie y Chadwick Boseman— hablando entre ellos y no hay ningún blanco. Boseman incluso tendrá su propia película como Black Panther. Después de &#8220;Empire&#8221;, ¿qué otra cosa está haciendo Hollywood con los actores negros?</p>
+<p class="story-body-text story-content" data-para-count="216" data-total-count="8427" id="story-continues-25" tabindex="-1">Pero ¿es suficiente? Las películas de superhéroes están en un punto muerto. Cada buen actor joven que es absorbido por una franquicia de superhéroes o una saga de películas superexitosas pierde su personalidad.</p>
+<p class="story-body-text story-content" data-para-count="332" data-total-count="8759" id="story-continues-26" tabindex="-1">El mundo ha descubierto que Alden Ehrenreich se convertirá en el joven Han Solo. Su actuación fue lo mejor de &#8220;Hail Caesar!&#8221; de los hermanos Coen y se las arregló para mantenerse a tono con Cate Blanchett en &#8220;Blue Jasmine&#8221;. Representa lo que los críticos califican como un actor &#8220;prometedor&#8221;. </p>
+<p class="story-body-text story-content" data-para-count="596" data-total-count="9355" id="story-continues-27" tabindex="-1">Y, por ahora, las promesas se acaban cuando son encerradas en el negocio de las franquicias de historietas. Esto no quiere decir que Ehrenreich no será capaz de hacer otros papeles. Jennifer Lawrence logró equilibrar sus cuatro películas como Katniss Everdeen y sus apariciones en &#8220;X-Men&#8221;, con su trabajo junto a David O. Russell. Pero ella es una excepción. Mark Ruffalo, como Hulk, también es otra. Y Hemsworth, también. Pero aunque filme carreras de coches, historias en barcos de vela con Ron Howard o de hacker para Michael Mann me duele decir que siempre lo veo como Thor.</p>
+<figure id="media-100000004414093" class="media photo media-100000004414093 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLEJP4/22ENSEMBLEJP4-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-29">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLEJP4/22ENSEMBLEJP4-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLEJP4/22ENSEMBLEJP4-superJumbo.jpg" data-mediaviewer-caption="George Clooney and Julia Roberts in &amp;ldquo;Money Monster.&amp;rdquo;" data-mediaviewer-credit="TriStar"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/22/arts/22ENSEMBLEJP4/22ENSEMBLEJP4-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">George Clooney and Julia Roberts in &amp;ldquo;Money Monster.&amp;rdquo;</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			TriStar
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="416" data-total-count="9771" id="story-continues-29" tabindex="-1">Ahora, si hablamos de un filme como &#8220;Money Monster&#8221;, no hay nada que hacer. En ese proyecto George Clooney y Julia Roberts están en su zona de confort. Él interpreta al meloso conductor de un programa de inversiones y ella es su productora. Cuando un espectador furioso toma el estudio con rehenes y las cosas se ponen tensas, me encantó escuchar el sonido de la voz de Roberts en el oído de Clooney.</p>
+<p class="story-body-text story-content" data-para-count="263" data-total-count="10034" id="story-continues-30" tabindex="-1">Ella ha hecho esto desde fines de los ochenta: aparece sonriente, ocurrente y nunca se equivoca cuando interpreta a mujeres que tienden a involucrarse en problemas de dinero. Es una versión automática de sí misma y, a diferencia de Downey, rara vez nos aburre. </p>
+<p class="story-body-text story-content" data-para-count="512" data-total-count="10546" id="story-continues-31" tabindex="-1">&#8220;Money Monster&#8221;, dirigida por Jodie Foster, se vuelve pintoresca rápidamente. No se supone que esta película deba ser dolorosa. Sin embargo, aunque sea de forma accidental, se siente como una postal desde el ocaso de lo que alguna vez fue el estrellato cinematográfico. &#8220;Money Monster&#8221;, reconoce que la cultura se está alejando de películas como esa. Los personajes interpretados por Clooney y Roberts no están haciendo una comedia romántica. Están haciendo televisión por cable.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/jurassic-park/" rel="tag">Jurassic Park</a>, <a href="https://www.nytimes.com/es/tag/marvel/" rel="tag">Marvel</a>, <a href="https://www.nytimes.com/es/tag/star-wars/" rel="tag">Star Wars</a>, <a href="https://www.nytimes.com/es/tag/x-men/" rel="tag">X-Men</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/05/27/las-franquicias-de-superheroes-estancan-a-casi-todas-las-estrellas-de-cine/"
+				data-title="Cultura: Las franquicias de superhéroes estancan a (casi todas) las estrellas de cine"
+				data-author="POR WESLEY MORRIS"
+				data-media=""
+				data-description="El cine de superhéroes produce tanto dinero que ha cambiado a la industria estadounidense del entretenimiento pero se corre el riesgo de agotar las historias y encasillar a buenos actores jóvenes."
+				data-publish-date="27 de mayo de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/18/ben-affleck-y-su-batman-parecen-vivir-en-la-misma-zona-gris/">
+					<div class="story-body">
+						<h3 class="kicker">Cine</h3>
+
+						<h2 class="headline">
+							<span class="title">Ben Affleck y su Batman parecen vivir en la misma &#8216;zona gris&#8217;</span>
+							<time class="dateline">18 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/20/arts/20AFFLECK/20AFFLECK-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/21/seth-rogen-habla-de-la-secuela-de-neighbors-y-dice-con-quien-fumaria-un-porro/">
+					<div class="story-body">
+						<h3 class="kicker">Cine</h3>
+
+						<h2 class="headline">
+							<span class="title">Seth Rogen habla de &#8216;Neighbors 2&#8217; y confiesa con quién le gustaría fumarse un porro</span>
+							<time class="dateline">21 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/05/15/arts/15SNAPSHOT/15SNAPSHOT-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/18/russell-crowe-y-ryan-gosling-en-una-comedia-si-en-serio/">
+					<div class="story-body">
+						<h3 class="kicker">Cine</h3>
+
+						<h2 class="headline">
+							<span class="title">¿Russell Crowe y Ryan Gosling en una comedia? Sí, en serio</span>
+							<time class="dateline">18 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/05/15/arts/0515GOSLINGCROWEJP1/0515GOSLINGCROWEJP1-thumbStandard-v4.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/25/los-derechos-transgenero-dominan-el-debate-social-en-estados-unidos/">
+					<div class="story-body">
+						<h3 class="kicker">Estados Unidos</h3>
+
+						<h2 class="headline">
+							<span class="title">Los derechos transgénero dominan el debate social en Estados Unidos</span>
+							<time class="dateline">25 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/05/13/us/13TRANSGENDER/13TRANSGENDER-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":671,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

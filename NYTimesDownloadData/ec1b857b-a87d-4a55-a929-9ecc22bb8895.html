@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-feature has-cover-media has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004406310"/>
+<meta name="hdl" content="¿Por qué un avión estadounidense bombardeó un hospital de Médicos Sin Fronteras en Afganistán?" />
+<meta name="col" content="Noticias" id="column-name" />
+<meta name="pdate" content="20160626" />
+<meta name="utime" content="20160626090041" />
+<meta name="ptime" content="20160626090041" />
+<meta name="DISPLAYDATE" content="Jun. 26, 2016" />
+<meta name="dat" content="Jun. 26, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="por-que-un-avion-estadounidense-bombardeo-un-hospital-de-medicos-sin-fronteras-en-afganistan" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/06/26/por-que-un-avion-estadounidense-bombardeo-un-hospital-de-medicos-sin-fronteras-en-afganistan/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="¿Por qué un avión estadounidense bombardeó un hospital de Médicos Sin Fronteras en Afganistán?" />
+<meta property="og:description" content="Cuatro de los cinco miembros permanentes del Consejo de Seguridad han estado implicados en bombardeos de instalaciones de Médicos Sin Fronteras en los últimos meses y la organización exige respuestas. " />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/05/22/magazine/22kunduz1/22kunduz1-videoSixteenByNine768.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-06-26" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/06/26/por-que-un-avion-estadounidense-bombardeo-un-hospital-de-medicos-sin-fronteras-en-afganistan/" />
+<meta property="twitter:title" content="¿Por qué un avión estadounidense bombardeó un hospital de Médicos Sin Fronteras en Afganistán?" />
+<meta property="twitter:description" content="Cuatro de los cinco miembros permanentes del Consejo de Seguridad han estado implicados en bombardeos de instalaciones de Médicos Sin Fronteras en los últimos meses y la organización exige respuestas. " />
+<meta name="author" content="Matthieu Aikins" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Matthieu Aikins" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="noticias" />
+<meta name="cd12" content="internacional" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="noticias" />
+<meta name="ser" content="internacional" />
+<meta name="id" content="100000004406310"/>
+<meta name="wordCount" content="8932"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/06/26/por-que-un-avion-estadounidense-bombardeo-un-hospital-de-medicos-sin-fronteras-en-afganistan/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=06&amp;day=26&amp;name=por-que-un-avion-estadounidense-bombardeo-un-hospital-de-medicos-sin-fronteras-en-afganistan">
+<meta name="PT" content="article">
+<meta name="article:section" content="Noticias">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/5?exclude=13284">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/06\/26\/por-que-un-avion-estadounidense-bombardeo-un-hospital-de-medicos-sin-fronteras-en-afganistan\/"},"headline":"\u00bfPor qu\u00e9 un avi\u00f3n estadounidense bombarde\u00f3 un hospital de M\u00e9dicos Sin Fronteras en Afganist\u00e1n?","datePublished":"2016-06-26T09:00:41+00:00","dateModified":"2016-10-26T13:29:15+00:00","author":{"@type":"Person","name":"alberto.arce"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/05\/22\/magazine\/22kunduz1\/22kunduz1-videoSixteenByNine768.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"Cuatro de los cinco miembros permanentes del Consejo de Seguridad han estado implicados en bombardeos de instalaciones de M\u00e9dicos Sin Fronteras en los \u00faltimos meses y la organizaci\u00f3n exige respuestas. "}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/06/26/por-que-un-avion-estadounidense-bombardeo-un-hospital-de-medicos-sin-fronteras-en-afganistan/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/05/22/magazine/doctors-with-enemies-did-afghan-forces-target-the-msf-hospital.html" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="noticias/internacional" />
+<title>¿Por qué un avión estadounidense bombardeó un hospital de Médicos Sin Fronteras en Afganistán? &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/05/22/magazine/doctors-with-enemies-did-afghan-forces-target-the-msf-hospital.html" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/06/26/por-que-un-avion-estadounidense-bombardeo-un-hospital-de-medicos-sin-fronteras-en-afganistan/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+		<script src="https://a1.nyt.com/assets/article/latest/js/article/common/layout.js"></script>
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-13284 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard intl-masthead-theme-light" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+					<span class="pipe">|</span>
+				¿Por qué un avión estadounidense bombardeó un hospital de Médicos Sin Fronteras en Afganistán?
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/06/26/por-que-un-avion-estadounidense-bombardeo-un-hospital-de-medicos-sin-fronteras-en-afganistan/"
+					data-title="Noticias: ¿Por qué un avión estadounidense bombardeó un hospital de Médicos Sin Fronteras en Afganistán?"
+					data-author="POR MATTHIEU AIKINS"
+					data-media=""
+					data-description="Cuatro de los cinco miembros permanentes del Consejo de Seguridad han estado implicados en bombardeos de instalaciones de Médicos Sin Fronteras en los últimos meses y la organización exige respuestas. "
+					data-publish-date="26 de junio de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/28ZV0JH">http://nyti.ms/28ZV0JH</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+	
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main has-full-bleed-image-lede">
+	<header id="story-header" class="story-header">
+			<figure id="media-100000004410305" class="media cover photo layout-horizontal-full-bleed" data-bleed-style="full-bleed" itemid="https://static01.nyt.com/images/2016/05/22/magazine/22kunduz1/22kunduz1-articleLarge.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="presentation">
+				<span class="visually-hidden"></span>
+				<div class="image">
+					<img
+						src="https://static01.nyt.com/images/2016/05/22/magazine/22kunduz1/22kunduz1-articleLarge.jpg"
+						alt="El doctor Esmatullah Esmat sobrevivió al bombardeo. "
+						data-jumbosrc="https://static01.nyt.com/images/2016/05/22/magazine/22kunduz1/22kunduz1-jumbo.jpg"
+						data-superjumbosrc="https://static01.nyt.com/images/2016/05/22/magazine/22kunduz1/22kunduz1-superJumbo.jpg"
+						id="media-image-100000004410305"
+					>
+				</div>
+				<figcaption id="media-caption-100000004410305" class="caption" itemprop="caption description">
+					<span class="caption-text">El doctor Esmatullah Esmat sobrevivió al bombardeo. </span>
+
+					<span class="credit" itemprop="copyrightHolder">
+						<span class="visually-hidden">crédito</span>
+						Victor J. Blue para The New York Times
+					</span>
+				</figcaption>
+				<meta itemprop="height" content="400">
+				<meta itemprop="width" content="600">
+			</figure>
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/noticias/">Noticias</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/internacional/">Internacional</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">¿Por qué un avión estadounidense bombardeó un hospital de Médicos Sin Fronteras en Afganistán?</h1>
+				<p itemprop="headline" id="story-deck" class="deck">Cuatro de los cinco miembros permanentes del Consejo de Seguridad han estado implicados en bombardeos de instalaciones de Médicos Sin Fronteras en los últimos meses y la organización exige respuestas. </p>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Matthieu Aikins</span>
+</span>
+
+					<time class="dateline" datetime="2016-06-26">26 de junio de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/06/26/por-que-un-avion-estadounidense-bombardeo-un-hospital-de-medicos-sin-fronteras-en-afganistan/"
+							data-title="Noticias: ¿Por qué un avión estadounidense bombardeó un hospital de Médicos Sin Fronteras en Afganistán?"
+							data-author="POR MATTHIEU AIKINS"
+							data-media=""
+							data-description="Cuatro de los cinco miembros permanentes del Consejo de Seguridad han estado implicados en bombardeos de instalaciones de Médicos Sin Fronteras en los últimos meses y la organización exige respuestas. "
+							data-publish-date="26 de junio de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+			<script>
+				if (window.magnum && window.magnum.responsiveImages && window.magnum.responsiveImages.setCoverImage) {
+					window.magnum.responsiveImages.setCoverImage('100000004410305','full-bleed',400,600,2.5,2.047619047619,1.9285714285714,1.3333333333333);
+				}
+			</script>
+
+			
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/05/22/magazine/doctors-with-enemies-did-afghan-forces-target-the-msf-hospital.html?ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="51" data-total-count="51" id="story-continues-1" tabindex="-1"><em>Este reportaje fue publicado el 17 de mayo de 2016.</em></p>
+<p class="story-body-text story-content" data-para-count="195" data-total-count="246" id="story-continues-2" tabindex="-1">Hace una hora que el bombardero de los Estados Unidos da vueltas sobre la ciudad, observando con detenimiento su objetivo a través de los visores nocturnos. Espera que le den la orden de ataque.</p>
+<p class="story-body-text story-content" data-para-count="845" data-total-count="1091" id="story-continues-3" tabindex="-1">Eran las dos de la mañana del 3 de octubre de 2015 y Kunduz estaba en tinieblas. La electricidad se había ido cinco días antes, poco después de la toma por parte de los talibanes de la capital de la provincia del mismo nombre en un golpe humillante para los gobiernos afgano y estadounidense. Durante las jornadas de intenso combate que siguieron, con comandos de ambos ejércitos al contraataque, la ciudad continuó a oscuras. El objetivo del bombardero, un edificio en forma de T rodeado de un inmenso terreno cubierto por césped, usaba generadores, una especie de faro erguido sobre el manto negro que cubría la ciudad. Antes de disparar, la tripulación del bombardero se comunicó con el comandante de las fuerzas que operaban en tierra, un mayor de las fuerzas especiales del Ejército de Estados Unidos, y le pidieron información.</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="137" data-total-count="1228" id="story-continues-4" tabindex="-1"><em>—Pedimos confirmación sobre el edificio a bombardear, confirme que es el grande, el que tiene forma de T&#8230; en medio del complejo.</em></p>
+<p class="story-body-text story-content" data-para-count="14" data-total-count="1242" id="story-continues-5" tabindex="-1"><em>—Afirmativo.</em></p>
+<p class="story-body-text story-content" data-para-count="794" data-total-count="2036" id="story-continues-6" tabindex="-1">El AC-130 da vueltas sobre el objetivo dejando caer una lluvia de fuego sobre la superficie marcada como radio de la circunferencia. El ataque comenzó a las 2:08 de la madrugada y barrió el lugar de manera sistemática de este a oeste. Durante media hora disparó con su cañón de 105 milímetros, el arma más poderosa que pueda ubicarse en un avión. Usó también el de 40 milímetros, que lanza ráfagas incendiarias y es perfecta para cazar a quienes tratan de huir a pie de edificios bombardeados, lo que los pilotos suelen llamar &#8220;los regados&#8221;. Había gente en el lugar que trató de huir; a la tripulación le pareció un número muy alto. El visor de infrarrojos mostraba el edificio en llamas y cómo figuras fantasmagóricas que salían de su interior eran abatidas.</p>
+<p class="story-body-text story-content" data-para-count="36" data-total-count="2072" id="story-continues-7" tabindex="-1"><em>—Le prendimos fuego. Buen trabajo.</em></p>
+<p class="story-body-text story-content" data-para-count="834" data-total-count="2906" id="story-continues-8" tabindex="-1">Más o menos al mismo tiempo, 240 kilómetros al sur de Kunduz, en Kabul, Guilhem Molinie, jefe de misión de Médicos Sin Fronteras (MSF) en Afganistán, recibió una llamada telefónica. Su hospital en Kunduz estaba en llamas. Pocos minutos después otra llamada le transmitió una actualización escalofriante: lo bombardeaban desde el aire. Eso solo podía significar que eran los afganos o los estadounidenses. Comenzó a llamar al Ejército de Estados Unidos, a las Naciones Unidas y a cualquiera que pudiera detener el bombardeo. A las 2:19 habló con un oficial  de las fuerzas especiales estadounidenses en la base de la fuerza aérea de Bagram. Le dijo que investigaría lo que pasaba. El bombardeo duraría 18 minutos más. El oficial le mandó un mensaje poco después: &#8220;Haré lo que pueda, rezo por ustedes&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="515" data-total-count="3421" id="story-continues-9" tabindex="-1">Cuando se hizo de día, el ala principal del hospital era una ruina. Había sido reducido a escombros con una precisión devastadora. El resto de los edificios del recinto, algunos a pocos metros, estaban intactos. Según MSF, murieron al menos 42 personas y hubo docenas de heridos. Fue una de las masacres más impactantes de la guerra desatada por Estados Unidos en Afganistán y, por supuesto, la más desconcertante. ¿Por qué destruiría un avión de Estados Unidos un hospital lleno de médicos y pacientes?</p>
+<p class="story-body-text story-content" data-para-count="566" data-total-count="3987" id="story-continues-10" tabindex="-1">El 29 de abril, siete meses después del bombardeo, el Ejército de Estados Unidos publicó una versión muy censurada del resultado de su investigación del ataque. El informe lo califica de accidente, lo achaca a fallos materiales y decisiones erróneas de la tripulación del avión y de las fuerzas especiales. &#8220;La investigación determinó que las personas implicadas no sabían que estaban atacando un centro de salud&#8221;, según el general Joseph Votel, jefe del comando central del ejército. &#8220;Estaban haciendo lo que creían correcto&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="828" data-total-count="4815" id="story-continues-11" tabindex="-1">Incluso tomándolo al pie de la letra, el informe muestra algo más que un simple error. Las circunstancias que llevaron a la destrucción del hospital son resultado directo del modo en que las fuerzas especiales cargan sobre sí el peso de la estrategia de Estados Unidos en Afganistán, muchas veces contradictoria, y que pasa al mismo tiempo por terminar con su presencia en el país y apuntalar al gobierno afgano. Supuestamente restringidos a un papel de asesoramiento que no implica participación directa en combate, las fuerzas especiales norteamericanas en Kunduz fueron las que pidieron el ataque aéreo para apoyar a las tropas afganas que estaban a cientos de metros de ellos. Le agregaron el concepto de legítima defensa y eso permitió saltarse muchos de los límites establecidos para impedir las bajas civiles.</p>
+<p class="story-body-text story-content" data-para-count="910" data-total-count="5725" id="story-continues-12" tabindex="-1">Más allá de eso hay pruebas, en el informe y extraídas de entrevistas realizadas en el frente de Kunduz, que demuestran que las tropas afganas pudieron haber facilitado las coordenadas del hospital como objetivo de manera deliberada. Aunque las fuerzas especiales dijeron luego que no eran conscientes de que se trataba de un hospital, los documentos censurados muestran que pasaron una descripción que correspondía con la de las instalaciones de Médicos Sin Fronteras a la tripulación del AC-130 y lo señalaron como objetivo. Y eso no aparece en el sumario de los hechos relacionados con el bombardeo, una descripción que viene de sus socios afganos. En mis conversaciones con ellos en noviembre, poco después del bombardeo, alguno de los afganos en Kunduz, citando informes falsos de inteligencia que decían que el hospital estaba ocupado por insurgentes, creían que el ataque estuvo justificado.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="432" data-total-count="6157" id="story-continues-13" tabindex="-1">Tanto el Ejército de Estados Unidos como el gobierno afgano declinaron comentar si las fuerzas afganas tenían intención de atacar el hospital, pero hay una cuestión que flota sobre todo lo relacionado con el bombardeo de Kunduz aunque el ejército haya decidido que el asunto está cerrado: ¿las fuerzas afganas, que desconfían históricamente de Médicos Sin Fronteras, empujaron a Estados Unidos hacia una tragedia terrible?</p>
+<p class="story-body-text story-content" data-para-count="1091" data-total-count="7248" id="story-continues-14" tabindex="-1"><strong>Cuando el mayor Michael Hutchinson,</strong> conocido por sus amigos como Hutch, fue destinado de nuevo a Afganistán el año pasado, estaba seguro —como contó después a los investigadores militares— que salir de la base para entrar en combate era cosa del pasado. Los estadounidenses estaban allí para formar, asesorar y apoyar a los afganos. Ahora era su guerra, la de los afganos. La misión de combate de Estados Unidos en Afganistán había terminado en 2014 como anunció Obama en un discurso en la Casa Blanca ese año. Los efectivos que permanecían sobre el terreno estaban limitados a dos roles: una misión de formación de la OTAN en la que no cabe el combate, con el nombre Resolute Support, y asesoramiento a los afganos. La unidad antiterrorista de Estados Unidos que participa en la operación Freedom Sentinel lucha contra Al Qaeda y el Estado Islámico. Josh Earnest, portavoz de la Casa Blanca en 2014, dijo: &#8220;El Ejército de Estados Unidos no participará en operaciones específicas que tengan por objetivo a talibanes solo por ser miembros de los talibanes&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="464" data-total-count="7712" id="story-continues-15" tabindex="-1">Pero a medida que el gobierno afgano comenzaba a perder terreno frente a los talibanes, Estados Unidos se vio de nuevo arrastrados al combate. Desde que comenzaron sus nuevas misiones en 2015, han muerto o resultado heridos en acción al menos 87 de sus efectivos. Y gran parte de esos combates han caído dentro de la responsabilidad de fuerzas especiales como la compañía que lideraba Hutchinson a la que se asignó la responsabilidad del norte de Afganistán.</p>
+<p class="story-body-text story-content" data-para-count="475" data-total-count="8187" id="story-continues-16" tabindex="-1">Desde el principio, Hutchinson era consciente de la complejidad política en Kunduz. &#8220;Irónicamente, parece que yo me eché la mala suerte&#8221;, diría después a los investigadores militares. &#8220;Dije que no creía que debiéramos involucrarnos en Kunduz más allá de (entrenar y asesorar) a menos que cayera la capital de la provincia porque el problema étnico y político es estructural. No es algo en lo que podamos implicarnos y conseguir resultados&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="665" data-total-count="8852" id="story-continues-17" tabindex="-1">Kunduz, una zona fértil de arrozales y trigo, escondida entre las faldas de la cordillera del Hindu Kush y la cuenca del río Amu Darya, es una de las provincias donde los talibanes han conseguido sus mayores avances en los últimos años. En los meses previos a la caída de la ciudad, ni los afganos ni los estadounidenses parecían demasiado preocupados por la estabilidad de la zona. El 13 de agosto, el general Wilson Shoffner, portavoz del ejército en Afganistán, dijo en una rueda de prensa que creía que &#8220;hay mucha generalización en todo lo que se refiere al norte. Kunduz no ha estado ni está en riesgo de caer en manos de los talibanes&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="389" data-total-count="9241" id="story-continues-18" tabindex="-1">Poco después, apenas seis semanas, a las 3 de la madrugada del 28 de septiembre, los talibanes atacaron la ciudad por tres frentes. Según un comandante talibán que participó en la ofensiva y se llama Shahid, &#8220;los muyahidines actuaron bajo un solo mando&#8221;. Habló por teléfono desde fuera de la ciudad varias semanas después del ataque. &#8220;Doblegamos al enemigo&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="758" data-total-count="9999" id="story-continues-19" tabindex="-1">Aunque la ciudad era cuna de miles de miembros de las fuerzas de seguridad e inteligencia afganas, su defensa colapsó velozmente y sus defensores huyeron hacia el aeropuerto, ubicado en una pequeña meseta desde la que se ve la ciudad. Horas después de comenzar el asalto, los talibanes se movían con libertad por la ciudad, saqueaban los depósitos de armas, los documentos, las camionetas, los Humvees e incluso dos viejos tanques de fabricación soviética, dos T-62. Miles de personas huyeron a las ciudades limítrofes y grupos de combatientes talibanes, algunos de las provincias de alrededor, entraron en la ciudad. La idea de una victoria de ese calibre resultaba muy atractiva. Era la primera vez que los talibanes tomaban una capital desde 2001.</p>
+<p class="story-body-text story-content" data-para-count="655" data-total-count="10654" id="story-continues-20" tabindex="-1">El pánico corrió por el norte del país y las fuerzas especiales llegaron a prestar su ayuda para salvar la quinta ciudad más grande de Afganistán. Ya existía un grupo de despliegue operativo &#8220;Alpha&#8221;, un &#8220;Equipo A&#8221; de 12 boinas verdes y algunos soldados de apoyo que tenían equipo para dirigir ataques aéreos estacionados en el aeropuerto de Kunduz. Y llegó un segundo grupo &#8220;Alpha&#8221; con cuatro operativos de un tercer grupo desde Bagram, la base aérea al norte de Kabul. Llegaron a las seis de la mañana del 29 de agosto, a las 12 horas de la caída de la ciudad. Hutchinson era el responsable de todos ellos.</p>
+<p class="story-body-text story-content" data-para-count="361" data-total-count="11015" id="story-continues-21" tabindex="-1">También llegaron por vía aérea algunos refuerzos afganos entre los que había un grupo de policías de las fuerzas especiales y 200 soldados de la unidad de élite del ejército afgano, conocida por su sigla en pastún KKA, y que había estado vinculada al comando de operaciones espaciales conjuntas, una unidad muy discreta del Ejército de Estados Unidos.</p>
+<p class="story-body-text story-content" data-para-count="739" data-total-count="11754" id="story-continues-22" tabindex="-1">Las tropas de la coalición se encontraron con una escena de caos total: miles de soldados y funcionarios pidiendo espacio en los pocos vuelos de evacuación disponibles, que incluso dejaban sus uniformes y equipamiento sobre la carretera. Cuando los talibanes atacaron el aeropuerto aquella noche, quienes debían defenderlo comenzaron a huir pero las fuerzas especiales pidieron apoyo aéreo que, cuando llegó, castigó a los insurgentes, detuvo su ataque y dejó docenas de cadáveres regados por las colinas resecas del lugar. Un coronel afgano, Abdullah Gard, que lideraba en aquel momento la fuerza de reacción policial de Kunduz, dijo que &#8220;si los estadounidenses no hubieran intervenido, el aeropuerto habría caído&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="760" data-total-count="12514" id="story-continues-23" tabindex="-1"><strong>El mismo día, antes de que pasara todo eso,</strong> un Toyota Corolla llegó a la puerta principal del hospital de Médicos Sin Fronteras en Kunduz. Un empleado de MSF que estaba de guardia dijo que &#8220;lo conducía un hombre gordo. Alguien me dijo que era el jefe de los talibanes&#8221;. Era Janat Gul, uno de los líderes de los talibanes en el norte de Afganistán. Con él, Abdul Salam, &#8220;el gobernador en la sombra&#8221; de Kunduz. Salam y Gul entraron en el hospital —desarmados para no violar las reglas del lugar, estrictas en cuanto a la prohibición de portar armas en el recinto— con el objetivo de reunirse con los miembros extranjeros del equipo. (MSF confirmó la visita de Salam aquel día pero dijo que no había entrado en el hospital).</p>
+<p class="story-body-text story-content" data-para-count="519" data-total-count="13033" id="story-continues-24" tabindex="-1">Según Molinie, que seguía todo desde Kabul, los talibanes se comprometieron a colaborar y proteger el recinto además de pedir que el hospital continuara operando durante los combates que se esperaban. “El mensaje fue que podíamos continuar con nuestras actividades, que estaríamos seguros y se nos protegería, así como a los pacientes”, dijo Molinie. “También los pacientes del lado gubernamental”. El personal activó el plan de bajas masivas y se preparó para los pacientes que comenzarían a llegar.</p>
+<p class="story-body-text story-content" data-para-count="440" data-total-count="13473" id="story-continues-25" tabindex="-1">Para MSF tratar con los talibanes era parte rutinaria del trabajo neutral que trata de mantener en el país. Como una de las organizaciones médicas no gubernamentales más importantes del mundo, se define como una organización humanitaria imparcial que sigue el modelo del Comité Internacional de la Cruz Roja, un modelo que permite cruzar las líneas del frente para tratar a cualquiera que lo necesite, incluyendo combatientes heridos.</p>
+<p class="story-body-text story-content" data-para-count="609" data-total-count="14082" id="story-continues-26" tabindex="-1">Ese mandato cada vez es más difícil de cumplir. La organización trabaja en Afganistán desde 1980 y lo ha hecho tanto con los talibanes como con los muyahidines que les precedieron. Después de los ataques terroristas del 11 de septiembre, su ética de neutralidad política ha entrado en conflicto con la de la guerra global contra el terror de Estados Unidos, lanzada bajo la máxima de que estás con ellos y sus aliados, o con los terroristas. Los afganos han sentido de manera especial el hecho de que, como dice el derecho internacional, los insurgentes en los hospitales de MSF gozan de protección.</p>
+<p class="story-body-text story-content" data-para-count="376" data-total-count="14458" id="story-continues-27" tabindex="-1">En 2004, cuatro trabajadores de MSF fueron asesinados. Nunca se resolvió. Un portavoz talibán reivindicó el hecho y acusó a la organización de trabajar para Estados Unidos. Pero según MSF, las autoridades afganas les presentaron pruebas creíbles de que los responsables fueron sus hombres. No se siguió medida alguna contra ellos y la organización abandonó el país.</p>
+<p class="story-body-text story-content" data-para-count="464" data-total-count="14922" id="story-continues-28" tabindex="-1">Cuando MSF regresó a Afganistán en 2009 siguió el ejemplo de la Cruz Roja y negoció con los talibanes el acceso al terreno. Tanto el gobierno de Estados Unidos como el de Afganistán aceptaron. Necesitaban ayuda de organizaciones humanitarias para un conflicto que empeoraba. “El trato inicial con los afganos, la OTAN y Estados Unidos era que reabriríamos la misión con la condición de que todos aceptaran que hablaríamos con todos”, recuerda Molinie.</p>
+<p class="story-body-text story-content" data-para-count="671" data-total-count="15593" id="story-continues-29" tabindex="-1">Pero navegar por entre las demandas de bandos beligerantes en una guerra sin reglas implicaba riesgos. En su celo por ayudar a los afganos atrapados detrás de las líneas de los talibanes, MSF asumió que su relación con el gobierno afgano empeorara. Uno de sus planes más ambiciosos pasaba por abrir un hospital en la zona norte de la provincia de Helmand, controlada por los talibanes y donde había una pista de aterrizaje a través de la cual podían llegar trabajadores extranjeros y suministros. “Pensé que la idea era una locura”, dijo el año pasado un militar occidental que supo del plan entonces. “El gobierno afgano se habría opuesto con fuerza”.</p>
+<p class="story-body-text story-content" data-para-count="872" data-total-count="16465" id="story-continues-30" tabindex="-1">En 2011 MSF abrió su hospital de Kunduz. Eligieron el lugar porque creían, y no estaban muy equivocados, que el pasado violento de la zona presagiaba un futuro violento. Algunos miembros del gobierno afgano y de sus fuerzas de seguridad no respetaban la neutralidad de la organización y se quejaban porque trataban a talibanes heridos. Cuando fui a Kunduz en noviembre su ira era evidente pese a la destrucción reciente del hospital. “Les dan medicinas, transporte y curan a sus heridos”, me dijo el comandante de la fuerza de reacción rápida, Gard. “Su existencia es un problema para nosotros”. Y aunque el hospital trataba a muchos más combatientes del gobierno, había rumores de MSF les hacía amputaciones innecesarias, según me contó Fawzia Yaftali, miembro del consejo provincial. “La percepción generalizada era que apoyaban a los talibanes”.</p>
+<p class="story-body-text story-content" data-para-count="727" data-total-count="17192" id="story-continues-31" tabindex="-1">El primero de julio sucedió algo que, en retrospectiva, debió ser visto como una llamada de atención para todas las partes implicadas. Un equipo de policías afganos de unidades de élite formados por fuerzas especiales de Estados Unidos y la OTAN –los batallones 222 y 333 que luego formarían parte de las tropas desplegadas en Kunduz junto con los boinas verdes— habían llegado a la provincia siguiendo a un objetivo de gran valor, un comandante llamado Abu Huzaifa. Después de atacarlo desde el aire, creyeron que había resultado herido e había sido internado en el hospital de MSF. Llegaron allí y se abrieron paso por la fuerza. Agredieron al personal y dispararon al aire según MSF. Huzaifa no estaba allí.</p>
+<p class="story-body-text story-content" data-para-count="750" data-total-count="17942" id="story-continues-32" tabindex="-1">“Fue una incursión salvaje”, dijo Molinie. Después de que MSF llamara al gobernador y al jefe de policía, este le pidió a los soldados que se fueran. Enfadados por la violación del acuerdo sobre el hospital, MSF negó el ingreso de pacientes durante cinco días, hasta que recibieron garantías desde Kabul de que se les respetaría. Huzaifa sería asesinado siete semanas después por un dron de Estados Unidos, según un comandante de las fuerzas especiales afganas, pero el asalto al hospital generó malestar entre las fuerzas de seguridad desplegadas allí. Gard me dijo: “Lo escondieron”. No ofreció ninguna prueba. Sus hombres habían ido con los comandos al hospital. “La gente que trabaja allí, todos, son unos traidores”.</p>
+<p class="story-body-text story-content" data-para-count="1093" data-total-count="19035" id="story-continues-33" tabindex="-1"><strong>El miércoles 30 de septiembre</strong>, un día después de que fracasara el ataque talibán contra el aeropuerto, Hutchinson comenzó a planear la toma de la ciudad. La presión política para que eso sucediera se hizo palpable cuando, antes de su partida, Hutchinson, junto con un general afgano, habló por videoconferencia con el general que comandaba las fuerzas de Estados Unidos en Afganistán, John Campbell, quien estaba en Kabul. Hutchinson dijo a los investigadores que Campbell estaba “molesto (con los afganos) y era comprensible. No solo era una sorpresa y una farsa que tuvieran…”, lo que sigue está censurado en el informe pero parece referirse al modo en que los afganos abandonaron la ciudad sin pelear. La caída de Kunduz cuestionaba la viabilidad de la estrategia de Obama en el país y se avecinaba una tormenta en Washington hacia donde se dirigía Campbell para testificar ante el congreso. “Tenía prisa por llegar a Washington”, dice Hutchinson en el informe “y mucho de que hablar”. (Campbell, quien ahora está retirado, no quiso hablar para este reportaje).</p>
+<p class="story-body-text story-content" data-para-count="279" data-total-count="19314" id="story-continues-34" tabindex="-1">Después de la videoconferencia, Hutchinson explicó a sus hombres lo que el general de cuatro estrellas le había dicho. Era una misión estratégica, todo el mundo los miraba. “Tenía que suceder tan pronto como fuera posible. Fracasar no era opción para esta operación”.</p>
+<p class="story-body-text story-content" data-para-count="529" data-total-count="19843" id="story-continues-35" tabindex="-1">La operación encajaba de manera extraña en la misión de entrenamiento sin combate, Resolute Support, y en Freedom Sentinel, que se suponía que solo combatía al Estado Islámico y Al Qaeda, no a los talibanes. Es más, Hutchinson presentó sus planes de operación a su base de Bagram, ante los responsables de la misión de formación, y regresó aprobada por los responsables de la misión de combate. Después les diría a los investigadores que creía que sus normas de actuación eran las de la misión de entrenamiento.</p>
+<p class="story-body-text story-content" data-para-count="441" data-total-count="20284" id="story-continues-36" tabindex="-1">La diferencia entre ambas misiones —dirigidas por Campbell— no tenía mucho sentido en Kunduz. La misma unidad podía estar desarrollando una misión de formación y minutos después una antiterrorista. Según el ejército, en los primeros cuatro días de combate en Kunduz hubo 13 bombardeos de una misión y nueve de la otra. Antes de bombardear, las tripulaciones preguntaban por radio a qué misión le asignaban lo que iban a hacer.</p>
+<p class="story-body-text story-content" data-para-count="812" data-total-count="21096" id="story-continues-37" tabindex="-1">El plan que presentó Hutchinson se llamaba Patrulla de Limpieza de Kunduz y era una misión arriesgada en el interior de la ciudad. Sus hombres, junto a los afganos, tomarían el recinto de la policía y la oficina del gobernador y establecerían un puesto avanzado. Después admitiría que subestimó la cantidad de talibanes en la ciudad al definirlos como “un pequeño grupo de individuos motivados”. Los boinas verdes tenían pensado estar allí un día, tiempo suficiente para que los afganos en el aeropuerto ingresaran a la ciudad y tuvieran tiempo de regresar. “Pensé que no sería muy complicado para los afganos y regresarían todos”, escribió en el informe. “Todos estuvimos de acuerdo en que tenía que ser rápido y la única gente dispuesta a ir era gente que no conocía la ciudad”.</p>
+<p class="story-body-text story-content" data-para-count="812" data-total-count="21908" id="story-continues-38" tabindex="-1"><strong>La noche de ese mismo miércoles</strong>, a eso de las 22:30, según el informe, los boinas verdes acompañados por policías y comandos militares y por la fuerza de reacción rápida de Gard salieron del aeropuerto en un convoy de vehículos blindados y se adentraron peleando en la ciudad. Primero liberaron el recinto en el que estaba la base de Gard, que los insurgentes habían tomado el día anterior. Los talibanes les tendieron varias emboscadas y pidieron apoyo aéreo del AC-130 que sobrevolaba la ciudad. Mató a docenas de talibanes. Cuando entraban en el lugar activaron una bomba trampa pero nadie resultó herido. Los afganos y los americanos pusieron vigías en los muros y montaron su base dentro. Un Humvee con un mapa a escala de Kunduz sobre el capó era el puesto de mando de las fuerzas especiales.</p>
+<p class="story-body-text story-content" data-para-count="894" data-total-count="22802" id="story-continues-39" tabindex="-1">La ciudad era un enjambre de insurgentes. Al salir el sol comenzó el ataque. Con la esperanza de superar a los defensores del recinto policial, los talibanes lanzaron un ataque tras otro desde los edificios adyacentes, a veces acercándose tanto a los boinas verdes que podían usar granadas. Mientras lanzaban cohetes y fuego de ametralladora sobre los muros del recinto, las fuerzas especiales pidieron seis veces que los F-16 atacaran, la amenaza estaba tan cerca que se arriesgaban a sufrir fuego amigo. Pero los rebeldes seguían llegando. “He estado en muchos combates”, escribiría más tarde uno de los boinas verdes, “pero este fue de un nivel totalmente diferente en comparación con cualquiera que hayan visto los hombres, expertos, de cualquiera de los despliegues en los que he participado, sobre todo por su duración. Es un milagro que nadie muriera o resultara herido”.</p>
+<figure id="media-100000004410309" class="media photo media-100000004410309 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/22/magazine/22kunduz2/22kunduz2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-41">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/22/magazine/22kunduz2/22kunduz2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/22/magazine/22kunduz2/22kunduz2-superJumbo.jpg" data-mediaviewer-caption="The Kunduz hospital after the attack." data-mediaviewer-credit="Victor J. Blue for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/22/magazine/22kunduz2/22kunduz2-master675.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">The Kunduz hospital after the attack.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Victor J. Blue for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="347" data-total-count="23149" id="story-continues-41" tabindex="-1">Se suponía que al día siguiente llegarían 500 afganos desde el aeropuerto para tomar el relevo. Nunca sucedió. Cuando unos cuantos policías y soldados lograron llegar dijeron que si los estadounidenses se iban, ellos abandonarían la posición. Era evidente para Hutchinson y sus hombres que la misión, planeada para 24 horas, duraría más.</p>
+<p class="story-body-text story-content" data-para-count="634" data-total-count="23783" id="story-continues-42" tabindex="-1">Al enviar a las fuerzas especiales a una posición aislada dentro de una ciudad bajo control talibán, el Ejército de Estados Unidos permitía que el gobierno afgano se apuntara una victoria propagandística que necesitaba. El primero de octubre, cuando los afganos y los boinas verdes luchaban por salvar la vida en el recinto policial, el presidente Ashraf Gani ofreció una rueda de prensa en Kabul para declarar que la ciudad de Kunduz había sido liberada. “Gracias a Dios, sin bajas”, dijo. (En realidad, la batalla por el control de la ciudad duraría dos semanas más y en ella morirían 38 soldados y policías afganos).</p>
+<p class="story-body-text story-content" data-para-count="416" data-total-count="24199" id="story-continues-43" tabindex="-1">El hecho de que las fuerzas especiales estuvieran rodeadas por los talibanes significaba que un uso poco escrupuloso de la fuerza aérea se justificaba como legítima defensa. El Ejército fue incluso más allá y aplicó una categoría —personas designadas como de especial importancia— para considerar la defensa temporal de ciertas unidades afganas como parte de su propia defensa, la defensa propia de otros.</p>
+<p class="story-body-text story-content" data-para-count="630" data-total-count="24829" id="story-continues-44" tabindex="-1">Después, los investigadores llegarían a la conclusión de que Hutchinson había usado de manera incorrecta las reglas para lanzar “ataques preofensiva”. Era, quizás, su respuesta a la confusión en la que se veía envuelto por tener que combatir durante una misión que no se suponía de combate: ¿esperaban que los comandos fueran neutralizados o sufrieran bajas antes de golpear a los insurgentes a los que les habían enviado a combatir? “No puedo esperar que suceda eso”, dijo con relación al ataque contra la base de inteligencia de los talibanes. “No puedo pretender que se sienten en la carretera a morir”.</p>
+<p class="story-body-text story-content" data-para-count="434" data-total-count="25263" id="story-continues-45" tabindex="-1">Las fuerzas especiales, esgrimiendo su autorización y la orden de tomar la ciudad, pidieron apoyo aéreo de los afganos, quienes aprovechando el equipamiento de visión nocturna, se colocaron alrededor del recinto policial para tomar posiciones en la ciudad durante la noche. “La presión era fuerte”, dijo Yaftali, el comandante afgano. “Donde había un combate fuerte le pedíamos a los estadounidenses que golpearan ahí”.</p>
+<p class="story-body-text story-content" data-para-count="288" data-total-count="25551" id="story-continues-46" tabindex="-1"><strong>En una ciudad</strong> donde el resto de las instituciones ya habían sido abandonadas, el hospital de MSF era un destello de vida para los habitantes de Kunduz. El doctor Esmatullah Esmat había trabajado como cirujano en Afganistán durante ocho años pero dijo que nunca había visto algo así.</p>
+<p class="story-body-text story-content" data-para-count="509" data-total-count="26060" id="story-continues-47" tabindex="-1">“Cuando veía a mis pacientes después de las intervenciones y me decían ‘Dr. Esmat, me ha salvado’ me sentía reforzado. Nunca sentimos el cansancio&#8221;. De hombros encorvados, robusto y con sonrisa tímida, Esmat —y el resto de los cirujanos— trabajaba en turnos de 12 horas. En cinco días recibiría 376 pacientes en la sala de emergencias, más de una cuarta parte mujeres y niños. Esmat tuvo que amputarle una pierna a una niña de tres años. “Tengo una hija de la misma edad”, dijo.</p>
+<p class="story-body-text story-content" data-para-count="662" data-total-count="26722" id="story-continues-48" tabindex="-1">La escena era caótica y sangrienta. En la sala de los casos más críticos preparaban personas con heridas en la cabeza y el torso, o amputación traumática, y luego las enviaban a uno de los tres quirófanos. Allí, ya sin ropa y bajo la luz de los focos de los cirujanos, tanto talibanes como civiles o soldados del gobierno se convertían en pacientes a los que salvar por igual. Esmat y sus colegas hicieron 138 operaciones esos días, un tercio de ellas, laparotomías, en las que se abre el abdomen y los órganos se apilan sobre el pecho para que el equipo médico pueda trabajar dentro del cuerpo en una cuidadosa búsqueda de laceraciones para sutura.</p>
+<p class="story-body-text story-content" data-para-count="483" data-total-count="27205" id="story-continues-49" tabindex="-1">A medida que las salas se llenaban de gente, el personal colocaba colchones entre las camas y en los pasillos para conseguir que en vez de 90 pacientes cupieran 130. Eso provocó imágenes grotescas, extrañas, como la del combatiente talibán en uniforme de camuflaje llorando desconsoladamente y acariciando la cabeza de su amigo, muerto y dentro de una bolsa de plástico. “Era desesperanzador”, dijo Faizullah Alokozai, archivero del hospital. “Vi muchos niños muertos”.</p>
+<p class="story-body-text story-content" data-para-count="723" data-total-count="27928" id="story-continues-50" tabindex="-1">Aunque el hospital de MSF estaba lleno de combatientes, pacientes o acompañantes (porque cada paciente puede estar acompañado por una persona), el personal y los civiles presentes dijeron que los insurgentes respetaban las reglas. Dejaban sus armas fuera o las metían en los armarios que había a la entrada. Un empleado recuerda ver a un combatiente dejar su arma pero olvidarse de los cargadores que llevaba encima, cuando se le acercó, nervioso, para recordárselo, el combatiente se disculpó y los entregó. “Respetábamos el hospital porque le servía a la gente”, dijo Shahid, el comandante talibán. “Yo mismo entré allí cuando hirieron a uno de mis hombres y antes de entrar dejamos las armas fuera”.</p>
+<p class="story-body-text story-content" data-para-count="466" data-total-count="28394" id="story-continues-51" tabindex="-1">MSF permitía que los pacientes y sus acompañantes se quedaran con sus teléfonos y varios miembros del equipo me dijeron que algunos talibanes mantenían sus aparatos de radio. (Molinie dijo que no había una regla específica en contra de las radios pero que no creía que estuvieran permitidas). Según MSF algunos de los pacientes talibanes eran jefes de alto rango. También se permitía el ingreso de sus vehículos al recinto para dejar a los heridos graves.</p>
+<p class="story-body-text story-content" data-para-count="617" data-total-count="29011" id="story-continues-52" tabindex="-1">Lo que no sabía MSF era que las fuerzas afganas en Kunduz estaban llegando a la conclusión, falsa, de que el hospital estaba siendo utilizado por los talibanes como base, lo que habría significado la pérdida de su condición de lugar protegido. “Todos sus líderes importantes estaban dentro del hospital, especialmente, los tayikos, los uzbekos y paquistaníes de alto rango”, dijo Gard. Dijo que la información vino de confidentes locales que habían estado dentro del hospital y habían visto a los talibanes operando desde allí. “Habían levantado su bandera y establecido su puesto de mando allí”.</p>
+<p class="story-body-text story-content" data-para-count="397" data-total-count="29408" id="story-continues-53" tabindex="-1">Esa información, sin confirmar, se reforzó por señales emitidas por los servicios de inteligencia. Yaftali, comandante del KKA, me dijo que en su unidad podían seguir la frecuencia de emisión de las radios enemigas y había interceptado transmisiones de los talibanes desde el hospital. “Localizamos entre 10 y 15 radios allí. Los talibanes estaban tanto dentro como fuera del hospital”.</p>
+<p class="story-body-text story-content" data-para-count="533" data-total-count="29941" id="story-continues-54" tabindex="-1">Las fuerzas afganas con las que hablé dijeron que le habían transmitido la información al Ejercito de Estados Unidos y es evidente que antes del ataque algunos estadounidenses estaban al tanto de las acusaciones de que el hospital había sido tomado por los talibanes. El 1 de octubre, Carter Malkassian, un asesor civil del jefe del Estado mayor conjunto del Pentágono, envió un correo electrónico a MSF en Nueva York para preguntar por la seguridad de su personal y si había combatientes talibanes refugiados en el hospital.</p>
+<p class="story-body-text story-content" data-para-count="255" data-total-count="30196" id="story-continues-55" tabindex="-1">El general Mark Quantock, número dos de Campbell y a cargo de la inteligencia, dijo a los investigadores que aunque evaluaron &#8220;que había talibanes utilizando el hospital no se puede bombardear un edificio con las regulaciones existentes. Punto”.</p>
+<p class="story-body-text story-content" data-para-count="653" data-total-count="30849" id="story-continues-56" tabindex="-1">Molinie, el jefe de MSF en Kabul, dijo que no sabía de las sospechas de los estadounidenses, que consideró infundadas. El 29 de septiembre le dio a la operación las coordenadas de cuatro instalaciones de MSF en Kunduz entre las que se incluía el hospital, por precaución. Y el día antes del bombardeo coordinó el envío de tres camiones de suministro a Kunduz con un oficial de las fuerzas especiales en la base de Bagram. “Me informó del número de camas, de trabajadores extranjeros y de que los talibanes protegían el hospital así como de que el hospital también trataba heridos del bando gubernamental”, escribió el oficial después.</p>
+<p class="story-body-text story-content" data-para-count="725" data-total-count="31574" id="story-continues-57" tabindex="-1">El informe no deja claro lo que las fuerzas especiales sobre el terreno en Kunduz sabían —si es que sabían algo— sobre el hospital de MSF. Varios miembros del personal en la base de Bagram dijeron a los investigadores que habían pasado las coordenadas de MSF a los boinas verdes en dos ocasiones diferentes. “Sé que leí las cuatro plantillas y las leí de nuevo por precisión”, escribió uno. “Creo que usé el término ‘Médicos Sin Fronteras’ y no ‘MSF’”. De todos modos, Hutchinson y sus hombres dijeron que nunca habían recibido las coordenadas desde Bagram y no eran conscientes de la ubicación del hospital antes del ataque. Los investigadores, en su informe final, aceptaron esta versión.</p>
+<p class="story-body-text story-content" data-para-count="362" data-total-count="31936" id="story-continues-58" tabindex="-1">Pero escucharon los informes falsos de los afganos antes o después del ataque, y algunos de los boinas verdes les creyeron. “Allí estaba el enemigo”, escribió uno según extractos de un correo entregados por la oficina del congresista Hunter. “Lo usaban como centro de mando. Habían despachado al personal extranjero y habían disparado desde allí”.</p>
+<figure id="media-100000004410310" class="media photo media-100000004410310 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/22/magazine/22kunduz3/22kunduz3-master675-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-60">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/22/magazine/22kunduz3/22kunduz3-master675-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/22/magazine/22kunduz3/22kunduz3-superJumbo-v2.jpg" data-mediaviewer-caption="Ismail Zahir (right), with his father and brothers. His sisters Morsal and Madina died at the hospital." data-mediaviewer-credit="Victor J. Blue for The New York Times"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/22/magazine/22kunduz3/22kunduz3-master675-v2.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Ismail Zahir (right), with his father and brothers. His sisters Morsal and Madina died at the hospital.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Victor J. Blue for The New York Times
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="400" data-total-count="32336" id="story-continues-60" tabindex="-1"><strong>Para los civiles </strong>que se quedaron en Kunduz durante el combate —las Naciones Unidas estima que unas 13.000 familias fueron desplazadas y que murieron o resultaron heridos 848 civiles— la vida era una lucha diaria por la supervivencia. No había electricidad y el precio de los productos básicos como pan o aceite de cocina se habían ido por los cielos para quienes al menos podían encontrarlos.</p>
+<p class="story-body-text story-content" data-para-count="505" data-total-count="32841" id="story-continues-61" tabindex="-1">Salir por comida significaba jugarse la vida entre las balas que silbaban por las calles, pero para gente como Ismail Zahir, un joven de 20 años de pelo revuelto y hablar tranquilo que trabajaba en construcción, no había opción. Su padre era sordo y discapacitado, así que su familia dependía de él para sobrevivir. Cuando había un alto en el combate, Ismail salía a la calle y esquivaba a los francotiradores. “Tenía miedo”, dijo. “Pero más miedo de no poder encargarme de mi familia”.</p>
+<p class="story-body-text story-content" data-para-count="379" data-total-count="33220" id="story-continues-62" tabindex="-1">Cuando las fuerzas afganas y estadounidenses lanzaron el contraataque y comenzaron los bombardeos, se preocupó especialmente por sus hermanas, Morsal y Madina. Morsal, de 15 años, era como él, tranquila y delicada. Madina, de cinco, la más pequeña de la casa, más traviesa. Por la noche gritaban, asustadas, por las bombas que caían. Pedían a su familia salir de Kunduz.</p>
+<p class="story-body-text story-content" data-para-count="513" data-total-count="33733" id="story-continues-63" tabindex="-1">El 2 de octubre, cuatro días después de la caída de Kunduz, Ismail y un amigo atravesaron la ciudad buscando un auto de alquiler. Los dos atravesaron las calles, desiertas, en una bicicleta que habían pedido prestada. Los talibanes los detuvieron en un puesto de control, pero los dejaron pasar. Dejaban que los civiles se fueran si querían. Encontraron a un taxista que les pidió el equivalente a 200 dólares para llevarlos hasta Kabul. La tarifa se había quintuplicado de lo normal. No tenían opción.</p>
+<p class="story-body-text story-content" data-para-count="547" data-total-count="34280" id="story-continues-64" tabindex="-1">Regresaron a casa con el conductor. Los dos amigos metieron a sus familias en una camioneta Toyota, 14 personas en total, la mayoría mujeres y niños. El taxista se dirigió rumbo al sur, en dirección a Kabul. Doblaron una esquina y vieron un vehículo blindado del ejército afgano. Quizás los confundió con talibanes. Abrió fuego. El conductor trató de dar la vuelta. Las balas entraron por detrás. Cuatro de los chicos resultaron heridos. Las dos niñas eran las que estaban peor. No saben cómo, pero lograron llegar al hospital de MSF.</p>
+<p class="story-body-text story-content" data-para-count="550" data-total-count="34830" id="story-continues-65" tabindex="-1">Cuando Esmat llegó a la sala de clasificación de heridos vio a Morsal tirada, pálida, hermosa. Estaba muerta. Herida en la cabeza. El abdomen de Madina estaba abierto, los intestinos fuera. Consciente, gritaba: “¡Mamá, mamá!”. Esmat miró alrededor y vio al médico de urgencias Amin Bajawri y al resto del equipo médico. Lloraban. A él le picaban los ojos. Todo el sufrimiento del que había sido testigo los días anteriores era como una corriente que le recorría por dentro. Gritó: “¡Dios, ¿cuál es el pecado de esta gente?!”.</p>
+<p class="story-body-text story-content" data-para-count="143" data-total-count="34973" id="story-continues-66" tabindex="-1">El hígado y el riñón de Madina estaban lacerados. Para sobrevivir necesitaba una laparotomía rápida. Esmat se preparó para la operación.</p>
+<p class="story-body-text story-content" data-para-count="585" data-total-count="35558" id="story-continues-67" tabindex="-1"><strong>Esa noche, según el informe de los comandos,</strong> el KKA en el recinto policial planeó asaltar la base, abandonada, de la Dirección Nacional de Seguridad (DNS), el servicio de inteligencia afgano, que los talibanes habían ocupado. Cuando se hizo de noche, el ataque que cada día lanzaban los insurgentes contra el recinto policial se había detenido y los comandos planeaban llevar a tres de sus compañeros, heridos, al aeropuerto, avituallarse y regresar a la ciudad en dirección al edificio de inteligencia por el camino en el norte que les obligaba a pasar por el hospital de MSF.</p>
+<p class="story-body-text story-content" data-para-count="1186" data-total-count="36744" id="story-continues-68" tabindex="-1">Los comandos pidieron a Hutchinson que les diera apoyo aéreo y él contestó que se encargaría de eso. El AC-130 ya llevaba tres horas sobre la ciudad cuando, a eso de la una de la madrugada, Hutchinson informó al bombardero que los comandos afganos planeaban asaltar ese edificio en concreto y le pidió a la aeronave que hiciera un “escaneo defensivo” de la zona. Hutchinson les pasó las coordenadas del edificio que iba a ser asaltado, el de inteligencia. Se las habían dado los afganos. Pero, debido a que el avión volaba más alto de lo normal para evitar el ataque con misiles tierra-aire, su sistema de navegación apuntó el sensor —un telescopio de visión nocturna muy potente— a un campo abierto, un espacio entre el edificio de inteligencia y el hospital. El operador del sensor se confundió y escaneó hasta identificar un edificio grande con gente caminando en la noche. Comenzó a observarlo para determinar si era el objetivo. Era el hospital. El bombardero no había recibido sus coordenadas antes de la misión y aunque el hospital tenía una bandera con el logo de MSF en el tejado, no estaba marcado ni con un una media luna roja ni con una cruz roja.</p>
+<p class="story-body-text story-content" data-para-count="533" data-total-count="37277" id="story-continues-69" tabindex="-1">El siguiente paso fue crucial. Hutchinson, que se comunicaba con los afganos a través de un intérprete que estaba sobre el terreno y no podía ver el objetivo desde su posición, le dio al AC-130 una &#8220;descripción actualizada del edificio&#8221;. Le dijo a los investigadores que los afganos le describieron un edificio grande en forma de T con un ala adyacente”, y continuó: “No puedo recordar la palabra que usé para describirlo. Un recinto con un muro, varios edificios y una puerta con un arco que mira al norte”.</p>
+<p class="story-body-text story-content" data-para-count="78" data-total-count="37355" id="story-continues-70" tabindex="-1">Esa no era la descripción del edificio de inteligencia, sino la del hospital.</p>
+<p class="story-body-text story-content" data-para-count="471" data-total-count="37826" id="story-continues-71" tabindex="-1"><strong>A las dos de mañana</strong> el hospital estaba tranquilo. La mayoría de los 300 trabajadores, pacientes y acompañantes dormían. En los quirófanos los cirujanos del turno de noche aprovechaban que el día había sido tranquilo para operar. Esmat, que operó a Madina durante dos horas, había terminado su turno a medianoche y, agotado, se dejó caer en un catre del departamento de consultas externas. Pensó que la niña iba a morir en la operación pero logró sobrevivir.</p>
+<p class="story-body-text story-content" data-para-count="780" data-total-count="38606" id="story-continues-72" tabindex="-1">En otro lugar del edificio, Faizullah Alokozai, el archivero, dormía profundamente junto al subdirector del hospital, el doctor Abdul Satar Zaheer. Poco después de las dos de la mañana, las explosiones y destellos de luz los despertaron. Se dieron cuenta de que los atacaban y corrieron hacia el este, para entrar en el sótano, por un pasillo de techos altos frente a los quirófanos. No lo sabían aún, pero corrían hacia el peligro. El avión había comenzado a disparar contra la unidad de cuidados intensivos en el ala este del edificio y avanzaba barriendo hacia el oeste. Esmat, que salió al pasillo tras ellos, vio que todo estaba lleno de humo y saltó por una ventana al césped. Una vez allí logró arrastre y esconderse en un pozo el tiempo que duró el ataque.</p>
+<p class="story-body-text story-content" data-para-count="299" data-total-count="38905" id="story-continues-73" tabindex="-1">Cuando Faizullah y Satar llegaron al final del pasillo, un proyectil atravesó el tejado y explotó en el suelo frente a ellos. Cayeron. El brazo derecho de Satar voló. Faizullah sentía su propia sangre corriendo por la espalda. Se fue la luz y solo algunos destellos de luz rasgaban la oscuridad.</p>
+<p class="story-body-text story-content" data-para-count="221" data-total-count="39126" id="story-continues-74" tabindex="-1">Faizullah se arrastró hasta Satar y lo sujetó. “Perdí el brazo derecho, ayúdame, por favor”, le pidió su amigo. Faizullah contestó: “Lo sé. Te sacaré de aquí mientras estemos vivos. No voy a abandonarte”.</p>
+<p class="story-body-text story-content" data-para-count="274" data-total-count="39400" id="story-continues-75" tabindex="-1">Trataron de protegerse y recitaban la profesión de fe islámica. Pero la metralla seguía golpeando. Faizullah trató de levantarse tres veces, Satar era muy pesado y sus piernas parecían paralizadas. Una explosión los tiró de nuevo. Lo peor era el sonido de las bombas.</p>
+<p class="story-body-text story-content" data-para-count="229" data-total-count="39629" id="story-continues-76" tabindex="-1">Cuando el fuego pasó a otro ala, el aire olía agrio y Faizullah sentía cómo las llamas golpeaban el edificio. Se agachó, agarró a Satar del brazo y los pies, flácido. Silencio. Está muerto, pensó. Y si me quedo, moriré.</p>
+<p class="story-body-text story-content" data-para-count="337" data-total-count="39966" id="story-continues-77" tabindex="-1">Oyó una voz en la oscuridad. “Por favor, perdóname por lo que haya pasado porque voy a morir. Cuida de mis hijos”. Mientras avanzaba, Faizaullah vio que era el joven médico de urgencias, Amin, sentado bajo el marco de una puerta, hablando por su celular. Tenía la pierna amputada hasta la rodilla. El charco de sangre lo rodeaba.</p>
+<p class="story-body-text story-content" data-para-count="420" data-total-count="40386" id="story-continues-78" tabindex="-1">Amin gritó al ver a Faizullah. “Esto se va a incendiar. Tenemos que salir”. Amin se apoyó en la pierna que le quedaba y saltó por la sala de emergencias, cubierta de humo. Faizullah le siguió hasta la entrada del edificio, por la zona cubierta. Amin se sujetaba a las columnas. “No puedo seguir”, susurró. Faizullah lo cargó en su espalda y alcanzó el césped frente al hospital. Juntos, cayeron al suelo.</p>
+<figure id="media-100000004410313" class="media photo media-100000004410313 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/05/22/magazine/22kunduz4/22kunduz4-master675-v3.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-80">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/05/22/magazine/22kunduz4/22kunduz4-master675-v3.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/05/22/magazine/22kunduz4/22kunduz4-superJumbo-v3.jpg" data-mediaviewer-caption="Human remains after the attack at the hospital." data-mediaviewer-credit="Andrew Quilty"  itemprop="url" itemid="https://static01.nyt.com/images/2016/05/22/magazine/22kunduz4/22kunduz4-master675-v3.jpg"/>
+		<meta itemprop="height" content="450" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Human remains after the attack at the hospital.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Andrew Quilty
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="351" data-total-count="40737" id="story-continues-80" tabindex="-1">Miraron atrás y otra tanda de bombas golpeó la entrada por la que acababan de pasar provocando que el techo se cayera parcialmente. El hospital estaba en llamas, tan altas que incendiaban las copas de los pinos. El color naranja del fuego también bailaba sobre el césped. Faizullah oía los gritos de quienes se quemaban vivos dentro del edificio.</p>
+<p class="story-body-text story-content" data-para-count="695" data-total-count="41432" id="story-continues-81" tabindex="-1"><strong>Dieciséis miembros de las fuerzas armadas </strong>han sido sancionados por su participación en el bombardeo pero el ejército ha decidido no presentar cargos contra ellos, pues aunque la tripulación del AC-130 y los miembros de las fuerzas especiales cometieron serios errores que violaron las Convenciones de Ginebra, no son culpables de crimen alguno porque no sabían que atacaban un hospital. “La categoría crimen de guerra se reserva a hechos intencionales, como atacar civiles o lugares protegidos”, según explicó el general Joseph Votel. Hutchinson fue amonestado y separado del mando pero hace poco se le nombró oficial al mando de su unidad, según la oficina del congresista Hunter.</p>
+<p class="story-body-text story-content" data-para-count="564" data-total-count="41996" id="story-continues-82" tabindex="-1">El informe dice que es cierto que hubo una concatenación de errores y problemas técnicos sin los cuales el ataque podría haberse evitado. Tanto una antena, que hubiera permitido que la aeronave enviara imágenes del objetivo a las fuerzas especiales, como el correo electrónico de la base con las coordenadas del hospital dejaron de funcionar al despegar. Poco después las fuerzas especiales enviaron desde Bagram un dron Predator para observar la ubicación del edificio de inteligencia afgano al lugar equivocado y cuando comenzó el ataque no estaba allí.</p>
+<p class="story-body-text story-content" data-para-count="799" data-total-count="42795" id="story-continues-83" tabindex="-1">Lo más importante resultó ser que el ataque fue lanzado bajo la modalidad de “defensa de otros” en referencia a los comandos afganos y no hacía falta que lo aprobara nadie más que Hutchinson y el comandante del bombardero. Hutchinson, que estaba dentro del recinto policial, dijo que él creía haber visto el convoy del KKA cerca y, después, que escuchó que estaba bajo fuego de ametralladora. De hecho, según el informe, el convoy estaba a casi nueve kilómetros del objetivo y no había sido atacado aún. Los investigadores llegaron a la conclusión de que Hutchinson no siguió las reglas que permiten entrar en combate y afirmaron que su “versión sobre la autorización de lanzar el ataque no es coherente, creíble y se contradice con otras fuentes creíbles de información”.</p>
+<p class="story-body-text story-content" data-para-count="409" data-total-count="43204" id="story-continues-84" tabindex="-1">Pero Hutchinson solo estaba haciendo lo que pidieron sus superiores: combatir con las fuerzas afganas para liberar Kunduz tan rápido como fuera posible. “Si alguien debe rendir cuentas, que no sea el hombre al que pidieron saltar sin paracaídas”, dijo un boina verde en Kunduz cuyo nombre ha sido censurado en el informe y que se queja de “cobardía moral” y de “una falta de liderazgo abyecta”.</p>
+<p class="story-body-text story-content" data-para-count="821" data-total-count="44025" id="story-continues-85" tabindex="-1">Como resultado del uso de la justificación de la legítima defensa, la decisión de atacar el edificio —una decisión que en condiciones normales debería llegar hasta el general Campbell para su aprobación— puede ser tomada en el terreno. Estas medidas de salvaguarda relacionadas con los ataques aéreos (que tuvieron éxito al reducir las bajas civiles de 353 en 2011 a 204 en 2012, según cifras de Naciones Unidas) fueron aprobadas no solo con la intención de prevenir errores o daños colaterales, sino para impedir que se lanzasen acciones basadas solo en información provista por fuentes de inteligencia afganas que en el pasado han mostrado su falta de cuidado al convertir rumores sin verificar en hechos o incluso han actuado con malicia para dirigir el poder de fuego de Estados Unidos contra rivales.</p>
+<p class="story-body-text story-content" data-para-count="643" data-total-count="44668" id="story-continues-86" tabindex="-1">Eso plantea una pregunta: ¿qué información dieron los afganos para el bombardeo? El ejército estaba centrado en las coordinadas de la base de la DNS que el sistema del avión señalaba de manera errónea como un espacio abierto. Pero las coordenadas le llegaron a las fuerzas especiales a las seis de la tarde, cuando los afganos informaron de su plan de lanzar el ataque esa misma noche. Cuando Hutchinson les preguntó siete horas más tarde, después de la confusión creada por el sistema de objetivo de la nave, le dieron esa descripción de un “edificio largo en forma de T” con una puerta al norte, y él la pasó al bombardero.</p>
+<p class="story-body-text story-content" data-para-count="445" data-total-count="45113" id="story-continues-87" tabindex="-1">El general William Hickman, quien dirigió la investigación militar, lo llamó una “descripción física ambigua” que “parecía coincidir con el hospital de MSF”. Pero en realidad es una descripción específica que corresponde con la apariencia del complejo de MSF. No se parece en absoluto a la base de la DNS que tiene forma trapezoidal, con puerta hacia el sur y dos edificios rectangulares, uno frente a otro, en un patio apretado.</p>
+<p class="story-body-text story-content" data-para-count="595" data-total-count="45708" id="story-continues-88" tabindex="-1">Es más, según el informe, cuando el AC-130 regresó a su altitud de crucero, quien operaba el sensor, preocupado porque el sistema de navegación había fallado antes, intentó introducir las coordenadas originales y esta vez el sensor sí señaló el edificio de la DNS. Entonces los miembros de la tripulación hicieron una &#8220;comparación en paralelo&#8221; entre los edificios de la DNS y de MSF utilizando sus dos sensores, pero basándose en la descripción que les había dado Hutchinson, y decidieron que estaban totalmente seguros de que el edificio en forma de T era el objetivo.</p>
+<p class="story-body-text story-content" data-para-count="908" data-total-count="46616" id="story-continues-89" tabindex="-1">Hutchinson y el resto de las fuerzas especiales que estaban en el terreno dijeron a los investigadores que los afganos tenían un segundo objetivo aquella noche además del edificio de la DNS. Pero todos dicen que no saben o no recuerdan cuál era. “Decían que iban contra dos objetivos pero para el segundo ni siquiera tenían una localización así que no nos preocupamos mucho”, dijo Hutchinson. Otro boina verde dijo que los afganos habían enviado coordenadas para dos lugares diferentes: para la base de la DNS y otra para lo que describieron como centro de mando y control de los insurgentes, pero el boina verde no sabía exactamente a qué se referían con el segundo. “No lo recuerdo y no quiero especular”, dijo un tercero que dijo haber pasado las dos localizaciones al bombardero. Un tripulante del avión también confirmó que se recibieron “múltiples coordenadas” aquella noche.</p>
+<p class="story-body-text story-content" data-para-count="306" data-total-count="46922" id="story-continues-90" tabindex="-1">¿Cabe la posibilidad de que el segundo objetivo fuera el hospital? ¿Creían los afganos —influidos por su animosidad histórica con MSF— que el hospital se había convertido en un centro de mando talibán? A menos que eso esté censurado en el informe, los investigadores militares no lo han probado.</p>
+<p class="story-body-text story-content" data-para-count="387" data-total-count="47309" id="story-continues-91" tabindex="-1">Cuando los entrevisté en noviembre, ninguno de los afganos asumiría la responsabilidad de pasar la descripción del lugar a las fuerzas especiales. Yaftali, el comandante del KKA, dijo que la decisión de atacar el hospital fue tomada por Estados Unidos y que estaba justificada por más desafortunada que fuera. “Estaban disparando lanzagranadas hacia nosotros desde el hospital”.</p>
+<p class="story-body-text story-content" data-para-count="389" data-total-count="47698" id="story-continues-92" tabindex="-1">“Los estadounidenses sabían que disparaban desde allí”, dijo el capitán Munib, un comando afgano que trabajaba con fuerzas estadounidenses en Kunduz. El KKA “les había informado que los talibanes estaban allí y después atacaron”. (Una investigación independiente no ha mostrado pruebas que sugieran que había talibanes armados dentro del hospital o disparando desde cerca).</p>
+<p class="story-body-text story-content" data-para-count="392" data-total-count="48090" id="story-continues-93" tabindex="-1">Para ser justos, al igual que sus socios estadounidenses, las fuerzas especiales afganas enviadas desde Kabul dependían de la información que les daban los locales, quienes tenían su punto de vista sobre el papel de MSF en Kunduz. “Ese hospital sirve a los talibanes”, dijo Gard cuando lo visité en Kunduz. “Lo juro por Dios, si lo levantan cien veces lo destruiremos cien veces”.</p>
+<p class="story-body-text story-content" data-para-count="485" data-total-count="48575" id="story-continues-94" tabindex="-1"><strong>¿Aún hay lugar</strong> en las guerras actuales para un hospital que trate a todos los implicados en un conflicto? El 3 de mayo, el Consejo de Seguridad de Naciones Unidas adoptó la Resolución 2286 que denuncia la pauta de ataques a instalaciones médicas en zonas de conflicto y pide que termine la impunidad para los responsables. En giros propios de Naciones Unidas algunas de las personas sentadas alrededor de la mesa del consejo representan países implicados en este tipo de ataques.</p>
+<p class="story-body-text story-content" data-para-count="761" data-total-count="49336" id="story-continues-95" tabindex="-1">En Yemen, por ejemplo, la coalición militar —dirigida por Arabia Saudita que cuenta con apoyo, armamento e inteligencia británica y estadounidense— ha atacado instalaciones sanitarias en numerosas ocasiones. Bombardeó una clínica de MSF el 26 de octubre pese a que le habían dado las coordenadas. En Siria, MSF no da las coordenadas de los lugares en los que trabaja al ejército de al Assad ni a las fuerzas rusas que le apoyan <a href="https://www.nytimes.com/es/2016/03/03/sospechas-sobre-bombardeos-accidentales-en-hospitales-de-siria/" target="_blank">por miedo a que esa información sea utilizada para lanzar ataques contra ellos</a>. Las organizaciones de derechos humanos y ayuda humanitaria han acusado a ambos gobiernos de atacar esos lugares, entre los que se incluye un hospital apoyado por MSF en el norte de Siria de manera deliberada el 15 de febrero. Ellos lo niegan.</p>
+<p class="story-body-text story-content" data-para-count="399" data-total-count="49735" id="story-continues-96" tabindex="-1">“¿Podemos dar tratamiento a quienes consideras tus enemigos? Se preguntó Jonathan Whittall, responsable de análisis humanitario de MSF. “Cuando ves lo sucedido los últimos meses, en los que cuatro de los cinco miembros permanentes del Consejo de Seguridad han estado implicados en bombardeos de instalaciones de MSF, esta es una pregunta para la que necesitamos una respuesta urgente&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="934" data-total-count="50669" id="story-continues-97" tabindex="-1">Las instalaciones sanitarias en Afganistán siguen bajo amenaza, tanto de los talibanes, que cometen crímenes de guerra con frecuencia al atacar civiles de manera indiscriminada, como por parte del gobierno afgano. Según Naciones Unidas, el 18 de febrero, la policía afgana entró en una clínica del Swedish Committee for Afghanistan y ejecutó a dos pacientes y un acompañante adolescente de los que sospechaba eran insurgentes. Jorgen Holmstrom, el director de la organización para Afganistán, me dijo que los policías eran miembros del Batallón 333, la misma unidad que participó en el asalto al hospital de MSF el julio pasado y que también participó en la toma de Kunduz, y que los acompañaban tropas británicas. (Un portavoz de la operación dijo que su investigación no encontró “ninguna prueba que se sostenga” en relación con esa acusación de ejecuciones y no quiso comentar qué unidades participaron).</p>
+<p class="story-body-text story-content" data-para-count="161" data-total-count="50830" id="story-continues-98" tabindex="-1">En Kunduz, el hospital sigue en ruinas y su personal aún trata de entender qué sucedió aquella noche. Faizullah, el archivero, sobrevivió; su amigo Amin, no.</p>
+<p class="story-body-text story-content" data-para-count="631" data-total-count="51461" id="story-continues-99" tabindex="-1">“Cada vez que me quedaba dormido veía el bombardeo, los muertos, los cuerpos”, dijo Faizullah. Cuando terminó el ataque, Esmat intentó suturar la arteria femoral de Amin en una mesa de operaciones que improvisó, pero no lo logró. Madina, la niña, sobrevivió a la operación que condujo Esmat, pero no al bombardeo. Su familia encontró su cuerpo dos días después y la enterró junto a su hermana mayor. “Intentamos salvarla pero murió”, dijo Esmat que trataba de abrirse paso entre los escombros. “Murió y se quemó”. Las paredes aguantaron pero el techo no, quedó abierto al cielo gris del invierno afgano.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+			<div class="story-info">
+				<p>NOTA DEL EDITOR: El Ejército de Estados Unidos en un principio no quiso dar declaraciones para este reportaje y envió las preguntas al gobierno afgano, que tampoco quiso dar su punto de vista. Cuando el artículo estaba terminado, Peter Cook, portavoz del Pentágono, dijo: “La investigación que siguió a la tragedia de Kunduz ha encontrado que todos los miembros de la tripulación del bombardero AC-130 y los hombres que operaban en el terreno desconocían que el avión disparaba contra una instalación médica durante ese combate. La investigación llegó finalmente a la conclusión de que el trágico incidente se debió a la suma de errores humanos a los que se suman, procesos y equipamientos fallidos”.</p>
+
+			</div>
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/afganistan/" rel="tag">Afganistán</a>, <a href="https://www.nytimes.com/es/tag/crimenes-de-guerra/" rel="tag">crímenes de guerra</a>, <a href="https://www.nytimes.com/es/tag/estados-unidos/" rel="tag">Estados Unidos</a>, <a href="https://www.nytimes.com/es/tag/hospital/" rel="tag">hospital</a>, <a href="https://www.nytimes.com/es/tag/medicos-sin-fronteras/" rel="tag">Médicos sin Fronteras</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/06/26/por-que-un-avion-estadounidense-bombardeo-un-hospital-de-medicos-sin-fronteras-en-afganistan/"
+				data-title="Noticias: ¿Por qué un avión estadounidense bombardeó un hospital de Médicos Sin Fronteras en Afganistán?"
+				data-author="POR MATTHIEU AIKINS"
+				data-media=""
+				data-description="Cuatro de los cinco miembros permanentes del Consejo de Seguridad han estado implicados en bombardeos de instalaciones de Médicos Sin Fronteras en los últimos meses y la organización exige respuestas. "
+				data-publish-date="26 de junio de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/05/23/obama-ve-oportunidad-para-la-negociacion-en-afganistan-tras-la-muerte-de-lider-taliban/">
+					<div class="story-body">
+						<h3 class="kicker">Asia</h3>
+
+						<h2 class="headline">
+							<span class="title">Obama ve oportunidad para la negociación en Afganistán tras la muerte de líder talibán</span>
+							<time class="dateline">23 de mayo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/05/24/world/24AFGHANISTAN-web1/24AFGHANISTAN-web1-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2015/10/20/al-posponer-la-retirada-de-afganistan-obama-busca-no-repetir-los-errores-de-irak/">
+					<div class="story-body">
+						<h3 class="kicker">Análisis</h3>
+
+						<h2 class="headline">
+							<span class="title">Al posponer la retirada de Afganistán, Obama busca no repetir los errores de Irak</span>
+							<time class="dateline">20 de octubre de 2015</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2015/10/16/world/16prexy-web-copy/16prexy-web-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/23/acnur-y-medicos-sin-fronteras-se-niegan-a-colaborar-con-la-detencion-de-refugiados-en-europa/">
+					<div class="story-body">
+						<h3 class="kicker">Europa</h3>
+
+						<h2 class="headline">
+							<span class="title">ACNUR y Médicos sin Fronteras se niegan a colaborar con la detención de refugiados en Europa</span>
+							<time class="dateline">23 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/16/world/16Migrants-web/16Migrants-web-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/02/07/estados-unidos-extiende-hacia-afganistan-la-lucha-contra-el-estado-islamico/">
+					<div class="story-body">
+						<h3 class="kicker">Asia</h3>
+
+						<h2 class="headline">
+							<span class="title">La lucha contra el Estado Islámico llega a Afganistán</span>
+							<time class="dateline">7 de febrero de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/02/01/world/MILITARY1/MILITARY1-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+			
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-transparent-ffffff' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-transparent-ffffff', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":733,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

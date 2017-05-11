@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="es" class="tone-news has-large-lede no-js" itemscope xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="tone-news has-large-lede no-js ie9 lt-ie10" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="tone-news has-large-lede no-js ie8 lt-ie10 lt-ie9" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="es" class="tone-news has-large-lede no-js lt-ie10 lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="144×144" href="https://static01.nyt.com/images/icons/ios-ipad-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114×114" href="https://static01.nyt.com/images/icons/ios-iphone-114x144.png" />
+<link rel="apple-touch-icon-precomposed" href="https://static01.nyt.com/images/icons/ios-default-homescreen-57x57.png" />
+<meta name="sourceApp" content="nyt-international" />
+<meta property="fb:pages" content="751965821517958" />
+<meta id="applicationName" name="applicationName" content="nyt-espanol" />
+<meta id="foundation-build-id" name="foundation-build-id" content="" />
+<meta itemprop="inLanguage" content="es-MX" />
+<meta property="collection:language" content="es">
+<meta name="msapplication-starturl" content="https://www.nytimes.com" />
+<meta property="fb:app_id" content="9869919170" />
+<meta name="google-site-verification" content="z-X9yT4qiS9XgWx9_wZQn3CD8uOup_UnqyfwVIP-jt8" />
+<meta itemprop="alternativeHeadline" name="hdl_p" content="" />
+<meta name="channels" content="" />
+<meta itemprop="description" name="description" content="" />
+<meta itemprop="genre" content="" />
+<meta itemprop="identifier" name="articleid" content="100000004352179"/>
+<meta name="hdl" content="A punto de abandonar México, los investigadores del caso Ayotzinapa dicen que el gobierno frustró su trabajo" />
+<meta name="col" content="América Latina" id="column-name" />
+<meta name="pdate" content="20160423" />
+<meta name="utime" content="20160423141121" />
+<meta name="ptime" content="20160423141121" />
+<meta name="DISPLAYDATE" content="Apr. 23, 2016" />
+<meta name="dat" content="Apr. 23, 2016" />
+<meta name="lp" content="" />
+<meta name="cre" content="" />
+<meta name="slug" content="a-punto-de-abandonar-mexico-los-investigadores-del-caso-ayotzinapa-dicen-que-el-gobierno-frustro-su-trabajo" />
+<meta property="og:url" content="https://www.nytimes.com/es/2016/04/23/a-punto-de-abandonar-mexico-los-investigadores-del-caso-ayotzinapa-dicen-que-el-gobierno-frustro-su-trabajo/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="A punto de abandonar México, los investigadores del caso Ayotzinapa dicen que el gobierno frustró su trabajo" />
+<meta property="og:description" content="La investigación gubernamental dijo que los estudiantes fueron asesinados y luego quemados en un basurero: ni el Grupo Interdisciplinario de Expertos Internacionales ni otro equipo internacional de forenses han encontrado evidencia física que lo corrobore." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/04/23/world/23mexico-web/23mexico-web-videoSixteenByNine768-v2.jpg" />
+<meta property="article:published" itemprop="datePublished" content="2016-04-23" />
+<meta property="article:section-taxonomy-id" itemprop="articleSection" content="" />
+<meta property="article:section_url" content="https://www.nytimes.com/" />
+<meta name="twitter:card" value="summary" />
+<meta name="twitter:site" value="@nytimes" />
+<meta property="twitter:url" content="https://www.nytimes.com/es/2016/04/23/a-punto-de-abandonar-mexico-los-investigadores-del-caso-ayotzinapa-dicen-que-el-gobierno-frustro-su-trabajo/" />
+<meta property="twitter:title" content="A punto de abandonar México, los investigadores del caso Ayotzinapa dicen que el gobierno frustró su trabajo" />
+<meta property="twitter:description" content="La investigación gubernamental dijo que los estudiantes fueron asesinados y luego quemados en un basurero: ni el Grupo Interdisciplinario de Expertos Internacionales ni otro equipo internacional de forenses han encontrado evidencia física que lo corrobore." />
+<meta name="author" content="Azam Ahmed y Paulina Villegas" />
+<meta name="tone" content="news" id="article-tone" />
+<meta name="byl" content="Por Azam Ahmed y Paulina Villegas" />
+<meta name="PT" content="article" />
+<meta name="cd4" content="america-latina" />
+<meta name="cd12" content="mexico" />
+<meta name="PST" content="News" />
+<meta name="tom" content="News" />
+<meta name="edt" content="Global" />
+<meta name="ad-sponsor" content="" />
+<meta name="des" content="america-latina" />
+<meta name="ser" content="mexico" />
+<meta name="id" content="100000004352179"/>
+<meta name="wordCount" content="1777"/>
+<meta name="multilingualAsset" value="es-la" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/shell-792f9f922b.min.css" />
+
+
+
+			<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/article-6faa736ad2.min.css" />
+
+	<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/apps/intl/css/prd/article-print-18668b3f5e.min.css" />
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/apps/intl/css/prd/theme-a4be91a6d1.min.css" />
+<script>
+window._nyt = {"locale":"es_MX","mailToLink":{"path":"\/es","message":"De The New York Times en Espa\u00f1ol:"},"dataEdition":"es","dataEditionCookie":"spanish","editions":{"heading":"Edici\u00f3n","links":{"us":{"url":"https:\/\/www.nytimes.com","label":"English","slug":"us","data-edition":"us"},"chinese":{"url":"http:\/\/cn.nytimes.com\/","label":"\u4e2d\u6587 (Chinese)","slug":"chinese","data-edition":"chinese"},"spanish":{"url":"https:\/\/www.nytimes.com\/es\/","label":"Espa\u00f1ol","slug":"spanish","data-edition":"es"}}},"helpMenu":{"heading":"Ayuda","links":[{"label":"Preguntas Frecuentes","url":"\/es\/preguntas-frecuentes\/"},{"label":"Cont\u00e1ctanos ayuda@nytimes.com","url":"mailto:ayuda@nytimes.com?subject=Comentario%20sobre%20el%20New%20York%20Times"}]},"helpNavItem":{"address":"ayuda@nytimes.com","subject":"Comentario sobre el New York Times"},"collectionsEndpoint":"https:\/\/www.nytimes.com\/es\/wp-json\/nyt\/v1\/collections\/?","tagxHost":"https:\/\/tagx.nytimes.com","dfpProp":"esnyt","dfpHost":"\/29390238\/esnyt\/"};
+</script>
+<meta name="nyt-collection:identifier" content="single">
+<meta name="nyt-collection:type" content="sectioncollection">
+<meta name="nyt-collection:url" content="https://www.nytimes.com/es/2016/04/23/a-punto-de-abandonar-mexico-los-investigadores-del-caso-ayotzinapa-dicen-que-el-gobierno-frustro-su-trabajo/">
+<meta name="nyt-collection:uri" content="year=2016&amp;monthnum=04&amp;day=23&amp;name=a-punto-de-abandonar-mexico-los-investigadores-del-caso-ayotzinapa-dicen-que-el-gobierno-frustro-su-trabajo">
+<meta name="PT" content="article">
+<meta name="article:section" content="América Latina">
+<meta property="article:collection" content="https://www.nytimes.com/es/wp-json/nyt/v1/collection/1?exclude=10380">
+<script  type="application/ld+json">
+{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nytimes.com\/es\/2016\/04\/23\/a-punto-de-abandonar-mexico-los-investigadores-del-caso-ayotzinapa-dicen-que-el-gobierno-frustro-su-trabajo\/"},"headline":"A punto de abandonar M\u00e9xico, los investigadores del caso Ayotzinapa dicen que el gobierno frustr\u00f3 su trabajo","datePublished":"2016-04-23T14:11:21+00:00","dateModified":"2016-07-27T19:04:47+00:00","author":{"@type":"Person","name":"albinson.linares"},"image":{"@type":"ImageObject","url":"https:\/\/static01.nyt.com\/images\/2016\/04\/23\/world\/23mexico-web\/23mexico-web-videoSixteenByNine768-v2.jpg","height":432,"width":768},"publisher":{"@type":"Organization","name":"The New York Times Company","logo":{"@type":"ImageObject","url":"https:\/\/int.nyt.com\/apps\/intl\/logos\/nyt-logo-379x64-49af1f8e52.png","width":379,"height":64}},"description":"La investigaci\u00f3n gubernamental dijo que los estudiantes fueron asesinados y luego quemados en un basurero: ni el Grupo Interdisciplinario de Expertos Internacionales ni otro equipo internacional de forenses han encontrado evidencia f\u00edsica que lo corrobore."}
+</script>
+<link rel="alternate" href="https://www.nytimes.com/es/2016/04/23/a-punto-de-abandonar-mexico-los-investigadores-del-caso-ayotzinapa-dicen-que-el-gobierno-frustro-su-trabajo/" hreflang="es" />
+<link rel="alternate" href="http://www.nytimes.com/2016/04/23/world/americas/investigators-say-mexico-has-thwarted-efforts-to-solve-students-disappearance.html?hp&amp;#038;action=click&amp;#038;pgtype=Homepage&amp;#038;clickSource=story-heading&amp;#038;module=first-column-region&amp;#038;region=top-news&amp;#038;WT.nav=top-news&amp;#038;_r=0" hreflang="en" />
+<meta name="dfp-ad-unit-path" content="americalatina/mexico" />
+<title>A punto de abandonar México, los investigadores del caso Ayotzinapa dicen que el gobierno frustró su trabajo &#8211; Español</title>
+<link rel="canonical" href="http://www.nytimes.com/2016/04/23/world/americas/investigators-say-mexico-has-thwarted-efforts-to-solve-students-disappearance.html?hp&#038;action=click&#038;pgtype=Homepage&#038;clickSource=story-heading&#038;module=first-column-region&#038;region=top-news&#038;WT.nav=top-news&#038;_r=0" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="amphtml" href="https://www.nytimes.com/es/2016/04/23/a-punto-de-abandonar-mexico-los-investigadores-del-caso-ayotzinapa-dicen-que-el-gobierno-frustro-su-trabajo/amp/" />
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(t,o)}();</script>
+<script>var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=u[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],u=n[1],a=0,c=0;if(1!==u.length||4294967296!==u[0])for(e=i(t+" "+r)>>>0,a=0,c=0;o=u[a++];)if(e<(c+=o[0]))return o}}function o(n,e,o,i){f+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",i&&s.push(i),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=s;n.withCredentials=!0,n.open("POST",a),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(f),f="",s=[],c=null}function i(t){for(var n,e,o,r,i,u,a,c=0,f=0,s=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;f<=p;)h[f>>2]|=(f<p?t.charCodeAt(f):128)<<8*(3-f++%4);for(h[a=p+8>>2|15]=p<<3;c<=a;c+=16){for(n=l,f=0;f<80;n=[0|[(u=((t=n[0])<<5|t>>>27)+n[4]+(s[f]=f<16?~~h[c+f]:u<<1|u>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),i=u+(e^o^r)+341275144,u+(e&o|e&r|o&r)+882459459,i+1535694389][0|f++/20],t,e<<30|e>>>2,o,r])u=s[f-3]^s[f-8]^s[f-14]^s[f-16];for(f=5;f;)l[--f]=l[f]+n[f]|0}return l[0]}var u,a,c,f="",s=[];return n.init=function(n,r){var i,c,f,s,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2];if(u)throw new Error("can't init twice");if(a=r,u={},d)for(d=decodeURIComponent(d).split("&"),i=0;i<d.length;i++)l=d[i].split("="),u[l[0]]=[,l[1]],l[1]&&h.push(l[0]+"="+l[1]);for(i=0;i<n.length;i++)f=n[i],c=f[0],c in u||(s=e(p,f)||[],u[c]=s,s[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+s[1]).replace(/[^\w-]/g)),s[2]&&o("ab-alloc",c,s[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=u[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);</script>
+<script>
+NYTD.Abra.init([["NYTES_SampleTest",[[2147483648,"VarA",0],[2147483648,"VarB",0]]]], '//et.nytimes.com/');
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+<script id="page-config-data" type="text/json">
+{"pageconfig":{"ledeMediaSize":"full_bleed","keywords":[]}}
+</script>
+
+<script>
+var require = {
+	baseUrl: 'https://int.nyt.com/apps/intl/js/',
+	waitSeconds: 20,
+	paths: {
+		'foundation/main': 'foundation/main-90e15f2d93',
+		'foundation/legacy_main': 'foundation/legacy_main-198dd16d79',
+		'ads': 'ads-ed8a253901',
+		'homepage/main': 'homepage/main-e443f5ef16',
+		'interactive/main': 'interactive/main-669f34a234',
+		'article/main': 'article/main-f1a38582f4',
+		'slideshow/main': 'slideshow/main-73a3966d93',
+		'collection/main': 'collection/main-7f6e7efa90',
+		'page/main': 'page/main-a0f1ebd8c4',
+		'nytint/email-subscriber' : 'interactive/email-subscriber/client-5ac194d922',
+		'shell/main': 'shell/main-a6e4c203c4',
+		'videoFactory': 'https://static01.nyt.com/js2/build/video/2.0/videofactoryrequire',
+		'videoPlaylist': 'https://static01.nyt.com/js2/build/video/players/extended/2.0/appRequire',
+		'auth/mtr': 'https://static01.nyt.com/js/mtr',
+		'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+		'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+	}
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+    require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/apps/intl/js/framework-2547fc781a.js"></script>
+<![endif]-->
+<script>
+window.magnum.processFlags(["dfpAds","videoVHSCover","videoVHSShareTools"]);
+</script>
+
+<script src="//dc8xl0ndzn2cb.cloudfront.net/js/nytimes/v1/keywee.js" type="text/javascript" async></script>
+</head>
+<body class="post-template-default single single-post postid-10380 single-format-standard" data-url="https://www.nytimes.com/es/">
+<style>
+    .lt-ie10 .messenger.suggestions {
+        display: block !important;
+        height: 50px;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-bed {
+        background-color: #f8e9d2;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .lt-ie10 .messenger.suggestions .message-container {
+        padding: 11px 18px 11px 30px;
+    }
+
+    .lt-ie10 .messenger.suggestions .action-link {
+        font-family: "nyt-franklin", arial, helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #a81817;
+        text-transform: uppercase;
+    }
+
+    .lt-ie10 .messenger.suggestions .alert-icon {
+        background: url('https://static01.nyt.com/images/icons/icon-alert-12x12-a81817.png') no-repeat;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-top: -2px;
+        float: none;
+    }
+
+    .lt-ie10 .masthead,
+    .lt-ie10 .navigation,
+    .lt-ie10 .comments-panel {
+        margin-top: 50px !important;
+    }
+
+    .lt-ie10 .ribbon {
+        margin-top: 97px !important;
+    }
+
+    .kicker-logo.logo-nyt_kicker-rio-2016 {
+        display: inline-block;
+        background: transparent url('https://int.nyt.com/apps/intl/images/rio-es-logo-286-225b42767c.svg') no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+</style>
+<div id="shell" class="shell">
+
+<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+	<div class="container">
+		<div class="quick-navigation button-group">
+			<button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Secciones</span></button>
+			<button class="button home-button" data-href="https://www.nytimes.com/es/" title="Ir a la página principal para ver más noticias destacadas."><i class="icon sprite-icon"></i>
+				<span class="button-text">Inicio</span>
+			</button>
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Ir al contenido</a>
+		</div><!-- close button-group -->		<div class="branding">
+			<h2 class="branding-heading">
+				<a id="branding-heading-link" href="https://www.nytimes.com/es/">
+					<span class="visually-hidden">The New York Times</span>
+					<span class="lang">es</span>
+				</a>
+			</h2>
+		</div><!-- close branding -->		<div class="story-meta">
+			<h6 class="kicker">
+					<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+					<span class="pipe">|</span>
+				A punto de abandonar México, los investigadores del caso Ayotzinapa dicen que el gobierno frustró su trabajo
+			</h6>
+		</div><!-- close story-meta -->
+		<div class="user-tools">
+				<div id="sharetools-masthead" aria-label="tools" role="group" class="sharetools theme-classic  sharetools-masthead  "
+					data-shares="facebook,twitter,whatsapp,email"
+					data-url="https://www.nytimes.com/es/2016/04/23/a-punto-de-abandonar-mexico-los-investigadores-del-caso-ayotzinapa-dicen-que-el-gobierno-frustro-su-trabajo/"
+					data-title="América Latina: A punto de abandonar México, los investigadores del caso Ayotzinapa dicen que el gobierno frustró su trabajo"
+					data-author="POR AZAM AHMED Y PAULINA VILLEGAS"
+					data-media=""
+					data-description="La investigación gubernamental dijo que los estudiantes fueron asesinados y luego quemados en un basurero: ni el Grupo Interdisciplinario de Expertos Internacionales ni otro equipo internacional de forenses han encontrado evidencia física que lo corrobore."
+					data-publish-date="23 de abril de 2016"
+				>
+					<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"></div>
+				</div><!-- close shareTools -->
+		
+			<!--button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Buscar</span></button-->
+			<div class="user-tools-button-group button-group">
+				<button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+				<button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Ajustes</span></button>
+			</div><!-- close user-tools-button-group -->
+		</div><!-- close user-tools -->
+	</div><!-- close container -->
+	<div class="search-flyout-panel flyout-panel">
+		<button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+		<div class="ad">
+	        <div id="SponsorAd" class="sponsor-ad">
+	            <small class="ad-sponsor">search sponsored by</small>
+	        </div>
+	    </div>
+		<nav class="search-form-control form-control layout-horizontal">
+			<h2 class="visually-hidden">Site Search Navigation</h2>
+			<form class="search-form" role="search">
+				<div class="control">
+					<div class="label-container visually-hidden">
+						<label for="search-input">Buscar NYTimes.com</label>
+					</div>
+					<div class="field-container">
+						<input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Buscar NYTimes.com" />
+						<button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Desactive esta entrada de texto</span></button>
+						<div class="auto-suggest" style="display: none;">
+							<ol></ol>
+						</div>
+						<button class="button submit-button" type="submit">irse</button>
+					</div>
+				</div><!-- close control -->
+			</form>
+		</nav>
+	</div><!-- close flyout-panel -->	<div id="notification-modals" class="notification-modals"></div>
+	<span class="story-short-url"><a href="http://nyti.ms/1SDP3T0">http://nyti.ms/1SDP3T0</a></span>
+</header>
+<nav id="navigation" class="navigation" role="navigation"></nav> <!-- close navigation -->
+<div id="navigation-edge" class="navigation-edge"></div>
+<div id="page" class="page">
+
+		<div id="TopAd" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+	<main id="main" class="main" role="main">
+
+	
+
+	<div class="nyt-wp-shell">
+
+	
+	<article id="story" class="story theme-main ">
+	<header id="story-header" class="story-header">
+
+		<div id="story-meta" class="story-meta ">
+			<h3 id="wp-story-meta-kicker" class="kicker">
+			
+			
+						<span class="kicker-label"><a href="https://www.nytimes.com/es/category/america-latina/">América Latina</a></span>
+			
+						<span class="pipe">|</span><a class="kicker-collection-archive" href="https://www.nytimes.com/es/collection/mexico/">México</a>
+			</h3>
+
+			<h1 itemprop="headline" id="headline" class="story-heading">A punto de abandonar México, los investigadores del caso Ayotzinapa dicen que el gobierno frustró su trabajo</h1>
+
+			<div id="story-meta-footer" class="story-meta-footer">
+				<p class="byline-dateline byline">
+					Por <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Azam Ahmed</span>
+</span>
+ y <span class="byline" itemprop="author creator" itemscope itemtype="https://schema.org/Person" itemid="">
+	<span class="byline-author" data-byline-name="" itemprop="name" data-twitter-handle="">Paulina Villegas</span>
+</span>
+
+					<time class="dateline" datetime="2016-04-23">23 de abril de 2016</time>
+				</p>
+
+				<div class="inside-story">
+					<span class="menu-label">Dentro</span>
+					<ul class="inside-story-menu"></ul>
+				</div>
+
+				<div class="article-tools">
+						<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+							data-shares="facebook,twitter,whatsapp,email"
+							data-url="https://www.nytimes.com/es/2016/04/23/a-punto-de-abandonar-mexico-los-investigadores-del-caso-ayotzinapa-dicen-que-el-gobierno-frustro-su-trabajo/"
+							data-title="América Latina: A punto de abandonar México, los investigadores del caso Ayotzinapa dicen que el gobierno frustró su trabajo"
+							data-author="POR AZAM AHMED Y PAULINA VILLEGAS"
+							data-media=""
+							data-description="La investigación gubernamental dijo que los estudiantes fueron asesinados y luego quemados en un basurero: ni el Grupo Interdisciplinario de Expertos Internacionales ni otro equipo internacional de forenses han encontrado evidencia física que lo corrobore."
+							data-publish-date="23 de abril de 2016"
+						>
+							<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							<span class="sharetools-label visually-hidden">Comparte esta página</span>
+							<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+							<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+								<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+							</div>
+						</div><!-- close shareTools -->
+				</div>
+			</div><!-- close story-meta-footer -->
+		</div><!-- close story-meta -->
+	</header>
+	<div class="story-body-supplemental">
+		<div id="story-body" class="story-body">
+
+			<div class="lede-container">
+<figure id="media-100000004352216" class="media photo lede layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/23/world/23mexico-web/23mexico-web-master1050-v2.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-2">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/23/world/23mexico-web/23mexico-web-master1050-v2.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/23/world/23mexico-web/23mexico-web-superJumbo-v2.jpg" data-mediaviewer-caption="Familiares y amigos de los estudiantes desaparecidos bloquearon el tráfico cerca de la Secretaría de Gobernación (Ministerio del Interior) en la Ciudad de México, el 15 de abril, en una protesta para exigir justicia." data-mediaviewer-credit="Henry Romero/Reuters"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/23/world/23mexico-web/23mexico-web-master1050-v2.jpg"/>
+		<meta itemprop="height" content="700" />
+		<meta itemprop="width" content="1050" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Familiares y amigos de los estudiantes desaparecidos bloquearon el tráfico cerca de la Secretaría de Gobernación (Ministerio del Interior) en la Ciudad de México, el 15 de abril, en una protesta para exigir justicia.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Henry Romero/Reuters
+		</span>
+	</figcaption>
+</figure>
+	<!--<div class="lede-container-ads">
+		<div id="lede-ad" class="ad lede-ad marginalia-anchor-ad nocontent robots-nocontent">
+			<div class="accessibility-ad-header visually-hidden">
+				<p>Advertisement</p>
+			</div>
+		</div>
+	</div>-->
+</div>
+
+<div id="MiddleRight1" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content intl-read-in-english"><a rel="nofollow" href="http://www.nytimes.com/2016/04/23/world/americas/investigators-say-mexico-has-thwarted-efforts-to-solve-students-disappearance.html?hp&#038;action=click&#038;pgtype=Homepage&#038;clickSource=story-heading&#038;module=first-column-region&#038;region=top-news&#038;WT_nav=top-news&#038;_r=0&#038;ref=nyt-es&#038;mcid=nyt-es&#038;subid=article">Read in English</a></p>
+<p class="story-body-text story-content" data-para-count="400" data-total-count="400" id="story-continues-2" tabindex="-1">CIUDAD DE MÉXICO — El Grupo Interdisciplinario de Expertos Independientes, un pánel internacional de expertos que fueron traídos a México para investigar la desaparición de 43 estudiantes en el estado de Guerrero —hecho que desató una protesta global—, dice que no puede dar una conclusión del caso porque ha sido sometido a una campaña sistemática de acosos, evasivas e intimidación.</p>
+<p class="story-body-text story-content" data-para-count="423" data-total-count="823" id="story-continues-3" tabindex="-1">Los investigadores, que este domingo 24 de abril presentarán la última parte de su informe, dicen que han sufrido ataques cuidadosamente orquestados por los medios de comunicación mexicanos, el rechazo por parte del gobierno a entregar documentos o conceder entrevistas con figuras esenciales, e incluso uno de los funcionarios que estuvo involucrado en la formación del grupo fue objeto de una investigación criminal.</p>
+<p class="story-body-text story-content" data-para-count="116" data-total-count="939" id="story-continues-4" tabindex="-1">Para algunos, la conclusión inevitable es que el gobierno simplemente no quiere que los expertos resuelvan el caso.</p>
+<p class="story-body-text story-content" data-para-count="353" data-total-count="1292" id="story-continues-5" tabindex="-1">&#8220;No existen las condiciones para desarrollar nuestro trabajo&#8221;, dijo Claudia Paz y Paz, integrante de la <a href="http://prensagieiayotzi.wix.com/giei-ayotzinapa" target="_blank">comisión</a> que se ganó el reconocimiento internacional por el enjuiciamiento de un exdictador de Guatemala por cargos de genocidio. &#8220;Y en México, la prueba es que el Estado se opuso a la prórroga de nuestro mandato, ¿no?&#8221;</p>
+<div id="marketing-ad" class="ad marketing-ad marginalia-anchor-ad marginalia-item nocontent robots-nocontent"></div>
+<p class="story-body-text story-content" data-para-count="348" data-total-count="1640" id="story-continues-6" tabindex="-1">La presión sobre los investigadores —descrita por cuatro de los cinco miembros del pánel en entrevistas con The New York Times— socava las promesas hechas por el gobierno mexicano de cooperar plenamente para descubrir qué pasó con los estudiantes, uno de los peores casos de abuso de los derechos humanos en el país en los últimos años.</p>
+<p class="story-body-text story-content" data-para-count="366" data-total-count="2006" id="story-continues-7" tabindex="-1">Cientos de miles de personas han <a href="http://www.nytimes.com/2014/11/21/world/americas/clashes-erupt-over-missing-mexican-students.html" target="_blank">inundado las calles</a> para protestar contra las desapariciones, lo que puso en picada la <a href="http://www.nytimes.com/2014/11/28/world/americas/mexican-leader-facing-protests-promises-to-overhaul-policing.html" target="_blank">aprobación</a> del Presidente Enrique Peña Nieto y contradice sus esfuerzos por representar a México como una nación progresista y lista para asumir su lugar en el escenario mundial. Este caso expone la impunidad que afecta el Estado de derecho.</p>
+<p class="story-body-text story-content" data-para-count="365" data-total-count="2371" id="story-continues-8" tabindex="-1">Los investigadores dicen que les falta mucho para completar su trabajo. Sin embargo, saldrán de México en los próximos días por lo que muchos ya sospechan: ellos también creen que el gobierno trata de encubrir lo que ocurrió en la noche del 26 de septiembre de 2014 cuando 43 estudiantes universitarios fueron secuestrados por la policía y nunca aparecieron.</p>
+<p class="story-body-text story-content" data-para-count="173" data-total-count="2544" id="story-continues-9" tabindex="-1">Por otro lado, el gobierno mexicano dice que ha cooperado plenamente con los expertos al completar la mayoría de sus solicitudes de información, mientras procesa el resto.</p>
+<figure id="media-100000004352217" class="media photo media-100000004352217 embedded layout-large-horizontal ratio-tall" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/23/world/23mexico-web2/23mexico-web2-master675.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-11">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/23/world/23mexico-web2/23mexico-web2-master675.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/23/world/23mexico-web2/23mexico-web2-superJumbo.jpg" data-mediaviewer-caption="Portraits of some of the 43 missing students stood in front of the federal prosecutor’s office in Mexico City last week." data-mediaviewer-credit="Yuri Cortez/Agence France-Presse — Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/23/world/23mexico-web2/23mexico-web2-master675.jpg"/>
+		<meta itemprop="height" content="449" />
+		<meta itemprop="width" content="675" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Portraits of some of the 43 missing students stood in front of the federal prosecutor’s office in Mexico City last week.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Yuri Cortez/Agence France-Presse — Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="578" data-total-count="3122" id="story-continues-11" tabindex="-1">Para las familias de los desaparecidos, quienes estudiaban para ser maestros en las zonas rurales y pobres de México, la salida de los expertos es un hecho devastador. Todo el tiempo se han negado a creer la versión del gobierno: que sus hijos estaban en la ciudad de Iguala como parte de una protesta y fueron secuestrados por agentes de la policía (que trabajaban para poderosas bandas criminales) y luego fueron asesinados e incinerados en un basurero de Cocula, un pueblo cercano. En su versión de los hechos el gobierno nunca ha definido cuál fue el motivo del ataque.</p>
+<p class="story-body-text story-content" data-para-count="323" data-total-count="3445" id="story-continues-12" tabindex="-1">Para muchos mexicanos, el caso va más allá de los 43 estudiantes: es un ejemplo de las decenas de miles de personas que también han desaparecido durante la guerra contra las drogas que ya tiene una década. Muchos se encuentran atrapados entre la violencia de los carteles y un gobierno que no quiere o no puede ayudar.</p>
+<p class="story-body-text story-content" data-para-count="379" data-total-count="3824" id="story-continues-13" tabindex="-1">La llegada de los expertos internacionales despertó la esperanza y mostró la preocupación del gobierno por quienes sufren en silencio sus pérdidas en los sectores más vulnerables de la sociedad mexicana. En un gesto excepcional, México le otorgó a unos extranjeros el permiso necesario para llevar a cabo una verdadera investigación. Ahora su salida deja un sabor amargo.</p>
+<p class="story-body-text story-content" data-para-count="320" data-total-count="4144" id="story-continues-14" tabindex="-1">&#8220;Esto es algo que probablemente nos perseguirá por mucho tiempo&#8221;, dijo Francisco Cox, un abogado chileno especializado en derechos humanos que también conforma el grupo de expertos. &#8220;Pero no tiene sentido quedarse aquí porque, de cierta manera, es darle legitimidad a algo que no es correcto&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="198" data-total-count="4342" id="story-continues-15" tabindex="-1">Aunque el informe final del grupo se conocerá el domingo por la mañana, el caso está muy lejos de ser resuelto. Solo se han encontrado e identificado los restos de <a href="http://www.nytimes.com/2014/12/07/world/americas/remains-of-student-in-mexico-identified.html" target="_blank">uno solo</a> de los 43 <a href="http://www.nytimes.com/2014/12/08/world/americas/rage-and-sorrow-flow-as-student-is-declared-dead.html" target="_blank">estudiantes</a>.</p>
+<p class="story-body-text story-content" data-para-count="375" data-total-count="4717" id="story-continues-16" tabindex="-1">Otra cuestión es a qué nivel llega la colusión entre las bandas de narcotraficantes y el gobierno. Aunque la investigación del gobierno se centró en la complicidad de las autoridades locales, estos expertos descubrieron evidencias de que las autoridades estatales y federales, e incluso militares, estuvieron presentes en la noche de la desaparición de los estudiantes.</p>
+<p class="story-body-text story-content" data-para-count="373" data-total-count="5090" id="story-continues-17" tabindex="-1">&#8220;Estaba claro en la investigación oficial que había una intención de mantener este caso a nivel municipal, en términos de responsabilidad&#8221;, dijo Carlos Beristain, otro experto de la comisión. &#8220;Sin embargo  nosotros revelamos la presencia de agentes estatales y federales en las escenas del crimen, y su participación implica responsabilidad&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="224" data-total-count="5314" id="story-continues-18" tabindex="-1">El gobierno insiste en que la salida del país de los expertos internacionales es amistosa y les ha agradecido en público por su trabajo. Los expertos no fueron presionados, según el gobierno, solo se les acabó el tiempo.</p>
+<figure id="media-100000004352221" class="media photo media-100000004352221 embedded layout-small-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/23/world/23mexico-web3/23mexico-web3-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-20">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/23/world/23mexico-web3/23mexico-web3-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/23/world/23mexico-web3/23mexico-web3-superJumbo.jpg" data-mediaviewer-caption="“The conditions to conduct our work don’t exist,” said Claudia Paz y Paz, a member of the group of experts." data-mediaviewer-credit="Alex Cruz/European Pressphoto Agency"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/23/world/23mexico-web3/23mexico-web3-master315.jpg"/>
+		<meta itemprop="height" content="472" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">“The conditions to conduct our work don’t exist,” said Claudia Paz y Paz, a member of the group of experts.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Alex Cruz/European Pressphoto Agency
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="178" data-total-count="5492" id="story-continues-20" tabindex="-1">El gobierno niega haber participado en la campaña de difamación. Hay libertad de prensa en México y el gobierno no puede impedir que los medios escriban lo que quieran, dicen.</p>
+<div id="MiddleRight3" class="ad ad-placeholder middle-right-ad nocontent robots-nocontent"></div>
+
+<p class="story-body-text story-content" data-para-count="284" data-total-count="5776" id="story-continues-21" tabindex="-1">Eber Betanzos, subprocurador de derechos humanos, respondió por escrito un cuestionario en el que asegura que su oficina ha trabajado en estrecha colaboración con los expertos. &#8220;El Estado mexicano reconoce su trabajo, sus esfuerzos y la atención a las víctimas&#8221;, dijo.</p>
+<p class="story-body-text story-content" data-para-count="151" data-total-count="5927" id="story-continues-22" tabindex="-1">Pero el gobierno se negó, en más de una ocasión, a emitir una declaración conjunta para denunciar la campaña mediática en contra de los expertos.</p>
+<p class="story-body-text story-content" data-para-count="340" data-total-count="6267" id="story-continues-23" tabindex="-1">Cuando los investigadores llegaron a México en marzo del año pasado recibieron una cálida bienvenida por parte del gobierno. En un primer momento, dijeron los expertos, existía la voluntad de compartir documentos y responder a las solicitudes de información, y esa colaboración parecía coincidir con la postura pública del gobierno.</p>
+<p class="story-body-text story-content" data-para-count="208" data-total-count="6475" id="story-continues-24" tabindex="-1">Eso cambió abruptamente en septiembre, cuando publicaron un informe que <a href="http://www.nytimes.com/2015/09/07/world/experts-reject-official-account-of-how-43-mexican-students-vanished.html" target="_blank">contradice</a> la versión del gobierno de los acontecimientos, mencionada por el exfiscal general como la &#8220;verdad histórica&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="350" data-total-count="6825" id="story-continues-25" tabindex="-1">La investigación gubernamental dijo que los estudiantes fueron asesinados y luego quemados en un basurero en el municipio de Cocula. Ni este pánel de expertos ni otro equipo internacional de forenses —que también trabaja en la investigación— han encontrado ninguna evidencia física en el sitio que corrobore un incendio de tales dimensiones.</p>
+<p class="story-body-text story-content" data-para-count="190" data-total-count="7015" id="story-continues-26" tabindex="-1">&#8220;Después de nuestro informe quedó claro que la relación había cambiado&#8221;, dijo Cox. &#8220;Ellos pensaban que íbamos a respaldar su versión de lo que había sucedido&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="368" data-total-count="7383" id="story-continues-27" tabindex="-1">Las solicitudes de información gubernamental tomaron meses, dijeron los expertos. Se ignoraron sus sugerencias para agilizar la investigación. Comenzó una campaña mediática de difamación, se agredió a los miembros del grupo con acusaciones de malversación de fondos y llegó a decirse que en el pasado habían hecho declaraciones de apoyo de actos terroristas.</p>
+<p class="story-body-text story-content" data-para-count="462" data-total-count="7845" id="story-continues-28" tabindex="-1">Para los investigadores, el mensaje era claro. Beristain dijo que &#8220;hay sectores dentro del gobierno que no quieren ser cuestionados y por lo tanto hay una intención de reforzar &#8216;la verdad histórica&#8217;, sin tomar en cuenta los nuevos elementos que hemos descubierto. &#8220;Estos sectores reaccionan como si fuéramos una amenaza y endurecieron sus medias contra nosotros, lo que fortalece la impunidad que impide que las cosas cambien&#8221;.</p>
+<figure id="media-100000004352218" class="media photo media-100000004352218 embedded layout-small-vertical" data-media-action="modal" itemprop="associatedMedia" itemscope itemid="https://static01.nyt.com/images/2016/04/23/world/23mexico-web4/23mexico-web4-master315.jpg" itemtype="https://schema.org/ImageObject" aria-label="media" role="group">
+	<a class="visually-hidden skip-to-text-link" href="#story-continues-30">Continue reading the main story</a>	<span class="visually-hidden">Foto</span>
+	<div class="image">
+		<img src="https://static01.nyt.com/images/2016/04/23/world/23mexico-web4/23mexico-web4-master315.jpg" alt="" class="media-viewer-candidate" data-mediaviewer-src="https://static01.nyt.com/images/2016/04/23/world/23mexico-web4/23mexico-web4-superJumbo.jpg" data-mediaviewer-caption="Ángela Buitrago, another member of the committee of experts, also suffered at the hands of a local news media eager to malign her record." data-mediaviewer-credit="Alfredo Estrella/Agence France-Presse — Getty Images"  itemprop="url" itemid="https://static01.nyt.com/images/2016/04/23/world/23mexico-web4/23mexico-web4-master315.jpg"/>
+		<meta itemprop="height" content="472" />
+		<meta itemprop="width" content="315" />
+	</div>
+	<figcaption class="caption" itemprop="caption description">
+		<span class="caption-text">Ángela Buitrago, another member of the committee of experts, also suffered at the hands of a local news media eager to malign her record.</span>
+		<span class="credit" itemprop="copyrightHolder">
+			<span class="visually-hidden">Credit</span>
+			Alfredo Estrella/Agence France-Presse — Getty Images
+		</span>
+	</figcaption>
+</figure>
+
+<p class="story-body-text story-content" data-para-count="342" data-total-count="8187" id="story-continues-30" tabindex="-1">En gran medida los <a href="http://www.milenio.com/policia/caso_Iguala-salida_GIEI_caso_Iguala-conflicto_intereses_caso_Iguala_0_595740553.html">ataques</a> de los medios de comunicación se centraron en las abogadas Claudia Paz y Paz y Ángela Buitrago, quien ganó un amplio reconocimiento al procesar al gobierno de Colombia por malversación militar. Además de medios poco conocidos, algunos <a href="http://www.eluniversal.com.mx/entrada-de-opinion/columna/ricardo-aleman/nacion/2015/09/8/informe-enganabobos-de-expertos-en-mentir">periódicos nacionales</a> como <a href="http://www.elfinanciero.com.mx/opinion/ganas-de-linchar-a-mexico.html">El Financiero</a> y <a href="http://www.milenio.com/firmas/jose_antonio_ortega/Rentable-Ejercito-chivo-expiatorio_18_697310356.html">Milenio</a>, también participaron.</p>
+<p class="story-body-text story-content" data-para-count="514" data-total-count="8701" id="story-continues-31" tabindex="-1">En enero, Buitrago esperaba en la fila del aeropuerto de Ciudad de México cuando se dio cuenta de que una historia <a href="http://www.razon.com.mx/spip.php?article291778)">en la primera página de un periódico local</a> era sobre ella. Comenzaba con una caracterización de Buitrago como alguien conocida por &#8220;fabricar testimonios y testigos para ejercer presión con el fin de encarcelar a militares y figuras políticas&#8221;. También citaban a una persona que ella había procesado que decía que cualquier investigación en sus manos carecería de credibilidad.</p>
+<p class="story-body-text story-content" data-para-count="144" data-total-count="8845" id="story-continues-32" tabindex="-1">&#8220;Era inimaginable&#8221;, dijo. &#8220;El propósito de todo eso era deslegitimar la investigación, desacreditarnos y distraernos&#8221;.</p>
+<p class="story-body-text story-content" data-para-count="211" data-total-count="9056" id="story-continues-33" tabindex="-1">Paz dijo que también se convirtió en un objetivo. Organizaciones progubernamentales afirmaron que ella había protegido a los izquierdistas violentos por lo que había violado los acuerdos de paz de Guatemala.</p>
+<p class="story-body-text story-content" data-para-count="292" data-total-count="9348" id="story-continues-34" tabindex="-1">Aunque el gobierno ha negado en repetidas ocasiones que juega un papel en la campaña de los medios de comunicación mexicanos, sí ejerce un gran control sobre ellos. El Estado gasta cada año cientos de millones de dólares en publicidad, por lo que tiene una gran influencia en el mercado.</p>
+<p class="story-body-text story-content" data-para-count="125" data-total-count="9473" id="story-continues-35" tabindex="-1">&#8220;No podíamos salir a la calle todos los días y leer los titulares de los periódicos insultándonos&#8221;, dijo Paz.</p>
+<p class="story-body-text story-content" data-para-count="275" data-total-count="9748" id="story-continues-36" tabindex="-1">Quizá el ejemplo más directo de la presión gubernamental se evidenció en el inicio de una investigación penal contra Emilio Álvarez Icaza, el secretario ejecutivo de la Comisión Interamericana de Derechos Humanos, el organismo internacional que nombró a los expertos.</p>
+<p class="story-body-text story-content" data-para-count="324" data-total-count="10072" id="story-continues-37" tabindex="-1">La investigación se abrió después de quevJosé Antonio Ortega, que dirige una organización que simpatiza con el gobierno, presentara una denuncia contra Icaza en la que reclamaba el supuesto uso fraudulento del dinero hecho por los expertos, aunque esos fondos fueron establecidos en un acuerdo con el gobierno mexicano.</p>
+<p class="story-body-text story-content" data-para-count="343" data-total-count="10415" id="story-continues-38" tabindex="-1">Durante semanas, el gobierno mantuvo su investigación alegando que tenía la responsabilidad de darle seguimiento a todas las denuncias. Pero los expertos de derechos humanos en la región dicen que esa acción envía un mensaje de advertencia a los que discrepan de la narrativa oficial. Con el paso del tiempo el gobierno abandonó el caso.</p>
+<p class="story-body-text story-content" data-para-count="351" data-total-count="10766" id="story-continues-39" tabindex="-1">&#8220;Es interesante que eligieran investigar esta afirmación manifiestamente infundada cuando hay miles de familias que buscan desesperadamente a sus seres queridos sin ninguna ayuda del fiscal general&#8221;, dijo James L. Cavallaro, el presidente de la Comisión Interamericana de Derechos Humanos. &#8220;Eso es profundamente perturbador&#8221;.</p>
+		</div>
+	</div>
+	<div id="addendums" class="addendums">
+		<div class="story-addendum story-content theme-correction">
+			
+		</div>
+	</div>
+	<footer class="story-footer story-content">
+		<div class="story-meta">
+
+			<p class="tag-list"><a href="https://www.nytimes.com/es/tag/ayotzinapa/" rel="tag">Ayotzinapa</a>, <a href="https://www.nytimes.com/es/tag/giei/" rel="tag">GIEI</a>, <a href="https://www.nytimes.com/es/tag/mexico/" rel="tag">México</a></p>
+		</div>
+	</footer>
+
+		<div class="story-content intl-sharetools-story-bottom">
+			<div aria-label="tools" role="group" class="sharetools theme-classic  sharetools-story  "
+				data-shares="facebook,twitter,whatsapp,email"
+				data-url="https://www.nytimes.com/es/2016/04/23/a-punto-de-abandonar-mexico-los-investigadores-del-caso-ayotzinapa-dicen-que-el-gobierno-frustro-su-trabajo/"
+				data-title="América Latina: A punto de abandonar México, los investigadores del caso Ayotzinapa dicen que el gobierno frustró su trabajo"
+				data-author="POR AZAM AHMED Y PAULINA VILLEGAS"
+				data-media=""
+				data-description="La investigación gubernamental dijo que los estudiantes fueron asesinados y luego quemados en un basurero: ni el Grupo Interdisciplinario de Expertos Internacionales ni otro equipo internacional de forenses han encontrado evidencia física que lo corrobore."
+				data-publish-date="23 de abril de 2016"
+			>
+				<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				<span class="sharetools-label visually-hidden">Comparte esta página</span>
+				<div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+				<div id="MiddleLeft" class="ad middle-left-ad hidden nocontent robots-nocontent">
+					<a class="visually-hidden skip-to-text-link" href="#story-continues-1">Volver al artículo principal</a>
+				</div>
+			</div><!-- close shareTools -->
+		</div>
+</article>
+
+<div class="nyt-widgets">
+	<div class="nyt-widget">
+		<section id="related-combined-coverage" class="related-combined-coverage nocontent robots-nocontent">
+	<header class="section-header">
+	    <h2 class="section-heading">Relacionadas</h2>
+	</header>
+
+	<div class="section-body">
+		<ol class="story-menu menu">
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/03/30/la-tragedia-de-los-desaparecidos-mexicanos/">
+					<div class="story-body">
+						<h3 class="kicker">Fotografía</h3>
+
+						<h2 class="headline">
+							<span class="title">La tragedia de los desaparecidos en México</span>
+							<time class="dateline">30 de marzo de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/03/28/blogs/20160328-lens-yael-slide-JD3J/20160328-lens-yael-slide-JD3J-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/02/09/la-verdad-historica-sobre-los-estudiantes-desaparecidos-en-mexico-sufre-otro-reves/">
+					<div class="story-body">
+						<h3 class="kicker">México</h3>
+
+						<h2 class="headline">
+							<span class="title">La &#8216;verdad histórica&#8217; sobre los estudiantes desaparecidos en México sufre otro revés</span>
+							<time class="dateline">9 de febrero de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2015/09/10/world/10mexico/10mexico-thumbStandard-v2.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2015/09/28/entre-la-indignacion-y-la-esperanza-se-recuerda-a-los-desaparecidos-en-mexico/">
+					<div class="story-body">
+						<h3 class="kicker">México</h3>
+
+						<h2 class="headline">
+							<span class="title">Entre la indignación y la esperanza se recuerda a los desaparecidos en México</span>
+							<time class="dateline">28 de septiembre de 2015</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2015/09/27/world/MEXICO-copy/MEXICO-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		<li>
+			<article class="story theme-summary">
+				<a class="story-link" href="https://www.nytimes.com/es/2016/02/18/ya-fuera-de-mexico-el-papa-habla-sobre-trump-zika-y-ayotzinapa/">
+					<div class="story-body">
+						<h3 class="kicker">Papa Francisco</h3>
+
+						<h2 class="headline">
+							<span class="title">Ya fuera de México, el papa habla sobre Trump, zika y Ayotzinapa</span>
+							<time class="dateline">18 de febrero de 2016</time>
+						</h2>
+					</div>
+
+					<div class="thumb">
+						<img src="https://static01.nyt.com/images/2016/02/19/universal/es/papaplaneES/papaplaneES-thumbStandard.jpg" role="presentation" alt="" />
+					</div>
+				</a>
+			</article>
+		</li>
+		</ol>
+	</div>
+</section>
+	</div>
+	<div class="nyt-widget">
+		<aside class="notification-signup module">
+	<h2 class="module-heading">Boletín Newsletter</h2>
+	<p class="notification-text">El Boletín de The New York Times en Español incluye historias que inspiran, fotografías impactantes y crónicas imprescindibles.</p>
+	<div id="notification-widget"></div>
+</aside>
+<script>
+require(['foundation/main'], function() {
+	require(['nytint/email-subscriber'], function(Subscriber) {
+		Subscriber.setup({
+			containerId: 'notification-widget',
+			productCode: 'BN',
+			buttonText: 'Suscríbete',
+			placeholder: 'Correo electrónico',
+			subscribedAs: 'Has sido registrado con este correo',
+			subscribed: 'Has sido registrado con este correo.',
+			errorSubmitting: 'Sometimiento de error, por favor vuelva a intentarlo.',
+			invalidEmail: 'El correo electrónico no es válida.',
+			includeAt: 'Por favor incluye un @ en tu dirección de correo electrónico.',
+			emptyField: 'Por favor complete este campo.',
+			updateAddress: 'Actualiza tu correo electrónico',
+		});
+	});
+});
+</script>
+	</div>
+</div>
+
+
+	<section id="whats-next" class="related-coverage"></section>
+
+
+			</div>
+
+				<div id="TopAd1" class="ad  top-ad nocontent robots-nocontent">
+		<div class="accessibility-ad-header visually-hidden">
+			<p>publicidad</p>
+		</div>
+	</div>
+
+
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+
+		<section id="site-index" class="site-index">
+		    <header class="section-header">
+		        <h2 class="section-heading">
+		            <span class="visually-hidden">Site Index</span>
+		            <a id="site-index-branding-link" href="https://www.nytimes.com/es/">
+		                <span class="visually-hidden">The New York Times</span>
+		            </a>
+		        </h2>
+		        <div class="user-action">
+					<span>Edición</span>
+					<ul>
+		                <li><a href="https://www.nytimes.com" data-edition="us" >English</a></li>
+		                <li><a href="http://cn.nytimes.com/" data-edition="chinese" >中文 (Chinese)</a></li>
+		                <li><a href="https://www.nytimes.com/es/" data-edition="es" class="selected">Español</a></li>
+		            </ul>
+				</div>
+		    </header>
+		
+		</section><!-- close site-index -->		<footer id="page-footer" class="page-footer" role="contentinfo">
+			<nav>
+				 <ul>
+					<li>
+						<a target="_blank" href="https://www.nytimes.com/es/aviso-de-derechos-de-autor/" itemprop="copyrightNotice">
+							&copy; <span itemprop="copyrightYear">2017</span><span itemprop="copyrightHolder provider sourceOrganization" itemscope itemtype="https://schema.org/Organization" itemid="https://www.nytimes.com"><span itemprop="name"> The New York Times Company</span><meta itemprop="tickerSymbol" content="NYSE NYT"/></span>
+						</a>
+					</li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/publicidad/">Publicidad</a></li>
+					<li class="visually-hidden"><a href="https://www.nytimes.com/es/">Inicio</a></li>
+					<li class="visually-hidden"><a href="https://query.nytimes.com/search/sitesearch/#/">Buscar</a></li>
+				 </ul>
+			</nav>
+			<nav class="last-nav">
+				<ul>
+					<li><a target="_blank" href="https://www.nytimes.com/es/politica-de-privacidad/">Privacidad</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/terminos-y-condiciones-del-servicio/">Condiciones</a></li>
+					<li><a target="_blank" href="https://www.nytimes.com/es/preguntas-frecuentes/">Preguntas</a></li>
+					<li><a target="_blank" href="mailto:ayuda@nytimes.com">Ayuda</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- close page -->
+
+</div><!-- close shell -->
+<script>
+require(['foundation/main'], function () {
+    
+        require(['article/main']);
+
+        require(['jquery/nyt'], function ($) {
+            window.onYouTubeIframeAPIReady = function () {
+                $(document).trigger('nyt:youtube-iframe-api-ready');
+            };
+        });
+    
+    
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/tagx-simple.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (document.getElementById('branding-heading-link')) {
+            if ('masthead-theme-standard' === 'masthead-theme-transparent-ffffff') {
+                var setLightBrandingForViewport = function() {
+                    $('#branding-heading-link').find('svg, img').remove();
+
+                    if (
+                        window.magnum.getViewportInteger() >= 1010
+                        || $('html').hasClass('intl-force-theme-transparent-ffffff')
+                    ) {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'branding-heading-link');
+                    } else {
+                        window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+                    }
+                };
+
+                setLightBrandingForViewport();
+                pageManager.on('nyt:page-resize-after', setLightBrandingForViewport);
+            } else {
+                
+                window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'branding-heading-link');
+            }
+        }
+
+        if (document.getElementById('mini-navigation-branding-heading-link'))  {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', 'masthead-theme-standard', '', 'mini-navigation-branding-heading-link');
+        }
+
+        if (document.getElementById('site-index-branding-link')) {
+            window.magnum.writeLogo('small', 'https://a1.nyt.com/assets/shell/20160613-034030/images/foundation/logos/', '', '', '', 'site-index-branding-link');
+        }
+    });
+});
+</script>
+<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1008590664;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/1008590664/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"14394559","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlENAVNKG0BcFA==","queueTime":0,"applicationTime":916,"atts":"T0ZUEFxCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
